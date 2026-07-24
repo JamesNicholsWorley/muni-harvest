@@ -1,0 +1,28 @@
+# Data & harvest outputs (multi-GB corpus lives in object storage, never in git)
+/data/
+!/data/.gitkeep
+
+# Secrets
+.env
+*.key
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Harvested binaries (should never be committed)
+*.pdf
+*.docx
+*.xlsx
+*.pptx

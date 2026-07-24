@@ -1,0 +1,27 @@
+# muni-harvest runtime configuration. All paths are relative to the repo root
+# unless absolute. Read via muni_harvest.config.load_settings().
+
+[paths]
+# The target inventory (429 unique domains) lives in the sibling CivicAtlasMA project.
+inventory_csv = "../CivicAtlasMA/data/inventory/master_urls.csv"
+data_dir      = "data"
+
+[wayback]
+workers      = 20          # latency-bound -> bounded concurrency crushes it (~94min -> ~5min)
+per_host_rpm = 60          # polite per-host request rate (RateLimiter)
+tries        = 4           # retry/backoff for the ~33% first-try CDX timeouts
+timeout_s    = 90
+max_pages    = 12          # CDX resumeKey pages per host (2000 rows/page)
+collapse     = "urlkey"    # dedup identical captures
+
+[commoncrawl]
+# Discovery ONLY (homepage / CMS fingerprint). HTTPS CDN — never the s3:// path (bills silently).
+index        = "CC-MAIN-2026-25"
+endpoint     = "https://index.commoncrawl.org"
+
+[probe]
+workers      = 8           # browser tier is machine-bound, not politeness-bound
+sample_paths = ["/", "/robots.txt"]
+
+[budget]
+total_usd = 40.0

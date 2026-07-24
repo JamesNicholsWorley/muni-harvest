@@ -1,0 +1,46 @@
+name: wayback-harvest
+
+# Free scheduled cheap-tier compute (unlimited minutes on a public repo).
+# Runs the zero-cost Wayback enumeration; commits the resumable index back.
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max hosts to enumerate (blank = all)"
+        required: false
+        default: ""
+
+jobs:
+  wayback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The free tier is stdlib-only, so an editable install pulls no deps.
+      - name: Install (core only)
+        run: pip install -e .
+
+      # The inventory lives in the sibling CivicAtlasMA repo; in CI point at a
+      # committed copy or a checked-out sibling. Guarded so the job self-skips
+      # cleanly until the inventory path is wired for CI.
+      - name: Run Wayback sweep
+        run: |
+          if [ -f "../CivicAtlasMA/data/inventory/master_urls.csv" ]; then
+            muni-harvest wayback ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
+          else
+            echo "inventory not present in CI checkout; skipping (wire a committed copy to enable)"
+          fi
+
+      - name: Upload harvest index
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wayback-docs
+          path: data/wayback/
+          if-no-files-found: ignore

@@ -1,0 +1,53 @@
+"""muni-harvest command-line entrypoint.
+
+  muni-harvest budget  <seed|summary|spend|alloc> ...
+  muni-harvest wayback [--limit N] [--workers N]     # free deep doc enumeration
+  muni-harvest probe   [--limit N] [--workers N]     # measure browser-required %
+  muni-harvest resolve                               # cheapest-source-wins routing
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+
+
+def main(argv: list[str] | None = None) -> int:
+    argv = list(sys.argv[1:] if argv is None else argv)
+    ap = argparse.ArgumentParser(prog="muni-harvest", description=__doc__)
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    sub.add_parser("budget", add_help=False,
+                   help="budget ledger (seed|summary|spend|alloc)")
+
+    p_wb = sub.add_parser("wayback", help="parallel Wayback CDX doc enumeration")
+    p_wb.add_argument("--limit", type=int, default=None)
+    p_wb.add_argument("--workers", type=int, default=None)
+
+    p_pr = sub.add_parser("probe", help="tier-probe the domains (browser-required fraction)")
+    p_pr.add_argument("--limit", type=int, default=None)
+    p_pr.add_argument("--workers", type=int, default=None)
+
+    sub.add_parser("resolve", help="print cheapest-source-wins routing summary")
+
+    # budget owns its own subparser tree, so split argv at the top level.
+    if argv and argv[0] == "budget":
+        from .budget import ledger
+        ledger.main(argv[1:])
+        return 0
+
+    args = ap.parse_args(argv)
+    if args.cmd == "wayback":
+        from .archive import wayback
+        wayback.harvest(limit=args.limit, workers=args.workers)
+    elif args.cmd == "probe":
+        from .probe import tier_probe
+        tier_probe.run(limit=args.limit, workers=args.workers)
+    elif args.cmd == "resolve":
+        from .resolve import resolver
+        resolver.summary()
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

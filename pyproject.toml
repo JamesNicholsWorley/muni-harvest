@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muni-harvest"
+version = "0.1.0"
+description = "Fast, cheap, polite harvester for MA municipal / civic documents (Wayback-first, tiered live fetch)."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "James Nichols Worley", email = "jamesnicholsworley@gmail.com" }]
+license = { text = "MIT" }
+
+# Core stays deliberately light: the archive/budget/resolver tiers are stdlib-only
+# (vendored from AbundanceHistory/harvesters/common.py). Heavier deps are extras so
+# the free Wayback tier runs on a bare GitHub Actions runner with nothing to install.
+dependencies = []
+
+[project.optional-dependencies]
+# Live browser tier (T1/T2) — needed only after the tier-probe proves it is required.
+live = ["requests>=2.31", "selenium>=4.20"]
+# Extraction / normalize layer — born-digital bulk via fitz, layout/tables via docling.
+extract = ["pymupdf>=1.24", "trafilatura>=1.8", "docling>=2.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+muni-harvest = "muni_harvest.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
