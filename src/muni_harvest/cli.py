@@ -43,6 +43,9 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("scorecard",
                    help="coverage stats vs the core civic-doc checklist")
 
+    sub.add_parser("groundtruth",
+                   help="election-result recall vs the 942 known-collected PDFs")
+
     p_esc = sub.add_parser("escalate",
                            help="run T0-blocked hosts through the T1/T2 browser tier")
     p_esc.add_argument("--limit", type=int, default=None)
@@ -75,6 +78,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "scorecard":
         from .discover import scorecard
         scorecard.build()
+    elif args.cmd == "groundtruth":
+        from .discover import groundtruth
+        groundtruth.build()
     elif args.cmd == "escalate":
         from .fetchers import tiered
         tiered.escalate_blocked(limit=args.limit, pool_size=args.pool_size,
