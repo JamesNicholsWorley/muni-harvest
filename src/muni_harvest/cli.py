@@ -32,6 +32,17 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("resolve", help="print cheapest-source-wins routing summary")
 
+    p_dis = sub.add_parser("discover",
+                           help="union Wayback+sitemaps+crawl+CMS into a nav-tree")
+    p_dis.add_argument("--limit", type=int, default=None)
+    p_dis.add_argument("--workers", type=int, default=None)
+    p_dis.add_argument("--hosts-file", default=None)
+    p_dis.add_argument("--max-pages", type=int, default=None)
+    p_dis.add_argument("--max-depth", type=int, default=None)
+
+    sub.add_parser("scorecard",
+                   help="coverage stats vs the core civic-doc checklist")
+
     # budget owns its own subparser tree, so split argv at the top level.
     if argv and argv[0] == "budget":
         from .budget import ledger
@@ -49,6 +60,14 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "resolve":
         from .resolve import resolver
         resolver.summary()
+    elif args.cmd == "discover":
+        from .discover import pipeline
+        pipeline.run(limit=args.limit, workers=args.workers,
+                     hosts_file=args.hosts_file, max_pages=args.max_pages,
+                     max_depth=args.max_depth)
+    elif args.cmd == "scorecard":
+        from .discover import scorecard
+        scorecard.build()
     return 0
 
 
