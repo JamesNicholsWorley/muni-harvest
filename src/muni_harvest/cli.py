@@ -47,6 +47,8 @@ def main(argv: list[str] | None = None) -> int:
                            help="run T0-blocked hosts through the T1/T2 browser tier")
     p_esc.add_argument("--limit", type=int, default=None)
     p_esc.add_argument("--pool-size", type=int, default=3)
+    p_esc.add_argument("--redo", action="store_true",
+                       help="also re-check hosts previously marked needs_unblocker")
 
     # budget owns its own subparser tree, so split argv at the top level.
     if argv and argv[0] == "budget":
@@ -75,7 +77,8 @@ def main(argv: list[str] | None = None) -> int:
         scorecard.build()
     elif args.cmd == "escalate":
         from .fetchers import tiered
-        tiered.escalate_blocked(limit=args.limit, pool_size=args.pool_size)
+        tiered.escalate_blocked(limit=args.limit, pool_size=args.pool_size,
+                                redo=args.redo)
     return 0
 
 

@@ -18,9 +18,14 @@ from __future__ import annotations
 
 import re
 
+import time
+
 from ..core import fetch
 from ..resolve.tier_cache import TierCache
-from .waf_session import fetch_in_browser, mint_session
+
+# NOTE: selenium-backed helpers (waf_session, browser_pool) are imported lazily
+# inside the functions that need them, so the pure classifiers below (_clean,
+# _dom_clean) stay importable without the `live` extra.
 
 _CHALLENGE = re.compile(
     r"just a moment|cf-chl|checking your browser|attention required|"
@@ -32,40 +37,65 @@ def _clean(status: int, text: str) -> bool:
     return status == 200 and not _CHALLENGE.search((text or "")[:8000])
 
 
+def _dom_clean(src: str) -> bool:
+    """A loaded page is 'clean' if it rendered real content.
+
+    Size-first: WAF interstitials ("Just a moment", Incapsula, Access Denied) are
+    tiny (<~10KB); real municipal homepages are large. So a big DOM is the real site
+    even if it happens to contain the word 'captcha' in a contact-form widget. Only
+    for small/ambiguous pages do we fall back to challenge-marker matching.
+    """
+    if not src or len(src) < 1500:
+        return False
+    if len(src) > 12000:
+        return True
+    return not _CHALLENGE.search(src[:8000])
+
+
 def escalate_host(host: str, pool) -> dict:
-    """Try T1 then T2 on the homepage. Returns {tier, signal}."""
+    """Try T1 then T2 on the homepage. Returns {tier, signal}.
+
+    T2 inspects the *loaded DOM* (page_source) after redirects/JS — NOT a re-fetch
+    of the original URL, which would be cross-origin (bare-domain -> www) and
+    spuriously fail with status 0.
+    """
     home = f"https://{host}/"
 
-    # T1 — cookie-lift, then a plain request with the browser's cookies.
+    from .waf_session import mint_session
+
+    # T1 — cookie-lift, then a plain request with the browser's cookies (requests
+    # follows the www redirect on its own).
     try:
         sess = mint_session(home, wait=6)
         r = sess.get(home, timeout=30)
         if _clean(r.status_code, r.text):
             return {"tier": "T1", "signal": "cookie_lift"}
-    except Exception as exc:  # noqa: BLE001
-        t1_err = type(exc).__name__
-    else:
-        t1_err = "t1_challenged"
+    except Exception:  # noqa: BLE001 — fall through to the full browser tier
+        pass
 
-    # T2 — full in-browser fetch from a warm driver.
+    # T2 — load in a real browser and read the rendered DOM after it settles.
     try:
         with pool.lease() as d:
             d.get(home)
-            status, text = fetch_in_browser(d, home)
-        if _clean(status, text):
-            return {"tier": "T2", "signal": "in_browser"}
-        return {"tier": "needs_unblocker", "signal": f"t2_challenged:{status}"}
+            time.sleep(4)
+            src = d.page_source
+        if _dom_clean(src):
+            return {"tier": "T2", "signal": "in_browser_dom"}
+        return {"tier": "needs_unblocker", "signal": f"t2_dom_len:{len(src or '')}"}
     except Exception as exc:  # noqa: BLE001
         return {"tier": "needs_unblocker", "signal": f"t2_err:{type(exc).__name__}"}
 
 
-def escalate_blocked(*, limit: int | None = None, pool_size: int = 3) -> dict:
+def escalate_blocked(*, limit: int | None = None, pool_size: int = 3,
+                     redo: bool = False) -> dict:
     """Reclassify TierCache 'blocked' hosts via the browser tier. Resumable
-    (already-escalated hosts keep their non-'blocked' tier)."""
+    (already-escalated hosts keep their tier). With redo=True, also re-checks hosts
+    previously marked needs_unblocker (use after fixing escalation logic)."""
     from .browser_pool import BrowserPool
 
+    targets = {"blocked", "needs_unblocker"} if redo else {"blocked"}
     cache = TierCache()
-    blocked = [h for h, rec in cache._map.items() if rec.get("tier") == "blocked"]
+    blocked = [h for h, rec in cache._map.items() if rec.get("tier") in targets]
     if limit:
         blocked = blocked[:limit]
     print(f"[*] escalating {len(blocked)} blocked host(s) through T1/T2 "
