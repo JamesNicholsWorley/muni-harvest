@@ -1,0 +1,6 @@
+# Normalize line endings: LF in the repo (consistent for Linux CI / VM), Git
+# converts on checkout per-OS. Silences the CRLF warnings on Windows commits.
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.gz binary
