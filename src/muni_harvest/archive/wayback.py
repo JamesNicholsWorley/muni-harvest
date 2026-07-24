@@ -51,12 +51,16 @@ def host_of(url: str) -> str:
 
 
 _VALID_HOST = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9-]+)+$")
+# Final-label values that mean "this is a filename, not a domain".
+_FILE_TLDS = {"xlsx", "xls", "pdf", "docx", "doc", "csv", "txt", "pptx", "ppt", "zip"}
 
 
 def valid_host(h: str) -> bool:
     """Reject inventory junk (local file paths, bare filenames) that isn't a domain.
     Some native_url cells hold a local .xlsx path instead of a URL."""
-    return bool(h) and " " not in h and "\\" not in h and bool(_VALID_HOST.match(h))
+    if not h or " " in h or "\\" in h or not _VALID_HOST.match(h):
+        return False
+    return h.rsplit(".", 1)[-1] not in _FILE_TLDS
 
 
 def load_hosts(inventory_csv: Path, limit: int | None = None) -> list[str]:
