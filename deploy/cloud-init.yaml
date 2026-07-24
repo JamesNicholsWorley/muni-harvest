@@ -1,0 +1,30 @@
+#cloud-config
+# Passed to `hcloud server create --user-data-from-file`. Runs once on first boot to
+# make the VM ready to harvest. Secrets are NOT here (cloud-init is readable) — the
+# .env is dropped over SSH after boot. Index-only tier: installs [live,s3], not the
+# heavy [extract] ML stack (added later when we run normalize).
+package_update: true
+package_upgrade: false
+packages:
+  - python3
+  - python3-venv
+  - python3-pip
+  - git
+  - wget
+  - unzip
+  - tmux
+  - fonts-liberation
+  - ca-certificates
+
+runcmd:
+  # Google Chrome (Selenium Manager auto-provisions the matching chromedriver).
+  - wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb
+  - apt-get install -y /tmp/chrome.deb
+  - rm -f /tmp/chrome.deb
+  # Clone + install the harvester (public repo, no auth needed).
+  - git clone https://github.com/JamesNicholsWorley/muni-harvest.git /opt/muni-harvest
+  - python3 -m venv /opt/muni-harvest/.venv
+  - /opt/muni-harvest/.venv/bin/pip install --upgrade pip
+  - /opt/muni-harvest/.venv/bin/pip install -e '/opt/muni-harvest[live,s3]'
+  - touch /opt/muni-harvest/.env
+  - echo "muni-harvest ready" > /opt/muni-harvest/READY

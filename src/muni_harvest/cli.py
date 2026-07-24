@@ -46,6 +46,9 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("groundtruth",
                    help="election-result recall vs the 942 known-collected PDFs")
 
+    sub.add_parser("store", add_help=False,
+                   help="object storage (R2/B2): ping | ensure")
+
     p_esc = sub.add_parser("escalate",
                            help="run T0-blocked hosts through the T1/T2 browser tier")
     p_esc.add_argument("--limit", type=int, default=None)
@@ -53,10 +56,14 @@ def main(argv: list[str] | None = None) -> int:
     p_esc.add_argument("--redo", action="store_true",
                        help="also re-check hosts previously marked needs_unblocker")
 
-    # budget owns its own subparser tree, so split argv at the top level.
+    # budget/store own their own subparser trees, so split argv at the top level.
     if argv and argv[0] == "budget":
         from .budget import ledger
         ledger.main(argv[1:])
+        return 0
+    if argv and argv[0] == "store":
+        from . import store
+        store.main(argv[1:])
         return 0
 
     args = ap.parse_args(argv)

@@ -21,6 +21,8 @@ dependencies = []
 live = ["requests>=2.31", "selenium>=4.20"]
 # Extraction / normalize layer — born-digital bulk via fitz, layout/tables via docling.
 extract = ["pymupdf>=1.24", "trafilatura>=1.8", "docling>=2.0"]
+# Object storage (Cloudflare R2 / Backblaze B2 — S3-compatible).
+s3 = ["boto3>=1.34"]
 dev = ["pytest>=8.0"]
 
 [project.scripts]
