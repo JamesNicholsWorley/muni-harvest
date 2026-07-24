@@ -26,16 +26,12 @@ jobs:
       - name: Install (core only)
         run: pip install -e .
 
-      # The inventory lives in the sibling CivicAtlasMA repo; in CI point at a
-      # committed copy or a checked-out sibling. Guarded so the job self-skips
-      # cleanly until the inventory path is wired for CI.
-      - name: Run Wayback sweep
+      # CI runs against a small committed host list (config/ci_hosts.txt) so the
+      # job does real work without the sibling CivicAtlasMA inventory CSV. The
+      # full 351-town harvest runs from the inventory on the VM, not here.
+      - name: Run Wayback sweep (committed host list)
         run: |
-          if [ -f "../CivicAtlasMA/data/inventory/master_urls.csv" ]; then
-            muni-harvest wayback ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
-          else
-            echo "inventory not present in CI checkout; skipping (wire a committed copy to enable)"
-          fi
+          muni-harvest wayback --hosts-file config/ci_hosts.txt ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
 
       - name: Upload harvest index
         if: always()

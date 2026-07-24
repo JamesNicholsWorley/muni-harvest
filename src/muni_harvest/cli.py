@@ -23,6 +23,8 @@ def main(argv: list[str] | None = None) -> int:
     p_wb = sub.add_parser("wayback", help="parallel Wayback CDX doc enumeration")
     p_wb.add_argument("--limit", type=int, default=None)
     p_wb.add_argument("--workers", type=int, default=None)
+    p_wb.add_argument("--hosts-file", default=None,
+                      help="read hosts from this file instead of the inventory CSV")
 
     p_pr = sub.add_parser("probe", help="tier-probe the domains (browser-required fraction)")
     p_pr.add_argument("--limit", type=int, default=None)
@@ -39,7 +41,8 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
     if args.cmd == "wayback":
         from .archive import wayback
-        wayback.harvest(limit=args.limit, workers=args.workers)
+        wayback.harvest(limit=args.limit, workers=args.workers,
+                        hosts_file=args.hosts_file)
     elif args.cmd == "probe":
         from .probe import tier_probe
         tier_probe.run(limit=args.limit, workers=args.workers)

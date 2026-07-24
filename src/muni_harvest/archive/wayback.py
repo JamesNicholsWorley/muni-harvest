@@ -115,14 +115,41 @@ def wayback_docs(host: str, *, limiter: RateLimiter | None = None,
     return out
 
 
-def harvest(*, limit: int | None = None, workers: int | None = None) -> dict:
-    """Concurrent Wayback sweep over the inventory's unique hosts. Resumable."""
+def load_hosts_file(path: Path, limit: int | None = None) -> list[str]:
+    """Unique hosts from a plain text file (one host or URL per line; # comments).
+
+    Lets CI run against a small committed list without the sibling inventory CSV.
+    """
+    hosts: list[str] = []
+    seen = set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        h = host_of(line)
+        if h and h not in seen:
+            seen.add(h)
+            hosts.append(h)
+    return hosts[:limit] if limit else hosts
+
+
+def harvest(*, limit: int | None = None, workers: int | None = None,
+            hosts_file: str | None = None) -> dict:
+    """Concurrent Wayback sweep. Hosts come from `hosts_file` if given, else the
+    inventory CSV. Resumable."""
     cfg = load_settings()
     wb = cfg["wayback"]
     workers = workers or wb["workers"]
-    inventory = resolve_path(cfg["paths"]["inventory_csv"])
-    if not inventory.exists():
-        raise SystemExit(f"[ERR] inventory not found: {inventory}")
+    if hosts_file:
+        hf = resolve_path(hosts_file)
+        if not hf.exists():
+            raise SystemExit(f"[ERR] hosts file not found: {hf}")
+        all_hosts = load_hosts_file(hf, limit=limit)
+    else:
+        inventory = resolve_path(cfg["paths"]["inventory_csv"])
+        if not inventory.exists():
+            raise SystemExit(f"[ERR] inventory not found: {inventory}")
+        all_hosts = load_hosts(inventory, limit=limit)
 
     out_dir = data_dir() / "wayback"
     docs_path = out_dir / "docs.jsonl"
@@ -130,7 +157,7 @@ def harvest(*, limit: int | None = None, workers: int | None = None) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     done = set(done_path.read_text(encoding="utf-8").split()) if done_path.exists() else set()
-    hosts = [h for h in load_hosts(inventory, limit=limit) if h not in done]
+    hosts = [h for h in all_hosts if h not in done]
     print(f"[*] {len(hosts)} hosts to enumerate "
           f"({len(done)} already done); {workers} workers")
     if not hosts:

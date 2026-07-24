@@ -1,0 +1,6 @@
+# Small committed host list so the scheduled GitHub Action can run a real (tiny,
+# polite) Wayback sweep without the sibling CivicAtlasMA inventory CSV.
+# One host or URL per line. Keep this short — CI is a smoke run, not the full harvest.
+abingtonma.gov
+actonma.gov
+amherstma.gov
