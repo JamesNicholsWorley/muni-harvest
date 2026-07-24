@@ -59,6 +59,8 @@ def escalate_host(host: str, pool) -> dict:
     of the original URL, which would be cross-origin (bare-domain -> www) and
     spuriously fail with status 0.
     """
+    import socket
+
     from ..archive.wayback import valid_host
     from ..discover.model import is_storage_host
 
@@ -67,6 +69,13 @@ def escalate_host(host: str, pool) -> dict:
         return {"tier": "invalid", "signal": "not_a_domain"}
     if is_storage_host(host):
         return {"tier": "storage", "signal": "file_store_no_homepage"}
+
+    # DNS pre-check: a dead/wrong domain is a DATA problem, not an access problem —
+    # no browser or unblocker can fix it. Short-circuit before booting a browser.
+    try:
+        socket.gethostbyname(host)
+    except OSError:
+        return {"tier": "dns_fail", "signal": "dns_unresolved"}
 
     home = f"https://{host}/"
     from .waf_session import mint_session
@@ -91,6 +100,8 @@ def escalate_host(host: str, pool) -> dict:
         src = d.page_source
     except Exception as exc:  # noqa: BLE001
         pool.release(d, broken=True)
+        if "ERR_NAME_NOT_RESOLVED" in str(exc):
+            return {"tier": "dns_fail", "signal": "dns_unresolved"}
         return {"tier": "blocked", "signal": f"driver_retry:{type(exc).__name__}"}
     pool.release(d)
     if _dom_clean(src):
