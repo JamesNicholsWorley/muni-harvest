@@ -31,6 +31,16 @@ def test_slugify():
     assert slugify("Town of Weston, MA!") == "town-of-weston-ma"
 
 
+def test_policy_applies_overrides_and_excludes():
+    from muni_harvest.archive.wayback import _apply_policy
+    ov = {"seekonkma.gov": "seekonk-ma.gov"}
+    ex = {"wpri.com"}
+    assert _apply_policy("seekonkma.gov", ov, ex) == "seekonk-ma.gov"  # corrected
+    assert _apply_policy("wpri.com", ov, ex) is None                    # news excluded
+    assert _apply_policy("weston.gov", ov, ex) == "weston.gov"          # untouched
+    assert _apply_policy("results.xlsx", ov, ex) is None                # invalid
+
+
 def test_valid_host_rejects_junk():
     assert valid_host("weston.gov")
     assert valid_host("town.barnstable.ma.us")

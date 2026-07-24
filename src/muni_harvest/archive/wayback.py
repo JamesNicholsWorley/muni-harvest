@@ -63,8 +63,18 @@ def valid_host(h: str) -> bool:
     return h.rsplit(".", 1)[-1] not in _FILE_TLDS
 
 
+def _apply_policy(h: str, overrides: dict, excludes: set) -> str | None:
+    """Correct a host via overrides, then drop it if excluded/invalid. None = skip."""
+    h = overrides.get(h, h)
+    if not h or h in excludes or not valid_host(h):
+        return None
+    return h
+
+
 def load_hosts(inventory_csv: Path, limit: int | None = None) -> list[str]:
-    """Unique valid hosts from the inventory's native_url column."""
+    """Unique municipal hosts from the inventory: corrected, news-excluded, valid."""
+    from ..config import excluded_hosts, host_overrides
+    overrides, excludes = host_overrides(), excluded_hosts()
     hosts: list[str] = []
     seen = set()
     with inventory_csv.open(encoding="utf-8", newline="") as fh:
@@ -72,8 +82,8 @@ def load_hosts(inventory_csv: Path, limit: int | None = None) -> list[str]:
             url = (row.get("native_url") or "").strip()
             if not url:
                 continue
-            h = host_of(url)
-            if h and h not in seen and valid_host(h):
+            h = _apply_policy(host_of(url), overrides, excludes)
+            if h and h not in seen:
                 seen.add(h)
                 hosts.append(h)
     hosts.sort()
@@ -133,14 +143,16 @@ def load_hosts_file(path: Path, limit: int | None = None) -> list[str]:
 
     Lets CI run against a small committed list without the sibling inventory CSV.
     """
+    from ..config import excluded_hosts, host_overrides
+    overrides, excludes = host_overrides(), excluded_hosts()
     hosts: list[str] = []
     seen = set()
     for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        h = host_of(line)
-        if h and h not in seen and valid_host(h):
+        h = _apply_policy(host_of(line), overrides, excludes)
+        if h and h not in seen:
             seen.add(h)
             hosts.append(h)
     return hosts[:limit] if limit else hosts

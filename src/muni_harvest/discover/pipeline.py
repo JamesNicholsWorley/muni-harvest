@@ -26,12 +26,15 @@ from .storage import resolve_download
 
 
 def host_to_municipality(inventory) -> dict[str, str]:
+    from ..config import host_overrides
+    overrides = host_overrides()
     m: dict[str, str] = {}
     with inventory.open(encoding="utf-8", newline="") as fh:
         for row in csv.DictReader(fh):
             u = (row.get("native_url") or "").strip()
             if u:
-                m.setdefault(host_of(u), row.get("municipality", ""))
+                h = host_of(u)
+                m.setdefault(overrides.get(h, h), row.get("municipality", ""))
     return m
 
 

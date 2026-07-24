@@ -1,0 +1,15 @@
+# Corrections for wrong/dead municipal domains in the inventory (native_url).
+# Applied non-destructively in the host loaders (we don't mutate CivicAtlasMA).
+# Each row: bad_host,good_host  — verified by fetching and confirming the town name.
+# 7 more dns_fail hosts need manual research (see data/discover/dns_verified.json):
+#   raynham-ma.gov, russell-ma.gov, shelburne-ma.gov, southampton-ma.gov,
+#   southbridgema.gov, town.great-barrington.ma.us, townofrichmond-ma.gov
+bad_host,good_host
+granvillema.gov,granville-ma.gov
+rutland-ma.gov,rutlandma.gov
+savoy-ma.gov,savoy.org
+seekonkma.gov,seekonk-ma.gov
+stoughtonma.gov,stoughton.org
+wendell-ma.gov,wendell.us
+westhampton-ma.gov,westhamptonma.gov
+wrentham-ma.gov,wrentham.org

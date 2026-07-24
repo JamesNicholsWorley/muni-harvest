@@ -28,3 +28,25 @@ def data_dir() -> Path:
     d = resolve_path(load_settings()["paths"]["data_dir"])
     d.mkdir(parents=True, exist_ok=True)
     return d
+
+
+def _read_lines(path: Path) -> list[str]:
+    if not path.exists():
+        return []
+    return [ln.strip() for ln in path.read_text(encoding="utf-8").splitlines()
+            if ln.strip() and not ln.startswith("#")]
+
+
+def excluded_hosts() -> set[str]:
+    """News/media hosts to drop from all target lists (config/exclude_hosts.txt)."""
+    return set(_read_lines(REPO_ROOT / "config" / "exclude_hosts.txt"))
+
+
+def host_overrides() -> dict[str, str]:
+    """bad_host -> good_host corrections (config/host_overrides.csv)."""
+    out: dict[str, str] = {}
+    for ln in _read_lines(REPO_ROOT / "config" / "host_overrides.csv"):
+        if "," in ln and not ln.startswith("bad_host"):
+            bad, good = ln.split(",", 1)
+            out[bad.strip()] = good.strip()
+    return out

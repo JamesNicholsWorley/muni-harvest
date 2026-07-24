@@ -1,0 +1,30 @@
+# News/media hosts to EXCLUDE from harvesting — we want municipal sites only.
+# These crept into the inventory because some election results were only published
+# via a news article. Excluding them drops those few non-municipal sources.
+# One host per line; # comments. Extend as more are found.
+#
+# NOTE: deliberately NOT excluded (real municipalities whose names contain a
+# news-like substring): cityofnewburyport.com, townofnewbury.org, wnewbury.org
+# (West Newbury), newsalemma.org (New Salem).
+959watd.com
+apps.npr.org
+atholdailynews.com
+berkshireeagle.com
+capecodtimes.com
+capenews.net
+communityadvocate.com
+eu.telegram.com
+everettindependent.com
+heraldnews.com
+media.wbur.org
+milforddailynews.com
+mvtimes.com
+nytimes.com
+patch.com
+patriotledger.com
+recorder.com
+southcoasttoday.com
+thesunchronicle.com
+vineyardgazette.com
+wpri.com
+wwlp.com
