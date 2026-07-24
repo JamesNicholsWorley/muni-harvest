@@ -43,6 +43,11 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("scorecard",
                    help="coverage stats vs the core civic-doc checklist")
 
+    p_esc = sub.add_parser("escalate",
+                           help="run T0-blocked hosts through the T1/T2 browser tier")
+    p_esc.add_argument("--limit", type=int, default=None)
+    p_esc.add_argument("--pool-size", type=int, default=3)
+
     # budget owns its own subparser tree, so split argv at the top level.
     if argv and argv[0] == "budget":
         from .budget import ledger
@@ -68,6 +73,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "scorecard":
         from .discover import scorecard
         scorecard.build()
+    elif args.cmd == "escalate":
+        from .fetchers import tiered
+        tiered.escalate_blocked(limit=args.limit, pool_size=args.pool_size)
     return 0
 
 

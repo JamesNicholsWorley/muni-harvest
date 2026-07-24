@@ -50,8 +50,17 @@ def host_of(url: str) -> str:
     return net[4:] if net.startswith("www.") else net
 
 
+_VALID_HOST = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9-]+)+$")
+
+
+def valid_host(h: str) -> bool:
+    """Reject inventory junk (local file paths, bare filenames) that isn't a domain.
+    Some native_url cells hold a local .xlsx path instead of a URL."""
+    return bool(h) and " " not in h and "\\" not in h and bool(_VALID_HOST.match(h))
+
+
 def load_hosts(inventory_csv: Path, limit: int | None = None) -> list[str]:
-    """Unique hosts from the inventory's native_url column."""
+    """Unique valid hosts from the inventory's native_url column."""
     hosts: list[str] = []
     seen = set()
     with inventory_csv.open(encoding="utf-8", newline="") as fh:
@@ -60,7 +69,7 @@ def load_hosts(inventory_csv: Path, limit: int | None = None) -> list[str]:
             if not url:
                 continue
             h = host_of(url)
-            if h and h not in seen:
+            if h and h not in seen and valid_host(h):
                 seen.add(h)
                 hosts.append(h)
     hosts.sort()
@@ -127,7 +136,7 @@ def load_hosts_file(path: Path, limit: int | None = None) -> list[str]:
         if not line or line.startswith("#"):
             continue
         h = host_of(line)
-        if h and h not in seen:
+        if h and h not in seen and valid_host(h):
             seen.add(h)
             hosts.append(h)
     return hosts[:limit] if limit else hosts

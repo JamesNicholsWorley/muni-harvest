@@ -1,6 +1,6 @@
 """Fast, offline smoke tests — no network. Validate the core plumbing."""
 
-from muni_harvest.archive.wayback import classify, host_of
+from muni_harvest.archive.wayback import classify, host_of, valid_host
 from muni_harvest.core import RateLimiter, slugify
 from muni_harvest.probe.tier_probe import _CHALLENGE
 
@@ -29,3 +29,11 @@ def test_challenge_signature_matches_cloudflare():
 
 def test_slugify():
     assert slugify("Town of Weston, MA!") == "town-of-weston-ma"
+
+
+def test_valid_host_rejects_junk():
+    assert valid_host("weston.gov")
+    assert valid_host("town.barnstable.ma.us")
+    assert not valid_host(r"c:\users\owner\downloads\results.xlsx")  # local path
+    assert not valid_host("results.xlsx")   # bare filename, no domain
+    assert not valid_host("localhost")      # no dot
