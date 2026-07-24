@@ -59,8 +59,16 @@ def escalate_host(host: str, pool) -> dict:
     of the original URL, which would be cross-origin (bare-domain -> www) and
     spuriously fail with status 0.
     """
-    home = f"https://{host}/"
+    from ..archive.wayback import valid_host
+    from ..discover.model import is_storage_host
 
+    # Non-domains (inventory junk) and file-store roots aren't browsable sites.
+    if not valid_host(host):
+        return {"tier": "invalid", "signal": "not_a_domain"}
+    if is_storage_host(host):
+        return {"tier": "storage", "signal": "file_store_no_homepage"}
+
+    home = f"https://{host}/"
     from .waf_session import mint_session
 
     # T1 — cookie-lift, then a plain request with the browser's cookies (requests
@@ -73,17 +81,21 @@ def escalate_host(host: str, pool) -> dict:
     except Exception:  # noqa: BLE001 — fall through to the full browser tier
         pass
 
-    # T2 — load in a real browser and read the rendered DOM after it settles.
+    # T2 — load in a real browser and read the rendered DOM after it settles. A
+    # driver error is RETRYABLE (mark 'blocked'), not a genuine paid-residual: the
+    # pool recycles the dead driver so the next --redo run re-checks this host.
+    d = pool.acquire()
     try:
-        with pool.lease() as d:
-            d.get(home)
-            time.sleep(4)
-            src = d.page_source
-        if _dom_clean(src):
-            return {"tier": "T2", "signal": "in_browser_dom"}
-        return {"tier": "needs_unblocker", "signal": f"t2_dom_len:{len(src or '')}"}
+        d.get(home)
+        time.sleep(4)
+        src = d.page_source
     except Exception as exc:  # noqa: BLE001
-        return {"tier": "needs_unblocker", "signal": f"t2_err:{type(exc).__name__}"}
+        pool.release(d, broken=True)
+        return {"tier": "blocked", "signal": f"driver_retry:{type(exc).__name__}"}
+    pool.release(d)
+    if _dom_clean(src):
+        return {"tier": "T2", "signal": "in_browser_dom"}
+    return {"tier": "needs_unblocker", "signal": f"t2_dom_len:{len(src or '')}"}
 
 
 def escalate_blocked(*, limit: int | None = None, pool_size: int = 3,
