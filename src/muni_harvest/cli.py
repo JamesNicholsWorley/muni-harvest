@@ -25,6 +25,8 @@ def main(argv: list[str] | None = None) -> int:
     p_wb.add_argument("--workers", type=int, default=None)
     p_wb.add_argument("--hosts-file", default=None,
                       help="read hosts from this file instead of the inventory CSV")
+    p_wb.add_argument("--shard", default=None,
+                      help="run only shard I/N (for distributed runners), e.g. 3/20")
 
     p_pr = sub.add_parser("probe", help="tier-probe the domains (browser-required fraction)")
     p_pr.add_argument("--limit", type=int, default=None)
@@ -70,7 +72,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "wayback":
         from .archive import wayback
         wayback.harvest(limit=args.limit, workers=args.workers,
-                        hosts_file=args.hosts_file)
+                        hosts_file=args.hosts_file, shard=args.shard)
     elif args.cmd == "probe":
         from .probe import tier_probe
         tier_probe.run(limit=args.limit, workers=args.workers)

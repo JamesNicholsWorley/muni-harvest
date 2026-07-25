@@ -16,8 +16,10 @@ Re-running skips hosts already in done.txt.
 from __future__ import annotations
 
 import csv
+import random
 import re
 import threading
+import time
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -27,6 +29,28 @@ from ..config import data_dir, load_settings, resolve_path
 from ..core import AuditLog, RateLimiter, append_jsonl, fetch_json
 
 CDX = "https://web.archive.org/cdx/search/cdx"
+
+# Signatures of an archive.org IP-throttle (vs a one-off network blip). When we see
+# these, archive.org has temporarily banned the caller IP — back off MINUTES, not
+# seconds, or every subsequent host errors in a cascade (the 30% loss we measured).
+_BLOCK_SIG = ("refused", "10061", "too many", "429", "timed out", "reset",
+              "forcibly closed")
+
+
+def _cdx_get(url: str, tries: int = 6, block_backoff: float = 45.0):
+    """CDX GET with archive-aware retry: long, jittered backoff on IP-throttle."""
+    for attempt in range(1, tries + 1):
+        try:
+            return fetch_json(url)
+        except Exception as exc:  # noqa: BLE001
+            if attempt >= tries:
+                raise
+            msg = str(exc).lower()
+            if any(s in msg for s in _BLOCK_SIG):
+                back = min(180.0, block_backoff * attempt) + random.uniform(0, 15)
+            else:
+                back = 2 ** attempt
+            time.sleep(back)
 
 # Doctype tagging (classify, do NOT filter — we keep everything).
 _DOCTYPE_RES = [
@@ -115,7 +139,7 @@ def wayback_docs(host: str, *, limiter: RateLimiter | None = None,
         # web.archive.org even with 20 threads in flight.
         if limiter:
             limiter.wait()
-        rows = fetch_json(f"{CDX}?{urllib.parse.urlencode(params)}")
+        rows = _cdx_get(f"{CDX}?{urllib.parse.urlencode(params)}", tries=tries)
         if not rows or len(rows) < 2:
             break
         body = rows[1:]
@@ -158,10 +182,23 @@ def load_hosts_file(path: Path, limit: int | None = None) -> list[str]:
     return hosts[:limit] if limit else hosts
 
 
+def shard_hosts(hosts: list[str], shard: str | None) -> list[str]:
+    """Partition hosts for distributed runs. `shard` is 'I/N' (1-based). Uses a
+    stride so each shard gets a mix of big and small hosts (balanced load, and each
+    shard's IP does ~1/N of the archive.org volume — under the per-IP throttle)."""
+    if not shard:
+        return hosts
+    i, n = (int(x) for x in shard.split("/"))
+    if not (1 <= i <= n):
+        raise SystemExit(f"[ERR] bad --shard '{shard}' (want I/N, 1<=I<=N)")
+    return hosts[i - 1::n]
+
+
 def harvest(*, limit: int | None = None, workers: int | None = None,
-            hosts_file: str | None = None) -> dict:
+            hosts_file: str | None = None, shard: str | None = None) -> dict:
     """Concurrent Wayback sweep. Hosts come from `hosts_file` if given, else the
-    inventory CSV. Resumable."""
+    inventory CSV. `shard`='I/N' runs only shard I (for distributed runners).
+    Resumable."""
     cfg = load_settings()
     wb = cfg["wayback"]
     workers = workers or wb["workers"]
@@ -175,6 +212,7 @@ def harvest(*, limit: int | None = None, workers: int | None = None,
         if not inventory.exists():
             raise SystemExit(f"[ERR] inventory not found: {inventory}")
         all_hosts = load_hosts(inventory, limit=limit)
+    all_hosts = shard_hosts(all_hosts, shard)
 
     out_dir = data_dir() / "wayback"
     docs_path = out_dir / "docs.jsonl"

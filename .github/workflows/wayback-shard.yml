@@ -1,0 +1,75 @@
+name: wayback-shard
+
+# Distributed Wayback enumeration across N runner IPs. The archive.org throttle is
+# per-IP CUMULATIVE volume, so sharding the 405 hosts over N runners keeps each IP
+# under the limit AND runs in parallel. Free/unlimited on this public repo.
+# NOTE: GitHub runners are Azure IPs — archive.org MAY throttle them harder; run a
+# small `shards` first (e.g. 4) to confirm before scaling to 20.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "20"
+      workers:
+        description: "Concurrency per runner (keep low to stay polite)"
+        default: "2"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  harvest:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install (core only, stdlib)
+        run: pip install -e .
+      - name: Wayback shard ${{ matrix.shard }}
+        run: |
+          muni-harvest wayback --hosts-file config/muni_hosts.txt \
+            --shard "${{ matrix.shard }}" --workers ${{ github.event.inputs.workers }}
+      - name: Upload shard docs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wb-shard-${{ strategy.job-index }}
+          path: data/wayback/
+          if-no-files-found: ignore
+
+  merge:
+    needs: harvest
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge shard docs + report
+        run: |
+          find shards -name docs.jsonl -exec cat {} + > docs.jsonl || true
+          find shards -name done.txt   -exec cat {} + | sort -u > done.txt || true
+          echo "merged docs: $(wc -l < docs.jsonl)"
+          echo "hosts done:  $(wc -l < done.txt)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wayback-docs-merged
+          path: |
+            docs.jsonl
+            done.txt
