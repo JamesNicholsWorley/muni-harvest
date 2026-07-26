@@ -51,6 +51,10 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("coverage",
                    help="board-level agenda/minutes coverage + linkage (wide-net classifier)")
 
+    p_acr = sub.add_parser("recover-boards",
+                           help="recover AgendaCenter meeting->board (fills unknown-board gap)")
+    p_acr.add_argument("--workers", type=int, default=8)
+
     p_ver = sub.add_parser("verify",
                            help="content-verify election docs (open PDFs, check results)")
     p_ver.add_argument("--limit", type=int, default=None)
@@ -107,6 +111,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "coverage":
         from .discover import coverage
         coverage.build()
+    elif args.cmd == "recover-boards":
+        from .discover import agendacenter_recover
+        agendacenter_recover.run(workers=args.workers)
     elif args.cmd == "verify":
         from .discover import verify
         if args.emit:

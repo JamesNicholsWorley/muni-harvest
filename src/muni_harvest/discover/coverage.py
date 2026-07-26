@@ -23,6 +23,8 @@ PRIORITY = ["select_board", "city_council", "planning_board", "zba", "conservati
 
 
 def build(total_towns: int = 351) -> dict:
+    from .agendacenter_recover import load_recovered
+    ac_map = load_recovered()  # (town, meeting_id) -> board, fills AgendaCenter gaps
     nodes = data_dir() / "discover" / "nodes.jsonl"
     cov: dict[tuple, set] = defaultdict(set)     # (board, doctype) -> {town}
     ac_ag: dict[str, set] = defaultdict(set)     # town -> {meeting_id} agendas
@@ -41,6 +43,9 @@ def build(total_towns: int = 351) -> dict:
         town = n.get("municipality") or ""
         c = classify_document(n["url"], n.get("anchor", ""))
         dt, bd = c["doctype"], c["board"]
+        # Fill AgendaCenter's missing board from the recovered meeting_id->board map.
+        if not bd and c["agendacenter"] and c["meeting_id"] and town:
+            bd = ac_map.get((town, c["meeting_id"]), "")
         if dt:
             doctypes[dt] += 1
         if bd:
