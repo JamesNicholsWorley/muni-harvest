@@ -48,6 +48,12 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("groundtruth",
                    help="election-result recall vs the 942 known-collected PDFs")
 
+    p_ver = sub.add_parser("verify",
+                           help="content-verify election docs (open PDFs, check results)")
+    p_ver.add_argument("--limit", type=int, default=None)
+    p_ver.add_argument("--per-town", type=int, default=3)
+    p_ver.add_argument("--workers", type=int, default=8)
+
     sub.add_parser("store", add_help=False,
                    help="object storage (R2/B2): ping | ensure")
 
@@ -90,6 +96,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "groundtruth":
         from .discover import groundtruth
         groundtruth.build()
+    elif args.cmd == "verify":
+        from .discover import verify
+        verify.verify(limit=args.limit, per_town=args.per_town, workers=args.workers)
     elif args.cmd == "escalate":
         from .fetchers import tiered
         tiered.escalate_blocked(limit=args.limit, pool_size=args.pool_size,

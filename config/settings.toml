@@ -24,12 +24,14 @@ workers      = 8           # browser tier is machine-bound, not politeness-bound
 sample_paths = ["/", "/robots.txt"]
 
 [discover]
-workers          = 12      # one worker per HOST; per-host pacing keeps each polite
-max_depth        = 4       # BFS depth cap for the live crawl
-max_pages        = 400     # page-fetch cap per host (safety ceiling)
-base_delay_s     = 1.0     # per-host AIMD floor (seconds between requests)
-max_seed_pages   = 40      # sitemap page-URLs seeded into the crawl frontier
-sitemap_max_urls = 20000   # cap on sitemap enumeration per host
+workers           = 12     # one worker per HOST; per-host pacing keeps each polite
+max_depth         = 4      # BFS depth cap for the live crawl
+max_pages         = 150    # page-fetch cap per host (T0 stdlib crawl)
+max_pages_browser = 60     # tighter cap for the slow T2 browser crawl
+max_consec_429    = 5      # circuit-breaker: bail a host after N consecutive 429s
+base_delay_s      = 1.0    # per-host AIMD floor (seconds between requests)
+max_seed_pages    = 40     # sitemap page-URLs seeded into the crawl frontier
+sitemap_max_urls  = 20000  # cap on sitemap enumeration per host
 
 [budget]
 total_usd = 40.0

@@ -13,6 +13,7 @@ off-host when they sit on the storage allowlist (Drive/S3/Dropbox/CDN).
 from __future__ import annotations
 
 import time
+import urllib.error
 from collections import deque
 from urllib.parse import urldefrag, urljoin, urlsplit
 
@@ -24,6 +25,29 @@ from .model import (
 from .storage import resolve_download
 
 _SKIP_SCHEMES = ("mailto:", "tel:", "javascript:", "#", "data:")
+
+
+class _Rate429(Exception):
+    """Signals a 429 so the crawler can count consecutive throttles and bail."""
+
+
+def _stdlib_get(url: str) -> str:
+    """Fast-fail page fetch (tries=1). Raises _Rate429 on HTTP 429 so the
+    circuit-breaker can bail a host that rate-limits every page (the Barnstable case)."""
+    try:
+        raw = fetch(url, tries=1, timeout=25)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 429:
+            raise _Rate429 from exc
+        raise
+    return raw[:2_000_000].decode("utf-8", errors="replace")
+
+
+def _browser_get(pool, url: str) -> str:
+    """Fetch a page via a warm pooled driver (for T2 browser-required hosts)."""
+    with pool.lease() as d:
+        d.get(url)
+        return (d.page_source or "")[:2_000_000]
 
 
 class AdaptiveDelay:
@@ -51,8 +75,14 @@ class AdaptiveDelay:
 
 def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
                seed_urls: list[str] | None = None, max_depth: int = 4,
-               max_pages: int = 400, base_delay: float = 1.0) -> list[dict]:
-    """BFS from the homepage + seeds. Returns page + file nodes with nav-tree fields."""
+               max_pages: int = 400, base_delay: float = 1.0,
+               pool=None, use_browser: bool = False,
+               max_consec_429: int = 5) -> list[dict]:
+    """BFS from the homepage + seeds. Returns page + file nodes with nav-tree fields.
+
+    use_browser=True + pool: fetch pages via a warm driver (for T2 hosts that block
+    plain HTTP). Circuit-breaker: after `max_consec_429` consecutive 429s, bail the
+    host (a rate-limiting host can otherwise monopolize the crawl for hours)."""
     crawl_delay = getattr(robots, "crawl_delay", None) or 0.0
     pacer = AdaptiveDelay(max(base_delay, float(crawl_delay)))
 
@@ -66,6 +96,7 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
     emitted: set[str] = set()
     nodes: list[dict] = []
     pages = 0
+    consec_429 = 0
 
     def emit(node: dict) -> None:
         k = node["urlkey"]
@@ -80,14 +111,22 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
         pacer.sleep()
         t0 = time.monotonic()
         try:
-            raw = fetch(url, tries=2, timeout=30)
+            html = (_browser_get(pool, url) if (use_browser and pool)
+                    else _stdlib_get(url))
+        except _Rate429:
+            consec_429 += 1
+            pacer.throttled()
+            if consec_429 >= max_consec_429:
+                print(f"  [BAIL] {seed_host}: {consec_429} consecutive 429s")
+                break
+            continue
         except Exception:  # noqa: BLE001 — dead/slow page: back off, skip
             pacer.throttled()
             continue
+        consec_429 = 0
         pacer.ok(time.monotonic() - t0)
         pages += 1
 
-        html = raw[:2_000_000].decode("utf-8", errors="replace")
         page = extract(html)
         page_crumb = page.breadcrumb or crumb or page.title
         emit(make_node(seed_host=seed_host, municipality=municipality, url=url,

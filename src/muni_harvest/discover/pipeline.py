@@ -47,8 +47,11 @@ def wayback_by_host() -> dict[str, list[dict]]:
 
 
 def discover_host(host: str, municipality: str, cfg: dict,
-                  wb_docs: list[dict]) -> tuple[list[dict], dict]:
+                  wb_docs: list[dict], tier: str = "T0",
+                  pool=None) -> tuple[list[dict], dict]:
     dc = cfg["discover"]
+    # T1/T2 hosts block plain HTTP -> crawl their live pages through the browser.
+    use_browser = tier in ("T1", "T2") and pool is not None
     robots = RobotsPolicy(host).load()
     cms_name, cms_seeds = fingerprint(host)
 
@@ -64,9 +67,13 @@ def discover_host(host: str, municipality: str, cfg: dict,
             sm_page_seeds.append(u)
 
     crawl_seeds = cms_seeds + sm_page_seeds[:dc["max_seed_pages"]]
+    # T2 browser crawl is slow; cap its pages tighter than the T0 stdlib crawl.
+    cap = dc.get("max_pages_browser", 60) if use_browser else dc["max_pages"]
     crawl_nodes = crawl_site(host, municipality=municipality, robots=robots,
                              seed_urls=crawl_seeds, max_depth=dc["max_depth"],
-                             max_pages=dc["max_pages"], base_delay=dc["base_delay_s"])
+                             max_pages=cap, base_delay=dc["base_delay_s"],
+                             pool=pool, use_browser=use_browser,
+                             max_consec_429=dc.get("max_consec_429", 5))
 
     wb_nodes = [make_node(seed_host=host, municipality=municipality, url=r["url"],
                           kind="file", mimetype=r.get("mimetype", ""),
@@ -127,7 +134,23 @@ def run(*, limit: int | None = None, workers: int | None = None,
     done = set(done_path.read_text(encoding="utf-8").split()) if done_path.exists() else set()
     todo = [h for h in hosts if norm_host(h) not in done]
     wb = wayback_by_host()
-    print(f"[*] discover: {len(todo)} hosts ({len(done)} done); {workers} workers")
+
+    # Tier map: T1/T2 hosts get a warm browser for their live crawl.
+    from ..resolve.tier_cache import TierCache
+    tiers = {h: (rec or {}).get("tier", "T0")
+             for h, rec in ((x, TierCache().get(x)) for x in map(norm_host, todo))}
+    n_browser = sum(1 for t in tiers.values() if t in ("T1", "T2"))
+    browser_pool = None
+    if n_browser:
+        try:
+            from ..fetchers.browser_pool import BrowserPool
+            browser_pool = BrowserPool(size=3)
+        except Exception as exc:  # noqa: BLE001 — no `live` extra: T2 falls back to stdlib
+            print(f"[warn] browser tier unavailable ({exc}); {n_browser} T2 hosts "
+                  f"will use stdlib crawl")
+
+    print(f"[*] discover: {len(todo)} hosts ({len(done)} done); {workers} workers; "
+          f"{n_browser} via browser tier")
     if not todo:
         return {"hosts": 0}
 
@@ -138,7 +161,8 @@ def run(*, limit: int | None = None, workers: int | None = None,
     def work(host: str) -> None:
         h = norm_host(host)
         try:
-            nodes, stats = discover_host(h, muni_map.get(h, ""), cfg, wb.get(h, []))
+            nodes, stats = discover_host(h, muni_map.get(h, ""), cfg, wb.get(h, []),
+                                         tier=tiers.get(h, "T0"), pool=browser_pool)
         except Exception as exc:  # noqa: BLE001
             audit.write(f"ERR\t{h}\t{exc}")
             return
@@ -152,13 +176,17 @@ def run(*, limit: int | None = None, workers: int | None = None,
             totals["nodes"] += len(nodes)
             totals["files"] += stats["files"]
         audit.write(f"OK\t{h}\t{stats['files']} files\t{stats['pages']} pages"
-                    f"\tcms={stats['cms']}\tonly_in={stats['only_in_source']}")
+                    f"\tcms={stats['cms']}\ttier={tiers.get(h)}")
         print(f"  [OK] {h:<34} files={stats['files']:>5} pages={stats['pages']:>4} "
-              f"cms={stats['cms']:<10} deltas={stats['only_in_source']}")
+              f"tier={tiers.get(h,'T0'):<4} cms={stats['cms']}")
 
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        for _ in as_completed([pool.submit(work, h) for h in todo]):
-            pass
+    try:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            for _ in as_completed([executor.submit(work, h) for h in todo]):
+                pass
+    finally:
+        if browser_pool:
+            browser_pool.close()
     audit.close()
     print(f"\n[done] hosts={totals['hosts']} nodes={totals['nodes']} "
           f"files={totals['files']} -> {nodes_path}")
