@@ -48,6 +48,9 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("groundtruth",
                    help="election-result recall vs the 942 known-collected PDFs")
 
+    sub.add_parser("coverage",
+                   help="board-level agenda/minutes coverage + linkage (wide-net classifier)")
+
     p_ver = sub.add_parser("verify",
                            help="content-verify election docs (open PDFs, check results)")
     p_ver.add_argument("--limit", type=int, default=None)
@@ -96,6 +99,9 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "groundtruth":
         from .discover import groundtruth
         groundtruth.build()
+    elif args.cmd == "coverage":
+        from .discover import coverage
+        coverage.build()
     elif args.cmd == "verify":
         from .discover import verify
         verify.verify(limit=args.limit, per_town=args.per_town, workers=args.workers)
