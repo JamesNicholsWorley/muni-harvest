@@ -1,0 +1,83 @@
+name: verify-shard
+
+# Distributed content-verification of election docs across N runner IPs. Each runner
+# downloads its shard of config/verify_candidates.jsonl (Wayback snapshots + live),
+# opens the PDFs with fitz, and checks the text for real results signals. Sharding
+# spreads the archive.org download load so we don't trip the per-IP throttle.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "20"
+      workers:
+        description: "Concurrency per runner"
+        default: "3"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  verify:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install (pdf reader)
+        run: pip install -e ".[pdf]"
+      - name: Verify shard ${{ matrix.shard }}
+        run: |
+          muni-harvest verify --candidates config/verify_candidates.jsonl \
+            --shard "${{ matrix.shard }}" --workers ${{ github.event.inputs.workers }}
+      - name: Upload shard verdicts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-shard-${{ strategy.job-index }}
+          path: data/discover/verify.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: verify
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge + report precision/recall
+        run: |
+          find shards -name verify.jsonl -exec cat {} + > verify.jsonl || true
+          python3 - <<'PY'
+          import json, collections
+          rows=[json.loads(l) for l in open("verify.jsonl") if l.strip()]
+          ok=[r for r in rows if not str(r["verdict"]).startswith("err")]
+          dist=collections.Counter(r["verdict"] for r in ok)
+          res=dist.get("results",0)
+          towns={r["municipality"] for r in ok if r["verdict"]=="results"}
+          print("verdicts:", dict(dist))
+          print(f"precision (real results / fetched): {res}/{len(ok)} = {100*res/max(len(ok),1):.1f}%")
+          print(f"content-verified towns with a results PDF: {len(towns)}")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verify-merged
+          path: verify.jsonl

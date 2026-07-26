@@ -56,6 +56,11 @@ def main(argv: list[str] | None = None) -> int:
     p_ver.add_argument("--limit", type=int, default=None)
     p_ver.add_argument("--per-town", type=int, default=3)
     p_ver.add_argument("--workers", type=int, default=8)
+    p_ver.add_argument("--emit", action="store_true",
+                       help="write config/verify_candidates.jsonl and exit")
+    p_ver.add_argument("--candidates", default=None,
+                       help="verify from a committed candidates file (for runners)")
+    p_ver.add_argument("--shard", default=None, help="run only shard I/N")
 
     sub.add_parser("store", add_help=False,
                    help="object storage (R2/B2): ping | ensure")
@@ -104,7 +109,12 @@ def main(argv: list[str] | None = None) -> int:
         coverage.build()
     elif args.cmd == "verify":
         from .discover import verify
-        verify.verify(limit=args.limit, per_town=args.per_town, workers=args.workers)
+        if args.emit:
+            verify.emit_candidates(per_town=args.per_town)
+        else:
+            verify.verify(limit=args.limit, per_town=args.per_town,
+                          workers=args.workers, candidates_file=args.candidates,
+                          shard=args.shard)
     elif args.cmd == "escalate":
         from .fetchers import tiered
         tiered.escalate_blocked(limit=args.limit, pool_size=args.pool_size,

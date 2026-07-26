@@ -19,8 +19,9 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from ..archive.wayback import classify, host_of
-from ..config import data_dir, host_overrides, load_settings, resolve_path
-from ..core import fetch, iter_jsonl, write_jsonl
+from ..config import (REPO_ROOT, data_dir, host_overrides, load_settings,
+                      resolve_path)
+from ..core import fetch, iter_jsonl, read_jsonl, write_jsonl
 
 # Strong content signals of an actual RESULTS document (not a ballot/warrant).
 _RESULTS = re.compile(
@@ -97,15 +98,40 @@ def _candidates(overrides: dict) -> dict[str, list[dict]]:
     return cands
 
 
-def verify(*, limit: int | None = None, per_town: int = 3, workers: int = 8) -> dict:
+CANDIDATES_FILE = REPO_ROOT / "config" / "verify_candidates.jsonl"
+
+
+def emit_candidates(per_town: int = 4, path=None) -> int:
+    """Write the election candidate list (committed) so Actions runners can shard it
+    without needing the multi-GB local corpus."""
     cands = _candidates(host_overrides())
-    towns = sorted(cands)
-    if limit:
-        towns = towns[:limit]
-    # Flatten to a bounded work list (per_town candidates each).
-    work = [(t, c) for t in towns for c in cands[t][:per_town]]
-    print(f"[*] verifying {len(work)} candidate docs across {len(towns)} towns "
-          f"(<= {per_town}/town), {workers} workers")
+    rows = [{"municipality": t, "year": c["year"], "fetch_url": c["fetch_url"],
+             "src": c["src"]}
+            for t in sorted(cands) for c in cands[t][:per_town]]
+    path = path or CANDIDATES_FILE
+    write_jsonl(path, rows)
+    print(f"[OK] wrote {len(rows)} candidates across {len(cands)} towns -> {path}")
+    return len(rows)
+
+
+def verify(*, limit: int | None = None, per_town: int = 3, workers: int = 8,
+           candidates_file: str | None = None, shard: str | None = None) -> dict:
+    if candidates_file:
+        rows = read_jsonl(resolve_path(candidates_file))
+        if shard:
+            i, n = (int(x) for x in shard.split("/"))
+            rows = rows[i - 1::n]
+        work = [(r["municipality"], {"fetch_url": r["fetch_url"], "year": r["year"],
+                                     "src": r.get("src", "?")}) for r in rows]
+        towns = sorted({r["municipality"] for r in rows})
+    else:
+        cands = _candidates(host_overrides())
+        towns = sorted(cands)
+        if limit:
+            towns = towns[:limit]
+        work = [(t, c) for t in towns for c in cands[t][:per_town]]
+    print(f"[*] verifying {len(work)} candidate docs across {len(towns)} towns, "
+          f"{workers} workers")
 
     results: list[dict] = []
 
