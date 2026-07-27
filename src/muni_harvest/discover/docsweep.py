@@ -26,7 +26,7 @@ from ..config import data_dir, load_settings, resolve_path
 from ..core import RateLimiter, append_jsonl, fetch
 from .crawl import AdaptiveDelay, _SKIP_SCHEMES
 from .htmllinks import extract
-from .model import is_file_url, make_node, norm_host, same_site, urlkey
+from .model import is_file_url, is_storage_host, make_node, norm_host, same_site, urlkey
 from .pipeline import host_to_municipality
 from .robots import RobotsPolicy
 from .sitemaps import sitemap_urls
@@ -48,8 +48,17 @@ def _get(url: str, *, pool=None, use_browser: bool = False, timeout: int = 25) -
 
 def sweep_host(host: str, municipality: str = "", *, pool=None,
                use_browser: bool = False, max_pages: int = 6000,
-               base_delay: float = 1.0, max_consec_fail: int = 8) -> tuple[list[dict], dict]:
-    """Fetch all sitemap content pages and harvest every linked document."""
+               base_delay: float = 1.0, max_consec_fail: int = 8,
+               max_seconds: float = 1500.0) -> tuple[list[dict], dict]:
+    """Fetch all sitemap content pages and harvest every linked document.
+
+    A storage/CDN host (s3, revize CDN, drive) is not a crawlable municipal site — skip
+    it. A per-host wall-clock budget (max_seconds) guarantees one slow host can't hang a
+    whole shard past the runner's 6h limit."""
+    if is_storage_host(host):
+        return [], {"host": host, "municipality": municipality, "pages": 0,
+                    "docs": 0, "nodes": 0, "files": 0, "skipped": "storage_host"}
+    start = time.monotonic()
     robots = RobotsPolicy(host).load()
     pacer = AdaptiveDelay(max(base_delay, float(getattr(robots, "crawl_delay", 0) or 0)))
     home = f"https://{host}/"
@@ -76,8 +85,12 @@ def sweep_host(host: str, municipality: str = "", *, pool=None,
                        discovered_via="sitemap", storage_host=shost))
 
     pages = docs = fails = 0
+    hit_budget = False
     for purl in dict.fromkeys(page_seeds):
         if pages >= max_pages:
+            break
+        if time.monotonic() - start > max_seconds:
+            hit_budget = True
             break
         k = urlkey(purl)
         if k in fetched:
@@ -127,7 +140,8 @@ def sweep_host(host: str, municipality: str = "", *, pool=None,
 
     stats = {"host": host, "municipality": municipality, "pages": pages,
              "docs": docs, "nodes": len(nodes),
-             "files": sum(1 for n in nodes if n["kind"] == "file")}
+             "files": sum(1 for n in nodes if n["kind"] == "file"),
+             "budget_hit": hit_budget}      # logged, never a silent truncation
     return nodes, stats
 
 
@@ -187,8 +201,13 @@ def run(*, workers: int = 8, hosts_file: str | None = None, shard: str | None = 
             totals["hosts"] += 1
             totals["docs"] += stats["docs"]
             totals["nodes"] += len(nodes)
+        note = ""
+        if stats.get("skipped"):
+            note = f"  [skipped: {stats['skipped']}]"
+        elif stats.get("budget_hit"):
+            note = "  [time-budget hit - partial]"
         print(f"  [OK] {host:<32} pages={stats['pages']:>4} files={stats['files']:>5} "
-              f"tier={tiers.get(host,'T0')}")
+              f"tier={tiers.get(host,'T0')}{note}")
 
     try:
         with ThreadPoolExecutor(max_workers=workers) as ex:

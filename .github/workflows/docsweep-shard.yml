@@ -13,7 +13,10 @@ on:
         default: "20"
       max_pages:
         description: "Max sitemap pages to fetch per host"
-        default: "6000"
+        default: "3000"
+      hosts_file:
+        description: "Host list to sweep"
+        default: "config/muni_hosts.txt"
 
 jobs:
   setup:
@@ -30,6 +33,7 @@ jobs:
   sweep:
     needs: setup
     runs-on: ubuntu-latest
+    timeout-minutes: 340        # stay under the 6h hard cap; per-host budget bounds each host
     strategy:
       fail-fast: false
       matrix:
@@ -42,7 +46,7 @@ jobs:
       - run: pip install -e .
       - name: Document sweep shard ${{ matrix.shard }}
         run: |
-          muni-harvest docsweep --hosts-file config/muni_hosts.txt \
+          muni-harvest docsweep --hosts-file "${{ github.event.inputs.hosts_file }}" \
             --shard "${{ matrix.shard }}" \
             --max-pages ${{ github.event.inputs.max_pages }} --workers 4
       - name: Upload shard nodes
