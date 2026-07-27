@@ -24,29 +24,45 @@ from .pipeline import host_to_municipality
 
 _CID_LABEL = re.compile(r'name="chkCategoryID"\s+value="(\d+)"[^>]*>\s*([^<]{3,60})')
 _WALK = re.compile(r'id="cat(\d+)"|/AgendaCenter/ViewFile/(?:Agenda|Minutes)/_\d{8}-(\d+)')
+_VIEWFILE = re.compile(r'/AgendaCenter/ViewFile/(Agenda|Minutes)/_(\d{8})-(\d+)', re.I)
 
 
-def recover_boards(host: str, *, limiter=None, timeout: int = 30) -> dict[str, str]:
-    """meeting_id -> board_key for `host` (empty dict if not an AgendaCenter site)."""
-    if limiter:
-        limiter.wait()
-    try:
-        html = fetch(f"https://{host}/AgendaCenter", tries=2, timeout=timeout).decode(
-            "utf-8", errors="replace")
-    except Exception:  # noqa: BLE001
-        return {}
+def parse_listing(host: str, html: str) -> tuple[dict[str, str], list[str]]:
+    """Return (meeting_id->board_key, [full ViewFile URLs]). One /AgendaCenter fetch
+    returns ALL retained years (no pagination needed), so this is the full harvest."""
     if "catAgendaRow" not in html and "ViewFile" not in html:
-        return {}
+        return {}, []
     cid_board = {cid: _match_board(re.sub(r"\s+", " ", lbl))
                  for cid, lbl in _CID_LABEL.findall(html)}
-    out: dict[str, str] = {}
+    mid_board: dict[str, str] = {}
     cur = None
     for m in _WALK.finditer(html):
         if m.group(1):
             cur = m.group(1)
         elif m.group(2) and cur:
-            out.setdefault(m.group(2), cid_board.get(cur, ""))
-    return {mid: b for mid, b in out.items() if b}
+            mid_board.setdefault(m.group(2), cid_board.get(cur, ""))
+    urls = []
+    seen = set()
+    for m in _VIEWFILE.finditer(html):
+        u = f"https://{host}/AgendaCenter/ViewFile/{m.group(1)}/_{m.group(2)}-{m.group(3)}"
+        if u not in seen:
+            seen.add(u)
+            urls.append(u)
+    return {mid: b for mid, b in mid_board.items() if b}, urls
+
+
+def fetch_listing(host: str, *, limiter=None, timeout: int = 45) -> str:
+    if limiter:
+        limiter.wait()
+    try:
+        return fetch(f"https://{host}/AgendaCenter", tries=2, timeout=timeout).decode(
+            "utf-8", errors="replace")
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+def recover_boards(host: str, *, limiter=None, timeout: int = 30) -> dict[str, str]:
+    return parse_listing(host, fetch_listing(host, limiter=limiter, timeout=timeout))[0]
 
 
 def _agendacenter_hosts() -> dict[str, str]:
@@ -59,41 +75,54 @@ def _agendacenter_hosts() -> dict[str, str]:
 
 
 def run(*, workers: int = 8) -> dict:
+    """Full AgendaCenter harvest: per town, one /AgendaCenter fetch -> emit every
+    agenda+minutes URL as a node (discovered_via=agendacenter_live) AND the
+    meeting_id->board map. Recovers retained-history minutes Wayback missed."""
     out_dir = data_dir() / "discover"
-    out_path = out_dir / "ac_boards.jsonl"
-    done_path = out_dir / "ac_boards_done.txt"
+    boards_path = out_dir / "ac_boards.jsonl"
+    nodes_path = out_dir / "nodes.jsonl"
+    done_path = out_dir / "ac_harvest_done.txt"
     done = set(done_path.read_text(encoding="utf-8").split()) if done_path.exists() else set()
 
     hosts = _agendacenter_hosts()
     todo = [(h, m) for h, m in hosts.items() if h not in done]
-    print(f"[*] AgendaCenter board recovery: {len(todo)} towns ({len(done)} done)")
+    print(f"[*] AgendaCenter full harvest: {len(todo)} towns ({len(done)} done)")
     if not todo:
         return {"towns": 0}
 
     limiter = RateLimiter(load_settings()["wayback"]["per_host_rpm"])
     lock = threading.Lock()
-    totals = {"towns": 0, "mappings": 0}
+    totals = {"towns": 0, "mappings": 0, "docs": 0}
 
     def work(item):
         host, muni = item
-        mid_board = recover_boards(host, limiter=limiter)
-        rows = [{"municipality": muni, "seed_host": host, "meeting_id": mid,
-                 "board": b} for mid, b in mid_board.items()]
+        mid_board, urls = parse_listing(host, fetch_listing(host, limiter=limiter))
+        board_rows = [{"municipality": muni, "seed_host": host, "meeting_id": mid,
+                       "board": b} for mid, b in mid_board.items()]
+        node_rows = [{"seed_host": host, "municipality": muni, "url": u,
+                      "urlkey": u.split("//", 1)[-1], "kind": "file",
+                      "mimetype": "application/pdf", "doctype": "", "anchor": "",
+                      "depth": 1, "parent_url": f"https://{host}/AgendaCenter",
+                      "breadcrumb": "", "discovered_via": "agendacenter_live",
+                      "storage_host": ""} for u in urls]
         with lock:
-            if rows:
-                append_jsonl(out_path, rows)
+            if board_rows:
+                append_jsonl(boards_path, board_rows)
+            if node_rows:
+                append_jsonl(nodes_path, node_rows)
             with done_path.open("a", encoding="utf-8") as fh:
                 fh.write(host + "\n")
             totals["towns"] += 1
-            totals["mappings"] += len(rows)
-        if rows:
-            print(f"  [OK] {host:<34} {len(rows)} meeting->board")
+            totals["mappings"] += len(board_rows)
+            totals["docs"] += len(node_rows)
+        if node_rows:
+            print(f"  [OK] {host:<32} {len(node_rows):>4} docs  {len(board_rows):>4} board-maps")
 
     with ThreadPoolExecutor(max_workers=workers) as ex:
         for _ in as_completed([ex.submit(work, it) for it in todo]):
             pass
-    print(f"\n[done] {totals['towns']} towns, {totals['mappings']} meeting->board "
-          f"mappings -> {out_path}")
+    print(f"\n[done] {totals['towns']} towns, {totals['docs']} AgendaCenter doc nodes, "
+          f"{totals['mappings']} meeting->board -> {nodes_path}")
     return totals
 
 
