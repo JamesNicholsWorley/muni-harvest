@@ -41,6 +41,7 @@ def main(argv: list[str] | None = None) -> int:
     p_dis.add_argument("--hosts-file", default=None)
     p_dis.add_argument("--max-pages", type=int, default=None)
     p_dis.add_argument("--max-depth", type=int, default=None)
+    p_dis.add_argument("--shard", default=None, help="run only shard I/N (distributed)")
 
     sub.add_parser("scorecard",
                    help="coverage stats vs the core civic-doc checklist")
@@ -101,7 +102,7 @@ def main(argv: list[str] | None = None) -> int:
         from .discover import pipeline
         pipeline.run(limit=args.limit, workers=args.workers,
                      hosts_file=args.hosts_file, max_pages=args.max_pages,
-                     max_depth=args.max_depth)
+                     max_depth=args.max_depth, shard=args.shard)
     elif args.cmd == "scorecard":
         from .discover import scorecard
         scorecard.build()

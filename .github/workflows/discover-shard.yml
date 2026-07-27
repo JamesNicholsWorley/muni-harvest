@@ -1,0 +1,74 @@
+name: discover-shard
+
+# Deep live crawl distributed across N runner IPs. On a runner there's no local
+# Wayback index or tier cache, so discover runs pure deep T0 (stdlib) link-graph
+# crawl at a high page cap — catching linked/freeform docs the shallow local pass
+# (150 pages) missed. Sharding spreads load and parallelizes. Merge -> union locally.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "20"
+      max_pages:
+        description: "Deep page cap per host"
+        default: "800"
+      max_depth:
+        description: "BFS depth cap"
+        default: "6"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  crawl:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Deep crawl shard ${{ matrix.shard }}
+        run: |
+          muni-harvest discover --hosts-file config/muni_hosts.txt \
+            --shard "${{ matrix.shard }}" \
+            --max-pages ${{ github.event.inputs.max_pages }} \
+            --max-depth ${{ github.event.inputs.max_depth }} --workers 4
+      - name: Upload shard nodes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: discover-shard-${{ strategy.job-index }}
+          path: data/discover/nodes.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: crawl
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge deep-crawl nodes
+        run: |
+          find shards -name nodes.jsonl -exec cat {} + > nodes_deep.jsonl || true
+          echo "deep-crawl nodes: $(wc -l < nodes_deep.jsonl)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: discover-deep-merged
+          path: nodes_deep.jsonl

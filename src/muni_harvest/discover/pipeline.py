@@ -107,7 +107,7 @@ def discover_host(host: str, municipality: str, cfg: dict,
 
 def run(*, limit: int | None = None, workers: int | None = None,
         hosts_file: str | None = None, max_pages: int | None = None,
-        max_depth: int | None = None) -> dict:
+        max_depth: int | None = None, shard: str | None = None) -> dict:
     cfg = load_settings()
     if max_pages is not None:
         cfg["discover"]["max_pages"] = max_pages
@@ -124,6 +124,9 @@ def run(*, limit: int | None = None, workers: int | None = None,
         from ..archive.wayback import load_hosts
         hosts = load_hosts(inventory, limit=limit)
         muni_map = host_to_municipality(inventory)
+    if shard:
+        from ..archive.wayback import shard_hosts
+        hosts = shard_hosts(hosts, shard)
 
     out_dir = data_dir() / "discover"
     nodes_path = out_dir / "nodes.jsonl"
