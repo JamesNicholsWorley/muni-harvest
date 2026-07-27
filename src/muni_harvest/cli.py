@@ -56,6 +56,12 @@ def main(argv: list[str] | None = None) -> int:
                            help="recover AgendaCenter meeting->board (fills unknown-board gap)")
     p_acr.add_argument("--workers", type=int, default=8)
 
+    p_dc = sub.add_parser("documentcenter",
+                          help="enumerate CivicPlus DocumentCenter (React API backdoor)")
+    p_dc.add_argument("--workers", type=int, default=8)
+    p_dc.add_argument("--hosts-file", default=None)
+    p_dc.add_argument("--shard", default=None)
+
     p_ver = sub.add_parser("verify",
                            help="content-verify election docs (open PDFs, check results)")
     p_ver.add_argument("--limit", type=int, default=None)
@@ -115,6 +121,10 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "recover-boards":
         from .discover import agendacenter_recover
         agendacenter_recover.run(workers=args.workers)
+    elif args.cmd == "documentcenter":
+        from .discover import documentcenter
+        documentcenter.run(workers=args.workers, hosts_file=args.hosts_file,
+                           shard=args.shard)
     elif args.cmd == "verify":
         from .discover import verify
         if args.emit:
