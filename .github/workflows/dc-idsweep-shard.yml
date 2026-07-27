@@ -2,8 +2,8 @@ name: dc-idsweep-shard
 
 # DocumentCenter /View/{id} gap-sweep, distributed across N runner IPs. Recovers
 # DE-LINKED archives — docs no live page links and Wayback never snapshotted — by probing
-# the id gaps not already in the corpus. GET with Range (CivicPlus 404s on HEAD). Needs
-# data/discover/nodes*.jsonl present so it knows which ids are already covered.
+# the id gaps not already covered. GET with Range (CivicPlus 404s on HEAD). Reads the
+# committed manifest config/dc_known_ids.jsonl.gz (regenerate: `muni-harvest export-manifests`).
 on:
   workflow_dispatch:
     inputs:

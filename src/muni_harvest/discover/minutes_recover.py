@@ -47,8 +47,8 @@ def _agenda_only_by_host() -> dict[str, dict]:
         host = n.get("seed_host") or re.sub(r"^https?://", "", u).split("/")[0]
         muni.setdefault(host, n.get("municipality", ""))
         typ, date, mid = m.group(1).lower(), m.group(2), m.group(3)
-        # the real request host as it appears in the URL (may include www.)
-        url_host = re.sub(r"^https?://", "", u).split("/")[0]
+        # the real request host as it appears in the URL (may include www., strip :port)
+        url_host = re.sub(r"^https?://", "", u).split("/")[0].split(":")[0]
         if typ == "agenda":
             agendas[host].setdefault(mid, (date, url_host))
         else:
@@ -79,7 +79,10 @@ def _probe_minutes(url_host: str, date: str, mid: str, *, timeout: int = 20) -> 
 
 
 def run(*, workers: int = 8, shard: str | None = None, limit: int | None = None) -> dict:
-    work_map = _agenda_only_by_host()
+    from .recover_manifest import load_agenda
+    work_map = load_agenda()   # committed manifest (works on Actions, no corpus needed)
+    if work_map is None:       # local fallback: scan the full corpus
+        work_map = _agenda_only_by_host()
     hosts = sorted(work_map)
     if shard:
         hosts = shard_hosts(hosts, shard)

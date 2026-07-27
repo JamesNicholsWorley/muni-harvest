@@ -49,7 +49,7 @@ def _known_ids_by_host() -> dict[str, dict]:
             rec = out[host]
             rec["ids"].add(int(m.group(1)))
             if not rec["url_host"]:
-                rec["url_host"] = re.sub(r"^https?://", "", u).split("/")[0]
+                rec["url_host"] = re.sub(r"^https?://", "", u).split("/")[0].split(":")[0]
     return out
 
 
@@ -97,7 +97,10 @@ def _ceiling(url_host: str, start: int, limiter, *, run: int = 60, cap: int = 20
 
 def run(*, workers: int = 8, shard: str | None = None, limit: int | None = None,
         max_id: int = 200000, extend: bool = True) -> dict:
-    known = _known_ids_by_host()
+    from .recover_manifest import load_dc
+    known = load_dc()          # committed manifest (works on Actions, no corpus needed)
+    if known is None:          # local fallback: scan the full corpus
+        known = _known_ids_by_host()
     hosts = sorted(known)
     if shard:
         hosts = shard_hosts(hosts, shard)

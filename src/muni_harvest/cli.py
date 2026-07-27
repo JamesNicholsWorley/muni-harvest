@@ -70,6 +70,9 @@ def main(argv: list[str] | None = None) -> int:
     p_sw.add_argument("--max-pages", type=int, default=6000)
     p_sw.add_argument("--limit", type=int, default=None)
 
+    sub.add_parser("export-manifests",
+                   help="extract committable dc/agenda manifests from the corpus (for Actions)")
+
     p_ids = sub.add_parser("dc-idsweep",
                            help="probe DocumentCenter /View/{id} gaps to recover de-linked archives")
     p_ids.add_argument("--workers", type=int, default=8)
@@ -148,6 +151,9 @@ def main(argv: list[str] | None = None) -> int:
         from .discover import documentcenter
         documentcenter.run(workers=args.workers, hosts_file=args.hosts_file,
                            shard=args.shard)
+    elif args.cmd == "export-manifests":
+        from .discover import recover_manifest
+        recover_manifest.build()
     elif args.cmd == "dc-idsweep":
         from .discover import dc_idsweep
         dc_idsweep.run(workers=args.workers, shard=args.shard, limit=args.limit,

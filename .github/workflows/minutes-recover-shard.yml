@@ -1,9 +1,9 @@
 name: minutes-recover-shard
 
 # Deterministic AgendaCenter minutes recovery, distributed across N runner IPs.
-# Reads agenda-only meeting-ids from the committed corpus, constructs each meeting's
-# Minutes ViewFile URL (same date+id), and GETs it live. ~35% resolve -> recovered
-# minutes Wayback missed. Needs data/discover/nodes.jsonl present in the repo/artifact.
+# Reads agenda-only meeting-ids from the committed manifest (config/agenda_only.jsonl.gz,
+# regenerate with `muni-harvest export-manifests`), constructs each meeting's Minutes
+# ViewFile URL (same date+id), and GETs it live. ~35% resolve -> minutes Wayback missed.
 on:
   workflow_dispatch:
     inputs:
@@ -36,11 +36,6 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -e .
-      - name: Fetch corpus artifact (nodes.jsonl)
-        run: |
-          # nodes.jsonl is gitignored; a prior job/run must provide it. If committed or
-          # restored into data/discover/, this step is a no-op.
-          test -f data/discover/nodes.jsonl && echo "corpus present" || echo "WARN: no nodes.jsonl"
       - name: Minutes recovery shard ${{ matrix.shard }}
         run: |
           muni-harvest minutes-recover --shard "${{ matrix.shard }}" --workers 4
