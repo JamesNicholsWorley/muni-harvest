@@ -8,9 +8,23 @@ from muni_harvest.discover.storage import resolve_download
 
 
 def test_urlkey_normalizes():
-    assert urlkey("https://www.weston.gov/Foo/") == "weston.gov/Foo"
+    # path is lowercased (query preserved) so case-variant CMS routes dedup
+    assert urlkey("https://www.weston.gov/Foo/") == "weston.gov/foo"
     assert urlkey("http://weston.gov/a#frag") == "weston.gov/a"
     assert urlkey("https://weston.gov/doc?id=5") == "weston.gov/doc?id=5"
+    # CivicPlus emits both cases for the same file — they must dedup to one key
+    assert (urlkey("https://x.gov/DocumentCenter/View/9")
+            == urlkey("https://x.gov/documentcenter/view/9"))
+    # query case (Drive/CMS ids) is case-SENSITIVE and preserved
+    assert urlkey("https://x.gov/f?documentID=AbC") == "x.gov/f?documentID=AbC"
+
+
+def test_is_file_url_doc_endpoints():
+    # extension-less CMS document routes are files, not pages
+    assert is_file_url("https://x.gov/DocumentCenter/View/51303/Official-Results")
+    assert is_file_url("https://x.gov/ImageRepository/Document?documentID=48816")
+    assert is_file_url("https://x.gov/common/pages/GetFile.ashx?key=q38C")
+    assert not is_file_url("https://x.gov/235/Voting-Elections")  # a content page
 
 
 def test_same_site_allows_subdomains_not_others():

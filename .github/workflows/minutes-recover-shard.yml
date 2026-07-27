@@ -1,0 +1,70 @@
+name: minutes-recover-shard
+
+# Deterministic AgendaCenter minutes recovery, distributed across N runner IPs.
+# Reads agenda-only meeting-ids from the committed corpus, constructs each meeting's
+# Minutes ViewFile URL (same date+id), and GETs it live. ~35% resolve -> recovered
+# minutes Wayback missed. Needs data/discover/nodes.jsonl present in the repo/artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "20"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  recover:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Fetch corpus artifact (nodes.jsonl)
+        run: |
+          # nodes.jsonl is gitignored; a prior job/run must provide it. If committed or
+          # restored into data/discover/, this step is a no-op.
+          test -f data/discover/nodes.jsonl && echo "corpus present" || echo "WARN: no nodes.jsonl"
+      - name: Minutes recovery shard ${{ matrix.shard }}
+        run: |
+          muni-harvest minutes-recover --shard "${{ matrix.shard }}" --workers 4
+      - name: Upload recovered minutes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: minutes-recover-shard-${{ strategy.job-index }}
+          path: data/discover/nodes_minutes.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: recover
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge recovered minutes
+        run: |
+          find shards -name nodes_minutes.jsonl -exec cat {} + > nodes_minutes.jsonl || true
+          echo "recovered minutes: $(wc -l < nodes_minutes.jsonl)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: minutes-recover-merged
+          path: nodes_minutes.jsonl

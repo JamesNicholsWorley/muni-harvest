@@ -62,6 +62,29 @@ def main(argv: list[str] | None = None) -> int:
     p_dc.add_argument("--hosts-file", default=None)
     p_dc.add_argument("--shard", default=None)
 
+    p_sw = sub.add_parser("docsweep",
+                          help="sitemap-seeded whole-site document sweep (all linked docs)")
+    p_sw.add_argument("--workers", type=int, default=8)
+    p_sw.add_argument("--hosts-file", default=None)
+    p_sw.add_argument("--shard", default=None)
+    p_sw.add_argument("--max-pages", type=int, default=6000)
+    p_sw.add_argument("--limit", type=int, default=None)
+
+    p_ids = sub.add_parser("dc-idsweep",
+                           help="probe DocumentCenter /View/{id} gaps to recover de-linked archives")
+    p_ids.add_argument("--workers", type=int, default=8)
+    p_ids.add_argument("--shard", default=None)
+    p_ids.add_argument("--limit", type=int, default=None)
+    p_ids.add_argument("--max-id", type=int, default=200000)
+    p_ids.add_argument("--no-extend", action="store_true",
+                       help="don't probe above the known max id (skip newer-than-harvest docs)")
+
+    p_mr = sub.add_parser("minutes-recover",
+                          help="deterministic AgendaCenter minutes recovery (agenda-only meetings)")
+    p_mr.add_argument("--workers", type=int, default=8)
+    p_mr.add_argument("--shard", default=None)
+    p_mr.add_argument("--limit", type=int, default=None)
+
     p_ver = sub.add_parser("verify",
                            help="content-verify election docs (open PDFs, check results)")
     p_ver.add_argument("--limit", type=int, default=None)
@@ -125,6 +148,17 @@ def main(argv: list[str] | None = None) -> int:
         from .discover import documentcenter
         documentcenter.run(workers=args.workers, hosts_file=args.hosts_file,
                            shard=args.shard)
+    elif args.cmd == "dc-idsweep":
+        from .discover import dc_idsweep
+        dc_idsweep.run(workers=args.workers, shard=args.shard, limit=args.limit,
+                       max_id=args.max_id, extend=not args.no_extend)
+    elif args.cmd == "minutes-recover":
+        from .discover import minutes_recover
+        minutes_recover.run(workers=args.workers, shard=args.shard, limit=args.limit)
+    elif args.cmd == "docsweep":
+        from .discover import docsweep
+        docsweep.run(workers=args.workers, hosts_file=args.hosts_file,
+                     shard=args.shard, max_pages=args.max_pages, limit=args.limit)
     elif args.cmd == "verify":
         from .discover import verify
         if args.emit:

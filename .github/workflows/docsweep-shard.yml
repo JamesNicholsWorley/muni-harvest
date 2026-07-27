@@ -1,0 +1,71 @@
+name: docsweep-shard
+
+# Sitemap-seeded WHOLE-SITE document sweep, distributed across N runner IPs.
+# For each host: fetch /sitemap.xml -> fetch every content page -> extract every linked
+# document (DocumentCenter/View, ImageRepository, GetFile.ashx, off-host CDN PDFs, plain
+# hrefs). This is the CMS-agnostic recovery for the auth-walled DocumentCenter and for the
+# election result PDFs that live on content pages the shallow crawl never reached.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "20"
+      max_pages:
+        description: "Max sitemap pages to fetch per host"
+        default: "6000"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  sweep:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Document sweep shard ${{ matrix.shard }}
+        run: |
+          muni-harvest docsweep --hosts-file config/muni_hosts.txt \
+            --shard "${{ matrix.shard }}" \
+            --max-pages ${{ github.event.inputs.max_pages }} --workers 4
+      - name: Upload shard nodes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: docsweep-shard-${{ strategy.job-index }}
+          path: data/discover/nodes_docsweep.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: sweep
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge docsweep nodes
+        run: |
+          find shards -name nodes_docsweep.jsonl -exec cat {} + > nodes_docsweep.jsonl || true
+          echo "docsweep nodes: $(wc -l < nodes_docsweep.jsonl)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docsweep-merged
+          path: nodes_docsweep.jsonl

@@ -30,7 +30,29 @@ STORAGE_HOST_RES = [
     re.compile(r"(^|\.)granicus\.com$", re.I),
     re.compile(r"(^|\.)cloudfront\.net$", re.I),
     re.compile(r"(^|\.)squarespace\.com$", re.I),
+    re.compile(r"(^|\.)finalsite\.net$", re.I),       # Medford et al.
+    re.compile(r"(^|\.)storage\.googleapis\.com$", re.I),
+    re.compile(r"(^|\.)googleapis\.com$", re.I),
 ]
+
+# Extension-LESS document endpoints: CMS routes that serve a file but carry no
+# .pdf/.doc suffix, so file_ext() misses them and the crawler wrongly treats them as
+# pages (fetching the PDF bytes, recording it as a page). These are the single biggest
+# blind spot for election results / recent uploads. Matched on the full URL (path+query).
+_DOC_ENDPOINT_RE = re.compile(
+    r"/DocumentCenter/View/\d+"                 # CivicPlus DocumentCenter (public route)
+    r"|/DocumentCenter/Home/View/\d+"
+    r"|/ImageRepository/Document\?[^ ]*documentID="  # CivicPlus React file route
+    r"|/common/pages/GetFile\.ash?x"           # CivicLive/Vision GetFile.ashx?key=
+    r"|/civicax/filebank/documents/\d+"        # CivicPlus legacy filebank
+    r"|/files/serve/\d+"                        # some election archives
+    r"|[?&]bidId=",                             # DocumentCenter bid attachments
+    re.I)
+
+
+def is_doc_endpoint(url: str) -> bool:
+    """True for extension-less CMS document-serving routes (DocumentCenter/View, etc.)."""
+    return bool(_DOC_ENDPOINT_RE.search(url))
 
 
 def norm_host(host: str) -> str:
@@ -52,19 +74,28 @@ def file_ext(url: str) -> str | None:
 
 
 def is_file_url(url: str) -> bool:
-    """A link points at a document if it has a known file extension OR lives on a
-    storage host (Drive/S3/Dropbox links have no extension but are files)."""
+    """A link points at a document if it has a known file extension, lives on a storage
+    host (Drive/S3/Dropbox links have no extension but are files), OR is an extension-less
+    CMS document endpoint (DocumentCenter/View, ImageRepository, GetFile.ashx)."""
     if file_ext(url):
+        return True
+    if is_doc_endpoint(url):
         return True
     return is_storage_host(urlsplit(url).netloc)
 
 
 def urlkey(url: str) -> str:
     """Canonical dedup key: scheme-less, www-less, fragment-less, no trailing slash.
-    Query IS kept — it matters for CMS endpoints (?id=) and Drive (?id=)."""
+    Query IS kept — it matters for CMS endpoints (?id=) and Drive (?id=).
+
+    The PATH is lowercased (host already is): MA muni sites run on case-insensitive
+    stacks (IIS/ASP.NET DocumentCenter, Windows Apache), and CivicPlus emits the same
+    file as both `/DocumentCenter/View/` and `/documentcenter/view/`. Without this,
+    those dedup as two docs and cross-source matching misses them. The QUERY keeps its
+    case — Drive/Dropbox/CMS ids there are case-SENSITIVE (`?documentID=`, `?id=`)."""
     p = urlsplit(url)
     host = norm_host(p.netloc)
-    path = re.sub(r"/+$", "", p.path) or "/"
+    path = re.sub(r"/+$", "", p.path).lower() or "/"
     key = host + path
     if p.query:
         key += "?" + p.query

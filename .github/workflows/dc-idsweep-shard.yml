@@ -1,0 +1,69 @@
+name: dc-idsweep-shard
+
+# DocumentCenter /View/{id} gap-sweep, distributed across N runner IPs. Recovers
+# DE-LINKED archives — docs no live page links and Wayback never snapshotted — by probing
+# the id gaps not already in the corpus. GET with Range (CivicPlus 404s on HEAD). Needs
+# data/discover/nodes*.jsonl present so it knows which ids are already covered.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "20"
+      max_id:
+        description: "Safety ceiling on id per host (logged if hit)"
+        default: "200000"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  sweep:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: id-sweep shard ${{ matrix.shard }}
+        run: |
+          muni-harvest dc-idsweep --shard "${{ matrix.shard }}" \
+            --max-id ${{ github.event.inputs.max_id }} --workers 4
+      - name: Upload recovered docs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dc-idsweep-shard-${{ strategy.job-index }}
+          path: data/discover/nodes_idsweep.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: sweep
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge recovered docs
+        run: |
+          find shards -name nodes_idsweep.jsonl -exec cat {} + > nodes_idsweep.jsonl || true
+          echo "de-linked docs recovered: $(wc -l < nodes_idsweep.jsonl)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dc-idsweep-merged
+          path: nodes_idsweep.jsonl
