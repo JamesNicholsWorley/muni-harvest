@@ -31,6 +31,11 @@ def build_driver(headful=False, perf=False, stealth=False):
     opts.add_argument("--window-size=1500,1100")
     opts.add_argument(f"--user-agent={UA}")
     opts.add_argument("--disable-blink-features=AutomationControlled")
+    # Many municipal sites have expired/misconfigured TLS certs (or WAF-served certs
+    # Chrome distrusts) — without this the driver lands on the "Privacy error"
+    # interstitial and sees zero real content (crawl stalls at pages=1).
+    opts.set_capability("acceptInsecureCerts", True)
+    opts.add_argument("--ignore-certificate-errors")
     if stealth:
         opts.add_experimental_option("excludeSwitches", ["enable-automation"])
         opts.add_experimental_option("useAutomationExtension", False)
