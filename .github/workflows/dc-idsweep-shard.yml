@@ -9,10 +9,10 @@ on:
     inputs:
       shards:
         description: "Number of shards / parallel runner IPs"
-        default: "20"
-      max_id:
-        description: "Safety ceiling on id per host (logged if hit)"
-        default: "200000"
+        default: "40"
+      per_host_cap:
+        description: "Max gap probes per host (newest first; logged if hit)"
+        default: "15000"
 
 jobs:
   setup:
@@ -29,6 +29,7 @@ jobs:
   sweep:
     needs: setup
     runs-on: ubuntu-latest
+    timeout-minutes: 340        # under the 6h hard cap
     strategy:
       fail-fast: false
       matrix:
@@ -42,7 +43,7 @@ jobs:
       - name: id-sweep shard ${{ matrix.shard }}
         run: |
           muni-harvest dc-idsweep --shard "${{ matrix.shard }}" \
-            --max-id ${{ github.event.inputs.max_id }} --workers 4
+            --per-host-cap ${{ github.event.inputs.per_host_cap }} --workers 4
       - name: Upload recovered docs
         if: always()
         uses: actions/upload-artifact@v4

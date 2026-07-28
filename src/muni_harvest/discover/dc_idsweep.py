@@ -23,7 +23,7 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from ..archive.wayback import shard_hosts
-from ..config import data_dir, load_settings
+from ..config import data_dir
 from ..core import RateLimiter, append_jsonl, iter_jsonl
 
 _UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -77,26 +77,24 @@ def _probe(url_host: str, doc_id: int, *, timeout: int = 15) -> tuple[bool, str]
         return False, url
 
 
-def _ceiling(url_host: str, start: int, limiter, *, run: int = 60, cap: int = 200000) -> int:
-    """Extend past the known max to catch docs newer than our harvest: walk upward until
-    `run` consecutive misses. Returns the highest id worth sweeping to."""
-    cid = start
-    misses = 0
-    probe_at = start + 1
-    while misses < run and probe_at <= cap:
-        limiter.wait()
-        ok, _ = _probe(url_host, probe_at)
-        if ok:
-            cid = probe_at
-            misses = 0
-        else:
-            misses += 1
-        probe_at += 1
-    return cid
+def _dense_ceiling(ids: set[int], *, min_density: float = 0.12,
+                   min_known: int = 50) -> int:
+    """Robust per-host id ceiling: the largest id up to which known ids stay dense
+    (rank/id >= min_density). Ignores lone high outliers (banner/ImageRepository asset
+    ids, false documentID matches) that would otherwise inflate the sweep to millions of
+    guaranteed-404 probes. 0 => host too sparse to be a real DocumentCenter sweep target."""
+    s = sorted(ids)
+    if len(s) < min_known:
+        return 0
+    ceil = 0
+    for rank, idv in enumerate(s, 1):
+        if idv and rank / idv >= min_density:
+            ceil = idv
+    return ceil
 
 
 def run(*, workers: int = 8, shard: str | None = None, limit: int | None = None,
-        max_id: int = 200000, extend: bool = True) -> dict:
+        per_host_cap: int = 15000, min_density: float = 0.12, rpm: int = 240) -> dict:
     from .recover_manifest import load_dc
     known = load_dc()          # committed manifest (works on Actions, no corpus needed)
     if known is None:          # local fallback: scan the full corpus
@@ -115,22 +113,24 @@ def run(*, workers: int = 8, shard: str | None = None, limit: int | None = None,
     todo = [h for h in hosts if h not in done]
     print(f"[*] DocumentCenter id-sweep: {len(todo)} hosts ({len(done)} done); {workers} workers")
 
-    limiter = RateLimiter(load_settings()["wayback"]["per_host_rpm"])
+    # Dedicated rate: probes spread across ~6 hosts/shard, so this shard-global rate is
+    # well under 1 req/s per town. File-endpoint range-GETs are cheap for the server.
+    limiter = RateLimiter(rpm)
     lock = threading.Lock()
     totals = {"hosts": 0, "probed": 0, "recovered": 0, "capped": 0}
 
     def work(host: str) -> None:
         rec = known[host]
         url_host, ids = rec["url_host"] or host, rec["ids"]
-        if not ids:
+        top = _dense_ceiling(ids, min_density=min_density)
+        if top == 0:                       # too sparse / not a real DocumentCenter target
             with lock:
                 done_path.open("a", encoding="utf-8").write(host + "\n")
             return
-        top = max(ids)
-        if extend:
-            top = _ceiling(url_host, top, limiter, cap=max_id)
-        capped = top >= max_id
         gaps = [i for i in range(1, top + 1) if i not in ids]
+        capped = len(gaps) > per_host_cap
+        if capped:                          # bound cost; sweep the newest gaps first
+            gaps = gaps[-per_host_cap:]
         rows, probed = [], 0
         for i in gaps:
             limiter.wait()
@@ -155,7 +155,7 @@ def run(*, workers: int = 8, shard: str | None = None, limit: int | None = None,
             totals["probed"] += probed
             totals["recovered"] += len(rows)
             totals["capped"] += int(capped)
-        note = "  [CAP HIT - rerun w/ higher --max-id]" if capped else ""
+        note = f"  [capped to newest {per_host_cap}]" if capped else ""
         print(f"  [OK] {host:<30} known={len(ids):>5} gaps={len(gaps):>6} "
               f"recovered={len(rows):>5}{note}")
 

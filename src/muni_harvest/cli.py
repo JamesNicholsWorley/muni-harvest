@@ -78,9 +78,12 @@ def main(argv: list[str] | None = None) -> int:
     p_ids.add_argument("--workers", type=int, default=8)
     p_ids.add_argument("--shard", default=None)
     p_ids.add_argument("--limit", type=int, default=None)
-    p_ids.add_argument("--max-id", type=int, default=200000)
-    p_ids.add_argument("--no-extend", action="store_true",
-                       help="don't probe above the known max id (skip newer-than-harvest docs)")
+    p_ids.add_argument("--per-host-cap", type=int, default=15000,
+                       help="max gap probes per host (newest first); logged if hit")
+    p_ids.add_argument("--min-density", type=float, default=0.12,
+                       help="known-id density gate for the ceiling (ignore sparse outliers)")
+    p_ids.add_argument("--rpm", type=int, default=240,
+                       help="shard-global probe rate (spread across ~6 hosts/shard)")
 
     p_mr = sub.add_parser("minutes-recover",
                           help="deterministic AgendaCenter minutes recovery (agenda-only meetings)")
@@ -157,7 +160,8 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "dc-idsweep":
         from .discover import dc_idsweep
         dc_idsweep.run(workers=args.workers, shard=args.shard, limit=args.limit,
-                       max_id=args.max_id, extend=not args.no_extend)
+                       per_host_cap=args.per_host_cap, min_density=args.min_density,
+                       rpm=args.rpm)
     elif args.cmd == "minutes-recover":
         from .discover import minutes_recover
         minutes_recover.run(workers=args.workers, shard=args.shard, limit=args.limit)
