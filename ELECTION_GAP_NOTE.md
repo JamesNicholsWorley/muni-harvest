@@ -85,3 +85,21 @@ Weymouth 2021.
 Remaining partials worth a deeper follow-up: Harwich (73/928 sitemap pages — time-budget
 hit), Goshen/Pelham (partial), Southampton + Easton (thin / documents-on-demand portal not
 sitemap-linked). Monroe MA remains genuinely siteless.
+
+## Update 2026-07-30b — precision feedback from the verifier (content-checked)
+The CivicAtlas verifier content-checked my 57 "recovered-for-missing" docs: **25 are genuine
+municipal-election results**; 32 dropped — 10 state/federal, 8 non-election "results"
+(water-quality/lead/copper/PFAS, MIAA sports, survey/monitoring), 8 primary/special/town-
+meeting, 1 wrong-year, 5 already-had.
+
+**Lesson — URL classification is noisy BOTH ways** (HANDOFF gotcha #7): the loose "results"
+filter over-counts by ~285 town-years (corpus 1,006 → 721 under a tight filter), while the
+tight filter under-counts (misses results docs not literally named "results"). The truth is
+between; the verifier's content check is authoritative. Finding ≠ classifying.
+
+**Fix applied (handoff hygiene):** pre-drop unambiguous non-election "results"
+(water/lead/sports/survey/monitoring/bid/grant) and TAG election-type
+(municipal / state_federal / primary / special / town_meeting) so the verifier filters by
+type instead of hand-classifying. Artifact: `scratch/recovered_candidates_tagged.csv` —
+65 candidate town-years, **43 likely-municipal**, 22 state/federal separated out. The scraper
+stays a finder; the municipal-vs-noise call is left to content verification.
