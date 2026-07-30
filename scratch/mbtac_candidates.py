@@ -32,7 +32,8 @@ from muni_harvest.discover.model import norm_host
 from muni_harvest.discover.docclass import classify_document
 
 NODES = ROOT / "data" / "discover" / "nodes.jsonl"
-LIVE = ROOT / "data" / "discover" / "nodes_mbtac_live.jsonl"   # optional (Stage 1b)
+# Any live-sweep output (local browser sweep + Actions docsweep gap-fill).
+LIVE_GLOB = sorted((ROOT / "data" / "discover").glob("nodes_mbtac_*.jsonl"))
 ACB = ROOT / "data" / "discover" / "ac_boards.jsonl"
 TOWNS = ROOT / "config" / "mbtac_towns.csv"
 TOWNS_WEB = Path(r"C:\Users\Owner\documents\CivicAtlasMA\data\inventory\sources\towns_websites.csv")
@@ -83,7 +84,7 @@ def load_ac_boards():
 
 
 def iter_nodes():
-    for src in (NODES, LIVE):
+    for src in [NODES, *LIVE_GLOB]:
         if not src.exists():
             continue
         for line in src.open(encoding="utf-8"):

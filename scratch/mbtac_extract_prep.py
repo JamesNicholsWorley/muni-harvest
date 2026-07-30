@@ -1,102 +1,150 @@
 """Stage 3a (extraction prep) for the MBTA Communities Act 3A vote finder.
 
-For each CONFIRMED (and optionally PROBABLE) doc in scratch/mbtac_screen.csv, fetch it once
-and dump focused text to scratch/mbtac_text/<town_norm>__<hash>.txt -- the pages carrying the
-3A TOPIC plus a little context, page-labeled so an extractor agent can cite page numbers.
-Writes scratch/mbtac_extract_manifest.csv (the work-list the extraction workflow consumes).
+For each CONFIRMED doc (per-town PROBABLE fallback when a town has no confirmed source), fetch
+once and crop to TIGHT SNIPPETS: ~2000-char windows around each 3A-topic anchor (the topic is
+rare, the vote/tally sits next to it), page-labeled, capped per doc. Then BATCH ~12 docs into
+one self-contained text file so a single extractor agent handles many docs -- cutting both the
+token payload (snippets, not whole pages) and per-agent fixed overhead.
 
-Fetching here (once, with WAF fallback) means the downstream agents read local text and never
-re-hit muni sites. Reuses fetch helpers from mbtac_screen.
+Outputs:
+  scratch/mbtac_batches/batch_NNN.txt   -- each holds up to BATCH docs, each block headed by a
+                                           metadata line: ### DOC <id> | town | ... | url
+  scratch/mbtac_extract_index.csv       -- doc_id -> full metadata (for final enrichment)
+Fetching here (once, WAF fallback) means downstream agents read local text and never re-hit sites.
 
-Usage: mbtac_extract_prep.py [include_probable=0|1] [context_pages=1]
+Usage: mbtac_extract_prep.py [batch=12] [win_chars=2000] [cap_chars=10000]
 ASCII-only, explicit UTF-8 I/O.
 """
 import csv
 import hashlib
+import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from mbtac_screen import fetch_raw, pages_text   # noqa: E402  (safe: guarded main)
+from mbtac_screen import fetch_raw, pages_text, TOPIC, VOTE   # noqa: E402 (guarded main)
 
 SCREEN = HERE / "mbtac_screen.csv"
-TXTDIR = HERE / "mbtac_text"
-MANIFEST = HERE / "mbtac_extract_manifest.csv"
+TOWNS = HERE.parent / "config" / "mbtac_towns.csv"
+BATCHDIR = HERE / "mbtac_batches"
+INDEX = HERE / "mbtac_extract_index.csv"
 
 
-def focused_text(pages, topic_pages, ctx):
-    """Return page-labeled text for topic pages +/- ctx (or whole doc if no page info)."""
-    if not pages:
-        return ""
-    n = len(pages)
-    if not topic_pages:
-        want = set(range(n))                       # HTML or no topic page -> all
-    else:
-        want = set()
-        for p in topic_pages:                      # topic_pages are 1-based
-            for j in range(p - 1 - ctx, p + ctx):
-                if 0 <= j < n:
-                    want.add(j)
+def gov_map():
+    return {r["town_norm"]: r["governing_body"]
+            for r in csv.DictReader(TOWNS.open(encoding="utf-8"))}
+
+
+_TOPIC_NEAR = re.compile(r"mbta|3a\b|multi[ _-]?family|overlay", re.I)
+
+
+def snippets(pages, win, cap):
+    """Windows around 3A TOPIC anchors AND vote-lines near a topic term (+/- win chars),
+    merged, page-tagged, capped -- so a results table stated apart from the topic heading is
+    still captured."""
+    full = "".join(f"\n[PAGE {i + 1}]\n{t}" for i, t in enumerate(pages))
+    anchors = [m.start() for m in TOPIC.finditer(full)]
+    # Also anchor on vote-language whose +/-250-char neighborhood mentions a topic term.
+    for m in VOTE.finditer(full):
+        s = m.start()
+        if _TOPIC_NEAR.search(full[max(0, s - 250):s + 250]):
+            anchors.append(s)
+    anchors.sort()
+    if not anchors:                       # HTML/no page info -> lightly trimmed whole text
+        return full[:cap]
+    wins = sorted((max(0, a - win), min(len(full), a + win)) for a in anchors)
+    merged = []
+    for a, b in wins:
+        if merged and a <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], b))
+        else:
+            merged.append((a, b))
     out = []
-    for i in sorted(want):
-        out.append(f"\n===== PAGE {i + 1} =====\n{pages[i]}")
-    return "".join(out)
+    tot = 0
+    for a, b in merged:
+        seg = full[a:b]
+        out.append(seg)
+        tot += len(seg)
+        if tot >= cap:
+            break
+    return "\n. . .\n".join(out)[:cap]
 
 
-def main():
-    ctx = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-
-    # Per-town fallback (user rule): extract a town's CONFIRMED docs; only fall back to its
-    # PROBABLE docs when that town has NO confirmed source.
-    from collections import defaultdict
+def select_rows():
+    """Per-town rule: a town's CONFIRMED docs; PROBABLE only if the town has no CONFIRMED."""
     by_town = defaultdict(list)
     for r in csv.DictReader(SCREEN.open(encoding="utf-8")):
         by_town[r["town_norm"]].append(r)
-    rows = []
-    n_conf_towns = n_prob_towns = 0
-    for tn, rs in by_town.items():
+    rows, nc, npb = [], 0, 0
+    for rs in by_town.values():
         conf = [r for r in rs if r["verdict"] == "CONFIRMED"]
         if conf:
-            rows.extend(conf)
-            n_conf_towns += 1
+            rows.extend(conf); nc += 1
         else:
             prob = [r for r in rs if r["verdict"] == "PROBABLE"]
             if prob:
-                rows.extend(prob)
-                n_prob_towns += 1
-    print(f"prepping {len(rows)} docs: {n_conf_towns} towns via CONFIRMED, "
-          f"{n_prob_towns} towns via PROBABLE-fallback")
-    TXTDIR.mkdir(exist_ok=True)
+                rows.extend(prob); npb += 1
+    print(f"selected {len(rows)} docs: {nc} towns via CONFIRMED, {npb} via PROBABLE-fallback")
+    return rows
 
-    man = []
+
+def main():
+    batch = int(sys.argv[1]) if len(sys.argv) > 1 else 12
+    win = int(sys.argv[2]) if len(sys.argv) > 2 else 2000
+    cap = int(sys.argv[3]) if len(sys.argv) > 3 else 10000
+
+    rows = select_rows()
+    gm = gov_map()
+    for r in rows:
+        r["governing_body"] = gm.get(r["town_norm"], "")
+    BATCHDIR.mkdir(exist_ok=True)
+    for old in BATCHDIR.glob("batch_*.txt"):
+        old.unlink()
+
+    docs = []
     for i, r in enumerate(rows, 1):
-        h = hashlib.sha1(r["url"].encode("utf-8")).hexdigest()[:12]
-        tf = TXTDIR / f"{r['town_norm']}__{h}.txt"
+        doc_id = hashlib.sha1(r["url"].encode("utf-8")).hexdigest()[:10]
         try:
             raw = fetch_raw(r["url"])
             pages, npp = pages_text(raw, r["url"])
-            tpages = [int(x) for x in r["topic_pages"].split(",") if x.strip()]
-            text = focused_text(pages, tpages, ctx)
-            tf.write_text(text[:400_000], encoding="utf-8")
-            status, chars = "OK", len(text)
+            text = snippets(pages, win, cap)
+            status = "OK" if text.strip() else "EMPTY"
         except Exception as e:
-            status, chars, npp = f"FAIL:{type(e).__name__}", 0, 0
-        man.append({"town": r["town"], "town_norm": r["town_norm"],
-                    "community_type": r["community_type"], "governing_body": r.get("governing_body", ""),
-                    "board": r["board"], "doctype": r["doctype"], "year": r["year"],
-                    "verdict": r["verdict"], "url": r["url"], "npages": npp,
-                    "topic_pages": r["topic_pages"], "textfile": str(tf), "status": status,
-                    "chars": chars})
+            text, status = "", f"FAIL:{type(e).__name__}"
+        docs.append({**r, "doc_id": doc_id, "text": text, "status": status})
         if i % 25 == 0:
-            print(f"  {i}/{len(rows)}", flush=True)
+            print(f"  fetched {i}/{len(rows)}", flush=True)
 
-    with MANIFEST.open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(man[0].keys()))
+    ok = [d for d in docs if d["status"] == "OK"]
+    print(f"{len(ok)}/{len(docs)} docs have usable snippet text")
+
+    # Write batches.
+    nb = 0
+    for b in range(0, len(ok), batch):
+        chunk = ok[b:b + batch]
+        nb += 1
+        lines = []
+        for d in chunk:
+            lines.append(
+                f"\n### DOC {d['doc_id']} | town={d['town']} | community_type={d['community_type']} "
+                f"| governing_body={d['governing_body']} | screened_board={d['board']} "
+                f"| screened_doctype={d['doctype']} | url={d['url']}\n{d['text']}\n")
+        (BATCHDIR / f"batch_{nb - 1:03d}.txt").write_text("".join(lines), encoding="utf-8")
+
+    with INDEX.open("w", encoding="utf-8", newline="") as f:
+        cols = ["doc_id", "town", "town_norm", "community_type", "governing_body", "board",
+                "doctype", "year", "verdict", "url", "status"]
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
-        w.writerows(man)
-    ok = sum(1 for m in man if m["status"] == "OK")
-    print(f"wrote {MANIFEST.name}: {ok}/{len(man)} text dumps OK -> {TXTDIR.name}/")
+        for d in docs:
+            w.writerow(d)
+    # rough token estimate
+    chars = sum(len(d["text"]) for d in ok)
+    print(f"wrote {nb} batch files (<= {batch} docs each) to {BATCHDIR.name}/")
+    print(f"  total snippet chars: {chars:,}  (~{chars // 4:,} tokens of doc text, pre-overhead)")
+    print(f"wrote {INDEX.name}")
 
 
 if __name__ == "__main__":
