@@ -103,3 +103,25 @@ between; the verifier's content check is authoritative. Finding ≠ classifying.
 type instead of hand-classifying. Artifact: `scratch/recovered_candidates_tagged.csv` —
 65 candidate town-years, **43 likely-municipal**, 22 state/federal separated out. The scraper
 stays a finder; the municipal-vs-noise call is left to content verification.
+
+## Update 2026-07-30c — content-dive: reading the documents we already hold
+Rather than re-crawl, dove INTO the container docs we hold for the 409 still-missing
+town-years: fetched each candidate (annual town reports, town-meeting/election files, HTML
+election pages), extracted text (fitz / HTML strip), and detected genuine MA election-results
+content — an election heading + `Blanks` (every MA race lists Blanks) + office names + vote
+tallies. Two passes (2nd added URL-encoding, more candidates, WAF cookie-lift).
+
+**Result: 190 previously-missing town-years now have election-results content CONFIRMED
+inside a LEO document we already hold** (167 high-confidence + 23 medium). By container:
+95 annual town reports, 75 HTML election pages, 19 town-meeting files, 1 minutes. 81 distinct
+towns; 13 tiny towns fully covered by their annual reports (Ashby, Conway, Gill, Oakham,
+Warwick…). This ~halves the gap: **~409 → ~219 still-missing.**
+
+Evidence is page-level (e.g. Ashby 2023 town report: 52 `Blanks`, 11 offices, 2,147 tallies,
+160pp). Deliverable: `scratch/dive_confirmed.csv` (town-year → document_url + evidence). This
+is high-RECALL content-matching; the verifier still makes the final municipal-vs-other call,
+but pointing at the exact container + evidence is far stronger than a URL guess.
+
+Remaining ~219: 26 fetch-fails (dead/hard-WAF), ~168 whose held candidate had no results
+content (results truly elsewhere or not published), + 2025 recency. Finder's job: the
+documents that DO hold results are now pinned to their town-year.
