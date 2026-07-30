@@ -26,7 +26,8 @@ from ..config import data_dir, load_settings, resolve_path
 from ..core import RateLimiter, append_jsonl, fetch
 from .crawl import AdaptiveDelay, _SKIP_SCHEMES
 from .htmllinks import extract
-from .model import is_file_url, is_storage_host, make_node, norm_host, same_site, urlkey
+from .model import (is_file_url, is_storage_host, make_node, norm_host, same_site,
+                    serving_host, urlkey)
 from .pipeline import host_to_municipality
 from .robots import RobotsPolicy
 from .sitemaps import sitemap_urls
@@ -59,6 +60,7 @@ def sweep_host(host: str, municipality: str = "", *, pool=None,
         return [], {"host": host, "municipality": municipality, "pages": 0,
                     "docs": 0, "nodes": 0, "files": 0, "skipped": "storage_host"}
     start = time.monotonic()
+    host = serving_host(host)                     # pick the bare-vs-www variant that answers
     robots = RobotsPolicy(host).load()
     pacer = AdaptiveDelay(max(base_delay, float(getattr(robots, "crawl_delay", 0) or 0)))
     home = f"https://{host}/"

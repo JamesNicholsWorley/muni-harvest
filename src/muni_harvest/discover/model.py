@@ -87,6 +87,30 @@ def is_file_url(url: str) -> bool:
     return is_storage_host(urlsplit(url).netloc)
 
 
+def serving_host(host: str, timeout: int = 8) -> str:
+    """Return the host variant (bare vs www) that actually answers on https. Many MA muni
+    sites serve only ONE of `town.gov` / `www.town.gov` and REFUSE the other at the
+    connection level (e.g. norwoodma.gov refuses; www.norwoodma.gov serves). Since
+    norm_host strips www, the crawler would otherwise always hit the bare (dead) variant.
+    Any HTTP response (even 403/404) counts as serving; only connection/DNS failure
+    triggers the fallback. Returns the input unchanged if neither answers."""
+    import urllib.request
+    import urllib.error
+    alt = host[4:] if host.startswith("www.") else "www." + host
+    for h in (host, alt):
+        try:
+            req = urllib.request.Request(
+                f"https://{h}/", method="GET",
+                headers={"User-Agent": "Mozilla/5.0 (research)", "Range": "bytes=0-0"})
+            urllib.request.urlopen(req, timeout=timeout).close()
+            return h
+        except urllib.error.HTTPError:
+            return h                      # answered with an HTTP status => serving
+        except Exception:                 # noqa: BLE001 — refused / DNS / TLS: try the alt
+            continue
+    return host
+
+
 def urlkey(url: str) -> str:
     """Canonical dedup key: scheme-less, www-less, fragment-less, no trailing slash.
     Query IS kept — it matters for CMS endpoints (?id=) and Drive (?id=).

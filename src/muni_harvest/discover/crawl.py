@@ -20,7 +20,7 @@ from urllib.parse import urldefrag, urljoin, urlsplit
 from ..core import fetch
 from .htmllinks import extract
 from .model import (
-    is_file_url, make_node, norm_host, same_site, urlkey,
+    is_file_url, make_node, norm_host, same_site, serving_host, urlkey,
 )
 from .storage import resolve_download
 
@@ -86,6 +86,7 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
     crawl_delay = getattr(robots, "crawl_delay", None) or 0.0
     pacer = AdaptiveDelay(max(base_delay, float(crawl_delay)))
 
+    seed_host = serving_host(seed_host)    # some muni sites serve only bare OR only www
     home = f"https://{seed_host}/"
     frontier: deque = deque()
     frontier.append((home, 0, "", "", ""))
