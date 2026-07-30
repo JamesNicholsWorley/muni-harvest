@@ -61,3 +61,27 @@ The recovery filled real gaps (57 CivicAtlas-missing town-years + 85% of the rot
 Of the 412 still open, ~86% (356) are actually held inside annual reports / minutes / HTML
 pages we already scraped — a finding, not a miss. Only a small residual of very small
 towns is genuinely un-found, addressable by a few host-list / CDN-allowlist additions.
+
+## Update 2026-07-30 — host-list audit + allowlist + re-sweep
+Audited all 351 towns vs authoritative `CivicAtlasMA/.../towns_websites.csv`. Found **12
+towns whose official domain was never in `muni_hosts.txt`** (their CivicAtlas native_url
+pointed at a news host) — incl. big ones North Andover, Norwood, Pittsfield, Weymouth,
+West Springfield — plus Savoy. Added 13 canonical hosts (Monroe MA has no website in the
+authoritative list, omitted). Allowlist += `sanity.io`, `aptuitivcdn.com`,
+`documents-on-demand.com`.
+
+**Root-cause fix (serving_host):** several added hosts refuse the *bare* domain and serve
+only `www.` (norwoodma.gov refuses; www.norwoodma.gov serves). `norm_host` strips www so
+the crawler always hit the dead variant → 0 pages. Added a bare-vs-www probe fallback to
+docsweep + crawl. Norwood went 0 → 1,798 files.
+
+**Re-sweep of the 15 affected hosts:** ~11K new docs from previously-blind towns (Weymouth
+5,865, Norwood 1,798, Pittsfield 1,212, North Andover 701, Pelham 699, West Brookfield 459,
+West Springfield 270, Goshen 373 [as CDN images], …). **108 election-results docs** found
+across 7 towns. **Still-missing 412 → 401**, with **11 town-years newly filled**: Pelham
+2021–2025 (all five), North Andover 2023/25, Petersham 2024/25, West Brookfield 2022,
+Weymouth 2021.
+
+Remaining partials worth a deeper follow-up: Harwich (73/928 sitemap pages — time-budget
+hit), Goshen/Pelham (partial), Southampton + Easton (thin / documents-on-demand portal not
+sitemap-linked). Monroe MA remains genuinely siteless.
