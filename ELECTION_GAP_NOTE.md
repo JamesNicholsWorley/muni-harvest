@@ -125,3 +125,21 @@ but pointing at the exact container + evidence is far stronger than a URL guess.
 Remaining ~219: 26 fetch-fails (dead/hard-WAF), ~168 whose held candidate had no results
 content (results truly elsewhere or not published), + 2025 recency. Finder's job: the
 documents that DO hold results are now pinned to their town-year.
+
+## Update 2026-07-30d — deep-dig (broader candidates + WAF cookie-lift)
+Pushed the NO_RESULTS + FETCH_FAIL town-years: gathered a much broader candidate set (all
+town/annual reports any-year since report-year≈election-year, + clerk/warrant/town-meeting/
+election docs ±1yr + election pages) and retried fetch-fails through a headless WAF
+cookie-lift. **+63 upgrades.**
+
+**FINAL content-dive: 240 previously-missing town-years pinned to a held document**
+(211 high-confidence + 29 medium) — 123 annual town reports, 63 HTML election pages, 18
+town-meeting files, 6 election docs. 95 distinct towns; 16 fully covered by their annual
+reports. **Gap 409 → 144** (59% of the missing set now located inside a document we already
+hold, zero re-crawling). Deliverable refreshed: `scratch/dive_confirmed.csv`
+(town-year → document_url + page-level evidence).
+
+Remaining ~144: **131** whose held candidate genuinely had no results content (results truly
+elsewhere / never published online — many are the smallest towns + 2025 recency) and **13**
+hard fetch-fails (dead URLs / aggressive WAF). These are the real residual for a document-
+finding project; the rest are found.
