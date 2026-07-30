@@ -1,0 +1,176 @@
+town,town_norm,community_type,governing_body,deadline_year
+Abington,abington,commuter rail,Select Board,2024
+Acton,acton,commuter rail,Select Board,2024
+Amesbury,amesbury,MBTA adjacent,City Council,2024
+Andover,andover,commuter rail,Select Board,2024
+Arlington,arlington,subway or light rail,Select Board,2023
+Ashburnham,ashburnham,MBTA adjacent,Select Board,2024
+Ashby,ashby,MBTA adjacent,Select Board,2024
+Ashland,ashland,commuter rail,Select Board,2024
+Attleboro,attleboro,commuter rail,City Council,2024
+Auburn,auburn,MBTA adjacent,Select Board,2024
+Ayer,ayer,commuter rail,Select Board,2024
+Bedford,bedford,bus,Select Board,2025
+Bellingham,bellingham,MBTA adjacent,Select Board,2024
+Belmont,belmont,bus,Select Board,2025
+Berkley,berkley,MBTA adjacent,Select Board,2024
+Beverly,beverly,bus,City Council,2025
+Billerica,billerica,bus,Select Board,2025
+Bourne,bourne,MBTA adjacent,Select Board,2024
+Boxborough,boxborough,MBTA adjacent,Select Board,2024
+Boxford,boxford,MBTA adjacent,Select Board,2024
+Braintree,braintree,subway or light rail,City Council,2023
+Bridgewater,bridgewater,commuter rail,City Council,2024
+Brockton,brockton,bus,City Council,2025
+Brookline,brookline,subway or light rail,Select Board,2023
+Burlington,burlington,bus,Select Board,2025
+Cambridge,cambridge,subway or light rail,City Council,2023
+Canton,canton,bus,Select Board,2025
+Carlisle,carlisle,MBTA adjacent,Select Board,2024
+Carver,carver,MBTA adjacent,Select Board,2024
+Chelmsford,chelmsford,MBTA adjacent,Select Board,2024
+Chelsea,chelsea,subway or light rail,City Council,2023
+Cohasset,cohasset,commuter rail,Select Board,2024
+Concord,concord,commuter rail,Select Board,2024
+Danvers,danvers,bus,Select Board,2025
+Dedham,dedham,bus,Select Board,2025
+Dover,dover,MBTA adjacent,Select Board,2024
+Dracut,dracut,MBTA adjacent,Select Board,2024
+Duxbury,duxbury,MBTA adjacent,Select Board,2024
+East Bridgewater,eastbridgewater,MBTA adjacent,Select Board,2024
+Easton,easton,MBTA adjacent,Select Board,2024
+Essex,essex,MBTA adjacent,Select Board,2024
+Everett,everett,subway or light rail,City Council,2023
+Fitchburg,fitchburg,commuter rail,City Council,2024
+Foxborough,foxborough,MBTA adjacent,Select Board,2024
+Framingham,framingham,commuter rail,City Council,2024
+Franklin,franklin,commuter rail,City Council,2024
+Freetown,freetown,MBTA adjacent,Select Board,2024
+Georgetown,georgetown,MBTA adjacent,Select Board,2024
+Gloucester,gloucester,commuter rail,City Council,2024
+Grafton,grafton,commuter rail,Select Board,2024
+Groton,groton,MBTA adjacent,Select Board,2024
+Groveland,groveland,MBTA adjacent,Select Board,2024
+Halifax,halifax,commuter rail,Select Board,2024
+Hamilton,hamilton,commuter rail,Select Board,2024
+Hanover,hanover,MBTA adjacent,Select Board,2024
+Hanson,hanson,commuter rail,Select Board,2024
+Harvard,harvard,MBTA adjacent,Select Board,2024
+Haverhill,haverhill,commuter rail,City Council,2024
+Hingham,hingham,bus,Select Board,2025
+Holbrook,holbrook,bus,Select Board,2025
+Holden,holden,MBTA adjacent,Select Board,2024
+Holliston,holliston,MBTA adjacent,Select Board,2024
+Hopkinton,hopkinton,commuter rail,Select Board,2024
+Hull,hull,bus,Select Board,2025
+Ipswich,ipswich,commuter rail,Select Board,2024
+Kingston,kingston,commuter rail,Select Board,2024
+Lakeville,lakeville,commuter rail,Select Board,2024
+Lancaster,lancaster,MBTA adjacent,Select Board,2024
+Lawrence,lawrence,commuter rail,City Council,2024
+Leicester,leicester,MBTA adjacent,Select Board,2024
+Leominster,leominster,commuter rail,City Council,2024
+Lexington,lexington,bus,Select Board,2025
+Lincoln,lincoln,bus,Select Board,2025
+Littleton,littleton,commuter rail,Select Board,2024
+Lowell,lowell,commuter rail,City Council,2024
+Lunenburg,lunenburg,MBTA adjacent,Select Board,2024
+Lynn,lynn,bus,City Council,2025
+Lynnfield,lynnfield,MBTA adjacent,Select Board,2024
+Malden,malden,subway or light rail,City Council,2023
+Manchester,manchester,commuter rail,Select Board,2024
+Mansfield,mansfield,commuter rail,Select Board,2024
+Marblehead,marblehead,bus,Select Board,2025
+Marlborough,marlborough,MBTA adjacent,City Council,2024
+Marshfield,marshfield,MBTA adjacent,Select Board,2024
+Maynard,maynard,MBTA adjacent,Select Board,2024
+Medfield,medfield,MBTA adjacent,Select Board,2024
+Medford,medford,subway or light rail,City Council,2023
+Medway,medway,MBTA adjacent,Select Board,2024
+Melrose,melrose,subway or light rail,City Council,2023
+Merrimac,merrimac,MBTA adjacent,Select Board,2024
+Methuen,methuen,MBTA adjacent,City Council,2024
+Middleborough,middleborough,commuter rail,Select Board,2024
+Middleton,middleton,MBTA adjacent,Select Board,2024
+Millbury,millbury,MBTA adjacent,Select Board,2024
+Millis,millis,MBTA adjacent,Select Board,2024
+Milton,milton,subway or light rail,Select Board,2023
+Nahant,nahant,bus,Select Board,2025
+Natick,natick,commuter rail,Select Board,2024
+Needham,needham,bus,Select Board,2025
+Newbury,newbury,commuter rail,Select Board,2024
+Newburyport,newburyport,commuter rail,City Council,2024
+Newton,newton,subway or light rail,City Council,2023
+Norfolk,norfolk,commuter rail,Select Board,2024
+North Andover,northandover,commuter rail,Select Board,2024
+North Attleborough,northattleborough,MBTA adjacent,City Council,2024
+North Reading,northreading,MBTA adjacent,Select Board,2024
+Northborough,northborough,MBTA adjacent,Select Board,2024
+Northbridge,northbridge,MBTA adjacent,Select Board,2024
+Norton,norton,MBTA adjacent,Select Board,2024
+Norwell,norwell,MBTA adjacent,Select Board,2024
+Norwood,norwood,bus,Select Board,2025
+Paxton,paxton,MBTA adjacent,Select Board,2024
+Peabody,peabody,bus,City Council,2025
+Pembroke,pembroke,MBTA adjacent,Select Board,2024
+Plymouth,plymouth,commuter rail,Select Board,2024
+Plympton,plympton,MBTA adjacent,Select Board,2024
+Princeton,princeton,MBTA adjacent,Select Board,2024
+Quincy,quincy,subway or light rail,City Council,2023
+Randolph,randolph,bus,City Council,2025
+Raynham,raynham,MBTA adjacent,Select Board,2024
+Reading,reading,bus,Select Board,2025
+Rehoboth,rehoboth,MBTA adjacent,Select Board,2024
+Revere,revere,subway or light rail,City Council,2023
+Rochester,rochester,MBTA adjacent,Select Board,2024
+Rockland,rockland,MBTA adjacent,Select Board,2024
+Rockport,rockport,commuter rail,Select Board,2024
+Rowley,rowley,commuter rail,Select Board,2024
+Salem,salem,bus,City Council,2025
+Salisbury,salisbury,MBTA adjacent,Select Board,2024
+Saugus,saugus,bus,Select Board,2025
+Scituate,scituate,commuter rail,Select Board,2024
+Seekonk,seekonk,MBTA adjacent,Select Board,2024
+Sharon,sharon,commuter rail,Select Board,2024
+Sherborn,sherborn,MBTA adjacent,Select Board,2024
+Shirley,shirley,commuter rail,Select Board,2024
+Shrewsbury,shrewsbury,commuter rail,Select Board,2024
+Somerville,somerville,subway or light rail,City Council,2023
+Southborough,southborough,commuter rail,Select Board,2024
+Sterling,sterling,MBTA adjacent,Select Board,2024
+Stoneham,stoneham,bus,Select Board,2025
+Stoughton,stoughton,commuter rail,Select Board,2024
+Stow,stow,MBTA adjacent,Select Board,2024
+Sudbury,sudbury,MBTA adjacent,Select Board,2024
+Sutton,sutton,MBTA adjacent,Select Board,2024
+Swampscott,swampscott,bus,Select Board,2025
+Taunton,taunton,MBTA adjacent,City Council,2024
+Tewksbury,tewksbury,MBTA adjacent,Select Board,2024
+Topsfield,topsfield,MBTA adjacent,Select Board,2024
+Townsend,townsend,MBTA adjacent,Select Board,2024
+Tyngsborough,tyngsborough,MBTA adjacent,Select Board,2024
+Upton,upton,MBTA adjacent,Select Board,2024
+Wakefield,wakefield,bus,Select Board,2025
+Walpole,walpole,bus,Select Board,2025
+Waltham,waltham,bus,City Council,2025
+Wareham,wareham,MBTA adjacent,Select Board,2024
+Watertown,watertown,bus,City Council,2025
+Wayland,wayland,MBTA adjacent,Select Board,2024
+Wellesley,wellesley,subway or light rail,Select Board,2023
+Wenham,wenham,commuter rail,Select Board,2024
+West Boylston,westboylston,MBTA adjacent,Select Board,2024
+West Bridgewater,westbridgewater,MBTA adjacent,Select Board,2024
+West Newbury,westnewbury,MBTA adjacent,Select Board,2024
+Westborough,westborough,commuter rail,Select Board,2024
+Westford,westford,MBTA adjacent,Select Board,2024
+Westminster,westminster,commuter rail,Select Board,2024
+Weston,weston,subway or light rail,Select Board,2023
+Westwood,westwood,bus,Select Board,2025
+Weymouth,weymouth,bus,City Council,2025
+Whitman,whitman,commuter rail,Select Board,2024
+Wilmington,wilmington,bus,Select Board,2025
+Winchester,winchester,bus,Select Board,2025
+Winthrop,winthrop,subway or light rail,City Council,2023
+Woburn,woburn,bus,City Council,2025
+Worcester,worcester,commuter rail,City Council,2024
+Wrentham,wrentham,MBTA adjacent,Select Board,2024
