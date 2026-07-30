@@ -33,6 +33,9 @@ STORAGE_HOST_RES = [
     re.compile(r"(^|\.)finalsite\.net$", re.I),       # Medford et al.
     re.compile(r"(^|\.)storage\.googleapis\.com$", re.I),
     re.compile(r"(^|\.)googleapis\.com$", re.I),
+    re.compile(r"(^|\.)sanity\.io$", re.I),            # Sanity headless CMS asset CDN (Florida)
+    re.compile(r"(^|\.)aptuitivcdn\.com$", re.I),      # Aptuitiv MA municipal-site vendor CDN
+    re.compile(r"(^|\.)documents-on-demand\.com$", re.I),  # Laserfiche/GovQA doc portal (Easton)
 ]
 
 # Extension-LESS document endpoints: CMS routes that serve a file but carry no

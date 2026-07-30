@@ -406,3 +406,19 @@ worthington-ma.us
 wrentham.gov
 wrentham.org
 yarmouth.ma.us
+# --- 2026-07-30: towns absent from the list (zero corpus nodes), from authoritative
+# --- CivicAtlasMA/data/inventory/sources/towns_websites.csv (canonical hosts). Monroe MA
+# --- has no website in the authoritative list (pop ~120) so is intentionally omitted.
+goshen-ma.us
+gosnold-ma.gov
+harwich-ma.gov
+northandoverma.gov
+norwoodma.gov
+pelhamma.gov
+townofpetersham.gov
+pittsfieldma.gov
+townofsavoy.com
+townofsouthampton.org
+wbrookfield.com
+townofwestspringfield.org
+weymouth.ma.us
