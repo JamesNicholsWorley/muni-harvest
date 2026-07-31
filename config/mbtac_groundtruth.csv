@@ -1,0 +1,176 @@
+town,town_norm,community_type,governing_body,status,adoption_date
+Abington,abington,commuter rail,Select Board,Compliant,2024-07-24
+Acton,acton,commuter rail,Select Board,Compliant,2024-09-30
+Amesbury,amesbury,MBTA adjacent,City Council,Compliant,2024-09-05
+Andover,andover,commuter rail,Select Board,Compliant,2024-09-13
+Arlington,arlington,subway or light rail,Select Board,Compliant,2023-11-08
+Ashburnham,ashburnham,MBTA adjacent,Select Board,Compliant,2025-07-24
+Ashby,ashby,MBTA adjacent,Select Board,Compliant,2025-04-02
+Ashland,ashland,commuter rail,Select Board,Compliant,2024-12-02
+Attleboro,attleboro,commuter rail,City Council,Compliant,2024-12-19
+Auburn,auburn,MBTA adjacent,Select Board,Compliant,2023-08-09
+Ayer,ayer,commuter rail,Select Board,Compliant,2024-08-26
+Bedford,bedford,bus,Select Board,Compliant,
+Bellingham,bellingham,MBTA adjacent,Select Board,Compliant,2024-12-09
+Belmont,belmont,bus,Select Board,Compliant,
+Berkley,berkley,MBTA adjacent,Select Board,Compliant,2025-10-09
+Beverly,beverly,bus,City Council,Compliant,
+Billerica,billerica,bus,Select Board,Compliant,2024-12-18
+Bourne,bourne,MBTA adjacent,Select Board,Compliant,2025-08-19
+Boxborough,boxborough,MBTA adjacent,Select Board,Interim/Unknown,
+Boxford,boxford,MBTA adjacent,Select Board,Compliant,2025-12-19
+Braintree,braintree,subway or light rail,City Council,Compliant,2023-12-14
+Bridgewater,bridgewater,commuter rail,City Council,Compliant,2024-04-30
+Brockton,brockton,bus,City Council,Compliant,
+Brookline,brookline,subway or light rail,Select Board,Compliant,2024-07-02
+Burlington,burlington,bus,Select Board,Compliant,2025-02-14
+Cambridge,cambridge,subway or light rail,City Council,Compliant,2023-12-26
+Canton,canton,bus,Select Board,Compliant,2025-01-22
+Carlisle,carlisle,MBTA adjacent,Select Board,Compliant,2025-11-12
+Carver,carver,MBTA adjacent,Select Board,Non-Compliant,
+Chelmsford,chelmsford,MBTA adjacent,Select Board,Compliant,
+Chelsea,chelsea,subway or light rail,City Council,Compliant,2023-12-08
+Cohasset,cohasset,commuter rail,Select Board,Compliant,2025-01-17
+Concord,concord,commuter rail,Select Board,Conditional,
+Danvers,danvers,bus,Select Board,Compliant,2024-07-19
+Dedham,dedham,bus,Select Board,Compliant,2023-12-20
+Dover,dover,MBTA adjacent,Select Board,Compliant,2025-05-09
+Dracut,dracut,MBTA adjacent,Select Board,Non-Compliant,
+Duxbury,duxbury,MBTA adjacent,Select Board,Compliant,2025-06-06
+East Bridgewater,eastbridgewater,MBTA adjacent,Select Board,Non-Compliant,
+Easton,easton,MBTA adjacent,Select Board,Compliant,2024-05-23
+Essex,essex,MBTA adjacent,Select Board,Compliant,2025-12-08
+Everett,everett,subway or light rail,City Council,Conditional,
+Fitchburg,fitchburg,commuter rail,City Council,Compliant,
+Foxborough,foxborough,MBTA adjacent,Select Board,Compliant,2024-12-12
+Framingham,framingham,commuter rail,City Council,Compliant,
+Franklin,franklin,commuter rail,City Council,Interim/Unknown,
+Freetown,freetown,MBTA adjacent,Select Board,Non-Compliant,
+Georgetown,georgetown,MBTA adjacent,Select Board,Compliant,
+Gloucester,gloucester,commuter rail,City Council,Compliant,2024-10-09
+Grafton,grafton,commuter rail,Select Board,Compliant,2023-10-20
+Groton,groton,MBTA adjacent,Select Board,Compliant,2025-05-15
+Groveland,groveland,MBTA adjacent,Select Board,Compliant,2025-06-18
+Halifax,halifax,commuter rail,Select Board,Non-Compliant,
+Hamilton,hamilton,commuter rail,Select Board,Compliant,2025-05-07
+Hanover,hanover,MBTA adjacent,Select Board,Compliant,2025-12-17
+Hanson,hanson,commuter rail,Select Board,Compliant,
+Harvard,harvard,MBTA adjacent,Select Board,Compliant,2024-07-18
+Haverhill,haverhill,commuter rail,City Council,Compliant,2023-09-14
+Hingham,hingham,bus,Select Board,Compliant,2024-09-26
+Holbrook,holbrook,bus,Select Board,Interim/Unknown,
+Holden,holden,MBTA adjacent,Select Board,Non-Compliant,
+Holliston,holliston,MBTA adjacent,Select Board,Compliant,2024-12-02
+Hopkinton,hopkinton,commuter rail,Select Board,Compliant,2026-06-02
+Hull,hull,bus,Select Board,Compliant,2024-09-25
+Ipswich,ipswich,commuter rail,Select Board,Compliant,2024-08-02
+Kingston,kingston,commuter rail,Select Board,Compliant,2024-08-15
+Lakeville,lakeville,commuter rail,Select Board,Compliant,
+Lancaster,lancaster,MBTA adjacent,Select Board,Conditional,
+Lawrence,lawrence,commuter rail,City Council,Compliant,2024-12-20
+Leicester,leicester,MBTA adjacent,Select Board,Compliant,2025-11-05
+Leominster,leominster,commuter rail,City Council,Compliant,2024-12-13
+Lexington,lexington,bus,Select Board,Compliant,2023-06-06
+Lincoln,lincoln,bus,Select Board,Compliant,2024-01-24
+Littleton,littleton,commuter rail,Select Board,Compliant,2024-07-11
+Lowell,lowell,commuter rail,City Council,Compliant,2023-07-11
+Lunenburg,lunenburg,MBTA adjacent,Select Board,Compliant,2025-12-19
+Lynn,lynn,bus,City Council,Compliant,2025-03-05
+Lynnfield,lynnfield,MBTA adjacent,Select Board,Compliant,2024-11-18
+Malden,malden,subway or light rail,City Council,Compliant,2023-12-12
+Manchester,manchester,commuter rail,Select Board,Compliant,
+Mansfield,mansfield,commuter rail,Select Board,Compliant,2025-09-04
+Marblehead,marblehead,bus,Select Board,Non-Compliant,
+Marlborough,marlborough,MBTA adjacent,City Council,Compliant,2024-11-15
+Marshfield,marshfield,MBTA adjacent,Select Board,Interim/Unknown,
+Maynard,maynard,MBTA adjacent,Select Board,Compliant,2024-09-12
+Medfield,medfield,MBTA adjacent,Select Board,Compliant,2024-07-11
+Medford,medford,subway or light rail,City Council,Compliant,2023-12-19
+Medway,medway,MBTA adjacent,Select Board,Compliant,2024-11-12
+Melrose,melrose,subway or light rail,City Council,Compliant,2025-08-11
+Merrimac,merrimac,MBTA adjacent,Select Board,Compliant,2025-05-19
+Methuen,methuen,MBTA adjacent,City Council,Compliant,
+Middleborough,middleborough,commuter rail,Select Board,Interim/Unknown,
+Middleton,middleton,MBTA adjacent,Select Board,Non-Compliant,
+Millbury,millbury,MBTA adjacent,Select Board,Compliant,2025-07-08
+Millis,millis,MBTA adjacent,Select Board,Compliant,2024-06-18
+Milton,milton,subway or light rail,Select Board,Compliant,
+Nahant,nahant,bus,Select Board,Compliant,2025-11-05
+Natick,natick,commuter rail,Select Board,Compliant,
+Needham,needham,bus,Select Board,Compliant,2024-08-27
+Newbury,newbury,commuter rail,Select Board,Compliant,2024-10-04
+Newburyport,newburyport,commuter rail,City Council,Compliant,
+Newton,newton,subway or light rail,City Council,Compliant,2024-01-29
+Norfolk,norfolk,commuter rail,Select Board,Compliant,
+North Andover,northandover,commuter rail,Select Board,Compliant,2024-08-20
+North Attleborough,northattleborough,MBTA adjacent,City Council,Compliant,2024-12-27
+North Reading,northreading,MBTA adjacent,Select Board,Compliant,2025-06-10
+Northborough,northborough,MBTA adjacent,Select Board,Compliant,2024-09-27
+Northbridge,northbridge,MBTA adjacent,Select Board,Compliant,2023-09-11
+Norton,norton,MBTA adjacent,Select Board,Compliant,2025-05-22
+Norwell,norwell,MBTA adjacent,Select Board,Compliant,
+Norwood,norwood,bus,Select Board,Compliant,2023-12-11
+Paxton,paxton,MBTA adjacent,Select Board,Compliant,2025-12-08
+Peabody,peabody,bus,City Council,Compliant,2024-12-10
+Pembroke,pembroke,MBTA adjacent,Select Board,Compliant,2023-05-02
+Plymouth,plymouth,commuter rail,Select Board,Compliant,2025-05-29
+Plympton,plympton,MBTA adjacent,Select Board,Compliant,2025-05-22
+Princeton,princeton,MBTA adjacent,Select Board,Interim/Unknown,
+Quincy,quincy,subway or light rail,City Council,Compliant,2024-01-30
+Randolph,randolph,bus,City Council,Compliant,2024-08-27
+Raynham,raynham,MBTA adjacent,Select Board,Compliant,2025-05-22
+Reading,reading,bus,Select Board,Compliant,2025-01-02
+Rehoboth,rehoboth,MBTA adjacent,Select Board,Non-Compliant,
+Revere,revere,subway or light rail,City Council,Compliant,2023-12-15
+Rochester,rochester,MBTA adjacent,Select Board,Compliant,
+Rockland,rockland,MBTA adjacent,Select Board,Compliant,2024-09-30
+Rockport,rockport,commuter rail,Select Board,Compliant,2024-09-20
+Rowley,rowley,commuter rail,Select Board,Compliant,2025-07-07
+Salem,salem,bus,City Council,Compliant,2023-06-08
+Salisbury,salisbury,MBTA adjacent,Select Board,Compliant,2024-10-09
+Saugus,saugus,bus,Select Board,Compliant,2025-06-17
+Scituate,scituate,commuter rail,Select Board,Compliant,
+Seekonk,seekonk,MBTA adjacent,Select Board,Compliant,2025-01-22
+Sharon,sharon,commuter rail,Select Board,Compliant,2024-07-31
+Sherborn,sherborn,MBTA adjacent,Select Board,Compliant,2025-05-29
+Shirley,shirley,commuter rail,Select Board,Compliant,2024-08-28
+Shrewsbury,shrewsbury,commuter rail,Select Board,Compliant,2025-03-25
+Somerville,somerville,subway or light rail,City Council,Compliant,2023-12-12
+Southborough,southborough,commuter rail,Select Board,Compliant,2024-09-16
+Sterling,sterling,MBTA adjacent,Select Board,Compliant,2025-10-22
+Stoneham,stoneham,bus,Select Board,Compliant,2024-07-15
+Stoughton,stoughton,commuter rail,Select Board,Compliant,2024-10-24
+Stow,stow,MBTA adjacent,Select Board,Compliant,2025-07-31
+Sudbury,sudbury,MBTA adjacent,Select Board,Compliant,2024-07-02
+Sutton,sutton,MBTA adjacent,Select Board,Compliant,2025-05-23
+Swampscott,swampscott,bus,Select Board,Compliant,2024-06-03
+Taunton,taunton,MBTA adjacent,City Council,Compliant,2024-04-26
+Tewksbury,tewksbury,MBTA adjacent,Select Board,Non-Compliant,
+Topsfield,topsfield,MBTA adjacent,Select Board,Compliant,
+Townsend,townsend,MBTA adjacent,Select Board,Compliant,2025-04-08
+Tyngsborough,tyngsborough,MBTA adjacent,Select Board,Compliant,2024-06-26
+Upton,upton,MBTA adjacent,Select Board,Compliant,2025-05-01
+Wakefield,wakefield,bus,Select Board,Compliant,2025-01-08
+Walpole,walpole,bus,Select Board,Compliant,2024-08-05
+Waltham,waltham,bus,City Council,Compliant,
+Wareham,wareham,MBTA adjacent,Select Board,Interim/Unknown,
+Watertown,watertown,bus,City Council,Compliant,2024-12-06
+Wayland,wayland,MBTA adjacent,Select Board,Compliant,2024-08-26
+Wellesley,wellesley,subway or light rail,Select Board,Compliant,
+Wenham,wenham,commuter rail,Select Board,Interim/Unknown,
+West Boylston,westboylston,MBTA adjacent,Select Board,Compliant,2024-12-19
+West Bridgewater,westbridgewater,MBTA adjacent,Select Board,Interim/Unknown,
+West Newbury,westnewbury,MBTA adjacent,Select Board,Compliant,2025-11-07
+Westborough,westborough,commuter rail,Select Board,Compliant,2024-09-06
+Westford,westford,MBTA adjacent,Select Board,Compliant,2023-12-28
+Westminster,westminster,commuter rail,Select Board,Compliant,2025-08-25
+Weston,weston,subway or light rail,Select Board,Compliant,2025-10-30
+Westwood,westwood,bus,Select Board,Compliant,2024-11-14
+Weymouth,weymouth,bus,City Council,Compliant,2024-04-02
+Whitman,whitman,commuter rail,Select Board,Compliant,2024-10-17
+Wilmington,wilmington,bus,Select Board,Non-Compliant,
+Winchester,winchester,bus,Select Board,Compliant,2024-12-05
+Winthrop,winthrop,subway or light rail,City Council,Non-Compliant,
+Woburn,woburn,bus,City Council,Interim/Unknown,
+Worcester,worcester,commuter rail,City Council,Compliant,2024-08-22
+Wrentham,wrentham,MBTA adjacent,Select Board,Compliant,2025-10-03
