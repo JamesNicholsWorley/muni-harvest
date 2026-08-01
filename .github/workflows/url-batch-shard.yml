@@ -1,0 +1,76 @@
+name: url-batch-shard
+
+# Fetch a list of document URLs from clean runner IPs and return the raw bytes as
+# artifacts. Built for the CivicAtlasMA election-results recovery: the maintainer's
+# local IP is tar-pitted by many MA municipal WAFs; runner IPs are not. Input is a
+# committed CSV (municipality,year,url[,alt_url]); output is per-shard artifacts of
+# the downloaded files + a manifest, merged into one `url-batch-merged` artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of parallel runner IPs"
+        default: "8"
+      url_csv:
+        description: "Input CSV of URLs to fetch"
+        default: "config/election_urls.csv"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  fetch:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "curl_cffi>=0.7"
+      - name: Fetch shard ${{ matrix.shard }}
+        run: |
+          python scripts/fetch_url_batch.py \
+            --url-csv "${{ github.event.inputs.url_csv }}" \
+            --shard "${{ matrix.shard }}" --out out
+      - name: Upload shard files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: url-batch-shard-${{ strategy.job-index }}
+          path: out/
+          if-no-files-found: ignore
+
+  merge:
+    needs: fetch
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Collate downloaded files + manifests
+        run: |
+          mkdir -p merged
+          find shards -type f ! -name 'manifest_*.csv' -exec cp -n {} merged/ \; || true
+          echo "municipality,year,url,kind,status,bytes,sha1,filename" > merged/manifest.csv
+          find shards -name 'manifest_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/manifest.csv || true
+          echo "files: $(ls merged | grep -v manifest.csv | wc -l)"
+          echo "manifest rows: $(($(wc -l < merged/manifest.csv) - 1))"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: url-batch-merged
+          path: merged/
