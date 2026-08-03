@@ -108,12 +108,17 @@ def main():
             stem = muni.replace(" ", "") + year
             urls = [u for u in (r.get("url"), r.get("alt_url")) if (u or "").strip()]
             got = None
+            html_fallback = None
             for u in urls:
                 data, kind = fetch(u.strip(), args.timeout)
                 if kind in ("pdf", "xlsx"):
                     got = (u.strip(), data, kind)
                     break
+                if kind == "html" and html_fallback is None:
+                    html_fallback = (u.strip(), data, kind)  # keep an HTML page (news/results) as fallback
                 time.sleep(0.5)
+            if not got and html_fallback:
+                got = html_fallback
             if not got:
                 w.writerow([muni, year, urls[0] if urls else "", "none",
                             "fail", 0, "", ""])
