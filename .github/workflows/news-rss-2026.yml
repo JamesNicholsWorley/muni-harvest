@@ -1,0 +1,74 @@
+name: news-rss-2026
+
+# Google News RSS sweep for 2026 municipal election results, sharded across runner IPs.
+# The site crawlers (docsweep/discover/dc-idsweep) only reach a town's own domain; for the
+# ~100 towns whose results have only ever appeared in a local paper, this is the angle.
+# Stdlib only -- no install step, no API key.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "8"
+      towns_file:
+        description: "CSV of municipality,predicted_2026_date"
+        default: "config/y2026_news_towns.csv"
+      sleep:
+        description: "Seconds between feed requests"
+        default: "1.5"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  sweep:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: News RSS shard ${{ matrix.shard }}
+        run: |
+          python3 scripts/news_rss_2026.py \
+            --towns "${{ github.event.inputs.towns_file }}" \
+            --shard "${{ matrix.shard }}" \
+            --sleep ${{ github.event.inputs.sleep }} \
+            --out news_2026.jsonl
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: news-rss-shard-${{ strategy.job-index }}
+          path: news_2026.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: sweep
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge news hits
+        run: |
+          find shards -name news_2026.jsonl -exec cat {} + > news_2026.jsonl || true
+          echo "news articles: $(wc -l < news_2026.jsonl)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: news-rss-2026-merged
+          path: news_2026.jsonl
