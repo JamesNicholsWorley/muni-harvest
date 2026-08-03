@@ -13,6 +13,9 @@ on:
       per_host_cap:
         description: "Max gap probes per host (newest first; logged if hit)"
         default: "15000"
+      headroom:
+        description: "Also probe N ids above the known ceiling (current-year docs)"
+        default: "0"
 
 jobs:
   setup:
@@ -43,7 +46,8 @@ jobs:
       - name: id-sweep shard ${{ matrix.shard }}
         run: |
           muni-harvest dc-idsweep --shard "${{ matrix.shard }}" \
-            --per-host-cap ${{ github.event.inputs.per_host_cap }} --workers 4
+            --per-host-cap ${{ github.event.inputs.per_host_cap }} \
+            --headroom ${{ github.event.inputs.headroom }} --workers 4
       - name: Upload recovered docs
         if: always()
         uses: actions/upload-artifact@v4

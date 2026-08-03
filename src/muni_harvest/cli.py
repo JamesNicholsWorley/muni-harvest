@@ -84,6 +84,10 @@ def main(argv: list[str] | None = None) -> int:
                        help="known-id density gate for the ceiling (ignore sparse outliers)")
     p_ids.add_argument("--rpm", type=int, default=240,
                        help="shard-global probe rate (spread across ~6 hosts/shard)")
+    p_ids.add_argument("--headroom", type=int, default=0,
+                       help="also probe this many ids ABOVE the known ceiling, to reach "
+                            "documents posted since the manifest was built (current-year "
+                            "results); stops after 150 consecutive misses")
 
     p_mr = sub.add_parser("minutes-recover",
                           help="deterministic AgendaCenter minutes recovery (agenda-only meetings)")
@@ -161,7 +165,7 @@ def main(argv: list[str] | None = None) -> int:
         from .discover import dc_idsweep
         dc_idsweep.run(workers=args.workers, shard=args.shard, limit=args.limit,
                        per_host_cap=args.per_host_cap, min_density=args.min_density,
-                       rpm=args.rpm)
+                       rpm=args.rpm, headroom=args.headroom)
     elif args.cmd == "minutes-recover":
         from .discover import minutes_recover
         minutes_recover.run(workers=args.workers, shard=args.shard, limit=args.limit)

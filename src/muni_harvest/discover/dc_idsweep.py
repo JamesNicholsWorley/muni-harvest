@@ -94,7 +94,8 @@ def _dense_ceiling(ids: set[int], *, min_density: float = 0.12,
 
 
 def run(*, workers: int = 8, shard: str | None = None, limit: int | None = None,
-        per_host_cap: int = 15000, min_density: float = 0.12, rpm: int = 240) -> dict:
+        per_host_cap: int = 15000, min_density: float = 0.12, rpm: int = 240,
+        headroom: int = 0) -> dict:
     from .recover_manifest import load_dc
     known = load_dc()          # committed manifest (works on Actions, no corpus needed)
     if known is None:          # local fallback: scan the full corpus
@@ -131,11 +132,23 @@ def run(*, workers: int = 8, shard: str | None = None, limit: int | None = None,
         capped = len(gaps) > per_host_cap
         if capped:                          # bound cost; sweep the newest gaps first
             gaps = gaps[-per_host_cap:]
-        rows, probed = [], 0
+        # Documents posted SINCE the manifest was built sit above every known id, so the
+        # gap list below `top` cannot reach them. That is exactly the current-year case:
+        # a town's 2026 election results are the newest thing on the site. Probing a
+        # little past the ceiling is the only way to see them, and it is cheap because
+        # the walk stops at the first long unbroken stretch of 404s, which is the live
+        # end of the id space.
+        if headroom:
+            gaps = gaps + list(range(top + 1, top + headroom + 1))
+        rows, probed, miss = [], 0, 0
         for i in gaps:
             limiter.wait()
             probed += 1
             ok, final = _probe(url_host, i)
+            if i > top:
+                miss = 0 if ok else miss + 1
+                if miss >= 150:
+                    break
             if ok:
                 slug = final.split("/View/")[-1]
                 name = slug.split("/", 1)[1] if "/" in slug else ""

@@ -16,6 +16,9 @@ on:
       max_depth:
         description: "BFS depth cap"
         default: "6"
+      hosts_file:
+        description: "Host list to crawl"
+        default: "config/muni_hosts.txt"
 
 jobs:
   setup:
@@ -44,7 +47,7 @@ jobs:
       - run: pip install -e .
       - name: Deep crawl shard ${{ matrix.shard }}
         run: |
-          muni-harvest discover --hosts-file config/muni_hosts.txt \
+          muni-harvest discover --hosts-file "${{ github.event.inputs.hosts_file }}" \
             --shard "${{ matrix.shard }}" \
             --max-pages ${{ github.event.inputs.max_pages }} \
             --max-depth ${{ github.event.inputs.max_depth }} --workers 4
