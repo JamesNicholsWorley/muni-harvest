@@ -34,6 +34,13 @@ jobs:
 
   crawl:
     needs: setup
+    # MUST stay under GitHub's 6h hard per-job cap. Without this, 16 of 20 shards in the
+    # 2026 sweep ran the full six hours and were killed by the platform -- and a hard-cap
+    # kill destroys the runner before the `if: always()` upload can run, so those shards
+    # produced NO artifact at all. Six hours of crawling each, discarded. A timeout below
+    # the cap makes the cancellation graceful, so the upload step still fires and the
+    # partial nodes.jsonl survives.
+    timeout-minutes: 300
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
