@@ -25,6 +25,13 @@ from .sitemaps import sitemap_urls
 from .storage import resolve_download
 
 
+# Tiers whose hosts refuse plain stdlib HTTP and must be crawled through a browser.
+# `blocked` (130 hosts) and `needs_unblocker` (40) dwarf T2 (71) in the tier cache, and
+# both were previously routed to the stdlib crawl that is already known to fail for them.
+# If the browser also fails, the crawl-outcome reporting now says so out loud.
+BROWSER_TIERS = ("T1", "T2", "blocked", "needs_unblocker")
+
+
 def host_to_municipality(inventory) -> dict[str, str]:
     from ..config import host_overrides
     overrides = host_overrides()
@@ -51,7 +58,10 @@ def discover_host(host: str, municipality: str, cfg: dict,
                   pool=None, on_nodes=None) -> tuple[list[dict], dict]:
     dc = cfg["discover"]
     # T1/T2 hosts block plain HTTP -> crawl their live pages through the browser.
-    use_browser = tier in ("T1", "T2") and pool is not None
+    # `blocked` belongs here too: the tier cache defines it as "T0 refused (WAF/challenge)
+    # -> needs the browser tier", but this check only listed T1/T2, so every blocked host
+    # got the stdlib crawl that was already known to fail for it.
+    use_browser = tier in BROWSER_TIERS and pool is not None
     robots = RobotsPolicy(host).load()
     cms_name, cms_seeds = fingerprint(host)
 
@@ -69,6 +79,7 @@ def discover_host(host: str, municipality: str, cfg: dict,
     crawl_seeds = cms_seeds + sm_page_seeds[:dc["max_seed_pages"]]
     # T2 browser crawl is slow; cap its pages tighter than the T0 stdlib crawl.
     cap = dc.get("max_pages_browser", 60) if use_browser else dc["max_pages"]
+    crawl_stats: dict = {}
     crawl_nodes = crawl_site(host, municipality=municipality, robots=robots,
                              seed_urls=crawl_seeds, max_depth=dc["max_depth"],
                              max_pages=cap, base_delay=dc["base_delay_s"],
@@ -76,7 +87,8 @@ def discover_host(host: str, municipality: str, cfg: dict,
                              max_consec_429=dc.get("max_consec_429", 5),
                              budget_s=dc.get("per_host_seconds"),
                              on_nodes=on_nodes,
-                             flush_every=dc.get("flush_every_pages", 25))
+                             flush_every=dc.get("flush_every_pages", 25),
+                             stats_out=crawl_stats)
 
     wb_nodes = [make_node(seed_host=host, municipality=municipality, url=r["url"],
                           kind="file", mimetype=r.get("mimetype", ""),
@@ -104,6 +116,11 @@ def discover_host(host: str, municipality: str, cfg: dict,
         "by_source": {s: len(k) for s, k in src_keys.items()},
         "only_in_source": only_in,
         "unique_keys": len(all_keys),
+        "crawl_outcome": crawl_stats.get("outcome", ""),
+        "crawl_detail": {k: v for k, v in crawl_stats.items()
+                         if k != "outcome" and v},
+        "tier": tier,
+        "used_browser": use_browser,
     }
     return nodes, stats
 
@@ -145,7 +162,13 @@ def run(*, limit: int | None = None, workers: int | None = None,
     from ..resolve.tier_cache import TierCache
     tiers = {h: (rec or {}).get("tier", "T0")
              for h, rec in ((x, TierCache().get(x)) for x in map(norm_host, todo))}
-    n_browser = sum(1 for t in tiers.values() if t in ("T1", "T2"))
+    n_browser = sum(1 for t in tiers.values() if t in BROWSER_TIERS)
+    if not tiers or all(t == "T0" for t in tiers.values()):
+        # Every host T0 usually means the tier cache is MISSING, not that every host is
+        # plain-HTTP friendly. data/ is gitignored, so on a CI runner the cache did not
+        # exist at all and 21 browser-required hosts were silently crawled with stdlib.
+        print("[warn] every host resolved to T0 -- is data/tier_cache.jsonl present? "
+              "Without it, WAF-blocked hosts fail silently.")
     browser_pool = None
     if n_browser:
         try:
@@ -163,6 +186,7 @@ def run(*, limit: int | None = None, workers: int | None = None,
     lock = threading.Lock()
     audit = AuditLog(out_dir / "audit.log")
     totals = {"hosts": 0, "nodes": 0, "files": 0}
+    outcomes: dict[str, list[str]] = defaultdict(list)
 
     def work(host: str) -> None:
         h = norm_host(host)
@@ -195,10 +219,19 @@ def run(*, limit: int | None = None, workers: int | None = None,
             totals["hosts"] += 1
             totals["nodes"] += len(nodes)
             totals["files"] += stats["files"]
-        audit.write(f"OK\t{h}\t{stats['files']} files\t{stats['pages']} pages"
-                    f"\tcms={stats['cms']}\ttier={tiers.get(h)}")
-        print(f"  [OK] {h:<34} files={stats['files']:>5} pages={stats['pages']:>4} "
-              f"tier={tiers.get(h,'T0'):<4} cms={stats['cms']}")
+            outcomes[stats.get("crawl_outcome") or "?"].append(h)
+        # A host that fetched nothing is a FAILURE, not an empty result. Label it as one
+        # in both the audit log and stdout so "we swept it and found nothing" can never
+        # again be read off a host that was refused at the door.
+        oc = stats.get("crawl_outcome", "")
+        ok = oc == "crawled" or stats["total_nodes"] > 0
+        tag = "OK" if ok else "EMPTY"
+        audit.write(f"{tag}\t{h}\t{stats['files']} files\t{stats['pages']} pages"
+                    f"\tcms={stats['cms']}\ttier={tiers.get(h)}\toutcome={oc}"
+                    f"\tdetail={stats.get('crawl_detail')}")
+        note = "" if ok else f"  <-- NO PAGES FETCHED: {oc} {stats.get('crawl_detail')}"
+        print(f"  [{tag}] {h:<34} files={stats['files']:>5} pages={stats['pages']:>4} "
+              f"tier={tiers.get(h,'T0'):<8} cms={stats['cms']}{note}")
 
     try:
         with ThreadPoolExecutor(max_workers=workers) as executor:
@@ -210,4 +243,12 @@ def run(*, limit: int | None = None, workers: int | None = None,
     audit.close()
     print(f"\n[done] hosts={totals['hosts']} nodes={totals['nodes']} "
           f"files={totals['files']} -> {nodes_path}")
+    print("[outcomes] " + ", ".join(f"{k}={len(v)}" for k, v in
+                                    sorted(outcomes.items(), key=lambda x: -len(x[1]))))
+    failed = {k: v for k, v in outcomes.items() if k not in ("crawled", "?")}
+    if failed:
+        print("[!] hosts that fetched ZERO pages -- these are FAILURES, not empty sites:")
+        for reason, hs in sorted(failed.items()):
+            print(f"    {reason:<16} {len(hs):>3}  {', '.join(hs[:8])}"
+                  + (" ..." if len(hs) > 8 else ""))
     return totals

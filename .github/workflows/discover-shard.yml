@@ -51,7 +51,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -e .
+      # The `live` extra (selenium) powers the browser tier. ubuntu-latest ships Chrome
+      # and Selenium Manager provisions the driver, so no extra install is needed.
+      - run: pip install -e ".[live]"
+      - name: Deliver the tier cache
+        # data/ is gitignored, so the runner never had tier_cache.jsonl and EVERY host
+        # silently fell back to T0 -- stdlib-crawling 21 hosts already known to refuse
+        # plain HTTP, which then logged as "0 pages, OK". Ship it via config/ instead.
+        run: |
+          mkdir -p data
+          cp config/tier_cache.jsonl data/tier_cache.jsonl
+          echo "tier cache: $(wc -l < data/tier_cache.jsonl) records"
       - name: Deep crawl shard ${{ matrix.shard }}
         run: |
           muni-harvest discover --hosts-file "${{ github.event.inputs.hosts_file }}" \
@@ -63,7 +73,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: discover-shard-${{ strategy.job-index }}
-          path: data/discover/nodes.jsonl
+          # audit.log + stats.jsonl carry the per-host crawl OUTCOME (robots_disallow,
+          # waf_403, rate_limited...). Without them a shard that fetched nothing is
+          # indistinguishable from a shard whose hosts genuinely had nothing.
+          path: |
+            data/discover/nodes.jsonl
+            data/discover/stats.jsonl
+            data/discover/audit.log
           if-no-files-found: ignore
 
   merge:

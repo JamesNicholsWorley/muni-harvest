@@ -31,11 +31,11 @@ class _Rate429(Exception):
     """Signals a 429 so the crawler can count consecutive throttles and bail."""
 
 
-def _stdlib_get(url: str) -> str:
+def _stdlib_get(url: str, tries: int = 1) -> str:
     """Fast-fail page fetch (tries=1). Raises _Rate429 on HTTP 429 so the
     circuit-breaker can bail a host that rate-limits every page (the Barnstable case)."""
     try:
-        raw = fetch(url, tries=1, timeout=25)
+        raw = fetch(url, tries=tries, timeout=25)
     except urllib.error.HTTPError as exc:
         if exc.code == 429:
             raise _Rate429 from exc
@@ -78,7 +78,8 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
                max_pages: int = 400, base_delay: float = 1.0,
                pool=None, use_browser: bool = False,
                max_consec_429: int = 5, budget_s: float | None = None,
-               on_nodes=None, flush_every: int = 25) -> list[dict]:
+               on_nodes=None, flush_every: int = 25,
+               stats_out: dict | None = None) -> list[dict]:
     """BFS from the homepage + seeds. Returns page + file nodes with nav-tree fields.
 
     use_browser=True + pool: fetch pages via a warm driver (for T2 hosts that block
@@ -94,7 +95,13 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
     pages. Results used to be written only after the whole host finished, so a shard
     killed mid-host wrote NOTHING -- 13 shards in the 2026 sweep timed out and several
     saved nothing at all despite hours of crawling. Flushing incrementally caps the loss
-    at one batch."""
+    at one batch.
+
+    stats_out: filled with WHY the crawl ended up where it did. A host that fetched zero
+    pages used to be indistinguishable from a host that was crawled and had nothing --
+    both logged `[OK] pages=0`. In the 2026 re-crawl that hid 35 of 50 hosts failing
+    outright: robots Disallow, WAF 403 and a 429 all looked like "swept it, found
+    nothing". An absence must be documented, never silently asserted."""
     crawl_delay = getattr(robots, "crawl_delay", None) or 0.0
     pacer = AdaptiveDelay(max(base_delay, float(crawl_delay)))
 
@@ -112,6 +119,10 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
     consec_429 = 0
     deadline = (time.monotonic() + budget_s) if budget_s else None
     flushed = 0
+    out = stats_out if stats_out is not None else {}
+    out.update(robots_skipped=0, http_403=0, http_404=0, http_other=0,
+               rate_429=0, neterr=0, pages_ok=0, outcome="")
+    home_key = urlkey(home)
 
     def emit(node: dict) -> None:
         k = node["urlkey"]
@@ -132,25 +143,38 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
             break
         url, depth, parent, anchor, crumb = frontier.popleft()
         if robots is not None and not robots.allowed(url):
+            out["robots_skipped"] += 1
             continue
         pacer.sleep()
         t0 = time.monotonic()
+        # The homepage is the whole crawl's root: if it 429s we lose the host entirely,
+        # so give it real retries rather than the fast-fail every other page gets.
+        is_home = urlkey(url) == home_key
         try:
             html = (_browser_get(pool, url) if (use_browser and pool)
-                    else _stdlib_get(url))
+                    else _stdlib_get(url, tries=4 if is_home else 1))
         except _Rate429:
+            out["rate_429"] += 1
             consec_429 += 1
             pacer.throttled()
             if consec_429 >= max_consec_429:
                 print(f"  [BAIL] {seed_host}: {consec_429} consecutive 429s")
                 break
             continue
+        except urllib.error.HTTPError as exc:
+            code = getattr(exc, "code", 0)
+            key = {403: "http_403", 404: "http_404"}.get(code, "http_other")
+            out[key] += 1
+            pacer.throttled()
+            continue
         except Exception:  # noqa: BLE001 — dead/slow page: back off, skip
+            out["neterr"] += 1
             pacer.throttled()
             continue
         consec_429 = 0
         pacer.ok(time.monotonic() - t0)
         pages += 1
+        out["pages_ok"] = pages
 
         page = extract(html)
         page_crumb = page.breadcrumb or crumb or page.title
@@ -188,4 +212,20 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
             flush()
 
     flush()
+    # Name the outcome. Only "crawled" means the silence is real; everything else is a
+    # failure that must not be reported as "swept, nothing found".
+    if pages:
+        out["outcome"] = "crawled"
+    elif out["robots_skipped"]:
+        out["outcome"] = "robots_disallow"
+    elif out["http_403"]:
+        out["outcome"] = "waf_403"
+    elif out["rate_429"]:
+        out["outcome"] = "rate_limited"
+    elif out["http_404"]:
+        out["outcome"] = "http_404"
+    elif out["neterr"]:
+        out["outcome"] = "unreachable"
+    else:
+        out["outcome"] = "no_frontier"
     return nodes
