@@ -12,8 +12,19 @@ from ..core import DEFAULT_UA, fetch
 
 
 class RobotsPolicy:
-    def __init__(self, host: str):
+    """robots.txt for one host.
+
+    `override=True` ignores Disallow rules for a specific, named host. Used ONLY for
+    municipalities whose CMS ships a blanket `User-agent: * / Disallow: /` template that
+    also bans everyone but Googlebot -- over public records the town is legally required
+    to publish. It is an owner decision per host, never a default, and callers pair it
+    with a much slower crawl delay and a lower page cap: if we are going to read a site
+    that asked us not to, we take less from it and take it slowly.
+    """
+
+    def __init__(self, host: str, override: bool = False):
         self.host = host
+        self.override = override
         self._rp = RobotFileParser()
         self.sitemaps: list[str] = []
         self.crawl_delay: float | None = None
@@ -37,6 +48,8 @@ class RobotsPolicy:
         return self
 
     def allowed(self, url: str) -> bool:
+        if self.override:
+            return True
         if not self._loaded:
             return True
         try:

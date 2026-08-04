@@ -165,6 +165,17 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
             code = getattr(exc, "code", 0)
             key = {403: "http_403", 404: "http_404"}.get(code, "http_other")
             out[key] += 1
+            # A 403 means the WAF refused this client, not that the page is missing. The
+            # tier cache is the usual escape hatch, but it goes stale: Hamilton and
+            # Westhampton are cached T0 yet now 403 the stdlib UA while serving a real
+            # browser fine. Escalate on the evidence in front of us rather than trusting
+            # a cached tier, and retry this URL once through the browser.
+            if code == 403 and pool is not None and not use_browser:
+                use_browser = True
+                out["escalated_to_browser"] = out.get("escalated_to_browser", 0) + 1
+                print(f"  [ESCALATE] {seed_host}: 403 on stdlib -> retrying via browser")
+                frontier.appendleft((url, depth, parent, anchor, crumb))
+                continue
             pacer.throttled()
             continue
         except Exception:  # noqa: BLE001 — dead/slow page: back off, skip

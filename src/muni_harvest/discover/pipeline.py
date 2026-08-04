@@ -62,7 +62,16 @@ def discover_host(host: str, municipality: str, cfg: dict,
     # -> needs the browser tier", but this check only listed T1/T2, so every blocked host
     # got the stdlib crawl that was already known to fail for it.
     use_browser = tier in BROWSER_TIERS and pool is not None
-    robots = RobotsPolicy(host).load()
+
+    # Named hosts whose CMS ships a blanket Disallow over public election records. Crawled
+    # far slower and shallower than a normal host -- see RobotsPolicy.override.
+    polite = [norm_host(h) for h in dc.get("polite_override_hosts", [])]
+    is_polite = norm_host(host) in polite
+    robots = RobotsPolicy(host, override=is_polite).load()
+    if is_polite:
+        print(f"  [POLITE-OVERRIDE] {host}: robots Disallow bypassed by explicit owner "
+              f"decision; delay={dc.get('polite_override_delay_s', 10.0)}s "
+              f"cap={dc.get('polite_override_max_pages', 120)} pages")
     cms_name, cms_seeds = fingerprint(host)
 
     # Sitemaps: files become nodes directly; pages seed the crawl frontier (capped).
@@ -79,10 +88,14 @@ def discover_host(host: str, municipality: str, cfg: dict,
     crawl_seeds = cms_seeds + sm_page_seeds[:dc["max_seed_pages"]]
     # T2 browser crawl is slow; cap its pages tighter than the T0 stdlib crawl.
     cap = dc.get("max_pages_browser", 60) if use_browser else dc["max_pages"]
+    delay = dc["base_delay_s"]
+    if is_polite:
+        cap = min(cap, dc.get("polite_override_max_pages", 120))
+        delay = max(delay, dc.get("polite_override_delay_s", 10.0))
     crawl_stats: dict = {}
     crawl_nodes = crawl_site(host, municipality=municipality, robots=robots,
                              seed_urls=crawl_seeds, max_depth=dc["max_depth"],
-                             max_pages=cap, base_delay=dc["base_delay_s"],
+                             max_pages=cap, base_delay=delay,
                              pool=pool, use_browser=use_browser,
                              max_consec_429=dc.get("max_consec_429", 5),
                              budget_s=dc.get("per_host_seconds"),

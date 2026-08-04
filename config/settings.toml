@@ -39,6 +39,16 @@ per_host_seconds  = 1200
 # Write crawl results every N pages instead of only when a host finishes. A shard killed
 # mid-host used to lose everything it had crawled; now it loses at most one batch.
 flush_every_pages = 25
+# Hosts whose CMS ships a blanket `User-agent: * / Disallow: /` -- allowing Googlebot and
+# Bingbot while banning everyone else -- over public election records the town is legally
+# required to publish. The last three files are byte-identical, so this is a vendor
+# default template rather than four town decisions. Bypassed by explicit owner decision
+# (2026-08-04), and ONLY these named hosts. The trade is deliberate: we crawl them an
+# order of magnitude slower than a normal host and stop far earlier.
+polite_override_hosts     = ["easton.ma.us", "newbraintreema.us",
+                             "townofbarre.com", "townofpalmer.com"]
+polite_override_delay_s   = 10.0   # vs base_delay_s = 1.0
+polite_override_max_pages = 120    # vs max_pages = 150 / deep-crawl 400
 
 [budget]
 total_usd = 40.0
