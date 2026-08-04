@@ -49,7 +49,16 @@ _DOC_ENDPOINT_RE = re.compile(
     r"|/common/pages/GetFile\.ash?x"           # CivicLive/Vision GetFile.ashx?key=
     r"|/civicax/filebank/documents/\d+"        # CivicPlus legacy filebank
     r"|/files/serve/\d+"                        # some election archives
-    r"|[?&]bidId=",                             # DocumentCenter bid attachments
+    r"|[?&]bidId="                             # DocumentCenter bid attachments
+    # Granicus/Vision GovAccess "friendly" document alias: /<section>/files/<slug> with
+    # no extension, which 302-redirects to /sites/g/files/vyhlif.../f/uploads/<name>.pdf.
+    # Measured 2026-08-04: Hadley's entire election-results archive (2013-2026, incl. the
+    # 2025 town-year we still lack) is published this way. file_ext() saw no suffix, so the
+    # crawler queued each results PDF as a PAGE, fetched the bytes as HTML, found no links,
+    # and never emitted a file node -- it VISITED the document and recorded nothing. The
+    # `/pages/` namespace (real HTML) is deliberately excluded so listing pages still crawl.
+    r"|/[^/]+/(?:files|documents)/[^/?#.]+/?(?:[?#]|$)"
+    r"|/DocView\.aspx\?[^ ]*\bid=\d+",         # Laserfiche portal direct document view
     re.I)
 
 
@@ -66,6 +75,24 @@ def norm_host(host: str) -> str:
 def is_storage_host(host: str) -> bool:
     h = host.lower()
     return any(rx.search(h) for rx in STORAGE_HOST_RES)
+
+
+# Off-site document PORTALS: JS-rendered folder/document viewers that a town links to
+# instead of hosting the files on its own domain. same_site() drops these, so the
+# archive behind them is never reached. Brewster's election results & Town Reports live
+# in a Laserfiche portal (portal.laserfiche.com/Portal/Browse.aspx?id=18618) linked from
+# the clerk page. A Browse.aspx FOLDER is a listing, not a file, so it must be CRAWLED
+# (rendered) rather than recorded as a document -- unlike a storage host, whose links are
+# already direct files. is_doc_portal marks the host; crawl.py lets it through same_site.
+DOC_PORTAL_HOST_RES = [
+    re.compile(r"(^|\.)laserfiche\.com$", re.I),
+    re.compile(r"(^|\.)laserfiche\.cloud$", re.I),
+]
+
+
+def is_doc_portal(host: str) -> bool:
+    h = host.lower()
+    return any(rx.search(h) for rx in DOC_PORTAL_HOST_RES)
 
 
 def file_ext(url: str) -> str | None:

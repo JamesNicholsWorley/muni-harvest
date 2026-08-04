@@ -20,7 +20,7 @@ from urllib.parse import urldefrag, urljoin, urlsplit, urlunsplit
 from ..core import fetch
 from .htmllinks import extract
 from .model import (
-    is_file_url, make_node, norm_host, same_site, serving_host, urlkey,
+    is_doc_portal, is_file_url, make_node, norm_host, same_site, serving_host, urlkey,
 )
 from .storage import resolve_download
 
@@ -302,7 +302,19 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
                 out["links_too_deep"] = out.get("links_too_deep", 0) + 1
                 continue
             if not same_site(host, seed_host):
-                # Count these, and remember one example. Several hosts redirect the apex
+                # A town's records sometimes live in an off-site document portal (a
+                # Laserfiche folder, etc.) linked from the clerk page. That is not
+                # "wandering off-site" -- it is where the documents are -- so follow it,
+                # bounded by the same depth cap. The portal renders via JS, so this only
+                # yields on a browser-tier crawl; on a plain fetch it is a cheap miss.
+                if is_doc_portal(host):
+                    k = urlkey(absu)
+                    if k not in queued:
+                        queued.add(k)
+                        out["links_portal"] = out.get("links_portal", 0) + 1
+                        frontier.append((absu, depth + 1, url, text, page_crumb))
+                    continue
+                # Count the rest, and remember one example. Several hosts redirect the apex
                 # to a different name (www., or a CMS vendor domain); the browser follows
                 # it, but every link on the landing page is then judged off-site against
                 # the SEED host, the frontier empties, and a 1-page crawl reports success.
