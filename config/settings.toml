@@ -48,8 +48,14 @@ flush_every_pages = 25
 # default template rather than four town decisions. Bypassed by explicit owner decision
 # (2026-08-04), and ONLY these named hosts. The trade is deliberate: we crawl them an
 # order of magnitude slower than a normal host and stop far earlier.
+# westhamptonma.gov added 2026-08-04: its robots.txt is the same template -- `User-agent:
+# * / disallow: /` with allow-lists for Googlebot, bingbot and duckduckbot only.
+# NOT listed: cms3.revize.com. That host says `Disallow: /` but explicitly allows
+# /*.pdf$, .DOC, .DOCX, .PPT and .PPTX to everyone, so its documents need no override at
+# all -- only a robots parser that can read a wildcard Allow (see robots.py).
 polite_override_hosts     = ["easton.ma.us", "newbraintreema.us",
-                             "townofbarre.com", "townofpalmer.com"]
+                             "townofbarre.com", "townofpalmer.com",
+                             "westhamptonma.gov"]
 polite_override_delay_s   = 10.0   # vs base_delay_s = 1.0
 polite_override_max_pages = 120    # vs max_pages = 150 / deep-crawl 400
 
