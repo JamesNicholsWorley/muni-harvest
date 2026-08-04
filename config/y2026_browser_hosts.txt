@@ -1,0 +1,42 @@
+# 2026 sweep -- hosts that fetched ZERO pages in run 30872361836 and are worth retrying
+# now that the tier cache reaches the runner and `blocked` hosts get the browser tier.
+#
+# EXCLUDED from this list, deliberately:
+#   easton.ma.us, newbraintreema.us, townofbarre.com, townofpalmer.com
+#       -> publish `User-agent: * / Disallow: /`. Honouring that is correct; retrying
+#          them would only re-log robots_disallow. Owner decision, not a crawler bug.
+#   westhampton-ma.com  -> redirects to westhamptonma.gov (same site, listed twice)
+#   drive.usercontent.google.com -> storage domain, not a town host
+#
+# The four hosts the tier cache marks `blocked` AND an independent HTTP probe found
+# unreachable (SSL handshake failure / timeout) are KEPT: the browser tier accepts
+# insecure certs, which is exactly the failure mode they showed.
+959watd.com
+aquinnah-ma.gov
+arlingtonma.gov
+brimfieldma.org
+burgy.org
+dedham-ma.gov
+edgartown-ma.us
+hadleyma.org
+hamiltonma.gov
+hanover-ma.gov
+hardwick-ma.gov
+huntingtonma.us
+millvillema.org
+mountwashington-ma.gov
+plainfield-ma.us
+rehobothma.gov
+sandisfieldma.gov
+stockbridge-ma.gov
+sturbridge.gov
+town.buckland.ma.us
+town.holland.ma.us
+townhall.westwood.ma.us
+townofbecket.org
+townofberkleyma.com
+townofbernardston.org
+westboylston-ma.gov
+westhamptonma.gov
+wilmingtonma.gov
+windsormass.com
