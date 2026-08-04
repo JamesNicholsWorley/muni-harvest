@@ -195,6 +195,7 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
                        discovered_via="crawl"))
 
         for href, text in page.links:
+            out["links_seen"] = out.get("links_seen", 0) + 1
             if not href or href.lower().startswith(_SKIP_SCHEMES):
                 continue
             absu = urldefrag(urljoin(url, href))[0]
@@ -203,6 +204,7 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
             host = norm_host(urlsplit(absu).netloc)
 
             if is_file_url(absu):
+                out["files_found"] = out.get("files_found", 0) + 1
                 dl, shost = resolve_download(absu)
                 emit(make_node(seed_host=seed_host, municipality=municipality,
                                url=dl, kind="file", anchor=text, depth=depth + 1,
@@ -211,10 +213,20 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
                 continue
 
             # a page: only follow within the town's own domain
-            if depth + 1 > max_depth or not same_site(host, seed_host):
+            if depth + 1 > max_depth:
+                out["links_too_deep"] = out.get("links_too_deep", 0) + 1
+                continue
+            if not same_site(host, seed_host):
+                # Count these, and remember one example. Several hosts redirect the apex
+                # to a different name (www., or a CMS vendor domain); the browser follows
+                # it, but every link on the landing page is then judged off-site against
+                # the SEED host, the frontier empties, and a 1-page crawl reports success.
+                out["links_offsite"] = out.get("links_offsite", 0) + 1
+                out.setdefault("offsite_example", f"{host} != {seed_host}")
                 continue
             k = urlkey(absu)
             if k in queued:
+                out["links_dupe"] = out.get("links_dupe", 0) + 1
                 continue
             queued.add(k)
             frontier.append((absu, depth + 1, url, text, page_crumb))
@@ -225,8 +237,13 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
     flush()
     # Name the outcome. Only "crawled" means the silence is real; everything else is a
     # failure that must not be reported as "swept, nothing found".
-    if pages:
+    if pages > 1 or (pages and out.get("files_found")):
         out["outcome"] = "crawled"
+    elif pages:
+        # Homepage fetched, nothing followable found. Real for a one-page site, but in
+        # the 2026 and prior-year runs it marked hosts whose links all read as off-site.
+        # Either way it is not a swept site, so it must not wear the same label as one.
+        out["outcome"] = "dead_frontier"
     elif out["robots_skipped"]:
         out["outcome"] = "robots_disallow"
     elif out["http_403"]:

@@ -27,7 +27,10 @@ sample_paths = ["/", "/robots.txt"]
 workers           = 12     # one worker per HOST; per-host pacing keeps each polite
 max_depth         = 4      # BFS depth cap for the live crawl
 max_pages         = 150    # page-fetch cap per host (T0 stdlib crawl)
-max_pages_browser = 60     # tighter cap for the slow T2 browser crawl
+# Browser-crawl page cap. Was 60, and in the prior-year run 26 of 29 crawled hosts
+# stopped at EXACTLY 60 -- the cap was binding nearly everywhere, so those hosts were
+# truncated, not exhausted. At ~2s/page, 200 pages still fits per_host_seconds = 1200.
+max_pages_browser = 200
 max_consec_429    = 5      # circuit-breaker: bail a host after N consecutive 429s
 base_delay_s      = 1.0    # per-host AIMD floor (seconds between requests)
 max_seed_pages    = 40     # sitemap page-URLs seeded into the crawl frontier
