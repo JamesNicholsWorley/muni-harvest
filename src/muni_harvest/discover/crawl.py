@@ -77,12 +77,24 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
                seed_urls: list[str] | None = None, max_depth: int = 4,
                max_pages: int = 400, base_delay: float = 1.0,
                pool=None, use_browser: bool = False,
-               max_consec_429: int = 5) -> list[dict]:
+               max_consec_429: int = 5, budget_s: float | None = None,
+               on_nodes=None, flush_every: int = 25) -> list[dict]:
     """BFS from the homepage + seeds. Returns page + file nodes with nav-tree fields.
 
     use_browser=True + pool: fetch pages via a warm driver (for T2 hosts that block
     plain HTTP). Circuit-breaker: after `max_consec_429` consecutive 429s, bail the
-    host (a rate-limiting host can otherwise monopolize the crawl for hours)."""
+    host (a rate-limiting host can otherwise monopolize the crawl for hours).
+
+    budget_s: wall-clock ceiling for THIS host. The 429 breaker only catches hosts that
+    say no; it does nothing about a host that is merely slow, and in the 2026 sweep a
+    handful of those ran out the entire six-hour job cap between them. A per-host budget
+    bounds the damage one site can do to the shard it shares.
+
+    on_nodes / flush_every: callback invoked with newly-emitted nodes every `flush_every`
+    pages. Results used to be written only after the whole host finished, so a shard
+    killed mid-host wrote NOTHING -- 13 shards in the 2026 sweep timed out and several
+    saved nothing at all despite hours of crawling. Flushing incrementally caps the loss
+    at one batch."""
     crawl_delay = getattr(robots, "crawl_delay", None) or 0.0
     pacer = AdaptiveDelay(max(base_delay, float(crawl_delay)))
 
@@ -98,6 +110,8 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
     nodes: list[dict] = []
     pages = 0
     consec_429 = 0
+    deadline = (time.monotonic() + budget_s) if budget_s else None
+    flushed = 0
 
     def emit(node: dict) -> None:
         k = node["urlkey"]
@@ -105,7 +119,17 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
             emitted.add(k)
             nodes.append(node)
 
+    def flush() -> None:
+        nonlocal flushed
+        if on_nodes and len(nodes) > flushed:
+            on_nodes(nodes[flushed:])
+            flushed = len(nodes)
+
     while frontier and pages < max_pages:
+        if deadline and time.monotonic() > deadline:
+            print(f"  [BUDGET] {seed_host}: {budget_s:.0f}s spent, "
+                  f"{pages} pages, {len(frontier)} left unvisited")
+            break
         url, depth, parent, anchor, crumb = frontier.popleft()
         if robots is not None and not robots.allowed(url):
             continue
@@ -160,4 +184,8 @@ def crawl_site(seed_host: str, *, municipality: str = "", robots=None,
             queued.add(k)
             frontier.append((absu, depth + 1, url, text, page_crumb))
 
+        if pages % flush_every == 0:
+            flush()
+
+    flush()
     return nodes

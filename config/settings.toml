@@ -32,6 +32,13 @@ max_consec_429    = 5      # circuit-breaker: bail a host after N consecutive 42
 base_delay_s      = 1.0    # per-host AIMD floor (seconds between requests)
 max_seed_pages    = 40     # sitemap page-URLs seeded into the crawl frontier
 sitemap_max_urls  = 20000  # cap on sitemap enumeration per host
+# Wall-clock ceiling per host. The 429 breaker only stops hosts that refuse; a merely
+# SLOW host was unbounded, and in the 2026 sweep those ran out the whole 6h job cap.
+# 40 shards x ~8 hosts x 20min = well inside the 300min job timeout even worst-case.
+per_host_seconds  = 1200
+# Write crawl results every N pages instead of only when a host finishes. A shard killed
+# mid-host used to lose everything it had crawled; now it loses at most one batch.
+flush_every_pages = 25
 
 [budget]
 total_usd = 40.0

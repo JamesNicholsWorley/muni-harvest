@@ -48,7 +48,7 @@ def wayback_by_host() -> dict[str, list[dict]]:
 
 def discover_host(host: str, municipality: str, cfg: dict,
                   wb_docs: list[dict], tier: str = "T0",
-                  pool=None) -> tuple[list[dict], dict]:
+                  pool=None, on_nodes=None) -> tuple[list[dict], dict]:
     dc = cfg["discover"]
     # T1/T2 hosts block plain HTTP -> crawl their live pages through the browser.
     use_browser = tier in ("T1", "T2") and pool is not None
@@ -73,7 +73,10 @@ def discover_host(host: str, municipality: str, cfg: dict,
                              seed_urls=crawl_seeds, max_depth=dc["max_depth"],
                              max_pages=cap, base_delay=dc["base_delay_s"],
                              pool=pool, use_browser=use_browser,
-                             max_consec_429=dc.get("max_consec_429", 5))
+                             max_consec_429=dc.get("max_consec_429", 5),
+                             budget_s=dc.get("per_host_seconds"),
+                             on_nodes=on_nodes,
+                             flush_every=dc.get("flush_every_pages", 25))
 
     wb_nodes = [make_node(seed_host=host, municipality=municipality, url=r["url"],
                           kind="file", mimetype=r.get("mimetype", ""),
@@ -163,15 +166,29 @@ def run(*, limit: int | None = None, workers: int | None = None,
 
     def work(host: str) -> None:
         h = norm_host(host)
+        # urlkeys already written by the incremental flush, so the final append does not
+        # duplicate them. If the runner is killed mid-host these batches are already on
+        # disk -- that is the whole point of flushing early.
+        streamed: set[str] = set()
+
+        def stream(batch: list[dict]) -> None:
+            with lock:
+                fresh = [n for n in batch if n["urlkey"] not in streamed]
+                if fresh:
+                    append_jsonl(nodes_path, fresh)
+                    streamed.update(n["urlkey"] for n in fresh)
+
         try:
             nodes, stats = discover_host(h, muni_map.get(h, ""), cfg, wb.get(h, []),
-                                         tier=tiers.get(h, "T0"), pool=browser_pool)
+                                         tier=tiers.get(h, "T0"), pool=browser_pool,
+                                         on_nodes=stream)
         except Exception as exc:  # noqa: BLE001
             audit.write(f"ERR\t{h}\t{exc}")
             return
         with lock:
-            if nodes:
-                append_jsonl(nodes_path, nodes)
+            rest = [n for n in nodes if n["urlkey"] not in streamed]
+            if rest:
+                append_jsonl(nodes_path, rest)
             append_jsonl(stats_path, [stats])
             with done_path.open("a", encoding="utf-8") as fh:
                 fh.write(h + "\n")
