@@ -1,0 +1,58 @@
+# 2021-2025 recovery crawl -- hosts whose prior-year discovery was
+# compromised by defects fixed in 4c65dc5 / bb41a68:
+#   * data/ gitignored -> tier cache absent on CI -> every host forced T0
+#   * browser check listed only T1/T2, not blocked/needs_unblocker
+#   * 403 never escalated to the browser (stale tiers stranded hosts)
+#   * a host that fetched ZERO pages was logged as [OK]
+# The discover run against the missing-results worklist was 2026-07-27,
+# one day after the browser tier landed -- so it never applied on CI.
+# Reasons + skips: CivicAtlasMA/logs/prioryear_recovery_audit.csv
+aquinnah-ma.gov
+berkshireeagle.com
+boylston-ma.gov
+brewster-ma.gov
+brimfieldma.org
+capenews.net
+carverma.gov
+chilmarkma.gov
+cms3.revize.com
+grovelandma.com
+hadleyma.org
+hanson-ma.gov
+huntingtonma.us
+iberkshires.com
+lanesborough-ma.gov
+marshfield-ma.gov
+millvillema.org
+montereyma.gov
+mountwashington-ma.gov
+newbraintreema.us
+newtonma.gov
+norfolk.ma.us
+northadams-ma.gov
+nortonma.org
+plainfield-ma.us
+richmondma.org
+sheffieldma.gov
+shutesbury.org
+springfield-ma.gov
+sturbridge.gov
+thesunchronicle.com
+town.holland.ma.us
+town.northborough.ma.us
+town.raynham.ma.us
+townofalford.org
+townofbarre.com
+townofbernardston.org
+townofchesterfieldma.com
+townofotisma.com
+townofpaxton.net
+townofrowley.net
+townsendma.gov
+washington-ma.gov
+wellfleet-ma.gov
+westbridgewaterma.org
+westminster-ma.gov
+westport-ma.com
+whately.org
+wwlp.com
