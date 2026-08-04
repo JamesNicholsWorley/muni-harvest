@@ -18,7 +18,10 @@ dependencies = []
 
 [project.optional-dependencies]
 # Live browser tier (T1/T2) — needed only after the tier-probe proves it is required.
-live = ["requests>=2.31", "selenium>=4.20"]
+# curl_cffi carries the TLS-impersonation tier, which the crawler now PREFERS over the
+# browser for WAF-blocked hosts. Without it those hosts fall back to selenium, which
+# measurably loses to impersonation on WAF-protected municipal sites.
+live = ["requests>=2.31", "selenium>=4.20", "curl_cffi>=0.7"]
 # Extraction / normalize layer — born-digital bulk via fitz, layout/tables via docling.
 extract = ["pymupdf>=1.24", "trafilatura>=1.8", "docling>=2.0"]
 # Object storage (Cloudflare R2 / Backblaze B2 — S3-compatible).

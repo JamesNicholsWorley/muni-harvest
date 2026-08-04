@@ -5,6 +5,15 @@
 #   raynham-ma.gov, russell-ma.gov, shelburne-ma.gov, southampton-ma.gov,
 #   southbridgema.gov, town.great-barrington.ma.us, townofrichmond-ma.gov
 bad_host,good_host
+# Verified 2026-08-04 with curl_cffi (impersonate=chrome) from a residential IP:
+#   townofberkleyma.com  404s with a 970-byte Acquia placeholder; the town moved to
+#     .gov, which serves a clerk/elections/ page directly (200, 217 links).
+#   townofpaxton.net     apex resolves but every fetch shape fails DNS; paxtonma.gov
+#     is live (200, 89 links).
+# westboylston-ma.gov is NOT listed here: the apex fails TLS but www. works, which is a
+# crawler fallback (try www. on TLS failure), not a wrong domain.
+townofberkleyma.com,townofberkleyma.gov
+townofpaxton.net,paxtonma.gov
 granvillema.gov,granville-ma.gov
 rutland-ma.gov,rutlandma.gov
 savoy-ma.gov,savoy.org

@@ -26,3 +26,7 @@ Thumbs.db
 *.docx
 *.xlsx
 *.pptx
+
+# CI download staging — working files, not source. 66 of these were committed by
+# mistake in a `git add -A`; scratch/ by contrast holds 71 tracked analysis scripts.
+/ci_out/

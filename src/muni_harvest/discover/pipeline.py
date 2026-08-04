@@ -18,7 +18,7 @@ from ..archive.wayback import host_of
 from ..config import data_dir, load_settings, resolve_path
 from ..core import AuditLog, append_jsonl, iter_jsonl
 from .cms import fingerprint
-from .crawl import crawl_site
+from .crawl import _HAVE_CURL_CFFI, crawl_site
 from .model import is_file_url, make_node, norm_host
 from .robots import RobotsPolicy
 from .sitemaps import sitemap_urls
@@ -61,7 +61,12 @@ def discover_host(host: str, municipality: str, cfg: dict,
     # `blocked` belongs here too: the tier cache defines it as "T0 refused (WAF/challenge)
     # -> needs the browser tier", but this check only listed T1/T2, so every blocked host
     # got the stdlib crawl that was already known to fail for it.
-    use_browser = tier in BROWSER_TIERS and pool is not None
+    # Try TLS impersonation BEFORE the browser: cheaper, and measurably stronger. On
+    # 2026-08-04 every host CI had recorded as waf_403 or as a dead 1-page crawl returned
+    # 200 with hundreds of same-site links under `impersonate="chrome"`. The browser stays
+    # as the fallback for when impersonation cannot open the homepage.
+    use_impersonate = tier in BROWSER_TIERS and _HAVE_CURL_CFFI
+    use_browser = tier in BROWSER_TIERS and pool is not None and not use_impersonate
 
     # Named hosts whose CMS ships a blanket Disallow over public election records. Crawled
     # far slower and shallower than a normal host -- see RobotsPolicy.override.
@@ -87,7 +92,8 @@ def discover_host(host: str, municipality: str, cfg: dict,
 
     crawl_seeds = cms_seeds + sm_page_seeds[:dc["max_seed_pages"]]
     # T2 browser crawl is slow; cap its pages tighter than the T0 stdlib crawl.
-    cap = dc.get("max_pages_browser", 60) if use_browser else dc["max_pages"]
+    cap = (dc.get("max_pages_browser", 60) if (use_browser or use_impersonate)
+           else dc["max_pages"])
     delay = dc["base_delay_s"]
     if is_polite:
         cap = min(cap, dc.get("polite_override_max_pages", 120))
@@ -97,6 +103,7 @@ def discover_host(host: str, municipality: str, cfg: dict,
                              seed_urls=crawl_seeds, max_depth=dc["max_depth"],
                              max_pages=cap, base_delay=delay,
                              pool=pool, use_browser=use_browser,
+                             use_impersonate=use_impersonate,
                              max_consec_429=dc.get("max_consec_429", 5),
                              budget_s=dc.get("per_host_seconds"),
                              on_nodes=on_nodes,
@@ -134,6 +141,7 @@ def discover_host(host: str, municipality: str, cfg: dict,
                          if k != "outcome" and v},
         "tier": tier,
         "used_browser": use_browser,
+        "used_impersonate": use_impersonate,
     }
     return nodes, stats
 

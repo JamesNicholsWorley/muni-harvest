@@ -51,9 +51,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      # The `live` extra (selenium) powers the browser tier. ubuntu-latest ships Chrome
-      # and Selenium Manager provisions the driver, so no extra install is needed.
+      # The `live` extra carries selenium (browser tier) and curl_cffi (TLS impersonation,
+      # which the crawler PREFERS for WAF-blocked hosts). ubuntu-latest ships Chrome and
+      # Selenium Manager provisions the driver, so no extra install is needed.
       - run: pip install -e ".[live]"
+      - name: Assert the WAF tiers are present
+        # Both tiers degrade SILENTLY when their library is missing -- curl_cffi absent
+        # just means _HAVE_CURL_CFFI is False and every WAF host quietly falls back. Fail
+        # the job instead: a crawl that cannot pass a WAF must not report empty results.
+        run: |
+          python -c "import curl_cffi, selenium; print('curl_cffi', curl_cffi.__version__)"
       - name: Deliver the tier cache
         # data/ is gitignored, so the runner never had tier_cache.jsonl and EVERY host
         # silently fell back to T0 -- stdlib-crawling 21 hosts already known to refuse

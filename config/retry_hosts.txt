@@ -1,36 +1,20 @@
-# Hosts from docsweep shards 10/20 and 18/20 that were cancelled at the 6h runner
-# timeout (storage/CDN hosts + big sitemaps). Re-run with the hardened docsweep
-# (storage-host skip + per-host time budget + max_pages 3000).
-ashburnham-ma.gov
-braintreema.gov
-ci.lancaster.ma.us
-eastbridgewaterma.gov
-gardner-ma.gov
-hinsdalemass.com
-longmeadowma.gov
-mashpeema.gov
-nahant.org
-nortonma.org
-richmondma.org
-sherbornma.org
-sturbridge.gov
-town.dartmouth.ma.us
+# Follow-up crawl: hosts the 2026 and 2021-2025 runs did NOT actually sweep.
+# Built by CivicAtlasMA/logs/_build_retry_list.py from the runs' own audit logs.
+#   dead_frontier -- homepage fetched, zero links followed (link accounting in
+#                    7a07e8d will now report links_seen/links_offsite and say why)
+#   waf_403       -- failed before the 403->browser escalation in bb41a68
+#   unreachable   -- retry via browser, which accepts the bad certs
+# Excluded on purpose: robots_disallow hosts. Bypassing a Disallow is an owner
+# decision per host, never a default -- see settings.toml polite_override_hosts.
+brewster-ma.gov
+brimfieldma.org
+hadleyma.org
+hamiltonma.gov
+huntingtonma.us
+sandisfieldma.gov
 townofbecket.org
-townofholliston.us
-townofsharon.net
-warwickma.org
-whately.org
-bedfordnh.org
-burlington.org
-cityofmelrose.org
-dalton-ma.gov
-greenfield-ma.gov
-ma-lee.civicplus.com
-middletonma.gov
-plainfield-ma.us
-southbridgema.gov
-town.medfield.net
-townofbolton.com
-townofnewbury.org
-truro-ma.gov
-wenhamma.gov
+townofberkleyma.com
+townofpaxton.net
+townofrowley.net
+westboylston-ma.gov
+wilmingtonma.gov
