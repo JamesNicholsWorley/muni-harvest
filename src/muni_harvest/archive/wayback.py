@@ -171,14 +171,24 @@ def load_hosts_file(path: Path, limit: int | None = None) -> list[str]:
     overrides, excludes = host_overrides(), excluded_hosts()
     hosts: list[str] = []
     seen = set()
+    dropped: list[str] = []
     for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
         h = _apply_policy(host_of(line), overrides, excludes)
-        if h and h not in seen:
+        if h is None:
+            dropped.append(line)
+        elif h not in seen:
             seen.add(h)
             hosts.append(h)
+    # Say what was dropped. A host list that silently shrinks is the same failure as a
+    # host that crawls zero pages and logs [OK]: the shortfall is invisible, so a town
+    # never attempted reads exactly like a town swept and found nothing.
+    if dropped:
+        print(f"[hosts] {path.name}: dropped {len(dropped)} of "
+              f"{len(dropped) + len(hosts)} by exclude/override/shape policy: "
+              + ", ".join(dropped))
     return hosts[:limit] if limit else hosts
 
 
