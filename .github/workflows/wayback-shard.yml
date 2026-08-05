@@ -14,6 +14,9 @@ on:
       workers:
         description: "Concurrency per runner (keep low to stay polite)"
         default: "2"
+      hosts_file:
+        description: "Host list to harvest"
+        default: "config/muni_hosts.txt"
 
 jobs:
   setup:
@@ -43,7 +46,7 @@ jobs:
         run: pip install -e .
       - name: Wayback shard ${{ matrix.shard }}
         run: |
-          muni-harvest wayback --hosts-file config/muni_hosts.txt \
+          muni-harvest wayback --hosts-file "${{ github.event.inputs.hosts_file }}" \
             --shard "${{ matrix.shard }}" --workers ${{ github.event.inputs.workers }}
       - name: Upload shard docs
         if: always()
