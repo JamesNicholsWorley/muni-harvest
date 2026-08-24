@@ -1,0 +1,115 @@
+name: atr-text-shard
+
+# Fetch pre-2021 Annual Town Report PDFs from clean runner IPs and return their
+# TEXT, not their bytes. Feeds the CivicAtlasMA pre-2021 election-results
+# identifier: the question is whether a town's annual report contains the local
+# election return and where, which is answerable from text alone.
+#
+# Built from url-batch-shard.yml (the fetcher) crossed with verify-shard.yml
+# (in-CI pymupdf extraction), with four deliberate differences:
+#
+#   * timeout-minutes: 330, not 60. The platform's 6-hour hard cap KILLS the
+#     runner before `if: always()` can upload -- 16 of 20 shards in the 2026
+#     discover sweep ran the full six hours and produced NO artifact at all. A
+#     graceful cancellation at 330 still uploads whatever finished.
+#   * shards default 40, not 8. The throttle is per-IP cumulative volume, and
+#     this worklist is several thousand PDFs.
+#   * text out, bytes discarded. ci_out/ sits at 530MB because url-batch keeps
+#     the files; we do not need them.
+#   * retention-days set explicitly. Nothing else in this repo sets it.
+#
+# The worklist lives in config/ because data/ is gitignored and never reaches
+# the runner -- the bug that once silently downgraded every host in a sweep.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of parallel runner IPs"
+        default: "40"
+      url_csv:
+        description: "Input CSV (municipality,year,url,kind,pool)"
+        default: "config/atr_pre2021_urls.csv"
+      per_minute:
+        description: "Requests per minute per runner"
+        default: "30"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  fetch:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install (pdf reader + WAF tier)
+        run: pip install -e ".[pdf]" "curl_cffi>=0.7"
+      - name: Assert the deps are present
+        # A missing dependency must fail loudly. curl_cffi going absent once
+        # meant every WAF host quietly fell back and logged "0 pages, OK".
+        run: python -c "import fitz, curl_cffi; print('pymupdf', fitz.__doc__)"
+      - name: Fetch shard ${{ matrix.shard }}
+        run: |
+          python scripts/fetch_atr_text.py \
+            --url-csv "${{ github.event.inputs.url_csv }}" \
+            --per-minute "${{ github.event.inputs.per_minute }}" \
+            --shard "${{ matrix.shard }}" --out out
+      - name: Upload shard text
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atr-text-shard-${{ strategy.job-index }}
+          path: out/
+          retention-days: 30
+          if-no-files-found: ignore
+
+  merge:
+    needs: fetch
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Collate text + manifests
+        run: |
+          mkdir -p merged
+          find shards -name 'atr_text_*.jsonl' -exec cat {} + > merged/atr_text.jsonl || true
+          echo "municipality,year,url,kind,pool,status,http_bytes,pages,chars,detail" > merged/manifest.csv
+          find shards -name 'manifest_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/manifest.csv || true
+          python3 - <<'PY'
+          import csv, collections
+          rows = list(csv.DictReader(open("merged/manifest.csv", encoding="utf-8")))
+          dist = collections.Counter(r["status"] for r in rows)
+          ok = dist.get("OK", 0)
+          print("attempted:", len(rows))
+          print("statuses:", dict(dist))
+          print("usable text: %d/%d = %.1f%%" % (ok, len(rows), 100 * ok / max(len(rows), 1)))
+          print("towns with usable text:", len({r["municipality"] for r in rows if r["status"] == "OK"}))
+          print("town-years with usable text:",
+                len({(r["municipality"], r["year"]) for r in rows if r["status"] == "OK"}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atr-text-merged
+          path: merged/
+          retention-days: 30
