@@ -32,6 +32,9 @@ on:
       per_minute:
         description: "Requests per minute per runner"
         default: "30"
+      wayback:
+        description: "Retry a dead/non-PDF URL via the Wayback Machine (true/false)"
+        default: "false"
 
 jobs:
   setup:
@@ -94,7 +97,7 @@ jobs:
         run: |
           mkdir -p merged
           find shards -name 'atr_text_*.jsonl' -exec cat {} + > merged/atr_text.jsonl || true
-          echo "municipality,year,url,kind,pool,status,http_bytes,pages,chars,detail" > merged/manifest.csv
+          echo "municipality,year,url,kind,pool,status,via,http_bytes,pages,chars,detail" > merged/manifest.csv
           find shards -name 'manifest_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/manifest.csv || true
           python3 - <<'PY'
           import csv, collections
@@ -104,6 +107,7 @@ jobs:
           print("attempted:", len(rows))
           print("statuses:", dict(dist))
           print("usable text: %d/%d = %.1f%%" % (ok, len(rows), 100 * ok / max(len(rows), 1)))
+          print("via:", dict(collections.Counter(r.get("via", "") for r in rows if r["status"] == "OK")))
           print("towns with usable text:", len({r["municipality"] for r in rows if r["status"] == "OK"}))
           print("town-years with usable text:",
                 len({(r["municipality"], r["year"]) for r in rows if r["status"] == "OK"}))

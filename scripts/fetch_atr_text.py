@@ -52,6 +52,10 @@ MAX_CHARS = 1_200_000     # a very long town report; guards the artifact size
 MIN_SUBSTANCE = 2000      # below this the PDF has no usable text layer
 
 
+def _is_pdf(data):
+    return bool(data) and data[:4] == b"%PDF"
+
+
 def _load_fetch():
     """Prefer the package's polite fetcher; fall back to stdlib if unavailable."""
     try:
@@ -118,6 +122,41 @@ def pdf_text(data):
         doc.close()
 
 
+CDX = ("https://web.archive.org/cdx/search/cdx?url=%s&output=json"
+       "&filter=statuscode:200&limit=6&collapse=timestamp:6")
+
+
+def wayback_url(url, year, fetch, timeout=60):
+    """Nearest archived snapshot of a dead URL, preferring the target year.
+
+    WHY THIS IS NOT A CONSOLATION PRIZE. 4,198 of the first pass's 6,900 URLs
+    returned 404 -- but 1,532 of them were DISCOVERED in the Wayback Machine in
+    the first place, by this repo's own wayback sweep. A town reorganising its
+    website breaks the live URL and changes nothing about whether the document
+    exists. Asking the archive that supplied the URL for the bytes it already
+    holds is the obvious second question, and it is free.
+
+    `id_` on the timestamp asks for the ORIGINAL bytes rather than the rewritten
+    page -- without it the archive injects its toolbar and the PDF check fails.
+    """
+    try:
+        raw = fetch(CDX % urllib.parse.quote(url, safe=""), timeout=timeout)
+        rows = json.loads(raw.decode("utf-8", "replace") or "[]")
+    except Exception:
+        return ""
+    if len(rows) < 2:
+        return ""
+    stamps = [r[1] for r in rows[1:] if len(r) > 1]
+    if not stamps:
+        return ""
+    try:
+        want = int(str(year)[:4])
+        stamps.sort(key=lambda s: abs(int(s[:4]) - want))
+    except (TypeError, ValueError):
+        pass
+    return "https://web.archive.org/web/%sid_/%s" % (stamps[0], url)
+
+
 def shard_by_host(rows, i, n):
     """Split by HOST, so exactly one runner ever talks to a given town's server.
 
@@ -148,6 +187,8 @@ def main():
     ap.add_argument("--shard", default="1/1", help="i/N, 1-indexed")
     ap.add_argument("--timeout", type=int, default=60)
     ap.add_argument("--per-minute", type=int, default=30)
+    ap.add_argument("--wayback", action="store_true",
+                    help="on a failed/no-PDF fetch, retry via the Wayback Machine")
     args = ap.parse_args()
 
     i, n = (int(x) for x in args.shard.split("/"))
@@ -167,24 +208,42 @@ def main():
     with open(tp, "w", encoding="utf-8") as tf, \
             open(mp, "w", newline="", encoding="utf-8") as mf:
         w = csv.DictWriter(mf, ["municipality", "year", "url", "kind", "pool",
-                                "status", "http_bytes", "pages", "chars", "detail"])
+                                "status", "via", "http_bytes", "pages", "chars",
+                                "detail"])
         w.writeheader()
         for k, r in enumerate(mine, 1):
             url = (r.get("url") or "").strip()
             rec = {"municipality": r.get("municipality", ""), "year": r.get("year", ""),
                    "url": url, "kind": r.get("kind", ""), "pool": r.get("pool", ""),
-                   "status": "", "http_bytes": 0, "pages": 0, "chars": 0, "detail": ""}
+                   "status": "", "via": "", "http_bytes": 0, "pages": 0,
+                   "chars": 0, "detail": ""}
             if not url:
                 rec["status"] = "NO_URL"
                 w.writerow(rec)
                 continue
             limiter.wait()
+            attempt_url, via = url, "live"
             try:
                 data = fetch(url, timeout=args.timeout)
+            except Exception as e:
+                data, rec["detail"] = None, repr(e)[:180]
+            if args.wayback and not _is_pdf(data):
+                wb = wayback_url(url, r.get("year", ""), fetch, args.timeout)
+                if wb:
+                    limiter.wait()
+                    try:
+                        d2 = fetch(wb, timeout=args.timeout)
+                        if _is_pdf(d2):
+                            data, attempt_url, via = d2, wb, "wayback"
+                    except Exception as e:
+                        rec["detail"] = ("wayback: " + repr(e))[:180]
+            rec["via"] = via
+            rec["url"] = attempt_url if via == "wayback" else url
+            try:
                 rec["http_bytes"] = len(data or b"")
                 if not data:
-                    rec["status"] = "EMPTY"
-                elif data[:4] != b"%PDF":
+                    rec["status"] = "ERROR" if rec["detail"] else "EMPTY"
+                elif not _is_pdf(data):
                     # A WAF interstitial or a 200-with-HTML redirect page. Not a
                     # PDF, so not silently treated as one.
                     rec["status"] = "NOT_PDF"
@@ -200,7 +259,8 @@ def main():
                         rec["status"] = "OK"
                     tf.write(json.dumps({
                         "municipality": rec["municipality"], "year": rec["year"],
-                        "url": url, "pool": rec["pool"], "pages": pages,
+                        "url": rec["url"], "via": via, "pool": rec["pool"],
+                        "pages": pages,
                         "status": rec["status"], "text": txt}) + "\n")
             except Exception as e:
                 rec["status"] = "ERROR"
