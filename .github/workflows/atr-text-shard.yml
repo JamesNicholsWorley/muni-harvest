@@ -38,6 +38,9 @@ on:
       ocr:
         description: "OCR short PDFs with no text layer (true/false)"
         default: "false"
+      wayback_first:
+        description: "Archive before live host -- for retry lists (true/false)"
+        default: "false"
 
 jobs:
   setup:
@@ -86,11 +89,13 @@ jobs:
           if [ "${{ github.event.inputs.wayback }}" = "true" ]; then WB="--wayback"; fi
           OC=""
           if [ "${{ github.event.inputs.ocr }}" = "true" ]; then OC="--ocr"; fi
-          echo "flags: wayback='$WB' ocr='$OC'"
+          WF=""
+          if [ "${{ github.event.inputs.wayback_first }}" = "true" ]; then WF="--wayback-first"; fi
+          echo "flags: wayback='$WB' ocr='$OC' wayback_first='$WF'"
           python scripts/fetch_atr_text.py \
             --url-csv "${{ github.event.inputs.url_csv }}" \
             --per-minute "${{ github.event.inputs.per_minute }}" \
-            $WB $OC --shard "${{ matrix.shard }}" --out out
+            $WB $OC $WF --shard "${{ matrix.shard }}" --out out
       - name: Upload shard text
         if: always()
         uses: actions/upload-artifact@v4

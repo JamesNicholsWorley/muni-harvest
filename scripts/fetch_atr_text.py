@@ -227,6 +227,8 @@ def main():
     ap.add_argument("--per-minute", type=int, default=30)
     ap.add_argument("--ocr", action="store_true",
                     help="OCR a short PDF that has no text layer (needs tesseract)")
+    ap.add_argument("--wayback-first", action="store_true",
+                    help="go to the archive before the live host (retry lists)")
     ap.add_argument("--wayback", action="store_true",
                     help="on a failed/no-PDF fetch, retry via the Wayback Machine")
     args = ap.parse_args()
@@ -262,11 +264,19 @@ def main():
                 w.writerow(rec)
                 continue
             limiter.wait()
-            attempt_url, via = url, "live"
-            try:
-                data = fetch(url, timeout=args.timeout)
-            except Exception as e:
-                data, rec["detail"] = None, repr(e)[:180]
+            attempt_url, via, data = url, "live", None
+            # RE-ASKING A URL THAT IS ALREADY KNOWN DEAD IS THE EXPENSIVE
+            # MISTAKE. On a retry list every row failed once already, and the
+            # polite fetcher spends four tries with exponential backoff and a
+            # 60s timeout apiece before giving up -- minutes per URL, on a
+            # question that was answered in the previous pass. --wayback-first
+            # goes straight to the archive and only falls back to the live host
+            # if the archive has nothing.
+            if not args.wayback_first:
+                try:
+                    data = fetch(url, timeout=args.timeout)
+                except Exception as e:
+                    data, rec["detail"] = None, repr(e)[:180]
             if args.wayback and not _is_pdf(data):
                 wb = wayback_url(url, r.get("year", ""), fetch, args.timeout)
                 if wb:
@@ -277,6 +287,14 @@ def main():
                             data, attempt_url, via = d2, wb, "wayback"
                     except Exception as e:
                         rec["detail"] = ("wayback: " + repr(e))[:180]
+            if args.wayback_first and not _is_pdf(data):
+                # The archive had nothing; the live host is now worth the one
+                # attempt it was skipped for.
+                try:
+                    data = fetch(url, timeout=args.timeout)
+                    via = "live"
+                except Exception as e:
+                    data, rec["detail"] = None, repr(e)[:180]
             rec["via"] = via
             rec["url"] = attempt_url if via == "wayback" else url
             try:
