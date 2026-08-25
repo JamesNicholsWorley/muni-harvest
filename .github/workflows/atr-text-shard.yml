@@ -35,6 +35,9 @@ on:
       wayback:
         description: "Retry a dead/non-PDF URL via the Wayback Machine (true/false)"
         default: "false"
+      ocr:
+        description: "OCR short PDFs with no text layer (true/false)"
+        default: "false"
 
 jobs:
   setup:
@@ -61,8 +64,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install tesseract
+        if: github.event.inputs.ocr == 'true'
+        # 40% of the town-website pool is scanned with no text layer, and many
+        # of those are the two-page standalone election-results PDFs we are
+        # actually after. Forty runners OCR them in parallel in minutes.
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
       - name: Install (pdf reader + WAF tier)
-        run: pip install -e ".[pdf]" "curl_cffi>=0.7"
+        run: |
+          pip install -e ".[pdf]" "curl_cffi>=0.7"
+          if [ "${{ github.event.inputs.ocr }}" = "true" ]; then
+            pip install pytesseract pillow
+          fi
       - name: Assert the deps are present
         # A missing dependency must fail loudly. curl_cffi going absent once
         # meant every WAF host quietly fell back and logged "0 pages, OK".
@@ -71,11 +84,13 @@ jobs:
         run: |
           WB=""
           if [ "${{ github.event.inputs.wayback }}" = "true" ]; then WB="--wayback"; fi
-          echo "wayback input='${{ github.event.inputs.wayback }}' -> flag='$WB'"
+          OC=""
+          if [ "${{ github.event.inputs.ocr }}" = "true" ]; then OC="--ocr"; fi
+          echo "flags: wayback='$WB' ocr='$OC'"
           python scripts/fetch_atr_text.py \
             --url-csv "${{ github.event.inputs.url_csv }}" \
             --per-minute "${{ github.event.inputs.per_minute }}" \
-            $WB --shard "${{ matrix.shard }}" --out out
+            $WB $OC --shard "${{ matrix.shard }}" --out out
       - name: Upload shard text
         if: always()
         uses: actions/upload-artifact@v4
@@ -100,7 +115,7 @@ jobs:
         run: |
           mkdir -p merged
           find shards -name 'atr_text_*.jsonl' -exec cat {} + > merged/atr_text.jsonl || true
-          echo "municipality,year,url,kind,pool,status,via,http_bytes,pages,chars,detail" > merged/manifest.csv
+          echo "municipality,year,url,kind,pool,status,via,extract,http_bytes,pages,chars,detail" > merged/manifest.csv
           find shards -name 'manifest_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/manifest.csv || true
           python3 - <<'PY'
           import csv, collections
@@ -111,6 +126,7 @@ jobs:
           print("statuses:", dict(dist))
           print("usable text: %d/%d = %.1f%%" % (ok, len(rows), 100 * ok / max(len(rows), 1)))
           print("via:", dict(collections.Counter(r.get("via", "") for r in rows if r["status"] == "OK")))
+          print("extract:", dict(collections.Counter(r.get("extract", "") for r in rows if r["status"] == "OK")))
           print("towns with usable text:", len({r["municipality"] for r in rows if r["status"] == "OK"}))
           print("town-years with usable text:",
                 len({(r["municipality"], r["year"]) for r in rows if r["status"] == "OK"}))

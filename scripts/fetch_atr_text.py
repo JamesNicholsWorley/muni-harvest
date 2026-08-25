@@ -104,7 +104,36 @@ def page_lines(page):
                      for _, v in sorted(buck.items()))
 
 
-def pdf_text(data):
+OCR_MAX_PAGES = 60        # beyond this, OCR belongs in the local staged pass
+OCR_DPI = 250
+
+
+def ocr_text(doc):
+    """Rasterise and read with tesseract, in CI, where it is nearly free.
+
+    40% of the town-website pool is scanned with no text layer at all -- and a
+    great many of those are the two-page standalone "2014 Annual Town Election
+    Results" PDFs that are exactly what we are looking for. Shipping them home
+    to OCR one at a time would take days; forty runners do it in parallel in
+    minutes. Long volumes are left alone, because a 200-page scan is a
+    different job with a different cost.
+
+    psm 6 treats the page as one uniform block, which keeps a table's rows
+    intact; the default psm 3 re-orders columns and separates a candidate from
+    their votes.
+    """
+    import fitz  # noqa: F401
+    import pytesseract
+    from PIL import Image
+    out = []
+    for i in range(min(doc.page_count, OCR_MAX_PAGES)):
+        pix = doc[i].get_pixmap(dpi=OCR_DPI)
+        img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+        out.append(pytesseract.image_to_string(img, config="--psm 6"))
+    return "\x0c".join(out)
+
+
+def pdf_text(data, allow_ocr=False):
     import fitz
     doc = fitz.open(stream=data, filetype="pdf")
     try:
@@ -117,7 +146,16 @@ def pdf_text(data):
                 out.append("\n[TRUNCATED at %d chars, %d/%d pages]"
                            % (n, i + 1, doc.page_count))
                 break
-        return "\x0c".join(out), doc.page_count
+        txt = "\x0c".join(out)
+        if allow_ocr and len(txt.strip()) < MIN_SUBSTANCE \
+                and doc.page_count <= OCR_MAX_PAGES:
+            try:
+                o = ocr_text(doc)
+                if len(o.strip()) > len(txt.strip()):
+                    return o, doc.page_count, "ocr"
+            except Exception:
+                pass
+        return txt, doc.page_count, "text"
     finally:
         doc.close()
 
@@ -187,6 +225,8 @@ def main():
     ap.add_argument("--shard", default="1/1", help="i/N, 1-indexed")
     ap.add_argument("--timeout", type=int, default=60)
     ap.add_argument("--per-minute", type=int, default=30)
+    ap.add_argument("--ocr", action="store_true",
+                    help="OCR a short PDF that has no text layer (needs tesseract)")
     ap.add_argument("--wayback", action="store_true",
                     help="on a failed/no-PDF fetch, retry via the Wayback Machine")
     args = ap.parse_args()
@@ -208,15 +248,15 @@ def main():
     with open(tp, "w", encoding="utf-8") as tf, \
             open(mp, "w", newline="", encoding="utf-8") as mf:
         w = csv.DictWriter(mf, ["municipality", "year", "url", "kind", "pool",
-                                "status", "via", "http_bytes", "pages", "chars",
-                                "detail"])
+                                "status", "via", "extract", "http_bytes",
+                                "pages", "chars", "detail"])
         w.writeheader()
         for k, r in enumerate(mine, 1):
             url = (r.get("url") or "").strip()
             rec = {"municipality": r.get("municipality", ""), "year": r.get("year", ""),
                    "url": url, "kind": r.get("kind", ""), "pool": r.get("pool", ""),
-                   "status": "", "via": "", "http_bytes": 0, "pages": 0,
-                   "chars": 0, "detail": ""}
+                   "status": "", "via": "", "extract": "", "http_bytes": 0,
+                   "pages": 0, "chars": 0, "detail": ""}
             if not url:
                 rec["status"] = "NO_URL"
                 w.writerow(rec)
@@ -249,7 +289,8 @@ def main():
                     rec["status"] = "NOT_PDF"
                     rec["detail"] = data[:60].decode("utf-8", "replace").replace("\n", " ")
                 else:
-                    txt, pages = pdf_text(data)
+                    txt, pages, how = pdf_text(data, allow_ocr=args.ocr)
+                    rec["extract"] = how
                     rec["pages"] = pages
                     rec["chars"] = len(txt)
                     if len(txt.strip()) < MIN_SUBSTANCE:
@@ -260,7 +301,7 @@ def main():
                     tf.write(json.dumps({
                         "municipality": rec["municipality"], "year": rec["year"],
                         "url": rec["url"], "via": via, "pool": rec["pool"],
-                        "pages": pages,
+                        "extract": rec.get("extract", ""), "pages": pages,
                         "status": rec["status"], "text": txt}) + "\n")
             except Exception as e:
                 rec["status"] = "ERROR"
