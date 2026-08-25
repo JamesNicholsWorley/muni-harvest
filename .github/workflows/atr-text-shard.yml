@@ -41,6 +41,9 @@ on:
       wayback_first:
         description: "Archive before live host -- for retry lists (true/false)"
         default: "false"
+      ocr_max_pages:
+        description: "Longest scan to OCR in CI"
+        default: "60"
 
 jobs:
   setup:
@@ -95,7 +98,7 @@ jobs:
           python scripts/fetch_atr_text.py \
             --url-csv "${{ github.event.inputs.url_csv }}" \
             --per-minute "${{ github.event.inputs.per_minute }}" \
-            $WB $OC $WF --shard "${{ matrix.shard }}" --out out
+            $WB $OC $WF --ocr-max-pages "${{ github.event.inputs.ocr_max_pages }}"             --shard "${{ matrix.shard }}" --out out
       - name: Upload shard text
         if: always()
         uses: actions/upload-artifact@v4

@@ -113,7 +113,10 @@ def page_lines(page):
                      for _, v in sorted(buck.items()))
 
 
-OCR_MAX_PAGES = 60        # beyond this, OCR belongs in the local staged pass
+# Beyond this, OCR is a different job. Raised per-run for the DSpace stragglers,
+# whose volumes are 100-200 pages and whose alternative was a ten-hour serial
+# pass at home; forty runners read them whole in the time one runner samples one.
+OCR_MAX_PAGES = 60
 OCR_DPI = 250
 
 
@@ -234,6 +237,7 @@ def main():
     ap.add_argument("--shard", default="1/1", help="i/N, 1-indexed")
     ap.add_argument("--timeout", type=int, default=60)
     ap.add_argument("--per-minute", type=int, default=30)
+    ap.add_argument("--ocr-max-pages", type=int, default=OCR_MAX_PAGES)
     ap.add_argument("--ocr", action="store_true",
                     help="OCR a short PDF that has no text layer (needs tesseract)")
     ap.add_argument("--wayback-first", action="store_true",
@@ -242,6 +246,8 @@ def main():
                     help="on a failed/no-PDF fetch, retry via the Wayback Machine")
     args = ap.parse_args()
 
+    global OCR_MAX_PAGES
+    OCR_MAX_PAGES = args.ocr_max_pages
     i, n = (int(x) for x in args.shard.split("/"))
     with open(args.url_csv, encoding="utf-8") as fh:
         rows = list(csv.DictReader(fh))
