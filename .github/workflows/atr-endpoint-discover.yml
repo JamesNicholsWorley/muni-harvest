@@ -1,0 +1,105 @@
+name: atr-endpoint-discover
+
+# Walk each town's annual-report LANDING PAGES and read the documents they link
+# to. The complement to atr-text-shard: that one fetches URLs we already know,
+# this one finds URLs we do not.
+#
+# The corpus knows about 1.14M DocumentCenter and 79K ArchiveCenter items and
+# almost none carry a title -- they were found by ID sweep, so
+# /ArchiveCenter/ViewFile/Item/231 says nothing about what it is or what year it
+# covers. The page that links to it says both, in its anchor text.
+#
+# Sharded by HOST so one runner ever talks to one town's server, same as the
+# fetch workflow. timeout-minutes 330 because the platform's 6-hour hard cap
+# destroys the runner before `if: always()` can upload.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of parallel runner IPs"
+        default: "20"
+      towns_csv:
+        description: "Gap towns CSV (municipality,missing_years,website)"
+        default: "config/atr_gap_towns.csv"
+      per_minute:
+        description: "Requests per minute per runner"
+        default: "20"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  scrape:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e . "curl_cffi>=0.7"
+      - name: Scrape shard ${{ matrix.shard }}
+        run: |
+          python scripts/discover_atr_endpoints.py \
+            --towns "${{ github.event.inputs.towns_csv }}" \
+            --per-minute "${{ github.event.inputs.per_minute }}" \
+            --shard "${{ matrix.shard }}" --out out
+      - name: Upload shard findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atr-endpoint-shard-${{ strategy.job-index }}
+          path: out/
+          retention-days: 30
+          if-no-files-found: ignore
+
+  merge:
+    needs: scrape
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Collate
+        run: |
+          mkdir -p merged
+          echo "municipality,year,url,anchor,found_by,kind" > merged/endpoints.csv
+          find shards -name 'endpoints_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/endpoints.csv || true
+          echo "municipality,base,sitemap,amid,index,slugs,total" > merged/discover_log.csv
+          find shards -name 'discover_log_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/discover_log.csv || true
+          python3 - <<'PY'
+          import csv, collections
+          rows = [r for r in csv.DictReader(open("merged/endpoints.csv", encoding="utf-8"))
+                  if r["kind"] == "document"]
+          print("documents found:", len(rows))
+          print("towns:", len({r["municipality"] for r in rows}))
+          inw = [r for r in rows if r["year"].isdigit() and 2000 <= int(r["year"]) <= 2020]
+          print("in 2000-2020:", len(inw),
+                "town-years:", len({(r["municipality"], r["year"]) for r in inw}))
+          print("found_by:", dict(collections.Counter(r["found_by"].split(":")[0] for r in rows)))
+          log = list(csv.DictReader(open("merged/discover_log.csv", encoding="utf-8")))
+          print("towns attempted:", len(log),
+                "unreachable:", sum(1 for r in log if r["total"] == "SITE_UNREACHABLE"))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atr-endpoint-merged
+          path: merged/
+          retention-days: 30
