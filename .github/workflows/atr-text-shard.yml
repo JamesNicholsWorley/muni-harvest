@@ -69,10 +69,13 @@ jobs:
         run: python -c "import fitz, curl_cffi; print('pymupdf', fitz.__doc__)"
       - name: Fetch shard ${{ matrix.shard }}
         run: |
+          WB=""
+          if [ "${{ github.event.inputs.wayback }}" = "true" ]; then WB="--wayback"; fi
+          echo "wayback input='${{ github.event.inputs.wayback }}' -> flag='$WB'"
           python scripts/fetch_atr_text.py \
             --url-csv "${{ github.event.inputs.url_csv }}" \
             --per-minute "${{ github.event.inputs.per_minute }}" \
-            --shard "${{ matrix.shard }}" --out out
+            $WB --shard "${{ matrix.shard }}" --out out
       - name: Upload shard text
         if: always()
         uses: actions/upload-artifact@v4
