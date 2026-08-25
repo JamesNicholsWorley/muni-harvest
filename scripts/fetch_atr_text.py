@@ -49,7 +49,16 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__))), "src"))
 
 MAX_CHARS = 1_200_000     # a very long town report; guards the artifact size
-MIN_SUBSTANCE = 2000      # below this the PDF has no usable text layer
+# "Usable text" has to scale with the document. A flat 2,000 characters is the
+# right floor for a 100-page annual report and badly wrong for the one- and
+# two-page standalone election-results PDFs this pool is full of: one CI shard
+# OCR'd 54 of them perfectly well and filed every one as NEEDS_OCR for being
+# short, 34 of them carrying a full tally structure.
+MIN_SUBSTANCE = 2000
+
+
+def min_substance(pages):
+    return max(400, min(MIN_SUBSTANCE, 300 * max(pages, 1)))
 
 
 def _is_pdf(data):
@@ -311,9 +320,11 @@ def main():
                     rec["extract"] = how
                     rec["pages"] = pages
                     rec["chars"] = len(txt)
-                    if len(txt.strip()) < MIN_SUBSTANCE:
+                    floor = min_substance(pages)
+                    if len(txt.strip()) < floor:
                         rec["status"] = "NEEDS_OCR"
-                        rec["detail"] = "text layer under %d chars" % MIN_SUBSTANCE
+                        rec["detail"] = ("text under %d chars for %d pages"
+                                         % (floor, pages))
                     else:
                         rec["status"] = "OK"
                     tf.write(json.dumps({
