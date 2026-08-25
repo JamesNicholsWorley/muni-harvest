@@ -231,13 +231,14 @@ def shard_by_host(rows, i, n):
 
 
 def main():
+    global OCR_MAX_PAGES
     ap = argparse.ArgumentParser()
     ap.add_argument("--url-csv", default="config/atr_pre2021_urls.csv")
     ap.add_argument("--out", default="out")
     ap.add_argument("--shard", default="1/1", help="i/N, 1-indexed")
     ap.add_argument("--timeout", type=int, default=60)
     ap.add_argument("--per-minute", type=int, default=30)
-    ap.add_argument("--ocr-max-pages", type=int, default=OCR_MAX_PAGES)
+    ap.add_argument("--ocr-max-pages", type=int, default=60)
     ap.add_argument("--ocr", action="store_true",
                     help="OCR a short PDF that has no text layer (needs tesseract)")
     ap.add_argument("--wayback-first", action="store_true",
@@ -246,7 +247,6 @@ def main():
                     help="on a failed/no-PDF fetch, retry via the Wayback Machine")
     args = ap.parse_args()
 
-    global OCR_MAX_PAGES
     OCR_MAX_PAGES = args.ocr_max_pages
     i, n = (int(x) for x in args.shard.split("/"))
     with open(args.url_csv, encoding="utf-8") as fh:
