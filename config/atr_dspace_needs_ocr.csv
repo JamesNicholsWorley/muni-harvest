@@ -1,204 +1,153 @@
 municipality,year,url,kind,pool,item_uuid
-Ashburnham,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/a60d09cd-fd19-45e6-aaeb-feeb0f76e58a/content,atr_dspace,dspace,ac6d4adf-9f99-4fed-9bda-67d4207bf4e9
-Ashfield,,https://archives.lib.state.ma.us/server/api/core/bitstreams/19b7c0f1-788a-4b07-9fb4-33442ee271b3/content,atr_dspace,dspace,902440bd-e889-448b-9097-508765cc35ec
-Belchertown,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/641314a4-3e47-4de6-8056-afb8084a1e56/content,atr_dspace,dspace,d5e17824-6c03-4ff0-b26e-c6774a0eb734
 Bellingham,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/57ffd0f0-ef2c-4ca1-839f-45d04c5927a3/content,atr_dspace,dspace,ddb48f3f-af59-4a02-9e9f-792a0744af33
-Boxford,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/0dcecf43-1a66-47a9-bc7b-f29aa66de09f/content,atr_dspace,dspace,9a3abd18-d4e4-4d24-a38e-6973e44c2e86
-Boxford,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/8fc76992-22a8-4700-9e79-82e312a6eee3/content,atr_dspace,dspace,de084239-1348-495d-bb7d-3007dedf80f6
-Brimfield,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/33cd9787-c1e2-461c-85a6-2a0ab1da530f/content,atr_dspace,dspace,6c228e03-a054-418e-a5e5-a0095f76970f
-Brimfield,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/1fe01467-ff84-4e1b-8f3f-d0ac9a28e428/content,atr_dspace,dspace,b93c02a7-e806-47d0-982f-e37c73b066dd
-Brimfield,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/a347f106-7032-4d4c-a23b-21549f1cbf37/content,atr_dspace,dspace,fe5c17c8-a10a-4a54-ae77-a6bd5fb7482d
-Buckland,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/ccab420b-40da-4199-bff2-c335a5daf648/content,atr_dspace,dspace,90f82401-9205-4067-8446-1328c6b5dced
-Buckland,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/1d2a0e69-ded9-473f-8753-95e8d9b2d3b5/content,atr_dspace,dspace,a02a537c-eb05-476d-86ac-cb61e703472f
-Buckland,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/bd84e700-26d7-484b-8889-f9d605e94335/content,atr_dspace,dspace,89d25b07-be3b-47b3-ab47-478a7924c804
-Carver,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/8d41c097-6803-4da1-b919-a92cd2e86aae/content,atr_dspace,dspace,c90a0fe9-37a9-4811-abe9-f67d21bf1236
-Carver,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/5d147c5d-e2f4-4bd4-9a0b-93c06f555855/content,atr_dspace,dspace,ec7eea43-9599-4683-9e58-5831f1996cfa
-Charlemont,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/521ba4c9-3cf6-4d03-b0ae-c947faef1676/content,atr_dspace,dspace,13177ae5-6236-424e-8770-b069822a6a7b
-Charlton,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/717c8e0e-0995-4c18-9477-166da0570377/content,atr_dspace,dspace,14ca278e-4351-4e01-9b79-ea94f177cdb7
-Charlton,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/8739b6da-8bc4-4b57-8f57-e777ab41b6b3/content,atr_dspace,dspace,50c8190f-1714-4131-8b1a-ece543adb6b0
-Charlton,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/cf17993f-aff8-4c20-b227-84fe48b1d984/content,atr_dspace,dspace,03943322-0dc4-44c4-bf19-b7d7a3ff8b26
-Charlton,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/8a045a1a-6f0c-43cd-8b4e-1f0506b57db8/content,atr_dspace,dspace,069c4c63-0ea5-4e87-9737-8ee9c8b9c30d
-Charlton,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/06757a0f-98c8-4619-96a7-d180a9a3043c/content,atr_dspace,dspace,06d1b9f1-025e-4465-8067-0aeb2a17b2e1
-Charlton,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/acee7342-20eb-49ed-a5c2-cdab29456f23/content,atr_dspace,dspace,bf23ab0d-1de9-4873-a380-9546aa1bcf21
-Charlton,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/8cd6614c-f769-4490-b399-c1bb926b6768/content,atr_dspace,dspace,887fda70-3dce-425b-a50c-eb1043dca01b
-Charlton,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/d77fd0f4-3aca-4120-aee7-07e18e113274/content,atr_dspace,dspace,e33fbfc1-6937-4d00-a877-edcdd3b8fdcd
-Chatham,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/2d17cf2c-2c71-4a73-a05c-f24bd1c08189/content,atr_dspace,dspace,128d4d3f-0d37-45e6-b521-66c755cbe912
-Chatham,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/f326c9a5-6d42-4906-88c0-46dac0e95041/content,atr_dspace,dspace,66246925-cb98-45fb-99e2-5052688a3ce6
-Chatham,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/8231a7c7-79ac-40ea-8657-fe5255c4bbc9/content,atr_dspace,dspace,9891c80a-c7cb-47f9-829c-f4b61ddac492
-Chatham,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/74ea29ec-6484-455c-80e0-a7f581c5779c/content,atr_dspace,dspace,fdf1c035-c803-4326-aed9-3a0c4fe665cf
 Chelmsford,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/87e9a885-4a7f-4293-b794-ada98c262407/content,atr_dspace,dspace,0518e78e-ac86-4bf0-a7fe-261b51a5bcac
-Chester,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/afdc0ae3-fa5c-40f5-a823-17eb73b8ad50/content,atr_dspace,dspace,c0abe3a0-b9ab-4e8a-8a52-c0f77f4d842d
-Clarksburg,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/3d2b09e2-e7dd-4f91-8826-759bbbda3280/content,atr_dspace,dspace,6c311e00-bfee-4c5a-b0d1-3a345c7d536d
 Dalton,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/0e4d8432-edde-46be-b7d2-14dea121251d/content,atr_dspace,dspace,c7758a50-dbb3-4044-846d-f0bcc0917270
-Danvers,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/0132e143-1949-4a13-9e8e-23e916047cf4/content,atr_dspace,dspace,00bd495f-f013-4ef1-8f7a-d5f2a911fd46
-Danvers,,https://archives.lib.state.ma.us/server/api/core/bitstreams/d4e4e573-7fc6-49a7-bbac-ee755c7c1886/content,atr_dspace,dspace,b2e289fe-a1ec-4d87-b9f2-c5365a53623e
-Danvers,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/a7ed03e9-bb9c-4605-a03f-80535f8abf30/content,atr_dspace,dspace,f4fe9745-597a-4936-a156-a5dcae200879
-Dracut,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/9a7c0b29-f373-4bd5-81fc-cfb7f7bf709f/content,atr_dspace,dspace,38dd0c51-049a-4d6f-a82c-035962cf68dd
-Dracut,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/d93230fe-ebde-400f-817a-008bada763fe/content,atr_dspace,dspace,382ea96e-45ce-4f2c-bb3e-77cb0f092f87
-Dracut,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/cb83e9b7-25c2-4ba7-966b-7420999b3ddd/content,atr_dspace,dspace,8815c76e-38e7-44ea-bcd5-cf400a4619ad
-Dracut,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/244175d2-ef00-4c8f-8d19-f7a4cb75787a/content,atr_dspace,dspace,8f224ed0-b2fa-46e9-a6f8-d2cb755e079d
-Dudley,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/8e503645-7cef-4d53-8321-1b60abf6f658/content,atr_dspace,dspace,b6121665-70dd-44b0-9bf6-0c18c047024b
-East Bridgewater,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/97dac0b0-4b7e-418e-93a5-9064010c4c12/content,atr_dspace,dspace,2897b251-cd5f-48f9-bea1-bb0dc648a5ea
-East Bridgewater,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/1d4cee24-296a-49ec-b12c-a8f594ef1655/content,atr_dspace,dspace,106d986c-26c4-48e9-b830-b5faaed4a42b
-East Bridgewater,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/b2683126-c6f0-4087-8483-ac7e7097e8b2/content,atr_dspace,dspace,325777b9-e079-492b-932f-13a1a8e2b61c
-East Bridgewater,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/77e23629-e03b-4b13-b9fc-f5fa1b88eb73/content,atr_dspace,dspace,5659ca79-b5b9-463b-b297-b729fe47e19d
-East Bridgewater,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/cc8f49e9-d50e-4875-a8f8-c640bb5996d6/content,atr_dspace,dspace,594e4d9b-8836-48ce-a397-72884de015eb
-East Bridgewater,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/d7bbfac8-a635-45f9-ac2f-fcde66dfa4a8/content,atr_dspace,dspace,c0300d48-1b61-4ac1-9adc-6529e7cec7c1
-East Bridgewater,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/64429edd-53a5-48f4-afa9-b1f95a648229/content,atr_dspace,dspace,8a9cd0b7-17c2-4b89-bcaf-7407124860a1
-Eastham,,https://archives.lib.state.ma.us/server/api/core/bitstreams/c7445d60-9ebc-4fe2-829c-9b6cf115a405/content,atr_dspace,dspace,56f62313-fe56-4170-b113-7febfadd3e7d
-Eastham,,https://archives.lib.state.ma.us/server/api/core/bitstreams/ceb95c8a-fc4a-41a1-b6ac-27e58aa1c973/content,atr_dspace,dspace,895df451-b4b2-4027-87ba-4dcbc7532f5f
-Eastham,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/db3444aa-70ba-4607-bfd5-b3a96b76a84d/content,atr_dspace,dspace,b7b908b7-bc88-4eb6-a4cd-3389d7f11a2c
 Edgartown,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/2621071c-375c-492e-b77e-86f98aef68f7/content,atr_dspace,dspace,50ff3319-eaf1-4b0c-98d4-baf9556fb5c1
-Egremont,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/10a1564c-3db1-4ee3-889a-ec121dc64511/content,atr_dspace,dspace,61e25387-28bd-4d3c-9ab2-71c6f4e223be
-Egremont,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/f76ddaca-9bc9-4e2d-ab7b-57db635c33eb/content,atr_dspace,dspace,5ecbb022-25f5-4d15-9cbb-d98e87edf521
-Florida,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/96934bd7-90cd-48c1-9a83-266f5bcb833b/content,atr_dspace,dspace,24c9c44b-8c3a-4449-b4e3-c93ada5a59ec
-Florida,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/d8549df7-5732-41f3-9570-e02b9fde0c6e/content,atr_dspace,dspace,14b61b7a-91e8-4534-8311-c4a162c3b7f1
-Florida,,https://archives.lib.state.ma.us/server/api/core/bitstreams/4dea001c-73ee-4186-a8c0-557a01d39eb5/content,atr_dspace,dspace,788bdba8-140e-4974-b70c-f5d79b3b9f88
-Florida,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/3ac58dcc-d2e3-470a-bd4c-c625c9b64c06/content,atr_dspace,dspace,670a875e-03c5-4e0a-8ba0-26ad36af8cec
-Florida,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/47963be2-2c4e-4813-84eb-4d0883e50a48/content,atr_dspace,dspace,c2556b5f-4a8e-46c0-900e-1f068e192f1b
-Florida,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/0121d06e-1f17-4a75-b4ae-fb539774e517/content,atr_dspace,dspace,afa85bbd-befd-4e51-b14e-8e18e391e6ee
 Franklin,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/97c832bf-876c-418a-a12c-3b5b9350e9c7/content,atr_dspace,dspace,5141adc0-93ef-4310-92b7-9a14c38e5f83
 Franklin,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/af9f4b70-5a0f-47b1-a41a-99940b55abdb/content,atr_dspace,dspace,3bebd09e-2ecf-42ec-a1a2-8db428f2c63c
 Franklin,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/2706f7f6-f3c6-4437-afd7-67717d29b5cd/content,atr_dspace,dspace,9841cae5-df7a-476f-b333-51854146a331
-Gardner,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/c4d6085c-3490-4a39-a3ba-1c295bcb5940/content,atr_dspace,dspace,33b29ae0-e79c-4003-bfe6-f98fca2bd5bb
-Gardner,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/b8b79fd9-cde6-4a45-9d73-7d3e3a9e9366/content,atr_dspace,dspace,05c198ca-0a69-4521-8015-03614499d40a
-Georgetown,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/f154e5e8-b479-4d2f-becc-c23a91dfbb16/content,atr_dspace,dspace,4ad17591-a3c5-4d30-bbef-797b08835446
-Georgetown,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/f3de6fcd-5878-4c87-a90f-e720e6c5846e/content,atr_dspace,dspace,526bdcff-c483-4ad1-b68e-7ca357f217c3
-Georgetown,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/2a6f8a55-8f9b-4b1f-8f95-ef58640eaf58/content,atr_dspace,dspace,6bd96676-d45b-42f3-90bc-5c37f0e019c3
-Georgetown,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/b7a2831e-3a0e-4462-b4b0-68af02e20df9/content,atr_dspace,dspace,c3a0cd62-9490-4b19-b889-8836b3825e44
-Georgetown,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/51ba25f1-f256-4cac-9897-f94320829ffb/content,atr_dspace,dspace,a229fe16-6470-46e8-85a7-06c474dda6d4
-Georgetown,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/93dba560-25fc-4d8d-bc70-75b4ec5fce67/content,atr_dspace,dspace,9601c5ad-cb09-4cce-a6db-8a6d11b083d3
-Georgetown,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/4422baca-befa-4df0-8a81-256bfb591e93/content,atr_dspace,dspace,aa09eeb0-9b04-4187-adcd-7f6d297c5f1f
-Georgetown,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/e9e23e9c-93b1-4a23-aa9f-2cea4004b153/content,atr_dspace,dspace,ab39b54f-f8b4-467e-9e12-5580565532b4
-Georgetown,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/bb7091c6-c1fc-44af-8145-d059f1dc1245/content,atr_dspace,dspace,adae954d-7ffe-48f1-8143-f4dddd363b3c
-Georgetown,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/f0cea225-001f-4e17-85f3-6a24aa3d5b99/content,atr_dspace,dspace,ae3ab351-6aca-40ef-ae6d-6591bb75430b
-Georgetown,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/b1f86c9a-c591-4981-86d7-b3f03f4f430e/content,atr_dspace,dspace,82a71002-ab60-483d-a17b-16d919ecdc28
-Georgetown,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/1fa0b72f-ebee-4478-807e-9019c2686400/content,atr_dspace,dspace,863738c1-d211-44be-8e28-e3e069f9be51
-Georgetown,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/0788a38a-5361-4290-94b8-7ed663657219/content,atr_dspace,dspace,9ae267ca-1104-4a97-8a27-5b4ec6a406f2
-Georgetown,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/c6951c80-02be-4e9f-a7b8-dc3a2d83dbc6/content,atr_dspace,dspace,970ff597-bbc6-4a66-8125-28353e969ba5
-Granby,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/9fe92fdc-74e6-456d-96b0-c94cc6f36500/content,atr_dspace,dspace,383c8e7d-468a-490a-b054-536ca4b3c9c1
-Granby,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/3fa90fb2-cac1-42df-adae-e06d07d03ed7/content,atr_dspace,dspace,42d21482-04b0-4a70-8e79-cdad42f36f81
-Granby,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/070b61b4-c70a-41d7-9649-2167591f233a/content,atr_dspace,dspace,7dc048fa-13c5-44ba-bc9b-0b1e3a916a94
-Granby,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/c4577b5f-e19f-4b5d-8a21-b7145e38c3f0/content,atr_dspace,dspace,ee908e18-680e-46ed-a7af-b812ebc39823
-Granby,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/54e0a4bf-a4cb-4273-94b8-0a49a621f87b/content,atr_dspace,dspace,fe6fbd6c-a88e-40e4-a60d-40c00563ebf8
-Granby,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/25058a1e-8593-4be0-9e36-535438c8fd28/content,atr_dspace,dspace,f799a59c-b063-453d-bc98-89e4e6ea9bba
-Granville,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/c9ed9ce7-a46d-4f62-aa46-343989574c1f/content,atr_dspace,dspace,4ccba6c5-86db-43f5-b80e-13650abc2413
-Granville,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/63aa836d-d700-4a60-aabb-a1b6dad051ba/content,atr_dspace,dspace,3e05d1ff-0a02-4c3c-908b-7b543f1738a5
-Granville,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/2f6457b4-2d12-42b9-8dff-1252a2b8b578/content,atr_dspace,dspace,77c7febb-3a1d-44f3-ba25-9a895c4f9cf3
-Granville,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/9dd367e7-44af-4dc9-82f6-40ce0ef0b2c8/content,atr_dspace,dspace,79f343dd-744a-46ec-948a-a77c41dc4fe0
-Granville,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/a4a85af5-afcc-4e9a-a74c-f508a46d860c/content,atr_dspace,dspace,896089db-e888-4471-beee-34115d18078d
-Granville,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/868ebc33-a458-413e-abf4-e7b4df1453e6/content,atr_dspace,dspace,c1b48e27-3354-41c6-ab75-06007940b2b6
-Granville,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/357b66b0-045c-4173-b521-4c0d30954568/content,atr_dspace,dspace,9d5692cd-0029-47ed-9a30-3d48880a19ca
-Granville,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/a9ecaf6a-de4d-43f8-ba21-e4a3d09d8b90/content,atr_dspace,dspace,9b1ea1dd-6a88-49a4-9a84-70e593e64739
-Granville,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/68249635-54cf-4399-b52e-85cfde37abf5/content,atr_dspace,dspace,b0e872fd-19b5-4d7c-a065-0cf3ad5c244d
-Granville,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/8b612a32-a6cb-492d-9faa-318a0726f40b/content,atr_dspace,dspace,e18b0b9c-4634-4d8a-bddc-8ea63b7a8940
-Granville,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/735d74d4-4f14-4398-b441-75a0c068e2d0/content,atr_dspace,dspace,f63a7ca8-f336-44a9-b07c-2756c7943817
-Great Barrington,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/5d99298c-899f-4700-bcb4-dfcbc27fc0d3/content,atr_dspace,dspace,5ed17172-bf4d-47e3-8216-eeced2cac071
-Great Barrington,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/b13628a2-3419-4928-b2ef-df2b9da963aa/content,atr_dspace,dspace,65a2ee01-cf42-41cc-b659-ee93d6b5f3e4
-Great Barrington,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/b62d7f14-4795-4abc-9e31-7fe06a38e73e/content,atr_dspace,dspace,ee79261a-aec3-4a37-b5a0-d3a237b52e3d
-Groveland,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/900f14ff-b91b-4de9-b9e5-2fec5bc2800d/content,atr_dspace,dspace,0e668299-c50e-4524-96f6-e8faf2fe03b3
-Groveland,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/a4b8a9c2-83a0-4707-b2a7-7441700b3af2/content,atr_dspace,dspace,1d2423b2-23c2-40fd-8bd3-1bf0575fec65
-Groveland,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/e8ae70ea-56bd-4575-b326-b2731e1c896a/content,atr_dspace,dspace,46928faf-0f1c-477b-829f-9150577477a0
-Groveland,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/82dd765b-6a8a-47bd-9c9d-f359c272479c/content,atr_dspace,dspace,483e02ea-d29c-4bfc-826f-1b87d07725ef
-Groveland,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/99dfb62f-4606-4ad4-b244-2303deb4180c/content,atr_dspace,dspace,b4be9f0a-f248-4962-86f5-e368e7067db3
-Groveland,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/60710305-e7db-40b0-af45-9b65ed41b2d9/content,atr_dspace,dspace,bf0cb6a5-d3f1-487e-8dd7-e8c347c66376
-Groveland,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/97f75cfe-33f8-42ba-8c68-0a1a33b51316/content,atr_dspace,dspace,9f57a844-61e2-458c-ba2a-ec8082d8a6e9
-Hamilton,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/4233ac72-21e7-4384-9d9f-09ac541af040/content,atr_dspace,dspace,51d49e15-120d-4041-b32e-30cf837a298b
-Hampden,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/80df464f-2751-4569-a3ce-8226fbf66c09/content,atr_dspace,dspace,1082a05c-9f7f-4e6f-a2bd-a8fb9f59d1dc
-Hampden,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/031dfd69-de3c-46bc-b59d-b97ead77f3e8/content,atr_dspace,dspace,4028a00c-bc2c-4860-bf27-9394b73761f6
-Hampden,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/3df03006-f010-41cb-8159-fee8b8c8b062/content,atr_dspace,dspace,4a0eaa5e-b075-4fa2-832b-a7bcc7567b39
-Hampden,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/42b76caf-a044-458a-adda-1e14fd57dfd8/content,atr_dspace,dspace,656ea21e-3830-42f2-a02d-fb79acd36ceb
-Hampden,1999,https://archives.lib.state.ma.us/server/api/core/bitstreams/14a34993-71c4-484b-8e01-3493490af13b/content,atr_dspace,dspace,c4fecca2-85cb-4798-a8a5-977174296d90
-Hampden,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/b5e3eca4-20f7-4eee-a448-2c2deeb9a234/content,atr_dspace,dspace,ccbf8038-baeb-4eb3-95d9-98f2da09dbe0
-Hampden,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/74e08b6c-c91b-4b59-9f9d-06ccfaa217f9/content,atr_dspace,dspace,961ffc18-3eef-4c10-bd44-353a2907eef4
-Hampden,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/2b985b72-055c-44d5-99e5-4e45206b16d3/content,atr_dspace,dspace,9ad11395-982a-4ab0-be2f-24debb03a3c7
-Hampden,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/95b8d109-8e80-420b-9f5c-85bd387f8b99/content,atr_dspace,dspace,ea16410f-d4c9-4dc2-aa9a-87f7da608825
-Hampden,2000,https://archives.lib.state.ma.us/server/api/core/bitstreams/b0fcf0dd-0159-4cf3-b33d-c1e5d3c491fd/content,atr_dspace,dspace,e3588129-5946-4679-8b97-f2203117eb12
-Harvard,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/8d6aee59-2a24-46ff-974f-f9a1562ca25f/content,atr_dspace,dspace,420999d7-0d17-4ece-a8a1-0f8aec9d7dfe
-Harvard,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/b66e2ec6-90a8-47ac-9b49-8a3b51f9fc34/content,atr_dspace,dspace,ee90fd9a-e13b-48c7-a54f-dee01a002b4a
-Holbrook,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/985c7d4f-d652-4059-8335-2411de2a478f/content,atr_dspace,dspace,52d2a6a8-c694-457f-9f6a-25483dd53118
 Holbrook,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/dcc75459-510b-4730-936a-77296147f74d/content,atr_dspace,dspace,60565df5-51b5-48e2-a188-94d1941f8045
-Holbrook,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/8bbe318f-6629-4632-a590-fcbf1ffe343e/content,atr_dspace,dspace,c8affc73-22b8-486d-b2a4-d3fe0287e956
-Holland,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/6af5df39-ff64-4553-adb5-8a57dad40c6a/content,atr_dspace,dspace,11731d87-2082-42fc-aaf2-f46c38531aa2
-Holland,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/bfb170f9-076a-4814-9fc7-6e7acb775fe8/content,atr_dspace,dspace,16b305f8-ae91-4f4e-a621-efc5377651df
-Holliston,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/2163e6ab-7360-403d-8174-3b70cd5af0e8/content,atr_dspace,dspace,61c3cf1b-b3de-46fb-81a5-f107b1bd3a81
-Hopedale,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/c21faed4-89fb-4b7c-82da-29736ed05899/content,atr_dspace,dspace,359e33d6-f1c2-4657-b96f-233f45c1b143
-Hopedale,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/a9be330d-1e52-45e5-bda2-9300463eb873/content,atr_dspace,dspace,54537a52-08a2-4bfb-b82c-efd2db525355
-Hopedale,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/8756937c-c280-4bf2-9df1-df23c7eef1c6/content,atr_dspace,dspace,6710ae89-ad4c-4a37-8738-03ca8476196e
-Hull,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/da9706dd-3c7c-47c2-9fef-f63c9aaf6ba7/content,atr_dspace,dspace,117bf255-6abc-43cb-a74a-29957f27186b
-Hull,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/539988fb-b1ac-4d76-be52-e3efa4793bf0/content,atr_dspace,dspace,09fafddf-eb6e-4ba0-9374-2bcb589ce291
-Hull,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/e63a46f7-5fd2-4ff8-9e4b-87556643ef03/content,atr_dspace,dspace,2245f40e-f96e-4dad-8090-bec1adc63c93
-Hull,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/6e28cee7-a685-4668-88d2-b093fae5d07c/content,atr_dspace,dspace,51e8c679-543a-420b-afff-d69831572062
-Hull,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/0beaa8db-18a1-4a3d-9a80-15701269bbb1/content,atr_dspace,dspace,adfcdb6c-65cb-470c-8d36-f12e36d92ebc
-Hull,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/94a4c56c-cbca-4ee1-9b34-38f20419b5b9/content,atr_dspace,dspace,8f79f3b8-43e3-4beb-b1f9-3fa1232d0e2a
-Hull,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/314ad76a-b926-4e19-a972-1fb3fbb451ce/content,atr_dspace,dspace,9726d828-43e6-425d-b7d8-d709abcefe0d
-Hull,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/5d6ba7a7-4e55-491f-b63b-faf1f22731c8/content,atr_dspace,dspace,da850e4b-9efa-492e-97fd-759ec675a0f5
-Lancaster,1999,https://archives.lib.state.ma.us/server/api/core/bitstreams/c393c3ee-d318-4ac2-96a9-c30be8765e1b/content,atr_dspace,dspace,171d070d-4078-4a1e-9b90-e8100bbb5adf
-Lancaster,2000,https://archives.lib.state.ma.us/server/api/core/bitstreams/4721f852-3068-47af-b339-3a931586d095/content,atr_dspace,dspace,051edde5-056a-4c45-919f-e2de80ed10d4
-Lee,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/87a54546-140e-4f9e-912f-591c6eac365b/content,atr_dspace,dspace,79a3fc7b-7389-4257-96b7-bd607234cab9
-Lee,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/b0fef358-084f-4cf9-9e74-e772836ef2a5/content,atr_dspace,dspace,996b1e4d-3671-40b9-a7f5-f7d0e03ad432
-Lee,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/7231ebd5-7dbc-4b0a-a1bb-5376ea57286f/content,atr_dspace,dspace,df2751ca-f296-45a4-a04b-e7f45d3207f9
-Lee,2001,https://archives.lib.state.ma.us/server/api/core/bitstreams/a8542c95-c29c-41c7-842e-3b48d6df1875/content,atr_dspace,dspace,ed1066c5-295a-405e-82d8-7c908b30ced2
-Leicester,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/8fd7c558-908c-4beb-afc9-b863f644acc0/content,atr_dspace,dspace,b587c7dc-2d5c-4f7a-a0e9-506543df329c
-Leominster,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/6a25efee-3e40-4fa7-8668-d1d4f8fe3622/content,atr_dspace,dspace,2e420e25-d4d5-4849-9c01-40a3c2ff2418
-Leominster,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/7bde2681-0910-4776-a900-4560e3da1c17/content,atr_dspace,dspace,1e6882a5-9b32-4877-9b36-587072b978d8
-Leominster,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/dd158c63-84b8-40d7-af95-8b0a3435cfa5/content,atr_dspace,dspace,3d6f57c4-80f6-493b-b642-dcc1449e43a8
-Leominster,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/2e0cc750-ae05-4b26-b60a-8a1b6d025990/content,atr_dspace,dspace,016d38db-bc24-47a4-b10d-df99e21ca44c
-Leominster,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/ab2aad31-ac33-4abd-8a26-3a3dada8c168/content,atr_dspace,dspace,660e7f04-e365-4944-ba34-f6a9ae122204
-Leominster,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/ce6f5cee-9fd7-4f3b-b223-857593e9d7b3/content,atr_dspace,dspace,62183ff1-7b73-4dda-a930-f77ffb2eed50
-Leominster,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/fb0025ba-49fe-456e-bc48-1e61e5b9424e/content,atr_dspace,dspace,7d5fb3b0-9cf8-4a2f-aeab-648108c5dcc5
-Leominster,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/1a5728ef-977d-40b9-9607-059a6b6a44a8/content,atr_dspace,dspace,9e8258f3-6640-4901-a29b-a97d14609f51
-Leominster,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/b641760a-a6d6-4cbc-bf8a-8305ed1150a8/content,atr_dspace,dspace,a67b9477-0b6a-4ed7-880f-ee49cc1873ad
-Leominster,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/db2abb8c-8f85-4714-86c8-aea44c2fb727/content,atr_dspace,dspace,88eba1d4-cb0c-488d-9f0f-4b8c511d13f5
-Leominster,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/364b5f3c-8aa0-43ba-8000-ee798c96aef4/content,atr_dspace,dspace,92ef4aa3-1ccd-44d2-b78c-cd52ed58ac5e
-Leominster,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/dab53566-885f-4bf5-8746-b15b89543ee6/content,atr_dspace,dspace,9bb45da9-0d57-41e0-be7f-c8acc245b3fd
-Leominster,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/f6099103-439a-482d-99c9-ef2cc4b1d2b3/content,atr_dspace,dspace,e3986b3d-8586-48fd-be77-f0b663c6dc38
-Leominster,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/c0776685-88f6-46f1-8787-948074be57a5/content,atr_dspace,dspace,eafca6be-8e7b-4640-a8d7-4e273e5eb46a
-Lunenburg,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/1d32f856-b803-4b2d-a5c6-2c3a65886f52/content,atr_dspace,dspace,56f430f7-9059-44c4-9697-b5fa32056a05
-Lunenburg,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/7888047b-e892-45ef-ae02-9ac2aaa8b536/content,atr_dspace,dspace,7c42d0b3-9bc1-47de-b5c3-cb786c9ff04f
-Lunenburg,,https://archives.lib.state.ma.us/server/api/core/bitstreams/71146a2c-dd75-49f1-8422-b685530ebf87/content,atr_dspace,dspace,f38be325-b21b-4665-b0c9-31839a695c3a
-Lynnfield,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/b73325d6-4a5e-4c31-be89-f364abfbf81a/content,atr_dspace,dspace,0fe22dd3-59bc-4bd2-878d-5a668f7b2216
-Lynnfield,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/2c345cae-33ce-4679-ad52-6fad0c92f4ff/content,atr_dspace,dspace,5ab70ab7-e7c3-4a5d-8e3c-935f11f7a394
-Lynnfield,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/72803933-c929-4559-92ab-e54882d6e209/content,atr_dspace,dspace,6514dc13-e30a-4aff-9e1b-ad93c80aefa1
-Lynnfield,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/aa1a30d5-36bb-4f9b-9f82-f6c9af1f74e7/content,atr_dspace,dspace,c31c0621-7995-4edf-bdd4-9322aa114231
-Lynnfield,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/97d7438a-a3be-426c-91ab-a322e78eaf4e/content,atr_dspace,dspace,bafd3b0d-f5fe-410f-b7d4-3233632f8dd8
-Lynnfield,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/45633d45-172a-4304-8bdf-d822a04d847b/content,atr_dspace,dspace,9ebaecb4-92b8-4212-8a93-6803f48809a0
-Mattapoisett,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/930cdddf-10c9-45bf-9ef0-e83d045b6fa5/content,atr_dspace,dspace,48caa0e3-097c-42a3-9849-ef5935dd6ac6
-Mattapoisett,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/997e9fb1-9230-43f0-891b-16eee8027bf9/content,atr_dspace,dspace,809217a9-6dfa-45c5-b510-c540b270bbe2
-Mendon,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/4e346f02-badb-4244-8fc7-2c2c54f137a1/content,atr_dspace,dspace,543ce8a3-edfd-4a91-a476-e191c67edb1a
-Middlefield,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/50a80f22-c184-4cb1-aa02-2b1c033c43f2/content,atr_dspace,dspace,c0f1fbc8-f589-42c4-894d-d8dce60126af
-Middlefield,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/d5168d0e-af28-4afb-b36f-f4df77a834d0/content,atr_dspace,dspace,87998fe9-32ce-4f5f-92c1-20d85d671a89
-Milford,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/fc481190-8d82-4cd3-9496-56657f05f76c/content,atr_dspace,dspace,30a8bb1a-cf04-4f4f-8811-19091f18b110
-Milford,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/1c7f7ec7-ba51-4d8e-9f77-4b2ceaa85f5b/content,atr_dspace,dspace,1e0ab946-cba0-4ef1-b243-238d3ea5251e
-Milford,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/f7dd2a4d-0785-4eaa-a5ee-956867ba230a/content,atr_dspace,dspace,4f1e06e2-df0e-4f54-a0f0-f6a791db65db
-Milford,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/f42d5aa2-6efe-4651-b68c-5358acc942ff/content,atr_dspace,dspace,45f62485-1562-48c5-8e9f-00e306bf149e
-Milford,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/01b5fc69-5f30-432b-985f-05393dea7db4/content,atr_dspace,dspace,c6a4693c-9dfd-438c-b1fa-2d64e1a95cc1
-Milford,2001,https://archives.lib.state.ma.us/server/api/core/bitstreams/68a293dc-df36-4f4a-a752-4da83b1059e8/content,atr_dspace,dspace,adfe0ea3-e086-46e5-85fa-fac0021501c6
-Milford,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/910322bc-782a-4d5b-ae2b-c8dbf147fe70/content,atr_dspace,dspace,80835190-1b7c-498f-a350-c19b9e350731
-Milford,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/ed23ded9-d090-4028-8b56-8d9040a0306b/content,atr_dspace,dspace,92db8781-32f8-4c6f-b00c-7148287a6544
-Milford,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/1c5a0a4e-07ef-4c00-a852-018f3906d82d/content,atr_dspace,dspace,e8766efc-dae8-45cb-b149-e22b8130699c
-Milford,2000,https://archives.lib.state.ma.us/server/api/core/bitstreams/96641d23-2f13-401e-bb3a-54c5477228fb/content,atr_dspace,dspace,fa9177ec-0122-485c-97af-7d053899c498
-Millbury,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/0742917c-9835-4105-abe9-35ccfd7e12d4/content,atr_dspace,dspace,b1d61e37-1a5a-47a0-ac6c-8788ebb31fa7
-Millville,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/b8e000f2-2ada-4aec-a34c-fa1a4d6d487d/content,atr_dspace,dspace,588e2636-cb06-40d6-ba9a-e379fbe19483
-Millville,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/bc2ccbef-a9f9-4ddc-99e6-b1c006dd03ed/content,atr_dspace,dspace,6446c83b-d2cf-4786-96ea-617098d864a4
-Millville,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/20cadfce-03ae-4403-b58a-03c2c3b3f3bd/content,atr_dspace,dspace,6fb3d758-3bdd-4fe8-9e54-734f9b3dadab
-Millville,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/d0436451-dddd-41a9-b42d-2d6e72d4af73/content,atr_dspace,dspace,c43ba73f-f786-4c92-b7e6-d486e94951f0
-Millville,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/ad2fd7f4-57b9-4a0e-83d5-808344095c7e/content,atr_dspace,dspace,898bf89a-1275-411b-8314-6b6b25e7d2d0
-Millville,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/ca2f6851-f8de-41ea-bbcf-79b51f402188/content,atr_dspace,dspace,96ba489c-90cb-4764-99ba-7d0f6014cd42
-Mount Washington,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/4e3f5d9a-afc6-4582-93f8-18391c6d10ca/content,atr_dspace,dspace,25ed4af9-c005-4401-b9bf-da7d523d00c0
-Mount Washington,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/57fcdcea-4d76-486a-a502-e3cc6bce5d3a/content,atr_dspace,dspace,4ec643ff-e0ad-49f1-aa88-4bc15aa43ccf
-Mount Washington,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/5d6e044d-ede2-4fb1-89e1-828d95b3a380/content,atr_dspace,dspace,37e5e992-ca56-494a-a663-a8bfdaeb2238
-Mount Washington,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/f1d98a81-c222-4317-a299-aa8f872ff4c7/content,atr_dspace,dspace,4ae0374b-8696-458e-b2b5-6d22e545d8ed
-Mount Washington,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/ceb0a199-f504-4a10-80ae-9431ef246708/content,atr_dspace,dspace,53b46227-e776-46ff-af75-18d0c92afb24
-Mount Washington,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/57e1c5c3-cae2-4220-b9f3-5c1d3634d8a6/content,atr_dspace,dspace,7478ea12-91c8-4d2b-ae7b-e30468102dc1
-Mount Washington,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/a37e383c-3f70-43f8-81ed-dd5200bdda3d/content,atr_dspace,dspace,5aa93905-0fc9-4edf-b5eb-91d5aed4b77d
-Mount Washington,1999,https://archives.lib.state.ma.us/server/api/core/bitstreams/d07e651b-6615-4e2f-852b-4d2485bba545/content,atr_dspace,dspace,601873fa-6f47-4349-81c4-8cf0dc0b1d15
-Mount Washington,2001,https://archives.lib.state.ma.us/server/api/core/bitstreams/8184875a-cc4e-4260-9377-dc8cbd6d8143/content,atr_dspace,dspace,5dc13ff1-405d-4b5a-a65e-b3f454c540bd
-Mount Washington,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/bde2d6ba-9fed-44ab-b378-988b8e7f1840/content,atr_dspace,dspace,7d6bffcc-272a-40c9-b04b-658d7e1471ab
-Mount Washington,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/f777c719-38b1-47c0-89b0-eebc20b70388/content,atr_dspace,dspace,b78d8839-addd-409e-89c0-f64cd8c1fc9f
-Mount Washington,2000,https://archives.lib.state.ma.us/server/api/core/bitstreams/65a83092-b746-4d25-a9c5-54c7abe927f0/content,atr_dspace,dspace,cd7339c4-cbd9-491d-badb-cae44eb3d8ce
-Mount Washington,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/ad4cd98b-cd83-4442-8195-8b384ebf8598/content,atr_dspace,dspace,a8a7c7e6-4f4b-49c8-ba53-44a95fe19a0d
-Mount Washington,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/eaa1f924-0bc8-4834-a78b-51a1326837f2/content,atr_dspace,dspace,8994092f-afc4-4024-b6be-3f948351e1b8
-Mount Washington,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/cd4657b9-eb16-4848-99ab-a6477205effc/content,atr_dspace,dspace,940a2206-f4f8-4734-a195-ec70da22bfa5
-Mount Washington,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/ec3b58b7-c583-4f2f-a71a-23046ced9b58/content,atr_dspace,dspace,ef98a20f-bcdd-42d4-9970-125b9dfd2934
-Nahant,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/13705efc-250d-48d6-9306-a4ae95c73ec6/content,atr_dspace,dspace,10d54fb1-99a4-4b97-b8bb-88785978fca7
+North Andover,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/2d37a33e-a091-4cfa-8ba0-f0c224d70b42/content,atr_dspace,dspace,33339d64-9f12-4d03-ad16-ef4a019046d3
+North Attleborough,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/2170fb64-d27a-4798-b9cd-d5f11a380b36/content,atr_dspace,dspace,ea53cd7e-5315-419a-84f5-a679d28d2302
+North Brookfield,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/bde71e29-b8dd-485e-a53f-7fc904a5821e/content,atr_dspace,dspace,2edb2d29-687a-4421-ad73-796bbcf1955f
+North Brookfield,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/e3e78157-7575-4f3f-96a5-a5f7d2df8a62/content,atr_dspace,dspace,232c876b-501b-4b64-86e6-a4dc6cd5feee
+North Brookfield,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/57c5347f-ad8a-43e0-85f7-1e6e5e9bb5da/content,atr_dspace,dspace,4c2c5d58-343e-40aa-92ff-fb95c651dff5
+North Brookfield,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/7d59c757-1646-4bba-8ce9-e2a051e5a52e/content,atr_dspace,dspace,3b75d7b6-e532-405f-8f0d-ac97e1495b79
+North Brookfield,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/7f41cb93-a496-49e0-b407-e731505eae3e/content,atr_dspace,dspace,77b75da6-84cc-4d30-9bd7-ee21adb52b25
+North Brookfield,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/861dedea-ed96-408f-889b-3ef5d61a7af1/content,atr_dspace,dspace,5fe88054-6d59-4f9f-8300-1bdea6d664de
+North Brookfield,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/1c327f8e-410d-4a57-9a47-cfa9686b38c2/content,atr_dspace,dspace,654ec904-c0b8-4c84-9dc0-0cd08a981501
+North Brookfield,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/c48d2ead-8b9b-43ef-81c4-44c938abb8b7/content,atr_dspace,dspace,67afd143-6eee-4c0b-87cb-a6cdd19677ca
+North Brookfield,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/161394f2-d7d9-4252-bf93-2413d04fab82/content,atr_dspace,dspace,a3a829fb-ad74-41a9-bfb1-e58b5c18c77b
+North Brookfield,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/96024502-d755-4fb7-b8a8-1dd213526e73/content,atr_dspace,dspace,9675ddc2-3e90-46e2-92a7-f1db34bd2f04
+North Brookfield,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/740c3df5-2aad-4a37-85d9-d2c0b1f5ef4b/content,atr_dspace,dspace,7efb8edf-87f2-486f-b098-7758422a1afa
+North Brookfield,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/8b417f79-cfaf-40b1-a0ab-07b308609a41/content,atr_dspace,dspace,80ed4d8b-201b-45a9-8f19-15b81efd801b
+North Brookfield,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/f9f274c8-734b-4f2d-849f-c68d9e7ed50f/content,atr_dspace,dspace,e593b289-b5ff-4886-9d2f-b97cee6aad42
+Northborough,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/159825de-1d14-48db-a54b-3e5b4df2e120/content,atr_dspace,dspace,7273cc4f-7db0-4b52-b6e3-5efba8256351
+Northfield,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/a598d036-0401-4bea-9e69-845e1ccf7850/content,atr_dspace,dspace,1c2e459d-bd9b-4b9c-807c-b1fe2b14e0cd
+Northfield,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/eabe9d59-b704-4c60-944e-8a48a5681198/content,atr_dspace,dspace,add64a6e-8c4b-4a12-8d7f-903ad1f6fcc8
+Norton,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/62b06e9b-23c6-44d1-a656-1fcdad9c849b/content,atr_dspace,dspace,302a0478-8543-463b-a4c4-126532114e6b
+Norwell,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/361dd4ae-af18-4bfa-93d1-284d5906d4a9/content,atr_dspace,dspace,1042aad3-f122-4017-a6c8-31827cb88b64
+Norwell,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/a566bdd4-a877-439d-bc9e-9af82025c3d7/content,atr_dspace,dspace,48829f35-c195-44b4-b7f4-5db560b9e331
+Norwell,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/181b1bb0-e283-4d00-8dfb-ec24e472a3af/content,atr_dspace,dspace,66a1c12e-0779-4b8a-8fa2-586d6975f341
+Norwell,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/663d2e65-3dab-485f-b469-7185ee887f3b/content,atr_dspace,dspace,c5fa8dce-5de2-4c3d-8056-218254e064a4
+Norwell,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/28e99435-2961-44dc-aeba-6f60bb9c3e35/content,atr_dspace,dspace,e7ddb6db-6b00-4b47-9d8b-f2bd8e905d55
+Oakham,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/1e4df5c5-efff-446f-b749-8462faeca459/content,atr_dspace,dspace,b4e5449b-5690-4138-9615-b5840d9871d9
+Orange,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/ea04b1c5-0be7-47ac-8810-40e150facd02/content,atr_dspace,dspace,cd9a1a2c-99d0-4e38-9766-5b53c812c110
+Otis,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/01199b96-6c2c-43ac-9b47-7d0c09174fbe/content,atr_dspace,dspace,aab31910-be3c-4c89-b523-409a1425d19d
+Otis,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/ec15125f-fc6d-4980-9348-f0a9f9de0ddd/content,atr_dspace,dspace,92299089-18b9-4846-91b1-8d70b0f90cad
+Palmer,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/283b6f89-763e-4ff7-88ea-27e07da594d6/content,atr_dspace,dspace,dcd3ba94-d37c-44ec-b372-d7cca9104def
+Pembroke,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/6f759880-e0c4-48b5-abff-9aa510758b3a/content,atr_dspace,dspace,d466f001-24b4-41e3-81b2-6c889ef9b023
+Pembroke,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/5c69b6c4-36f4-49d9-ba42-9069e51ab9c9/content,atr_dspace,dspace,be13a990-5097-4459-b10e-61178a341013
+Pembroke,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/06e6386a-43c1-4b57-8e14-fb69a247d373/content,atr_dspace,dspace,8e5cd9b4-f45e-4003-8b70-40e1eef9d999
+Petersham,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/dbd7ef18-5684-434b-9649-a35ce9977e9a/content,atr_dspace,dspace,30ab6e40-f6b6-49c1-9940-ab5c7b0e59f1
+Petersham,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/10604341-27ec-49f0-ba26-64630dac3dbd/content,atr_dspace,dspace,24166c8d-6beb-4962-b469-4ac249851f94
+Petersham,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/45621bf2-8184-41b2-ba12-7fc81a4a6138/content,atr_dspace,dspace,39ef33a1-0cc2-4adc-a63a-aad707d0083c
+Petersham,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/3081d20f-2514-4554-a4a9-dff3b7b2bd1e/content,atr_dspace,dspace,3007dbef-6661-4cf9-a502-3831f41dece1
+Petersham,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/275b92ee-2766-4ef5-8c9c-e771ee232888/content,atr_dspace,dspace,3d7ab86c-eaf1-4834-8977-91deada4b4a5
+Petersham,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/8437e617-505f-400a-ac00-27cb87eca107/content,atr_dspace,dspace,3415e200-821c-4186-bf70-a7ef7b32547f
+Petersham,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/4a7e0e27-9e4a-4e8f-b906-d4f513675ebd/content,atr_dspace,dspace,5a9068ae-f247-4f65-b833-65b964960fb7
+Petersham,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/9b4b82bc-acbb-46a5-836f-8e6f8e31ebba/content,atr_dspace,dspace,557ae92b-a54e-4ece-b6fc-f5591b14b223
+Petersham,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/dbe8fb6b-9a48-4196-87a9-c6b415ba3242/content,atr_dspace,dspace,663176f1-d17a-437c-9618-005e1f673292
+Petersham,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/a23ad77a-1aed-4622-8a02-df6f29b13d9c/content,atr_dspace,dspace,84310eca-bfd3-45d3-991c-7de9fce2a2ae
+Petersham,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/a17b819c-d2c3-4b7d-823b-3dc9228f3113/content,atr_dspace,dspace,cffe0e32-1e0a-48e5-a18f-d55dfcd7bd3e
+Petersham,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/629332cf-2dcc-4fd6-9446-08aff11e327c/content,atr_dspace,dspace,bdabd5db-5002-4f2c-9db5-77139d1404b1
+Petersham,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/d07430f4-84f2-4371-b4ee-9bd673e3ae06/content,atr_dspace,dspace,cd10f82f-9cd3-4c02-b3f9-9cc467f00950
+Petersham,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/bf198efd-7302-42c4-a488-955bde2f45ab/content,atr_dspace,dspace,a09e904c-adbf-4370-8153-dd7e826f28eb
+Petersham,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/3ffa5680-9a0f-408f-9146-967639e0d836/content,atr_dspace,dspace,e3861351-583b-4fb0-a1fd-ac5c1327d736
+Petersham,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/d1dbee9d-69bc-4999-8f22-ad793c83c221/content,atr_dspace,dspace,f7012b60-c072-4745-93be-94adefa7e6a1
+Plainfield,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/6c586878-5710-432d-ab2a-3171a1151eaa/content,atr_dspace,dspace,192697ea-48a6-4cda-9ff0-a43fa73f30bc
+Plainville,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/4a4e6bf3-29e1-422e-824f-5f03c201542c/content,atr_dspace,dspace,e374dc08-4ecc-4c85-be12-13744eb78d12
+Reading,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/6e6ad25c-536a-44ab-830e-930a8411d96d/content,atr_dspace,dspace,0df993ac-9cc9-4258-b182-9ee0f977b010
+Reading,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/1860074b-707c-49bf-966a-036721410132/content,atr_dspace,dspace,a24b2c5e-de45-49dc-8dd6-4cbebcf74593
+Rehoboth,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/b642a48a-5fd9-4d8f-aca4-01dfbd83c92a/content,atr_dspace,dspace,7108b082-1379-438d-aacb-118b1accdd39
+Rehoboth,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/5831fc92-49e0-470b-9132-3593115e4546/content,atr_dspace,dspace,5b9fb2df-8dc0-4185-b5f3-36f53a630c16
+Rehoboth,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/aea73280-6eda-49f7-96ec-044ec569efb8/content,atr_dspace,dspace,c1cc190b-1073-4223-8fc9-fd1073aba6fe
+Rockland,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/3848691d-eeb4-434d-a1ff-a69b000d51f8/content,atr_dspace,dspace,88cef915-9fbc-4c72-b2ed-6f94977fe8fb
+Rockland,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/4e296758-5b2d-46de-91ec-df8130cf5bd0/content,atr_dspace,dspace,f558ac98-a002-4cdf-b4b4-6b849dfc06f0
+Royalston,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/777166ab-24e8-4d2c-80dd-c041a6938034/content,atr_dspace,dspace,7f4a0a66-06ca-4c58-9389-264469137019
+Royalston,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/6761839f-946a-4e5d-8db3-2409a048b7c7/content,atr_dspace,dspace,ca118764-7a3a-4e38-bf8e-c7bd3b5796fa
+Royalston,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/b22d2f29-60b6-44fa-9a94-36a84e8f79bc/content,atr_dspace,dspace,8008e035-b9fd-4b7c-9c9f-0d61ec5c0890
+Rutland,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/34460f70-5095-4417-82e2-7780a3d38880/content,atr_dspace,dspace,2346e3e1-9e99-4b28-a93d-0e5c9b9266f0
+Rutland,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/ed7e48a9-9743-4b10-9f55-b5dc512f61f1/content,atr_dspace,dspace,9c4ff568-3340-4215-a1fe-6e76e306d9e3
+Salisbury,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/c1f15b11-0c3f-421e-a45a-e40be550407b/content,atr_dspace,dspace,9c1f0dc9-7d92-47f8-83b1-d2002ae36b8e
+Sandisfield,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/d51afe21-3790-410d-b69e-fd1f7786f637/content,atr_dspace,dspace,488c6260-f170-444c-b6f5-605934acd9d2
+Sandisfield,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/d42ddd77-70fd-46d3-9593-217516fdc143/content,atr_dspace,dspace,c02a5670-7e3c-43d9-9ae1-a4bc856732aa
+Saugus,,https://archives.lib.state.ma.us/server/api/core/bitstreams/93b891f6-2329-4459-b20e-617160046ffd/content,atr_dspace,dspace,29a0d929-16cc-484b-a0bf-4ed468d52922
+Saugus,,https://archives.lib.state.ma.us/server/api/core/bitstreams/d56b3c29-80b4-4baa-b053-dd45a21a712d/content,atr_dspace,dspace,1d8c9447-2a31-41a4-a67b-81b7ffc476da
+Saugus,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/329be1d9-7e74-4012-a168-3f57159b76b4/content,atr_dspace,dspace,0825b594-db7c-4cbb-b739-d8c68b9853c4
+Saugus,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/b51370d7-e627-4ecd-b7b1-3fe45080100a/content,atr_dspace,dspace,cd21832f-c925-45e4-8ea3-0f3a3e754541
+Saugus,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/da4c65e8-e778-423e-8376-ccd60af2fa1e/content,atr_dspace,dspace,85676bac-b954-4f80-8987-a5041079d10b
+Saugus,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/0fc8d7cc-01ef-47dd-a6f9-8f896a7bfc8c/content,atr_dspace,dspace,e66c4bed-9fb6-47fb-8cc7-33a0c0492adc
+Savoy,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/88bc40c6-2bb3-4dda-83ea-a55404ff7b38/content,atr_dspace,dspace,ae8afd96-f680-45a8-8839-8c73b90fd005
+Seekonk,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/e1d41c42-313d-49be-99da-4234f86bda20/content,atr_dspace,dspace,753a4858-8722-49a0-8a4d-605dfe18f992
+Seekonk,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/91364c96-e25f-434b-9457-a269b48715fe/content,atr_dspace,dspace,83a927b6-c006-4dfe-aaf7-39f06e630828
+Seekonk,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/d09e4574-8522-4568-a2ad-587082cfe5be/content,atr_dspace,dspace,d40e7301-713c-4b58-a63f-198eb33bdd5e
+Seekonk,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/0cd8abc5-e8d0-4de2-952a-7945561bdf5c/content,atr_dspace,dspace,9fc0e109-3d41-4e08-9ab3-e97bcb7625ad
+Seekonk,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/8180b0b1-5dc0-49d7-92f0-aea5a451ab80/content,atr_dspace,dspace,8702f279-996a-4fa2-ae0f-36b4812f8340
+Seekonk,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/2af666a4-585a-4f8b-a7d1-537462ea20ff/content,atr_dspace,dspace,dc9b0671-e607-4335-9f3e-8b2138059faa
+Shutesbury,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/21e2f945-d02e-47a0-aa8b-ce6e7da776b4/content,atr_dspace,dspace,5449f431-8244-4d4e-9e2a-989dea1c295f
+Shutesbury,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/c502d6e5-84f6-43e7-9e17-1ec33435cbc3/content,atr_dspace,dspace,80fb3b13-269e-4b3f-a285-322e30eaac78
+Shutesbury,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/b1ac99f6-6cea-4f08-9ce4-30889397680f/content,atr_dspace,dspace,fe9c66d6-bea0-4ade-82ee-c8aa4e6f8f74
+Southborough,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/cf000755-9db3-4196-a77d-8f10d3e6c220/content,atr_dspace,dspace,337dce56-7c97-4dc2-b00d-456018b1b802
+Southborough,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/2b6e1282-1c56-476b-903b-6d60247e1d6f/content,atr_dspace,dspace,a85c1dc9-69bc-4881-b5de-b81fcb427355
+Stoughton,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/025d0991-62a7-4c56-bf6d-5a08a85779f4/content,atr_dspace,dspace,52aba7c0-997e-4cd4-86d4-c21296739c53
+Stow,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/931930e0-ee45-4b8f-9d9b-86367273d781/content,atr_dspace,dspace,9e79afcb-437d-4238-a570-259af97b62e1
+Sunderland,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/6db040d6-ec40-4919-a606-327b716aef1b/content,atr_dspace,dspace,186b9ef9-8649-4f26-b274-fe8be1b48b71
+Sutton,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/4498145b-b75c-43e2-88a1-1e6ca2e14be1/content,atr_dspace,dspace,2feb73fd-4b91-40f8-9303-bb4e221c9ddc
+Sutton,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/4a99a5b6-d9be-470b-aaf9-2a34790af6f1/content,atr_dspace,dspace,2e9ddea8-839a-43bd-b5b6-9e0e388b0919
+Sutton,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/b2196213-a3f6-403d-9020-2de0b56a9109/content,atr_dspace,dspace,49a438ba-9b98-4f5e-b17e-bd4f8565b9e0
+Sutton,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/da726b46-70a6-408f-ba6a-ed0fe90cd9af/content,atr_dspace,dspace,40c8c1bf-fb85-4698-9e91-96dcfb651ba9
+Sutton,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/aabfe08d-216b-49bb-81f7-b0627fa8dc0c/content,atr_dspace,dspace,065b56cd-adbd-49ed-928c-79a692169f16
+Sutton,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/420bab16-2f5b-4bdf-9efd-37627579e61c/content,atr_dspace,dspace,4a3e8abb-1f36-43c1-8f3e-a6dd0cc6dda2
+Sutton,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/59db281d-00ba-4e38-8e1d-a2fa8312678a/content,atr_dspace,dspace,4a2cab22-726f-42e8-aa91-a41d512d33cd
+Sutton,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/762ec4b9-894e-4f83-9521-b77c1f9ee372/content,atr_dspace,dspace,a9d6084a-1035-4707-9472-6918fdfe3c25
+Sutton,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/38840a42-8538-45b7-a297-27f90fe5982c/content,atr_dspace,dspace,e7175fe2-d634-421f-96e3-08344d06bac0
+Sutton,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/4e703aca-cb1e-48b6-b8ac-bf25ac47c492/content,atr_dspace,dspace,e34c658d-347e-463f-ab36-6b147e013302
+Swampscott,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/bb540bff-fdb1-49c2-9dca-91133f691b58/content,atr_dspace,dspace,5c1e48cf-c887-4e2a-9d37-2fbb905e91c2
+Swampscott,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/98c2b9bf-9f40-44ff-b80a-e988e21c5198/content,atr_dspace,dspace,fdc75fda-af6c-4765-a556-b3f2fab4b8b1
+Templeton,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/1f3b7740-853d-4298-9b05-dbba71352ba3/content,atr_dspace,dspace,ecb23f46-ad6e-4f41-818e-7318f14f33a6
+Tewksbury,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/6fceccfe-43c5-4e58-b5ae-a23eba9148dd/content,atr_dspace,dspace,96739ab4-ecf6-4cee-b998-e0f7b5bd27b7
+Topsfield,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/9c606d95-bcea-49b0-acc7-35da5e758767/content,atr_dspace,dspace,8581104c-d000-4c41-add7-e6255f935f00
+Truro,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/07af4c53-f529-4200-8d59-4c004bb1fc74/content,atr_dspace,dspace,bfee935a-3743-4d54-b8c3-d1729525c157
+Tyngsborough,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/8297ede2-29bc-4667-afca-041a216014f8/content,atr_dspace,dspace,03b84047-08d5-4a3f-bef5-4251f3752f88
+Tyngsborough,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/4ba92cfa-a339-4ec1-9bdd-19bcc4ea8079/content,atr_dspace,dspace,7c84d8fa-a993-4744-b5bd-cd99a33c1e0b
+Tyngsborough,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/7f634be5-55bd-471a-8636-8c34a54d6433/content,atr_dspace,dspace,d48e2bde-3cf1-4c0b-9bb5-f4101ea76d03
+Uxbridge,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/9df62c13-91e8-4137-8f7f-0d9f76ea459d/content,atr_dspace,dspace,6bad71f4-bfb7-4d02-87b6-984813ff57fd
+Uxbridge,,https://archives.lib.state.ma.us/server/api/core/bitstreams/0d7bf501-9eb2-4110-ac08-eca6f7f51154/content,atr_dspace,dspace,b177adf7-8da0-4748-8536-a8c20e254ae5
+Uxbridge,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/16fb1ae4-c985-407f-9ea2-513dc798648e/content,atr_dspace,dspace,a0969429-6742-4169-b010-37592372d1e5
+Uxbridge,,https://archives.lib.state.ma.us/server/api/core/bitstreams/08e0385f-f211-454e-9cfd-277da530000e/content,atr_dspace,dspace,e1e44018-075e-42bb-8c28-7c552f2a894c
+Uxbridge,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/924ce30c-22c1-4535-9e4c-9e504ef9263f/content,atr_dspace,dspace,d6c51637-c524-4c09-b287-77e42cfe4a1b
+Uxbridge,,https://archives.lib.state.ma.us/server/api/core/bitstreams/03efeabf-b1ab-4a61-a12c-7bc3010b158b/content,atr_dspace,dspace,ea48560b-8e2c-4f63-93a8-ebd1273fcc98
+Wales,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/895f61b0-b9c3-49e9-803a-8b3a5849f713/content,atr_dspace,dspace,1170ace6-51af-4609-a259-5fbfeb1fc439
+Wales,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/fe9a53ec-5e88-4f3b-9a86-7bababbe335b/content,atr_dspace,dspace,77b8405b-3028-4123-b2c7-b4541d132a61
+Wales,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/d4c613e5-2951-4282-9616-4766d4379a83/content,atr_dspace,dspace,6b053d23-ae02-49ae-a5d7-43061dac3304
+Wales,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/70f3eafd-93f7-4b80-9381-d344cbe48143/content,atr_dspace,dspace,7a529a8c-2008-4cf4-8ebb-3bd19c970f43
+Wales,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/554c894b-aea0-4b32-94b6-759d0655d701/content,atr_dspace,dspace,7d2c9259-ec3f-44b6-b4b9-3442ef900c02
+Wales,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/9004eaf7-edc7-4133-8b50-f43642069d76/content,atr_dspace,dspace,b54aad66-f4a5-4a28-bfa4-72872d1e2852
+Ware,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/5e21627d-b111-4a1e-82b6-e397f58ba337/content,atr_dspace,dspace,2d61c764-e616-4d6d-9506-d9cb31e02c1c
+Ware,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/a4249460-61e0-41f3-92df-3531073662db/content,atr_dspace,dspace,0899a6cc-652f-419a-a561-7a0b221a21ea
+Ware,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/e1dd5b3f-0ad6-4122-9a53-eda577cde037/content,atr_dspace,dspace,5d37940d-f81d-44f1-96c0-c81b3f173263
+Ware,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/db2c41b7-1555-43e5-8875-db461cf91556/content,atr_dspace,dspace,a47c0313-dc46-430a-b287-a9f932008b5f
+Ware,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/af8eb27c-fc3a-48e6-a4ee-77ac389c2fbf/content,atr_dspace,dspace,cadda0d9-0a52-4efe-85e8-ca64a3102242
+Ware,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/523ecb67-8c61-4b9c-af02-238651013930/content,atr_dspace,dspace,a2b1806c-3ff5-4ff1-a093-8ae8076ae87a
+Ware,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/5234b026-24b2-478d-ad2c-a3d9efc2f9ef/content,atr_dspace,dspace,afe3bc25-6cc9-466d-a9f6-7b5c835de991
+Wareham,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/34ac55d5-fab2-4ad1-bdaf-057f3aeea92c/content,atr_dspace,dspace,2c478871-aa9a-41cf-ad70-34b3fc488ec6
+Warwick,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/328ff468-3c58-4052-96e5-c724a5b39d8b/content,atr_dspace,dspace,e0bddc21-a7d0-4602-bd50-de00fc08608e
+Watertown,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/bb30e4cf-7fe0-4f50-8adb-262e5b546348/content,atr_dspace,dspace,c783a910-0c93-4fe2-8683-b5474b5cca9b
+West Brookfield,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/f20287a0-08fd-4adb-9173-4098a068dcd6/content,atr_dspace,dspace,a534a333-9214-4274-b2ec-580fe52e6134
+West Newbury,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/e506981a-4fc9-40e1-88a0-260164a7fe15/content,atr_dspace,dspace,0c621745-8ff4-4bdb-a8a8-00fc3ffacfb4
+West Newbury,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/6a094d56-38a9-4629-9f4d-e505f5e4d865/content,atr_dspace,dspace,3b40ad30-d7ce-42d1-be8c-9b918d1eacde
+West Newbury,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/adff94b0-e13f-4f84-bcb0-7102562df065/content,atr_dspace,dspace,6b61688b-a460-46dc-bec0-096e479c4e8a
+West Newbury,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/5f406006-40fa-416b-a0fe-1f60593eab97/content,atr_dspace,dspace,f14c8603-7ff0-4453-87dc-1dd57c7350e5
+West Newbury,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/9f0187f5-9c70-4610-aaf1-da38dc911f72/content,atr_dspace,dspace,fc96692f-8c1a-432a-91c0-36a6fcefaafa
+West Stockbridge,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/76abd716-e606-4494-86c3-aca298e4a32a/content,atr_dspace,dspace,2adaa545-dd32-4be8-961b-86cd14a0b1dc
+West Stockbridge,2021,https://archives.lib.state.ma.us/server/api/core/bitstreams/5f4ffd55-d603-48bf-a78a-5728a32b9b30/content,atr_dspace,dspace,7f0e98dc-cf4b-4053-b7aa-94964d9c4ea2
+Westwood,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/ded0b5d3-9739-445b-bb64-0bf449ea364c/content,atr_dspace,dspace,6d22d916-09e4-4f34-9010-52f551d20f8f
+Westwood,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/067bb259-0dd1-474a-9d79-1fa1274f3345/content,atr_dspace,dspace,cc63836a-fd7c-481c-8321-ca64aa9f3c8d
+Winthrop,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/1ec058dd-583e-4f90-99b0-770db0fd0c01/content,atr_dspace,dspace,97b64329-407e-4e73-91a3-65ee61592d70
+Woburn,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/f70fd8bf-5979-47e6-a82c-1f794720a678/content,atr_dspace,dspace,b674a5df-3daa-429b-8573-2161df32dc8e
+Woburn,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/0ea8798d-d858-4e68-84c5-899dd46755dd/content,atr_dspace,dspace,c0600763-47cc-42df-9e30-b587326614c0
+Wrentham,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/ab1f9155-e8ed-4192-94fd-be7e54355ee3/content,atr_dspace,dspace,3d2c44cd-6a60-445a-83f4-d415537cdd65
+Wrentham,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/e443831b-c861-4d26-aa7c-e8677078c672/content,atr_dspace,dspace,c12dbcf3-25eb-4e4d-8a53-65e904ce4ee1
+Wrentham,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/49b69ca9-618c-4713-9774-486ead69efaa/content,atr_dspace,dspace,d677bd97-f636-49b2-b620-3aa68c7c1aa4
+Wrentham,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/f1c754d7-514a-40d5-91d1-055f54bd228b/content,atr_dspace,dspace,fcc5e100-e935-4042-9a4f-0c8446a541ec
