@@ -1,0 +1,14 @@
+municipality,year,url,alt_url
+Turley WAR May16,2024,https://web.archive.org/web/2024id_/http://www.turley.com/warerivernews/wrn_archives/WAR051624.pdf,
+Turley WAR May23,2024,https://web.archive.org/web/2024id_/http://www.turley.com/warerivernews/wrn_archives/WAR052324.pdf,
+Turley BAR May16,2024,https://web.archive.org/web/2024id_/https://barregazette.turley.com/bg_archive/BAR051624.pdf,
+Turley BAR May23,2024,https://web.archive.org/web/2024id_/https://barregazette.turley.com/bg_archive/BAR052324.pdf,
+Turley QBG May16,2024,https://web.archive.org/web/2024id_/https://www.quaboagcurrent.turley.com/qc-archives/QBG051624.pdf,https://web.archive.org/web/2024id_/http://quaboagcurrent.turley.com/qc-archives/QBG051624.pdf
+Turley QBG May23,2024,https://web.archive.org/web/2024id_/https://www.quaboagcurrent.turley.com/qc-archives/QBG052324.pdf,https://web.archive.org/web/2024id_/http://www.quaboagcurrent.turley.com/qc-archives/QBG052324.pdf
+EB avail,2024,https://archive.org/wayback/available?url=eastbrookfieldma.us/town-clerk/news/official-results&timestamp=20240517,
+EB avail2,2024,https://archive.org/wayback/available?url=www.eastbrookfieldma.us/town-clerk/news/official-results&timestamp=20240601,
+EB cdx,2024,http://web.archive.org/cdx/search/cdx?url=eastbrookfieldma.us/town-clerk*&output=json&limit=400&from=2024&to=2025,
+Warren cdx,2024,http://web.archive.org/cdx/search/cdx?url=warren-ma.gov*&output=json&limit=600&filter=urlkey:.*(elect|result).*,
+Warren avail,2024,https://archive.org/wayback/available?url=warren-ma.gov&timestamp=20240515,
+NB cdx,2024,http://web.archive.org/cdx/search/cdx?url=newbraintreema.us*&output=json&limit=400&from=2024&to=2025,
+EB news cdx,2024,http://web.archive.org/cdx/search/cdx?url=eastbrookfieldma.us*&output=json&limit=600&filter=urlkey:.*(result|elect).*,
