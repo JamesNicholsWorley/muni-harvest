@@ -1,0 +1,10 @@
+municipality,year,url,alt_url
+EB replay 2024,2024,https://web.archive.org/web/2024/https://www.eastbrookfieldma.us/town-clerk/news/official-results,https://web.archive.org/web/2024/http://eastbrookfieldma.us/town-clerk/news/official-results
+EB calendar,2024,https://web.archive.org/web/20240517000000*/eastbrookfieldma.us/town-clerk/news/official-results,https://web.archive.org/web/*/eastbrookfieldma.us/town-clerk/news/*
+EB legacy host,2024,https://web.archive.org/web/2024/https://eastbrookfieldma.civiccms.acsitefactory.com/town-clerk/news/official-results,https://web.archive.org/web/2024/https://www.eastbrookfieldma.us/town-clerk/news
+EB newsroot,2024,https://web.archive.org/web/20240601/https://www.eastbrookfieldma.us/town-clerk,https://web.archive.org/web/20240601/https://www.eastbrookfieldma.us/
+EB cdx html,2024,http://web.archive.org/cdx/search/cdx?url=eastbrookfieldma.us%2Ftown-clerk%2Fnews%2Fofficial-results&matchType=prefix&limit=200,
+EB cdx host,2024,http://web.archive.org/cdx/search/cdx?url=eastbrookfieldma.us&matchType=domain&from=20240501&to=20241231&limit=1000&collapse=urlkey,
+Warren cdx host,2024,http://web.archive.org/cdx/search/cdx?url=warren-ma.gov&matchType=domain&from=20240501&to=20241231&limit=1000&collapse=urlkey,
+Warren replay,2024,https://web.archive.org/web/20240515/https://www.warren-ma.gov/,https://web.archive.org/web/20240601/https://www.warren-ma.gov/171/Election-Results
+NB cdx host,2024,http://web.archive.org/cdx/search/cdx?url=newbraintreema.us&matchType=domain&from=20240501&to=20250401&limit=1000&collapse=urlkey,
