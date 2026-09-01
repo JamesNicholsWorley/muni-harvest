@@ -71,7 +71,11 @@ def main():
             ext = ext_of(url)
             wb = "https://web.archive.org/web/%sid_/%s" % (ts, url)
             status, body = 0, b""
-            for attempt in range(3):
+            # archive.org's replay service returns 503 intermittently, not
+            # uniformly: in one 10-url batch nine failed and one returned a real
+            # PDF. So retry hard and slowly rather than concluding the capture
+            # is unavailable.
+            for attempt in range(8):
                 try:
                     req = urllib.request.Request(wb, headers={"User-Agent": UA})
                     with urllib.request.urlopen(req, timeout=180) as resp:
@@ -81,7 +85,7 @@ def main():
                 except Exception as exc:  # noqa: BLE001
                     status = getattr(exc, "code", 0) or 0
                     body = b""
-                    time.sleep(10.0 * (attempt + 1))
+                    time.sleep(15.0 * (attempt + 1))
             head = body[:4]
             want = MAGIC.get(ext)
             ok = bool(body) and (want is None
