@@ -23,7 +23,27 @@ A ranged GET (`Range: bytes=0-511`) returns the header without the body, so a
 full town costs kilobytes rather than gigabytes. It is still tens of thousands of
 requests, which is why it runs here and not on the maintainer's machine.
 
-Input  (default config/dc_gap_towns.csv): town,host,years,max_id
+Input  (default config/dc_gap_towns.csv): town,host,years,max_id[,control_id]
+
+TWO DEFECTS IN THE FIRST RUN OF THIS SCRIPT, both of which produced confident
+negatives about servers it had not actually queried:
+
+  * **The id cap was too low.** 1-3000 per town. North Brookfield's 2025 return
+    sits at id 6745; ids 6000-8200 there hold 786 documents the sweep never saw.
+  * **The host form was wrong for at least one town.** It used `granville-ma.gov`;
+    Granville serves on `www.granville-ma.gov`. The sweep reported 0 named
+    documents and the town was written up as having no DocumentCenter at all --
+    while ids 950-1299 hold a clean 2015-2025 series of election results.
+
+So `control_id` is now required in spirit: a known-good id taken from THIS town's
+own published citation is probed first, and a town whose control returns no
+filename is reported CONTROL_FAILED and its zeros mean nothing. `max_id` is
+derived per town from the highest id that town is known to use, not from a
+global guess.
+
+A third trap, upstream of this file: do not take the host from `known_bad_url`.
+That column exists to record citations that point at the WRONG TOWN, and reading
+it gave Richmond -> brooklinema.gov and Warren -> ashlandmass.com.
 Output (default out/): dc_names_<shard>.csv  town,id,filename,ctype,bytes
                        dc_reach_<shard>.csv  town,host,probed,named,errors
 
@@ -100,12 +120,24 @@ def main():
          open(rpath, "w", encoding="utf-8", newline="") as rf:
         nw, rw = csv.writer(nf), csv.writer(rf)
         nw.writerow(["town", "id", "filename", "ctype", "range"])
-        rw.writerow(["town", "host", "probed", "named", "errors"])
+        rw.writerow(["town", "host", "probed", "named", "errors", "control"])
 
         for r in mine:
             town, host = r["town"], r["host"].strip()
             top = int(r.get("max_id") or 3000)
             stats = {"probed": 0, "named": 0, "errors": 0}
+
+            ctrl_id = r.get("control_id")
+            if ctrl_id:
+                cres = probe(host, int(ctrl_id))
+                if not cres or cres == "ERR":
+                    rw.writerow([town, host, 0, 0, 0, "CONTROL_FAILED:%s" % ctrl_id])
+                    rf.flush()
+                    print("  %-18s %-26s CONTROL %s FAILED -- host wrong, "
+                          "town UNTESTED" % (town, host, ctrl_id), flush=True)
+                    continue
+                print("  %-18s %-26s control %s -> %s"
+                      % (town, host, ctrl_id, cres[0][:40]), flush=True)
 
             def one(i, town=town, host=host, nw=nw, stats=stats):
                 res = probe(host, i)
@@ -122,7 +154,7 @@ def main():
                 list(ex.map(one, range(1, top + 1)))
             nf.flush()
             rw.writerow([town, host, stats["probed"], stats["named"],
-                         stats["errors"]])
+                         stats["errors"], "OK"])
             rf.flush()
             print("  %-18s %-26s probed=%d named=%d err=%d  %.0fs"
                   % (town, host, stats["probed"], stats["named"],
