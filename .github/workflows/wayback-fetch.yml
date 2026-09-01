@@ -1,0 +1,49 @@
+name: wayback-fetch
+
+# Retrieve SPECIFIC Wayback captures on a runner IP.
+#
+# Enumeration already runs here (cdx-fullsweep). Retrieval has to as well: two
+# single-document `web/<ts>id_/<url>` fetches from the maintainer's IP came back
+# HTTP 429 with a 117-byte body. The throttle is on cumulative per-IP volume, and
+# that IP is spent.
+#
+# Input is a small CSV of name,timestamp,url -- captures already identified from
+# a cdx_raw dump, so this makes one request per wanted document and no queries.
+
+on:
+  workflow_dispatch:
+    inputs:
+      csv:
+        description: "CSV of name,timestamp,url"
+        default: "config/wb_fetch.csv"
+      sleep:
+        description: "Seconds between requests (be polite)"
+        default: "6"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fetch captures
+        run: |
+          python scripts/wayback_fetch.py \
+            --csv "${{ github.event.inputs.csv }}" \
+            --sleep "${{ github.event.inputs.sleep }}" \
+            --out out
+      - name: Show what came back
+        if: always()
+        run: |
+          echo "--- reach ---"
+          cat out/wayback_fetch_reach.csv || true
+          echo "--- files ---"
+          ls -la out || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wayback-fetch
+          path: out
+          if-no-files-found: warn
