@@ -1,0 +1,74 @@
+name: cdx-fullsweep
+
+# All-mimetype Wayback CDX enumeration of the CivicAtlasMA gap towns, sharded
+# across runner IPs. archive.org throttles by cumulative per-IP volume, so a
+# full-host sweep must never run from the maintainer's machine -- that is what
+# got it 429'd. Each shard here does ~1/N of the volume from a different IP.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of parallel runner IPs"
+        default: "8"
+      hosts_csv:
+        description: "Input CSV: town,host,years"
+        default: "config/cdx_gap_hosts.csv"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  sweep:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: CDX sweep shard ${{ matrix.shard }}
+        run: |
+          python scripts/cdx_fullsweep.py \
+            --hosts-csv "${{ github.event.inputs.hosts_csv }}" \
+            --shard "${{ matrix.shard }}" --out out
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cdx-shard-${{ strategy.job-index }}
+          path: out/
+          if-no-files-found: ignore
+
+  merge:
+    needs: sweep
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge
+        run: |
+          mkdir -p merged
+          echo "town,year,url,timestamp,mimetype,why" > merged/cdx_hits.csv
+          find shards -name 'cdx_hits_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/cdx_hits.csv
+          echo "town,host,status,n_urls,n_hits" > merged/cdx_hosts.csv
+          find shards -name 'cdx_hosts_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/cdx_hosts.csv
+          echo "hits:  $(($(wc -l < merged/cdx_hits.csv) - 1))"
+          echo "hosts: $(($(wc -l < merged/cdx_hosts.csv) - 1))"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cdx-merged
+          path: merged/
