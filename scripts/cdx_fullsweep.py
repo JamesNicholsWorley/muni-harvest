@@ -137,6 +137,11 @@ def main():
 
     hp = os.path.join(a.out, "cdx_hits_%s.csv" % tag)
     sp = os.path.join(a.out, "cdx_hosts_%s.csv" % tag)
+    rp = os.path.join(a.out, "cdx_raw_%s.csv" % tag)
+    rf = open(rp, "w", encoding="utf-8", newline="") if a.dump_raw else None
+    rrw = csv.writer(rf) if rf else None
+    if rrw:
+        rrw.writerow(["town", "host", "url", "timestamp", "mimetype"])
     with open(hp, "w", encoding="utf-8", newline="") as hf, \
          open(sp, "w", encoding="utf-8", newline="") as sf:
         hw, sw = csv.writer(hf), csv.writer(sf)
