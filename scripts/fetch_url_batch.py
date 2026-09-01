@@ -36,9 +36,17 @@ def _kind(data: bytes) -> str:
         return "pdf"
     if data[:4] == b"PK\x03\x04":
         return "xlsx"
+    if data[:3] == bytes((255, 216, 255)):
+        return "jpg"
+    if data[:8] == bytes((137, 80, 78, 71, 13, 10, 26, 10)):
+        return "png"
     head = data[:400].lstrip().lower()
     if head.startswith(b"<!doctype") or head.startswith(b"<html") or b"<html" in head:
         return "html"
+    # CDX capture lists come back as a JSON array; keep them, they are the index
+    # that tells us which timestamps exist.
+    if head[:1] in (b"[", b"{"):
+        return "json"
     return "none"
 
 
@@ -66,7 +74,7 @@ def fetch(url: str, timeout: int = 40):
     urllib served as an HTML WAF challenge."""
     data = _urllib_get(url, timeout)
     k = _kind(data)
-    if k in ("pdf", "xlsx"):
+    if k in ("pdf", "xlsx", "jpg", "png", "json"):
         return data, k
     d2 = _curl_get(url, timeout)
     if d2:
@@ -111,7 +119,7 @@ def main():
             html_fallback = None
             for u in urls:
                 data, kind = fetch(u.strip(), args.timeout)
-                if kind in ("pdf", "xlsx"):
+                if kind in ("pdf", "xlsx", "jpg", "png", "json"):
                     got = (u.strip(), data, kind)
                     break
                 if kind == "html" and html_fallback is None:
