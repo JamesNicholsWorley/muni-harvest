@@ -43,7 +43,7 @@ jobs:
         run: |
           python scripts/cdx_fullsweep.py \
             --hosts-csv "${{ github.event.inputs.hosts_csv }}" \
-            --shard "${{ matrix.shard }}" --out out
+            --shard "${{ matrix.shard }}" --dump-raw --out out
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -66,6 +66,10 @@ jobs:
           find shards -name 'cdx_hits_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/cdx_hits.csv
           echo "town,host,status,n_urls,n_hits" > merged/cdx_hosts.csv
           find shards -name 'cdx_hosts_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/cdx_hosts.csv
+          # the RAW enumeration: every archived url, unfiltered. The `why`
+          # classifier is where recall is lost, so keep what it discarded.
+          echo 'town,host,url,timestamp,mimetype' > merged/cdx_raw.csv
+          find shards -name 'cdx_raw_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/cdx_raw.csv
           echo "hits:  $(($(wc -l < merged/cdx_hits.csv) - 1))"
           echo "hosts: $(($(wc -l < merged/cdx_hosts.csv) - 1))"
       - uses: actions/upload-artifact@v4

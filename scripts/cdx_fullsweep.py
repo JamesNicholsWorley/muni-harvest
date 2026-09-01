@@ -119,6 +119,14 @@ def main():
     ap.add_argument("--hosts-csv", default="config/cdx_gap_hosts.csv")
     ap.add_argument("--shard", default=None)
     ap.add_argument("--out", default="out")
+    ap.add_argument("--dump-raw", action="store_true",
+                    help="also write cdx_raw_<shard>.csv: EVERY enumerated url, "
+                         "unfiltered. The `why` classifier is where recall is "
+                         "lost -- Merrimac's May-2022 local return sits at a "
+                         "DocumentCenter id whose slug the classifier does not "
+                         "recognise, so it never reached cdx_hits. Keeping the "
+                         "raw enumeration means the next question can be asked "
+                         "of the data instead of of archive.org again.")
     a = ap.parse_args()
 
     with open(a.hosts_csv, encoding="utf-8", newline="") as fh:
@@ -146,6 +154,10 @@ def main():
                       flush=True)
                 continue
             n = 0
+            if rrw:
+                for u, ts, mime in urls:
+                    rrw.writerow([town, host, u, ts, mime])
+                rf.flush()
             for u, ts, mime in urls:
                 for y in years:
                     w = why(u, y)
@@ -159,6 +171,9 @@ def main():
             print("  [%2d/%2d] %-18s %-32s %6d urls -> %3d hits"
                   % (k, len(mine), town, host, len(urls), n), flush=True)
             time.sleep(1.0)
+    if rf:
+        rf.close()
+        print("  raw enumeration written to %s" % rp)
     print("wrote %s and %s" % (hp, sp))
     return 0
 
