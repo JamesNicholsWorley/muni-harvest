@@ -1,0 +1,6116 @@
+
+### DOC 502b2f228e | town=Boxborough | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://boxborough-ma.gov/DocumentCenter/View/2138/MBTACommunitiesFAQ-FINALIteration101-11-22pdf
+
+[PAGE 1]
+Final – Iteration No. 1 
+January 11, 2022 
+ 
+ 
+ 
+1 of 7 
+MBTA COMMUNITIES  
+FREQUENTLY ASKED QUESTIONS 
+ 
+ 
+A. 
+General 
+ 
+A1. 
+What role does DHCD play in determining compliance with the new section 3A of the 
+Zoning Act (“Section 3A”)? 
+ 
+Section 3A gives DHCD, in consultation with the Massachusetts Bay Transportation 
+Authority and the Massachusetts Department of Transportation, discretion to promulgate 
+guidelines to determine if an MBTA community complies with Section 3A.  DHCD released 
+draft guidelines on December 15, 2021.  The draft guidelines clarify what is required to comply 
+with the statute, for example by defining what it means for a district to be of “reasonable size,” 
+and explaining how communities demonstrate that a district meets the law’s minimum gross 
+density requirement.  The draft guidelines do not impose mandates or create restrictions that are 
+not in the law. 
+ 
+A2. 
+Can you clarify how DHCD determined if a particular MBTA community is a rapid 
+transit community, a bus service community, a commuter rail community, or an 
+adjacent community? 
+ 
+MBTA communities were categorized based on whether they have transit service located 
+within the municipality or within 0.5 miles of the municipal boundary, and if so what type of 
+transit service.  A community with access to more than one transit type is classified in the 
+category with the higher unit capacity requirement.  More specifically: 
+ 
+• A rapid transit community has an MBTA subway station located within its borders, or 
+within 0.5 miles of its border.  Note, a rapid transit community may also have other 
+types of transit stations.   
+ 
+• A bus service community has no subway station within its border or within 0.5 miles 
+of its border, but does have an MBTA bus route with one or more bus stops located 
+within the community.  Note, a bus community that happens also to have a commuter 
+rail station within its borders is placed within the bus community category due to the 
+presence of the bus route. 
+ 
+• A commuter rail community has a commuter rail station within its borders or within 
+0.5 miles of its border, but has no bus route or subway station. 
+ 
+• An adjacent community abuts a rapid transit community, bus service community or 
+commuter rail community, has no subway station or commuter rail station within its 
+boundaries or within 0.5 miles of its border, and has no MBTA bus route running 
+through it. 
+
+[PAGE 2]
+Final – Iteration No. 1 
+January 11, 2022 
+ 
+ 
+ 
+2 of 7 
+B. 
+Location of Districts 
+ 
+B1. 
+How much discretion does each MBTA community have with respect to where a multi-
+family district is located? 
+ 
+A multi-family zoning district must be located within 0.5 miles of a transit station, with at 
+least half of the district’s land area within the 0.5-mile radius, when that is possible.  Where it is 
+not possible to locate a district within 0.5 miles of a transit station, cities and towns otherwise 
+have considerable flexibility to decide where to locate these districts.  These districts may be 
+located where there are existing single-family, multi-family, commercial or other existing uses 
+and structures, or in areas ready for redevelopment.  DHCD strongly encourages cities and towns 
+to consider multi-family districts where there is existing or planned pedestrian and bicycle access 
+to a transit station, or that otherwise are in areas of concentrated development.  Regardless of 
+location, each community must demonstrate that the zoning allows for multi-family housing that 
+meets or exceeds the required unit capacity and at a density that meets the statutory minimum. 
+ 
+B2. 
+What if my community has more than one transit station—for example, a subway 
+station and a separate commuter rail station, or multiple commuter rail stations?  Do I 
+need a multi-family zoning district in proximity to each station?  If not, can I choose 
+which transit station the district? 
+ 
+ 
+Section 3A requires each MBTA community to “have a zoning ordinance or by-law that 
+provides for at least 1 district of reasonable size in which multi-family housing is permitted as of 
+right ….”  An MBTA community may have more than 1 such multi-family zoning district, but a 
+single district is all that Section 3A requires.  If an MBTA community has more than one transit 
+station, it may locate the multi-family zoning district within 0.5 miles of any of them. 
+ 
+B3. 
+Can my town establish a multi-family district in an area where there is already 
+significant multi-family development? 
+ 
+Yes, but you still must demonstrate the district meets the “reasonable size” criteria, 
+including the minimum unit capacity, and at the required minimum gross density. 
+ 
+B4. 
+Can my town establish a multi-family district in an area where there are many single 
+family homes on small lots? 
+ 
+ 
+Yes, but it may be difficult to demonstrate such a district meets the minimum multi-
+family unit capacity and gross density requirements, because the zoning is unlikely to allow for 
+the construction of the required number and density of multi-family housing units on small 
+parcels. 
+ 
+ 
+ 
+
+[PAGE 3]
+Final – Iteration No. 1 
+January 11, 2022 
+ 
+ 
+ 
+3 of 7 
+B5. 
+My community has been categorized as a “bus service community” because we have an 
+MBTA bus route, with several bus stops in town.  Are bus stops or park-and-ride 
+locations the same as “bus stations,” and do we have to locate our multi-family zoning 
+district within 0.5 miles of one of a bus stop or park-and-ride location if we have one? 
+ 
+No.  Neither a bus stop nor a park-and-ride location is considered to be a bus station.  The 
+draft guidelines attempted to make this point by including a definition of bus station. 
+ 
+C. 
+Size of Districts 
+ 
+C1. 
+How do the draft compliance guidelines define reasonable size? 
+ 
+The draft compliance guidelines consider two factors in determining if a zoning district is 
+of reasonable size.  First, they require the land area in the district be at least 50 acres.  Second, 
+the draft guidelines consider the number of multi-family units that the zoning allows in the 
+district—what the guidelines refer to as the district’s “multi-family unit capacity.”  The 
+minimum multi-family unit capacity for each district depends on the type of transit service in a 
+particular community, if any, and ranges from 10 to 25 percent of the community’s total housing 
+stock.  This may at first sound like a large number of units, but keep in mind that “unit capacity” 
+is just a measure of the number of multi-family units allowed by right in the district—many of 
+which may already exist.  Unit capacity is not a requirement to construct a particular number of 
+units, or any units at all. Section 3A requires multi-family by right zoning, not housing 
+production. 
+ 
+C2. 
+A minimum land area of 50 acres seems like a lot—isn’t that too big for most 
+communities? 
+ 
+The intent of Section 3A is to require the creation of multi-family zoning districts within 
+0.5 miles of a transit station, where applicable.  For reference, a circle with a half-mile radius and 
+a transit station at its center comprises about 500 acres.  The minimum district size of 50 acres is 
+approximately one-tenth of that land area.  In most MBTA communities, 50 acres will be well 
+under 1 percent of the community’s total land area.  A minimum land area of 50 acres will 
+encourage long-term, neighborhood-scale planning, instead of using zoning as a way to permit 
+proposed projects on specific sites.  But 50 acres is still only a small fraction of the land area in a 
+town and gives communities significant flexibility on where to locate a district in the half-mile 
+radius around a transit station. 
+ 
+C3. 
+Section 5.a of the draft guidelines states that portions of an overlay district can be a 
+minimum of 5 acres as long as one portion of the overlay district is 25 acres.  Does this 
+apply to “base districts” as well?  
+ 
+Yes, base districts and overlay districts have the same minimum land area requirements.   
+ 
+
+[PAGE 4]
+Final – Iteration No. 1 
+January 11, 2022 
+ 
+ 
+ 
+4 of 7 
+C4. 
+My community has 2500 total housing units and is categorized as an “adjacent 
+community.”  Is the required unit capacity 250 (10% of the total housing units) or 750 
+(50 acres x 15 units/acre)?  
+ 
+Your town’s minimum unit capacity is 250 as that term is defined in the draft guidelines.  
+But, to comply with Section 3A, the multi-family zoning district also must meet the minimum 
+gross density requirement of not less than 750 multi-family units (for a 50-acre district).  
+Because the guidelines establish a minimum land area of 50 acres and the statute requires a 
+minimum gross density of 15 units per acre, the result is that every MBTA community, 
+regardless of its size, must provide a zoning district that allows at least 750 multi-family units as 
+of right.  This requirement is a floor on the number of units a zoning district must allow—many 
+MBTA communities are required to have a district with a larger unit capacity.  In other words, 
+because of the minimum gross density requirement, a compliant district must allow at least 750 
+units regardless of the number of housing units in the community. 
+ 
+C5. 
+My community is categorized as a “commuter rail community” because we have a 
+commuter rail station.  We have almost 10,000 housing units.  Are you saying we need 
+to construct new multi-family units equal to 15% of our total housing stock? 
+ 
+No, your community does not have to produce 1,500 new housing units.  Your 
+community must adopt a multi-family zoning district that can accommodate that many units.  
+Those units may be existing units, as long as they would be allowed to be built as of right under 
+the district’s zoning; or they may be new units that potentially could be constructed by right 
+sometime in the future; or a combination of existing and potential new units. 
+ 
+C6. 
+According to the draft guidelines, my community must have a zoning district with a 
+unit capacity of 970 units.  We have an area in town with 800 multi-family units 
+already.  Some of these units were built by special permit, and others were built under 
+chapter 40B.  Can we create a new zoning district in this area and count the existing 
+units? 
+ 
+The zoning district must allow for 970 multi-family units by right.  To determine the unit 
+capacity of a new or existing multi-family zoning district, you do not “count” existing units—
+you instead determine how many multi-family units the zoning district would allow by right on 
+that parcel if it were undeveloped.  Depending on the density, height, open space, setbacks, 
+parking and other requirements that apply in the district, and the amount of developable land on 
+each parcel, it is possible that all of the existing 800 units could be constructed by right—or even 
+more than the existing 800 units.  The important thing to understand is that you are counting 
+what the zoning allows by right, not the number of units that currently exist. Note that in addition 
+to meeting the unit capacity requirement, the district must meet the minimum gross density 
+requirement as well.  In some cases, the zoning for a district will need to allow for more multi-
+family units to meet the minimum gross density requirement. 
+ 
+ 
+
+[PAGE 5]
+Final – Iteration No. 1 
+January 11, 2022 
+ 
+ 
+ 
+5 of 7 
+D. 
+Minimum Gross Density 
+ 
+D1. 
+What does it mean to have a minimum gross density of 15 units per acre? 
+ 
+Section 3A states that each multi-family zoning district of reasonable size “shall … have 
+a minimum gross density of 15 units per acre, subject to any further limitations imposed 
+by section 40 of chapter 131 and title 5 of the state environmental code established pursuant 
+to section 13 of chapter 21A.”  The law defines gross density as “a units-per-acre density 
+measurement that includes land occupied by public rights-of-way and any recreational, civic, 
+commercial and other nonresidential uses.”  The law clearly states that the gross density 
+requirement applies to the district as a whole, rather than to individual parcels or projects within 
+that district.  The draft guidelines provide further instruction on how to calculate the gross 
+density of an existing or proposed multi-family zoning district.   
+ 
+D2. 
+Can the multi-family district have subdistricts with varying degrees of density as long 
+as the average gross density is 15 units/acre? 
+ 
+Yes.  The draft guidelines permit the multi-family district to contain sub-districts that 
+may have varying densities (higher and lower than a gross density of 15 units/acre) as long as the 
+gross density for the entire district is at least 15 units/acre.  
+ 
+D3. 
+Is a district that allows or requires mixed use and residential gross density of at least 15 
+units per acre acceptable to meet the guidelines?  
+ 
+Yes, commercial and other uses can also be permitted by right or by special permit in a 
+multi-family zoning district.  A mixed-use district will be deemed to comply with Section 3A as 
+long as it meets the unit capacity, density and other requirements in the guidelines.   
+ 
+E. 
+Interim Compliance Requirements 
+ 
+E1. 
+DHCD released draft guidelines on December 15. What is expected of us until these 
+draft guidelines are issued as final guidelines?  
+ 
+While DHCD is collecting public comment on the draft guidelines, and until final 
+guidelines are issued, an MBTA community can remain in compliance with Section 3A by 
+taking the following actions set forth in the “How to Comply for 2022 for MBTA Communities” 
+which can be found here.   If you would like to submit comments on the draft guidelines, you 
+may do so online here. 
+ 
+E2. 
+Who signs the attestation required in section 9 of the guidelines? We are concerned 
+our small town doesn’t have the expertise to make this statement.   
+ 
+The attestation must be signed by each municipality’s chief executive officer—the mayor 
+in a city and the board of selectmen in a town, unless some other municipal office is designated 
+
+[PAGE 6]
+Final – Iteration No. 1 
+January 11, 2022 
+ 
+ 
+ 
+6 of 7 
+to be the chief executive officer under the provisions of a local charter.  Technical assistance will 
+be available after the guidelines are finalized and you may also consult with your Regional 
+Planning Agency for assistance.   
+ 
+E3. 
+What happens if my community does not comply with Section 3A? 
+ 
+MBTA communities that do not timely comply with Section 3A will not be eligible to 
+receive Massworks or Housing Choice funding through the 2022 Community One-Stop 
+Application.  Non-compliant MBTA communities will also be ineligible to receive funding from 
+the Local Capital Projects Fund established in section 2EEEE of chapter 29.  The compliance 
+requirements in effect until the issuance of final guidelines can be found here. 
+ 
+F. 
+Technical Assistance 
+ 
+F1. 
+Where can I find help understanding the new law and how best to comply with it? 
+ 
+ 
+Additional resources are available at mass.gov/MBTACommunities.  Funding 
+opportunities for planning and other technical assistance will be available in next year’s One 
+Stop application.  Further information on the One Stop application is available at 
+mass.gov/onestop.  Other technical assistance will be offered by the Massachusetts Housing 
+Partnership (MHP) and regional planning agencies.  Details about MHP’s technical assistance 
+are available at www.mhp.net/mbtazoning. 
+ 
+G. 
+Miscellaneous 
+ 
+G1. 
+What if I already have a zoning district in which multi-family housing is allowed by 
+special permit?  Does that count? 
+ 
+No, the law requires that multi-family uses be allowed by right in the district.  Those uses 
+may be subject to site plan review and design review, but multi-family uses cannot be subject to 
+special permits or other discretionary permits that a local board can deny the use, or impose 
+conditions unrelated to site layout, pedestrian safety, internal circulation of automobiles, and 
+public safety considerations. 
+ 
+G2. 
+Can an MBTA community’s zoning require that multi-family projects within a multi-
+family zoning district include a specified percentage of affordable units?   
+ 
+  
+Yes, reasonable affordability requirements are allowed, as long as they are financially 
+feasible and do not unduly impede the construction of new multi-family housing in the 
+district.  At least 140 cities and towns in the Commonwealth have some form of “inclusionary” 
+zoning requiring that a percentage of units in new housing developments be affordable.  Any 
+affordability requirements in a zoning ordinance or bylaw will be reviewed on a case-by-case 
+basis to ensure that they are reasonable. 
+ 
+
+[PAGE 7]
+Final – Iteration No. 1 
+January 11, 2022 
+ 
+ 
+ 
+7 of 7 
+G3. 
+Can a project within the multi-family zoning district be required to have an adequate 
+number of parking spaces? 
+ 
+Requiring too many parking spaces for multi-family housing projects can practically 
+impede the number of multi-family units that can be constructed within the district.  A 
+municipality should consider reducing or eliminating any minimum parking requirements in the 
+multi-family zoning district—particularly for projects that are within walking or biking distance 
+to a transit station—to allow for a greater density of multi-family units on each parcel. In all 
+cases, a municipality must consider whether the unit capacity and minimum gross density 
+requirements are met given the amount of parking required. 
+ 
+G4. 
+My community does not currently provide a public sewer system.  Are we required to 
+design and construct a public sewer system and offer sewer hook ups to support higher 
+density housing?  If so, how can we pay for that expensive infrastructure? 
+ 
+No.  Multi-family housing can be created at the required density using private septic and 
+wastewater treatment systems that meet state environmental standards.  Where public systems 
+currently exist, private developers may be able to support the cost of necessary water and sewer 
+extensions.  Communities are encouraged to consider the location of any municipal water 
+sources and other nitrogen-sensitive areas when siting multi-family zoning districts to minimize 
+barriers to installing septic and wastewater systems that can serve the needs of multi-family 
+housing development in the district.  Cities and towns seeking to affirmatively plan for growth 
+may also be eligible for state grants to defray the cost of new or expanded public infrastructure.   
+ 
+G5. 
+My community is concerned that new multi-family housing will mean many more 
+children in the school system.  Our school system is already at capacity and we do not 
+have the resources to accommodate more children.  What can we do? 
+ 
+The new law does not require immediate housing production—only the creation of 
+compliant zoning districts where multi-family housing may be created as of right.  It is unlikely 
+that communities will see an immediate increase in school attendance, given the time needed to 
+assemble land for development, design and build housing.  Moreover, studies have shown that in 
+most cases new multi-family housing development has no negative impact on a community’s 
+school system. 
+ 
+
+
+### DOC 707614a874 | town=Boxborough | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://boxborough-ma.gov/DocumentCenter/View/2147/DHCD-Guidelines-for-MBTA-Communities-Boxborough-Presentation-Press-Releasepdf
+
+[PAGE 1]
+ 
+ 
+Simon Corson, Town Planner 
+scorson@boxborough-ma.gov  
+ 
+BOXBOROUGH SELECT BOARD 
+29 Middle Road, Boxborough, Massachusetts 01719 
+Phone: (978) 264-1712 · Fax: (978) 264-3127 
+www.boxborough-ma.gov 
+Wesley Fowlks, Chair  
+Leslie Fox, Clerk                 John Markiewicz 
+Jennifer Campbell 
+Diana Lipari 
+ 
+ 
+ 
+ 
+ 
+Press Release - For Immediate Release  
+For Additional Information Contact:  
+Simon Corson, Town Planner 
+1.978.264.1723 
+ 
+BOXBOROUGH TO BRIEF ALL ON MBTA ZONING REQUIREMENT 
+The Boxborough Town Planner, Simon Corson, will brief a joint Meeting of the Select Board and 
+Planning Board, via Zoom, on Monday, March 14, 2022 at 7 p.m. on the so-called MBTA Zoning which 
+must be adopted by December 31, 2024. Town residents, business owners, and all other interested 
+parties are encouraged to attend. 
+ 
+A presentation on the Department of Housing and Community Development (DHCD) DRAFT 
+Guidelines that require Boxborough to zone a district with multi-family housing as of right. Enacted as 
+part of the Economic Bond Bill (House No. 5250) in January 2021, Section 3A of the M.G.L. c. 40A 
+(the Zoning Act) requires that an MBTA community, such as Boxborough, shall have at least one 
+zoning district of reasonable size in which multi-family housing is permitted as of right with the 
+minimum gross density of 15 units per acre, contains no age restrictions, and is suitable for 
+families with children.  
+ 
+Boxborough is considered an adjacent MBTA community because the Fitchburg-Boston 
+commuter train travels through the northeast portion of Town. Boxborough must allow for at 
+least 750 units (50 acres x 15 units/acre). Given that Boxborough has no land area within 0.5 mile of a 
+transit station, the multi-family district should be located in an area with reasonable access to a transit 
+station. Failure to create such a district would bar Boxborough from participation in the Housing Choice 
+Initiative, MassWorks Infrastructure Program, and other grant opportunities. For more information about 
+these DRAFT Guidelines, please visit DHCD’s informational webpage. 
+ 
+ 
+
+
+### DOC cd7dcdc4eb | town=Boxborough | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://boxborough-ma.gov/DocumentCenter/View/2148/MBTA-Communities-Draft-Multifamily-Guidelines_Boxborough-Presentationpdf
+
+[PAGE 1]
+MBTA Communities Draft 
+Multifamily Guidelines
+A Discussion with the Boxborough Select Board & Planning Board
+MARCH 14, 2022
+
+[PAGE 2]
+Agenda
+1. Background
+2. Summary of Draft Guidelines
+3. Anticipated Impact on Boxborough
+4. Potential Questions and Comments for State and MAPC
+5. Important Dates
+6. Resources
+7. Questions & Comments
+3/14/2022
+Town of Boxborough, MA
+2
+
+[PAGE 3]
+Background
+• Economic Bond Bill (House No. 5250, An Act Enabling Partnerships for 
+Growth) passed Mass Legislature in December 2020 and signed by 
+Governor Baker in January 2021.
+• Bill included a range of housing provisions including lowering 
+threshold for Town Meeting vote for certain zoning provisions.
+• Section 18 of the Bill reads addresses the requirement of MBTA 
+communities to have an as-of-right multifamily zoning district of 
+“reasonable size” with a minimum density of 15 units per acre. The 
+language of the sections reads as follows:
+3/14/2022
+Town of Boxborough, MA
+3
+
+[PAGE 4]
+3/14/2022
+Town of Boxborough, MA
+4
+
+[PAGE 5]
+Summary of Draft Guidelines
+• Guidelines released on December 15, 2021
+• Department of Housing and Community Development (DHCD) 
+Webinar on January 12, 2022 providing information on Guidelines
+• DHCD also provided a web page for the program which includes:
+• FAQ
+• Webinar Slides
+3/14/2022
+Town of Boxborough, MA
+5
+
+[PAGE 6]
+Draft Guidelines Summary
+1. Must establish a district of a “reasonable” size (at least 50 acres of land).
+2. May have sub-districts with differing densities as long as the overall 
+district meets the minimum requirement.
+3. Must allow at least 15 units/acre (minimum gross density).
+4. Must be without any age restrictions.
+5. Must be legally and practically allowed.
+6. Should be in areas that have safe and convenient access to transit by 
+bicycles and pedestrians.
+3/14/2022
+Town of Boxborough, MA
+6
+
+[PAGE 7]
+Draft Guidelines Summary
+7. Must allow for at least 10% of units as share of total housing stock 
+but also must allow at least 750 units (50 acres x 15 units/acre). The 
+750 unit minimum for Boxborough was confirmed. I expect that we 
+can determine how lack of current water and sewer infrastructure 
+might impact this number.
+8. Communities must estimate the unit capacity for each district. The 
+minimum required capacity must be attainable in the district(s). The 
+state and Massachusetts Housing Partnership (MHP) will be 
+developing tools that communities can use to make these 
+calculations on a per lot basis.
+3/14/2022
+Town of Boxborough, MA
+7
+
+[PAGE 8]
+Draft Guidelines Summary
+9.
+When an MBTA community has no land area within 0.5 mile of a transit station 
+(Boxborough), the multi-family district should, if feasible, be located in an area 
+with reasonable access to a transit station based on existing street patterns, 
+pedestrian connections, and bicycle lanes, or in an area that otherwise is 
+consistent with the Commonwealth’s sustainable development principles.
+10. DHCD must make a “Determination of Compliance” for each applicable 
+community, which may be interim, allowing Boxborough to establish the 
+requisite bylaws and mapped area(s).
+11. Interim compliance requires:
+a. Creation of an Action Plan
+b.Implementation of Action Plan
+c. Adoption of Zoning Amendment
+d.Request Determination of Full Compliance
+3/14/2022
+Town of Boxborough, MA
+8
+
+[PAGE 9]
+Draft Guidelines Summary
+13. Effect of Non-Compliance – The MBTA community will not be eligible for funds 
+from the following grant programs:
+a. the Housing Choice Initiative;
+b. the Local Capital Projects Fund; or
+c. the MassWorks infrastructure program.
+14. To remain in compliance while DHCD is collecting public comment on the Draft 
+Guidelines, an MBTA community must:
+• Submit the MBTA Community Information Form by 5:00 p.m. on May 2, 
+2022.
+• Hold a briefing of your City Council, Town Council or Select Board on the 
+Draft Compliance Guidance no later than May 2, 2022 and attest to that on 
+the MBTA Community Information Form.
+3/14/2022
+Town of Boxborough, MA 
+9
+
+[PAGE 10]
+Anticipated Impact on Boxborough
+• Current Guidelines require a minimum of 750 units for Boxborough 
+based on 15 units/acre minimum and minimum 50 acre district size. 
+The density factor is codified while the district size is a part of the 
+draft Guidelines.
+• Since it should be in areas that have safe and convenient access to 
+transit by bicycles and pedestrians, there is not an obvious location in 
+Boxborough for this District. 
+3/14/2022
+Town of Boxborough, MA Planning Board
+10
+
+[PAGE 11]
+Potential Questions and Comments for State 
+and MAPC
+1. Boxborough lacks water and sewer infrastructure. The state should 
+clarify how the lack of this infrastructure will impact these requirements.
+2. Boxborough does not have area that is currently suitable for dense 
+multifamily zoning. Therefore, Boxborough might assert that the 
+MassWorks infrastructure program is critical for building the multimodal 
+connections that are vital for transit oriented development.  
+3. Boxborough believes that regardless of the ultimate total units required 
+for Boxborough, that such development will have a significant impact on 
+Boxborough’s services and infrastructure. As such, Boxborough may ask 
+the state to implement an Impact Fee Law to allow communities to 
+reasonably impose impact fees for developments of a specific threshold 
+size (e.g., Chapter F, Cape Cod Commission).
+3/14/2022
+Town of Boxborough, MA
+11
+
+[PAGE 12]
+3/14/2022
+Town of Boxborough, MA
+12
+Potential Questions and Comments for State and MAPC
+4. As a rural community, Boxborough does not have the administrative capacity 
+to handle large projects. Therefore, Boxborough may like to have the ability 
+to introduce a phasing provision or limit on the number of building permits 
+in order to reasonably be able to absorb a certain number of units annually.
+5. A one size fits all 750 minimum units is not a fair provision and will have a 
+disparate impact on differently sized communities. Boxborough is a small, 
+rural community and the 750 is a significant amount of existing housing 
+stock and could fundamentally change the community. Boxborough might 
+propose that an alternative methodology for the number of units. This 
+should be formula driven based on specific criteria such as total housing 
+stock. It should be focused on a percentage of total housing units divided by 
+the codified minimum density of 15 units/acre.
+
+[PAGE 13]
+3/14/2022
+Town of Boxborough, MA Planning Board
+13
+Potential Questions and Comments for State 
+and MAPC
+6. If the minimum number of units triggers the need for new school 
+facilities, the state should be prepared to assist local communities 
+in this program by providing funding for those new or expanded 
+facilities similar to how MGL 40S provides school funds.
+
+[PAGE 14]
+Important Dates
+Please see below the set of important dates related to the new MBTA multifamily zoning district 
+guidelines. We should add them to our calendars.
+
+March 31, 2022 – Deadline for submitting comments on Draft Guidelines.
+
+Draft Letter should be prepared ahead of the Select Board’s March 21 Public Meeting. 
+
+Before May 2, 2022 – The Select Board must hold a briefing on the Draft Compliance Guidance.
+
+May 2, 2022 @ 5:00 pm – The MBTA Community Information Form must be submitted.
+
+July 1, 2023 – Deadline for obtaining DHCD approval of a timeline and action plan.
+
+December 31, 2024 – Deadline for adopting an appropriate zoning amendment that complies 
+with guidelines.
+3/14/2022
+Town of Boxborough, MA
+14
+
+[PAGE 15]
+Available Resources for Boxborough
+Available Resources for Boxborough
+There are a range of technical resources available to assist MBTA communities to respond to the 
+guidelines. These include:
+1.
+Mass Housing Partnership – MHP has a Housing Toolbox on their website but is also offering 
+personalized technical assistance to six (6) communities on a first come-first served basis with an 
+application due in May.
+2. One Stop for Growth Grant Program
+3. Executive Office of Energy and Environmental Affairs (EEA) Planning Technical Assistance Grant 
+Program
+4. District Local Technical Assistance (DLTA) Grant Program
+3/14/2022
+Town of Boxborough, MA
+15
+
+[PAGE 16]
+Questions & Comments?
+3/14/2022
+Town of Boxborough, MA
+16
+
+
+### DOC fc26513638 | town=Boxborough | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://boxborough-ma.gov/DocumentCenter/View/2139/MBTA-Communities_Summary-Deck-Feb-2022pdf
+
+[PAGE 1]
+New Multifamily Zoning Requirement for 
+MBTA Communities
+
+[PAGE 2]
+Housing Production in Massachusetts
+1
+•
+Between 1960 and 1990, Massachusetts communities permitted almost 900,000 housing units. Since 1990, 
+communities have permitted fewer than 470,000 new units. 
+•
+As highlighted in the Future of Work study, there is an estimated shortage of up to 200,000 housing units.
+•
+Municipalities play a key role, through zoning and permitting, in determining whether or not housing is built.  
+Cities and towns are therefore necessary partners if the Commonwealth is to solve our housing crisis.
+
+[PAGE 3]
+The Housing Crisis
+2
+•
+Before COVID-19, Massachusetts faced a core challenge in creating adequate housing to 
+support young families, workers, and an aging population. The pandemic has further 
+highlighted these needs.
+•
+Massachusetts has among the highest, and fastest growing, home prices and rents of any 
+state in the nation.
+•
+Rising costs have dramatically increased financial pressures on low- and middle-income 
+families, forcing them to sacrifice other priorities in order to pay housing costs. High 
+housing costs are a primary driver of homelessness.
+•
+The lack of housing production is an impediment to community development. 
+•
+These high costs are a disadvantage as we compete economically against peer states. The 
+risk of future job growth moving outside Massachusetts is rising due to the high costs of 
+living.
+
+[PAGE 4]
+Confronting the Housing Crisis
+3
+•
+2018 Housing Bond Bill: 
+–
+In 2018, Governor Baker signed the largest housing bond bill in state history, authorizing more than $1.8 billion to the future of 
+affordable housing production and preservation.
+–
+Since 2015, Massachusetts has invested more than $1.4 billion in the affordable housing ecosystem, resulting in the production 
+and preservation of more than 22,000 housing units, including over 19,000 affordable units.
+•
+2021 Economic Development Bill:
+–
+Housing Choice Zoning Reforms: These targeted changes to M.G.L c. 40A reduce the threshold of votes needed to adopt 
+certain zoning measures that promote housing production from 2/3 to simple majority. 
+•
+Guided by a basic principle: Where there is majority consensus in communities around increasing housing production, a minority of 
+voters should not be able to block zoning reform. 
+–
+$50M for Transit Oriented Housing Development to produce new, high-density, mixed-income affordable housing 
+developments located near major transit nodes and help mitigate environmental/traffic concerns
+–
+$50M for Neighborhood Stabilization to return blighted or vacant units back to productive use, including in communities 
+disproportionately affected by COVID-19
+–
+$10M for Climate-Resilient Affordable Housing Production of affordable, multi-family housing developments, with the goals of 
+equipping homes to better respond to climate changes and reducing greenhouse gas emissions 
+•
+ARPA Spending Package: 
+–
+Homeownership: $115M for the CommonWealth Builder Program and $65M for First-Time Homebuyer Assistance 
+–
+Affordable Housing: $115M for the Affordable Rental Units and $150M for Supportive Housing
+•
+Eviction Diversion Initiative: 
+–
+The Baker-Polito Administration has transformed a $20M homelessness prevention program to an over $700M comprehensive, 
+state and federally funded disaster relief initiative. From March 2020 through December 2021, DHCD distributed $460.8M in 
+assistance to 61,142 unique households. 
+
+[PAGE 5]
+Transit-Oriented Housing Development 
+4
+•
+Importance: We must continue to leverage housing best practices to meet the state’s 
+housing needs and position Massachusetts well for the future. 
+•
+Opportunity: In late 2019, the Mass Housing Partnership (MHP) evaluated 261 station 
+areas in Greater Boston and found the median housing density across all station areas is 
+roughly 6.2 homes per acre. MHP concluded that a modest increase to just 10 homes per 
+acre could yield approximately 253,000 additional housing units over time. 
+•
+Benefits: By allowing multifamily housing near transit, we can create new housing in 
+walkable neighborhoods closer to transit. This is not just good housing policy, it is good 
+climate and transportation policy, too. The result of transit-oriented development is: 
+–
+More housing closer to the places that we go every day, such as local shops, jobs, schools, 
+restaurants, parks, etc. 
+–
+Better access to work, services, and other destinations by increasing mobility and utilization of 
+public transit
+–
+Reduced reliance on single occupancy vehicles, which helps in our larger effort to confront the 
+climate crisis  
+
+[PAGE 6]
+What We Are Discussing Today
+5
+•
+When the Governor signed the multi-family zoning requirement for MBTA 
+communities into law last January, he made clear that the Administration will 
+take a thoughtful approach in developing compliance criteria in accordance with 
+the new law.
+•
+To that end, the draft guidelines: 
+– Are consistent with the underlying law
+– Focus on zoning—the local rules that govern where housing can be built
+– Recognize that a multi-family district that is reasonable in one city or town may not be 
+reasonable in another city or town
+– Provide local control—municipalities have discretion where multi-family districts are 
+located and the rules established in those districts
+•
+This is a real opportunity to establish a new paradigm for encouraging multi-
+family housing production. 
+
+[PAGE 7]
+What We Are NOT Discussing Today
+6
+•
+The draft guidelines do not: 
+– Include a production mandate or a requirement to build new units
+• There is no requirement to construct a particular number of units, or any units at 
+all. This new law requires multi-family by right zoning, not housing production. 
+– Have anything to do with “Chapter 40B” which allows developers to bypass local 
+zoning in communities where there is not enough affordable housing
+• This is not that! Unlike 40B, these draft guidelines have nothing to do with the 
+permitting of individual projects. 
+•
+Actual production will depend on several factors, including developer interest, 
+infrastructure (e.g. water/sewer), market dynamics, etc. It will also take time—
+this is about creating capacity for the future. 
+
+[PAGE 8]
+Relevant Section from the Economic Development Bill:
+7
+Chapter 358 of the Acts of 2020
+SECTION 18.  Said chapter 40A is hereby further amended by inserting after section 3 the following section:-
+Section 3A.  (a)(1) An MBTA community shall have a zoning ordinance or by-law that provides for at least 1 
+district of reasonable size in which multi-family housing is permitted as of right; provided, however, that 
+such multi-family housing shall be without age restrictions and shall be suitable for families with children. 
+For the purposes of this section, a district of reasonable size shall: (i) have a minimum gross density of 15 
+units per acre, subject to any further limitations imposed by section 40 of chapter 131 and title 5 of the state 
+environmental code established pursuant to section 13 of chapter 21A; and (ii) be located not more than 0.5 
+miles from a commuter rail station, subway station, ferry terminal or bus station, if applicable.
+(b)  An MBTA community that fails to comply with this section shall not be eligible for funds from: (i) the 
+Housing Choice Initiative as described by the governor in a message to the general court dated December 
+11, 2017; (ii) the Local Capital Projects Fund established in section 2EEEE of chapter 29; or (iii) the 
+MassWorks infrastructure program established in section 63 of chapter 23A.
+(c)  The department, in consultation with the Massachusetts Bay Transportation Authority and the 
+Massachusetts Department of Transportation, shall promulgate guidelines to determine if an MBTA 
+community is in compliance with this section.
+
+[PAGE 9]
+What is an MBTA Community? 
+8
+•
+“MBTA community” is 
+defined by reference to G.L. 
+c. 161A, sec. 1.
+•
+There are 175 municipalities* 
+subject to this new law:
+*Note, Boston is not subject to the Zoning Act (c. 
+40A) including section 3A.
+
+[PAGE 10]
+Reasonable Size: Land Area & Unit Capacity
+9
+•
+DHCD issued preliminary guidance on January 29, 2021. The preliminary guidance provided that MBTA 
+Communities will be deemed to be in compliance with this new section until more detailed compliance 
+criteria are established. These draft guidelines propose those compliance criteria.
+•
+The draft guidelines outline a two-part test to determine reasonable size:
+1.
+Minimum Land Area: multi-family districts must comprise at least 50 acres of land—or approximately 1/10 of the 
+land area within 0.5 mile of a transit station -- with a minimum gross density of 15 units per acre, subject to any 
+further limitations imposed by relevant aspects of the state environmental code.
+2.
+Minimum Multi-Family Unit Capacity: The multi-family unit capacity is a number of units based on a percentage of 
+total housing units within the community. This represents the number of multi-family housing units that can be 
+developed as of right within the multi-family district. That percentage varies by access to transit:
+Service Type/Category
+Minimum MF %  of 
+Total Housing Stock
+# of communities
+Subway or light rail communities
+25%
+17
+MBTA bus communities
+20%
+35
+Commuter rail communities 
+15%
+48
+“Adjacent” communities, no MBTA transit service
+10%
+75
+
+[PAGE 11]
+MBTA Communities By Category of Service
+10
+All communities served 
+by the MBTA need to 
+zone to allow for 
+multifamily housing by-
+right, with a greater 
+obligation for 
+communities with 
+higher levels of transit 
+service.
+
+[PAGE 12]
+Closer Look at Minimum Unit Capacity
+11
+• In addition to the minimum land area test, the minimum unit capacity test means that each 
+district must have capacity for a minimum number of multi-family units (existing or potential).
+• For example, for a municipality with 10,000 housing units, the minimum capacity will vary based 
+on the type of service:
+• Important to remember that this is about capacity—enabling production by expanding 
+capacity through zoning. Actual unit production will depend on many factors.
+Service Type/Category
+Minimum MF % of 
+Total Housing Stock
+Minimum capacity for 
+multi-family housing
+Subway or light rail communities
+25%
+2,500
+MBTA bus communities
+20%
+2,000
+Commuter rail communities
+(a rail station in the community or within 0.5 
+mile)
+15%
+1,500
+“Adjacent” communities, no MBTA transit 
+service
+10%
+1,000
+
+[PAGE 13]
+Size and Density Requirements
+Section 3A requires districts be of “reasonable size” and have a minimum gross density of 
+15 units per acre: 
+•
+Unit capacity is the minimum number of multi-family units the zoning allows as of 
+right. Each community’s minimum unit capacity is a percentage of its existing housing 
+stock.
+•
+The gross density requirement is a simple formula: 15 units times the number of 
+acres in the district.  A district comprising 50 acres (i.e. the minimum land area) must 
+allow as of right at least 750 units (15 x 50) to meet the gross density requirement.
+Each multi-family zoning district must satisfy both tests.  In some cases, the minimum 
+number of units will be equal to the minimum unit capacity.  In other cases, the minimum 
+number of units allowed as of right will be determined by the gross density requirement.
+•
+This explains why 750 units is a floor for all communities under the draft guidelines. 
+12
+
+[PAGE 14]
+Location of Districts 
+13
+•
+The statute provides that “a district of reasonable size shall…be located not more than 0.5 
+miles from a commuter rail station, subway station, ferry terminal or bus station, if 
+applicable.”
+•
+MBTA communities with some land area within 0.5 miles of a transit station:
+–
+Require at least ½ of land area of the multi-family zoning district to be located within the 
+prescribed distance, with exceptions only in unusual cases.
+•
+MBTA communities with no land area within 0.5 miles of a transit station:
+–
+The multi-family district should be located in an area with reasonable access to a transit station 
+based on existing street patterns, pedestrian connections, and bicycle lanes, or in an area that 
+otherwise is consistent with the Commonwealth’s sustainable development principles (e.g., near 
+an existing downtown, village center, or an area of concentrated development).
+
+[PAGE 15]
+Examples of ~15 Units Per Acre:
+14
+Lexington, MA
+Sudbury, MA
+Westwood, MA
+Credit: Amy Dain
+Norfolk, MA
+Source: The Urbanist illustrating new mixed-housing-type 
+subdivision at ~15 units per acre
+
+[PAGE 16]
+Importance of Technical Assistance
+15
+• The Baker-Polito Administration realizes that 
+implementation is going to be complex and 
+challenging, and that some municipalities –
+possibly many – are going to need help and support 
+of different kinds.
+• To that end, we are developing a suite of Technical 
+Assistance to support municipalities, over time, 
+with implementation.
+• EOHED/DHCD/MHP are working to make the 
+process of seeking and receiving technical 
+assistance as streamlined as possible for 
+municipalities.
+
+[PAGE 17]
+Technical Assistance (TA) - Continued
+16
+•
+From the Massachusetts Housing Partnership (MHP), with consultant support:
+– Online tools and a clearinghouse of info, available to municipalities at their own pace, to include:
+•
+Webinars and training modules, best practices, model ordinances and bylaws, and sample public outreach materials
+– Grant monies for third-party assistance to municipalities selected based on their readiness to 
+participate and need for support, to include help with:
+•
+Drafting/amending bylaws and ordinances, conducting build-out analysis, drawing/mapping district boundaries, etc.
+•
+Information and links to all available technical assistance resources for MBTA communities to be posted on the Housing Toolbox
+•
+Additional TA opportunities and avenues will include:
+–
+FY23 Community One Stop: MBTA Communities can apply for assistance through programs like the 
+Housing Choice Grant Program, Community Planning Grants, and the Rural and Small Town 
+Development Fund
+–
+FY23 EOEEA Land Use Planning Grant program will prioritize MBTA municipalities
+–
+Support from eight Regional Planning Agencies through prioritization of Commonwealth-
+provided District Local Technical Assistance (DLTA) funding to municipalities seeking to implement the 
+new provisions and needing help to do so.
+–
+And potentially more…
+
+[PAGE 18]
+How to Comply in 2022
+17
+• Each MBTA community will be deemed to 
+achieve interim compliance—and remain 
+eligible for the 2022 One Stop—as long as it 
+completes the “MBTA Community 
+Information Form”.
+• This online form includes some 
+straightforward requests:
+– Provide basic information about existing zoning via 
+online form
+– Discuss the MBTA draft guidance at a meeting of the 
+select board, city council or Town Council
+•
+To be eligible for MassWorks & Housing Choice 
+Community Grants via the 2022 One Stop Process, 
+you must complete this form by May 2nd, 2022.
+
+[PAGE 19]
+MBTA Communities Timeline, as outlined in Draft Guidelines
+18
+•
+The draft guidelines incorporate timing considerations for MBTA Communities through a 
+phased-in approach.  
+•
+The intent is to allow communities time to determine the location of the district, the rules 
+within the district, and other important aspects related to overall compliance. 
+December 15, 
+2021
+Draft Guidelines 
+Released & 
+Website Launched
+March 31, 2022
+Public Comment 
+Period Ends
+May 2, 2022
+Deadline to 
+Submit 
+MBTA 
+Community 
+Information 
+Form
+December 31, 2022
+Submit an Action Plan 
+or Request for 
+Compliance 
+Determination
+March/July 20231
+Action Plan 
+Approval  from 
+DHCD
+December 31, 2023
+Subway and Bus 
+Communities must 
+adopt zoning 
+amendment
+December 31, 2024
+Commuter Rail and 
+Adjacent Communities 
+must adopt zoning 
+amendment
+1. As outlined in the draft guidelines, subway communities and bus service communities must obtain DHCD approval of an action plan by no later than March 31, 2023. Commuter rail communities and adjacent communities must obtain DHCD 
+approval of a timeline and action plan by no later than July 1, 2023. 
+
+[PAGE 20]
+Timeline to Finalize Guidelines
+19
+• Robust Stakeholder Engagement Process (December 15 – March 31):
+– The Baker-Polito Administration will spend the next few months soliciting input and 
+feedback from key stakeholders, particularly towns and cities.
+– This process is also designed to educate and inform relevant parties of the expectations, 
+as set forth in the legislation and by the draft guidelines.
+– Public comment period will end on March 31, 2022.
+• Final Guidelines to be issued after Stakeholder Engagement Process:
+– Once final guidelines are developed, communities will be expected to take affirmative 
+steps towards the creation of a compliant multi-family district.
+– Deadline for having a compliant zoning district as proposed in the draft will be phased-in:
+• 2023 for subway and bus communities
+• 2024 for commuter rail and MBTA adjacent communities
+
+[PAGE 21]
+Guidelines and Supplemental Information 
+20
+• Please visit mass.gov/mbtacommunities for: 
+– Draft Guidelines
+– How to Comply in 2022
+• Due by 5/2/22
+– Public Comment(s)
+– Access to Technical Assistance
+– Frequently Asked Questions (FAQ)—NEW!
+– Other important information
+
+
+### DOC 862e1dbc14 | town=Boxborough | community_type=MBTA adjacent | governing_body=Select Board | screened_board=zoning | screened_doctype= | url=https://boxborough-ma.gov/DocumentCenter/View/2140/MBTA-Community-Multi-Family-Zoning-Finalpdf
+
+[PAGE 1]
+MBTA COMMUNITY 
+MULTI-FAMILY HOUSING
+Wednesday, February 16, 2022
+Massachusetts Municipal Lawyers Association
+Panel Members:
+Donna M. Brewer, Esq., Miyares and Harrington, LLP 
+Susan Murphy, Esq., Dain, Torpy, Le Ray, Wiest & Garner, P.C 
+Barbara Saint Andre, Esq., Director, Medway Community and Economic Development 
+
+[PAGE 2]
+MGL Chapter 40A, Section 3A
+(a)(1) An MBTA community shall have a zoning ordinance or by-law that provides for at least 1
+district of reasonable size in which multi-family housing is permitted as of right; provided, however,
+that such multi-family housing shall be without age restrictions and shall be suitable for families with
+children.For the purposes of this section,a district of reasonable size shall:
+(i) have a minimum gross density of 15 units per acre, subject to any further limitations imposed
+by section 40 of chapter 131 and title 5 of the state environmental code established pursuant to
+section 13 of chapter 21A; and
+(ii) be located not more than 0.5 miles from a commuter rail station, subway station, ferry
+terminal or bus station, if applicable.
+(b) An MBTA community that fails to comply with this section shall not be eligible for funds from:
+(i) the Housing Choice Initiative as described by the governor in a message to the general court
+dated December 11, 2017;
+(ii) the Local Capital Projects Fund established in section 2EEEE of chapter 29; or
+(iii) the MassWorks infrastructure program established in section 63 of chapter 23A.
+(c) The department, in consultation with the Massachusetts Bay Transportation Authority and the
+Massachusetts Department of Transportation, shall promulgate guidelines to determine if an MBTA
+community is in compliance with this section.
+2
+
+[PAGE 3]
+MBTA COMMUNITIES
+3
+Source: Mass.gov - Multi-family Zoning Requirements for MBTA Communities
+“MBTA community” means a city or town that is: (i) one of the
+51 cities and towns as defined in section 1 of chapter 161A; (ii) one
+of the 14 cities and towns as defined in said section 1 of said chapter
+161A; (iii) other served communities as defined in said section 1 of
+said chapter 161A; or (iv) a municipality that has been added to the
+Massachusetts Bay Transportation Authority under section 6 of
+chapter 161A or in accordance with any special law relative to the
+area constituting the authority.
+-------------------------------------------------------------------------
+"Rapid transit community” means an MBTA community with a
+subway station within its borders, or within 0.5 mile of its border.
+An MBTA community with a subway station within its borders, or
+within 0.5 mile of its border, shall be deemed to be a rapid transit
+community even if there is one or more commuter rail stations or
+MBTA bus lines located in that community.
+“Bus service community” means an MBTA community with a bus
+station within its borders or within 0.5 miles of its border, OR an
+MBTA bus stop within its borders, and no subway station or
+commuter rail station within its border, or within 0.5 mile of its
+border.
+“Commuter rail community” means an MBTA community with a
+commuter rail station within its borders, or within 0.5 mile of its
+border, and no subway station within its borders, or within 0.5 mile
+of its border.
+“Adjacent community” means an MBTA community with no
+transit station within its border or within 0.5 mile of its border.
+
+[PAGE 4]
+MULTI-FAMILY HOUSING
+G.L. c. 40A, Section 1A defines “multi-family housing” as:
+“a building with 3 or more residential dwelling units or 2 or more buildings on the
+same lot with more than one residential dwelling unit in each building.”
+Draft Guidelines define “multi-family district” as:
+“a zoning district, including an overlay district, in which multi-family uses are allowed by 
+right.”
+4
+
+[PAGE 5]
+Depar tment of Housing and Community Development
+DRAFT Compliance Guidelines for Multi-family Districts
+Under Section 3A of the Zoning Act
+DHCD issued Draft Guidelines on December 15, 2021
+DHCD is accepting comments on the Draft Guidelines until March 31, 2022.  
+While the Draft Guidelines are under review, each MBTA community must take the
+following steps to remain in compliance with chapter 40A, §3A and be eligible for
+funding under the three programs listed above:
+➢Hold a briefing of the Select Board, City Council or Town Council on the Draft 
+Guidelines no later than May 2, 2022; and 
+➢Submit the MBTA Community Information Form by May 2, 2022.
+5
+
+[PAGE 6]
+TIMELINE FOR COMPLIANCE
+To remain in compliance, each MBTA community must do one of the following no later 
+than December 31, 2022:
+➢Submit a complete request for determination of compliance (i,e., submit information 
+as outlined in the Guidelines demonstrating that the community has established a 
+multi-family zoning district that complies with chapter 40A, §3A); or
+➢Submit a proposed action plan as provided for in the Guidelines (i.e., send written 
+notice to DHCD that a multi-family zoning district must be adopted, and a proposed 
+action plan and timeline for planning activities, community outreach, drafting zoning 
+amendments, public hearings, legislative action, and other steps to established a 
+multi-family zoning district that complies with chapter 40A, §3A)
+➢DHCD will endeavor to respond to inquiries during the action plan period with 
+informal advice as to whether proposed zoning will comply with c. 40A, §3A
+6
+
+[PAGE 7]
+MBTA COMMUNITY MULTI-FAMILY ZONING DISTRICT
+QUANTUM OF VOTE
+The following shall be adopted by a vote of a simple majority [rather than 2/3] 
+of all members of the town council or of the city council where there is a 
+commission form of government or a single branch or of each branch where 
+there are 2 branches or by a vote of a simple majority of town meeting: 
+(1) an amendment to a zoning ordinance or by-law to allow any of the 
+following as of right: 
+(a) multifamily housing or mixed-use development in an eligible location; 
+(b) accessory dwelling units, whether within the principal dwelling or a 
+detached structure on the same lot; or 
+(c) open-space residential development. 
+7
+M.G.L. C. 40A, §5 - ADOPTION OR CHANGE OF ZONING 
+ORDINANCES OR BY-LAWS; PROCEDURE
+( A m e n d e d a s p a r t o f C h a p t e r 3 5 8 o f t h e A c t s o f 2 0 2 0 )
+“Eligible locations”, areas that by virtue of 
+their infrastructure, transportation access, 
+existing underutilized facilities or location 
+make highly suitable locations for residential or 
+mixed-use smart growth zoning districts or 
+starter home zoning districts, including without 
+limitation:
+(i) areas near transit stations, including rapid
+transit, commuter rail
+and bus and ferry
+terminals; or
+(ii)
+areas
+of
+concentrated
+development,
+including town and city centers, other existing
+commercial districts in cities and towns and
+existing rural village districts.
+M.G.L. C. 40A, §1A  
+DEFINITIONS
+
+[PAGE 8]
+ALLOWING MULTI-FAMILY HOUSING “AS OF RIGHT”
+Per the Draft Guidelines:
+To comply with Section 3A, a multi-family district must allow multi-family housing
+“as of right” meaning the construction and occupancy of multi-family housing is allowed
+in that district without the need to obtain any discretionary permit or approval.*
+*Definition in Draft Guidelines only paraphrases the definition in MGL 40A, §1A:
+“As of right” - development that may proceed under a zoning ordinance or by-law without the need for a special
+permit, variance, zoning amendment, waiver or other discretionary zoning approval.
+8
+
+[PAGE 9]
+SITE PLAN REVIEW OF “AS OF RIGHT” USE
+Per the Draft Guidelines:
+Site plan review and approval may be required for multi-family
+uses allowed as of right.
+Site plan approval may regulate matters such as vehicular
+access and circulation on a site, architectural design of a building,
+and screening of adjacent properties.
+Site plan review may not be used to deny a project that is
+allowed as of right*, nor may it impose conditions that make it
+infeasible or impractical to proceed with a multi-family use that is
+allowed as of right.
+9
+*As a general rule site plan review may not
+be denied; but see Prudential Ins. Co. of
+America v. Bd. of Appeals of Westwood, 23
+Mass.App.Ct. 278, n.9 (1986):
+“A board may lawfully reject a site plan that
+[(a)] fails to furnish adequate information
+on the various considerations imposed by
+the by-law as conditions of the approval of
+the plan... [or (b)] In some cases, the site
+plan, although proper in form, may be so
+intrusive on the needs of the public in one
+regulated aspect or another that rejection
+by the board would be tenable.” (brackets
+added)
+“The judge was essentially to examine the
+proposal to see if the traffic problem was so
+intractable
+that
+it
+could
+admit
+of
+no
+reasonable solution.” Id. at 283 (emphasis
+added)
+
+[PAGE 10]
+SUITABILITY FOR FAMILIES WITH CHILDREN
+10
+Section 3A states that a compliant multi-family district must be without age 
+restrictions and must be suitable for families with children.
+Per Draft Guidelines:
+“Housing suitable for families” means housing comprised of residential dwelling units 
+that are not age-restricted housing, and for which there are no legal restriction on the 
+number of bedrooms, the size of bedrooms, or the number of occupants.
+“Age-restricted housing” means any housing unit encumbered by a title restriction 
+requiring occupancy by at least one person age 55 or older.
+
+[PAGE 11]
+LIMITATIONS ON MULTI-FAMILY DISTRICT 
+ZONING REGULATIONS
+11
+Per the Draft Guidelines:
+DHCD will deem a multi-family district to comply with these requirements as long as the zoning:
+•
+does not require multi-family uses to include units with age restrictions and
+•
+does not place any limits or restrictions on:
+➢the size of the units*
+➢the number of bedrooms
+➢the size of bedrooms*, or
+➢the number of occupants
+*See Massachusetts State Sanitary Code (105 CMR 410): 
+
+[PAGE 12]
+EFFECT OF NONCOMPLIANCE
+Draft Guidelines:
+If at any point DHCD determines that an MBTA community 
+is not in compliance with Section 3A, that MBTA community 
+will not be eligible for funds from the following grant 
+programs*: 
+(i)
+the Housing Choice Initiative as described by the 
+governor in a message to the general court dated 
+December 11, 2017; 
+(ii) the Local Capital Projects Fund established in section 
+2EEEE of chapter 29; or 
+(iii) the MassWorks infrastructure program established in 
+section 63 of chapter 23A.
+DHCD may, in its discretion, take non-compliance into 
+consideration when making other discretionary grant 
+awards.**
+*The Local Capital Projects Fund is not a grant program
+**Section 3 only restricts eligibility for the funds listed in (i), (ii) and (iii) as the consequence for failure 
+to comply.
+12
+MGL Ch. 40A, § 3A:
+(b) An MBTA community that fails to comply with this
+section shall not be eligible for funds from:
+(i) the Housing Choice Initiative as described by the
+governor in a message to the general court dated
+December 11, 2017;
+(ii) the Local Capital Projects Fund established in section
+2EEEE of chapter 29; or
+(iii) the MassWorks infrastructure program established in
+section 63 of chapter 23A.
+NOTE: Section 3A(c) authorizes the promulgation of guidelines 
+“to determine if an MBTA community is in compliance with this 
+section.” Section 3A(b) lists specific state funds that are affected 
+based on compliance with Section 3A.
+
+[PAGE 13]
+STATE FUNDS AFFECTED BY NONCOMPLIANCE:
+HOUSING CHOICE INITIATIVE
+13
+(i) The Housing Choice Initiative (https://www.mass.gov/housing-choice-designation-and-grants)
+(Summary of FY2023 Program; subject to change)
+The Housing Choice Community Grant Program rewards municipalities that have produced a significant number of housing units* in the last five 
+years and that have adopted or established Best Practices that encourage housing production. (emphasis added)
+*“significant number of housing units” -The Housing Choice designation is based on PRODUCTION OF NEW YEAR-ROUND housing units 
+over the last 5 years. The threshold for qualifications is a 5% increase (or 500 units), or a 3% increase (or 300 units) and best practices.
+“Activities may include capital projects such as construction, modernization, or major repair of physical infrastructure, acquisition of property or 
+interests in property; long-lived equipment; or feasibility, engineering or schematic designs for capital projects. Planning and zoning projects may also 
+be funded by this program.”
+For FY2023, approximately $4 Million is available in grants for qualifying municipalities. Grants in this category will likely be $25,000-$250,000.
+NOTES: If units are created in a communities in compliance with the Grant Program Guidelines, those communities are eligible to become Housing 
+Choice Communities, however:
+a. Adopting the MBTA Community zoning alone does not qualify a community for grant funds. The community must first earn Housing Choice 
+designation which includes creation of the “significant number of housing units” (defined above).  Adopting the multi-family housing district will be 
+the gatekeep prerequisite to eligibility.
+b. This is a temporary designation.  It depends on housing creation and communities fall off this list after five years if unit creation is not sustained 
+year after year. 
+
+[PAGE 14]
+STATE FUNDS AFFECTED BY NONCOMPLIANCE:
+LOCAL CAPITAL PROJECT FUNDS
+14
+(ii) Local Capital Projects Fund established in section 2EEEE of chapter 29
+There shall be established and set up on the books of the commonwealth a Local Capital Projects Fund. The fund shall be credited
+with any funds transferred from the Gaming Revenue Fund established in section 59 of chapter 23K and any monies credited to 
+or transferred to the fund from any other fund or source.
+Notes:
+a.
+The Local Capital Project Fund is a state budget source, not a “grant program” – there is no “application” a community 
+can submit to the state to obtain “Local Capital Project Funds”.
+b.
+It is not yet clear all of the state budget line items or programs that are funded in whole or in part by the Local Capital 
+Projects Fund, but efforts are being made to clarify this question.  To date, the following has been learned:
+•
+For the last few years, the Local Capital Project Fund was used to partially fund an appropriation in the state budget for local housing 
+authorities. Governor Baker’s proposed budget for FY23 continues this use: 
+•
+In FY14, FY15, it appears that 100% of the Local Capital Projects Fund was applied to the MassWorks infrastructure program (with
+some limited earmarked appropriations). 
+c. There is no way to predict where the state will appropriate the Local Capital Project Fund in the future so past 
+appropriation may not provide an indication of future impact of this statutory provision on MBTA Communities.
+
+[PAGE 15]
+STATE FUNDS AFFECTED BY NONCOMPLIANCE:
+MASSWORKS INFRASTRUCTURE PROGRAM
+15
+(iii) The MassWorks infrastructure program established in section 63 of chapter 23A.
+Per M.G.L. ch. 23A, §63, the primary purpose of the MassWorks Program is: to issue grants to municipalities and other public 
+instrumentalities for design, construction, building, land acquisition, rehabilitation, repair and other improvements to publicly-owned 
+infrastructure including, but not limited to, sewers, utility extensions, streets, roads, curb-cuts, parking, water treatment systems, 
+telecommunications systems, transit improvements, public parks and spaces within urban renewal districts, and pedestrian and bicycle 
+ways.
+Source:  FY2023 MassWorks Program Guidelines
+Allowable Use of Funds - Applicants may request capital grant funds for predevelopment activities and/or to cover any and all reasonable
+direct costs associated with the proposed improvements to the public infrastructure, including pre-construction expenses, direct construction 
+costs, and the expenses for project administration…Funds may generally be used for the following types of expenses:
+• Predevelopment: Engineering documents, pre-permitting, proforma development, due diligence, etc.
+• Pre-Construction: Design, final engineering/surveying, permitting, bidding, etc.
+• Direct Construction: All earthwork and/or site work (for example, demolition, sidewalk and road construction, utility relocation, traffic signals, 
+water/sewer extensions, bridge/culvert repairs, etc.)
+• Construction Administration: Project management, traffic control, public safety details, etc.
+Maximum Award Amount - There is no set maximum or minimum amount that an applicant may request for a MassWorks grant, except in
+the case of STRAP [small town road project] awards [$1,000,000 cap], or as might otherwise be dictated by statute.
+
+[PAGE 16]
+DETERMINING REASONABLE SIZE:
+DEFINITIONS
+In making determinations of “reasonable size,” DHCD will take into consideration
+• the area of the district and 
+• the district’s multi-family unit capacity (that is, the number of units of multi-family 
+housing that can be developed as of right within the district).
+Guideline Definitions: 
+“Reasonable size” means not less than 50 contiguous acres of land with a unit capacity 
+equal to or greater than the unit capacity specified in section 5 [of the Guidelines].
+Section 3.b of Guidelines: 
+“Reasonable size” is a relative rather than an absolute determination. Because of the 
+diversity of MBTA communities, a multi-family district that is “reasonable” in one city 
+or town may not be reasonable in another city or town. Objective differences in 
+community characteristics must be considered in determining what is “reasonable” 
+for each community.
+16
+
+[PAGE 17]
+DETERMINING REASONABLE SIZE:
+MINIMUM LAND AREA
+The Draft Guidelines’ interpretation:  Section 3A’s requirement that a multi-family district be a 
+“reasonable size” indicates that the purpose of the statute is to encourage zoning that allows 
+for the development of a reasonable amount of multi-family housing in each MBTA community.  
+Section 3A does not define “reasonable size”.  The Draft Guidelines say that a multi-family 
+district must comprise at least 50 acres of land—or approximately one-tenth of the land 
+area within 0.5 mile of a transit station. 
+• A district should not be a single development site on which the municipality is willing to 
+permit a particular multi-family project.  
+• An overlay district is permitted, provided at least one portion of the overlay district is at 
+least 25 contiguous acres.  
+• No portion of the district that is less than 5 contiguous acres will count toward the 
+minimum (50 acre) size requirement.
+17
+
+[PAGE 18]
+DETERMINING REASONABLE SIZE:
+MINIMUM MULTI-FAMILY UNIT CAPACITY
+Section 3A requirement:  gross density of 15 units per acre, subject to any further limitations imposed by wetlands 
+regulations and Title 5
+Draft Guidelines requirements:  “a reasonable number of multi-family housing units”
+• District’s unit capacity = a number of units equal to or greater than a specified percentage of the total number of 
+housing units within the community. The required percentage will depend on the type of transit service in the 
+community.
+• Regardless of community size, a minimum district capacity of 750 units is required.
+18
+Source: Mass.gov - Multi-family Zoning Requirements for MBTA Communities
+
+[PAGE 19]
+DETERMINING REASONABLE SIZE:
+DETERMINING UNIT CAPACITY WITHIN THE 
+MULTI-FAMILY ZONING DISTRICT
+Draft Guidelines:
+When determining the unit capacity for a specific multi-family district, each MBTA community must estimate how many
+units of multi-family housing could be constructed on each parcel of developable land within the district.
+Parcel is not defined; Lot is defined in Chapter 40A §1A as “an area of land with definite boundaries that is used
+or available for use as the site of a building or buildings.” Is “parcel” intended to be different than “lot”? If so, what
+is a parcel?
+• The estimate should take into account the amount of developable land in the district
+• “Developable land” means land on which multi-family housing units have been or can be permitted and
+constructed. Developable land shall not include land under water, wetland resource areas, areas lacking adequate
+water or wastewater infrastructure or capacity, publicly owned land that is dedicated to existing public uses, or privately
+owned land encumbered by any kind of use restriction that prohibits residential use.
+19
+
+[PAGE 20]
+DETERMINING REASONABLE SIZE:
+DETERMINING UNIT CAPACITY WITHIN THE 
+MULTI-FAMILY ZONING DISTRICT (cont.)
+The estimate must take into account for each parcel:
+• Zoning requirements, including height limitations, lot coverage limitations, 
+maximum floor area ratio, set back requirements and parking space 
+requirements, lot shape factor, other restrictions  applicable in that district 
+under the zoning ordinance or by-law
+• Restrictions and limitations set forth in any other municipal by-laws or 
+ordinances 
+• Examples: Local wetlands protection; tree preservation; stormwater
+20
+
+[PAGE 21]
+DETERMINING REASONABLE SIZE:
+DETERMINING UNIT CAPACITY WITHIN THE 
+MULTI-FAMILY ZONING DISTRICT (cont.)
+The estimate must take into account for each parcel:
+• Limitations
+on
+development
+resulting
+from
+inadequate
+water
+or
+wastewater
+infrastructure*, and, in areas not served by public sewer, any applicable limitations under
+Title 5 of the state environmental code or local septic regulations;
+• “Known” title restrictions on use of the land within the district; 
+• Known limitations, if any, on the development of new multi-family housing within the 
+district based on physical conditions such the presence of waterbodies, and wetlands.
+*Is this capacity, physical infrastructure, or both?  Determining water and sewer capacity 
+can be tricky.  
+21
+
+[PAGE 22]
+DETERMINING REASONABLE SIZE:
+DETERMINING UNIT CAPACITY WITHIN THE 
+MULTI-FAMILY ZONING DISTRICT (cont.)
+Draft Guidelines: 
+If the estimate of the number of multi-family units that can be constructed in the multi-
+family district is less than the minimum unit capacity, then the MBTA community must 
+change the boundaries of the multi-family district or make
+
+### DOC 6bc38cea62 | town=Boxford | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://boxfordlibrary.org/DocumentCenter/View/1180
+
+[PAGE 1]
+MBTA Communities in Boxford
+March 16, 2024 | 9:00 – 10:30 a.m.
+
+[PAGE 2]
+Welcome! Who Are We?
+• Joe Hill – Boxford Housing Partnership – Moderating today’s discussion
+• Ross Povenmire – Town of Boxford Conservation & Planning Agent
+• Ian Burns – Community & Economic Development Manager, Merrimack 
+Valley Planning Commission
+• Jerrard Whitten – Executive Director, Merrimack Valley Planning 
+Commission
+2
+2
+
+[PAGE 3]
+Merrimack Valley Planning Commission
+• MVPC is a public agency tasked with supporting fifteen cities and towns in 
+northeast Massachusetts
+• We assist with zoning, housing development, comprehensive planning, GIS mapping, 
+economic development, transportation planning, environmental planning, and more
+• The Town of Boxford received a grant to hire MVPC to help the town 
+understand the law, its regulations, and Boxford’s options for compliance
+• MVPC did not write the law or the regulations—we help MBTA Communities 
+in our region learn their options for compliance, but it is ultimately up to 
+voters at town meeting to decide on that path. 
+ 
+3
+
+[PAGE 4]
+Agenda
+1. Background on MBTA Communities/3A Legislation Requirements
+1.
+What do the law and regulations say?
+2.
+What the requirements are in Boxford
+3.
+Pause for clarification and technical questions on the regulations
+2. Example of a potential compliant district in Boxford
+1.
+Work to date with the Planning Board and Select Board
+2.
+Map of a potential district 
+3.
+Zoning parameters that would be compliant in this district
+4.
+Questions about this potential district
+3. General comments, feedback, concerns, and aspirations
+4
+
+[PAGE 5]
+• This session is two-way education
+• Residents will educate us on what Boxford needs
+• We will help residents understand what the requirements and options are
+• Assume good intentions – we’re all here to help this community make the best 
+decision
+• Be respectful – listen to understand, not to respond
+• Speak up or step back (be mindful of sharing airtime with others).
+• No technical expertise needed to participate. No question is bad or silly to ask.  
+• We want to hear all your questions, comments, and concerns. During the 
+presentation, we will open time for questions only. At the end, we will have plenty 
+of time for general feedback and comments.
+Guiding Principles for Today’s Discussion
+5
+
+[PAGE 6]
+Background: The Law & Regulations
+6
+
+[PAGE 7]
+History of MBTA Communities Legislation
+• The MBTA Communities Law was passed by the MA Legislature in 2021
+• The law applies to all cities & towns that have MBTA transit stops or are bordering 
+communities with transit stops
+• Requires communities to change zoning regulations to allow multi-family housing by 
+right in one or more zoning districts
+• Law requires the creation of a zoning district - it is not a production mandate
+7
+
+[PAGE 8]
+The Legislation
+• Section 3A – MBTA communities must zone for multi-family housing
+• Zoning requirements to comply with the statute:
+• Multi-family housing is permitted as of right
+• No age restrictions or bedroom restrictions allowed
+• Minimum gross density of 15 units per acre
+• Within 0.5 miles of a commuter rail station, subway station, ferry terminal, or bus station*
+• *This requirement does not specifically apply to Boxford, which is an Adjacent Small Town
+8
+
+[PAGE 9]
+Merrimack Valley Region
+9
+
+[PAGE 10]
+Boxford’s Regulations – Adjacent Small Town
+Adjacent Small Town Regulations:
+1.
+The district must have a potential zoning capacity equal to 5% of the 
+community’s total housing stock
+2.
+The zoning parameters must be able to theoretically accommodate 15 units 
+per acre
+3.
+There is no minimum land area requirement
+4.
+The district may be located anywhere in the community
+For Boxford, this means the district must have a theoretical zoning capacity of 
+141 units. There is no construction requirement as part of these regulations, only 
+zoning.
+10
+
+[PAGE 11]
+What does this look like in each Merrimack Valley community?
+Community
+Community 
+Type
+Theoretical unit 
+capacity
+% District in 
+Station Area
+Community
+Community 
+Type
+Theoretical 
+unit capacity
+% District in Station 
+Area
+Amesbury
+AC
+789
+0%
+Merrimac 
+AST
+138
+0%
+Andover
+CR
+2,031
+50%
+Newbury
+AST
+154
+0%
+Boxford
+AST
+141
+0%
+Newburyport
+CR
+1,292
+20%
+Georgetown
+AC
+750
+0%
+N. Andover
+AC
+1,191
+0%
+Groveland
+AST
+130
+0%
+Rowley
+CR
+601
+20%
+Haverhill
+CR
+4,189
+50%
+Salisbury
+AC
+750
+0%
+Lawrence
+CR
+4,501
+40%
+W. Newbury
+AST
+87
+0%
+Methuen
+AC
+2,019
+0%
+AC = Adjacent Community | AST = Adjacent Small Town | CR = Commuter Rail
+11
+
+[PAGE 12]
+How does this work with no public water or sewer?
+• Boxford only needs to create zoning, the town does not need to ensure 
+there is the necessary infrastructure to support a development
+• If a developer looks at building under the zoning, they may find it is 
+infeasible to build a development given the infrastructure constraints. Per 
+the regulations, it is ok if nothing actually gets built, or if what is built is less 
+than what the zoning may allow.
+• “While the zoning must allow for gross average density of at least 15 units 
+per acre, there may be other legal or practical limitations, including lack of 
+infrastructure or infrastructure capacity, that result in actual housing 
+production at lower density than the zoning allows. The multi-family unit 
+capacity analysis does not need to take into consideration limitations on 
+development resulting from existing water or wastewater infrastructure 
+within the multi-family zoning district”  - Section 3A Compliance Guidelines
+12
+12
+
+[PAGE 13]
+Environmental Protections
+• If a development is ever proposed, Any state or federal laws pertaining to 
+environmental protections will still be applied within the zoning district. 
+Examples of these site constraint considerations include:
+• Title 5 Septic Restrictions 
+• Wetlands Protections
+• Utility and infrastructure capacity 
+• Stormwater management
+• Endangered species 
+13
+
+[PAGE 14]
+What Happens If We Don’t Comply?
+• Communities that do not comply will be ineligible or less competitive in 
+applying for over 12 state grant programs, including grants Boxford has 
+received
+• In recent years, the town has accessed over $800,000 in funding from these 
+programs
+• Example projects: Acquisition of Cargill Field and Nason Conservation Area, MVP 
+Planning Grant, Pye Brook Study, culver replacement design and permitting for 
+Pye Brook crossing of Herrick Road, Georgetown Road, and Pye Brook Lane
+• This is a state law. The Attorney General is pursuing legal action against 
+communities that do not comply.
+14
+
+[PAGE 15]
+Timeline for Implementation
+January 31, 2023
+December 31, 2025
+Adjacent Small 
+Towns must adopt 
+zoning amendment
+15
+
+[PAGE 16]
+Clarification Questions
+16
+
+[PAGE 17]
+Potential Zoning District in Boxford
+17
+
+[PAGE 18]
+Work to Date
+• MVPC has met with the Boxford Select Board and Planning Board to discuss 
+the regulations
+• After discussions with these boards and town staff, we began looking at an 
+area of town bordering Haverhill and North Andover as a potential spot for 
+this zoning
+• This is a preliminary analysis and discussion, meant to show how Boxford 
+can reach compliance. We will need feedback on this proposal, and are also 
+open to discussing other areas of town if residents have any suggestions
+• Nothing at this point is final
+18
+
+[PAGE 19]
+How do we Calculate Compliance?
+1.
+Select parcels being considered for the zoning
+2.
+Assume there are no current structures on the property and that the property 
+has no infrastructure limitations
+3.
+Subtract out wetlands and other undevelopable areas of the parcel
+4.
+Given the proposed zoning parameters (setbacks, height, etc), determine the 
+dimensions of the largest building possible
+5.
+Assuming 1,000 square feet per housing unit, calculate how many housing units 
+could fit in the building
+Example – A one acre lot is roughly 40,000 square feet. If the zoning prevents a 
+developer from building on half that land, they can still build on 20,000 square feet. 
+At two stories, this creates 40,000 square feet of a potential structure, meaning you 
+could put 40 units on the parcel.
+This is NOT a build out analysis, only a zoning analysis
+19
+19
+
+[PAGE 20]
+Potential District Options for Compliance
+Bradford Street District  
+13.97 Acres
+• Location in town that is closest to 
+MBTA access (Bradford Station)
+• Abutting other multifamily housing
+• Potential for infrastructure hookups 
+in Haverhill
+• Additional traffic generation would 
+mostly concentrate towards Rt. 125 
+and 495, not cutting through town
+Haverhill
+North Andover
+Boxford
+20
+
+[PAGE 21]
+Potential District Options for Compliance
+Bradford Street District  
+13.97 Acres
+Minimum Lot Size: 85,000 sqft
+Max Building Height: 2 Stories
+Setbacks: 50ft front yard, 25ft side/rear
+Max building coverage: 25%
+Minimum Open Space: 45%
+Parking: 1.5 spaces per unit minimum
+With these zoning parameters, Boxford would 
+be in compliance
+Haverhill
+North Andover
+Boxford
+21
+
+[PAGE 22]
+Questions About this Ex
+
+### DOC b7ed69be57 | town=Boxford | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://ma-boxford.civicplus.com/542/MBTA-Communities-Law
+
+[PAGE 1]
+
+ 
+ 
+ 
+
+	 
+ 
+				 
+				 
+				 
+	 
+			
+
+	 
+		 
+
+	 
+	
+	 
+ 
+ 
+ 
+
+	
+	 
+	 
+	 
+		 MBTA Communities Law | Boxford, MA 
+
+		 
+			 
+	 
+	
+
+	   
+	   
+	   
+	   
+	 
+	
+	 	 
+
+	 
+	 
+	 
+	 
+	
+	
+	
+	
+
+
+
+
+	   
+	   
+	   
+	   
+
+	 
+	 
+ 
+ 
+
+     
+	 
+	 
+		  
+		 
+			 
+				  
+			 
+		 
+	 
+	 
+		  
+	 
+	 
+		 
+			 
+		 
+	 
+ 
+      
+ 
+ Skip to Main Content 
+ 
+      
+
+         
+
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+
+      
+     
+         
+                 
+                    
+
+
+
+ 
+ 
+     
+          Create a Website Account   - Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;  
+         
+	          Website Sign In  
+         
+     
+ 
+ 
+ 
+
+                 
+             
+                  
+                
+ 
+  
+   
+ 
+  
+
+
+
+
+				   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					   
+
+  
+   
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+	
+	 
+	 
+	 
+
+	 
+				 
+		 
+			 
+						   
+
+			 Search 
+		 
+
+	 
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+  
+  
+          Departments   			            Boards &amp; Committees   			            Community   			            I Want To...   			    
+ 
+
+
+	 
+
+
+    	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+    
+ 
+  
+  
+ 	 
+				                
+
+
+
+	 
+ 
+  
+ 
+
+
+
+
+		  
+		 
+			      
+			      
+		 
+			 
+
+ 
+   
+  
+ 
+ 
+ 		 
+			  Home    Community    Town Projects    MBTA Communities Law  
+		 
+
+	   
+    
+  
+	
+	 
+		
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+				 
+
+MBTA Communities Law		 
+	
+		 
+			
+
+		   				
+	 
+	
+	 	
+ 
+	     
+
+
+          MBTA Communities Law &amp; December 17 Special Town Meeting Information    Special Town Meeting &ndash; Wednesday, December 17, 2025 &bull; 7:00 PM    Masconomet High School Auditorium        Your Vote Determines Compliance &amp; Local Control    Massachusetts General Laws Chapter 40A &sect;3A, known as the MBTA Communities Law, requires all MBTA-designated communities&mdash;including Boxford&mdash;to adopt at least one zoning district that allows multifamily housing by right. This law is  mandatory  and  not optional . The Supreme Judicial Court has confirmed that the law is constitutional, enforceable, and cannot be disregarded or opted-out by municipalities.   Link to summary information sheet.    Link to Frequently Asked Questions (FAQ) sheet.    Warrant Article 8: MBTA Communities Overlay District   At the December 17 Special Town Meeting, voters will decide whether to adopt a compliant MBTA Communities Multifamily Overlay District. Adoption of the district:   Retains Boxford&rsquo;s control over zoning  Avoids state-imposed zoning  Protects 2-acre rural zoning across the community  Maintains eligibility for significant state grant funds  Prevents legal enforcement action by the Attorney General    Grants at Risk    $1.2 million currently awarded  More than $5 million in grant eligibility over the coming five years       What the Proposed Overlay Does   The Select Board has developed an overlay district that:   Meets state compliance standards  Minimizes realistic development potential  Preserves Boxford&rsquo;s rural character, including existing 2-acre zoning  Uses a legally recognized &ldquo;paper compliance&rdquo; method   The overlay creates a compliant zoning pathway but does  not  authorize construction or redevelopment.      Location: The Willows at Boxford   The proposed overlay district is located at The Willows at Boxford. &nbsp;  Link to proposed&nbsp;   district map   &nbsp;and zoning&nbsp;   bylaw amendment   . &nbsp; The Willows is a condominium community where redevelopment is highly unlikely due to:   Private condominium ownership structure  Required owner approval to dissolve condominium status &nbsp;(75% of all unit owners must vote to remove condominium status before any redevelopment could occur)  Existing full buildout and deed restrictions  Financial impracticality of demolition and reconstruction    Key Clarification    The overlay district satisfies state zoning requirements but does not enable multifamily construction without substantial condominium owner support. No redevelopment can proceed without owner vote and legal restructuring.      Why Compliance Matters    This is State Law   Compliance is required regardless of local preference. Not adopting the overlay does  not&nbsp; exempt Boxford from the law.   If the district is not adopted:    The state may impose a zoning district in a location not chosen by Boxford  A state-imposed district would prioritize unit capacity and development feasibility&mdash;not rural preservation  The Attorney General may pursue legal enforcement  Boxford becomes ineligible for key infrastructure, education, and resiliency grants       State Pre-Adoption Review   Boxford submitted the draft overlay district to the Executive Office of Housing and Livable Communities (EOHLC) for review prior to Town Meeting.   State planning staff identified no compliance-blocking issues  EOHLC indicated that adoption of the Willows overlay &ldquo;would put the Town in a good position for compliance if adopted.&rdquo;   Formal certification can only occur after Town Meeting adoption, per state process.      Paper Compliance Approach   Many Massachusetts communities have adopted zoning districts that technically satisfy the MBTA Communities Law while limiting actual redevelopment potential. The state recognizes this strategy as long as zoning:   Is mapped in an eligible location  Meets the required acreage and capacity formula  Allows multifamily housing by right  on paper    This is the approach Boxford is employing to meet statutory requirements and protect local land use standards.      Local Control Through Compliance   By adopting the proposed overlay, Boxford maintains authority over:   District siting  Dimensional design standards  Long-term zoning impact management   If the community does not adopt, the state&mdash;not Boxford&mdash;selects the location and parameters for multifamily zoning.      Financial Impact at a Glance        Funding Category      Estimated Impact         Grants currently at risk     $1.2 million       Future eligible grants over five years     Approx. $5 million       Potential projects impacted    Rails to Trails, bridge &amp; culvert work, resilience planning, literacy funding, infrastructure          December 17th Special Town Meeting Participation    December 17, 2025 at 7:00 PM  Masconomet High School Auditorium     This decision rests entirely with the voters of Boxford. The Select Board has completed planning and compliance design; approval of zoning can only occur through Town Meeting vote.     What is the MBTA Communities Law?  The MBTA Communities Law, passed by the State Legislature in January 2021, included a new  Section 3A  of Massachusetts zoning statute, Chapter 40A. &nbsp;Section 3A requires an MBTA Community to have a zoning by-law that provides for at least 1 district in which multi-family housing is permitted by right. &nbsp;Furthermore, the district shall have a minimum gross density of 15 units per acre. &nbsp;Per State designation, the Town of Boxford is considered a MBTA Community. &nbsp;Furthermore, Boxford, as a rural town adjacent to Haverhill, a community with commuter rail service, is required by section 3A to establish a district with a capacity for 141 housing units.  More information on the MBTA Communities requirements can be found  on the state website . &nbsp;It should be emphasized that construction of housing units is not a requirement of the MBTA regulations. &nbsp;Only the zoning is required.  Although the Town has an approved MBTA Action Plan, the Town has made clear to the state that compliance will be particularly difficult for a community like Boxford which is rural in character. &nbsp;The density requirements in Section 3A would be a dramatic change from local land use patterns. It will be a challenge for the Town of Boxford to create a zoning by-law in compliance with Section 3A, particularly when considering the limits and constraints in terms of limited infrastructure and services, reliance on septic and well systems, and the abundance of wetlands and conservation lands.  As a designated Small Adjacent Community, the Town of Boxford has a deadline of December 31, 2025 to adopt a zoning district that complies with the MBTA Communities legislation.  Public Information Session October 20, 2025  The Boxford Select Board and Planning Board held a joint public information session on October 20th, which included a presentation on the MTBA Communities Law and the town&apos;s efforts to date. &nbsp;Below are links to the slideshow and a recording of the information session:    Presentation, October 20th Public Information Session    Recording, October 20th Public Information Session        Select Board Refers Willows Overlay District for Public Hearing   At its October 6, 2025 meeting, the Boxford Select Board voted to refer a proposed MBTA Communities (3A) compliant overlay zoning district at the Willows at Boxford to the Planning Board for a public hearing. This proposed district is the Select Board&rsquo;s preferred location to bring forward to voters at the December 17, 2025 Special Town Meeting.   Link to proposed&nbsp;   district map   &nbsp;and zoning&nbsp;   bylaw amendment   .   The decision follows the state&rsquo;s pre-adoption review, which confirmed that the Willows overlay district meets the technical requirements of the MBTA Communities Law (G.L. c. 40A, &sect;3A). Adoption of this district would keep Boxford in compliance with the law and maintain the Town&rsquo;s eligibility for important state funding programs.  The Select Board emphasized that the Willows proposal represents a &ldquo;paper compliance&rdquo; approach&mdash;meaning it fulfills the state&rsquo;s requirements without creating a realistic potential for new, multi-family, high density housing development. The Willows is an existing condominium community that is already built out. As confirmed by Town Counsel, under both Massachusetts condominium law (G.L. c. 183A &sect;19) and the Willows condominium trust documents, removing land from the condominium or redeveloping it would require approval by at least 75% of unit owners and all lien holders. This makes any future redevelopment effectively impossible.  Given these restrictions, the Select Board determined that designating the Willows as the Town&rsquo;s MBTA Communities district is the most prudent and responsible path forward. The district allows Boxford to remain in compliance with state law while making it highly unlikely that no new development would occur as a result of the zoning change.  The Planning Board will hold a public hearing on   November 12, 2025 ,  and residents will have the opportunity to vote on the proposed overlay at the   December 17, 2025 Special Town Meeting  .        Town of Boxford MBTA Communities Documents:  State Pre-Adoption Review Documents October 2025 -  &quot;The proposed district would put the town in a good position for compliance if adopted&quot;.   Public Information Session  slideshow presentation&nbsp; and  video recording of meeting  - October 20, 2025   Town Administrator&nbsp;   presentation to Select Board   &nbsp;and  Memorandum with Willows recommendation  - October 6, 2025&nbsp;   Link to meeting recording   .     State rejection letter of extension request September 26, 2025         Town Administrator presentation to Select Board  - September 22, 2025  Link to meeting video recording      Town Administrator presentation to Select Board  September 8, 2025  Link to meeting video recording .     MBTA Communities&nbsp; Planning Board Presentation - August 20, 2025 &nbsp;  Link to meeting : &nbsp; Planning Board Meeting - August 20, 2025     Email from EOHLC staff documenting that there are no compliance issues with pre-existing private deed restrictions from condominium documents and are not part of EOHLC zoning review. &nbsp;August 14, 2025.     Town of Boxford Request for Compliance Extension July 25, 2025      Presentation to Select Board July 14, 2025  (includes maps of zoning district rejected by state and alternative districts)     MBTA Communities Boxford Presentation - March, 2024      MBTA Compliance Presentation - Proposed Compliant Zoning Districts - October, 2023      Boxford MBTA Communities Approved Action Plan - March, 2023      North Shore Communities Regional Letter to MBTA Regulators - May, 2022      Boxford Comments to Draft MBTA Communities Guidelines - March, 2022      MA Rural Policy Advisory Commission Letter (Boxford Contributed) - March, 2022    &nbsp;  Timeline of Boxford&rsquo;s 3A Zoning Efforts  2022&nbsp;   March 2022 &ndash; Boxford provides public comment on draft MBTA guidelines  August 2022 &ndash; EOHLC releases final MBTA Communities guidelines   2023   January 2023 &ndash; Boxford submits Action Plan  March 2023 &ndash; EOHLC approves Boxford&rsquo;s Action Plan  May 2023 &ndash; Boxford Awarded Mass Housing Partnership grant to utilize MVPC for Technical Assistance  August 4, 2023 &ndash; MVPC discussion with EOHLC staff about proposed districts  October 18, 2023 &ndash; MVPC Presentation to Select Board and Planning Board on potential zoning districts   2024   March 16, 2024 &ndash; Boxford hosts MBTA Communities Public Information Session  October 2024 &ndash; Planning Board Final Draft of proposed MBTA bylaw and zoning district  November 20, 2024 &ndash; Boxford Planning Board holds public hearing on draft Housing Production Plan update that includes MBTA Communities proposed zoning at key strategy   2025   January 14, 2025 &ndash; EOHLC issues emergency regulations  February 14, 2025 &ndash; Boxford submits pre-adoption review application to EOHLC  May 13, 2025 &ndash; EOHLC submits feedback letter  May 20, 2025 &ndash; Boxford consultation with EOHLC staff on proposed zoning district  June 16, 2025 &ndash; MVPC email to EOHLC requesting clarification on feedback  June 18, 2025 &ndash; EOHLC&rsquo;s email ruling on proposed zoning &ndash; DOES NOT COMPLY  July 14, 2025 - Select Board meeting, discussion on how to proceed  July 25, 2025 - Select Board sends letter and request of extension to EOHLC  August 11, 2025 - Select Board and Planning Board joint meeting to consider alternative zoning districts  September 8, 2025 &ndash; Select Board discussion of alternative districts  September 22, 2025 &ndash; Select Board votes to submit the proposed Willows zoning district to EOHLC for pre-application approval  September 25, 2025 &ndash; EOHLC denies extension request  October 6, 2025 &ndash; Select Board votes to refer proposed Willows zoning overlay district to Planning Board  October 6, 2025 - EOHLC pre-application feedback, &quot;The proposed district would put the Town in a good position for compliance if adopted.&quot;  October 20, 2025 - Select Board public information session on proposed Willows zoning overlay district  November 10, 2025 - Q&amp;A Session with Willows at Boxford unit owners held at Willows clubhouse  November 17, 2025 - Planning Board public hearing on proposed overlay district  
+     
+
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+		 
+
+	 
+
+	
+	 
+
+	 
+ 
+  	 
+				                
+
+
+
+	 
+ 
+  
+ 	 
+				                
+
+
+
+	 
+  
+
+
+
+
+
+
+
+	 
+
+	 
+
+
+
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+
+ 
+    
+	  	  
+	   
+
+	   
+
+			      
+
+
+	 
+ 
+ 
+  
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Online Payments  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Trash &amp; Recycling  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Permits, Forms &amp; Applications  
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Projects  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Agendas and Minutes  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Stay Connected  
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+   
+     
+        
+     
+    -->  
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+     
+
+
+
+
+
+	 
+			 
+		 
+								 
+	 
+	 
+		 
+					 
+						 
+
+ 
+	     
+ 						 
+					 
+		 
+	 
+	 
+
+	 
+
+	 
+
+
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+     
+
+
+
+
+
+	 
+			 
+		 
+					 Town of Boxford 
+								 
+	 
+	 
+		 
+					 
+						 
+
+ 
+	 7A Spofford Road 
+ 
+ 
+	 Boxford, MA 01921 
+ 
+ 
+	 Phone:  978-887-6000  
+ 
+ 
+	   Facebook     
+ 						 
+					 
+		 
+	 
+	 
+
+	 
+
+	 
+
+
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+	 
+
+
+
+
+
+
+
+
+	 
+			 
+		 
+					  Quick Links  
+						 
+	 
+	 
+         
+				 
+					 
+
+     
+         FAQs 
+          
+     
+
+     
+         Community Events 
+          
+     
+
+     
+         Community News 
+          
+     
+
+     
+         New Residents Information 
+          
+     
+
+     
+         Town Clerk 
+          
+     
+
+     
+         Select Board Sign-In 
+          
+     
+					 
+				 
+		 
+        
+	 
+	 
+	 
+	 
+		 /QuickLinks.aspx 
+	 
+
+	 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+	 
+
+
+
+
+
+
+
+
+	 
+			 
+		 
+					  Site Links  
+						 
+	 
+	 
+         
+				 
+					 
+
+     
+         Home 
+          
+     
+
+     
+         Site Map 
+          
+     
+
+     
+         Contact Us 
+          
+     
+
+     
+         Accessibility 
+          
+     
+
+     
+         Copyright Notices 
+          
+     
+
+     
+         Privacy Policy 
+          
+     
+					 
+				 
+		 
+        
+	 
+	 
+	 
+	 
+		 /QuickLinks.aspx 
+	 
+
+	 
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+	 
+	 
+		       
+
+     
+     
+          
+          
+     
+     Government Websites by  CivicPlus&reg;  
+       
+	 
+	 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+ 
+ 
+
+             
+         
+     
+
+ 
+
+ 
+	 
+		 
+			 Loading 
+			 
+				 
+					  
+				 
+			 
+		 
+		 
+			 
+				 
+				Loading
+			 
+		 
+		 
+			 Do Not Show Agai
+
+### DOC 7370ecbc29 | town=Boxford | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.boxfordma.gov/DocumentCenter/View/1180
+
+[PAGE 1]
+MBTA Communities in Boxford
+March 16, 2024 | 9:00 – 10:30 a.m.
+
+[PAGE 2]
+Welcome! Who Are We?
+• Joe Hill – Boxford Housing Partnership – Moderating today’s discussion
+• Ross Povenmire – Town of Boxford Conservation & Planning Agent
+• Ian Burns – Community & Economic Development Manager, Merrimack 
+Valley Planning Commission
+• Jerrard Whitten – Executive Director, Merrimack Valley Planning 
+Commission
+2
+2
+
+[PAGE 3]
+Merrimack Valley Planning Commission
+• MVPC is a public agency tasked with supporting fifteen cities and towns in 
+northeast Massachusetts
+• We assist with zoning, housing development, comprehensive planning, GIS mapping, 
+economic development, transportation planning, environmental planning, and more
+• The Town of Boxford received a grant to hire MVPC to help the town 
+understand the law, its regulations, and Boxford’s options for compliance
+• MVPC did not write the law or the regulations—we help MBTA Communities 
+in our region learn their options for compliance, but it is ultimately up to 
+voters at town meeting to decide on that path. 
+ 
+3
+
+[PAGE 4]
+Agenda
+1. Background on MBTA Communities/3A Legislation Requirements
+1.
+What do the law and regulations say?
+2.
+What the requirements are in Boxford
+3.
+Pause for clarification and technical questions on the regulations
+2. Example of a potential compliant district in Boxford
+1.
+Work to date with the Planning Board and Select Board
+2.
+Map of a potential district 
+3.
+Zoning parameters that would be compliant in this district
+4.
+Questions about this potential district
+3. General comments, feedback, concerns, and aspirations
+4
+
+[PAGE 5]
+• This session is two-way education
+• Residents will educate us on what Boxford needs
+• We will help residents understand what the requirements and options are
+• Assume good intentions – we’re all here to help this community make the best 
+decision
+• Be respectful – listen to understand, not to respond
+• Speak up or step back (be mindful of sharing airtime with others).
+• No technical expertise needed to participate. No question is bad or silly to ask.  
+• We want to hear all your questions, comments, and concerns. During the 
+presentation, we will open time for questions only. At the end, we will have plenty 
+of time for general feedback and comments.
+Guiding Principles for Today’s Discussion
+5
+
+[PAGE 6]
+Background: The Law & Regulations
+6
+
+[PAGE 7]
+History of MBTA Communities Legislation
+• The MBTA Communities Law was passed by the MA Legislature in 2021
+• The law applies to all cities & towns that have MBTA transit stops or are bordering 
+communities with transit stops
+• Requires communities to change zoning regulations to allow multi-family housing by 
+right in one or more zoning districts
+• Law requires the creation of a zoning district - it is not a production mandate
+7
+
+[PAGE 8]
+The Legislation
+• Section 3A – MBTA communities must zone for multi-family housing
+• Zoning requirements to comply with the statute:
+• Multi-family housing is permitted as of right
+• No age restrictions or bedroom restrictions allowed
+• Minimum gross density of 15 units per acre
+• Within 0.5 miles of a commuter rail station, subway station, ferry terminal, or bus station*
+• *This requirement does not specifically apply to Boxford, which is an Adjacent Small Town
+8
+
+[PAGE 9]
+Merrimack Valley Region
+9
+
+[PAGE 10]
+Boxford’s Regulations – Adjacent Small Town
+Adjacent Small Town Regulations:
+1.
+The district must have a potential zoning capacity equal to 5% of the 
+community’s total housing stock
+2.
+The zoning parameters must be able to theoretically accommodate 15 units 
+per acre
+3.
+There is no minimum land area requirement
+4.
+The district may be located anywhere in the community
+For Boxford, this means the district must have a theoretical zoning capacity of 
+141 units. There is no construction requirement as part of these regulations, only 
+zoning.
+10
+
+[PAGE 11]
+What does this look like in each Merrimack Valley community?
+Community
+Community 
+Type
+Theoretical unit 
+capacity
+% District in 
+Station Area
+Community
+Community 
+Type
+Theoretical 
+unit capacity
+% District in Station 
+Area
+Amesbury
+AC
+789
+0%
+Merrimac 
+AST
+138
+0%
+Andover
+CR
+2,031
+50%
+Newbury
+AST
+154
+0%
+Boxford
+AST
+141
+0%
+Newburyport
+CR
+1,292
+20%
+Georgetown
+AC
+750
+0%
+N. Andover
+AC
+1,191
+0%
+Groveland
+AST
+130
+0%
+Rowley
+CR
+601
+20%
+Haverhill
+CR
+4,189
+50%
+Salisbury
+AC
+750
+0%
+Lawrence
+CR
+4,501
+40%
+W. Newbury
+AST
+87
+0%
+Methuen
+AC
+2,019
+0%
+AC = Adjacent Community | AST = Adjacent Small Town | CR = Commuter Rail
+11
+
+[PAGE 12]
+How does this work with no public water or sewer?
+• Boxford only needs to create zoning, the town does not need to ensure 
+there is the necessary infrastructure to support a development
+• If a developer looks at building under the zoning, they may find it is 
+infeasible to build a development given the infrastructure constraints. Per 
+the regulations, it is ok if nothing actually gets built, or if what is built is less 
+than what the zoning may allow.
+• “While the zoning must allow for gross average density of at least 15 units 
+per acre, there may be other legal or practical limitations, including lack of 
+infrastructure or infrastructure capacity, that result in actual housing 
+production at lower density than the zoning allows. The multi-family unit 
+capacity analysis does not need to take into consideration limitations on 
+development resulting from existing water or wastewater infrastructure 
+within the multi-family zoning district”  - Section 3A Compliance Guidelines
+12
+12
+
+[PAGE 13]
+Environmental Protections
+• If a development is ever proposed, Any state or federal laws pertaining to 
+environmental protections will still be applied within the zoning district. 
+Examples of these site constraint considerations include:
+• Title 5 Septic Restrictions 
+• Wetlands Protections
+• Utility and infrastructure capacity 
+• Stormwater management
+• Endangered species 
+13
+
+[PAGE 14]
+What Happens If We Don’t Comply?
+• Communities that do not comply will be ineligible or less competitive in 
+applying for over 12 state grant programs, including grants Boxford has 
+received
+• In recent years, the town has accessed over $800,000 in funding from these 
+programs
+• Example projects: Acquisition of Cargill Field and Nason Conservation Area, MVP 
+Planning Grant, Pye Brook Study, culver replacement design and permitting for 
+Pye Brook crossing of Herrick Road, Georgetown Road, and Pye Brook Lane
+• This is a state law. The Attorney General is pursuing legal action against 
+communities that do not comply.
+14
+
+[PAGE 15]
+Timeline for Implementation
+January 31, 2023
+December 31, 2025
+Adjacent Small 
+Towns must adopt 
+zoning amendment
+15
+
+[PAGE 16]
+Clarification Questions
+16
+
+[PAGE 17]
+Potential Zoning District in Boxford
+17
+
+[PAGE 18]
+Work to Date
+• MVPC has met with the Boxford Select Board and Planning Board to discuss 
+the regulations
+• After discussions with these boards and town staff, we began looking at an 
+area of town bordering Haverhill and North Andover as a potential spot for 
+this zoning
+• This is a preliminary analysis and discussion, meant to show how Boxford 
+can reach compliance. We will need feedback on this proposal, and are also 
+open to discussing other areas of town if residents have any suggestions
+• Nothing at this point is final
+18
+
+[PAGE 19]
+How do we Calculate Compliance?
+1.
+Select parcels being considered for the zoning
+2.
+Assume there are no current structures on the property and that the property 
+has no infrastructure limitations
+3.
+Subtract out wetlands and other undevelopable areas of the parcel
+4.
+Given the proposed zoning parameters (setbacks, height, etc), determine the 
+dimensions of the largest building possible
+5.
+Assuming 1,000 square feet per housing unit, calculate how many housing units 
+could fit in the building
+Example – A one acre lot is roughly 40,000 square feet. If the zoning prevents a 
+developer from building on half that land, they can still build on 20,000 square feet. 
+At two stories, this creates 40,000 square feet of a potential structure, meaning you 
+could put 40 units on the parcel.
+This is NOT a build out analysis, only a zoning analysis
+19
+19
+
+[PAGE 20]
+Potential District Options for Compliance
+Bradford Street District  
+13.97 Acres
+• Location in town that is closest to 
+MBTA access (Bradford Station)
+• Abutting other multifamily housing
+• Potential for infrastructure hookups 
+in Haverhill
+• Additional traffic generation would 
+mostly concentrate towards Rt. 125 
+and 495, not cutting through town
+Haverhill
+North Andover
+Boxford
+20
+
+[PAGE 21]
+Potential District Options for Compliance
+Bradford Street District  
+13.97 Acres
+Minimum Lot Size: 85,000 sqft
+Max Building Height: 2 Stories
+Setbacks: 50ft front yard, 25ft side/rear
+Max building coverage: 25%
+Minimum Open Space: 45%
+Parking: 1.5 spaces per unit minimum
+With these zoning parameters, Boxford would 
+be in compliance
+Haverhill
+North Andover
+Boxford
+21
+
+[PAGE 22]
+Questions About this Ex
+
+### DOC ba6d1da6f7 | town=Boxford | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.boxfordma.gov/DocumentCenter/View/2636/11-MBTA-Communities-Update
+
+[PAGE 1]
+MBTA/ 3A Zoning Compliance 
+Process Update
+Boxford Select Board
+July 14, 2025
+
+[PAGE 2]
+MBTA Communities Legislation
+• The MBTA Communities Law was passed by the MA Legislature in 2021
+•
+The law applies to all cities & towns that have MBTA transit stops or are bordering communities with transit stops
+•
+Requires communities to change zoning regulations to allow multi-family housing by right in one or more zoning 
+districts
+•
+Law requires the creation of a zoning district - it is not a production mandate
+• Section 3A – MBTA communities must zone for multi-family housing
+• Zoning requirements to comply with the statute:
+•
+Multi-family housing is permitted as of right
+•
+No age restrictions or bedroom restrictions allowed
+•
+Minimum gross density of 15 units per acre
+•
+Within 0.5 miles of a commuter rail station, subway station, ferry terminal, or bus station*
+•
+*This requirement does not specifically apply to Boxford, which is an Adjacent Small Town
+
+[PAGE 3]
+Boxford’s 3A Requirement – Adjacent Small Town
+“Adjacent Small Town” Regulations:
+1. The district must have a potential zoning capacity equal to 5% of 
+the community’s total housing stock
+2. The zoning parameters must be able to theoretically accommodate 
+15 units per acre
+3. There is no minimum land area requirement
+4. The district may be located anywhere in the community
+For Boxford, this means the district must have a theoretical zoning 
+capacity of 141 units. There is no construction requirement as part of 
+these regulations, only zoning.
+
+[PAGE 4]
+Timeline and Boxford’s Efforts to date
+2022
+•
+March 2022 – Boxford provides public comment on draft MBTA guidelines
+•
+August 2022 – EOHLC releases final MBTA Communities guidelines
+2023
+•
+January 2023 – Town’s Submission of Action Plan
+•
+March 2023 – EOHLC approves Boxford’s Action Plan
+•
+May 2023 – Town Awarded Mass Housing Partnership grant to utilize MVPC for Technical Assistance
+•
+August 4, 2023 – MVPC discussion with EOHLC staff about proposed districts
+•
+October 18, 2023 – MVPC Presentation to Select Board and Planning Board on potential zoning districts
+2024
+•
+March 16, 2024 – MBTA Public Information Session
+•
+October 2024 – Final Draft of proposed MBTA bylaw and zoning district
+2025
+•
+January 14, 2025 – EOHLC emergency regulations
+•
+February 14, 2025 – Boxford submits pre-adoption review application to EOHLC 
+•
+May 20, 2025 – Consultation with EOHLC on proposed zoning district
+•
+June 18, 2025 – EOHLC’s ruling on proposed district – DOES NOT COMPLY
+•
+October 28, 2025 – Special Fall Town Meeting scheduled
+
+[PAGE 5]
+Potential District EOHLC Review
+Bradford Street District  
+13.97 Acres
+• Location in town that is closest to 
+MBTA access (Bradford Station)
+• Abutting other multifamily housing
+• Additional traffic generation would 
+mostly concentrate towards Rt. 125 
+and 495, not cutting through town
+Haverhill
+North Andover
+Boxford
+5
+
+[PAGE 6]
+EOHLC Ruling
+Proposed District Not Compliant 
+•
+Proposed district has lots with frontage 
+directly on a public road, Bradford Street
+•
+But the lots extend a few feet into 
+North Andover where frontage is 
+derived on Bradford Street.
+•
+The portion of the lots within the 
+Town of North Andover would not be 
+in the proposed zoning overlay 
+district.
+Zoning overlay district must have direct 
+access to a public way.
+
+[PAGE 7]
+3 Additional Potential Zoning Districts
+Andrews Farm
+7 Endicott Road
+Topsfield/ Silverbrook Rd
+
+[PAGE 8]
+Additional Potential Zoning Districts
+
+[PAGE 9]
+Next Steps
+• Request for extension - EOHLC
+• Identify alternative district – July/ August
+• Submit pre-adoption review application to EOHLC 
+• September 8, 2025:  Select Board refer By-law change to PB for public 
+hearing
+• Planning Board public hearing process – September/ October
+• Target:  October 28, 2025 Special Fall Town Meeting
+Boxford needs to adopt 3A zoning by December 31, 2025 to remain in 
+compliance.
+
+[PAGE 10]
+What Happens if Boxford Doesn’t Comply
+• Communities that do not comply will be ineligible or less competitive in 
+applying for over 12 state grant programs, including grants Boxford has 
+received
+• In recent years, the town has accessed over $800,000 in funding from these 
+programs
+• Example projects: Acquisition of Cargill Field and Nason Conservation Area, MVP 
+Planning Grant, Pye Brook Study, culver replacement design and permitting for 
+Pye Brook crossing of Herrick Road, Georgetown Road, and Pye Brook Lane
+• This is a state law. The Attorney General is pursuing legal action against 
+communities that do not comply.
+
+
+### DOC 8a4d4c831c | town=Braintree | community_type=subway or light rail | governing_body=City Council | screened_board=zoning | screened_doctype= | url=https://www.braintreema.gov/DocumentCenter/View/12356
+
+[PAGE 1]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 1 
+ 
+1. PROPOSED AMENDMENT TO ZONING ORDINANCE 
+SECTION 135-301 
+Districts Established 
+Current Ordinance (Please see Proposed Amendment in Yellow) 
+For the purpose of this chapter, the Town is hereby divided into use districts, as hereinafter provided. The boundaries of 
+these districts are hereby established as shown on the Town's Zoning Map, dated December 10, 1986, as revised, and 
+on file in the office of the Town Engineer. This map is by reference incorporated into and made a part of this chapter. 
+Any changes in the number of districts or in district boundaries shall be noted on the Zoning Map as each such change 
+is adopted through a Zoning Bylaw amendment. It shall be the responsibility of the Planning Board to update this Zoning 
+Map. The districts are as follows: 
+ 
+Residence A Districts 
+Residence B Districts 
+Residence C Districts 
+Billboard Zoning Overlay District 
+General Business Districts 
+Highway Business Districts 
+Highway Business Retail Districts 
+Commercial Districts 
+Fire Protection Districts 
+Wetlands and Floodplain Protection Districts (§ 135-608) 
+Watershed Protection District (§ 135-609) 
+Open Space and Conservancy Districts 
+Cluster I (§ 135-610) 
+Cluster II (§ 135-610) 
+Cluster III (§ 135-610) 
+Planned Unit Development (PUD) (§ 135-612) 
+Historic District 
+PROPOSED NEW DISTRICT 
+MBTA Communities Multi-Family Overlay Districts (MCMOD) (Section 135-616) 
+ 
+Village Zoning Overlay District, superimposed on selected portions of the existing General Business 
+Zoning District and centered around the intersections of Pearl, Hancock and Washington Streets in 
+South Braintree Square and Elm and Washington Streets in Braintree Square [Added 5-6-2002 STM 
+by Art. 10] 
+ 
+ 
+ 
+
+[PAGE 2]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 2 
+ 
+2. PROPOSED NEW ZONING ORDINANCE 
+SECTION 135-616 
+MBTA Communities Multi-Family Overlay Districts (MCMOD) 
+ 
+A. 
+Purpose 
+The purpose of the MBTA Communities Multi-Family Overlay Districts are to allow multi- family 
+housing by-right in accordance with Section 3A of the Zoning Act (Massachusetts General Laws 
+Chapter 40A). This zoning provides for as of right multi-family housing to accomplish the following 
+purposes: 
+1. Encourage the production of a variety of housing sizes and types to provide equal 
+access to new housing throughout the community for people with a wide variety 
+of housing needs and income levels; 
+2. Locate housing within walking distance of public transit and village centers to 
+promote public and social health, reduce the number of vehicular miles travelled, 
+support economic development, and meet community-based environmental 
+goals, including reducing greenhouse gases and improving air quality. 
+3. Preserve open space in a community by locating new housing within or adjacent 
+to existing developed areas and infrastructure. 
+4. Increase the municipal tax base through private investment in new 
+residential developments. 
+ 
+ 
+ 
+
+[PAGE 3]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 3 
+ 
+B. 
+Establishment and Applicability 
+This MCMOD overlay district consist of four (4) sub-districts, that are superimposed over the 
+underlying zoning district (s) and are shown on the Zoning Map. 
+ 
+MBTA 1 Red Line North (In Blue)                                        48.94 Acres 
+ 
+ 
+MBTA 2 Red Line South (In Pink)                                                              127.02 Acres 
+ 
+ 
+ 
+
+[PAGE 4]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 4 
+ 
+MBTA 3 Red Line Village (In Pink)                                                         9.43 Acres 
+ 
+ 
+MBTA 1 Greenbush BWLD (In Yellow)                      18.43 Acres 
+ 
+ 
+
+[PAGE 5]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 5 
+ 
+1. Applicability of MCMOD. All Multi-Family Dwelling/Housing and Mixed-Use 
+Developments within a MCMOD Sub-District shall be built in accordance with 
+the provisions of Section 135-616. 
+ 
+2. Underlying Zoning. The MCMOD Sub Districts are an overlay districts superimposed 
+on underlying zoning districts. The regulations for use, dimension, and all other 
+provisions of the Zoning Ordinance governing the respective underlying zoning 
+district(s) shall remain in full force. Unless and when a development consists of 
+Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use Development 
+allowed by-right or by special permit in the MCMOD overlay districts. 
+ 
+Uses that are not identified in Section 135-616D are not allowed within 
+Developments utilizing the MCMOD Zoning. 
+ 
+3. Exclusions. Non-Applicable Sections of the Zoning Ordinance.  In order to comply 
+with the requirements and guidelines for MGL Chapter 40A Section 3A as most 
+recently amended, the following Sections of the Zoning Ordinance do not apply to 
+any Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use 
+Development allowed by-right or by special permit in the MCMOD overlay districts. 
+135-504 
+135-601 
+135-603 
+135-605 
+135-609 
+135-610 
+135-612 
+135-613 
+135-614 
+135-615 
+ 
+135-701 (only the table not the notes) 
+ 
+135-705 
+ 
+135-710 
+ 
+135-804(B) 
+ 
+135-815 
+ 
+135-910 
+ 
+Article X 
+ 
+Article XIII 
+ 
+ 
+ 
+ 
+
+[PAGE 6]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 6 
+ 
+C. 
+Definitions 
+For purposes of this Section 135-616, the following definitions shall apply.  Please refer to Section 
+135-102 for other definitions of terms already defined within the Zoning Ordinance. 
+ 
+Affordable Housing Unit: A dwelling unit that is affordable to and occupied by an eligible 
+household and meets all requirements for inclusion on the Massachusetts Department of Housing 
+and Community Development (DHCD) Subsidized Housing Inventory (SHI).  Affordable units shall 
+remain as affordable units in perpetuity or for the maximum period allowed by law. Such units 
+shall have the same construction methods and exterior physical characteristics as, and be 
+intermingled with, other units in the development.  
+ 
+Affordable Housing: A Structure that contains Affordable Units as defined by Section 
+135-616. 
+ 
+Area Median Income (AMI): The median family income for the metropolitan statistical region 
+that includes the Town of Braintree as defined by the U.S. Department of Housing and Urban 
+Development (HUD). 
+ 
+By-Right Use: Development/Use that may proceed under the Zoning in place at time of 
+application without the need for a special permit, variance, zoning amendment, waiver, or 
+other discretionary zoning approval. 
+ 
+Compliance Guidelines: Compliance Guidelines for Multi-Family Zoning Districts Under Section 
+3A of the Zoning Act as further revised or amended from time to time. 
+ 
+Development Standards: Provisions of Section H - General Development Standards that are 
+applicable to all Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use 
+Development allowed by-right or by special permit in the MCMOD overlay districts. 
+ 
+EOHLC: The Massachusetts Executive Office of Housing and Livable Communities, DHCD’s 
+successor agency. 
+ 
+MBTA: Massachusetts Bay Transportation Authority. 
+ 
+Mixed-Use Development: A Development containing vertical or horizontal mix of Multi-Family 
+Dwelling/Housing residential uses and non-residential uses including, institutional, recreational, 
+commercial, and business as contained within the Section 135-616D, within a single building or 
+in separate buildings.  
+ 
+Multi-Family Dwelling/Housing: A building with three or more residential dwelling units or two 
+or more buildings on the same lot with more than one residential dwelling unit in each building. 
+ 
+Multi-Family Zoning District: A zoning district, either a base district or an overlay district, in 
+which multi-family housing is allowed as of right. 
+ 
+Section 3A: Section 3A of the Zoning Act (MGL Chapter 40A) 
+
+[PAGE 7]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 7 
+ 
+ 
+Site Plan Review Authority: Braintree Planning Board 
+ 
+Sub-district: An area within the MCMOD that is geographically smaller than the MCMOD 
+district and differentiated from the rest of the district by use, dimensional standards, or 
+development standards. 
+ 
+Subsidized Housing Inventory (SHI): A list of qualified Affordable Housing Units maintained by 
+EOHLC used to measure a community's stock of low-or moderate- income housing for the 
+purposes of M.G.L. Chapter 40B, the Comprehensive Permit Law. 
+ 
+Transit Station:  An MBTA subway station, commuter rail station, or ferry terminal. 
+ 
+Commuter Rail Station: Any MBTA commuter rail station with year-round, rather than 
+intermittent, seasonal, or event-based, service. 
+ 
+Ferry terminal: The location where passengers embark and disembark from regular, year-
+round MBTA ferry service. 
+ 
+Subway Station: Any of the stops along the MBTA Red Line, Green Line, Orange Line, or Blue 
+Line. 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 8]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 8 
+ 
+D. 
+Permitted Uses - Table of Principal and Accessory Uses 
+Permitted Uses 
+ 
+Y = By-Right 
+ 
+SP = Special Permit 
+ 
+N= Not Allowed 
+ 
+ 
+ 
+ 
+PRINCIPAL USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Residential Uses 
+ 
+ 
+ 
+ 
+Dwelling Two-Family 
+N 
+N 
+Y 
+N 
+Multi-Family Dwelling/Housing 
+Y 
+Y 
+Y 
+Y 
+Mixed-Use Development (Note 1) 
+Y 
+Y 
+SP 
+Y 
+Institutional Uses 
+ 
+ 
+ 
+ 
+Community Center 
+Y 
+Y 
+Y 
+Y 
+Congregate Living Facility  
+Y 
+Y 
+N 
+N 
+Municipal Public Park 
+Y 
+Y 
+Y 
+Y 
+School 
+Y 
+Y 
+Y 
+Y 
+Museum 
+Y 
+Y 
+N 
+Y 
+Recreational Uses 
+ 
+ 
+ 
+ 
+Boathouse Marina 
+N 
+N 
+N 
+Y 
+Club of Lodge 
+Y 
+Y 
+N 
+Y 
+Business Uses 
+ 
+ 
+ 
+ 
+Amusement or Assembly, Place of 
+SP 
+SP 
+N 
+SP 
+Animal Clinic or Hospital 
+Y 
+Y 
+N 
+SP 
+Animal Retail and Animal Grooming Service <15,000 Sq. Ft. 
+Y 
+Y 
+N 
+Y 
+Animal Retail and Animal Grooming Service >15,000 Sq. Ft. 
+Y 
+Y 
+N 
+N 
+Full-Service Animal Establishment 
+SP 
+SP 
+N 
+N 
+Bank 
+Y 
+Y 
+N 
+Y 
+Body Art Establishment 
+N 
+N 
+N 
+SP 
+Business/Professional Offices 
+Y 
+Y 
+Y 
+Y 
+Catering Service 
+Y 
+Y 
+N 
+Y 
+Commercial Recreation 
+SP 
+SP 
+N 
+SP 
+Day Care, Commercial 
+Y 
+Y 
+Y 
+Y 
+Fast-Food Establishments w Drive Thru 
+Y 
+Y 
+N 
+N 
+Fast-Food Establishments w/o Drive Thru 
+Y 
+Y 
+Y 
+Y 
+Hotel or Motel 
+Y 
+Y 
+N 
+SP 
+Drive Thru for Any other Non Food Use 
+SP 
+SP 
+N 
+N 
+Freestanding, Exterior Kiosks 
+Y 
+Y 
+N 
+N 
+Medical Center/Clinic 
+Y 
+Y 
+N 
+SP 
+Office Park 
+SP 
+SP 
+N 
+N 
+Restaurant 
+Y 
+Y 
+Y 
+Y 
+Retail Store(s)/Service(s) (< 15,000 Sq. Ft.) 
+Y 
+Y 
+Y 
+Y 
+Retail Store(s)/Service(s) (>15,000 Sq. Ft.) 
+Y 
+Y 
+N 
+SP 
+Shopping Center  
+Y 
+Y 
+N 
+N 
+Function/Conference Facility 
+SP 
+SP 
+N 
+SP 
+Brewery with Tap Room 
+Y 
+Y 
+SP 
+SP 
+Commercial 
+ 
+ 
+ 
+ 
+Research Facility 
+Y 
+Y 
+N 
+SP 
+Light Manufacturing 
+SP 
+SP 
+N 
+N 
+
+[PAGE 9]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 9 
+ 
+Note (1): Mixed-Use Development. All Mixed-Use Development shall comply with the 
+definition in Section 135-616(C).  In order for a Mixed-Use Development to be By-Right, all 
+of the uses proposed in the Mixed-Use Development must also be by-right as noted in the 
+Use table in this Section.  If a Mixed-Use Development contains uses that require a Special 
+Permit, the Special Permit is only applicable to the non-residential use.  See Zoning Bylaw 
+Ordinance Section 135-503 for Special Permit Procedures and Criteria. 
+ 
+ 
+ 
+ 
+ 
+ACCESORY USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Swimming Pool 
+Y 
+Y 
+Y 
+Y 
+Shed (Maximize Size 300 Sq. Ft.) 
+Y 
+Y 
+Y 
+Y 
+Storage of an Unregistered Vehicle 
+N 
+N 
+N 
+N 
+Structured Parking 
+Y 
+Y 
+Y 
+Y 
+Exterior Storage of Recreational Vehicle, Boat or Camper 
+N 
+N 
+N 
+N 
+Separate Storage/Garage Building Maintenance 
+(Maximum Size 1,000 Sq. Ft.) 
+Y 
+Y 
+N 
+N 
+Dumpster Enclosure 
+Y 
+Y 
+Y 
+Y 
+Exterior Storage on Any Kind 
+N 
+N 
+N 
+N 
+Surface Parking Spaces 
+Y 
+Y 
+Y 
+Y 
+Playground 
+Y 
+Y 
+Y 
+Y 
+Building Mounted Solar Panels 
+Y 
+Y 
+Y 
+Y 
+Ground Mounted HVAC Units  
+Y 
+Y 
+N 
+N 
+Ground Mounted Solar Panels 
+Y 
+Y 
+N 
+N 
+
+[PAGE 10]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 10 
+ 
+E. 
+Dimensional Standards 
+Notwithstanding anything to the contrary in this Zoning Ordinance, the dimensional 
+requirements applicable in the MCMOD Sub-Districts are as follows: 
+ 
+Dimensional Table Notes: 
+1. 
+All Mixed-Use Developments in the MCMOD Sub-Districts have no limitations on the 
+number of Accessory or Principal Buildings on a lot. 
+2. 
+In Multi-Family Dwelling/Housing Developments the Planning Board has the authority as 
+part of the Site Plan Review process to limit accessory uses and structures. 
+3. 
+All stand alone parking garages that contain no other uses as part of the structure shall be 
+no more than 3 Stories and 36 Ft. in height measured to the highest point of the roof or to 
+the tops of the walls for garages that are open on the top floor. 
+4. 
+All Exceptions in Section 135-701 Notes shall apply to the dimensional criteria in Section 
+135-616E, except for accessory structures and accessory uses, which shall be setback the 
+same distance from any lot line as the principal structures. 
+5. 
+No use of any portion of a lot’s front yard/land area within the required setback, in front 
+of the principal dwelling(s) on the lot shall be used for surface or structured parking.   
+6. 
+In accordance with the requirements in Section 135-702, any portion of a lot within any of 
+the MCMOD subdistricts that are within the vicinity of a Residence A or B Zone line shall 
+be required to have 100 Ft. buffer for all principal buildings as measured from the Zoning 
+District Boundary with the MCMOD Overlay and a 50 Ft. buffer for any accessory use, site 
+improvement, structure or buildings as measured from the Zoning District Boundary with 
+the MCMOD Overlay.  The 50 Ft. buffer shall be left in a nature state is undisturbed or 
+restored to landscape/openspace in accordance with the provisions of 135-702.  
+ 
+ 
+Dimensional Criteria 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Minimum Lot Size 
+25,000 Sq. Ft. 
+25,000 Sq. Ft. 5,000 Sq. Ft. 
+5,000 Sq. Ft. 
+Frontage 
+100 Ft. 
+100 Ft. 
+50 Ft. 
+50 Ft. 
+Building Height (Stories) 
+4 
+4 
+4 
+5 
+Building Height (Feet) 
+50 
+50 
+50 
+60 
+Building Coverage 
+50% 
+50% 
+70% 
+80% 
+Building Coverage w/ Structured Parking 
+70% 
+70% 
+80% 
+80% 
+Lot Coverage 
+70% 
+70% 
+80% 
+80% 
+Open Space 
+30% 
+30% 
+20% 
+20% 
+Open Space Per Unit 
+500 Sq. Ft. 
+500 Sq. Ft. 
+150 Sq. Ft. 
+150 Sq. Ft. 
+Front Yard Setback 
+30 Ft. 
+30 Ft. 
+5 Ft. 
+5 Ft. 
+Rear Yard Setback 
+20 Ft. 
+20 Ft. 
+5 Ft. 
+5 Ft. 
+Side Yard Setback 
+20 Ft. 
+20 Ft. 
+5 Ft. 
+5 Ft. 
+Dwelling Units Per Acre Maximum 
+30 
+30 
+35 
+40 
+Maximum Project Size 
+325 Units 
+325 Units 
+150 Units 
+150 Units 
+
+[PAGE 11]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 11 
+ 
+7. 
+Renewable Energy Installations: The Site Plan Review Authority may waive the height 
+and setbacks in the Dimensional Standards and in 135-701 Notes to accommodate the 
+installation of solar photovoltaic, solar thermal, living, and other eco-roofs, energy 
+storage, and air-source heat pump equipment. Such installations shall not create any 
+detriment or impact +to abutters in terms of visual occurrence, noise or shadow and 
+must be appropriately integrated into the architecture of the building and the layout of 
+the site. The installations shall not provide additional habitable space within the 
+development. 
+ 
+F. 
+Transportation, Vehicle, Pedestrian and Bicycle Requirements 
+In order to comply with the goals and objectives of MGL Chapter 40A Section 3A this Section of 
+the Ordinance takes into account the locations of the MCMOD Sub-District and their proximity to 
+Commuter Rail, Red Line and Bus Service.  In addition to public transportation the MCMOD Sub-
+Districts are located in close proximity to the Town’s Civic and Open Space Areas, the South 
+Braintree and Braintree Weymouth Landing Squares as well as employment and larger 
+commercial nodes.  The movement of people, bicycles and vehicles is important in the MCMOD 
+Sub-Districts.  
+1. 
+Number of Vehicle Parking and Loading Bays and Spaces: The following minimum 
+number of off-street parking spaces shall be required for each use, either in surface 
+parking areas or structured parking:  For specific uses not listed please see Section 135-
+806A, B and C. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MCMOD Sub-Districts 
+USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Residential Uses 
+ 
+ 
+ 
+ 
+Dwelling Two-Family 
+ 
+ 
+2 Per Unit 
+ 
+Multi-Family Dwelling/Housing 
+1.5 Per Unit 
+1.5 Per Unit 
+1.5 Per Unit 
+1.25 Per Unit 
+Mixed-Use Development (Note 1) 
+Per Use 
+Per Use 
+Per Use 
+Per Use 
+ 
+ 
+ 
+ 
+ 
+Institutional Uses 
+ 
+ 
+ 
+ 
+Community Center 
+See 135-806 
+See 135-806 
+See 135-806 
+See 135-806 
+Congregate Living Facility  
+.4 per Unit 
+.4 per Unit  
+ 
+ 
+Municipal Public Park 
+Set By PB 
+Set By PB 
+Set By PB 
+Set By PB 
+School 
+See 135-806 
+See 135-806 
+See 135-806 
+See 135-806 
+Museum 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+ 
+ 
+ 
+ 
+ 
+Recreational Uses 
+ 
+ 
+ 
+ 
+Boathouse Marina 
+ 
+ 
+ 
+See 135-806 
+Club of Lodge 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+ 
+ 
+ 
+ 
+ 
+Business Uses 
+ 
+ 
+ 
+ 
+Amusement or Assembly, Place of 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+Animal Clinic or Hospital 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+Animal Retail and Animal Grooming 
+Service <15,000 Sq. Ft. 
+See 135-806 
+See 135-806 
+ 
+I per 500 Sq. Ft. 
+Animal Retail and Animal Grooming 
+Service 15,000 Sq. Ft. or > 
+See 135-806 
+See 135-806 
+ 
+ 
+
+[PAGE 12]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 12 
+ 
+Full Service Animal Establishment 
+See 135-806 
+See 135-806 
+ 
+ 
+Bank 
+1 per 250 Sq. Ft. 
+1 per 250 Sq. Ft. 
+ 
+1 per 400 Sq. Ft. 
+Body Art Establishment 
+ 
+ 
+ 
+1 per 300 Sq. Ft. 
+Business/Professional Offices 
+1 per 350 Sq. Ft. 
+1 per 350 Sq. Ft. 
+1 per 350 Sq. Ft. 
+See 135-615-10 
+Catering Service 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+ 
+1 per 500 Sq. Ft. 
+Commercial Recreation 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+Day Care, Commercial 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+Fast-Food Establishments with Drive 
+Thru 
+See 135-806 
+See 135-806 
+ 
+ 
+Fast-Food Establishments without 
+Drive Thru 
+1 per 150 Sq. Ft. 
+1 per 150 Sq. Ft. 
+1 per 150 Sq. Ft. 
+1 per 150 Sq. Ft. 
+Hotel or Motel 
+1 per guest room 
+1 per guest room 
+ 
+ 
+1 per guest room 
+ 
+Freestanding, Exterior Kiosks 
+See 135-806C 
+See 135-806C  
+ 
+See 135-806C 
+Medical Center/Clinic 
+1 per 175 Sq. Ft. 
+1 per 175 Sq. Ft. 
+ 
+1 per 200 Sq. Ft. 
+Office Park 
+1 per 350 Sq. Ft. 
+1 per 350 Sq. Ft. 
+ 
+ 
+Restaurant 
+1 per 3.5 seats 
+1 per 3.5 seats  
+1 per 3.5 seats  
+1 per 5 seats  
+Retail Store(s)/Service(s) (< 15,000 Sq. 
+Ft.) 
+1 per 250 Sq. Ft. 
+1 per 250 Sq. Ft. 
+1 per 350 Sq. Ft. 
+1 per 500 Sq. Ft. 
+Retail Store(s)/Service(s) (>15,000 Sq. 
+Ft.) 
+1 per 250 Sq. Ft. 
+1 per 250 Sq. Ft. 
+ 
+1 per 500 Sq. Ft. 
+Shopping Center  
+See 135-806C  
+See 135-806C  
+ 
+ 
+Function/Conference Facility 
+See 135-806C  
+See 135-806C  
+ 
+See 135-806C 
+Brewery with Tap Room 
+See 135-806 
+See 135-806 
+See 135-806 
+See 135-806 
+ 
+ 
+ 
+ 
+ 
+Commercial 
+ 
+ 
+ 
+ 
+Research Facility 
+I per 400 Sq. Ft. 
+1 per 400 Sq. Ft. 
+ 
+1 per 400 Sq. Ft. 
+Light Manufacturing 
+See 135-806 
+See 135-806 
+ 
+ 
+ 
+2. 
+Vehicle Parking and Loading Bays and Spaces Requirements: 
+a. All uses within a development shall provide for vehicle charging stations as 
+required in the IECC 2015 International Energy Conservation Code (as most 
+recently Amended) including vehicles charging stations that are ADA Accessible. 
+ 
+b. All uses shall provide for internal or external Loading Spaces and Loading Bays 
+pursuant to Section 135-814.  In Mixed-Use Developments the Planning Board 
+may allowed the use of shared Loading Spaces and Loading Bays. 
+ 
+c. All multi-family dwelling/housing developments shall provide short term 
+dedicated parking spaces for package, transportation, service and food drop off 
+and pick-up.  The number and location of the parking spaces will be determined 
+by the Planning Board as part of the Site Plan Review process. 
+ 
+d. All multi-family dwelling/housing developments shall provide for a dedicated drop 
+off and pick up space(s) for ride share, livery and other resident drop off and pick 
+up needs.  All mixed-use developments will be reviewed by the Planning Board to 
+determine if ride share or livery drop off and pick up spaces are needed. 
+ 
+ 
+ 
+
+[PAGE 13]
+MBTA 3A Zoning Amendments (Draft 11/7/23) 
+P a g e | 13 
+ 
+e. The Planning Board may require multi-family dwelling/housing developments to 
+provide for on-site car share service parking spaces.  All multi-family 
+dwelling/housing will be reviewed by the Planning Board to determine if on-site 
+car share service parking spaces are needed. 
+ 
+f. Parking requirements for a Mixed -Use Developments on a single site may be 
+adjusted through the Site Plan Review process, if the combination of uses 
+proposed demonstrates that shared spaces will meet parking demands of the 
+uses proposed on site.  Any development seeking permission to utilize shared 
+parking within a mixed-use development shall submit: 
+1. A Parking Report prepared by a Professional Traffic Engineer, that includes 
+both ITE (Institute of Traffic Engineers) and empirical data to demonstrate 
+the parking demands of all proposed uses and the peak periods.  Said report 
+shall include all proposed uses parking requirements per this Ordinance, 
+each uses peak demand, the 50-percentile demand and total daily 
+demands.  The mixed-use development peak demand shall clearly 
+demonstrate that at no time during the day will the peak demand of the 
+mixed-use development in exceed the supply for the Planning Board to 
+allow any form of shared parking plan. 
+ 
+3. 
+Bicycle Parking/Storage Requirements: 
+a. All Multi-Family Dwelling/Housing Developments and Mixed-Use Developments 
+must provide on-site accommodations for the parking
+
+### DOC c259501d79 | town=Braintree | community_type=subway or light rail | governing_body=City Council | screened_board=zoning | screened_doctype= | url=https://www.braintreema.gov/DocumentCenter/View/12527
+
+[PAGE 1]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 1 
+ 
+1. PROPOSED AMENDMENT TO ZONING ORDINANCE 
+SECTION 135-301 
+Districts Established 
+Current Ordinance (Please see Proposed Amendment in Yellow) 
+For the purpose of this chapter, the Town is hereby divided into use districts, as hereinafter provided. The boundaries of 
+these districts are hereby established as shown on the Town's Zoning Map, dated December 10, 1986, as revised, and 
+on file in the office of the Town Engineer. This map is by reference incorporated into and made a part of this chapter. 
+Any changes in the number of districts or in district boundaries shall be noted on the Zoning Map as each such change 
+is adopted through a Zoning Bylaw amendment. It shall be the responsibility of the Planning Board to update this Zoning 
+Map. The districts are as follows: 
+ 
+Residence A Districts 
+Residence B Districts 
+Residence C Districts 
+Billboard Zoning Overlay District 
+General Business Districts 
+Highway Business Districts 
+Highway Business Retail Districts 
+Commercial Districts 
+Fire Protection Districts 
+Wetlands and Floodplain Protection Districts (§ 135-608) 
+Watershed Protection District (§ 135-609) 
+Open Space and Conservancy Districts 
+Cluster I (§ 135-610) 
+Cluster II (§ 135-610) 
+Cluster III (§ 135-610) 
+Planned Unit Development (PUD) (§ 135-612) 
+Historic District 
+PROPOSED NEW DISTRICT 
+MBTA Communities Multi-Family Overlay Districts (MCMOD) (Section 135-616) 
+ 
+Village Zoning Overlay District, superimposed on selected portions of the existing General Business 
+Zoning District and centered around the intersections of Pearl, Hancock and Washington Streets in 
+South Braintree Square and Elm and Washington Streets in Braintree Square [Added 5-6-2002 STM 
+by Art. 10] 
+ 
+ 
+ 
+
+[PAGE 2]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 2 
+ 
+2. PROPOSED NEW ZONING ORDINANCE 
+SECTION 135-616 
+MBTA Communities Multi-Family Overlay Districts (MCMOD) 
+ 
+A. 
+Purpose 
+The purpose of the MBTA Communities Multi-Family Overlay Districts is to allow Multi-Family 
+Housing by-right in accordance with Section 3A of the Zoning Act (Massachusetts General Laws 
+Chapter 40A). This zoning provides for as of right Multi-Family Housing to accomplish the 
+following purposes: 
+1. Encourage the production of a variety of housing sizes and types to provide equal 
+access to new housing throughout the community for people with a wide variety 
+of housing needs and income levels; 
+2. Locate housing within walking distance of public transit and village centers to 
+promote public and social health, reduce the number of vehicular miles travelled, 
+support economic development, and meet community-based environmental 
+goals, including reducing greenhouse gases and improving air quality. 
+3. Preserve open space in a community by locating new housing within or adjacent 
+to existing developed areas and infrastructure. 
+4. Increase the municipal tax base through private investment in new 
+residential developments. 
+ 
+ 
+ 
+
+[PAGE 3]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 3 
+ 
+B. 
+Establishment and Applicability 
+This MCMOD overlay district consists of four (4) sub-districts, that are superimposed over the 
+underlying zoning district (s) and are shown on the Zoning Map. 
+ 
+MBTA 1 Red Line North (In Blue)                                        48.94 Acres 
+ 
+ 
+MBTA 2 Red Line South (In Pink)                                                              127.02 Acres 
+ 
+ 
+ 
+
+[PAGE 4]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 4 
+ 
+MBTA 3 Red Line Village (In Pink)                                                         9.43 Acres 
+ 
+ 
+MBTA 1 Greenbush BWLD (In Yellow)                      18.43 Acres 
+ 
+ 
+
+[PAGE 5]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 5 
+ 
+1. Applicability of MCMOD. All Multi-Family Dwelling/Housing and Mixed-Use 
+Developments within a MCMOD Sub-District shall be built in accordance with 
+the provisions of Section 135-616. 
+ 
+2. Underlying Zoning. The MCMOD Sub Districts are overlay districts superimposed on 
+underlying zoning districts. The regulations for use, dimension, and all other 
+provisions of the Zoning Ordinance governing the respective underlying zoning 
+district(s) shall remain in full force, unless and when a development consists of 
+Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use Development 
+allowed by-right or by special permit in the MCMOD overlay districts. 
+ 
+Uses that are not identified in Section 135-616D are not allowed within 
+Developments utilizing the MCMOD Zoning. 
+ 
+3. Exclusions. Non-Applicable Sections of the Zoning Ordinance.  In order to comply 
+with the requirements and guidelines for MGL Chapter 40A Section 3A as most 
+recently amended, the following Sections of the Zoning Ordinance do not apply to 
+any Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use 
+Development allowed by-right or by special permit in the MCMOD overlay districts. 
+135-504 
+135-601 
+135-603 
+135-605 
+135-609 
+135-610 
+135-612 
+135-613 
+135-614 
+135-615 
+ 
+135-701 (only the table not the notes) 
+ 
+135-705 
+ 
+135-710 
+ 
+135-804(B) 
+ 
+135-815 
+ 
+135-910 
+ 
+Article X 
+ 
+Article XIII 
+ 
+ 
+ 
+ 
+
+[PAGE 6]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 6 
+ 
+C. 
+Definitions 
+For purposes of this Section 135-616, the following definitions shall apply.  Please refer to Section 
+135-102 for other definitions of terms already defined within the Zoning Ordinance. 
+ 
+Affordable Housing Unit: A dwelling unit that is affordable to and occupied by an eligible 
+household and meets all requirements for inclusion on the Massachusetts Executive Office of 
+Housing and livable Communities Subsidized Housing Inventory (SHI).  Affordable units shall 
+remain as affordable units in perpetuity or for the maximum period allowed by law. Such units 
+shall have the same construction methods and exterior physical characteristics as, and be 
+intermingled with, other units in the development.  
+ 
+Affordable Housing: A Structure that contains Affordable Units as defined by Section 
+135-616G. 
+ 
+Area Median Income (AMI): The median family income for the metropolitan statistical region 
+that includes the Town of Braintree as defined by the U.S. Department of Housing and Urban 
+Development (HUD). 
+ 
+By-Right Use: Development/Use that may proceed under the Zoning in place at time of 
+application without the need for a special permit, variance, zoning amendment, waiver, or 
+other discretionary zoning approval. 
+ 
+Compliance Guidelines: Compliance Guidelines for Multi-Family Zoning Districts Under Section 
+3A of the Zoning Act as further revised or amended from time to time. 
+ 
+Development Standards: Provisions of Section H - General Development Standards that are 
+applicable to all Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use 
+Development allowed by-right or by special permit in the MCMOD overlay districts. 
+ 
+EOHLC: The Massachusetts Executive Office of Housing and Livable Communities, DHCD’s 
+successor agency. 
+ 
+MBTA: Massachusetts Bay Transportation Authority. 
+ 
+Mixed-Use Development: A Development containing vertical or horizontal mix of Multi-Family 
+Dwelling/Housing residential uses and non-residential uses including, institutional, recreational, 
+commercial, and business as contained within the Section 135-616D, within a single building or 
+in separate buildings.  
+ 
+Multi-Family Dwelling/Housing: A building with three or more residential dwelling units or two 
+or more buildings on the same lot with more than one residential dwelling unit in each building. 
+ 
+Multi-Family Zoning District: A zoning district, either a base district or an overlay district, in 
+which Multi-Family Housing is allowed as of right. 
+ 
+Section 3A: Section 3A of the Zoning Act (MGL Chapter 40A) 
+
+[PAGE 7]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 7 
+ 
+ 
+Site Plan Review Authority: Braintree Planning Board 
+ 
+Sub-district: An area within the MCMOD that is geographically smaller than the MCMOD 
+district and differentiated from the rest of the district by use, dimensional standards, or 
+development standards. 
+ 
+Subsidized Housing Inventory (SHI): A list of qualified Affordable Housing Units maintained by 
+EOHLC used to measure a community's stock of low-or moderate- income housing for the 
+purposes of M.G.L. Chapter 40B, the Comprehensive Permit Law. 
+ 
+Transit Station:  An MBTA subway station, commuter rail station, or ferry terminal. 
+ 
+Commuter Rail Station: Any MBTA commuter rail station with year-round, rather than 
+intermittent, seasonal, or event-based, service. 
+ 
+Ferry terminal: The location where passengers embark and disembark from regular, year-
+round MBTA ferry service. 
+ 
+Subway Station: Any of the stops along the MBTA Red Line, Green Line, Orange Line, or Blue 
+Line. 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 8]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 8 
+ 
+D. 
+Permitted Uses - Table of Principal and Accessory Uses 
+Permitted Uses 
+ 
+Y = By-Right 
+ 
+SP = Special Permit 
+ 
+N= Not Allowed 
+ 
+ 
+ 
+ 
+Note (1): Mixed-Use Development. All Mixed-Use Development shall comply with the 
+PRINCIPAL USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Residential Uses 
+ 
+ 
+ 
+ 
+Multi-Family Dwelling/Housing 
+Y 
+Y 
+Y 
+Y 
+Mixed-Use Development (Note 1) 
+Y 
+Y 
+SP 
+Y 
+Institutional Uses 
+ 
+ 
+ 
+ 
+Community Center 
+Y 
+Y 
+Y 
+Y 
+Congregate Living Facility  
+Y 
+Y 
+N 
+N 
+Municipal Public Park 
+Y 
+Y 
+Y 
+Y 
+School 
+Y 
+Y 
+Y 
+Y 
+Museum 
+Y 
+Y 
+N 
+Y 
+Recreational Uses 
+ 
+ 
+ 
+ 
+Boathouse Marina 
+N 
+N 
+N 
+Y 
+Club of Lodge 
+Y 
+Y 
+N 
+Y 
+Business Uses 
+ 
+ 
+ 
+ 
+Amusement or Assembly, Place of 
+SP 
+SP 
+N 
+SP 
+Animal Clinic or Hospital 
+Y 
+Y 
+N 
+SP 
+Animal Retail and Animal Grooming Service <15,000 Sq. Ft. 
+Y 
+Y 
+N 
+Y 
+Animal Retail and Animal Grooming Service >15,000 Sq. Ft. 
+Y 
+Y 
+N 
+N 
+Full-Service Animal Establishment 
+SP 
+SP 
+N 
+N 
+Bank 
+Y 
+Y 
+N 
+Y 
+Body Art Establishment 
+N 
+N 
+N 
+SP 
+Business/Professional Offices 
+Y 
+Y 
+Y 
+Y 
+Catering Service 
+Y 
+Y 
+N 
+Y 
+Commercial Recreation 
+SP 
+SP 
+N 
+SP 
+Day Care, Commercial 
+Y 
+Y 
+Y 
+Y 
+Fast-Food Establishments w Drive Thru 
+Y 
+Y 
+N 
+N 
+Fast-Food Establishments w/o Drive Thru 
+Y 
+Y 
+Y 
+Y 
+Hotel or Motel 
+Y 
+Y 
+N 
+SP 
+Drive Thru for Any other Non Food Use 
+SP 
+SP 
+N 
+N 
+Freestanding, Exterior Kiosks 
+Y 
+Y 
+N 
+N 
+Medical Center/Clinic 
+Y 
+Y 
+N 
+SP 
+Office Park 
+SP 
+SP 
+N 
+N 
+Restaurant 
+Y 
+Y 
+Y 
+Y 
+Retail Store(s)/Service(s) (< 15,000 Sq. Ft.) 
+Y 
+Y 
+Y 
+Y 
+Retail Store(s)/Service(s) (>15,000 Sq. Ft.) 
+Y 
+Y 
+N 
+SP 
+Shopping Center  
+Y 
+Y 
+N 
+N 
+Function/Conference Facility 
+SP 
+SP 
+N 
+SP 
+Brewery with Tap Room 
+Y 
+Y 
+SP 
+SP 
+Commercial 
+ 
+ 
+ 
+ 
+Research Facility 
+Y 
+Y 
+N 
+SP 
+Light Manufacturing 
+SP 
+SP 
+N 
+N 
+
+[PAGE 9]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 9 
+ 
+definition in Section 135-616(C).  In order for a Mixed-Use Development to be By-Right, all 
+of the uses proposed in the Mixed-Use Development must also be by-right as noted in the 
+Use table in this Section.  If a Mixed-Use Development contains use(s) that require a Special 
+Permit, the Special Permit is only applicable to the non-residential use.  See Zoning Bylaw 
+Ordinance Section 135-503 for Special Permit Procedures and Criteria. 
+ 
+ 
+ 
+ 
+ 
+ACCESORY USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Swimming Pool 
+Y 
+Y 
+Y 
+Y 
+Shed (Maximize Size 300 Sq. Ft.) 
+Y 
+Y 
+Y 
+Y 
+Storage of an Unregistered Vehicle 
+N 
+N 
+N 
+N 
+Structured Parking 
+Y 
+Y 
+Y 
+Y 
+Exterior Storage of Recreational Vehicle, Boat or Camper 
+N 
+N 
+N 
+N 
+Separate Storage/Garage Building Maintenance 
+(Maximum Size 1,000 Sq. Ft.) 
+Y 
+Y 
+N 
+N 
+Dumpster Enclosure 
+Y 
+Y 
+Y 
+Y 
+Exterior Storage on Any Kind 
+N 
+N 
+N 
+N 
+Surface Parking Spaces 
+Y 
+Y 
+Y 
+Y 
+Playground 
+Y 
+Y 
+Y 
+Y 
+Building Mounted Solar Panels 
+Y 
+Y 
+Y 
+Y 
+Ground Mounted HVAC or Similar Utility Units  
+Y 
+Y 
+N 
+N 
+Ground Mounted Solar Panels 
+Y 
+Y 
+N 
+N 
+
+[PAGE 10]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 10 
+ 
+E. 
+Dimensional Standards 
+Notwithstanding anything to the contrary in this Zoning Ordinance, the dimensional 
+requirements applicable in the MCMOD Sub-Districts are as follows: 
+ 
+Dimensional Table Notes: 
+1. 
+All Mixed-Use Developments in the MCMOD Sub-Districts have no limitations on the 
+number of Accessory or Principal Buildings on a lot. 
+2. 
+In Multi-Family Dwelling/Housing Developments the Planning Board has the authority as 
+part of the Site Plan Review process to limit Accessory uses and structures. 
+3. 
+Parking garages  must be vertically integrated into a building or surrounded by other non-
+parking uses on all sides.   
+4. 
+All Exceptions in Section 135-701 Notes shall apply to the dimensional criteria in Section 
+135-616E, except for accessory structures and accessory uses, which shall be setback the 
+same distance from any lot line as the principal structures. 
+5. 
+No use of any portion of a lot’s front yard/land area within the required setback, in front 
+of the principal dwelling(s) on the lot shall be used for surface or structured parking.   
+6. 
+In accordance with the requirements in Section 135-702, any portion of a lot within the 
+MBTA 1 Redline North and MBTA 2 Redline South MCMOD subdistricts that are within the 
+vicinity of a Residence A or B Zone line shall be required to have 100 Ft. buffer for all 
+principal buildings as measured from the Zoning District Boundary with the MCMOD 
+Overlay and a 50 Ft. buffer for any accessory use, site improvement, structure or buildings 
+as measured from the Zoning District Boundary with the MCMOD Overlay.  The 50 Ft. 
+buffer shall be left in a nature state is undisturbed or restored to landscape/open space in 
+accordance with the provisions of 135-702.  
+ 
+ 
+Dimensional Criteria 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Minimum Lot Size 
+25,000 Sq. Ft. 
+25,000 Sq. Ft. 5,000 Sq. Ft. 
+5,000 Sq. Ft. 
+Frontage 
+100 Ft. 
+100 Ft. 
+50 Ft. 
+50 Ft. 
+*Building Height (Stories) 
+4 
+4 
+4 
+5 
+*Building Height (Feet) 
+50 
+50 
+50 
+60 
+Building Coverage 
+60% 
+60%  
+70% 
+70%  
+Lot Coverage 
+70% 
+70% 
+80% 
+80% 
+Open Space 
+30% 
+30% 
+20% 
+20% 
+Open Space Per Unit 
+500 Sq. Ft. 
+500 Sq. Ft. 
+150 Sq. Ft. 
+150 Sq. Ft. 
+Front Yard Setback 
+30 Ft. 
+30 Ft. 
+5 Ft. 
+5 Ft. 
+Rear Yard Setback 
+20 Ft. 
+20 Ft. 
+5 Ft. 
+5 Ft. 
+Side Yard Setback 
+20 Ft. 
+20 Ft. 
+5 Ft. 
+5 Ft. 
+Dwelling Units Per Acre Maximum 
+30 
+30 
+35 
+40 
+*Maximum Number of Units per Lot  
+325 Units 
+325 Units 
+150 Units 
+150 Units 
+
+[PAGE 11]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 11 
+ 
+7. 
+Renewable Energy Installations: The Planning Board may waive the height and setbacks 
+in the Dimensional Standards and in 135-701 Notes to accommodate the installation of 
+solar photovoltaic, solar thermal, living, and other eco-roofs, energy storage, and air-
+source heat pump equipment. Such installations shall not create any detriment or impact 
+to abutters in terms of visual occurrence, noise or shadow and must be appropriately 
+integrated into the architecture of the building and the layout of the site. The 
+installations shall not provide additional habitable space within the development. 
+ 
+8. 
+*Special Permit for exceptions to Building Height (Stories), Building Height (Feet) and 
+Maximum Number of Units per Lot. The Special Permit Granting Authority may issue a 
+Special Permit for a Multi-Family Dwelling/Housing or Mixed-Use Developments in the 
+MBTA 1 Redline North and MBTA 2 Redline South MCMOD subdistricts that exceed the 
+Dimensional Criteria in Section 135-616 E, noted with an *. 
+ 
+The Multi-Family Dwelling/Housing or Mixed-Use Developments exceptions requested are 
+prohibited from exceeding two (2) additional stories or 25 additional Feet. There are no 
+restrictions on the request to exceed the Maximum Number of Units Per Lot 
+ 
+Special Permit Criteria: When issuing a Special Permit for any Exception noted above in this 
+Section, the Special Permit Granting Authority shall evaluate how the proposed building mass, 
+design and form is compatible with and enhances the area in relationship to the existing built 
+environment, context, mass, and surrounding land uses.  All Multi-Family Dwelling/Housing or 
+Mixed-Use Developments shall clearly demonstrate that any Exceptions requested are in 
+harmony with and satisfy this criteria in order to be further evaluated under the criteria below. 
+ 
+If the Planning Board determines that the Exceptions satisfy the Multi-Family Dwelling/Housing or 
+Mixed-Use Developments must demonstrate that a a minimum of three (3) criteria are satisfied. 
+ 
+a. Preservation and reuse of historic buildings on the site. 
+b. Public Amenities: Newly created public open space, pocket parks, walking paths, 
+playgrounds, conservation restrictions or municipal parks.  Said public amenities shall be 
+accessible and usable by general public without undue restriction and shall be subject to 
+and include all required restrictions, easements and agreements determined to be 
+required by the Planning Board/Special Permit Granting Authority, including a donation of 
+land to the Town of Braintree. 
+c. Achievement of Gold or Platinum LEED certification or other equivalent standard related 
+to Green Building Technologies. 
+d. Community Space: Newly created interior building space that is accessible and suitable for 
+exclusive use by the Town of Braintree to host gatherings, meetings, public meetings and 
+community events and shall be subject to and include all required restrictions, easements 
+and agreements determined to be required by the Planning Board/Special Permit Granting 
+Authority. 
+e. Affordable Housing Units:  In addition to the requirements in Section 135-616G the Multi-
+
+[PAGE 12]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 12 
+ 
+Family Dwelling/Housing or Mixed-Use Development provides for an additional 10% of the 
+total unit count as Workforce Housing Units available to households earning (81% to 
+120%) of AMI. 
+ 
+F. 
+Transportation, Vehicle, Pedestrian and Bicycle Requirements 
+In order to comply with the goals and objectives of MGL Chapter 40A Section 3A this Section of 
+the Ordinance takes into account the locations of the MCMOD Sub-District and their proximity to 
+Commuter Rail, Red Line and Bus Service.  In addition to public transportation the MCMOD Sub-
+Districts are located in close proximity to the Town’s Civic and Open Space Areas, the South 
+Braintree and Braintree Weymouth Landing Squares as well as employment and larger 
+commercial nodes.  The movement of people, bicycles and vehicles is important in the MCMOD 
+Sub-Districts.  
+1. 
+Number of Vehicle Parking and Loading Bays and Spaces: The following minimum 
+number of off-street parking spaces shall be required for each use, either in surface 
+parking areas or structured parking:  For specific uses not listed please see Section 135-
+806A, B and C. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MCMOD Sub-Districts 
+USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Residential Uses 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Multi-Family Dwelling/Housing 
+1.5 Per Unit 
+1.5 Per Unit 
+1.5 Per Unit 
+1.25 Per Unit 
+Mixed-Use Development (Note 1) 
+Per Use 
+Per Use 
+Per Use 
+Per Use 
+ 
+ 
+ 
+ 
+ 
+Institutional Uses 
+ 
+ 
+ 
+ 
+Community Center 
+See 135-806 
+See 135-806 
+See 135-806 
+See 135-806 
+Congregate Living Facility  
+.4 per Unit 
+.4 per Unit  
+ 
+ 
+Municipal Public Park 
+Set By PB 
+Set By PB 
+Set By PB 
+Set By PB 
+School 
+See 135-806 
+See 135-806 
+See 135-806 
+See 135-806 
+Museum 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+ 
+ 
+ 
+ 
+ 
+Recreational Uses 
+ 
+ 
+ 
+ 
+Boathouse Marina 
+ 
+ 
+ 
+See 135-806 
+Club of Lodge 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+ 
+ 
+ 
+ 
+ 
+Business Uses 
+ 
+ 
+ 
+ 
+Amusement or Assembly, Place of 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+Animal Clinic or Hospital 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+Animal Retail and Animal Grooming 
+Service <15,000 Sq. Ft. 
+See 135-806 
+See 135-806 
+ 
+I per 500 Sq. Ft. 
+Animal Retail and Animal Grooming 
+Service 15,000 Sq. Ft. or > 
+See 135-806 
+See 135-806 
+ 
+ 
+Full Service Animal Establishment 
+See 135-806 
+See 135-806 
+ 
+ 
+Bank 
+1 per 250 Sq. Ft. 
+1 per 250 Sq. Ft. 
+ 
+1 per 400 Sq. Ft. 
+Body Art Establishment 
+ 
+ 
+ 
+1 per 300 Sq. Ft. 
+Business/Professional Offices 
+1 per 350 Sq. Ft. 
+1 per 350 Sq. Ft. 
+1 per 350 Sq. Ft. 
+See 135-615-10 
+Catering Service 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+ 
+1 per 500 Sq. Ft. 
+Commercial Recreation 
+See 135-806 
+See 135-806 
+ 
+See 135-806 
+
+[PAGE 13]
+MBTA 3A Zoning Amendments ) (Draft #2 12/7/23) 
+P a g e | 13 
+ 
+Day Care, Commercial 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+1 per 500 Sq. Ft. 
+Fast-Food Establishments with Drive 
+Thru 
+See 135-806 
+See 135-806 
+ 
+ 
+Fast-Food Establishments without 
+Drive Thru 
+1 per 150 Sq. Ft. 
+1 per 150 Sq. Ft. 
+1 per 150 Sq. Ft. 
+1 per 150 Sq. Ft. 
+Hotel or Motel 
+1 per guest room 
+1 per guest room 
+ 
+ 
+1 per guest room 
+ 
+Freestanding, Exterior Kiosks 
+See 135-806C 
+See 135-806C  
+ 
+See 135-806C 
+Medical Center/Clinic 
+1 per 175 Sq. Ft. 
+1 per 175 Sq. Ft. 
+ 
+1 per 200 Sq. Ft. 
+Office Park 
+1 per 350 Sq. Ft. 
+1 per 350 Sq. Ft. 
+ 
+ 
+Restaurant 
+1 per 3.5 seats 
+1 per 3.5 seats  
+1 per 3.5 seats  
+1 per 5 seats  
+Retail Store(s)/Service(s) (< 15,000 Sq. 
+Ft.) 
+1 per 250 Sq. Ft. 
+1 per 250 Sq. Ft. 
+1 per 350 Sq. Ft. 
+1 per 500 Sq. Ft. 
+Retail Store(s)/Service(s) (>15,000 Sq. 
+Ft.) 
+1 per 250 Sq. Ft. 
+1 per 250 Sq. Ft. 
+ 
+1 per 500 Sq. Ft. 
+Shopping Center  
+See 135-806C  
+See 135-806C  
+ 
+ 
+Function/Conference Facility 
+See 135-806C  
+See 135-806C  
+ 
+See 135-806C 
+Brewery with Tap Room 
+See 135-806 
+See 135-806 
+See 135-806 
+See 135-806 
+ 
+ 
+ 
+ 
+ 
+Commercial 
+ 
+ 
+ 
+ 
+Research Facility 
+I per 400 Sq. Ft. 
+1 per 400 Sq. Ft. 
+ 
+1 per 400 Sq. Ft. 
+Light Manufacturing 
+See 135-806 
+See 135-806
+
+### DOC 41c85c695d | town=Braintree | community_type=subway or light rail | governing_body=City Council | screened_board=zoning | screened_doctype= | url=https://www.braintreema.gov/DocumentCenter/View/12528
+
+[PAGE 1]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 1 
+ 
+1. PROPOSED AMENDMENT TO ZONING ORDINANCE 
+SECTION 135-301 
+Districts Established 
+Current Ordinance (Please see Proposed Amendment in Yellow) 
+For the purpose of this chapter, the Town is hereby divided into use districts, as hereinafter provided. The boundaries of 
+these districts are hereby established as shown on the Town's Zoning Map, dated December 10, 1986, as revised, and 
+on file in the office of the Town Engineer. This map is by reference incorporated into and made a part of this chapter. 
+Any changes in the number of districts or in district boundaries shall be noted on the Zoning Map as each such change 
+is adopted through a Zoning Bylaw amendment. It shall be the responsibility of the Planning Board to update this Zoning 
+Map. The districts are as follows: 
+ 
+Residence A Districts 
+Residence B Districts 
+Residence C Districts 
+Billboard Zoning Overlay District 
+General Business Districts 
+Highway Business Districts 
+Highway Business Retail Districts 
+Commercial Districts 
+Fire Protection Districts 
+Wetlands and Floodplain Protection Districts (§ 135-608) 
+Watershed Protection District (§ 135-609) 
+Open Space and Conservancy Districts 
+Cluster I (§ 135-610) 
+Cluster II (§ 135-610) 
+Cluster III (§ 135-610) 
+Planned Unit Development (PUD) (§ 135-612) 
+Historic District 
+PROPOSED NEW DISTRICT 
+MBTA Communities Multi-Family Overlay Districts (MCMOD) (Section 135-616) 
+ 
+Village Zoning Overlay District, superimposed on selected portions of the existing General Business 
+Zoning District and centered around the intersections of Pearl, Hancock and Washington Streets in 
+South Braintree Square and Elm and Washington Streets in Braintree Square [Added 5-6-2002 STM 
+by Art. 10] 
+ 
+ 
+ 
+
+[PAGE 2]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 2 
+ 
+2. PROPOSED NEW ZONING ORDINANCE 
+SECTION 135-616 
+MBTA Communities Multi-Family Overlay Districts (MCMOD) 
+ 
+A. 
+Purpose 
+The purpose of the MBTA Communities Multi-Family Overlay Districts are is to allow multi- family 
+housing by-right in accordance with Section 3A of the Zoning Act (Massachusetts General Laws 
+Chapter 40A). This zoning provides for as of right multi-family housing to accomplish the following 
+purposes: 
+1. Encourage the production of a variety of housing sizes and types to provide equal 
+access to new housing throughout the community for people with a wide variety 
+of housing needs and income levels; 
+2. Locate housing within walking distance of public transit and village centers to 
+promote public and social health, reduce the number of vehicular miles travelled, 
+support economic development, and meet community-based environmental 
+goals, including reducing greenhouse gases and improving air quality. 
+3. Preserve open space in a community by locating new housing within or adjacent 
+to existing developed areas and infrastructure. 
+4. Increase the municipal tax base through private investment in new 
+residential developments. 
+ 
+ 
+ 
+
+[PAGE 3]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 3 
+ 
+B. 
+Establishment and Applicability 
+This MCMOD overlay district consists of four (4) sub-districts, that are superimposed over the 
+underlying zoning district (s) and are shown on the Zoning Map. 
+ 
+MBTA 1 Red Line North (In Blue)                                        48.94 Acres 
+ 
+ 
+MBTA 2 Red Line South (In Pink)                                                              127.02 Acres 
+ 
+ 
+ 
+
+[PAGE 4]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 4 
+ 
+MBTA 3 Red Line Village (In Pink)                                                         9.43 Acres 
+ 
+ 
+MBTA 1 Greenbush BWLD (In Yellow)                      18.43 Acres 
+ 
+ 
+
+[PAGE 5]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 5 
+ 
+1. Applicability of MCMOD. All Multi-Family Dwelling/Housing and Mixed-Use 
+Developments within a MCMOD Sub-District shall be built in accordance with 
+the provisions of Section 135-616. 
+ 
+2. Underlying Zoning. The MCMOD Sub Districts are an overlay districts superimposed 
+on underlying zoning districts. The regulations for use, dimension, and all other 
+provisions of the Zoning Ordinance governing the respective underlying zoning 
+district(s) shall remain in full force, . Uunless and when a development consists of 
+Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use Development 
+allowed by-right or by special permit in the MCMOD overlay districts. 
+ 
+Uses that are not identified in Section 135-616D are not allowed within 
+Developments utilizing the MCMOD Zoning. 
+ 
+3. Exclusions. Non-Applicable Sections of the Zoning Ordinance.  In order to comply 
+with the requirements and guidelines for MGL Chapter 40A Section 3A as most 
+recently amended, the following Sections of the Zoning Ordinance do not apply to 
+any Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use 
+Development allowed by-right or by special permit in the MCMOD overlay districts. 
+135-504 
+135-601 
+135-603 
+135-605 
+135-609 
+135-610 
+135-612 
+135-613 
+135-614 
+135-615 
+ 
+135-701 (only the table not the notes) 
+ 
+135-705 
+ 
+135-710 
+ 
+135-804(B) 
+ 
+135-815 
+ 
+135-910 
+ 
+Article X 
+ 
+Article XIII 
+ 
+ 
+ 
+ 
+Formatted: No underline
+Formatted: No underline
+
+[PAGE 6]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 6 
+ 
+C. 
+Definitions 
+For purposes of this Section 135-616, the following definitions shall apply.  Please refer to Section 
+135-102 for other definitions of terms already defined within the Zoning Ordinance. 
+ 
+Affordable Housing Unit: A dwelling unit that is affordable to and occupied by an eligible 
+household and meets all requirements for inclusion on the Massachusetts Executive Office of 
+Housing and livable Communities Massachusetts Department of Housing and Community 
+Development (DHCD) Subsidized Housing Inventory (SHI).  Affordable units shall remain as 
+affordable units in perpetuity or for the maximum period allowed by law. Such units shall have 
+the same construction methods and exterior physical characteristics as, and be intermingled with, 
+other units in the development.  
+ 
+Affordable Housing: A Structure that contains Affordable Units as defined by Section 
+135-616G.. 
+ 
+Area Median Income (AMI): The median family income for the metropolitan statistical region 
+that includes the Town of Braintree as defined by the U.S. Department of Housing and Urban 
+Development (HUD). 
+ 
+By-Right Use: Development/Use that may proceed under the Zoning in place at time of 
+application without the need for a special permit, variance, zoning amendment, waiver, or 
+other discretionary zoning approval. 
+ 
+Compliance Guidelines: Compliance Guidelines for Multi-Family Zoning Districts Under Section 
+3A of the Zoning Act as further revised or amended from time to time. 
+ 
+Development Standards: Provisions of Section H - General Development Standards that are 
+applicable to all Multi-Family Dwelling/Housing uses allowed by-right or Mixed-Use 
+Development allowed by-right or by special permit in the MCMOD overlay districts. 
+ 
+EOHLC: The Massachusetts Executive Office of Housing and Livable Communities, DHCD’s 
+successor agency. 
+ 
+MBTA: Massachusetts Bay Transportation Authority. 
+ 
+Mixed-Use Development: A Development containing vertical or horizontal mix of Multi-Family 
+Dwelling/Housing residential uses and non-residential uses including, institutional, recreational, 
+commercial, and business as contained within the Section 135-616D, within a single building or 
+in separate buildings.  
+ 
+Multi-Family Dwelling/Housing: A building with three or more residential dwelling units or two 
+or more buildings on the same lot with more than one residential dwelling unit in each building. 
+ 
+Multi-Family Zoning District: A zoning district, either a base district or an overlay district, in 
+which multi-family housing is allowed as of right. 
+ 
+Formatted: Font: Bold
+Formatted: Font: Bold
+
+[PAGE 7]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 7 
+ 
+Section 3A: Section 3A of the Zoning Act (MGL Chapter 40A) 
+ 
+Site Plan Review Authority: Braintree Planning Board 
+ 
+Sub-district: An area within the MCMOD that is geographically smaller than the MCMOD 
+district and differentiated from the rest of the district by use, dimensional standards, or 
+development standards. 
+ 
+Subsidized Housing Inventory (SHI): A list of qualified Affordable Housing Units maintained by 
+EOHLC used to measure a community's stock of low-or moderate- income housing for the 
+purposes of M.G.L. Chapter 40B, the Comprehensive Permit Law. 
+ 
+Transit Station:  An MBTA subway station, commuter rail station, or ferry terminal. 
+ 
+Commuter Rail Station: Any MBTA commuter rail station with year-round, rather than 
+intermittent, seasonal, or event-based, service. 
+ 
+Ferry terminal: The location where passengers embark and disembark from regular, year-
+round MBTA ferry service. 
+ 
+Subway Station: Any of the stops along the MBTA Red Line, Green Line, Orange Line, or Blue 
+Line. 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 8]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 8 
+ 
+D. 
+Permitted Uses - Table of Principal and Accessory Uses 
+Permitted Uses 
+ 
+Y = By-Right 
+ 
+SP = Special Permit 
+ 
+N= Not Allowed 
+ 
+ 
+ 
+ 
+PRINCIPAL USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Residential Uses 
+ 
+ 
+ 
+ 
+Dwelling Two-Family 
+N 
+N 
+Y 
+N 
+Multi-Family Dwelling/Housing 
+Y 
+Y 
+Y 
+Y 
+Mixed-Use Development (Note 1) 
+Y 
+Y 
+SP 
+Y 
+Institutional Uses 
+ 
+ 
+ 
+ 
+Community Center 
+Y 
+Y 
+Y 
+Y 
+Congregate Living Facility  
+Y 
+Y 
+N 
+N 
+Municipal Public Park 
+Y 
+Y 
+Y 
+Y 
+School 
+Y 
+Y 
+Y 
+Y 
+Museum 
+Y 
+Y 
+N 
+Y 
+Recreational Uses 
+ 
+ 
+ 
+ 
+Boathouse Marina 
+N 
+N 
+N 
+Y 
+Club of Lodge 
+Y 
+Y 
+N 
+Y 
+Business Uses 
+ 
+ 
+ 
+ 
+Amusement or Assembly, Place of 
+SP 
+SP 
+N 
+SP 
+Animal Clinic or Hospital 
+Y 
+Y 
+N 
+SP 
+Animal Retail and Animal Grooming Service <15,000 Sq. Ft. 
+Y 
+Y 
+N 
+Y 
+Animal Retail and Animal Grooming Service >15,000 Sq. Ft. 
+Y 
+Y 
+N 
+N 
+Full-Service Animal Establishment 
+SP 
+SP 
+N 
+N 
+Bank 
+Y 
+Y 
+N 
+Y 
+Body Art Establishment 
+N 
+N 
+N 
+SP 
+Business/Professional Offices 
+Y 
+Y 
+Y 
+Y 
+Catering Service 
+Y 
+Y 
+N 
+Y 
+Commercial Recreation 
+SP 
+SP 
+N 
+SP 
+Day Care, Commercial 
+Y 
+Y 
+Y 
+Y 
+Fast-Food Establishments w Drive Thru 
+Y 
+Y 
+N 
+N 
+Fast-Food Establishments w/o Drive Thru 
+Y 
+Y 
+Y 
+Y 
+Hotel or Motel 
+Y 
+Y 
+N 
+SP 
+Drive Thru for Any other Non Food Use 
+SP 
+SP 
+N 
+N 
+Freestanding, Exterior Kiosks 
+Y 
+Y 
+N 
+N 
+Medical Center/Clinic 
+Y 
+Y 
+N 
+SP 
+Office Park 
+SP 
+SP 
+N 
+N 
+Restaurant 
+Y 
+Y 
+Y 
+Y 
+Retail Store(s)/Service(s) (< 15,000 Sq. Ft.) 
+Y 
+Y 
+Y 
+Y 
+Retail Store(s)/Service(s) (>15,000 Sq. Ft.) 
+Y 
+Y 
+N 
+SP 
+Shopping Center  
+Y 
+Y 
+N 
+N 
+Function/Conference Facility 
+SP 
+SP 
+N 
+SP 
+Brewery with Tap Room 
+Y 
+Y 
+SP 
+SP 
+Commercial 
+ 
+ 
+ 
+ 
+Research Facility 
+Y 
+Y 
+N 
+SP 
+Light Manufacturing 
+SP 
+SP 
+N 
+N 
+
+[PAGE 9]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 9 
+ 
+Note (1): Mixed-Use Development. All Mixed-Use Development shall comply with the 
+definition in Section 135-616(C).  In order for a Mixed-Use Development to be By-Right, all 
+of the uses proposed in the Mixed-Use Development must also be by-right as noted in the 
+Use table in this Section.  If a Mixed-Use Development contains use(s) that require a Special 
+Permit, the Special Permit is only applicable to the non-residential use.  See Zoning Bylaw 
+Ordinance Section 135-503 for Special Permit Procedures and Criteria. 
+ 
+ 
+ 
+ 
+ 
+ACCESORY USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Swimming Pool 
+Y 
+Y 
+Y 
+Y 
+Shed (Maximize Size 300 Sq. Ft.) 
+Y 
+Y 
+Y 
+Y 
+Storage of an Unregistered Vehicle 
+N 
+N 
+N 
+N 
+Structured Parking 
+Y 
+Y 
+Y 
+Y 
+Exterior Storage of Recreational Vehicle, Boat or Camper 
+N 
+N 
+N 
+N 
+Separate Storage/Garage Building Maintenance 
+(Maximum Size 1,000 Sq. Ft.) 
+Y 
+Y 
+N 
+N 
+Dumpster Enclosure 
+Y 
+Y 
+Y 
+Y 
+Exterior Storage on Any Kind 
+N 
+N 
+N 
+N 
+Surface Parking Spaces 
+Y 
+Y 
+Y 
+Y 
+Playground 
+Y 
+Y 
+Y 
+Y 
+Building Mounted Solar Panels 
+Y 
+Y 
+Y 
+Y 
+Ground Mounted HVAC or Similar Utility Units  
+Y 
+Y 
+N 
+N 
+Ground Mounted Solar Panels 
+Y 
+Y 
+N 
+N 
+
+[PAGE 10]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 10 
+ 
+E. 
+Dimensional Standards 
+Notwithstanding anything to the contrary in this Zoning Ordinance, the dimensional 
+requirements applicable in the MCMOD Sub-Districts are as follows: 
+ 
+Dimensional Table Notes: 
+1. 
+All Mixed-Use Developments in the MCMOD Sub-Districts have no limitations on the 
+number of AAccessory or Principal Buildings on a lot. 
+2. 
+In Multi-Family Dwelling/Housing Developments the Planning Board has the authority as 
+part of the Site Plan Review process to limit Aaccessory uses and structures. 
+3. 
+All stand alone Pparking garages that contain no other uses must be vertically integrated 
+into a building or surrounded by other non-parking uses on all sides.  as part of the 
+structure shall be no more than 3 Stories and 36 Ft. in height measured to the highest 
+point of the roof or to the tops of the walls for garages that are open on the top floor. 
+4. 
+All Exceptions in Section 135-701 Notes shall apply to the dimensional criteria in Section 
+135-616E, except for accessory structures and accessory uses, which shall be setback the 
+same distance from any lot line as the principal structures. 
+5. 
+No use of any portion of a lot’s front yard/land area within the required setback, in front 
+of the principal dwelling(s) on the lot shall be used for surface or structured parking.   
+6. 
+In accordance with the requirements in Section 135-702, any portion of a lot within the 
+MBTA 1 Redline North and MBTA 2 Redline Southany of the MCMOD subdistricts that are 
+within the vicinity of a Residence A or B Zone line shall be required to have 100 Ft. buffer 
+for all principal buildings as measured from the Zoning District Boundary with the MCMOD 
+Overlay and a 50 Ft. buffer for any accessory use, site improvement, structure or buildings 
+as measured from the Zoning District Boundary with the MCMOD Overlay.  The 50 Ft. 
+buffer shall be left in a nature state is undisturbed or restored to landscape/open space in 
+Dimensional Criteria 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Minimum Lot Size 
+25,000 Sq. Ft. 
+25,000 Sq. Ft. 5,000 Sq. Ft. 
+5,000 Sq. Ft. 
+Frontage 
+100 Ft. 
+100 Ft. 
+50 Ft. 
+50 Ft. 
+*Building Height (Stories) 
+4 
+4 
+4 
+5 
+*Building Height (Feet) 
+50 
+50 
+50 
+60 
+Building Coverage 
+60%50% 
+60% 50% 
+70% 
+70% 80% 
+Building Coverage w/ Structured Parking 
+70% 
+70% 
+80% 
+80% 
+Lot Coverage 
+70% 
+70% 
+80% 
+80% 
+Open Space 
+30% 
+30% 
+20% 
+20% 
+Open Space Per Unit 
+500 Sq. Ft. 
+500 Sq. Ft. 
+150 Sq. Ft. 
+150 Sq. Ft. 
+Front Yard Setback 
+30 Ft. 
+30 Ft. 
+5 Ft. 
+5 Ft. 
+Rear Yard Setback 
+20 Ft. 
+20 Ft. 
+5 Ft. 
+5 Ft. 
+Side Yard Setback 
+20 Ft. 
+20 Ft. 
+5 Ft. 
+5 Ft. 
+Dwelling Units Per Acre Maximum 
+30 
+30 
+35 
+40 
+*Maximum Number of Units per 
+Lot Project Size 
+325 Units 
+325 Units 
+150 Units 
+150 Units 
+Formatted: Font: 12 pt
+Formatted Table
+Formatted: Font: (Default) +Body (Calibri), 12 pt
+
+[PAGE 11]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 11 
+ 
+accordance with the provisions of 135-702.  
+ 
+ 
+
+[PAGE 12]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 12 
+ 
+7. 
+Renewable Energy Installations: The Site Plan Review Authority may waive the height 
+and setbacks in the Dimensional Standards and in 135-701 Notes to accommodate the 
+installation of solar photovoltaic, solar thermal, living, and other eco-roofs, energy 
+storage, and air-source heat pump equipment. Such installations shall not create any 
+detriment or impact +to abutters in terms of visual occurrence, noise or shadow and 
+must be appropriately integrated into the architecture of the building and the layout of 
+the site. The installations shall not provide additional habitable space within the 
+development. 
+ 
+7. 
+*Special Permit for exceptions to Building Height (Stories), Building Height (Feet) and 
+Maximum Number of Units per Lot. The Special Permit Granting Authority may issue a Special 
+Permit for a Multi-Family Dwelling/Housing or Mixed-Use Developments in the MBTA 1 Redline 
+North and MBTA 2 Redline South MCMOD subdistricts that exceed the Dimensional Criteria in 
+Section 135-616 E, noted with an *. 
+ 
+The Multi-Family Dwelling/Housing or Mixed-Use Developments exceptions requested are 
+prohibited from exceeding two (2) additional stories or 25 additional Feet. There are no 
+restrictions on the request to exceed the Maximum Number of Units Per Lot 
+ 
+Special Permit Criteria: When issuing a Special Permit for any Exception noted above in this 
+Section, the Special Permit Granting Authority shall evaluate how the proposed building mass, 
+design and form is compatible with and enhances the area in relationship to the existing built 
+environment, context, mass, and surrounding land uses.  All Multi-Family Dwelling/Housing or 
+Mixed-Use Developments shall clearly demonstrate that any Exceptions requested are in 
+harmony with and satisfy this criteria in order to be further evaluated under the criteria below. 
+ 
+If the Planning Board determines that the Exceptions satisfy the Multi-Family Dwelling/Housing or 
+Mixed-Use Developments must demonstrate that a a minimum of three (3) criteria are satisfied. 
+ 
+a. Preservation and reuse of historic buildings on the site. 
+ 
+b. Public Amenities: Newly created public open space, pocket parks, walking paths, 
+playgrounds, conservation restrictions or municipal parks.  Said public amenities shall be 
+accessible and usable by general public without undue restriction and shall be subject to 
+and include all required restrictions, easements and agreements determined to be 
+required by the Planning Board/Special Permit Granting Authority, including a donation of 
+land to the Town of Braintree. 
+ 
+c. Achievement of Gold or Platinum LEED certification or other equivalent standard related 
+to Green Building Technologies. 
+ 
+d. Community Space: Newly created interior building space that is accessible and suitable for 
+exclusive use by the Town of Braintree to host gatherings, meetings, public meetings and 
+community events and shall be subject to and include all required restrictions, easements 
+Formatted: Indent: Left:  0.5",  No bullets or
+Formatted: Indent: Left:  0.06", Space Before:  0 pt,  No
+bullets or numbering
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Left
+Formatted: Font: Not Bold
+Formatted: Font: (Default) +Body (Calibri), 12 pt
+Formatted: List Paragraph, Left, Line spacing:  single,
+Numbered + Level: 1 + Numbering Style: a, b, c, … +
+Start at: 1 + Alignment: Left + Aligned at:  0.25" +
+Indent at:  0.5"
+Formatted: Font: (Default) +Body (Calibri), 12 pt
+Formatted: Font: (Default) +Body (Calibri)
+Formatted: List Paragraph, Left, Numbered + Level: 1
++ Numbering Style: a, b, c, … + Start at: 1 + Alignment:
+Left + Aligned at:  0.25" + Indent at:  0.5"
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Font: (Default) +Body (Calibri), 12 pt, Font
+color: Dark Gray
+Formatted: Normal,  No bullets or numbering, Pattern:
+Clear
+Formatted: List Paragraph, Numbered + Level: 1 +
+Numbering Style: a, b, c, … + Start at: 1 + Alignment:
+Left + Aligned at:  0.25" + Indent at:  0.5"
+
+[PAGE 13]
+ 
+MBTA 3A Zoning Amendments (Draft 11/7/23) (Draft #2 12/7/23) 
+P a g e | 13 
+ 
+and agreements determined to be required by the Planning Board/Special Permit Granting 
+Authority. 
+ 
+e. Affordable Housing Units:  In addition to the requirements in Section 135-616G the Multi-
+Family Dwelling/Housing or Mixed-Use Development provides for an additional 10% of the 
+total unit count as Workforce Housing Units available to households earning (81% to 
+120%) of AMI. 
+ 
+ 
+F. 
+Transportation, Vehicle, Pedestrian and Bicycle Requirements 
+In order to comply with the goals and objectives of MGL Chapter 40A Section 3A this Section of 
+the Ordinance takes into account the locations of the MCMOD Sub-District and their proximity to 
+Commuter Rail, Red Line and Bus Service.  In addition to public transportation the MCMOD Sub-
+Districts are located in close proximity to the Town’s Civic and Open Space Areas, the South 
+Braintree and Braintree Weymouth Landing Squares as well as employment and larger 
+commercial nodes.  The movement of people, bicycles and vehicles is important in the MCMOD 
+Sub-Districts.  
+1. 
+Number of Vehicle Parking and Loading Bays and Spaces: The following minimum 
+number of off-street parking spaces shall be required for each use, either in surface 
+parking areas or structured parking:  For specific uses not listed please see Section 135-
+806A, B and C. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MCMOD Sub-Districts 
+USES 
+MBTA 1 
+Red Line 
+North 
+MBTA 2 
+Red Line 
+South 
+MBTA 3 
+Red Line 
+Village 
+MBTA 4 
+Greenbush 
+BWLD 
+Residential Uses 
+ 
+ 
+ 
+ 
+Dwelling Two-Family 
+ 
+ 
+2 Per Unit 
+ 
+Multi-Family Dwelling/Housing 
+1.5 Per Unit 
+1.5 Per Unit 
+1.5 Per Unit 
+1.25 Per Unit 
+Mixed-Use Development (Note 1) 
+Per Use 
+Per Use 
+Per Use 
+Per Use 
+ 
+ 
+ 
+ 
+ 
+Institutional Uses 
+ 
+ 
+ 
+ 
+Community Center 
+See 135-806 
+See 135-806 
+See 135-806 
+See 135-806 
+Congregate Living Facility  
+.4 per Unit 
+.4 per Unit  
+ 
+ 
+Municipal Public Park 
+Set By 

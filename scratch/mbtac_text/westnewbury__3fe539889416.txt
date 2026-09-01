@@ -1,0 +1,511 @@
+
+===== PAGE 1 =====
+Form Name: 
+Pre-Adoption Review Application for MBTA Communities
+Submission Time: 
+January 3, 2024 3:51 pm
+Browser: 
+Chrome 120.0.0.0 / Windows
+IP Address: 
+71.192.98.37
+Unique ID: 
+1180101875
+Location: 
+Pre-Adoption Review Application for MBTA Communities Under Section 3A of the Zoning Act
+Description Area
+Please read the Section 3A Compliance Guidelines and the Instructions
+before starting to complete this form. Find these documents at
+mass.gov/mbtacommunities.This application may be submitted by an
+MBTA community seeking an opinion from DHCD as to whether a
+proposed zoning district complies with Section 3A of the Zoning Act and
+with the Compliance Guidelines for Multi-family Zoning Districts issued by
+DHCD August 10, 2022, as amended and/or revised (Compliance
+Guidelines). &nbsp;This application may be submitted by a municipal
+official undertaking Section 3A compliance activities. A red asterisk (*) next
+to a question on this form indicates that a response is required.
+&nbsp;Users will not be able to submit the form unless all required answers
+are completed. &nbsp;If upon submitting, the form returns to the questions
+section, there is an asterisked question that was not answered. Other
+documentation required to be submitted with this form includes:A
+completed Compliance Model Excel workbook file demonstrating the
+district's "zoning metrics", including land area, estimated unit capacity,
+gross density, geographic contiguity, and, if applicable, the percentage of
+district land area and unit capacity (relative to the community's minimum
+requirements) that is within transit station areas&nbsp;A complete copy of
+the municipal zoning ordinance or bylaw and zoning mapA zip folder
+containing GIS shapefile(s) for the zoning district(s) designated for
+compliance If Inclusionary Zoning (IZ) is applicable in the district
+designated for compliance, the pre-adoption review may include a
+determination as to whether an economic feasibility analysis (EFA) is
+required. &nbsp;If an EFA has already been completed, DHCD will review
+the EFA as well.&nbsp;
+Section 1.	Community Information
+1.1  Municipality
+West Newbury
+Description Area
+Information about the community's specific zoning requirements under
+Section 3A and the Compliance Guidelines:
+1.2 Community Category
+Adjacent Small Town
+1.2a Minimum multi-family unit capacity
+87
+1.2b Minimum Land Area in acres
+0
+1.2c Percent of district to be located in
+Transit Station Areas (express as a
+percentage, e.g. "50" for fifty percent)
+0
+
+===== PAGE 2 =====
+1.3 Information about the contact
+person for this application
+Susan Brown
+1.3a Job Title/Description
+Town Planner
+1.3b Email Address
+townplanner@wnewbury.org
+1.3c Phone Number
+(978) 363-1100 ext. 125
+1.4 Information about the municipal
+CEO
+Angus Jennings
+1.4a Municipal mailing address of CEO
+381 Main Street
+West Newbury, MA 01985
+1.4b Email address of municipal CEO
+townmanager@wnewbury.org
+Section 2.	Compliance Documentation
+Description Area
+Responses to the following questions should match the information from
+the Compliance Model Excel workbook which must also be uploaded.
+&nbsp;Please note: &nbsp;the total capacity for file uploads in this
+application is 25MB. &nbsp;If your files are too large for uploading, please
+provide links where DHCD can download the files. &nbsp;If you need
+assistance with this process, contact nathan.carlucci@mass.gov or
+emma.snellings@mass.gov 
+District 1:
+
+===== PAGE 3 =====
+Description Area
+Section 3A requires MBTA communities to have a zoning "district" of
+reasonable size that allows multi-family housing as of right. To demonstrate
+compliance with the law, MBTA communities may submit a "district" that
+differs from boundaries adopted at the municipal level. &nbsp;For example.
+the "district" designated for compliance with Section 3A might consist of a
+portion of a municipal zoning district or might contain all of, or portions of,
+multiple municipal zoning districts. &nbsp;Furthermore, a single zoning
+district might have multiple subdistricts with distinct zoning rules. The
+Compliance Model requires communities to input a separate "district" for
+each distinct set of zoning rules, whether they are derived from districts or
+subdistricts. &nbsp;This does not mean that separate entries are required
+where one district or subdistrict appears in multiple distinct geographies on
+a zoning map. &nbsp;The districts used on this application must match the
+districts used in the Compliance Model workbook. &nbsp;If the MBTA
+community used only one district in the Compliance Model, enter that
+information for "District One". If the MBTA community used multiple districts
+in the Compliance Model, enter the first district for "District One".
+&nbsp;This application will accept up to six distinct districts/subdistricts.
+&nbsp;If more than six are necessary, please contact MBTA communities'
+staff. &nbsp;Once each separate district/subdistrict information has been
+entered, there is a separate section for the cumulative data of all
+districts.&nbsp;
+District 1: 2.1 Brief narrative description
+of the district, including its name and
+location
+The proposed zoning has 4 subdistricts on two parcels (each parcel has
+two contiguous subdistricts). This subdistrict is called the "Main Street 1
+(Dunn), Neighborhood Subdistrict." It is located in the town center in the
+interior of the "Dunn Property," a former commercial greeenhouse property.
+The subdistrict allows multifamily as of right at 15 units per acre. 
+This subdistrict provides sufficient unit capacity to meet all of West
+Newbury's MBTA Communities compliance requirements. I.E. it allows for
+more than the required 87 units at 15 units per acre. 
+The only difference between the two Main Street 1 subdistricts is that the
+Mixed-Use subdistrict allows mixed-use, while the Neighborhood subdistrict
+does not. 
+Description Area
+Inputs for the quantitative "zoning metrics" &nbsp;fields below can be found
+in the Compliance Model workbook Summary Tab
+District 1: 2.2	Land area in acres
+6.80
+District 1: 2.3 Estimated unit capacity
+102
+District 1: 2.4 Gross density in units per
+acre
+15.00
+
+===== PAGE 4 =====
+District 1: 2.7 Is there a second district
+or subdistrict?
+Yes
+District 2:
+District 2: 2.1 Brief narrative description
+of the district, including its name and
+location 
+The proposed zoning has 4 subdistricts on two parcels (each parcel has
+two contiguous subdistricts). This subdistrict is called the "Main Street 1
+(Dunn), Mixed-Use Subdistrict." It is located in the town center at the front
+of the "Dunn Property," a former commercial greeenhouse property. 
+The subdistrict allows multifamily as of right at 15 units per acre. Together
+with the adjacent Main Street 1, Mixed-Use Subdistrict, which is on the
+same parcel, this subdistrict provides sufficient unit capacity to meet all of
+West Newbury's MBTA Communities compliance requirements. I.E. it
+allows for more than the required 87 units at 15 units per acre. 
+The only difference between the two Main Street 1 subdistricts is that the
+Mixed-Use subdistrict allows mixed-use, while the Neighborhood subdistrict
+does not. 
+The Compliance Model estimates the gross density of this subdistrict at
+14.9 units per acre. That appears to be due to a rounding error in the
+Compliance Model. We think the error is because the district is slightly
+larger than 1 acre (1.008217 acres). It appears that the Compliance Model
+rounds that off to 1 acre when calculating the allowed number of units but
+then divides the results by the actual acreage. 
+Regardless of how the Compliance Models does rounding, the proposed
+zoning allows 15 units/acre and specifically calls for the calculation of the
+allowed number of units to be rounded up to a whole number (see Section
+8.4.5.3 of the proposed zoning). In this case that means the proposed
+bylaw allows 16 units on the 1.008217 acres in this district. That equals
+15.8 units per acre.  
+District 2: 2.2	Land area in acres
+1.00
+District 2: 2.3 Estimated unit capacity
+15
+District 2: 2.4 Gross density in units per
+acre
+14.90
+District 2: 2.7 Is there a third district or
+subdistrict? 
+Yes
+District 3:
+
+===== PAGE 5 =====
+District 3: 2.1 Brief narrative description
+of the district, including its name and
+location
+The proposed zoning has 4 subdistricts on two parcels (each parcel has
+two contiguous subdistricts). This subdistrict is called the "Main Street 2
+(Knapp), Neighborhood Subdistrict." It is located to the west of the town
+center in the interior of the "Knapp Property," a former commercial
+greeenhouse property. 
+The subdistrict allows multifamily as of right at 15 units per acre. This
+subdistrict provides sufficient unit capacity to meet all of West Newbury's
+MBTA Communities compliance requirements--it allows for more than the
+required 87 units at 15 units per acre. 
+The only difference between the two Main Street 2 Districts is that the
+Mixed-Use subdistrict allows mixed-use, while the Neighborhood subdistrict
+does not. 
+The zoning requirements of the Main Street 1 subdistricts and those for the
+Main Street 2 subdistricts. The only reason we entered these as different
+subdistricts is because they are in different locations. 
+District 3: 2.2	Land area in acres
+7.30
+District 3: 2.3 Estimated unit capacity
+109
+District 3: 2.4 Gross density in units per
+acre
+17.20
+District 3: 2.7 Is there a fourth district or
+subdistrict? 
+Yes
+District 4:
+District 4: 2.1. Brief narrative
+description of the district, including its
+name and location
+The proposed zoning has 4 subdistricts on two parcels (each parcel has
+two contiguous subdistricts). This subdistrict is called the "Main Street 2
+(Knapp), Mixed-Use Subdistrict." It is located west of the town center on the
+front of the "Knapp Property," a former commercial greeenhouse property. 
+The subdistrict allows multifamily as of right at 15 units per acre. Together
+with the adjacent Main Street 2, Neighborhood Subdistrict, which is on the
+same parcel, this subdistrict provides sufficient unit capacity to meet all of
+West Newbury's MBTA Communities compliance requirements. I.E. it
+allows for more than the required 87 units at 15 units per acre. 
+The only difference between the two Main Street 2 subdistricts is that the
+Mixed-Use subdistrict allows mixed-use, while the Neighborhood subdistrict
+does not. 
+District 4: 2.2	Land area in acres
+1.70
+
+===== PAGE 6 =====
+District 4: 2.3 Estimated unit capacity
+25
+District 4: 2.4 Gross density in units per
+acre
+15.00
+District 4: 2.7 Is there a fifth district or
+subdistrict? 
+No
+Cumulative Zoning Metrics
+Description Area
+This section appears for MBTA communities that are using more than one
+municipal zoning district or subdistrict to demonstrate compliance with
+Section 3A. &nbsp;Find this information in the "Totals" column of the
+"Comparison Table of Requirements and Modeled Results" on the
+Summary Tab of the Compliance Model workbook.&nbsp;
+2.8 Cumulative Land Area in acres
+16.70
+2.9 Cumulative Unit Capacity
+251
+2.10 Overall gross density in units per
+acre
+15.90
+2.15 Is at least 50% of the district land
+area comprised of one contiguous
+geography?
+Yes
+2.16 Are any district geographies
+smaller than 5 acres included in the
+land area calculation?
+No
+Section 3: Compliance Model Uploads
+Description Area
+Please note: &nbsp;the maximum file size for the total of all uploads in this
+application is 25MB. &nbsp;If files are too large for uploading, please
+provide links where DHCD can download the files. Further instructions for
+uploading shapefiles are available in the District Compliance Application
+Instructions. If you need assistance with this process, contact
+nathan.carlucci@mass.gov or emma.snellings@mass.gov 
+3.1 Did this community complete the
+Compliance Model and achieve
+numerical zoning standards that satisfy
+the requirements of Section 3A and the
+Compliance Guidelines?
+Yes
+3.1a Completed Compliance Model
+Excel workbook 
+https://www.formstack.com/admin/download/file/15718395835
+
+===== PAGE 7 =====
+3.1b If needed, please provide a link to
+the Excel Workbook if it is too large to
+be uploaded 
+https://dodson.egnyte.com/fl/4xnUaUQpjp
+3.1c Zip folder containing GIS shapefile
+components for the designated zoning
+district(s)
+https://www.formstack.com/admin/download/file/15718395837
+3.1d If needed, Please provide a link to
+the GIS shapefile(s) for the designated
+zoning district(s)
+https://dodson.egnyte.com/fl/4xnUaUQpjp
+3.2 Were any modifications made to the
+calculations of the Compliance Model
+workbook, or to the parcel
+configurations or excluded land
+classifications provided by DHCD in the
+land maps?
+Yes
+3.2a What kinds of modifications were
+made?
+Parcel configurations
+Description Area
+Communities may find that modifications are necessary for the data
+contained in the Compliance Model to accurately reflect on-the-ground
+realities. &nbsp; For example, parcel configurations may have changed, or
+publicly owned land may have been disposed for private housing
+development. The Compliance Model workbook component allows users to
+override some of this data to better reflect those realities. If the community
+made any adjustments to that data, please submit a list of the adjustments
+that were made, and, if applicable, provide any evidence justifying the
+override (e.g., copy of a disposition agreement, a recorded plan of land, a
+recorded deed, etc).&nbsp;
+3.2b Please attach a document
+explaining the modifications
+https://www.formstack.com/admin/download/file/15718395841
+Section 4: Zoning Uploads
+
+===== PAGE 8 =====
+Description Area
+In the following section please provide a copy of the complete municipal
+zoning ordinance or bylaw, the proposed zoning amendments, the zoning
+map and a map showing the proposed districts. &nbsp;Please ensure that
+all uploads are in PDF format with searchable text and all map imagery is
+sufficient resolution for a user to zoom in and clearly read all labels and
+texts. &nbsp;If the community's official zoning map is in color, the upload
+must be in full color as well. Please note that the district compliance
+application requires certification by the city or town clerk that the uploaded
+zoning is complete and up to date.&nbsp;Please note: &nbsp;the total
+capacity for file uploads in this application is 25MB. &nbsp;If your files are
+too large for uploading, please provide links where DHCD can download
+the files. &nbsp;If you need assistance with this process, contact
+nathan.carlucci@mass.gov or emma.snellings@mass.gov
+4.1 Please upload the complete existing
+zoning text
+https://www.formstack.com/admin/download/file/15718395842
+4.1b Please upload any proposed
+amendments to the zoning text 
+https://www.formstack.com/admin/download/file/15718395843
+4.2 Please upload the official zoning
+map
+https://www.formstack.com/admin/download/file/15718395844
+4.2b. Please upload the zoning map with
+any proposed amendments for
+compliance
+https://www.formstack.com/admin/download/file/15718395845
+4.3 Is the municipality a town or a city?
+Town
+4.3a When does the Town plan to adopt
+or amend the zoning by-law at Town
+Meeting in order to comply with Section
+3A? 
+Apr 29, 2024
+Description Area
+Section 9 of the Compliance Guidelines requires towns to submit evidence
+that a new or amended by-law was adopted and was submitted to Attorney
+General's Office by submission of "Form 7" prior to submitting an
+application for District Compliance.
+Section 5: Inclusionary Zoning/Affordability Requirements
+5.1  Is multi-family housing
+development in this district subject to
+affordability requirements?
+Yes
+5.2 Through which mechanism are
+affordable units required? (check all
+that apply)
+Inclusionary zoning bylaw or ordinance that applies to the whole
+municipality
+Inclusionary zoning bylaw or ordinance that is specific to the district
+designated for compliance with Section 3A, and is NOT connected to any
+DHCD zoning incentive program such as c. 40R
+
+===== PAGE 9 =====
+Description Area
+DHCD pre-adoption review of affordability requirements, and, if applicable,
+an economic feasibility analysis, is recommended, but not required. If a
+pre-adoption review application is submitted without the affordability
+provisions or an economic feasibility analysis, there is a risk that some
+requirement of the inclusionary zoning may later cause a pre-approved
+zoning district to not be certified as compliant when the MBTA community
+applies for district compliance.&nbsp;
+Local Inclusionary Zoning
+5.3 What is the threshold of units in a
+project to trigger affordability
+requirements? 
+The existing inclusionary zoning provisions apply to any project with 3 or
+more units or 3 or more lots in a subdivision. That applies in the multi-family
+overlay district with the modification that for the multi-family overlay the
+required number of units is rounded down to the next whole number.
+Therefore, the functional trigger for IZ is 10 units. Section 6.1 of the current
+Zoning Bylaw and Section 8.4.9 of the Proposed Zoning. .
+5.4 What is the cap on the income of
+families or individuals to occupy the
+affordable units, expressed as a
+percentage of Area Median Income?
+(For example, 80% of AMI, 60% of AM
+80% of AMI
+5.5 What is the threshold of units in a
+project to trigger affordability
+requirements? Please describe how
+rounding and fractional units are
+handled. 
+When calculating the number of units of Affordable Housing required within
+a development project, a fractional unit shall be rounded down to the next
+whole number. (See Section 8.4.9.2 of the proposed zoning). 
+Functionally, this means that inclusionary zoning requirements do not kick
+in unless a project has 10 or more units. 
+5.6. How does the threshold apply?
+To the number of units added to a lot/to a project, and pre-existing units do
+not count towards the unit threshold
+5.7. Please describe any zoning or
+developer incentives
+N/A
+5.8 May a financial payment be provided
+in lieu of providing on-site affordable
+units?
+No
+5.9 May offsite affordable units be
+provided as an alternative form of
+compliance? 
+Yes
+
+===== PAGE 10 =====
+5.9a Please describe how offsite
+affordable units are handled
+Text from the curent zoning bylaw: "With the approval of the Planning
+Board, the inclusionary housing requirement may be met through the
+provision of all required Affordable Housing Units on an alternative site or
+multiple sites suitable for housing use. Affordable off-site housing units may
+be either new construction or located in a rehabilitated existing structure. In
+determining compliance with this By-law, affordable off-site units that are
+newly created and are not replacing existing, legal housing units shall be
+counted in the total number of housing units created by a proposed
+development. Unless otherwise approved, Affordable Housing Units
+provided under this subsection shall comply in all respects, other than
+on-site location, with the requirements of this By-law."
+5.10 Please provide any other
+description of town/city wide 
+inclusionary zoning requirements not
+captured in the preceding questions. 
+1. The proposed overlay allows the Planning Board to waive any
+inclusionary zoning requirements when the applicant demonstrates they
+are not financially feasable.
+2. Please clarify if an economic feasibility analysis is required. Our
+understanding from the Compliance Guidelines is that an economic
+feasibility analysis is not required "as long as the zoning requires not more
+than 10 percent of the units in a project to be affordable units, and the cap
+on the income... is not less than 80 percent of area median income." The
+proposed zoning meets these conditions so our understanding is that a
+feasibility analysis is not required. Please confirm. 
+Description Area
+If a municipality wants units that are developed as of right in accordance
+with inclusionary zoning requirements to be listed on its Chapter 40B
+Subsidized Housing Inventory, then &nbsp;it must submit an application to
+DHCD to review the units as "Local Action Units" (LAU) for compliance with
+"Local Initiative Program" (LIP) requirements. &nbsp;Learn more about this
+at: &nbsp; Local Initiative Program | Mass.gov&nbsp;
+(https://www.mass.gov/service-details/local-initiative-program)
+5.11 Has the appropriate municipal staff
+reviewed the guidelines for the Local
+Initiative Program/Local Action Unit
+(LIP/LAU) and do they understand the
+process for getting Inclusionary Zoning
+units onto the Subsided Housing
+Inventory?  
+Yes
+Section 6: Zoning Data
+
+===== PAGE 11 =====
+6.1  Please describe the zoning (or
+non-zoning) changes that are proposed.
+Select all that apply
+A new zoning district
+Amendments to the applicability of other zoning or non-zoning
+requirements in the district (e.g. parking, site plan review, inclusionary
+zoning, mixed use, moratoriums, etc)
+Other: The proposed zoning is an overlay district that establishes new
+dimensional and use standards, modifies any underlying conflicting
+provisions that would preclude multi-family at 15 units per acre, and
+establishes design standards. We have thoroughly reviewed the existing
+zoning and Planning Board regulations for any conflicting provisions and
+addressed them within the proposed bylaw.
+6.2 How does the new district differ
+from the previous or underlying base
+zoning district(s)? Select all that apply
+Allows multi-family housing as of right, vs by special permit
+Allows multi-family housing as of right, vs prohibiting it
+Allows more dwelling units per lot under use regulations
+Allows more dwelling units per lot by direct dimensional regulations (i.e.
+units per lot area, etc)
+Allows more dwelling units per lot by indirect dimensional regulations (i.e.
+setbacks, FAR, etc)
+Other: Eliminates other barriers to multi-family development. For example,
+the underlying zoning prohibited 3-4 units based on certain soil conditions
+that are common in the town.
+6.5 What kinds of applicability need to
+change? Select all that apply
+Minimum parking requirements
+Site plan review
+Other: The proposed overlay changes various provisions of the underlying
+zoning from special permit to site plan review in order to ensure multi-family
+is as of right.
+6.6 Will the changes be voted on using a
+Simple Majority voting threshold under
+c. 40A Section 5?
+Yes
+6.8 Please describe any other changes
+that were made previously made to
+comply with Section 3A
+Note: Please contact Dillon Sussman at Dodson & Flinker
+(dillon@dodsonflinker.com, 413-628-4496x 102) with any questions about
+Compliance Modeling, the proposed zoning, etc. He is the town's
+consultant for this effort. Thanks!

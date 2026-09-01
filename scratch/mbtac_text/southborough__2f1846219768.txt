@@ -1,0 +1,490 @@
+
+===== PAGE 1 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+1 of 9 
+MBTA COMMUNITIES  
+FREQUENTLY ASKED QUESTIONS 
+ 
+ 
+A. 
+General 
+ 
+A1. 
+What role does DHCD play in determining compliance with the new section 3A of the 
+Zoning Act (“Section 3A”)? 
+ 
+Section 3A gives DHCD, in consultation with the Massachusetts Bay Transportation 
+Authority and the Massachusetts Department of Transportation, discretion to promulgate 
+guidelines to determine if an MBTA community complies with Section 3A.  DHCD released 
+draft guidelines on December 15, 2021.  The draft guidelines clarify what is required to comply 
+with the statute, for example by defining what it means for a district to be of “reasonable size,” 
+and explaining how communities demonstrate that a district meets the law’s minimum gross 
+density requirement.  The draft guidelines do not impose mandates or create restrictions that are 
+not in the law. 
+ 
+A2. 
+Can you clarify how DHCD determined if a particular MBTA community is a rapid 
+transit community, a bus service community, a commuter rail community, or an 
+adjacent community? 
+ 
+MBTA communities were categorized based on whether they have transit service located 
+within the municipality or within 0.5 miles of the municipal boundary, and if so what type of 
+transit service.  A community with access to more than one transit type is classified in the 
+category with the higher unit capacity requirement.  More specifically: 
+ 
+• A rapid transit community has an MBTA subway station located within its borders, or 
+within 0.5 miles of its border.  Note, a rapid transit community may also have other 
+types of transit stations.   
+ 
+• A bus service community has no subway station within its border or within 0.5 miles 
+of its border, but does have an MBTA bus route with one or more bus stops located 
+within the community.  Note, a bus community that happens also to have a commuter 
+rail station within its borders is placed within the bus community category due to the 
+presence of the bus route. 
+ 
+• A commuter rail community has a commuter rail station within its borders or within 
+0.5 miles of its border, but has no bus route or subway station. 
+ 
+• An adjacent community abuts a rapid transit community, bus service community or 
+commuter rail community, has no subway station or commuter rail station within its 
+boundaries or within 0.5 miles of its border, and has no MBTA bus route running 
+through it. 
+
+===== PAGE 2 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+2 of 9 
+A2A. My community has a commuter rail station and a bus route.  We appear to be 
+misclassified based on the definition of “bus service community” in the draft guidelines.  Can 
+you clarify why we were classified as a bus service community? 
+ 
+There is a typographical error in the definition of “bus service community” in the draft 
+guidelines.  For purposes of the draft guidelines, this definition was intended to read as follows: 
+“Bus service community” means an MBTA community with a bus station within its borders or 
+within 0.5 miles of its border, or an MBTA bus stop within its borders, and no subway station or 
+commuter rail station within its border, or within 0.5 mile of its border.  That error will be 
+corrected in the final guidelines.  (Added March 10, 2022) 
+ 
+ 
+B. 
+Location of Districts 
+ 
+B1. 
+How much discretion does each MBTA community have with respect to where a multi-
+family district is located? 
+ 
+A multi-family zoning district must be located within 0.5 miles of a transit station, with at 
+least half of the district’s land area within the 0.5-mile radius, when that is possible.  Where it is 
+not possible to locate a district within 0.5 miles of a transit station, cities and towns otherwise 
+have considerable flexibility to decide where to locate these districts.  These districts may be 
+located where there are existing single-family, multi-family, commercial or other existing uses 
+and structures, or in areas ready for redevelopment.  DHCD strongly encourages cities and towns 
+to consider multi-family districts where there is existing or planned pedestrian and bicycle access 
+to a transit station, or that otherwise are in areas of concentrated development.  Regardless of 
+location, each community must demonstrate that the zoning allows for multi-family housing that 
+meets or exceeds the required unit capacity and at a density that meets the statutory minimum. 
+ 
+B2. 
+What if my community has more than one transit station—for example, a subway 
+station and a separate commuter rail station, or multiple commuter rail stations?  Do I 
+need a multi-family zoning district in proximity to each station?  If not, can I choose 
+which transit station the district? 
+ 
+ 
+Section 3A requires each MBTA community to “have a zoning ordinance or by-law that 
+provides for at least 1 district of reasonable size in which multi-family housing is permitted as of 
+right ….”  An MBTA community may have more than 1 such multi-family zoning district, but a 
+single district is all that Section 3A requires.  If an MBTA community has more than one transit 
+station, it may locate the multi-family zoning district within 0.5 miles of any of them. 
+ 
+B3. 
+Can my town establish a multi-family district in an area where there is already 
+significant multi-family development? 
+ 
+Yes, but you still must demonstrate the district meets the “reasonable size” criteria, 
+including the minimum unit capacity, and at the required minimum gross density. 
+
+===== PAGE 3 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+3 of 9 
+ 
+B4. 
+Can my town establish a multi-family district in an area where there are many single 
+family homes on small lots? 
+ 
+ 
+Yes, but it may be difficult to demonstrate such a district meets the minimum multi-
+family unit capacity and gross density requirements, because the zoning is unlikely to allow for 
+the construction of the required number and density of multi-family housing units on small 
+parcels. 
+ 
+B5. 
+My community has been categorized as a “bus service community” because we have an 
+MBTA bus route, with several bus stops in town.  Are bus stops or park-and-ride 
+locations the same as “bus stations,” and do we have to locate our multi-family zoning 
+district within 0.5 miles of one of a bus stop or park-and-ride location if we have one? 
+ 
+No.  Neither a bus stop nor a park-and-ride location is considered to be a bus station.  The 
+draft guidelines attempted to make this point by including a definition of bus station. 
+ 
+B6. 
+What is required of “adjacent communities” with no land area within ½ mile of a 
+transit station? 
+ 
+Section 3A requires all MBTA communities, including adjacent communities, to have at 
+least 1 zoning district in which multi-family uses are allowed by right.  An adjacent community 
+with no land area within ½ mile of a transit station should locate its district in an area that makes 
+the most sense for that community, and should carefully consider establishing the district in an 
+area of concentrated development, or an area with pedestrian access to a transit station that is 
+more than one half mile away.  (Added March 10, 2022) 
+ 
+C. 
+Size of Districts 
+ 
+C1. 
+How do the draft compliance guidelines define reasonable size? 
+ 
+The draft compliance guidelines consider two factors in determining if a zoning district is 
+of reasonable size.  First, they require the land area in the district be at least 50 acres.  Second, 
+the draft guidelines consider the number of multi-family units that the zoning allows in the 
+district—what the guidelines refer to as the district’s “multi-family unit capacity.”  The 
+minimum multi-family unit capacity for each district depends on the type of transit service in a 
+particular community, if any, and ranges from 10 to 25 percent of the community’s total housing 
+stock.  This may at first sound like a large number of units, but keep in mind that “unit capacity” 
+is just a measure of the number of multi-family units allowed by right in the district—many of 
+which may already exist.  Unit capacity is not a requirement to construct a particular number of 
+units, or any units at all. Section 3A requires multi-family by right zoning, not housing 
+production. 
+ 
+
+===== PAGE 4 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+4 of 9 
+C2. 
+A minimum land area of 50 acres seems like a lot—isn’t that too big for most 
+communities? 
+ 
+The intent of Section 3A is to require the creation of multi-family zoning districts within 
+0.5 miles of a transit station, where applicable.  For reference, a circle with a half-mile radius and 
+a transit station at its center comprises about 500 acres.  The minimum district size of 50 acres is 
+approximately one-tenth of that land area.  In most MBTA communities, 50 acres will be well 
+under 1 percent of the community’s total land area.  A minimum land area of 50 acres will 
+encourage long-term, neighborhood-scale planning, instead of using zoning as a way to permit 
+proposed projects on specific sites.  But 50 acres is still only a small fraction of the land area in a 
+town and gives communities significant flexibility on where to locate a district in the half-mile 
+radius around a transit station. 
+ 
+C3. 
+Section 5.a of the draft guidelines states that portions of an overlay district can be a 
+minimum of 5 acres as long as one portion of the overlay district is 25 acres.  Does this 
+apply to “base districts” as well?  
+ 
+Yes, base districts and overlay districts have the same minimum land area requirements.   
+ 
+C4. 
+My community has 2500 total housing units and is categorized as an “adjacent 
+community.”  Is the required unit capacity 250 (10% of the total housing units) or 750 
+(50 acres x 15 units/acre)?  
+ 
+Your town’s minimum unit capacity is 250 as that term is defined in the draft guidelines.  
+But, to comply with Section 3A, the multi-family zoning district also must meet the minimum 
+gross density requirement of not less than 750 multi-family units (for a 50-acre district).  
+Because the guidelines establish a minimum land area of 50 acres and the statute requires a 
+minimum gross density of 15 units per acre, the result is that every MBTA community, 
+regardless of its size, must provide a zoning district that allows at least 750 multi-family units as 
+of right.  This requirement is a floor on the number of units a zoning district must allow—many 
+MBTA communities are required to have a district with a larger unit capacity.  In other words, 
+because of the minimum gross density requirement, a compliant district must allow at least 750 
+units regardless of the number of housing units in the community. 
+ 
+C5. 
+My community is categorized as a “commuter rail community” because we have a 
+commuter rail station.  We have almost 10,000 housing units.  Are you saying we need 
+to construct new multi-family units equal to 15% of our total housing stock? 
+ 
+No, your community does not have to produce 1,500 new housing units.  Your 
+community must adopt a multi-family zoning district that can accommodate that many units.  
+Those units may be existing units, as long as they would be allowed to be built as of right under 
+the district’s zoning; or they may be new units that potentially could be constructed by right 
+sometime in the future; or a combination of existing and potential new units. 
+ 
+
+===== PAGE 5 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+5 of 9 
+C6. 
+According to the draft guidelines, my community must have a zoning district with a 
+unit capacity of 970 units.  We have an area in town with 800 multi-family units 
+already.  Some of these units were built by special permit, and others were built under 
+chapter 40B.  Can we create a new zoning district in this area and count the existing 
+units? 
+ 
+The zoning district must allow for 970 multi-family units by right.  To determine the unit 
+capacity of a new or existing multi-family zoning district, you do not “count” existing units—
+you instead determine how many multi-family units the zoning district would allow by right on 
+that parcel if it were undeveloped.  Depending on the density, height, open space, setbacks, 
+parking and other requirements that apply in the district, and the amount of developable land on 
+each parcel, it is possible that all of the existing 800 units could be constructed by right—or even 
+more than the existing 800 units.  The important thing to understand is that you are counting 
+what the zoning allows by right, not the number of units that currently exist. Note that in addition 
+to meeting the unit capacity requirement, the district must meet the minimum gross density 
+requirement as well.  In some cases, the zoning for a district will need to allow for more multi-
+family units to meet the minimum gross density requirement. 
+ 
+C7. 
+By basing the minimum multi-family unit capacity on the number of existing housing 
+units the draft guidelines require greater density in communities that already are 
+densely developed.  Shouldn’t there be more expected of communities that haven’t 
+already allowed for multi-family housing? 
+ 
+MBTA communities include dense, urban communities, suburban communities and rural 
+communities.  One of the guiding principles of the draft guidelines is that MBTA communities 
+should adopt multi-family districts that will lead to development of multi-family housing projects 
+of a scale, density and character that are consistent with a community’s long-term planning 
+goals, while also leveraging local and state investment in public transportation.  The draft 
+guidelines are intended to establish zoning requirements that will lead to more multi-family 
+housing production in appropriate locations, while allowing towns to adhere to other municipal 
+goals.  (Added March 10, 2022) 
+ 
+D. 
+Minimum Gross Density 
+ 
+D1. 
+What does it mean to have a minimum gross density of 15 units per acre? 
+ 
+Section 3A states that each multi-family zoning district of reasonable size “shall … have 
+a minimum gross density of 15 units per acre, subject to any further limitations imposed 
+by section 40 of chapter 131 and title 5 of the state environmental code established pursuant 
+to section 13 of chapter 21A.”  The law defines gross density as “a units-per-acre density 
+measurement that includes land occupied by public rights-of-way and any recreational, civic, 
+commercial and other nonresidential uses.”  The law clearly states that the gross density 
+requirement applies to the district as a whole, rather than to individual parcels or projects within 
+
+===== PAGE 6 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+6 of 9 
+that district.  The draft guidelines provide further instruction on how to calculate the gross 
+density of an existing or proposed multi-family zoning district.   
+ 
+D2. 
+Can the multi-family district have subdistricts with varying degrees of density as long 
+as the average gross density is 15 units/acre? 
+ 
+Yes.  The draft guidelines permit the multi-family district to contain sub-districts that 
+may have varying densities (higher and lower than a gross density of 15 units/acre) as long as the 
+gross density for the entire district is at least 15 units/acre.  
+ 
+D3. 
+Is a district that allows or requires mixed use and residential gross density of at least 15 
+units per acre acceptable to meet the guidelines?  
+ 
+Yes, commercial and other uses can also be permitted by right or by special permit in a 
+multi-family zoning district.  A mixed-use district will be deemed to comply with Section 3A as 
+long as it meets the unit capacity, density and other requirements in the guidelines.   
+ 
+D4. 
+A density of 15 units per acre is out of character with my rural community.  Can the 
+final guidelines reduce the minimum gross density requirement from 15 units per acre 
+for more rural MBTA communities in which that density is out of character with 
+existing development patterns? 
+ 
+No.  The minimum gross density of 15 units per acre is expressly set forth in Section 3A.  
+The guidelines must be consistent with the statute.  But, the dimensional requirements in the 
+zoning district can encourage the construction of low-rise multi-family housing projects where 
+that kind of development is desired.  (Added March 10, 2022) 
+ 
+E. 
+Interim Compliance Requirements 
+ 
+E1. 
+DHCD released draft guidelines on December 15. What is expected of us until these 
+draft guidelines are issued as final guidelines?  
+ 
+While DHCD is collecting public comment on the draft guidelines, and until final 
+guidelines are issued, an MBTA community can remain in compliance with Section 3A by 
+taking the following actions set forth in the “How to Comply for 2022 for MBTA Communities” 
+which can be found here.   If you would like to submit comments on the draft guidelines, you 
+may do so online here. 
+ 
+E2. 
+Who signs the attestation required in section 9 of the guidelines? We are concerned 
+our small town doesn’t have the expertise to make this statement.   
+ 
+The attestation must be signed by each municipality’s chief executive officer—the mayor 
+in a city and the board of selectmen in a town, unless some other municipal office is designated 
+to be the chief executive officer under the provisions of a local charter.  Technical assistance will 
+
+===== PAGE 7 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+7 of 9 
+be available after the guidelines are finalized and you may also consult with your Regional 
+Planning Agency for assistance.   
+ 
+E3. 
+What happens if my community does not comply with Section 3A? 
+ 
+MBTA communities that do not timely comply with Section 3A will not be eligible to 
+receive Massworks or Housing Choice funding through the 2022 Community One-Stop 
+Application.  Non-compliant MBTA communities will also be ineligible to receive funding from 
+the Local Capital Projects Fund established in section 2EEEE of chapter 29.  The compliance 
+requirements in effect until the issuance of final guidelines can be found here. 
+ 
+E4. 
+Does Section 3A require all MBTA communities to adopt a multi-family zoning district, 
+or is compliance optional? 
+ 
+Section 3A states that each “MBTA community shall have a zoning ordinance or by-law 
+that provides for at least 1 district of reasonable size in which multi-family housing is permitted 
+as of right …”  The word “shall” indicates that the legislature intended to require all MBTA 
+communities to have a multi-family zoning district.  (Added March 10, 2022) 
+ 
+E5. 
+Subsection (b) of Section 3A says that an MBTA community that does not have a 
+compliant multi-family zoning district shall not be eligible for funds from: (i) the 
+Housing Choice Initiative as described by the governor in a message to the general 
+court dated December 11, 2017; (ii) the Local Capital Projects Fund established 
+in section 2EEEE of chapter 29; or (iii) the MassWorks infrastructure program 
+established in section 63 of chapter 23A.  What are these grant programs? 
+ 
+The MassWorks infrastructure program provides the largest and most flexible source of 
+capital funds to municipalities and other eligible public entities primarily for public infrastructure 
+projects that support and accelerate housing production, spur private development, and create 
+jobs throughout the Commonwealth.  EOHED grants approximately $75 million in MassWorks 
+funding every year.  The Housing Choice Initiative is a flexible grant program open to 
+communities that have been designated as “housing choice communities”.  Approximately $19 
+million in grant funding has been awarded since 2018.  The Local Capital Projects Fund collects 
+a portion of the state’s gaming revenue and has been used in recent years to fund the operations 
+of local housing authorities.  (Added March 10, 2022) 
+ 
+F. 
+Technical Assistance 
+ 
+F1. 
+Where can I find help understanding the new law and how best to comply with it? 
+ 
+ 
+Additional resources are available at mass.gov/MBTACommunities.  Funding 
+opportunities for planning and other technical assistance will be available in next year’s One 
+Stop application.  Further information on the One Stop application is available at 
+mass.gov/onestop.  Other technical assistance will be offered by the Massachusetts Housing 
+
+===== PAGE 8 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+8 of 9 
+Partnership (MHP) and regional planning agencies.  Details about MHP’s technical assistance 
+are available at www.mhp.net/mbtazoning. 
+ 
+G. 
+Miscellaneous 
+ 
+G1. 
+What if I already have a zoning district in which multi-family housing is allowed by 
+special permit?  Does that count? 
+ 
+No, the law requires that multi-family uses be allowed by right in the district.  Those uses 
+may be subject to site plan review and design review, but multi-family uses cannot be subject to 
+special permits or other discretionary permits that a local board can deny the use, or impose 
+conditions unrelated to site layout, pedestrian safety, internal circulation of automobiles, and 
+public safety considerations. 
+ 
+G2. 
+Can an MBTA community’s zoning require that multi-family projects within a multi-
+family zoning district include a specified percentage of affordable units?   
+ 
+  
+Yes, reasonable affordability requirements are allowed, as long as they are financially 
+feasible and do not unduly impede the construction of new multi-family housing in the 
+district.  At least 140 cities and towns in the Commonwealth have some form of “inclusionary” 
+zoning requiring that a percentage of units in new housing developments be affordable.  Any 
+affordability requirements in a zoning ordinance or bylaw will be reviewed on a case-by-case 
+basis to ensure that they are reasonable. 
+ 
+G2A. Answer G.2 says that the multi-family zoning may require projects to include a 
+percentage of affordable units, as long as the requirements are financially feasible and 
+do not unduly impede the construction of new multi-family housing in the 
+district.  How will DHCD review affordability requirements to ensure that they are 
+reasonable? 
+ 
+The final guidelines may provide more specific rules about what is reasonable and what 
+is not. DHCD encourages and invites public comment on this issue to inform the final guidelines.  
+(Added March 10, 2022) 
+ 
+G3. 
+Can a project within the multi-family zoning district be required to have an adequate 
+number of parking spaces? 
+ 
+Requiring too many parking spaces for multi-family housing projects can practically 
+impede the number of multi-family units that can be constructed within the district.  A 
+municipality should consider reducing or eliminating any minimum parking requirements in the 
+multi-family zoning district—particularly for projects that are within walking or biking distance 
+to a transit station—to allow for a greater density of multi-family units on each parcel. In all 
+cases, a municipality must consider whether the unit capacity and minimum gross density 
+
+===== PAGE 9 =====
+Iteration No. 2 
+Updated March 1, 2022 
+ 
+ 
+ 
+9 of 9 
+requirements are met given the amount of parking required. 
+ 
+G4. 
+My community does not currently provide a public sewer system.  Are we required to 
+design and construct a public sewer system and offer sewer hook ups to support higher 
+density housing?  If so, how can we pay for that expensive infrastructure? 
+ 
+No.  Multi-family housing can be created at the required density using private septic and 
+wastewater treatment systems that meet state environmental standards.  Where public systems 
+currently exist, private developers may be able to support the cost of necessary water and sewer 
+extensions.  Communities are encouraged to consider the location of any municipal water 
+sources and other nitrogen-sensitive areas when siting multi-family zoning districts to minimize 
+barriers to installing septic and wastewater systems that can serve the needs of multi-family 
+housing development in the district.  Cities and towns seeking to affirmatively plan for growth 
+may also be eligible for state grants to defray the cost of new or expanded public infrastructure.   
+ 
+G5. 
+My community is concerned that new multi-family housing will mean many more 
+children in the school system.  Our school system is already at capacity and we do not 
+have the resources to accommodate more children.  What can we do? 
+ 
+The new law does not require immediate housing production—only the creation of 
+compliant zoning districts where multi-family housing may be created as of right.  It is unlikely 
+that communities will see an immediate increase in school attendance, given the time needed to 
+assemble land for development, design and build housing.  Moreover, studies have shown that in 
+most cases new multi-family housing development has no negative impact on a community’s 
+school system. 
+ 
+ 
+ 

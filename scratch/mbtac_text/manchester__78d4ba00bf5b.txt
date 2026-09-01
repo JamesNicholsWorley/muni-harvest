@@ -1,0 +1,377 @@
+
+===== PAGE 1 =====
+ 
+ 
+March 21, 2022 
+ 
+Secretary Michael Kennealy 
+Executive Office of Housing and Economic Development 
+1 Ashburton Place, Room 2101 
+Boston, MA 02108 
+ 
+Dear Secretary Kennealy: 
+ 
+I am writing to share MAPC’s public comments on the draft guidelines for the new Section 3A of M.G.L. 
+Chapter 40A. Of the 175 communities across the Commonwealth subject to these new requirements, 97 
+are in the MAPC region.1 The following comments reflect MAPC’s position on how the guidelines can 
+best (1) advance the objectives of the law and (2) position municipalities to comply with the requirement. 
+They are rooted in analysis by MAPC staff, input from housing policy experts, and feedback from our 
+member municipalities. 
+ 
+Equity 
+I’d like to convey MAPC’s enthusiasm for the principles outlined in section 3(b) of the guidelines, which 
+overlap with many goals from our regional plan, MetroCommon 2050, adopted in November 2021. We 
+agree that all MBTA communities should contribute to the production of new housing and that areas with 
+safe and convenient transit access are especially appropriate for multifamily housing. The guidelines, 
+however, do not explicitly include principles around equity. It is paramount that opportunities like Section 
+3A be used to redress the racial inequity and disparate impacts of longstanding housing practices that 
+have excluded people from many communities in the Commonwealth, including policies that continue to 
+this day. Towards that end, MAPC strongly believes the guidelines should provide communities with the 
+tools to zone for affordable units and larger units suitable for families to meet the most pressing needs in 
+the housing field and to make a significant dent in the region’s segregation by race and income.  
+ 
+• 
+The guidelines should provide incentives for communities to adopt inclusionary zoning for 
+their qualifying district or sub-districts. We recommend giving extra weight to deed-
+restricted affordable housing units when calculating unit capacity. In districts where 
+affordable units are required, a unit serving households at or below 80% of Area Median Income 
+(AMI) could count as, say, 1.5 units toward minimum unit capacity, while a unit serving 
+households at or below 50% of AMI could count as 2 units. This would enable communities to 
+zone for slightly fewer units if they require affordable housing through inclusionary zoning or 
+other means. For example, a district might allow for 100 units on a given parcel, while also 
+requiring that 20 of the units are affordable at or below 80% AMI. In this case, the calculated unit 
+capacity is 110: the number of market-rate units (80) plus the “weighted” number of affordable 
+units (20 x 1.5=30). This change would encourage municipalities to establish mandatory 
+inclusionary zoning policies when they otherwise would have little incentive to do so. With 
+reasonable weights, the impacts on overall capacity will be relatively small while the number of 
+affordable units produced could be quite large. To ensure that inclusionary zoning is not used as a 
+barrier to development, the guidelines should require a financial feasibility analysis for 
+mandatory set-asides above 15%.   
+ 
+1 Our remaining four communities are Boston, which is exempt from Chapter 40A, and Hudson, Bolton, and Milford, which are 
+not MBTA communities. 
+
+===== PAGE 2 =====
+ 
+Page 2 of 7 
+ 
+• 
+While the guidelines stipulate districts cannot include age restrictions or place limits on the 
+size of units, number and size of bedrooms, or number of occupants, the guidelines should 
+also address other zoning barriers to multi-bedroom units. First, guidelines should require 
+district parking regulations to be set on a per-unit basis rather than per bedroom. Parking 
+requirements based on the number of bedrooms discourage developers from building 3-plus 
+bedroom units, which require more floor area and more parking area without commanding 
+proportionally higher rent. Requiring municipalities to standardize parking requirements across 
+unit sizes allows developers to make bedroom mix decisions based on the market. Additionally, 
+EOHED should indicate its intention to review zoning for similar bedroom-based standards that 
+could effectively discourage family-sized units. 
+• 
+Second, EOHED can advance family-sized housing objectives by requiring transparent and 
+inclusive assumptions about unit size and bedroom mix when calculating unit capacity. For 
+example, any municipality that establishes density limits based on floor area will need to make 
+assumptions about the bedroom distribution and corresponding unit sizes used to estimate unit 
+yield for each district or subdistrict. If a municipality assumes all 1-bedroom and/or studio units, 
+the yield estimate will be higher than if some larger units were in the mix. The guidelines should 
+require municipalities to assume a minimum of 15% family-sized units when calculating 
+unit capacity. EOHED should also establish guidelines for how to document, apply, and report 
+such assumptions. These additions plainly advance the intention of the statue to meet the need for 
+family housing. 
+ 
+Location of Districts 
+For the law to result in truly transit-oriented housing development, and not just housing that happens to be  
+adjacent to transit, the guidelines should include additional language. 
+ 
+• 
+The guidelines should require at least ¾ of the district rather than ½ to be within a ½-mile 
+walking distance to the corresponding station and establish standards for walking distance. 
+Currently, municipalities could create districts that are easily a mile or more walking distance 
+from the transit station, which would not advance the objectives of the legislation. The specific 
+areas within a ½-mile walking distance can be easily determined using GIS data available from 
+MassDOT, which should be shared with all municipalities. Municipalities should be allowed to 
+submit their own walking distance calculations that account for planned projects or unmapped 
+connections. Municipalities that wish to locate more than ¼ of their district outside of the station 
+area should be required to demonstrate that either a) the station area is unsuitable for development 
+based on specific criteria established by EOHED or b) the proposed location is superior with 
+regard to transportation efficiency as measured through readily available metrics such as transit 
+access to jobs or HUD’s Location Affordability Index.   
+• 
+The guidelines should expressly allow communities with more than one station area to split 
+their unit capacity across subdistricts in more than one station area. The guidelines should 
+also direct municipalities with more than one station area to prioritize rezoning in the 
+station area(s) more consistent with the Commonwealth’s Sustainable Development 
+Principles, and with higher levels of transit access to jobs, location affordability, and local 
+walkability. Multi-station area municipalities that locate districts or subdistricts in less-accessible 
+station areas should be required to justify the proposed location. 
+ 
+
+===== PAGE 3 =====
+ 
+Page 3 of 7 
+ 
+• 
+EOHED should consider reducing the minimum acreage from 50 acres to 25 acres to allow 
+smaller districts more appropriate for small, slow-growth communities, while requiring 
+districts to contain a minimum number of developable parcels in order to ensure multiple 
+options for developers. This would prevent sprawling patterns of development and encourage 
+more compact village style development.2 Compactness is an essential element of successful 
+transit-oriented development, enabling residents to walk to nearby amenities and the transit stop. 
+While there are good reasons to ensure that a district includes multiple parcels and options for 
+developers, oversized districts could end up experiencing scattered development that does not 
+create a sense of place or walkability.  
+ 
+While beyond the scope of the guidance, it is also imperative that transit service be maintained if not 
+enhanced. If municipalities are to undertake complicated rezoning efforts to facilitate transit-oriented 
+development, then that transit must be reliable and accessible enough to encourage ridership.  
+ 
+Determination of “Reasonable Size” 
+MAPC applauds EOHED for setting an ambitious, forward-looking target for zoning capacity. The 
+potential increase in zoning capacity—344,000 housing units—is at a scale sufficient to address the next 
+20 years of multifamily housing demand. By comparison, MAPC and the University of Massachusetts 
+Donahue Institute have previously forecast that the municipalities subject to the law may grow by 
+approximately 215,000 households overall from 2020 to 2040. Given demographic trends and policy 
+goals, it’s reasonable to plan for 75% of this net demand to be met in transit-accessible locations. This 
+translates to about 165,000 units. Therefore, the regionwide minimum unit capacity is roughly double the 
+likely demand for multifamily housing in transit areas over the next 20 years. This is an appropriate ratio 
+between capacity and demand.  
+ 
+However, the scale of local rezoning necessary to achieve these outcomes has raised great concern among 
+MAPC’s municipalities, even those supportive of the overall mandate. Rezoning is a complex 
+undertaking under any circumstances; in this case, the scale and timeline for compliance will require 
+significant investment of staff and consultant time as well as political capital. Careful planning is needed 
+to respond to infrastructure capacity limitations and to avoid unforeseen undesirable outcomes, such as 
+demolition and replacement of existing naturally affordable housing. Higher targets also bring greater 
+community opposition and increase the potential that municipalities will opt out of the requirement 
+altogether. 
+ 
+• 
+To reconcile the need for a substantial long-term increase in multifamily zoning capacity with 
+local concerns about the scale and pace of rezoning, MAPC suggests that the guidelines allow a 
+phased approach that sets an overall lower target for the initial rezoning, followed by 
+increases in the minimum unit capacity at regular intervals. A phased approach would 
+initially reduce the percentages for each transit service type by, say, two-thirds, thereby requiring 
+municipalities to zone for one-third of the required capacity for the initial deadlines at the end of 
+2023 and 2024. For example, rapid transit communities would need to zone for a minimum unit 
+capacity equal to 8.3% of their existing stock (one third of 25%). Communities would then have a 
+ 
+2 While the definition of multifamily housing in the legislation precludes “missing middle” housing typologies such as clustered 
+homes and duplexes, these housing types are appropriate for many transit areas, not to mention less intimidating for many 
+communities. Furthermore, clustered homes and duplexes can be developed in such a way as to meet the minimum density 
+requirement of 15 units per acre. 
+
+===== PAGE 4 =====
+ 
+Page 4 of 7 
+ 
+set period (e.g., 3 or 5 years) to again increase capacity by their set percentage (e.g., another 8.3% 
+for rapid transit communities), followed by another interval and increasing requirement, so that at 
+the end of six or ten years the full percentage for each service type is reached. This provides a 
+predictable timeline for revisiting and improving district zoning, supporting the requirement’s 
+long-term success, while also creating substantial zoning capacity in the short term (115,000 units 
+by the end of 2024.) Such an approach would be similar to the California Regional Housing 
+Needs Allocation process, which sets a framework for municipalities to expand and improve their 
+multifamily zoning districts on a predictable schedule. Communities should be permitted or even 
+incentivized to zone for more than required during the initial rezoning if they don’t want to repeat 
+the process multiple times.     
+• 
+The guidelines should set a lower minimum unit capacity of no more than 375 units, and the 
+effective capacity (minimum unit capacity/2020 housing units) should be capped at 25% (or 
+a phased equivalent) so that no community is required to do more—in relative terms—than 
+a rapid transit community. MAPC analysis found the current 750-unit minimum applies to 
+nearly half of the MBTA communities—generally those with the least transit access—and results 
+in effective capacity requirements of up to 70% of existing housing stock. MAPC believes that 
+such requirements are both unreasonable and undesirable; they have the potential to create 
+capacity for tens of thousands of units of housing in areas that are largely car dependent. While it 
+is important to ensure sizeable districts with many development options, it is also true that 
+compactness is an essential element of transit-oriented development and smart growth, and a 
+lower minimum unit capacity will help advance that objective.  
+• 
+MAPC continues to recommend that the guidelines use net unit capacity as the standard for 
+compliance rather than allowing municipalities to demonstrate they meet the minimum unit 
+capacity without netting out existing units or accounting for financial feasibility. Dozens of 
+municipalities have existing neighborhoods at or above the minimum density of 15 units per acre; 
+for many municipalities, simply rezoning to “legalize” these neighborhoods at their existing 
+density could meet the minimum unit capacity requirements without allowing for much new 
+growth. MAPC analysis suggests such rezoning could reduce the cumulative net capacity by at 
+least a quarter, with the greatest decreases among rapid transit communities. Creative rezoning by 
+municipalities could reduce the effective net yield even further. As a result, the entire mandate 
+may not have the impact it would if the zoning capacity were for new units. It could also lead to 
+misunderstanding and mistrust when municipal officials reassure community members that the 
+capacity in the district isn’t really the number of new units that might be built.  
+• 
+MAPC encourages EOHED to reconsider the use of a formula based approach, such as one 
+previously demonstrated by MAPC, that provides a tailored minimum unit capacity for 
+each municipality, rather than assigning minimum unit capacity requirements based on 
+transit categories. Currently, the resulting percentages do not bear a consistent relationship to 
+local level of transit service, housing need, or development opportunity and constraints. Some 
+similarly situated communities have very different requirements based on their transit service 
+designation. While seemingly simple, the service type classification could be challenged as 
+arbitrary. MAPC’s proposed formula combines information about transit accessibility to jobs, 
+level of housing exclusion, and potentially developable transit station area to a set minimum unit 
+capacity target for each municipality. The process starts with a baseline yield set by EOHED (say, 
+6% of existing housing stock). The formula adjusts the yield up or down based on the three 
+factors; EOHED determines the relative weights of each factor and the total “spread” between 
+high and low yield percentages. Variants on this formula could be used for MBTA adjacent 
+
+===== PAGE 5 =====
+ 
+Page 5 of 7 
+ 
+communities without a transit station area and for those where the minimum requirement results 
+in an unreasonably high yield (e.g., 50% of existing stock.) For example, yield for adjacent 
+communities could be calculated based only on housing exclusion measures. The formula could 
+also cap the effective yield at two or three times the baseline yield, so no rural communities are 
+subject to excessive requirements.   
+ 
+Minimum Gross Density  
+The statute indicates that a qualifying district must have a minimum gross density of 15 units per acre. 
+MGL Chapter 40A defines the “gross density” measurement as inclusive of land occupied by public 
+rights of way and other undevelopable land. This means that the actual allowable density on the average 
+parcel will need to be higher than 15 units per acre to achieve that same minimum gross density at the 
+district level. This is confusing as well as hard for municipalities to message; how can they defend 
+passing a minimum density of 20 units per acre, for example, when the statute and the guidelines only 
+require 15? It’s also inconsistent with typical local density regulations.  
+ 
+• 
+The guidelines or other materials from HED should acknowledge this discrepancy and 
+include language that explains why it is necessary for compliant zoning to achieve an actual 
+density of 15 units per acre. Municipalities need to be able to point to state language as a 
+defense for their proposed density. 
+ 
+Allowing Multifamily Housing “As of Right” 
+The guidelines stipulate that “as of right” development means that construction and occupancy of 
+multifamily housing is allowed in the district without the need to obtain any discretionary permit or 
+approval.  
+ 
+• 
+The guidelines should clarify that, while overlay districts in general are an acceptable 
+mechanism to satisfy the requirements of Section 3A, a floating overlay district is not. 
+Floating overlays require two sets of approvals: one to apply the overlay in a particular location 
+and a second to approve the project itself. They do not constitute by-right development. 
+• 
+The guidelines should establish a methodology for EOHED to monitor the extent to which 
+site plan review is being used to slow or otherwise thwart development and revisit the 
+guidelines in three years if there is need to remedy this. A municipality disinclined towards 
+housing production could potentially use this tool to impose undue conditions on development, 
+rather than to ensure development meets a community’s reasonable design goals.  
+Determination of Compliance 
+Some of the most frequently voiced questions from municipalities about Section 3A relate to the 
+calculation of yield, area, and density. The guidelines do not provide detailed instructions about how 
+zoning features and other elements (such as wetlands or water and sewer capacity) should be considered 
+in estimating whether the zoning meets capacity targets. EOHED has addressed many of these questions, 
+but the level of detail provided so far still delegates many complex decisions to municipalities. While this 
+enables more local control, it is also highly inefficient and creates an opportunity for municipalities to 
+create methodologies that overstate capacity. Each municipality or consultant will have to develop its own 
+approach to determining yield and compliance with the guidelines. A community could make a good faith 
+effort to adopt zoning only to have it ruled ineligible. Estimates developed with different methods and 
+different data sources will be hard to compare or even validate. EOHED has indicated its intention to 
+
+===== PAGE 6 =====
+ 
+Page 6 of 7 
+ 
+provide additional guidance and resources later, but the details of these calculations are essential elements 
+of the program that should be documented in the guidelines.  
+ 
+• 
+To achieve transparency, the guidelines and review standards should utilize open and 
+standardized information about existing conditions to determine capacity, area, and transit 
+proximity, using formulas and tools that are easily reproducible and verifiable. The 
+increasing availability of statewide datasets about parcels, development activity, zoning, sewer 
+service, and other development factors allows for consistency across municipalities, enhancing 
+fairness and efficiency. While not all such datasets are comprehensively available, the 
+frameworks exist for municipalities to provide information in a standard format. 
+• 
+The guidelines should include or reference step-by-step workflows for determining unit 
+capacity estimates using standardized datasets, local details, and zoning requirements. The 
+2020 guidelines for the 40B General Minimum Land Area provide an example of how a complex, 
+locally-specific analysis can be standardized. In this case, the guidelines should specify how to 
+map “developable land” using readily-available datasets, how to document zoning parameters in a 
+standard format (setbacks, height, FAR, parking requirements, etc.), and how to calculate unit 
+capacity for each parcel. By providing communities with detailed instructions on how to calculate 
+unit capacity using standard data, the guidelines could reduce the cost, burden, and variability 
+inherent in requiring municipalities to determine the yield independently.  
+• 
+MAPC recommends that EOHED dedicate resources to the procurement of a decision 
+support tool available to all municipalities to help with determining minimum unit capacity. 
+A website or application, pre-populated with available data and transparent formulas, could 
+enable users to draw zoning district boundaries, specify density assumptions, and receive an 
+estimate of district capacity. This will allow communities to focus on planning and consensus 
+building instead of mapping and calculations.   
+• 
+The guidelines should provide a detailed framework for how municipalities should 
+determine “limitations…resulting from inadequate water and sewer infrastructure.” For 
+municipalities or districts lacking centralized sewer systems, the guidelines must specify how the 
+capacity analysis should account for the leaching area needed to support the estimated yield on 
+each parcel, and how to demonstrate that the estimated yield is not limited by wastewater disposal 
+requirements. Existing data on the extent of soils suitable for subsurface disposal based on NRCS 
+classification will be essential for this analysis. For parcels in areas proposed to be served by 
+package treatment, the capacity analysis should identify potential treatment and discharge sites.    
+• 
+The guidelines should also specify how municipalities will respond to limitations on water 
+withdrawals and wastewater treatment established through the Water Management Act 
+and how to ensure consistency with safe yields identified through the Sustainable Water 
+Management Initiative. Involvement of the DEP Water Management Program will be essential 
+to determine the unit capacity that is “reasonable” for a given watershed. Without careful 
+attention to this issue, municipalities may be adopting zones that can never be developed due to 
+water limitations.3  
+ 
+3 For municipalities without public sewer, limitations on certain forms of package treatment may be a barrier to development 
+within the new zones. While outside the scope of these guidelines, MAPC recommends EOHED address issues with existing 
+environmental regulations. Specifically, Massachusetts wastewater disposal regulations require projects of more than 44 units to 
+use wastewater disposal practices that are expensive to permit, construct, operate, and maintain. Recent developments in 
+wastewater disposal technology can provide a more cost-effective approach for mid-sized developments while also protecting 
+ 
+
+===== PAGE 7 =====
+ 
+Page 7 of 7 
+ 
+ 
+Submittal Requirements 
+Implementation of Section 3A should minimize subjective review, loopholes, and opportunities for 
+municipalities to avoid appropriate compliance, which is inevitably unfair to communities that make a 
+good faith effort to comply. This will ensure that the program is implemented fairly and equitably, even in 
+wealthy communities with access to sophisticated lawyers and consultants.  
+ 
+• 
+EOHED should offer towns the option of a preliminary review process before zoning goes to 
+Town Meeting; otherwise, they could mistakenly adopt non-compliant zoning and need to wait a 
+whole year before undertaking another adoption campaign to make what could be relatively 
+minor adjustments. This process could be similar to DHCD’s 40R compliance review. 
+• 
+All municipal submittals should be made in electronic format, with machine-readable 
+information (shapefiles, data tables) about district boundaries, zoning standards, and other 
+information. While it is not feasible to expect municipalities to use a “standard” approach to 
+their zoning, given the existing complexities of local conditions and existing land use codes, 
+municipalities should be required to report certain basic elements of their qualifying zoning in a 
+manner that is comparable across municipalities. For example, regulations related to height, unit 
+density, parking requirements, lot coverage, allowable area, inclusionary zoning requirements, 
+and other important factors should all be reported using the same units and definitions. This 
+would enable information about the districts to be combined into a regional picture important to 
+both developers and stakeholders.   
+• 
+The guidelines should specify that municipalities must notify DHCD and RPAs in the event 
+of zoning amendments or rezoning during the 10-year compliance term. If new zoning is 
+adopted that is no longer in compliance with Section 3A, the municipality’s status should be 
+changed to non-compliant. 
+ 
+Conclusion 
+Section 3A is a tremendous opportunity to address the Commonwealth’s housing crisis. With strong 
+guidelines, it will not only help meet profound housing need, but also position our communities to 
+become more inclusive and the region to become more sustainable. I appreciate your consideration of 
+MAPC’s comments on the draft guidelines and would be happy to answer any questions you may have. I 
+look forward to the final guidelines for Section 3A and to working with our communities to adopt zoning 
+that expands housing choice. 
+ 
+ 
+Sincerely, 
+ 
+ 
+ 
+Marc D. Draisen 
+Executive Director 
+ 
+ 
+human health and the environment. The State should consider a number of options to modernize its regulations, including a new 
+tier of regulations for 45-to-90-unit developments and new ways of calculating flow rate for large developments. 

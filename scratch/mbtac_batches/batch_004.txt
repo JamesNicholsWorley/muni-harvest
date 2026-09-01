@@ -1,0 +1,4685 @@
+
+### DOC ccef26bb9c | town=Brockton | community_type=bus | governing_body=City Council | screened_board= | screened_doctype= | url=https://drive.google.com/uc?export=download&id=1FFuiQu8dBq5egdRMSExgIm91CxAj6rzz
+
+[PAGE 1]
+‭In City Council Dated October _____, 2024‬
+‭ORDINANCE‬
+‭Be it ordained by the City Council of the City of Brockton to adopt a new section of the Zoning Code as‬
+‭follows:‬
+‭FORM-BASED CODE DISTRICTS‬
+‭1.0 FORM-BASED CODE DISTRICTS‬
+‭1.1 Title‬
+‭The title of this zone is the Form-Based Code Districts (FBC) and should be added as such to the table in‬
+‭Sec. 27-4 – Designation of Zones.‬
+‭1.2 Applicability‬
+‭The Form-Based Code Districts (FBC) is a zoning district that replaces the underlying districts within the‬
+‭boundaries identified in this Ordinance.‬
+‭1.3 Purpose‬
+‭The purpose of the FBC is to enhance existing mixed-use districts, transit modes, and adjacent‬
+‭neighborhoods and accomplish the following goals:‬
+‭1.‬ ‭Allow a wide variety of residential building types to meet the City's overall housing goals,‬
+‭including the City's strategy to achieve compliance with MGL Chapter 41A, Section 3A (also‬
+‭known as the MBTA Communities Act).‬
+‭2.‬ ‭Allow commercial and industrial uses that support the City's goals for economic development.‬
+‭3.‬ ‭Provide opportunities to support adjacent neighborhoods with retail, services, and jobs.‬
+‭4.‬ ‭Create regional destinations that leverage the City's proximity to the commuter rail.‬
+‭5.‬ ‭Allow a mix of uses within a single building or on more than one building per lot.‬
+‭6.‬ ‭Require certain ground floor uses on specific streets to promote a safe and active pedestrian‬
+‭environment.‬
+‭7.‬ ‭Incorporate the goals of the Brockton Comprehensive Plan (A Blueprint for Brockton) and local‬
+‭neighborhood and Urban Renewal Plans.‬
+‭8.‬ ‭Redevelop and enhance the Downtown, our transit station areas, commercial corridors, and‬
+‭existing neighborhoods.‬
+‭1.4 Severability and Invalidity‬
+‭If any provision of this Ordinance or the application of any provision to real property, applicant, or‬
+‭property owner is declared unconstitutional or‬‭otherwise‬‭held invalid, the remaining provisions of this‬
+‭Ordinance and their application to any other real property, applicant, or property owner remain valid.‬
+‭1‬
+
+[PAGE 2]
+‭2.0 GLOSSARY AND HOW TO‬
+‭2.1 Terms and Definitions‬
+‭Unless the context otherwise requires, the following definitions shall be used in the interpretation and‬
+‭construction of the Ordinance, and words used in the present tense include the future; the singular number‬
+‭shall include the plural, and the plural the singular; the word "building" shall include the word "structure",‬
+‭the word "used" shall include "arranged, designed, constructed, altered, converted, rented, leased or‬
+‭intended to be used", the word "shall" is mandatory and not optional, the word "abut" shall include the‬
+‭words "directly across from", and the word "lot".‬
+‭Accessory use‬‭. A use customarily incidental to and‬‭on the same lot or group of lots as a conforming‬
+‭principal use.‬
+‭Accessory Structure‬‭. Any structure which is incidental‬‭and subordinate to the principal structure, but‬
+‭which is located on the same lot as the principal structure, including swimming pools, tennis courts and‬
+‭other recreational uses.‬
+‭Active Uses‬‭. The following is a list of land uses‬‭considered to be "active uses" for the purposes of this‬
+‭FBC‬‭:‬
+‭1.‬ ‭Arts & Creative Enterprise;‬
+‭2.‬ ‭Food & Beverage Service;‬
+‭3.‬ ‭Residential Lobby and Common Tenant Amenity Spaces;‬
+‭4.‬ ‭Retail Sales;‬
+‭5.‬ ‭Civic & Institutional;‬
+‭6.‬ ‭Personal Services; and‬
+‭7.‬ ‭Entertainment.‬
+‭Accessory dwelling unit‬‭. A self-contained housing‬‭unit, inclusive of sleeping, cooking and sanitary‬
+‭facilities on the same lot as a principal dwelling, subject to otherwise applicable dimensional and parking‬
+‭requirements.‬
+‭Agent or owner‬‭. Any person who can show proof that‬‭he has authority to act for the property owner.‬
+‭Alley‬‭. A thoroughfare for vehicular traffic which‬‭affords only a secondary means of access to abutting‬
+‭property.‬
+‭Artisanal Production‬‭. The on-site production of hand-fabricated‬‭or hand-manufactured parts and custom‬
+‭or craft consumer goods based on the skill and knowledge of the artisan and the use of hand tools or‬
+‭small-scale, light mechanical equipment. The Artisanal Production category includes apparel‬
+‭manufacturing, breweries, cabinetry, chocolatiers, confectionery, furniture making, glass working, jewelry‬
+‭making, metal working, package food production, pottery, sculpture, wood working, and their substantial‬
+‭equivalents. Showro
+. . .
+ii.‬
+‭Portico‬‭. A structure consisting of a roof supported‬‭by columns, typically leading to‬
+‭the entrance of a building or serving as a covered walkway.‬
+‭ix.‬ ‭Projection Porch‬‭. A covered area projecting from and‬‭structurally connected to a‬
+‭building.‬
+‭22‬
+
+[PAGE 23]
+‭x.‬ ‭Engage Porch‬‭. A roofed structure, usually open at the sides, projecting from the‬
+‭face of a building that provides access to an encroaching mud room or entry foyer.‬
+‭xi.‬ ‭Stacked Porch‬‭. Multistory projecting porch, with each level stacked on top of the‬
+‭other.‬
+‭xii.‬‭Balcony‬‭. An open area located either recessed or projected‬‭out from the walls of a‬
+‭building, without support from the ground or floors below.‬
+‭xiii.‬
+‭Bay‬‭. A window or series of windows projecting from‬‭the outer wall of a‬
+‭building and forming a bay in a room and a projection outward from the main wall.‬
+‭xiv.‬‭Dormer‬‭. An extension of a room that projects vertically‬‭beyond the plane of a‬
+‭sloped roof to allow for a window opening into the room.‬
+‭xv.‬‭Shed Dormer‬‭. An extension of a room that projects‬‭vertically beyond the plane of a‬
+‭sloped roof to provide light and additional habitable space to a half-story.‬
+‭xvi.‬
+‭Gable‬‭: a roof with two sloping sides and a gable at‬‭each end.‬
+‭xvii.‬
+‭Gable, Cross‬‭. A sloped roof that projects perpendicularly‬‭from the roof of a‬
+‭building to provide significant additional habitable space to a half-story.‬
+‭xviii.‬ ‭Gable, Projecting‬‭. An extension of the wall enclosing‬‭a pitched roof that‬
+‭expands the size of a room.‬
+‭xix.‬
+‭Roof, Flat‬‭. A roof with a slope that is less than‬‭ten (10) degrees.‬
+‭xx.‬‭Roof, Gable‬‭. A roof having a double slope on all four‬‭sides, with the lower slope‬
+‭being much steeper.‬
+‭xxi.‬
+‭Roof, Hip‬‭. A roof with the ends inclined, as well‬‭as the sides.‬
+‭xxii.‬
+‭Roof, Mansard‬‭. A roof having a double slope on all‬‭four sides, with the lower‬
+‭slope being much steeper.‬
+‭xxiii.‬ ‭Roof, Deck‬‭. Flat roof that is accessible and may be‬‭used for recreational‬
+‭purposes.‬
+‭xxiv.‬ ‭Roof, Green‬‭. A building roof that is covered with‬‭vegetation that grows in a‬
+‭special lightweight material and supports sustainable stormwater management.‬
+‭xxv.‬
+‭Roof, Blue‬‭. A building roof designed to provide temporary‬‭storage and slow‬
+‭release of stormwater runoff. A vegetation layer may be added to the reservoir of‬
+‭23‬
+
+[PAGE 24]
+‭stormwater obtaining Blue/Green roofs. The roofs have a system of smart sensors‬
+‭and valves. They open and close based on the water level and the weather‬
+‭predictions.‬
+‭xxvi.‬ ‭Side Wing‬‭. Multi-story extension from one or more‬‭side walls of a building.‬
+‭xxvii.‬ ‭Rear Addition‬‭. An extension from the rear façade of‬‭a Building.‬
+‭xxviii.‬ ‭Storefront‬‭. Assembly of commercial entry doors and‬‭windows providing access‬
+‭and light to a commercial space and a place to display goods, services, and signs.‬
+‭xxix.‬ ‭Arcade‬‭. Pedestrian walkway covered by the upper floors‬‭of a building. The‬
+‭ground story façade is set back and upper floors are supported by a colonnade or‬
+‭supports.‬
+‭24‬
+
+[PAGE 25]
+‭3.0 BROCKTON SUBAREAS‬
+‭3.1 Downtown/Trout Brook Subareas‬
+‭The purpose of the Downtown/Trout Brook Subarea (DTTB Subarea) is to enhance an existing mixed-use‬
+‭district that accomplishes the following goals:‬
+‭1.‬ ‭Allow a wide variety of residential building types to meet the City's overall housing goals,‬
+‭including the City's strategy to achieve compliance with MGL Chapter 41A, Section 3A (also‬
+‭known as the MBTA Communities Act).‬
+‭2.‬ ‭Allow commercial and industrial uses that support the City's goals for economic development.‬
+‭3.‬ ‭Provide opportunities to support adjacent neighborhoods with retail, services, and jobs.‬
+‭4.‬ ‭Create a regional destination that leverages the Downtown's proximity to the commuter rail.‬
+‭5.‬ ‭Allow a mix of uses within a single building or on more than one building per lot.‬
+‭6.‬ ‭Require certain ground floor uses on specific streets to promote a safe and active pedestrian‬
+‭environment.‬
+‭7.‬ ‭Incorporate the goals of the Downtown Action Strategy, the Downtown Urban Renewal Plan, and‬
+‭the Downtown/Trout Brook Urban Renewal Plan.‬
+‭3.1.1 Zoning Districts in the DTTB Subarea‬
+‭The Zoning Map identifies the area within which the provisions of the DTTB Subarea apply. The DTTB‬
+‭Subarea has twelve districts as shown on the DTTB Subarea Zoning Map. Special considerations for each‬
+‭district within this Subarea are defined as follows:‬
+‭a.‬ ‭Neighborhood Residential (NR):‬‭None‬
+‭b.‬ ‭Urban Residential (UR):‬‭None.‬
+‭c.‬ ‭Mixed District (MX-1, MX-2, MX-3):‬‭None.‬
+‭d.‬ ‭Commercial Core (CC):‬‭In the DTTB Subarea, the focus‬‭of this district is the area around the‬
+‭MBTA Commuter Platform and the Brockton Intermodal Transit Centre to support the‬
+‭surrounding MX-3 district.‬
+‭e.‬ ‭Commercial Business (CB):‬‭In the DTTB Subarea, the‬‭focus of this district is to support the‬
+‭existing grocery store and supporting uses which serve the surrounding neighborhoods.‬
+‭f.‬ ‭Commercial Industry (CI):‬‭In the DTTB Subarea, this‬‭district supports job creation and‬
+‭retention on the perimeter of the Zone‬
+‭g.‬ ‭Civic (CV):‬‭In the DTTB Subarea, this district protects‬‭existing Civic uses which includes‬
+‭City Hall and provides guidance for the development or redevelopment of other civic uses.‬
+‭3.1.2 DTTB Subarea: Special Considerations‬
+‭25‬
+
+[PAGE 26]
+‭a.‬ ‭Primary Streets:‬
+‭i.‬
+‭In the DTTB Subarea, primary streets are sections of North Main/Main Street, North‬
+‭Montello/ Montello Street, Warren Avenue, Commercial St. and Belmont St. These‬
+‭streets provide connectivity to the city in general and the towns of Avon (to the north),‬
+‭West Bridgewater (to the south), and Easton (to the west).‬
+‭ii.‬
+‭Active uses are required along 75% of the ground floor façade of a building with‬
+‭frontage on Legion Parkway and within the first 30-80 feet of lot depth from the‬
+‭principal façade.‬
+‭iii.‬
+‭Parking‬‭: Curb cuts, surface parking lots and vehicular‬‭entries to structured parking are‬
+‭not allowed on Legion Parkway.‬
+‭iv.‬
+‭Legion Parkway‬‭. This street type is specific to Legion‬‭Parkway, which is the only‬
+‭street in the DTTB Subarea with public parking in the center of the street.‬
+‭v.‬
+‭Setbacks‬‭. The front setback for new construction is‬‭to the lot line, unless the building‬
+‭type allows for a public plaza in the front yard setback. A public plaza on Legion‬
+‭Parkway shall include outdoor dining, outdoor seating, or other public amenity.‬
+‭b.‬ ‭Secondary Streets:‬‭In the DTTB-FBC, the secondary‬‭streets connect the primary streets to‬
+‭the rest of the city and may run north/south or east/west.‬
+‭3.1.3 DTTB Subarea: Special Considerations‬
+‭a.‬ ‭Primary Blocks: (Reserved)‬
+‭b.‬ ‭Secondary Blocks NEW: (Reserved)‬
+‭c.‬ ‭Blocks:‬
+‭i.‬ ‭In‬ ‭the‬ ‭DTTB‬ ‭Subarea,‬ ‭additional‬‭primary‬‭blocks‬‭have‬‭one‬‭edge‬‭along‬‭North‬‭Main/‬
+‭Main Street.‬
+‭ii.‬ ‭New blocks should inform the internal street/access drive. Block perimet
+
+### DOC 09807f379f | town=Brockton | community_type=bus | governing_body=City Council | screened_board= | screened_doctype= | url=https://drive.google.com/uc?export=download&id=1wJYz12F8N_oqSWaLDUaDjDB-x_9Yvll9
+
+[PAGE 1]
+ 
+ 
+ 
+ 
+To: 
+The Brockton City Council 
+ 
+Moises M. Rodrigues, President 
+ 
+From: Rob May 
+ 
+Director of Planning and Economic Development 
+ 
+Date: September 15, 2024 
+ 
+Re: 
+MBTA Communities and Form-Based Code Zoning Amendment 
+ 
+Over the past two years, the Planning Staff has been working with residents, business owners, 
+developers, and your fellow Councilors to prepare a zoning amendment that will bring Brockton into 
+compliance with the MBTA Communities Act (MGL 40A 3A). In those two years, we have held eighth 
+(8) steering committee meetings, six (6) community meetings, and two (2) city-wide public meetings 
+with meaningful public participation. Additionally, the Department has mailed postcards to every 
+property owner of record in the Downtown Trout Brook Study Area and every property owners and 
+street address in the Campello Study Area announcing the planning effort and specific meeting 
+dates.   
+ 
+This memorandum explains the context around the new law and the Planning Board’s proposed 
+solution. This solution uses the need to comply as an opportunity to update Brockton’s zoning to 
+incorporate the goals of several neighborhood planning efforts and begin to modernize the structure of 
+the zoning ordinance. 
+ 
+MBTA Communities Act 
+In January 2021, Beacon Hill passed, and Governor Baker signed, the MBTA Communities Act 
+(Session Law Part I, Title XXII, Chapter 161A, Section 1). The Act requires 177 Cities and Towns, 
+defined as MBTA Communities by Section 1 of MGL c. 161A, to establish “at least 1 district of 
+reasonable size in which multi-family housing is permitted as of right.” Where possible, this zoning 
+district must be within a half mile from public transportation (commuter rail, bus station, ferry terminal, 
+or subway). MBTA Communities must permit the development of housing suitable for families with 
+children, and may not impose age restrictions, within the zoning district. 
+ 
+The Department of Housing and Community Development went on to promulgate regulations to 
+further guide communities to comply with the act. They even went so far as to identify specific area, 
+capacity, and density targets based on the type of MBTA service and the number of existing housing 
+units. Brockton was designated a Commuter Rail community and will need to designate a zoning 
+district of at least 50 acres, with an estimated capacity of close to 5,600 residential units, 90% of 
+which are to be within a half mile radius of a transit station.  
+ 
+Our early analysis found that under our current zoning ordinance, Brockton was not in compliance 
+with the Act. A plan to achieve compliance by the December 31, 2024 deadline was submitted to and 
+approved by the Department of Housing and Community Development. To assist with implementing 
+that plan, the City received technical and finance assistance from Mass Housing Partnership and the 
+newly created Executive Office of Housing and Livable Communities.  
+ 
+
+[PAGE 2]
+ 
+ 
+ 
+Planning For Compliance  
+The Planning Staff sees the Act as a tool to implement neighborhood master plans and an opportunity 
+to modernize our woefully outdated zoning ordinance. Rather than draw a circle with a half-mile radius 
+over each station, we chose to focus our efforts on the districts where we already have master plans 
+and engaged communities. This would keep the rezoning more focused and prevent spillover into 
+surrounding single-family home districts. Working with steering committees for the Downtown/Trout 
+Brook redevelopment areas and Campello and Southern Main Street study area, we set about crafting 
+zoning to comply with the Act.  
+ 
+To enhance our outreach at the start of our work, the Planning Department sent postcards to the 
+property owners of record (Downtown/Trout Brook) and the property owners and street addresses 
+(Campello) announcing the project and important meeting dates. The information was presented in all 
+four of the major languages spoken in Brockton and contained a QR code that would take them to our 
+web page for more detailed information.  
+ 
+A clear picture emerged from over a dozen community meetings and engagement encounters. I will 
+summarize this in three key priorities: 
+• 
+First, residents and businesses alike wanted to see increased residential density around the 
+three MBTA Stations to support their local business districts and create a walkable, 
+vibrant neighborhood.  
+• 
+Second, the development community and land owners wanted increased flexibility and an 
+expansion of by-right uses to reduce their risk.  
+• 
+Third, the residents wanted some sort of guarantee that the vision they had created for their 
+neighborhoods would be implemented as they expected.  
+ 
+It quickly became apparent to the Planning Staff that the traditional form of zoning, known as 
+Euclidean Zoning, was insufficient for the task. Euclidean zoning focuses on lot width, building height, 
+setback, coverage, etc., which we call “Bulk Regulations,” and land use, but does not regulate the 
+finer details that create character, make communities livable, and address the goals we heard 
+from the neighborhood studies. Instead, the Planning Staff chose to create a new Form-Based 
+Code to replace the existing zoning in these redevelopment areas. 
+ 
+Modernizing the Ordinance: Form-Based Code 
+Form-based code (FBC) is a type of zoning code that regulates the physical design of buildings and 
+public spaces in a community in addition to the bulk regulations and land uses. And while the written 
+“codes” are only a couple of decades old, they reflect the way communities have been created for 
+thousands of years. In every culture we more or less see a similar development style, one focused on 
+a town square with larger, usually civic, buildings, surrounded by local shops with shopkeepers and 
+their families living above or adjacent to their shops. It’s not unusual to see small craft manufactures 
+and other commercial uses here too. As you move farther from the center, the focus moves toward 
+denser residential development giving way to single family homes, and finally rural agricultural uses 
+and pasture lands.  
+ 
+For Brockton we are proposing the creation of nine  (9) new base districts that will supplant the 
+existing zoning. Those districts are Neighborhood Residential, Urban Residential, Mixed-1, Mixed-2, 
+Mixed-3, Commercial Core, Commercial Business, Commercial Industrial, and Civic. Like our current 
+zoning, each of these districts has a minimum lot size, frontage and land uses. However, FBC takes 
+that even further by identifying specific building types (not architectural style) and those types have 
+additional regulations. Those building types include Detached 1-unit, Rowhouse, Multi-Family 
+Residential, Mixed-use, Lab, Box, Free Standing Commercial, and Flex. Those building types include 
+various building components that are also permitted. Building components include Awning, Porch, 
+Entry Lobby, Bay, and Dormer. The proposed FBC also identifies four (4) different street types within 
+the study area, which regulate sidewalk width and ground floor activation. Street types are Primary, 
+Secondary, Transitional, and Residential.  
+ 
+
+[PAGE 3]
+ 
+ 
+ 
+With the different Form Based Code Districts, Building and Street Type we have created a menu of 
+options that are available to property owners and developers to choose from while still providing the 
+residents with a level of certainty for what the end product will look like.  
+ 
+Increased Flexibility 
+We heard the concerns of the development community and have drafted various remedies.  
+ 
+FBC would modernize the types of permitted and special permitted uses. More uses are 
+permitted in each district. For the first time since our current zoning was adopted in 1965, mixed-use 
+development is now by-right. In the easy-to-read Table 4, it should be clear to residents and builders 
+alike what we will and will not permit.  
+ 
+Photographs and diagrams are used to provide visual examples and easy-to-understand guides 
+that Illustrate key concepts.  
+ 
+Developers will be given the opportunity to increase the number of floors in the Mixed Districts 
+through the application of incentives. We want to encourage height, but the community expects 
+some sort of benefit in exchange.  
+ 
+Residential density has also been increased, both to comply with the MBTA Communities Act but also 
+to help make redevelopment financially viable. New standards for reducing the required number of 
+accessory parking spaces have been established.  
+ 
+Thresholds will be set to permit some applications to proceed though Administrative Review, allowing 
+smaller developments to bypass Site Plan Review, saving time and money.  
+ 
+With regard to Special Permits, the FBC would Make the Planning Board the permit granting authority, 
+limiting the number of cases that have to go to the Zoning Board of Appeals.  
+ 
+Community Predictability 
+Because Form-Based Code is more specific than our current zoning, much of the guesswork has 
+been taken out of the process. Community residents, who have worked with us along the way, 
+have high expectations for development in their neighborhoods. FBC is designed to translate 
+those expectations into law. We provide predictability to the community by taking into account how 
+developments fit in, interact, and flow with the larger context of a neighborhood instead of only looking 
+at, and dealing with, each lot as its own little bubble and universe, which helps prevent developments 
+that may technically be allowed, but look and feel completely out of place and at odds with community 
+goals. Predictability is also provided to the developers and property owners who will now have a clear 
+definition of what is expected from them and development standards to guide their work.  
+ 
+The application process will require developers to identify building and landscape materials, product 
+specifications, and detail for review to ensure quality development. That information will be specified 
+in their permit documents to prevent a “bait and switch” situation. The administrative process required 
+that certified professionals responsible for the project will need to stamp and sign both the application 
+documents and the as-built plans, confirming that they comply with the zoning ordinance and the 
+conditions of their site plan or special permit approval, as applicable. 
+ 
+Conclusion 
+The Form-Based Code addresses two major needs for the City of Brockton:  
+ 
+ 
+• 
+An updated, modernized zoning ordinance that provides flexibility for developers, greater 
+certainty for neighborhood residents and business owners, and additional controls for the City 
+to ensure development is completed as proposed; and 
+
+[PAGE 4]
+ 
+ 
+ 
+• 
+Compliance with the new law by tailoring the requirements to meet the City’s needs for 
+housing, economic development, and a better quality of life for all residents as, over time, 
+portions of these neighborhoods are redeveloped to meet the requirements of the Form-based 
+Code. 
+ 
+ 
+ 
+ 
+
+
+### DOC 35f78188ef | town=Brookline | community_type=subway or light rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.brooklinema.gov/DocumentCenter/View/32142/MBTACommunitiesInformationForm_Submission_959867238
+
+[PAGE 1]
+Form Name: 
+MBTA Communities Information Form
+Submission Time: 
+May 2, 2022 10:52 am
+Browser: 
+Chrome 100.0.4896.127 / Windows
+IP Address: 
+209.6.162.131
+Unique ID: 
+959867238
+Location: 
+MBTA Community Information Form
+1.  What is your Municipality
+Brookline
+2.  Name of person filling out this form
+Kara Brewton
+3.  Title of person filling out this form
+Director of Planning & Community Development
+4.  Email of the person filling out this
+form
+kbrewton@brooklinema.gov
+5.  Phone number of the person filling
+out this form
+(617) 730-2468
+5.a  Will the person filling out this form
+ALSO be responsible to ensure
+compliance with section 3A of c40A
+and/or lead a committee that will
+undertake compliance with section 3A
+of c.40A?? 
+Yes
+Section 2 - Community Information
+6. Does your municipality have any land
+area within 0.5 miles of a public transit
+station, defined as a Subway station,
+Commuter rail station, Ferry terminal or
+Bus station. Note: the definition of “Bus
+Station" in the Draft Guidelines: “Bus
+station” means a building located at the
+intersection of two or more public bus
+lines, within which services are
+available to bus passengers; provided
+that a bus station does not include a
+shelter or other structure without walls
+and a foundation.
+Yes
+6.a. What is the name of the public
+transit station most likely to be the
+location of the multi-family zoning
+district that will comply with the Draft
+Guidelines? 
+Brookline Village, Washington Square, Coolidge Corner, Chestnut Hill,
+Cleveland Circle, St. Mary's Station
+
+[PAGE 2]
+6.a.1. Are there any known obstacles
+(not including existing zoning
+regulations) to developing multifamily
+projects on land within 0.5 miles from
+this public transit station?
+No
+7.  Does your municipality have any
+zoning district(s) where multifamily
+development of 15 units/gross acre is
+allowed as of right without age
+restrictions and without restrictions on
+the number of bedrooms?
+Yes, more than one district
+7.a.  Please provide a link to your
+zoning bylaw or ordinance.
+https://www.brooklinema.gov/1479/By-Laws-and-Guidelines
+7.b.  What is the name of the zoning
+district you believe complies with the
+requirements of section 3A of c.40A?
+While our M, G, L, and I districts allow the unit density, we do not believe
+we fully comply to Section 3A (e.g., total capacity that could be feasibly
+built in these zones without triggering other Special Permits like setback
+relief)).
+7.b.1.  What is the name of the second
+zoning district you believe complies
+with the requirements of section 3A of
+c.40A?
+See above. For purposes of area calculations, the largest is the G-2 District
+in Brookline Village; the second largest is the G-1.75 CC District in
+Coolidge Corner.
+7.c.  Is the district 50 acres or more?
+No
+7.c.1. If less than 50 acres, provide the
+size of the existing district in acres
+38
+7.c.2.  Is the second district 50 acres or
+more? 
+No
+7.c.2.1. If less than 50 acres, provide the
+size of the existing district in acres
+32
+7.d.  Is any part of the existing district
+within 0.5 miles of a qualifying public
+transit station?
+Yes
+7.d.1. Is any part of the existing second
+district within 0.5 miles of a qualifying
+public transit station?
+Yes
+7.e. Is more than half of the district
+covered by water bodies, wetlands, or
+permanently protected open space, or
+subject to any other development
+restrictions (not including existing
+zoning regulations)? 
+No
+
+[PAGE 3]
+7.e.1. Is more than half of the second
+district covered by water bodies,
+wetlands, or permanently protected
+open space, or subject to any other
+development restrictions (not including
+existing zoning regulations)? 
+No
+8.  In accordance with the How to
+Comply in 2022 requirements for MBTA
+Communities issued on December 15,
+2021, MBTA Communities are required
+to hold a briefing about the Draft
+Guidelines at a meeting of the Select
+Board, City Council or Town Council
+prior to May 2, 2022.  Have you held
+such a meeting?*
+Yes
+8.a. What was the date and time of the
+meeting?
+Apr 05, 2022 06:00 PM
+8.b. Upload the Agenda for the meeting
+https://www.formstack.com/admin/download/file/12665191941
+Section 3  Technical Assistance and Next Steps
+9. Please tell us what, if any, technical
+assistance you might need in order to
+comply with section 3A of c40A based
+on the Draft Guidelines issued on
+December 15, 2021.
+We can draft multifamily zoning without technical assistance
+We need technical assistance to calculate multifamily capacity
+10. If your municipality needs Technical
+Assistance, please indicate which
+resources you prefer. 
+Consultant procured by a state agency
+
+[PAGE 4]
+11.  Use the space below to provide
+other information that you were unable
+to answer in the questions above. 
+Please do not provide comments on
+Draft Guidelines here.
+We cannot confidently answer the capacity question because we don't
+have enough guidance yet from DHCD. For example, if special permits are
+required for setback relief, are we supposed to do a parcel by parcel
+analysis to demonstrate reasonable capacity? 
+Another example is parking. Can we presume all below grade parking as
+reasonable, or are we meant to build out a financial analysis and parking
+layout for each parcel?
+We don't know whether we cannot include parcels in the Coolidge Corner
+Overlay District, which requires special permits for demolition. If the
+exercise is "blind" about what is there currently, than can we assume that
+all the parcels would start cleared of any buildings?
+Finally, we need to understand whether we can include properties that are
+also in Local Historic Districts or Neighborhood Conservation Districts (in
+General By-Law, not zoning).
+We cannot move forward with any reasonable analysis or community
+engagement until the Guidelines are finalized. Nor can we plan staff and
+any community engagement scope until we know when the guidelines will
+be available. I request, therefore, that DHCD change the deadline for an
+action plan to be approved by DHCD to 12 months following the issuance
+of the final guidelines.
+Thank you!
+
+
+### DOC 9cb07b739f | town=Brookline | community_type=subway or light rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.brooklinema.gov/DocumentCenter/View/32142/MBTACommunitiesInformationForm_Submission_959867238?bidId=
+
+[PAGE 1]
+Form Name: 
+MBTA Communities Information Form
+Submission Time: 
+May 2, 2022 10:52 am
+Browser: 
+Chrome 100.0.4896.127 / Windows
+IP Address: 
+209.6.162.131
+Unique ID: 
+959867238
+Location: 
+MBTA Community Information Form
+1.  What is your Municipality
+Brookline
+2.  Name of person filling out this form
+Kara Brewton
+3.  Title of person filling out this form
+Director of Planning & Community Development
+4.  Email of the person filling out this
+form
+kbrewton@brooklinema.gov
+5.  Phone number of the person filling
+out this form
+(617) 730-2468
+5.a  Will the person filling out this form
+ALSO be responsible to ensure
+compliance with section 3A of c40A
+and/or lead a committee that will
+undertake compliance with section 3A
+of c.40A?? 
+Yes
+Section 2 - Community Information
+6. Does your municipality have any land
+area within 0.5 miles of a public transit
+station, defined as a Subway station,
+Commuter rail station, Ferry terminal or
+Bus station. Note: the definition of “Bus
+Station" in the Draft Guidelines: “Bus
+station” means a building located at the
+intersection of two or more public bus
+lines, within which services are
+available to bus passengers; provided
+that a bus station does not include a
+shelter or other structure without walls
+and a foundation.
+Yes
+6.a. What is the name of the public
+transit station most likely to be the
+location of the multi-family zoning
+district that will comply with the Draft
+Guidelines? 
+Brookline Village, Washington Square, Coolidge Corner, Chestnut Hill,
+Cleveland Circle, St. Mary's Station
+
+[PAGE 2]
+6.a.1. Are there any known obstacles
+(not including existing zoning
+regulations) to developing multifamily
+projects on land within 0.5 miles from
+this public transit station?
+No
+7.  Does your municipality have any
+zoning district(s) where multifamily
+development of 15 units/gross acre is
+allowed as of right without age
+restrictions and without restrictions on
+the number of bedrooms?
+Yes, more than one district
+7.a.  Please provide a link to your
+zoning bylaw or ordinance.
+https://www.brooklinema.gov/1479/By-Laws-and-Guidelines
+7.b.  What is the name of the zoning
+district you believe complies with the
+requirements of section 3A of c.40A?
+While our M, G, L, and I districts allow the unit density, we do not believe
+we fully comply to Section 3A (e.g., total capacity that could be feasibly
+built in these zones without triggering other Special Permits like setback
+relief)).
+7.b.1.  What is the name of the second
+zoning district you believe complies
+with the requirements of section 3A of
+c.40A?
+See above. For purposes of area calculations, the largest is the G-2 District
+in Brookline Village; the second largest is the G-1.75 CC District in
+Coolidge Corner.
+7.c.  Is the district 50 acres or more?
+No
+7.c.1. If less than 50 acres, provide the
+size of the existing district in acres
+38
+7.c.2.  Is the second district 50 acres or
+more? 
+No
+7.c.2.1. If less than 50 acres, provide the
+size of the existing district in acres
+32
+7.d.  Is any part of the existing district
+within 0.5 miles of a qualifying public
+transit station?
+Yes
+7.d.1. Is any part of the existing second
+district within 0.5 miles of a qualifying
+public transit station?
+Yes
+7.e. Is more than half of the district
+covered by water bodies, wetlands, or
+permanently protected open space, or
+subject to any other development
+restrictions (not including existing
+zoning regulations)? 
+No
+
+[PAGE 3]
+7.e.1. Is more than half of the second
+district covered by water bodies,
+wetlands, or permanently protected
+open space, or subject to any other
+development restrictions (not including
+existing zoning regulations)? 
+No
+8.  In accordance with the How to
+Comply in 2022 requirements for MBTA
+Communities issued on December 15,
+2021, MBTA Communities are required
+to hold a briefing about the Draft
+Guidelines at a meeting of the Select
+Board, City Council or Town Council
+prior to May 2, 2022.  Have you held
+such a meeting?*
+Yes
+8.a. What was the date and time of the
+meeting?
+Apr 05, 2022 06:00 PM
+8.b. Upload the Agenda for the meeting
+https://www.formstack.com/admin/download/file/12665191941
+Section 3  Technical Assistance and Next Steps
+9. Please tell us what, if any, technical
+assistance you might need in order to
+comply with section 3A of c40A based
+on the Draft Guidelines issued on
+December 15, 2021.
+We can draft multifamily zoning without technical assistance
+We need technical assistance to calculate multifamily capacity
+10. If your municipality needs Technical
+Assistance, please indicate which
+resources you prefer. 
+Consultant procured by a state agency
+
+[PAGE 4]
+11.  Use the space below to provide
+other information that you were unable
+to answer in the questions above. 
+Please do not provide comments on
+Draft Guidelines here.
+We cannot confidently answer the capacity question because we don't
+have enough guidance yet from DHCD. For example, if special permits are
+required for setback relief, are we supposed to do a parcel by parcel
+analysis to demonstrate reasonable capacity? 
+Another example is parking. Can we presume all below grade parking as
+reasonable, or are we meant to build out a financial analysis and parking
+layout for each parcel?
+We don't know whether we cannot include parcels in the Coolidge Corner
+Overlay District, which requires special permits for demolition. If the
+exercise is "blind" about what is there currently, than can we assume that
+all the parcels would start cleared of any buildings?
+Finally, we need to understand whether we can include properties that are
+also in Local Historic Districts or Neighborhood Conservation Districts (in
+General By-Law, not zoning).
+We cannot move forward with any reasonable analysis or community
+engagement until the Guidelines are finalized. Nor can we plan staff and
+any community engagement scope until we know when the guidelines will
+be available. I request, therefore, that DHCD change the deadline for an
+action plan to be approved by DHCD to 12 months following the issuance
+of the final guidelines.
+Thank you!
+
+
+### DOC 6be8dd76db | town=Brookline | community_type=subway or light rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.brooklinema.gov/DocumentCenter/View/38300/DRAFT-EDAB-Memo---MBTA-Communities---1623-clean
+
+[PAGE 1]
+ 
+ 
+ 
+ 
+ 
+Date:   
+December 22, 2022 
+ 
+To: 
+ 
+Select Board, Charles Carey, Meredith Mooney 
+ 
+From:  
+Economic Development Advisory Board 
+ 
+Re:  
+Harvard Street Multifamily/Mixed-Use Study and MBTA 
+Communities Requirements 
+ 
+On December 5, 2022, Senior Planner Maria Morelli presented to the Economic Development 
+Advisory Board (EDAB) the preliminary findings of the Regulatory Division’s Multifamily/Mixed Use 
+Study focused on Harvard Street. A key expected recommendation of the study involves recalibrating 
+the zoning for Harvard Street and consideration of, in particular, form-based zoning, more robust site 
+plan review design regulations, additional parking requirement adjustments, and elimination of 
+special permit requirements, in order to facilitate and support infill development up to four stories in 
+this corridor.  
+The Multifamily/Mixed Use Study has been an ongoing project of the Regulatory Division for a few 
+years and the remaining one-year timeline recommended for the Study on Harvard Street coincides 
+with the timeline for compliance with the requirements of Massachusetts General Law, c.40A, 
+Section 3A (“MBTA Communities”). Some key requirements of that section include that the 3A 
+District allow housing by-right at a density of 15 units per acre, that the district be a minimum of 41 
+contiguous acres in size, that 90% of the district parcels are within half a mile of a transit station, and 
+that the district cannot mandate commercial uses (though commercial and other non-residential uses 
+may be allowed and incentivized). To comply with the requirements of the section, the Town would 
+need to adopt such a district by December 2023. 
+Based on the preliminary findings and recommendations presented by Ms. Morelli on December 5, 
+2022, EDAB is supportive of the Town complying with the MBTA Communities requirements in a 
+meaningful way and supports changes to zoning to encourage redevelopment along Harvard Street 
+and the creation of new housing units to further the economic vitality of this commercial corridor. 
+Given that the Harvard Street corridor presents many opportunities to advance the Town’s economic 
+development and housing needs without up-zoning, EDAB believes that Harvard Street is an 
+appropriate focus for further evaluation, under the auspices of the Regulatory Division’s 
+Multifamily/Mixed Use Study, for whether zoning adjustments in this corridor could feasibly achieve 
+BROOKLINE 
+ECONOMIC DEVELOPMENT ADVISORY BOARD 
+ 
+ 
+ 
+Anne R. Meyers, Co-Chair 
+Paul Saner, Co-Chair 
+Cliff Brown 
+Derrick Choi 
+Alan Christ 
+Kenneth Lewis 
+Carol Levin 
+Thomas Nally 
+Marilyn Newman 
+Alden Raine 
+Sandi Silk 
+Zeina Talje 
+
+[PAGE 2]
+MBTA Communities compliance. The success achieved by a number of Chapter 40B developments in 
+delivering both sensitive design and housing units in this corridor, including some in mixed-use 
+buildings, further bolsters its suitability for this purpose. 
+EDAB supports advancing solutions now that lead to compliance with the MBTA Communities’ 
+requirement. EDAB understands the MBTA Communities provision restricting municipalities from 
+requiring ground-floor commercial space in 3A Districts, but also recognizes the importance of 
+encouraging retention and creation of ground-floor commercial and other non-residential spaces. 
+EDAB believes that current market trends suggest that ground-floor commercial uses will be 
+concentrated in commercial nodes and not the entire Harvard Street corridor. 
+EDAB therefore believes that it is critical for any recalibrated Harvard Street zoning to include 
+effective design standards that continue to support and incentivize active ground floor retail and 
+commercial uses, such as façade transparency and entry design requirements. Development along 
+this mixed-use corridor currently requires a special permit regardless of the use. The MBTA 
+Communities Act will allow a developer to elect commercial ground floor uses as-of-right which will 
+make such uses easier to permit. Longer term, zoning incentives long advocated by EDAB should be 
+established through zoning overlays for larger commercial sites to incentivize commercial 
+development above the ground level. 
+EDAB looks forward to working with Representative Vitolo and others to explore changes to the 
+MBTA Communities Guidelines aimed at providing greater flexibility to municipalities to allow 
+requiring ground-floor commercial uses in Section 3A Districts. 
+As presented by Ms. Morelli, the Regulatory Division has also identified the following potential risks if 
+no action is taken to adjust Harvard Street corridor zoning:   
+• 
+Housing production in the corridor may remain low, with a correspondingly low generation of 
+inclusionary zoning benefits; 
+• 
+Economic growth from unrealized infill redevelopment potential will not be realized; 
+• 
+Pedestrian traffic may be insufficient to support commercial tenants; 
+• 
+Existing one-story retail buildings carry particularly high expenses for property owners and 
+their tenants, and that cost may increase; 
+• 
+In many cases, commercial tenants will continue to bear the full weight of future tax 
+increases, especially in triple-net leases where tax and expenses are borne by the tenant. 
+• 
+Zoning metrics are not right-sized and effectively preclude development to the four-story 
+scale and the permitting process will remain expensive and unpredictable; 
+• 
+Urban design standards, critical to reinforcing the current main street character of Harvard 
+Street, will remain loosely defined and regulated as mere guidelines; and 
+• 
+Infill potential for much needed housing and commercial amenities which would be 
+economically viable within the current four-story building envelope and would result in a 
+more consistent urban neighborhood, will remain unrealized. 
+
+[PAGE 3]
+The Regulatory Division’s preliminary findings suggest that a form-based zoning approach would 
+better mitigate these risks, reinforce the current neighborhood character of this vital commercial 
+district, provide more predictable building outcomes for developers and the community, and 
+facilitate infill development consistent with this neighborhood character. 
+The Economic Development Advisory Board commends the progress made by the Regulatory Division 
+on this Multifamily/Mixed Use Study, looks forward to contributing additional input as the study 
+continues, and supports the Town’s investment of funding to advance this promising and important 
+Study, including further study of the potential opportunity for compliance with the MBTA 
+Communities Act in connection with zoning measures for the Harvard Street corridor. EDAB is, in 
+particular, supportive of requests for funding to contract with firms with extensive form-based zoning 
+experience as a next step in evaluating the Harvard Street zoning adjustments under consideration in 
+the Study. 
+Note: On January 9, 2023, the Economic Development Advisory Board voted X-Y in support of this 
+advisory memo. 
+
+
+### DOC 0ea6180729 | town=Brookline | community_type=subway or light rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.brooklinema.gov/DocumentCenter/View/39393/ActionPlanforMBTACommunities_Submission_1058173804
+
+[PAGE 1]
+Exported January 17, 2023  10:38 AM
+Action Plan for MBTA Communities
+Description Area
+Please read the Section 3A Guidelines before attempting to complete this
+form.Please note: &nbsp;Action Plan Forms must be submitted by a
+municipal official with authority to act on behalf of the municipality on
+matters of zoning, such as the municipal CEO or planning director.
+Section 1: Identification
+Description Area
+The Section 3A Guidelines establish zoning metrics that apply uniquely to
+each MBTA community based on its local transit stations, existing housing
+stock, population, &nbsp;and developable land. &nbsp;This section of the
+Action Plan helps to identify the transit stations that determined each
+community's category. &nbsp;Appendix 1 of the Section 3A Guidelines lists
+each community's category and minimum multi-family unit capacity
+requirement.&nbsp;
+1.1  MBTA Community Name
+Brookline
+1.2. Community Category
+Rapid transit community
+1.3. Multifamily Unit Capacity
+Requirement
+6990
+1.4. Does this municipality have any
+MBTA rapid transit stations within its
+boundaries?
+Yes
+1.4a. Please list MBTA rapid transit
+stations that are located within this
+municipality's boundaries
+Longwood, Brookline Village, Brookline Hills, Beaconsfield, Reservoir,
+Saint Mary's Street, Hawes Street, Kent Street, Saint Paul Street, Coolidge
+Corner, Summit Avenue, Brandon Hall, Fairbanks Street, Washington
+Square, Tappan Street, Dean Road, Englewood Avenue, Cleveland Circle
+1.5. Does this municipality have any
+MBTA commuter rail stations within its
+boundaries?
+No
+1.6. Does this municipality have any
+other MBTA transit stations that are
+located outside of its municipal
+boundaries that may have "developable
+station area" within them?
+Yes
+
+[PAGE 2]
+Description Area
+Stations that are located outside of municipal boundaries but that have
+"developable station area" within the boundaries might affect district
+location criteria, as further described in Section 8 of the Guidelines. Please
+refer to Section 1 of the Guidelines for definitions of "transit station area",
+"developable station area", and "developable land".
+1.6a. Please list the MBTA transit
+stations that are located outside of the
+municipal boundaries but might have
+developable station area within them.
+Fenway, Mission Park, Riverway, Back of the Hill, Boston University East,
+Boston University Central, Amory Street, Babcock Street, Packards Corner,
+Harvard Avenue, Griggs Street, Allston Street, Warren Street, Sutherland
+Road, Chiswick Road, Chestnut Hill Avenue
+1.7. Please provide the name of the
+person filling out this form
+Kara Brewton
+1.7a. Title
+Director of Planning & Community Development
+1.7b. Email Address
+kbrewton@brooklinema.gov
+1.7c. Phone Number
+(617) 730-2468
+1.8 Please provide the name of the
+municipal CEO
+Chas Carey
+1.8b Mailing address of municipal CEO
+Town Administrator's Office
+333 Washington Street
+Brookline, MA 02445
+1.8c Email address of municipal CEO
+ccarey@brooklinema.gov
+1.9. Please briefly describe other
+members of the core team developing
+the multi-family zoning district.
+Maria Morelli, Senior Planner
+RKG Consultants
+Section 2: Housing Overview
+2.1. Does this municipality have any
+established housing related goals or
+strategies from municipal planning
+documents, such as a Housing
+Production Plan, Master Plan, or
+Economic Development Plan?
+Yes
+
+[PAGE 3]
+2.1a. Please briefly describe any
+relevant strategies, goals, or objectives,
+and the work that has been done to
+date.
+In November 2022 draft Housing Production Plan presentation, our
+consultant has identified the following goals: (1) increasing support for the
+Brookline Housing Authority (BHA) to modernize and develop affordable
+housing for low-income households; (2) create more deed-restricted
+affordable housing so that 10% of our housing stock is deed-restricted (not
+as measured on SHI); (3) change zoning to encourage housing as-of-right;
+(4) continue to monitor local preference policy.
+Work to date has included: (1) additional funding to BHA with ARPA funds;
+(2) working on disposing of two municipal parking lots for housing:
+Kent-Station Street lot and Babcock Street lot; (3) multi-family study started
+a couple years ago identified minor changes in zoning such as height that
+would encourage 4-story buildings along Harvard Street; (4) led regional
+analysis of local preference with respect to race.
+2.2. Is this municipality currently
+working on any other planning for
+housing?
+Yes
+2.2a. Please briefly describe the
+housing work underway.
+Upzoning on Route 9 between Brookline Village and Brookline Hills;
+adjusting inclusionary zoning to require on-site units on smaller projects,
+making accessory dwelling units  easier (no special permit).
+Section 3: Preliminary Zoning Strategies
+3.1.	To the best of your knowledge,
+which of the following zoning strategies
+is this community most likely to use for
+compliance?  (Select all that apply)
+d. A new base zoning district or districts
+3.1d. Please briefly describe the
+potential district and location. Optional:
+Attach any supporting documents that
+show planning work this community
+has already done for this district.
+Harvard Street corridor; see website for work to date:
+https://www.brooklinema.gov/2044 and also attached file
+File
+https://www.formstack.com/admin/download/file/14019199942
+3.2. What non-housing characteristics
+are important for this community to
+consider in its 3A zoning district?
+Keeping commercial uses on first floor, developing specific architectural
+standards for Brookline Village National Register District
+Section 4: Action Plan Timeline
+
+[PAGE 4]
+Description Area
+This section creates a framework to input preliminary plans for a zoning
+adoption process. On the table below, please use Column 1 (from the left)
+to describe a task, Column 2 to input a start date, and Column 3 to input a
+finish date. Every community must provide a timeline for the below-listed
+tasks. &nbsp;Additional space is provided for any other tasks that a
+community wishes to list. DHCD will review proposed timelines for
+feasibility before approving an Action Plan.&nbsp;Public
+outreachDeveloping zoning&nbsp;Applying DHCD's compliance model to
+test for density and unit capacityHolding planning board
+hearings&nbsp;Holding legislative sessions and adopt compliant
+zoning&nbsp;Submit District Compliance application to DHCD
+Description Area
+Task
+Description Area
+Start
+Description Area
+Finish
+Short Answer
+Educating elected officials on MBTA requirements
+Mar 01, 2022
+Mar 01, 2023
+Short Answer
+Analyzing gaps in current zoning to permit multifamily construction and
+applying compliance model
+Jan 01, 2022
+Feb 01, 2023
+Short Answer
+Small-group meetings with officials, Boards, and Town Meeting Members
+Sep 01, 2022
+Mar 01, 2023
+Short Answer
+Develop standards for Brookline Village National Register District
+Mar 01, 2023
+Jun 30, 2023
+Short Answer
+Seek reserve fund transfer for emergency funding to create form-based
+zoning and develop FBZ
+Feb 01, 2023
+Jun 30, 2023
+
+[PAGE 5]
+Short Answer
+General public outreach and community decisions re: Harvard Street
+corridor zoning
+Mar 01, 2023
+Jun 30, 2023
+Short Answer
+Develop and submit warrant article for Fall Town Meeting
+Jul 01, 2023
+Aug 30, 2023
+Short Answer
+Planning Board hearing in October,  Town Meeting in Nov-Dec, submit
+application by 12/31/23
+Oct 01, 2023
+Dec 31, 2023
+If there is any other feedback you would
+like to share about the compliance
+process, please use this space to
+provide it. 
+Without having the ability to require commercial use on the ground floor in
+our core commercial districts along Harvard Street, we may not be able to
+secure a majority vote at Town Meeting. At this time we are not planning on
+excluding our core commercial districts to assuage the fears of obliterating
+our small commercial tenants because: (i) these are locations that in many
+cases make the most sense to add housing; (ii) we have seen in 40B
+developments many small businesses relocate in the new buildings; and
+(iii) the regulations mandate contiguous areas of at least 5 acres in size.
+Additionally, we are unsure whether Town Meeting will agree to no parking
+minimums by right. While the Town has made major strides in getting rid of
+minima, our zoning now requires a special permit if an applicant seeks no
+parking for housing developments. Immediately after the Town Meeting
+vote that allowed this special permit provision (by a majority, not
+two-thirds), voters elected a major change in Town Meeting members --
+many asking for a more comprehensive plan prior to other zoning changes.
+A major problem for us is that the compliance model assumes that -- even
+in urban areas -- developers that include parking with housing would only
+build units adjacent to parking. The model presumes that builders wouldn't
+even construct a building over surface parking. We have recently
+experienced a series of midrise 40Bs that have be
+
+### DOC fb749e03ec | town=Brookline | community_type=subway or light rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.brooklinema.gov/DocumentCenter/View/40149/20230303-MBTA-Communities-Act-Noncompliance-FINAL
+
+[PAGE 1]
+ 
+ 
+ 
+ 
+ 
+ 
+   333 W AS HI NGTON S TRE E T 
+      CHARLES CAREY 
+ 
+ 
+ 
+ 
+               
+                  BROOKLINE, MASSACHUSETTS  02445 
+ TOWN ADMINISTRATOR 
+ 
+T E L . ( 6 1 7 ) 7 3 0 - 2 2 0 0 
+ 
+ 
+F A X : ( 6 1 7 ) 7 3 0 - 2 0 5 4 
+                                                                                                                          w w w . b r o o k l i n e m a . g o v  
+         
+ 
+ 
+To:  
+ 
+Select Board 
+ 
+From:  
+Charles Carey, Town Administrator 
+ 
+ 
+Joe Callanan, Town Counsel 
+ 
+Date:   
+March 3, 2023 
+   
+Subject:  
+MBTA Communities Act Noncompliance 
+______________________________________________________________________________ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+On February 27, 2023, at a hearing held by the Advisory Committee’s Subcommittee on Land 
+Use dedicated primarily to budget matters, Town Counsel’s office received a number of 
+questions on the potential consequences of failing to comply with the MBTA Communities Act 
+(Massachusetts General Law Chapter 40A, Section 3A).  
+ 
+As you know, that law states that Brookline “shall have a zoning ordinance or by-law that 
+provides for at least 1 district of reasonable size in which multi-family housing is permitted as of 
+right….” G.L. c. 40A § 3A(a). It also authorizes the Department of Housing and Community 
+Development (“DCHD”) to “promulgate guidelines to determine if an MBTA community is in 
+compliance” with the law. Id. § 3A(c). Additionally, it states that communities that fail to 
+comply with the act will not be eligible for certain funds, including, most relevantly for 
+Brookline, Local Capital Projects funds. Id. § 3A(b). The Brookline Housing Authority (“BHA”) 
+has said that it currently relies on such funding for about $225,000 of its costs. 
+ 
+After the Subcommittee conversation and several follow-ups with Advisory Committee and 
+Select Board members, a member of the Select Board asked Town Counsel’s office to prepare a 
+document for the Board addressing frequently asked questions about potential consequences of 
+noncompliance with the Act. This is that document. 
+ 
+We want to emphasize at the outset that this memo should not be viewed as defeatist or doom-
+saying. It provides honest answers to community questions. See Mass. R. Prof. C. 2.1 (“a lawyer 
+shall exercise independent professional judgment and render candid advice”). But beyond the 
+purely legal analysis herein, staff continues to be optimistic that a positive working relationship 
+with other municipalities and the state will result in Brookline achieving compliance with the Act 
+in a forward-thinking way that does not compromise the community’s character. And rather than 
+propose a knee-jerk rezoning out of fear of the potential consequences outlined in this memo, we 
+continue to pursue your direction to move deliberatively and open-mindedly in order to produce 
+the best possible outcome for the Town, rejecting a “one size fits all” framework. 
+ 
+TOWN of BROOKLINE   
+Massachusetts 
+ 
+
+[PAGE 2]
+MBTA Communities Noncompliance Memo 
+March 3, 2023 
+Page 2 of 6 
+Can’t we just “eat the cost” of noncompliance with the Act? 
+ 
+This is the most frequently asked question staff receives about the Act. The answer is no, both 
+because (1) the potential cost far exceeds the $225,000 in lost income to BHA due to federal civil 
+rights claims that would likely follow noncompliance, and (2) the mandatory nature of the Act 
+means that a judge could simply draw and impose a compliant district on the Town without our 
+input. 
+ 
+Additional Costs 
+ 
+The fact that the Act outlines a specific consequence for defying it (losing access to certain 
+funding sources) doesn’t mean it’s the only consequence we’d suffer for ignoring the word shall 
+in its first sentence. We would likely be sued, as early as January 2024. Two entities have 
+expressed interest in doing so: Lawyers for Civil Rights (“LCR,” formerly known as the 
+Lawyers’ Committee for Civil Rights), which has already sent letters to noncompliant 
+communities outlining its views (attached as Appendix A); and the Attorney General, who has 
+said publicly that she would “use every tool in [her] toolbox” to force compliance. Additionally, 
+Governor Healey has said that “opting out is not an option.” 
+ 
+In order to maximize the potential penalty for noncompliance, these entities would likely sue 
+under federal housing law that outlaws exclusionary zoning. In a line of cases dating back to 
+Village of Arlington Heights v. Metropolitan Housing Development Corporation, 429 U.S. 252 
+(1977), the Supreme Court has consistently held, despite repeated invitations to overturn the 
+conclusion, that zoning decisions which deter low-income housing growth or discriminate 
+against protected classes violate both the federal Fair Housing Act and the 14th Amendment of 
+the U.S. Constitution. 
+ 
+Several opponents of the Act have noted that it does not mandate affordable housing, and indeed 
+its guidelines restrict communities’ abilities to use local inclusionary zoning rules as a shield 
+against increased potential density. But the ultimate aim of the Act, per DHCD and the 
+Legislature, is to increase total housing stock and drive down costs so low-income families can 
+afford to live and work in Massachusetts. See, e.g., “Why is multi-family zoning near transit and 
+in neighboring communities important?”, available at https://www.mass.gov/info-details/multi-
+family-zoning-requirement-for-mbta-communities. Indeed, the Act itself requires that the 
+housing it permits be built “without age restrictions” and “suitable for families with children,” 
+indicating the Act’s intent to help protected classes find places to live. G.L. c. 40A § 3A(a). 
+ 
+Opponents may disagree that the Act is the best way to achieve its aims; they may even argue 
+that it simply cannot do so as written. But a court would be unlikely to second-guess the 
+deliberative process that led to the Act’s passage. That there is a better way to achieve a law’s 
+aims, or that we would rather comply in a different way, are generally not arguments courts 
+consider when determining whether a statute is constitutional and enforceable. 
+ 
+Instead, a court would likely focus on our stated and unstated reasons for failing to comply. 
+Despite our claim to be pulling our weight in terms of development, Brookline built the fourth-
+lowest amount of net new housing units among members of the Metropolitan Mayors Coalition 
+
+[PAGE 3]
+MBTA Communities Noncompliance Memo 
+March 3, 2023 
+Page 3 of 6 
+Regional Housing Task Force between 2015 and 2021, as the graph below shows, with a 
+significant gap between us and the next-highest community: 
+ 
+ 
+ 
+Nor does North Brookline’s existing density give us cover to claim we are simply at capacity 
+around MBTA stops. The forthcoming Harvard Street Study has already identified numerous 
+underutilized parcels of land on one of our busiest mixed-use streets, and other comparably 
+dense neighborhoods in other communities are still building housing. Outside of the process by 
+which developers can avoid local zoning laws in communities that lack adequate affordable 
+housing so long as their projects contain 25% or more affordable units (see G.L. c. 40B), only 
+one multi-family structure has been permitted on Harvard Street in the last 20 years. 
+ 
+Flat noncompliance with the MBTA Communities Act would likely be viewed by a court as an 
+amplification of a historic pattern or practice of discouraging any new multi-family housing from 
+being built. Additionally, since the Act is intended to assist low-income residents and protected 
+classes, our noncompliance would be painted as an intentional choice that disproportionately 
+impacts such individuals.  
+ 
+And that, as they say, is the ballgame. While we know Brookline’s intentions are not 
+discriminatory, and would obviously vigorously dispute any such allegation using any means 
+available to us (including affirmative litigation if the Select Board so authorizes), it is Town 
+Counsel’s opinion that we would likely lose a suit on the matter for the reasons outlined above.  
+ 
+Losing a federal civil rights case means paying the other side’s market rate attorneys’ fees in 
+addition to any damages awarded at trial. LCR has many large law firms that will gladly 
+volunteer their attorneys to file a lawsuit pro bono on this topic. WilmerHale, Ropes & Gray, 
+Goodwin and Mintz Levin are just some of the white-shoe firms represented on LCR’s board of 
+directors. Even if LCR did not employ such high-powered attorneys, or the Attorney General 
+were to sue and prevail first, the cost to Brookline from fee-shifting would still be extremely 
+
+[PAGE 4]
+MBTA Communities Noncompliance Memo 
+March 3, 2023 
+Page 4 of 6 
+high. See, e.g., Gavin v. Boston, No. 18-CV-10819 (D. Mass. Mar. 22, 2022) (finding reasonable 
+partner rates of $500 per hour; associates rates of up to $380 per hour, and paralegal rates of 
+$250 per hour for a mid-sized Boston firm) (citing Tuli v. Brigham & Women's Hosp., Inc., No. 
+07CV12338-NG, 2009 WL 10693567, at *2 (D. Mass. June 8, 2009) (finding in a case decided 
+eleven years ago that hourly rates of up to $735 for partners, up to $495 for associates, and up to 
+$275 for career paralegals were reasonable in the context of the litigation)). 
+ 
+As the cost of noncompliance could far exceed $225,000, which is already a sum of money the 
+Town does not have readily available in its FY24 budget without significant cuts elsewhere, 
+defying the MBTA Communities Act is not a viable option. See Rosie D. ex rel. John D. v. 
+Patrick, 593 F. Supp. 2d 325, 335 (D. Mass. 2009) ($7,106,414 fee award for five years of civil 
+rights litigation, appeal, and six-week trial); see also Rosie D. v. Baker, No. 01-CV-30199-RGS 
+(D. Mass. Mar. 22, 2022) (two later fee awards in the amounts of $1,459,684 in 2010 and 
+$1,129,490.00 in 2022 for time “spent monitoring implementation”). 
+ 
+Injunctive Relief 
+ 
+Beyond damages and fees, any suit against us will almost certainly ask a court to bring us into 
+compliance with the Act. That could be accomplished by holding us in contempt and charging us 
+onerous monetary penalties until a bylaw is passed. More dangerously, a judge could simply cut 
+us out of the equation and impose compliant zoning without local input.  
+ 
+Nowhere in the law’s requirement that we “shall have a zoning ordinance” does it say that the 
+Town must draft it. In past situations where courts have found government entities ignored 
+statutory or constitutional mandates in a discriminatory manner, courts have simply implemented 
+the mandates anyway. Recent court decisions regarding gerrymandered election districts are a 
+current example. In its “Redistricting Litigation Roundup,” the Brennan Center for Justice at 
+NYU Law School noted that “[i]n New York, the courts implemented new maps drawn by a 
+special master appointed by the court” rather than affording that state’s legislature the 
+opportunity to try again. 
+ 
+A court-appointed special master would be unlikely to take the kind of care and effort (to say 
+nothing of expense) the Planning Department has already spent on the question of how best to 
+comply with the Act. It’s extremely doubtful they’d try to implement form-based zoning or 
+height restriction requirements, for example. They would more likely listen to the plaintiffs’ 
+attorneys, as prevailing parties in the litigation, instead of Brookline residents. They would 
+absolutely not ask the state for waivers of any of the Act’s or guidelines’ provisions. We would 
+be left with a far worse outcome which we had no practical ability to influence. 
+ 
+Accordingly, rather than risk any of the above, it is staff’s recommendation that the community 
+begin the process of drafting zoning rules consistent with the Act’s requirements so that it can 
+position itself as a willing partner with the state in achieving its aims while also opening the door 
+for us to seek modifications to or waivers from the guidelines where appropriate. 
+ 
+ 
+ 
+
+[PAGE 5]
+MBTA Communities Noncompliance Memo 
+March 3, 2023 
+Page 5 of 6 
+Couldn’t we just argue that the whole Act is unlawful or unconstitutional? 
+ 
+Town Counsel is not aware of any potentially meritorious argument that the MBTA 
+Communities Act is unlawful. It is part and parcel of the state’s other zoning laws, nestled in 
+with provisions on items like special permits, variances, and authority for a zoning board of 
+appeals. Compare G.L. c. 40A § 3A (MBTA Communities Act); with id. § 9 (special permits); § 
+10 (variances); and § 12 (zoning board of appeals). Just as we must comply with the state’s 
+requirements elsewhere in chapter 40A, so too are we expected to come into compliance with 
+Section 3A.  
+ 
+Past challenges to Chapter 40B, a comparable (if anything, even more heavy-handed) state law 
+that limits local zoning authority in the name of increased affordability, have repeatedly failed. 
+See, e.g., Mahoney v. Bd. of Appeals of Winchester, 366 Mass. 228, 231 (1974) (Chapter 40B 
+does not violate equal protection clause); Bd. of Appeals of Hanover v. Hous. Appeals Comm. in 
+Dep’t of Cmty. Affairs, 363 Mass. 339, 344 (1973) (Chapter 40B neither unconstitutionally 
+vague, nor an unconstitutional delegation of power, nor violative of the Home Rule 
+Amendment). 
+ 
+But DHCD’s guidelines aren’t a part of the Act itself. Do we have to follow those? 
+ 
+Unless we get a waiver from them, very likely yes. The law specifically tasks DHCD with 
+developing guidelines. G.L. c. 40A § 3A(c) (“The department of housing and community 
+development, in consultation with the Massachusetts Bay Transportation Authority and the 
+Massachusetts Department of Transportation, shall promulgate guidelines to determine if an 
+MBTA community is in compliance with this section”).  
+ 
+DHCD did so through a method that comported with administrative procedure requirements: it 
+issued draft guidelines in December 2021, solicited public comment, conducted public 
+engagement sessions, revised the guidelines based on the feedback it received, and issued a final 
+draft on August 10, 2022. See Letter from M. Kennealy & J. Maddox to MBTA Communities 
+Leaders, Aug. 10, 2022 (attached as Appendix B). 
+ 
+It’s true that “[g]uidelines issued by an administrative agency . . . do not have the same status as 
+regulations adopted pursuant to the [Massachusetts] Administrative Procedure Act. […] 
+[A]lthough they are entitled to substantial deference, they do not carry the force of law.” Glob. 
+NAPs, Inc. v. Awiszus, 457 Mass. 489, 496–97 (2010). But “formal rulemaking is not required 
+when an agency seeks to interpret a statute.” Boston Ret. Bd. v. Contributory Ret. Appeal Bd., 
+441 Mass. 78, 83 (2004). Here, where the text of the Act itself is broad and plain without being 
+vague, it’s unlikely that a court would depart from the “substantial deference” standard in 
+evaluating DHCD’s guidelines. The scheme behind the Act is simple: the Legislature identified a 
+clear preferred outcome and tasked the administrative agency best equipped to bring that 
+outcome about with figuring out the details on how to get there. 
+ 
+And thus, even if we were successful in arguing that the guidelines don’t accurately reflect the 
+intent of the Act and thus don’t need to be followed, we would still be confronted with the 
+mandatory language of the Act itself. This reinforces that doing nothing is not a viable option. 
+
+[PAGE 6]
+MBTA Communities Noncompliance Memo 
+March 3, 2023 
+Page 6 of 6 
+How can the state get away with punishing BHA for the Town’s acts or omissions? 
+ 
+While BHA is a separate government entity and body politic, it is still part of our community. 
+The state has taken the position that Local Capital Projects Fund cannot be used to fund anything 
+in a community that’s out of compliance with the Act, as a letter DHCD sent to Woburn on 
+December 14, 2022 (attached as Appendix C) attests. And just like the answer to the last 
+question, even if we were to successfully argue that this was unfair to BHA, we’d still be in the 
+position of having to comply with the Act’s mandatory language and implement complaint 
+zoning. 
+ 
+So do we have no options except to give up and comply with this coercive law as written? 
+ 
+We don’t think so, and we would discourage this downcast framing of the situation. As 
+previously mentioned, staff is aggressively working with other stakeholders to change or get 
+waivers from parts of the guidelines that we don’t think apply to Brookline’s situation. We 
+appreciate that the state has put us in a bind, but the Planning Department has been striving since 
+this law was signed to put us in the best possible position to address it. 
+ 
+In passing the MBTA Communities Act, the state has issued us a challenge. Rather than ignoring 
+it and suffering the consequences, staff recommends facing it head-on, and viewing it as an 
+opportunity to gather meaningful community input and stand at the vanguard of sustainable 
+inclusionary zoning practices just as we are for climate change policy. By framing our efforts in 
+this way, we are far more likely to win the changes we’re seeking from the state, which we hope 
+will be equally eager to see us succeed in achieving the aims the Act purports to support. 
+ 
+END OF DOCUMENT 
+ 
+Appendix A: LCR Compliance Demand Letters (Feb. 6, 2023) 
+Appendix B: Final DHCD Guidelines Cover Letter (Aug. 10, 2022) 
+Appendix C: DHCD Compliance Letter to Woburn (Dec. 14, 2022) 
+
+[PAGE 7]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+APPENDIX A 
+
+[PAGE 8]
+ 
+61 BATTERYMARCH STREET • 5TH FLOOR • BOSTON, MA 02110 
+(617) 482-1145 (TELEPHONE) • (617) 482-4392 (FACSIMILE) 
+WWW.LAWYERSFORCIVILRIGHTS.ORG 
+ 
+February 6, 2023 
+ 
+Chairman Anthony M. Renzoni 
+Holden Board of Selectmen 
+1204 Main Street 
+Holden, MA 01520 
+ 
+Re: Demanding Compliance with MBTA Zoning Law Action Plan Requirement  
+ 
+Dear Chairman Renzoni: 
+ 
+As you are aware, Holden is currently in violation of the MBTA Zoning Law.1  This is because 
+Holden has failed to meet even the bare minimum requirement that it submit a multi-family 
+zoning “action plan” to the Commonwealth by January 31, 2023.  Lawyers for Civil Rights 
+(“LCR”) demands that Holden rectify this failure within ten business days.  
+ 
+The MBTA Zoning Law—M.G.L. c. 40A § 3A—obligates cities and towns with MBTA service, 
+including Holden, to provide for a multi-family zoning district of “reasonable size” within the 
+next few years.2  Under its authority to implement the Law, the Department of Housing and 
+Community Development (“DCHD”) has issued a series of mandatory compliance deadlines.  
+One such deadline required covered communities to submit a short “action plan” by January 31, 
+2023, explaining how they will adhere to the Law’s zoning specifications.  By DHCD’s count, 
+Holden is one of seven communities that have completely abdicated that responsibility.3 
+ 
+The Law explicitly imposes state funding ineligibility for this failure.4  But Holden officials 
+should be aware that their refusal to comply has far bigger consequences.  Greater Boston is 
+mired in an affordable housing crisis and remains highly racially segregated.  Towns that decline 
+to increase their multi-family housing are actively perpetuating both of these problems.5   
+ 
+Therefore, LCR demands that Holden submit an “action plan” to DHCD within 10 
+business days.  The necessary form is six pages long and can be found here.  168 covered 
+communities have already submitted “action plans”6 and Holden is capable of doing so as well. 
+ 
+ 
+1 Andrew Brinker, As new housing law takes effect, most towns fall in line, for now, BOS. GLOBE (Feb. 3, 2023), 
+https://www.bostonglobe.com/2023/02/03/business/new-housing-law-takes-effect-most-towns-fall-line-
+now/?p1=Article_Feed_ContentQuery&p1=Article_Feed_ContentQuery.  
+2 Multi-Family Zoning Requirement for MBTA Communities, MASS.GOV, https://www.mass.gov/info-details/multi-
+family-zoning-requirement-for-mbta-communities (last visited Feb. 6, 2023).  
+3 Section 3A Action Plan Status as of 2/2/2023, Mass.gov, https://www.mass.gov/doc/section-3a-action-plan-
+statuses/download (last visited Feb. 6, 2023).  
+4 See supra note 2.  
+5 See Oren Sellstrom & Jacob Love, Don’t try to flout the Housing Choice Law, COMMONWEALTH MAG. (Dec. 13, 
+2022), https://commonwealthmagazine.org/opinion/dont-try-to-flout-the-housing-choice-law/.  
+6 See supra note 3.  
+
+[PAGE 9]
+ 
+ 
+If Holden fails to do so, or otherwise continues to flout the MBTA Zoning Law, LCR will 
+compel Holden’s compliance.  Exclusionary zoning practices have long been successfully 
+challenged under the federal Fair Housing Act (“FHA”).  However, Holden taxpayers need not 
+be saddled with the litigation costs.  We would prefer to resolve this amicably and expeditiously.   
+ 
+Sincerely, 
+ 
+/s/ 
+ 
+Jacob M. Love, Esq. 
+Oren M. Sellstrom, Esq. 
+Iván Espinoza-Madrigal, Esq. 
+Lawyers for Civil Rights 
+ 
+CC: 
+Richard Bates, Holden Board of Selectmen 
+Stephanie Mulroy, Holden Board of Selectmen 
+Geraldine A. Herlihy, Holden Board of Selectmen 
+Thomas Curran, Holden Board of Selectmen 
+Peter Lukes, Holden Town Manager 
+Town of Holden Planning & Development Office  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 10]
+ 
+61 BATTERYMARCH STREET • 5TH FLOOR • BOSTON, MA 02110 
+(617) 482-1145 (TELEPHONE) • (617) 482-4392 (FACSIMILE) 
+WWW.LAWYERSFORCIVILRIGHTS.ORG 
+ 
+February 6, 2023 
+ 
+ 
+ 
+ 
+ 
+ 
+Re: Demanding Compliance with MBTA Zoning Law Action Plan Requirement  
+ 
+Dear Chairman Miller: 
+ 
+As you are aware, Berkley is currently in violation of the MBTA Zoning Law.1  This is because 
+Berkley has failed to meet even the bare minimum requirement that it submit a multi-family 
+zoning “action plan” to the Commonwealth by January 31, 2023.  Lawyers for Civil Rights 
+(“LCR”) demands that Berkley rectify this failure within ten business days.  
+ 
+The MBTA Zoning Law—M.G.L. c. 40A § 3A—obligates cities and towns with MBTA service, 
+
+
+### DOC a9a4433533 | town=Brookline | community_type=subway or light rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.brooklinema.gov/DocumentCenter/View/41384/ARTICLE-24---Reso-MBTA-Communites
+
+[PAGE 1]
+May 23, 2023 Annual Town Meeting 
+ 
+24-1
+__________ 
+ARTICLE 24 
+__________________________ 
+TWENTY-FOURTH ARTICLE 
+Submitted by:  Neil Gordon; Richard Benka; John Doggett; Jane Gilman; Nancy Heller; 
+Jonathan Margolis; Linda Olson Pehlke; Marty Rosenthal 
+ 
+To see if the Town will adopt the following Resolution: 
+WHEREAS the Massachusetts Department of Housing and Community Development 
+(“DHCD”) has enacted guidelines that impose a December 31, 2023, compliance deadline 
+for MBTA “Rapid Transit” communities such as Brookline to present zoning plans 
+complying with the so-called “MBTA Communities Act” (“MBTA-CA”), G.L. ch. 40A, § 
+3A, as determined by application of a DHCD “Compliance Model; and 
+WHEREAS Brookline’s Planning and Community Development Department (“Planning 
+Department”) has developed a single strategy that would involve substantial rezoning of a 
+48-acre district centered on the Harvard Street corridor as well as neighboring streets, but 
+other options should be considered; and 
+WHEREAS while it has been repeatedly claimed that there is no “up-zoning” 
+contemplated, the Harvard Street strategy, in order to comply with DHCD guidelines, 
+assumes the elimination of all parking requirements for new developments along Harvard 
+Street, the elimination of any requirement for commercial or other publicly accessible 
+space (e.g., retail, restaurant, personal services, professional services) even on the first 
+floor, the elimination of floor area ratio restrictions on density, and a 48-foot height limit 
+rather than the existing staggered building height limits; and 
+WHEREAS all of these factors contribute to significant increases in permissible density 
+from redevelopment that could seriously threaten existing businesses, commercial vitality 
+and existing moderately priced housing; disrupt neighborhoods; and ignore the need for 
+open space and the critical need to increase our tree canopy; and  
+WHEREAS the Harvard Street strategy is focused solely on pursuing MBTA-CA 
+compliance with the single 48-acre zoning district (which could, in fact, have to expand 
+even further into neighboring streets), although the DHCD guidelines do not require a 
+single area; and 
+WHEREAS the number of actual, existing multi-family (3-plus) units in Brookline already 
+far exceeds the MBTA-CA “capacity” requirements, a fact not recognized by the DHCD 
+guidelines; and 
+WHEREAS unlike the Harvard Street strategy, utilizing multiple areas in Town to comply 
+with the MBTA-CA, including existing three-family and other multi-family districts or 
+portions of other corridors, would not require the Town to impose potentially negative 
+
+[PAGE 2]
+May 23, 2023 Annual Town Meeting 
+ 
+24-2 
+changes on the Harvard Street corridor and would not concentrate the potential for 
+additional multi-family housing and the potential impacts on school population on only 
+three elementary schools (Ridley, Lawrence and Pierce); and 
+WHEREAS recent successful rezoning efforts have been guided by resident committees 
+with staff and consultant support, where the committees reflect appropriate technical skills 
+along with representation from affected constituencies, to increase the credibility of their 
+recommendations and the likelihood of acceptance by Town Meeting; and 
+WHEREAS the Harvard Street strategy and the chosen process raise significant concerns 
+that could well result in the defeat of that strategy at the November 2023 Town Meeting 
+and it would be imprudent for the Town to “put all its eggs in one basket” without having 
+the option of fully considering other options for complying with the MBTA-CA; and 
+WHEREAS it is prudent to establish a resident-guided process that will, to the extent 
+possible, ensure the development of alternative strategies for MBTA-CA compliance that 
+could be utilized by themselves or in conjunction with a modified form of the Harvard 
+Street strategy, and that will involve public engagement and analysis of potential impacts 
+of not only the Harvard Street strategy but also alternative strategies; 
+NOW, THEREFORE, BE IT RESOLVED that Town Meeting  
+A. Requests the Select Board and the Town’s legislative delegation to initiate or 
+continue efforts to seek appropriate modifications to the DHCD deadline and 
+guidelines; and further 
+ 
+B. Requests the Moderator to appoint a committee to identify additional potential 
+options for complying with the MBTA Communities Act; and further, 
+ 
+C. Requests the Select Board to direct the Planning Department to provide staff 
+support to said Moderator’s Committee in analyzing both the Harvard Street 
+strategy’s potential impacts, including impacts on Town and School services and 
+risks to existing businesses, and other potential options for MBTA-CA compliance, 
+including without limitation applying the DHCD Compliance Model and 
+developing appropriate site plan review standards. 
+Or act on anything relative thereto. 
+ 
+_________________ 
+ 
+PETITIONER’S ARTICLE DESCRIPTION 
+ 
+1. Brookline is not required to create a “mega district” to comply with the MBTA-
+CA 
+
+[PAGE 3]
+May 23, 2023 Annual Town Meeting 
+ 
+24-3
+The DHCD guidelines require Brookline to have a “minimum land area” of 41 acres with 
+“multi-family unit capacity” of 6,990 units (25% of the Town’s current number of units) 
+as determined by a DHCD “Compliance Model.”  In response, the Harvard Street 
+strategy has identified a single 48-acre district encompassing the entire length of Harvard 
+Street from Station Street to Verndale Street (interrupted only for a block at Coolidge 
+Corner).  Moreover, because properties along Harvard Street -- even with the substantial 
+zoning changes contemplated by the Harvard Street strategy – apparently yield only 
+5,400 of the required 6,990 unit “capacity,” the Planning Department has actually 
+included contiguous portions of Stearns Road, Littell Road, Alton Court, St. Paul Street, 
+Webster Place, Kent Street, Station Street, Stedman Street and Beals Street in the so-
+called “Harvard Street” plan. 
+The Town, however, is not required to concentrate the impact of the MBTA-CA on only 
+one “mega district.”  The DHCD guidelines actually state, for example, that 
+• “[i]f an MBTA community has two or more zoning districts in which multi-
+family housing is allowed as of right, then two or more districts may be 
+considered cumulatively to meet the minimum land area and minimum multi-
+family unit capacity requirements”;  
+• “no portion of the district that is less than 5 contiguous acres [of] land will count 
+toward the minimum [land] size requirement”; and  
+• “at least half of the multi-family zoning district land areas must comprise 
+contiguous lots of land.” 
+DHCD guidelines also allow the inclusion of areas that are already developed and do not 
+limit “capacity” calculations to lots that are vacant.  Thus, the guidelines make clear that  
+• “[n]othing … should be interpreted as a mandate to construct a specified number 
+of housing units, nor as a housing production target”; 
+• “capacity” simply means “that a sufficient number of multi-family housing units 
+could be added to or replace existing uses and structures over time – even though 
+such additions or replacements may be unlikely to occur soon”; and 
+• all privately owned property, even if already developed, can be included in 
+calculating “capacity” unless development is prohibited to protect private or 
+public water supplies or the property is used for institutional uses such as a 
+hospital, utility, or private school, college or university. 
+Furthermore, DHCD guidelines expressly allow “site plan review” with by-laws that 
+impose conditions on “the appearance and layout” of specific projects, including the 
+regulation of matters such as vehicular access and circulation, screening of adjacent 
+properties, and the “architectural design of a building.”  Because the door is open to 
+utilizing site plan review and to considering multiple areas in Town, including multiple 
+commercial areas and existing three-family and multi-family zones, MBTA-CA 
+compliance could generate fewer negative impacts than a single-minded pursuit of the 
+Harvard Street strategy. 
+
+[PAGE 4]
+May 23, 2023 Annual Town Meeting 
+ 
+24-4 
+2. It is erroneous to argue that the Harvard Street strategy is not up-zoning 
+It has been repeatedly argued that the Harvard Street strategy provides the potential for 
+growth “without up-zoning,” that “[n]o up-zoning [is] required” and that the strategy will 
+“facilitate infill for both housing/commercial without up-zoning.”  
+Planopedia, a source of recognized urban design terms, defines “upzoning” as options “to 
+create new development capacity,” including “increas[ing] the floor-area ratios,” 
+“[i]ncreased height restrictions, lower parking requirements, or density bonuses.”  The 
+Harvard Street strategy includes  
+• replacing maximum floor-area ratios (currently 1.0 to 1.75 in most of the area) 
+with “form-based zoning,” thus eliminating (not merely increasing) the allowable 
+floor-area ratios and, with the proposed increase in height limits, essentially 
+tripling the allowable density of properties in the area;  
+• increasing height restrictions to 48 feet (from 40 feet in most of the area), a 20% 
+increase;  
+• eliminating various setback and open space requirements in favor of “form-based 
+zoning;” 
+• eliminating the requirement for publicly accessible first floor space;  
+• and eliminating (not just reducing) parking restrictions. 
+The assertion that there would be no “upzoning” is erroneous. 
+3. The DHCD guidelines are particularly troublesome when applied to the entirety 
+of the existing Harvard Street commercial corridor 
+Choosing a single, huge 48-acre land area, rather than doing the additional work of 
+objectively pursuing ways in which the MBTA-CA could be achieved with other less 
+disruptive approaches, will focus potential enrollment impacts on only three of the 
+Town’s eight elementary schools and potentially disrupt a vibrant commercial corridor. 
+First of all, the ironic choice of a commercial corridor as the venue for compliance 
+tr
+. . .
+icly 
+accessible, commercial activities on the ground floor, or, indeed, anywhere in a building.  
+The threat to commercial viability and to local business is clear.  The Town has offered 
+two responses, both of which would likely create further problems: 
+• First, the Town has apparently suggested, or will suggest, that DHCD remove this 
+restriction.  The problem, of course, is that the Harvard Street “mega district” 
+could become even larger than 48 acres, or the “canyonization” of Harvard Street 
+even greater, if the Town’s request for changes to the DHCD guidelines were 
+allowed.  Thus, if the Town were permitted to require first-floor commercial 
+space, the “as of right” multi-family housing floor area in buildings would be 
+reduced and the “capacity” target of 6,990 units could be reached only by further 
+
+[PAGE 5]
+May 23, 2023 Annual Town Meeting 
+ 
+24-5
+expanding the district into even more neighboring streets, or by increasing the 
+height limit and thus density even further beyond the contemplated 48 feet. 
+• Second, the Planning Department has said that it could provide “incentives” for 
+developers to include commercial uses to avoid dead, publicly inaccessible first-
+floor spaces in the critical Harvard Street commercial area.  The “incentives,” 
+however, would likely require either financial support from the Town in the form 
+of tax abatement agreements, a reduction in the Town’s affordable housing 
+requirements, or zoning incentives allowing even greater density and the resulting 
+“canyonization” beyond that already contemplated by the Harvard Street strategy. 
+Second, because the DHCD model deducts space required for parking in calculating 
+housing “capacity,” the Planning Department’s Harvard Street strategy reaches a 
+“capacity” of 5,400 units on Harvard Street, and 6,990 units in the entire MBTA-CA 
+district, only by eliminating all required parking for new development in the district: 
+• The absence of any minimum on-site parking requirements imposes potential 
+negative impacts on potential patronage in the Harvard Street commercial area (if 
+any commercial activity is able to survive), on surrounding neighborhoods, and 
+even on the residents of any new multi-family housing.  Is it realistic to proceed 
+on the assumption that no residential parking is needed? 
+• Including any on-site parking requirement to avoid congestion and impacts on 
+neighborhood streets and municipally owned parking lots would require that 
+building heights be increased even more or that the MBTA-CA district be 
+expanded even further into surrounding neighborhoods to achieve the desired 
+“capacity.” 
+Thus, the focus on a single huge area, and a commercial area to boot, creates problems 
+under the DHCD guidelines that could potentially be avoided.  Indeed, these problems 
+would, as discussed below, exacerbate other inequities generated by the application of the 
+MBTA-CA.   
+4. Brookline’s already-existing multi-family units far exceed the MBTA-CA 
+“capacity” guidelines 
+The DHCD guidelines identify Brookline as one of twelve “Rapid Transit” communities -
+- Braintree, Brookline, Cambridge, Chelsea, Everett, Malden, Medford, Milton, Newton, 
+Quincy, Revere, and Somerville – that are required to have a “minimum multi-family unit 
+capacity” equivalent to 25% of the total number of housing units in the community 
+according to the 2020 U.S. Census.1   
+                                                 
+1https://www.mass.gov/doc/compliance-guidelines-for-multi-family-zoning-districts-under-section-3a-of-
+the-zoning-act/download 
+
+[PAGE 6]
+May 23, 2023 Annual Town Meeting 
+ 
+24-6 
+The Town’s already-existing multi-family units, according to the 2021 U.S. Census 
+American Community Survey, are already 66.8% of the Town’s housing units.  
+• The percentage of multi-family units in the twelve “Rapid Transit” communities 
+ranges from 10.8% to 71.9%. 
+• Brookline is one of only three of the twelve communities, along with Chelsea 
+and Cambridge, where multi-family housing already constitutes more than 2/3 
+of the total housing units. 
+• Thus, Brookline’s actual, already-existing multi-family inventory is more than 2 
+½ times the MBTA’s “capacity” goal.2  
+• It has also been stated that an even higher percentage (75%) of the units in 
+Brookline’s Green Line service area are multi-family, more than three times the 
+MBTA-CA “capacity” goal.3 
+But whether the multi-family percentage of Brookline’s existing housing units is 2/3 or 
+3/4, Brookline far exceeds the MBTA-CA 25% “capacity” standard and cannot credibly 
+be accused of excluding multi-family housing. 
+5. The MBTA-CA expects other municipalities to subsidize Boston and Cambridge 
+and commercial developers in those cities 
+Over the past decade, as set forth in more detail in Appendix “A,”  
+• Boston and Cambridge have effectively shifted to other communities the cost of 
+providing housing and related municipal services, including public education, for 
+the households of workers attracted by commercial development in those two 
+cities.   
+• Those two cities have gained tens of millions (Cambridge) or hundreds of 
+millions (Boston) of dollars of additional property tax levies from commercial 
+development, a windfall they do not share with other communities. On a per 
+capital basis, Boston’s tax levy increase from commercial development is 5 times 
+that of Brookline, and that of Cambridge is 7 times Brookline’s. 
+• More specifically, in the decade after 2010, Boston added 124,800 new jobs but 
+provided only 29,200 additional housing units (only 23% of the new jobs); 
+Cambridge added 35,500 new jobs but provided only 6,600 additional housing 
+units (only 19% of the new jobs); and Brookline added 1,200 new jobs while 
+providing 1,500 additional housing units (25% more units than the number of new 
+jobs). 
+• Studies conducted by Boston and Cambridge themselves confirm the fact that 
+other municipalities already house the vast majority of new workers attracted to 
+those cities.  Those studies further confirm that the housing “linkage payments” 
+                                                 
+2https://censusreporter.org/data/table/?table=B25024&geo_ids=16000US2509210,05000US25021,31000U
+S14460,04000US25,01000US&primary_geo_id=16000US2509210#valueType|estimate  
+3 Boston Globe, March 4, 2023, p.A-9 (Linda Olson Pehlke; Readers’ Forum). 
+
+[PAGE 7]
+May 23, 2023 Annual Town Meeting 
+ 
+24-7
+paid by developers in those two cities are a trivial percentage of the additional 
+housing costs imposed by commercial development (without even accounting for 
+the costs of municipal services necessitated by additional housing). 
+• And, as with their commercial property tax windfalls, the housing linkage 
+payments received by Boston and Cambridge are not shared with the 
+municipalities actually housing the vast majority of new workers from those two 
+cities.   
+ 
+6. Residential taxpayers in Brookline bear the brunt of providing Town and School 
+services 
+As further set forth in Appendix “A,” because of Brookline’s relatively small commercial 
+tax base and limited commercial growth compared to Boston and Cambridge,  
+• Residential properties in Brookline pay a much larger percentage of Brookline’s 
+property tax levy – twice the share paid by Boston’s residential properties and 
+almost 2 ½ times the share paid by residential properties in Cambridge. 
+• Brookline, like other “bedroom” communities, has faced multiple operating 
+overrides and debt exclusion votes, primarily to meet school needs. 
+• The taxes on residential properties have already increased dramatically, even 
+without including the impact of the debt exclusion for fire station rehabilitation 
+voted in 2022 and the pending 2023 operating override and Pierce School debt 
+exclusion. 
+• In contrast, Boston and Cambridge, with their commercial property tax growth 
+and offloading of housing and municipal service responsibilities to other 
+communities, have had NO operating overrides or debt exclusions in at least 35 
+years, if ever.4  
+And, as a final irony, Boston is totally excluded from any obligation under the MBTA-
+CA to provide multi-family housing capacity. 
+7. A closing comment 
+Despite the obvious negative fiscal impacts of Brookline’s already sparse commercial 
+development and despite the fact that DHCD guidelines preclude the Town from 
+requiring space for commercial activity, the Harvard Street strategy utilizes a major 
+corridor defined by commercial activity along almost its entire length as the location for 
+efforts to satisfy the MBTA-CA.5  
+                                                 
+4 https://www.mass.gov/lists/reports-relating-to-property-tax-data-and-statistics#proposition-2-1/2-
+referendum-data- 
+ 
+5 Indeed, as noted above, even if the DHCD guidelines prohibiting commercial mandates were relaxed, any 
+mandate to include commercial activity would likely either require that the zone be expanded even further 
+
+[PAGE 8]
+May 23, 2023 Annual Town Meeting 
+ 
+24-8 
+The Harvard Street strategy, under external time pressure,6 proposes changes that will 
+have potentially serious and irreversible impacts enduring for decades.  Plunging ahead 
+with this single strategy would leave the Town with no viable alternatives that might be 
+acceptable.7  Town Meeting should not be so severely hamstrung in its future decision 
+making.  The more prudent course would examine available alternatives for complying 
+with the MBTA-CA.  This resolution is an effort to start that process.   
+ 
+ 
+                                                 
+into adjoining neighborhoods or that the proposed zoning be changed to allow even greater density and 
+“canyonization” through increased height limits.  
+6 The Town and other municipalities are apparently seeking an extension of the December 31, 2023 
+deadline for submitting final plans.  Even if that time is not extended, the Boston Globe reported on 
+December 16, 2022, that DHCD on or about December 14, 2022 issued a letter stating that “Once a 
+community comes back into compliance, the housing authority funding will be restored.” 
+https://www.bostonglobe.com/2022/12/16/business/state-soften-budget-cuts-towns-that-dont-comply-with-
+new-mbta-housing-law/ 
+7 In its MBTA-CA Action Plan, the Planning Department recognized “the fears of obliterating our small 
+commercial tenants”; that “[w]ithout having the ability to require commercial use on the ground floor in 
+our core commercial districts along Harvard Street, we may not be able to secure a majority vote at Town 
+Meeting”; that “we are usure whether Town Meeting will agree to no parking minimums by right”; and that 
+“[w]hile no parking minimums by right may seem an obvious policy solution, it may prove to not be a 
+politically palatable outcome.” https://www.mass.gov/doc/submitted-section-3a-action-plans/download 
+ 
+
+[PAGE 9]
+May 23, 2023 Annual Town Meeting 
+ 
+24-9
+APPENDIX “A” 
+Commercial New Growth over the Past Decade 
+ 
+Boston: 
+• Has averaged an increase of over $50 million of “new growth” annually in its 
+property tax levy limit from Commercial, Industrial and Personal Property (e.g., 
+laboratory equipment) (“CIP”) development.  
+• This bonanza that has not abated even after the pandemic, with an additional 
+$69.3 million property tax levy increase from CIP new growth in the most recent 
+Fiscal Year 2023.8   
+Cambridge: 
+• Has averaged an increase of over $13.3 million annually in its property tax levy 
+limit from CIP development.   
+• As in Boston, this has not abated even after the pandemic, with an additional 
+$21.1 million CIP new growth increase in Fiscal Year 2023.9  Each annual 
+increase becomes part of the permanent tax levy limit for all future years, being 
+aggregated year after year and further increased by 2 ½% annually under 
+Proposition 2 ½.   
+Brookline, in contrast: 
+• H
+
+### DOC 2f111baf44 | town=Burlington | community_type=bus | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.burlington.org/DocumentCenter/View/13669
+
+[PAGE 1]
+ARTICLE # 
+RE: MBTA Communities Overlay Zoning
+Language
+MOTION – That the Zoning Bylaw of the Town of Burlington and Zoning Map be amended as 
+follows, and further that non-substantive changes to the numbering of this bylaw be permitted to 
+comply with the numbering format of the Zoning Bylaw:
+1) Add in Article II “Definitions” as follows (strikethrough to be removed, underlined and 
+bold is new):
+As of Right
+Development that may proceed under the Zoning in place at time of application 
+without the need for a special permit, variance, zoning amendment, waiver, or other
+discretionary zoning approval.
+Compliance Guidelines.
+Compliance Guidelines for Multi-Family Zoning Districts Under Section 3A of the 
+Zoning Act as further revised or amended from time to time. Applicable to the 
+MBTA Communities Multi-family Overlay District (MCMOD) in Section 8.6.0.
+MBTA
+Massachusetts Bay Transportation Authority.
+Residential Dwelling Unit
+A single unit providing complete, independent living facilities for one or more 
+persons, including permanent provisions for living, sleeping, eating, cooking. and 
+sanitation.
+Section 3A
+Section 3A of the Zoning Act. Applicable to the MBTA Communities Multi-family 
+Overlay District (MCMOD) in Section 8.6.0.
+2) Add in Article III, Section 1 “Districts” (strikethrough to be removed, underlined and 
+bold is new):
+Overlay Districts
+The following special districts are hereby established and are set forth in Article 8.0:
+FP
+100 Year Flood Plain Districts
+WR 
+Water Resources Districts
+W 
+Wetlands Districts
+
+[PAGE 2]
+A 
+Aquifer Districts
+WC
+Wireless Communications Districts
+CC
+Civic Center District
+CBD
+Central Business District
+MCMOD      MBTA Communities Multi-family Overlay District
+3) Add in Article IV “Use Regulations” Section 4.1.1 “Symbols in Use Regulations” 
+(strikethrough to be removed, underlined and bold is new):
+4.1.1
+Symbols in Use Regulation Schedules
+Yes 
+Permitted as of right
+No 
+Prohibited
+SP 
+Permitted only by a special permit, as provided by Article IX, 
+Sections 9.2.0 through 9.2.7.
+YES1 – Permitted by right in a MCMOD, CC or CBD overlay district, even if 
+prohibited or allowed only by SP in the underlying zoning district.
+SP1 –
+Permitted only by a special permit in a CC or CBD overlay district, even if
+prohibited in the underlying zoning district.
+
+[PAGE 3]
+4) Add in Article IV “Use Regulations” Section 4.2.1 “Residence Uses” (strikethrough to be removed, underlined and bold is new):
+4.2.0 PRINCIPAL USE REGULATION SCHEDULE
+USE DESIGNATION
+DISTRICT
+OVERLAY DISTRICTS
+4.2.1
+RESIDENCE USES
+RO
+RG
+RC
+BN
+BL
+BG
+BT
+IG
+I
+IR
+OS
+A
+WR
+CC
+CBD
+MCMOD
+4.2.1.2
+Garden Apartment dwelling units (see 11.3.0)
+NO
+SP
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+YES
+YES
+NO
+NO
+YES1
+4.2.1.17
+Multi-Family other than 4.2.1.2
+NO
+SP
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+YES
+YES
+NO
+NO
+YES1
+LEGEND
+Aquifer (A) and Water Resource (WR) Districts: See Article VIII, Section 8.3.3 Interpretation and Application
+MBTA Communities Multi-Family Overlay (MCMOD) District: See Article VIII, Section 8.6.3
+Civic Center (CC) & Central Business District (CBD) Districts
+YES = Allowed use in the CC and/or CBD only if the underlying zoning
+permits.
+YES1 and SP1= Allowed use by right or special permit in the CC,
+MCMOD, and/or CBD districts superseding any underlying zoning.
+SP = Allowed use in the CC and/or CBD by Special Permit only if the 
+underlying zoning permits.
+NO = Is not allowed in the CC or CBD regardless of underlying zoning
+provisions
+
+[PAGE 4]
+5) Add a column entitled “MCMOD” in Article V “Dimensional Requirements” Section 5.2 “Density Regulation Schedule” as follows 
+(strikethrough to be removed, underlined and bold is new):
+SECTION 5.2.0 DENSITY REGULATION SCHEDULE: No building or structure shall be constructed nor shall any existing building or structure be enlarged or altered except 
+in conformance with the Density Regulation Schedule, as to lot coverage, lot area, land area per dwelling unit, lot width, front, side and rear setbacks, and maximum height of 
+structures except as may otherwise be provided elsewhere herein. 4
+ 
+RO
+RG
+RC
+BN
+BL
+BG
+BT
+IG
+I
+IR        MCMOD
+Minimum Lot Area 9
+20,000 sf
+120,000 sf
+100,000sf
+5,000 sf
+10,000 sf
+10,000 sf
+10,000 sf
+40,000 sf
+120,000 sf
+18 Ac.
+Minimum Lot Frontage
+100 ft
+100 ft
+ 100 ft
+50 ft
+100 ft
+100 ft
+100 ft
+150 ft
+100 ft
+400 ft
+Minimum Front Yard
+ 25 ft
+ 50 ft
+ 25 ft
+10 ft 5
+ 15 ft 5
+ 15 ft 5
+ 15 ft 5
+ 25 ft 5
+ 25 ft 5
+100 ft
+25 ft
+Minimum Side Yard
+ 15 ft
+ 50 ft
+ 25 ft
+10 ft 5
+ 15 ft 5
+ 15 ft 5
+ 15 ft 5
+ 15 ft 5
+ 15 ft 5
+100 ft
+15 ft
+Minimum Rear Yard
+ 15 ft
+ 50 ft
+25 ft
+ 10 ft 5
+ 15 ft 5
+ 15 ft 5
+ 15 ft 5
+ 15 ft 5
+ 15 ft 5
+100 ft
+15 ft
+Minimum Lot Width
+20 ft
+ 20 ft
+20 ft
+ N/A
+ N/A
+ N/A
+ N/A
+ N/A
+ N/A
+ N/A
+Minimum Yard Adjoining RO & RG,
+None
+ 50 ft
+50 ft
+ 20%
+ 20%
+ 20%
+ 20%
+ 20%
+100 ft
+ 20%
+OS and Residentially Zoned Land in 
+depth of
+depth of
+depth of
+depth of
+depth of
+depth of
+Contiguous Municipalities10
+lot 6
+lot 6
+lot 6
+lot 6
+lot 6
+lot 6
+Maximum Aggregate Building-to-
+None
+ 25%
+25%
+33 1/3%
+33 1/3%
+33 1/3%
+33 1/3%
+ 25%
+ 25%
+ 25% 
+25%
+Ground Area Percentage
+Maximum Building & Structure
+Height11
+ 30 ft
+ 30 ft
+ 30 ft
+30 ft
+ 30 ft
+ 30 ft
+ 30 ft
+30 ft 8
+ 30 ft 7 
+ 30 ft 8
+35 ft
+80 ft 8
+90 ft 7,12
+80 ft 8
+Minimum Feet Between Buildings
+None
+ 50 ft
+20 ft 
+None
+None
+None
+None
+None
+ 50 ft
+None
+Maximum Floor Area Ratio (FAR)
+None
+None
+None
+None
+None
+None
+None
+.15 2,3
+.15 2,3
+None
+NOTES FOR DENSITY REGULATION TABLE
+13
+Reference Section 8.6.0 for additional criteria applicable to the MCMOD District.
+
+[PAGE 5]
+Article VIII
+Town of Burlington Zoning Bylaw
+Page 8-5
+6) Add in Article VIII “Overlay Districts” a new Section entitled Section 8.6.0 “MBTA Communities 
+Multi-Family Overlay District”:
+SECTION 8.6.0 MBTA COMMUNITIES MULTI-FAMILY OVERLAY DISTRICT
+8.6.1
+Purpose
+The purpose of the MBTA Communities Multi-family Overlay District (MCMOD) is to allow multifamily housing as of right in 
+accordance with Section 3A of the Zoning Act (Massachusetts General Laws Chapter 40A). This zoning provides for as of right multi-
+family housing to accomplish the following purposes:
+1.
+Encourage the production of a variety of housing sizes and typologies to provide equal access to new housing throughout
+the community for people with a variety of needs and income levels;
+2.
+Support vibrant neighborhoods by encouraging an appropriate mix and intensity of uses to support an active public space
+that provides equal access to housing, jobs, gathering spaces, recreational opportunities, goods, and services.
+3.
+Preserve open space in a community by locating new housing within or adjacent to existing developed areas and 
+infrastructure.
+4.
+Support public investment in public transit and pedestrian- and bike-friendly infrastructure.
+5.
+Increase the municipal tax base through private investment in new residential developments in established 
+neighborhoods and commercial areas. 
+8.6.2
+Establishment and Applicability
+This MCMOD is an overlay district having a land area of approximately 61.4 acres in size that is superimposed over the underlying 
+zoning district(s) and is shown on the Zoning Map.
+1.
+Applicability of MCMOD.
+An applicant may develop multi-family housing located within a MCMOD in accordance with the provisions of this 
+Section 8.6.0.
+2.
+Overlay District.
+The MCMOD is an overlay district superimposed on the underlying zoning district(s) and overlay district(s). The 
+regulations for use, dimension, and all other provisions of the Zoning Bylaw governing the respective underlying zoning 
+district shall remain in full force, except for uses allowed as of right in the MCMOD. Uses that are not identified in 
+Section 8.6.0 are governed by the requirements of the underlying zoning district(s). 
+The MCMOD shall consist of the following parcels of land:
+26 Beacon Street, Parcel 37-52-0
+7 Dover Drive, Parcel 37C-1-0
+12 Dover Drive, Parcel 37C-10-0
+14 Dover Drive, Parcel 37C-11-0
+16 Dover Drive, Parcel 37C-12-0
+18 Georgia Drive, Parcel 37C-13-0
+16 Georgia Drive, Parcel 37C-14-0
+14 Georgia Drive, Parcel 37C-15-0
+12 Georgia Drive, Parcel 37C-16-0
+10 Georgia Drive, Parcel 37C-17-0
+8 Georgia Drive, Parcel 37C-18-0
+6 Georgia Drive, Parcel 37C-19-0
+
+[PAGE 6]
+Article VIII
+Town of Burlington Zoning Bylaw
+Page 8-6
+5 Dover Drive, Parcel 37C-2-0
+4 Georgia Drive, Parcel 37C-20-0
+2 Georgia Drive, Parcel 37C-21-0
+1 Georgia Drive, Parcel 37C-22-0
+3 Georgia Drive, Parcel 37C-23-0
+5 Georgia Drive, Parcel 37C-24-0
+7 Georgia Drive, Parcel 37C-25-0
+9 Georgia Drive, Parcel 37C-26-0
+3 Dover Drive, Parcel 37C-3-0
+1 Dover Drive, Parcel 37C-4-0
+2 Dover Drive, Parcel 37C-5-0
+4 Dover Drive, Parcel 37C-6-0
+6 Dover Drive, Parcel 37C-7-0
+8 Dover Drive, Parcel 37C-8-0
+10 Dover Drive, Parcel 37C-9-0
+103 Westgate Drive, Parcel 37-56-0
+105 Westgate Drive, Parcel 37-55-0
+1 Littles Brook Court, Parcel 42-99-0
+20 Second Ave, Parcel 45-23-0
+32 Second Ave, Parcel 45-27-0
+20 Fourth Ave, Parcel 39-11-0
+0 Middlesex Turnpike, Parcel 39-11-1
+111 Middlesex Turnpike, Parcel 45-32-0
+121 Middlesex Turnpike, Parcel 45-33-0
+129 Middlesex Turnpike, Parcel 45-34-0
+131 Middlesex Turnpike, Parcel 45-34-1
+0 Middlesex Turnpike, Parcel 45-35-0
+141 Middlesex Turnpike, Parcel 45-36-0
+The alteration of MCMOD district boundaries must be approved at Town Meeting by an amendment to this Zoning Bylaw 
+and the Zoning Map.
+8.6.3
+Applicability of Other Overlay Districts
+1.
+Any MCMOD project shall comply with Sections 8.1 – 8.5 to the maximum extent practicable. Residential projects and 
+residential components of mixed-use projects in the MUMOD are exempt from any Special Permitting processes 
+required in Sections 8.1 – 8.5. 
+8.6.4
+Definitions
+For the following definitions refer to Article II: Definitions, “As of Right”, “Compliance Guidelines”, “MBTA”, “Residential
+Dwelling Unit” and “Section 3A”. 
+8.6.5
+Permitted Land Uses
+The MCMOD District is established as an overlay district to all other districts. 
+1.
+Uses Permitted as of Right.
+The following uses are permitted as of right within the MCMOD:
+a.
+Multi-Family Residential between 15 and 20 dwelling units per acre.
+
+[PAGE 7]
+Article VIII
+Town of Burlington Zoning Bylaw
+Page 8-7
+2.
+Permitted by Special Permit.
+The following uses require a Special Permit from the Planning Board.
+a.
+Mixed-use development. As of right uses in a mixed-use development are as follows:
+Ground Floor
+Community space.
+Educational uses.
+Personal services.
+Retail.
+Experiential retail, including retail associated with dance or exercise studios, music studios, 
+photography studios, or other combination of education, services, and retail.
+Restaurant, café, and other eating establishments without a drive-through.
+Office, professional office, and co-working space
+Artists’ studios, maker space, and small-scale food production no more than 5,000 SF, and retail 
+associated with each use.
+Any Floor
+       Residential (required component).
+3.
+Accessory Uses. The following uses are considered accessory as of right to any of the permitted uses in subsection 1.
+a.
+Parking, including surface and structure parking such as an above ground or underground parking garage on the 
+same lot as the principal use.
+8.6.6
+Dimensional Standards
+1.
+Table of Dimensional Standards. Notwithstanding anything to the contrary in this Zoning, the dimensional requirements 
+applicable in the MCMOD are as follows:
+Maximum Lot Coverage
+75%
+Maximum Building Coverage
+25%
+Minimum Open Space
+60%
+Maximum Height
+3 stories (35 feet)
+Front Setback
+25 feet
+Side Setback
+15 feet
+Rear Setback
+15 feet
+2.
+Multi-Building Lots. In the MCMOD, lots may have more than one principal building.
+3.
+Exceptions. The limitation on height of buildings shall not apply to chimneys, ventilators, towers, silos, spires, or other 
+ornamental features of buildings, which features are in no way used for living purposes and do not constitute more than 
+25% of the ground floor area of the building. 
+4.
+Exceptions: Renewable Energy Installations. The Planning Board may waive the height and setbacks in Section 8.6.6.1.
+8.6.7
+Off Street Parking
+These parking requirements are applicable to development in the MCMOD.
+1.
+Number of parking spaces. The following maximum numbers of off-street parking spaces shall be permitted by use, 
+either in surface parking or within garages or other structures:
+Use
+                          Required Spaces
+Multi-family
+            1.5 spaces per dwelling unit
+
+[PAGE 8]
+Article VIII
+Town of Burlington Zoning Bylaw
+Page 8-8
+Non-residential uses         See Section 7.2.0 “General Parking Requirements”
+2.
+Number of bicycle parking spaces. The following minimum numbers of covered bicycle storage spaces shall be provided
+by use:
+Use
+                          Required Spaces
+Multi-family
+            1 bicycle parking space per dwelling unit
+Non-residential uses        1 bicycle parking space for every 10 parking spaces
+3.
+Bicycle storage. For a multi-family development of 25 units or more, or a mixed-use development of 25,000 square feet 
+or more, covered parking bicycle parking spaces shall be integrated into the structure of the building(s).
+4.
+Shared Parking within a Mixed-Use Development. Parking requirements for a mix of uses on a single site may be 
+adjusted through the Site Plan Review process, if the applicant can demonstrate that shared spa
+. . .
+ects within the MCMOD. An application for Site Plan Review shall
+be reviewed by the Planning Board for consistency with the purpose and intent of Section 8.6.
+2.
+Submission Requirements. As part of any application for Site Plan Review for a project within the MCMOD, the 
+Applicant must submit the following documents to the Town:
+a.
+Application and fee for Site Plan Review.
+b.
+Site plans that show the position of the building on the site, points of vehicular access to and from the site and 
+vehicular circulation on the site, stormwater management, utilities, and landscape treatments, including any 
+screening of adjacent properties, and other information commonly required by Municipality for Site Plan 
+Review. 
+c.
+Elevations of the building(s) showing the architectural design of the building.
+d.
+All site plans shall be prepared by a certified architect, landscape architect, and/or a civil engineer registered 
+in the Commonwealth of Massachusetts. All landscape plans shall be prepared by a certified landscape 
+architect registered in the Commonwealth of Massachusetts. All building elevations shall be prepared by a 
+certified architect registered in the Commonwealth of Massachusetts. All plans shall be signed and stamped, 
+and drawings prepared at a scale of [one inch equals forty feet (1"=40') or larger], or at a scale as approved in
+advance by the Permitting Authority. 
+e.
+Narrative of compliance with the applicable design standards of this Section 8.6.9.
+All submission materials must comply with the Burlington Planning Board Site Plan Rules and Regulations which 
+are available at the Planning Department office or on the town’s website.
+3.
+Timeline. Site Plan Review should be commenced no later than 30 days of the submission of a complete application and 
+should be completed expeditiously. The Planning Board may, when appropriate, seek the input of other municipal 
+boards or officials. In general, site plan review should be completed no more than 6 months after the submission of the 
+application. 
+4.
+Site Plan Approval. Site Plan approval for uses listed in Section 8.6.5.1 Permitted Uses shall be granted upon 
+determination by the Site Plan Review Authority that the following conditions have been satisfied. The Planning Board 
+may impose reasonable conditions, at the expense of the applicant, to ensure that these conditions have been satisfied.  
+a.
+The Applicant has submitted the required fees and information as set forth in Burlington’s requirements for a 
+Building Permit and Site Plan Review; and  
+b.
+The project as described in the application meets the development standards set forth in Section 8.6.7. General 
+Development Standards. 
+5.
+Project Phasing. An Applicant may propose, in a Site Plan Review submission, that a project be developed in phases 
+subject to the approval of the Site Plan Review Authority, provided that the submission shows the full buildout of the 
+project and all associated impacts as of the completion of the final phase.
+8.6.10     Severability
+If any provision of this Section 8.6 is found to be invalid by a court of competent jurisdiction, the remainder of Section 8.6 shall not be
+affected but shall remain in full force. The invalidity of any provision of this Section 8.6 shall not affect the validity of the remainder 
+of the Burlington’s Zoning.
+
+[PAGE 11]
+Article VIII
+Town of Burlington Zoning Bylaw
+Page 8-11
+7) Amend the Zoning Map to add the following areas shown on maps on file with the Town Clerk to the 
+MBTA Communities Multifamily Overlay District (MCMOD)
+a.
+Beacon Village Apartments located at 26 Beacon Street said land is further identified as being 
+the parcel as shown generally on the Town of Burlington Assessor’s Map 37 Parcel 52-0.
+b. Beacon Woods Condominiums located at Georgia Drive and Dover Drive. Said land is further 
+identified as being the parcels as shown generally on the Town of Burlington Assessor’s Map 
+37C Parcels 1-0 through 26-0.
+c.
+Westgate Apartments located at 103 and 105 Westgate Drive. Said land is further identified as 
+being the parcels as shown generally on the Town of Burlington Assessor’s Map 37C Parcels 56-
+0 and 55-0
+d. Heritage at Stoneridge Apartments located at 1 Littles Brook Court. Said land is further 
+identified as being the parcel as shown generally on the Town of Burlington Assessor’s Map 42 
+Parcel 99-0. The portion of the property deeded as age restricted is not included in the MCMOD.
+e.
+The Tremont and Huntington Apartments located at 20 Second Ave. and 32 Second Ave. Said 
+land is further identified as being the parcels as shown generally on the Town of Burlington 
+Assessor’s Map 45 Parcels 23-0 and 27-0.
+f.
+Lifetime Living Apartments located at 20 Fourth Ave and an unimproved adjacent parcel known 
+as 0 Middlesex Turnpike. Said land is further identified as being the parcels as shown generally 
+on the Town of Burlington Assessor’s Map 39 Parcels 11-0 and 11-1.
+g. The following properties located between Middlesex Turnpike and Great Meadow Road. These 
+properties consist of 111 Middlesex Turnpike, 121 Middlesex Turnpike, 131 Middlesex 
+Turnpike, 0 Middlesex Turnpike, and 141 Middlesex Turnpike. Said land is further identified as 
+being the parcels as shown generally on the Town of Burlington Assessor’s Map 45 Parcels 32-0,
+33-0, 34-0, 34-1, 35-0, 36-0.
+Or to act in any other manner in relation thereto.
+Submitted by the Board of Selectmen at the request of the 
+Planning Board
+ PASSED ( ) DEFEATED ( ) POSTPONED INDEFINITELY ( ) OTHER ( )
+
+
+### DOC 7392970f86 | town=Burlington | community_type=bus | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.burlington.org/DocumentCenter/View/13681
+
+[PAGE 1]
+ARTICLE #  
+RE: MBTA Communities Overlay Zoning 
+Language 
+ 
+MOTION – That the Zoning Bylaw of the Town of Burlington and Zoning Map be amended as 
+follows, and further that non-substantive changes to the numbering of this bylaw be permitted to 
+comply with the numbering format of the Zoning Bylaw: 
+ 
+1) Add in Article II “Definitions” as follows (strikethrough to be removed, underlined and 
+bold is new): 
+ 
+As of Right 
+ 
+Development that may proceed under the Zoning in place at time of application 
+without the need for a special permit, variance, zoning amendment, waiver, or other 
+discretionary zoning approval. 
+ 
+Compliance Guidelines. 
+ 
+Compliance Guidelines for Multi-Family Zoning Districts Under Section 3A of the 
+Zoning Act as further revised or amended from time to time. Applicable to the 
+MBTA Communities Multi-family Overlay District (MCMOD) in Section 8.6.0. 
+ 
+MBTA 
+ 
+Massachusetts Bay Transportation Authority.   
+ 
+Residential Dwelling Unit 
+ 
+A single unit providing complete, independent living facilities for one or more 
+persons, including permanent provisions for living, sleeping, eating, cooking. and 
+sanitation. 
+ 
+Section 3A 
+ 
+Section 3A of the Zoning Act. Applicable to the MBTA Communities Multi-family 
+Overlay District (MCMOD) in Section 8.6.0. 
+ 
+2) Add in Article III, Section 1 “Districts” (strikethrough to be removed, underlined and 
+bold is new): 
+Overlay Districts 
+The following special districts are hereby established and are set forth in Article 8.0: 
+ 
+FP 
+ 
+100 Year Flood Plain Districts 
+WR  
+ 
+Water Resources Districts 
+W  
+ 
+Wetlands Districts 
+
+[PAGE 2]
+A  
+ 
+Aquifer Districts 
+WC 
+ 
+Wireless Communications Districts 
+CC 
+ 
+Civic Center District 
+CBD  
+Central Business District 
+MCMOD       MBTA Communities Multi-family Overlay District 
+ 
+ 
+3) Add in Article IV “Use Regulations” Section 4.1.1 “Symbols in Use Regulations” 
+(strikethrough to be removed, underlined and bold is new): 
+ 
+4.1.1 Symbols in Use Regulation Schedules 
+ 
+ 
+ 
+Yes  
+Permitted as of right 
+No  
+Prohibited 
+SP  
+Permitted only by a special permit, as provided by Article IX, 
+Sections 9.2.0 through 9.2.7. 
+YES1 – Permitted by right in a MCMOD, CC or CBD overlay district, even if 
+prohibited or allowed only by SP in the underlying zoning district. 
+SP1 – Permitted only by a special permit in a CC or CBD overlay district, even if 
+prohibited in the underlying zoning district. 
+
+[PAGE 3]
+ 
+4) Add in Article IV “Use Regulations” Section 4.2.1 “Residence Uses” (strikethrough to be removed, underlined and bold is new): 
+ 
+ 
+ 
+4.2.0 PRINCIPAL USE REGULATION SCHEDULE 
+ 
+ 
+USE DESIGNATION 
+DISTRICT 
+OVERLAY DISTRICTS 
+4.2.1 
+RESIDENCE USES 
+RO 
+RG 
+RC 
+BN 
+BL 
+BG 
+BT 
+IG 
+I 
+IR 
+OS 
+A 
+WR 
+CC 
+CBD 
+MCMOD 
+4.2.1.2 
+Garden Apartment dwelling units (see 11.3.0) 
+NO 
+SP 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+YES 
+YES 
+NO 
+NO  
+YES1 
+4.2.1.17 
+Multi-Family other than 4.2.1.2 
+NO 
+SP 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+YES 
+YES 
+NO 
+NO  
+YES1 
+ 
+LEGEND 
+Aquifer (A) and Water Resource (WR) Districts: See Article VIII, Section 8.3.3 Interpretation and Application 
+MBTA Communities Multi-Family Overlay (MCMOD) District: See Article VIII, Section 8.6.3 
+ 
+Civic Center (CC) & Central Business District (CBD) Districts 
+ 
+YES = Allowed use in the CC and/or CBD only if the underlying zoning 
+permits. 
+YES1 and SP1= Allowed use by right or special permit in the CC, 
+MCMOD, and/or CBD districts superseding any underlying zoning. 
+SP = Allowed use in the CC and/or CBD by Special Permit only if the 
+underlying zoning permits. 
+NO = Is not allowed in the CC or CBD regardless of underlying zoning 
+provisions 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 4]
+5) Add a column entitled “MCMOD” in Article V “Dimensional Requirements” Section 5.2 “Density Regulation Schedule” as follows 
+(strikethrough to be removed, underlined and bold is new): 
+ 
+SECTION 5.2.0 DENSITY REGULATION SCHEDULE: No building or structure shall be constructed nor shall any existing building or structure be enlarged or altered except 
+in conformance with the Density Regulation Schedule, as to lot coverage, lot area, land area per dwelling unit, lot width, front, side and rear setbacks, and maximum height of 
+structures except as may otherwise be provided elsewhere herein. 4 
+  
+RO 
+RG 
+RC 
+BN 
+BL 
+BG 
+BT 
+IG 
+I 
+IR        MCMOD 
+ 
+Minimum Lot Area 9 
+20,000 sf 
+120,000 sf 
+100,000sf 
+5,000 sf 
+10,000 sf 
+10,000 sf 
+10,000 sf 
+40,000 sf 
+120,000 sf 
+18 Ac.  
+ 
+Minimum Lot Frontage 
+100 ft 
+100 ft 
+ 100 ft 
+50 ft 
+100 ft 
+100 ft 
+100 ft 
+150 ft 
+100 ft 
+400 ft 
+ 
+ 
+Minimum Front Yard 
+ 25 ft 
+ 50 ft 
+ 25 ft 
+10 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 25 ft 5 
+ 25 ft 5 
+100 ft 
+25 ft 
+ 
+Minimum Side Yard 
+ 15 ft 
+ 50 ft 
+ 25 ft 
+10 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+100 ft 
+15 ft 
+ 
+Minimum Rear Yard 
+ 15 ft 
+ 50 ft 
+25 ft 
+ 10 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+100 ft 
+15 ft 
+ 
+Minimum Lot Width 
+20 ft 
+ 20 ft 
+20 ft 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ 
+Minimum Yard Adjoining RO & RG, 
+None 
+ 50 ft 
+50 ft 
+ 20% 
+ 20% 
+ 20% 
+ 20% 
+ 20% 
+100 ft 
+ 20% 
+OS and Residentially Zoned Land in  
+ 
+ 
+depth of 
+depth of 
+depth of 
+depth of 
+depth of 
+ 
+depth of  
+Contiguous Municipalities10 
+ 
+ 
+ 
+lot 6 
+lot 6 
+lot 6 
+lot 6 
+lot 6 
+ 
+lot 6 
+ 
+Maximum Aggregate Building-to- 
+None 
+ 25% 
+25% 
+33 1/3% 
+33 1/3% 
+33 1/3% 
+33 1/3% 
+ 25% 
+ 25% 
+ 25%  
+25% 
+Ground Area Percentage 
+ 
+ 
+Maximum Building & Structure  
+Height11 
+ 30 ft 
+ 30 ft 
+ 30 ft 
+30 ft 
+ 30 ft 
+ 30 ft 
+ 30 ft 
+30 ft 8 
+ 30 ft 7  
+ 30 ft 8 35 ft 
+80 ft 8 
+90 ft 7,12 
+80 ft 8 
+ 
+Minimum Feet Between Buildings 
+None 
+ 50 ft 
+20 ft  
+None 
+None 
+None 
+None 
+None 
+ 50 ft 
+None 
+ 
+Maximum Floor Area Ratio (FAR) 
+None 
+None 
+None 
+None 
+None 
+None 
+None 
+.15 2,3 
+.15 2,3 
+None 
+ 
+NOTES FOR DENSITY REGULATION TABLE 
+ 
+13 
+Reference Section 8.6.0 for additional criteria applicable to the MCMOD District.  
+ 
+
+[PAGE 5]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-5 
+6) Add in Article VIII “Overlay Districts” a new Section entitled Section 8.6.0 “MBTA Communities 
+Multi-Family Overlay District”: 
+ 
+SECTION 8.6.0 MBTA COMMUNITIES MULTI-FAMILY OVERLAY DISTRICT 
+ 
+8.6.1 
+Purpose 
+ 
+The purpose of the MBTA Communities Multi-family Overlay District (MCMOD) is to allow multifamily housing as of right in 
+accordance with Section 3A of the Zoning Act (Massachusetts General Laws Chapter 40A). This zoning provides for as of right multi-
+family housing to accomplish the following purposes: 
+ 
+1. Encourage the production of a variety of housing sizes and typologies to provide equal access to new housing throughout 
+the community for people with a variety of needs and income levels; 
+ 
+2. Support vibrant neighborhoods by encouraging an appropriate mix and intensity of uses to support an active public space 
+that provides equal access to housing, jobs, gathering spaces, recreational opportunities, goods, and services. 
+ 
+3. Preserve open space in a community by locating new housing within or adjacent to existing developed areas and 
+infrastructure. 
+ 
+4. Support public investment in public transit and pedestrian- and bike-friendly infrastructure. 
+ 
+5. Increase the municipal tax base through private investment in new residential developments in established 
+neighborhoods and commercial areas.  
+ 
+8.6.2 
+Establishment and Applicability 
+ 
+This MCMOD is an overlay district having a land area of approximately 61.4 acres in size that is superimposed over the underlying 
+zoning district(s) and is shown on the Zoning Map. 
+ 
+1. Applicability of MCMOD.  
+ 
+An applicant may develop multi-family housing located within a MCMOD in accordance with the provisions of this 
+Section 8.6.0. 
+ 
+2. Overlay District.  
+ 
+The MCMOD is an overlay district superimposed on the underlying zoning district(s) and overlay district(s). The 
+regulations for use, dimension, and all other provisions of the Zoning Bylaw governing the respective underlying zoning 
+district shall remain in full force, except for uses allowed as of right in the MCMOD. Uses that are not identified in 
+Section 8.6.0 are governed by the requirements of the underlying zoning district(s).  
+ 
+The MCMOD shall consist of the following parcels of land: 
+ 
+26 Beacon Street, Parcel 37-52-0 
+ 
+7 Dover Drive, Parcel 37C-1-0 
+12 Dover Drive, Parcel 37C-10-0 
+14 Dover Drive, Parcel 37C-11-0 
+16 Dover Drive, Parcel 37C-12-0 
+18 Georgia Drive, Parcel 37C-13-0 
+16 Georgia Drive, Parcel 37C-14-0 
+14 Georgia Drive, Parcel 37C-15-0 
+12 Georgia Drive, Parcel 37C-16-0 
+10 Georgia Drive, Parcel 37C-17-0 
+8 Georgia Drive, Parcel 37C-18-0 
+6 Georgia Drive, Parcel 37C-19-0 
+
+[PAGE 6]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-6 
+5 Dover Drive, Parcel 37C-2-0 
+4 Georgia Drive, Parcel 37C-20-0 
+2 Georgia Drive, Parcel 37C-21-0 
+1 Georgia Drive, Parcel 37C-22-0 
+3 Georgia Drive, Parcel 37C-23-0 
+5 Georgia Drive, Parcel 37C-24-0 
+7 Georgia Drive, Parcel 37C-25-0 
+9 Georgia Drive, Parcel 37C-26-0 
+3 Dover Drive, Parcel 37C-3-0 
+1 Dover Drive, Parcel 37C-4-0 
+2 Dover Drive, Parcel 37C-5-0 
+4 Dover Drive, Parcel 37C-6-0 
+6 Dover Drive, Parcel 37C-7-0 
+8 Dover Drive, Parcel 37C-8-0 
+10 Dover Drive, Parcel 37C-9-0 
+ 
+103 Westgate Drive, Parcel 37-56-0 
+105 Westgate Drive, Parcel 37-55-0 
+ 
+1 Littles Brook Court, Parcel 42-99-0 
+ 
+20 Second Ave, Parcel 45-23-0 
+32 Second Ave, Parcel 45-27-0 
+ 
+20 Fourth Ave, Parcel 39-11-0 
+0 Middlesex Turnpike, Parcel 39-11-1 
+ 
+111 Middlesex Turnpike, Parcel 45-32-0 
+121 Middlesex Turnpike, Parcel 45-33-0 
+129 Middlesex Turnpike, Parcel 45-34-0 
+131 Middlesex Turnpike, Parcel 45-34-1 
+0 Middlesex Turnpike, Parcel 45-35-0 
+141 Middlesex Turnpike, Parcel 45-36-0 
+ 
+The alteration of MCMOD district boundaries must be approved at Town Meeting by an amendment to this Zoning Bylaw 
+and the Zoning Map. 
+ 
+8.6.3 
+Applicability of Other Overlay Districts 
+ 
+1. Any MCMOD project shall comply with Sections 8.1 – 8.5 to the maximum extent practicable. Residential projects and 
+residential components of mixed-use projects in the MUMOD are exempt from any Special Permitting processes 
+required in Sections 8.1 – 8.5.  
+ 
+8.6.4 
+Definitions 
+ 
+For the following definitions refer to Article II: Definitions, “As of Right”, “Compliance Guidelines”, “MBTA”, “Residential 
+Dwelling Unit” and “Section 3A”.  
+ 
+8.6.5 
+Permitted Land Uses 
+ 
+The MCMOD District is established as an overlay district to all other districts.  
+ 
+1. Uses Permitted as of Right.  
+ 
+The following uses are permitted as of right within the MCMOD: 
+ 
+a. 
+Multi-Family Residential between 15 and 20 dwelling units per acre. 
+ 
+
+[PAGE 7]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-7 
+2. Permitted by Special Permit.  
+ 
+The following uses require a Special Permit from the Planning Board. 
+ 
+a. 
+Mixed-use development. As of right uses in a mixed-use development are as follows: 
+ 
+Ground Floor 
+Community space. 
+Educational uses. 
+Personal services. 
+Retail. 
+Experiential retail, including retail associated with dance or exercise studios, music studios, 
+photography studios, or other combination of education, services, and retail. 
+Restaurant, café, and other eating establishments without a drive-through. 
+Office, professional office, and co-working space 
+Artists’ studios, maker space, and small-scale food production no more than 5,000 SF, and retail 
+associated with each use. 
+ 
+Any Floor 
+       Residential (required component). 
+ 
+3. Accessory Uses. The following uses are considered accessory as of right to any of the permitted uses in subsection 1.  
+ 
+a. 
+Parking, including surface and structure parking such as an above ground or underground parking garage on the 
+same lot as the principal use. 
+ 
+8.6.6 
+Dimensional Standards  
+ 
+1. Table of Dimensional Standards. Notwithstanding anything to the contrary in this Zoning, the dimensional requirements 
+applicable in the MCMOD are as follows: 
+ 
+Maximum Lot Coverage  
+75% 
+Maximum Building Coverage 
+25% 
+Minimum Open Space 
+ 
+60% 
+Maximum Height 
+ 
+3 stories (35 feet) 
+Front Setback 
+ 
+ 
+25 feet 
+Side Setback 
+ 
+ 
+15 feet 
+Rear Setback 
+ 
+ 
+15 feet 
+ 
+2. Multi-Building Lots. In the MCMOD, lots may have more than one principal building. 
+ 
+3. Exceptions. The limitation on height of buildings shall not apply to chimneys, ventilators, towers, silos, spires, or other 
+ornamental features of buildings, which features are in no way used for living purposes and do not constitute more than 
+25% of the ground floor area of the building.  
+ 
+4. Exceptions: Renewable Energy Installations. The Planning Board may waive the height and setbacks in Section 8.6.6.1. 
+ 
+8.6.7 
+Off Street Parking 
+ 
+These parking requirements are applicable to development in the MCMOD. 
+ 
+1. Number of parking spaces. The following maximum numbers of off-street parking spaces shall be permitted by use, 
+either in surface parking or within garages or other structures: 
+ 
+Use 
+                          Required Spaces 
+ 
+Multi-family 
+            1.5 spaces per dwelling unit 
+ 
+
+[PAGE 8]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-8 
+Non-residential uses         See Section 7.2.0 “General Parking Requirements” 
+ 
+2. Number of bicycle parking spaces. The following minimum numbers of covered bicycle storage spaces shall be provided 
+by use: 
+ 
+Use 
+                          Required Spaces  
+ 
+Multi-family 
+            1 bicycle parking space per dwelling unit 
+ 
+Non-residential uses        1 bicycle parking space for every 10 parking spaces 
+ 
+3. Bicycle storage. For a multi-family development of 25 units or more, or a mixed-use development of 25,000 square feet 
+or more, covered parking bicycle parking spaces shall be integrated into the structure of the building(s). 
+ 
+4. Shared Parking within a Mixed-Use Development. Parkin
+. . .
+ew shall 
+be reviewed by the Planning Board for consistency with the purpose and intent of Section 8.6. 
+ 
+2. Submission Requirements. As part of any application for Site Plan Review for a project within the MCMOD, the 
+Applicant must submit the following documents to the Town:  
+ 
+a. Application and fee for Site Plan Review.  
+b. Site plans that show the position of the building on the site, points of vehicular access to and from the site and 
+vehicular circulation on the site, stormwater management, utilities, and landscape treatments, including any 
+screening of adjacent properties, and other information commonly required by Municipality for Site Plan 
+Review.  
+c. 
+Elevations of the building(s) showing the architectural design of the building.  
+d. All site plans shall be prepared by a certified architect, landscape architect, and/or a civil engineer registered 
+in the Commonwealth of Massachusetts. All landscape plans shall be prepared by a certified landscape 
+architect registered in the Commonwealth of Massachusetts. All building elevations shall be prepared by a 
+certified architect registered in the Commonwealth of Massachusetts. All plans shall be signed and stamped, 
+and drawings prepared at a scale of [one inch equals forty feet (1"=40') or larger], or at a scale as approved in 
+advance by the Permitting Authority.  
+e. 
+Narrative of compliance with the applicable design standards of this Section 8.6.9.  
+ 
+All submission materials must comply with the Burlington Planning Board Site Plan Rules and Regulations which 
+are available at the Planning Department office or on the town’s website. 
+ 
+3. Timeline. Site Plan Review should be commenced no later than 30 days of the submission of a complete application and 
+should be completed expeditiously. The Planning Board may, when appropriate, seek the input of other municipal 
+boards or officials. In general, site plan review should be completed no more than 6 months after the submission of the 
+application.  
+ 
+4. Site Plan Approval. Site Plan approval for uses listed in Section 8.6.5.1 Permitted Uses shall be granted upon 
+determination by the Site Plan Review Authority that the following conditions have been satisfied. The Planning Board 
+may impose reasonable conditions, at the expense of the applicant, to ensure that these conditions have been satisfied.   
+ 
+a. The Applicant has submitted the required fees and information as set forth in Burlington’s requirements for a 
+Building Permit and Site Plan Review; and   
+b. The project as described in the application meets the development standards set forth in Section 8.6.7. General 
+Development Standards.  
+ 
+5. Project Phasing. An Applicant may propose, in a Site Plan Review submission, that a project be developed in phases 
+subject to the approval of the Site Plan Review Authority, provided that the submission shows the full buildout of the 
+project and all associated impacts as of the completion of the final phase. 
+ 
+8.6.10     Severability 
+ 
+If any provision of this Section 8.6 is found to be invalid by a court of competent jurisdiction, the remainder of Section 8.6 shall not be 
+affected but shall remain in full force. The invalidity of any provision of this Section 8.6 shall not affect the validity of the remainder 
+of the Burlington’s Zoning. 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 11]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-11 
+7) Amend the Zoning Map to add the following areas shown on maps on file with the Town Clerk to the 
+MBTA Communities Multifamily Overlay District (MCMOD) 
+ 
+a. Beacon Village Apartments located at 26 Beacon Street said land is further identified as being 
+the parcel as shown generally on the Town of Burlington Assessor’s Map 37 Parcel 52-0. 
+  
+b. Beacon Woods Condominiums located at Georgia Drive and Dover Drive. Said land is further 
+identified as being the parcels as shown generally on the Town of Burlington Assessor’s Map 
+37C Parcels 1-0 through 26-0. 
+ 
+c. Westgate Apartments located at 103 and 105 Westgate Drive. Said land is further identified as 
+being the parcels as shown generally on the Town of Burlington Assessor’s Map 37C Parcels 56-
+0 and 55-0 
+ 
+d. Heritage at Stoneridge Apartments located at 1 Littles Brook Court. Said land is further 
+identified as being the parcel as shown generally on the Town of Burlington Assessor’s Map 42 
+Parcel 99-0. The portion of the property deeded as age restricted is not included in the MCMOD. 
+ 
+e. The Tremont and Huntington Apartments located at 20 Second Ave. and 32 Second Ave. Said 
+land is further identified as being the parcels as shown generally on the Town of Burlington 
+Assessor’s Map 45 Parcels 23-0 and 27-0. 
+ 
+f. Lifetime Living Apartments located at 20 Fourth Ave and an unimproved adjacent parcel known 
+as 0 Middlesex Turnpike. Said land is further identified as being the parcels as shown generally 
+on the Town of Burlington Assessor’s Map 39 Parcels 11-0 and 11-1. 
+ 
+g. The following properties located between Middlesex Turnpike and Great Meadow Road. These 
+properties consist of 111 Middlesex Turnpike, 121 Middlesex Turnpike, 131 Middlesex 
+Turnpike, 0 Middlesex Turnpike, and 141 Middlesex Turnpike. Said land is further identified as 
+being the parcels as shown generally on the Town of Burlington Assessor’s Map 45 Parcels 32-0, 
+33-0, 34-0, 34-1, 35-0, 36-0. 
+ 
+ 
+Or to act in any other manner in relation thereto.  
+ 
+Submitted by the Board of Selectmen at the request of the 
+Planning Board 
+ 
+ PASSED ( ) DEFEATED ( ) POSTPONED INDEFINITELY ( ) OTHER ( ) 
+
+
+### DOC cf1aa5771e | town=Burlington | community_type=bus | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.burlington.org/DocumentCenter/View/13682
+
+[PAGE 1]
+ARTICLE #  
+RE: MBTA Communities Overlay Zoning 
+Language 
+ 
+MOTION – That the Zoning Bylaw of the Town of Burlington and Zoning Map be amended as 
+follows, and further that non-substantive changes to the numbering of this bylaw be permitted to 
+comply with the numbering format of the Zoning Bylaw: 
+ 
+1) Add in Article II “Definitions” as follows (strikethrough to be removed, underlined and 
+bold is new): 
+ 
+As of Right 
+ 
+Development that may proceed under the Zoning in place at time of application 
+without the need for a special permit, variance, zoning amendment, waiver, or other 
+discretionary zoning approval. 
+ 
+Compliance Guidelines. 
+ 
+Compliance Guidelines for Multi-Family Zoning Districts Under Section 3A of the 
+Zoning Act as further revised or amended from time to time. Applicable to the 
+MBTA Communities Multi-family Overlay District (MCMOD) in Section 8.6.0. 
+ 
+MBTA 
+ 
+Massachusetts Bay Transportation Authority.   
+ 
+Residential Dwelling Unit 
+ 
+A single unit providing complete, independent living facilities for one or more 
+persons, including permanent provisions for living, sleeping, eating, cooking. and 
+sanitation. 
+ 
+Section 3A 
+ 
+Section 3A of the Zoning Act. Applicable to the MBTA Communities Multi-family 
+Overlay District (MCMOD) in Section 8.6.0. 
+ 
+2) Add in Article III, Section 1 “Districts” (strikethrough to be removed, underlined and 
+bold is new): 
+Overlay Districts 
+The following special districts are hereby established and are set forth in Article 8.0: 
+ 
+FP 
+ 
+100 Year Flood Plain Districts 
+WR  
+ 
+Water Resources Districts 
+W  
+ 
+Wetlands Districts 
+
+[PAGE 2]
+A  
+ 
+Aquifer Districts 
+WC 
+ 
+Wireless Communications Districts 
+CC 
+ 
+Civic Center District 
+CBD  
+Central Business District 
+MCMOD       MBTA Communities Multi-family Overlay District 
+ 
+ 
+3) Add in Article IV “Use Regulations” Section 4.1.1 “Symbols in Use Regulations” 
+(strikethrough to be removed, underlined and bold is new): 
+ 
+4.1.1 Symbols in Use Regulation Schedules 
+ 
+ 
+ 
+Yes  
+Permitted as of right 
+No  
+Prohibited 
+SP  
+Permitted only by a special permit, as provided by Article IX, 
+Sections 9.2.0 through 9.2.7. 
+YES1 – Permitted by right in a MCMOD, CC or CBD overlay district, even if 
+prohibited or allowed only by SP in the underlying zoning district. 
+SP1 – Permitted only by a special permit in a CC or CBD overlay district, even if 
+prohibited in the underlying zoning district. 
+
+[PAGE 3]
+ 
+4) Add in Article IV “Use Regulations” Section 4.2.1 “Residence Uses” (strikethrough to be removed, underlined and bold is new): 
+ 
+ 
+ 
+4.2.0 PRINCIPAL USE REGULATION SCHEDULE 
+ 
+ 
+USE DESIGNATION 
+DISTRICT 
+OVERLAY DISTRICTS 
+4.2.1 
+RESIDENCE USES 
+RO 
+RG 
+RC 
+BN 
+BL 
+BG 
+BT 
+IG 
+I 
+IR 
+OS 
+A 
+WR 
+CC 
+CBD 
+MCMOD 
+4.2.1.2 
+Garden Apartment dwelling units (see 11.3.0) 
+NO 
+SP 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+YES 
+YES 
+NO 
+NO  
+YES1 
+4.2.1.17 
+Multi-Family other than 4.2.1.2 
+NO 
+SP 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+NO 
+YES 
+YES 
+NO 
+NO  
+YES1 
+ 
+LEGEND 
+Aquifer (A) and Water Resource (WR) Districts: See Article VIII, Section 8.3.3 Interpretation and Application 
+MBTA Communities Multi-Family Overlay (MCMOD) District: See Article VIII, Section 8.6.3 
+ 
+Civic Center (CC) & Central Business District (CBD) Districts 
+ 
+YES = Allowed use in the CC and/or CBD only if the underlying zoning 
+permits. 
+YES1 and SP1= Allowed use by right or special permit in the CC, 
+MCMOD, and/or CBD districts superseding any underlying zoning. 
+SP = Allowed use in the CC and/or CBD by Special Permit only if the 
+underlying zoning permits. 
+NO = Is not allowed in the CC or CBD regardless of underlying zoning 
+provisions 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 4]
+5) Add a column entitled “MCMOD” in Article V “Dimensional Requirements” Section 5.2 “Density Regulation Schedule” as follows 
+(strikethrough to be removed, underlined and bold is new): 
+ 
+SECTION 5.2.0 DENSITY REGULATION SCHEDULE: No building or structure shall be constructed nor shall any existing building or structure be enlarged or altered except 
+in conformance with the Density Regulation Schedule, as to lot coverage, lot area, land area per dwelling unit, lot width, front, side and rear setbacks, and maximum height of 
+structures except as may otherwise be provided elsewhere herein. 4 
+  
+RO 
+RG 
+RC 
+BN 
+BL 
+BG 
+BT 
+IG 
+I 
+IR        MCMOD 
+ 
+Minimum Lot Area 9 
+20,000 sf 
+120,000 sf 
+100,000sf 
+5,000 sf 
+10,000 sf 
+10,000 sf 
+10,000 sf 
+40,000 sf 
+120,000 sf 
+18 Ac.  
+ 
+Minimum Lot Frontage 
+100 ft 
+100 ft 
+ 100 ft 
+50 ft 
+100 ft 
+100 ft 
+100 ft 
+150 ft 
+100 ft 
+400 ft 
+ 
+ 
+Minimum Front Yard 
+ 25 ft 
+ 50 ft 
+ 25 ft 
+10 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 25 ft 5 
+ 25 ft 5 
+100 ft 
+25 ft 
+ 
+Minimum Side Yard 
+ 15 ft 
+ 50 ft 
+ 25 ft 
+10 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+100 ft 
+15 ft 
+ 
+Minimum Rear Yard 
+ 15 ft 
+ 50 ft 
+25 ft 
+ 10 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+ 15 ft 5 
+100 ft 
+15 ft 
+ 
+Minimum Lot Width 
+20 ft 
+ 20 ft 
+20 ft 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ N/A 
+ 
+Minimum Yard Adjoining RO & RG, 
+None 
+ 50 ft 
+50 ft 
+ 20% 
+ 20% 
+ 20% 
+ 20% 
+ 20% 
+100 ft 
+ 20% 
+OS and Residentially Zoned Land in  
+ 
+ 
+depth of 
+depth of 
+depth of 
+depth of 
+depth of 
+ 
+depth of  
+Contiguous Municipalities10 
+ 
+ 
+ 
+lot 6 
+lot 6 
+lot 6 
+lot 6 
+lot 6 
+ 
+lot 6 
+ 
+Maximum Aggregate Building-to- 
+None 
+ 25% 
+25% 
+33 1/3% 
+33 1/3% 
+33 1/3% 
+33 1/3% 
+ 25% 
+ 25% 
+ 25%  
+25% 
+Ground Area Percentage 
+ 
+ 
+Maximum Building & Structure  
+Height11 
+ 30 ft 
+ 30 ft 
+ 30 ft 
+30 ft 
+ 30 ft 
+ 30 ft 
+ 30 ft 
+30 ft 8 
+ 30 ft 7  
+ 30 ft 8 35 ft 
+80 ft 8 
+90 ft 7,12 
+80 ft 8 
+ 
+Minimum Feet Between Buildings 
+None 
+ 50 ft 
+20 ft  
+None 
+None 
+None 
+None 
+None 
+ 50 ft 
+None 
+ 
+Maximum Floor Area Ratio (FAR) 
+None 
+None 
+None 
+None 
+None 
+None 
+None 
+.15 2,3 
+.15 2,3 
+None 
+ 
+NOTES FOR DENSITY REGULATION TABLE 
+ 
+13 
+Reference Section 8.6.0 for additional criteria applicable to the MCMOD District.  
+ 
+
+[PAGE 5]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-5 
+6) Add in Article VIII “Overlay Districts” a new Section entitled Section 8.6.0 “MBTA Communities 
+Multi-Family Overlay District”: 
+ 
+SECTION 8.6.0 MBTA COMMUNITIES MULTI-FAMILY OVERLAY DISTRICT 
+ 
+8.6.1 
+Purpose 
+ 
+The purpose of the MBTA Communities Multi-family Overlay District (MCMOD) is to allow multifamily housing as of right in 
+accordance with Section 3A of the Zoning Act (Massachusetts General Laws Chapter 40A). This zoning provides for as of right multi-
+family housing to accomplish the following purposes: 
+ 
+1. Encourage the production of a variety of housing sizes and typologies to provide equal access to new housing throughout 
+the community for people with a variety of needs and income levels; 
+ 
+2. Support vibrant neighborhoods by encouraging an appropriate mix and intensity of uses to support an active public space 
+that provides equal access to housing, jobs, gathering spaces, recreational opportunities, goods, and services. 
+ 
+3. Preserve open space in a community by locating new housing within or adjacent to existing developed areas and 
+infrastructure. 
+ 
+4. Support public investment in public transit and pedestrian- and bike-friendly infrastructure. 
+ 
+5. Increase the municipal tax base through private investment in new residential developments in established 
+neighborhoods and commercial areas.  
+ 
+8.6.2 
+Establishment and Applicability 
+ 
+This MCMOD is an overlay district having a land area of approximately 61.4 acres in size that is superimposed over the underlying 
+zoning district(s) and is shown on the Zoning Map. 
+ 
+1. Applicability of MCMOD.  
+ 
+An applicant may develop multi-family housing located within a MCMOD in accordance with the provisions of this 
+Section 8.6.0. 
+ 
+2. Overlay District.  
+ 
+The MCMOD is an overlay district superimposed on the underlying zoning district(s) and overlay district(s). The 
+regulations for use, dimension, and all other provisions of the Zoning Bylaw governing the respective underlying zoning 
+district shall remain in full force, except for uses allowed as of right in the MCMOD. Uses that are not identified in 
+Section 8.6.0 are governed by the requirements of the underlying zoning district(s).  
+ 
+The MCMOD shall consist of the following parcels of land: 
+ 
+26 Beacon Street, Parcel 37-52-0 
+ 
+7 Dover Drive, Parcel 37C-1-0 
+12 Dover Drive, Parcel 37C-10-0 
+14 Dover Drive, Parcel 37C-11-0 
+16 Dover Drive, Parcel 37C-12-0 
+18 Georgia Drive, Parcel 37C-13-0 
+16 Georgia Drive, Parcel 37C-14-0 
+14 Georgia Drive, Parcel 37C-15-0 
+12 Georgia Drive, Parcel 37C-16-0 
+10 Georgia Drive, Parcel 37C-17-0 
+8 Georgia Drive, Parcel 37C-18-0 
+6 Georgia Drive, Parcel 37C-19-0 
+
+[PAGE 6]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-6 
+5 Dover Drive, Parcel 37C-2-0 
+4 Georgia Drive, Parcel 37C-20-0 
+2 Georgia Drive, Parcel 37C-21-0 
+1 Georgia Drive, Parcel 37C-22-0 
+3 Georgia Drive, Parcel 37C-23-0 
+5 Georgia Drive, Parcel 37C-24-0 
+7 Georgia Drive, Parcel 37C-25-0 
+9 Georgia Drive, Parcel 37C-26-0 
+3 Dover Drive, Parcel 37C-3-0 
+1 Dover Drive, Parcel 37C-4-0 
+2 Dover Drive, Parcel 37C-5-0 
+4 Dover Drive, Parcel 37C-6-0 
+6 Dover Drive, Parcel 37C-7-0 
+8 Dover Drive, Parcel 37C-8-0 
+10 Dover Drive, Parcel 37C-9-0 
+ 
+103 Westgate Drive, Parcel 37-56-0 
+105 Westgate Drive, Parcel 37-55-0 
+ 
+1 Littles Brook Court, Parcel 42-99-0 
+ 
+20 Second Ave, Parcel 45-23-0 
+32 Second Ave, Parcel 45-27-0 
+ 
+20 Fourth Ave, Parcel 39-11-0 
+0 Middlesex Turnpike, Parcel 39-11-1 
+ 
+111 Middlesex Turnpike, Parcel 45-32-0 
+121 Middlesex Turnpike, Parcel 45-33-0 
+129 Middlesex Turnpike, Parcel 45-34-0 
+131 Middlesex Turnpike, Parcel 45-34-1 
+0 Middlesex Turnpike, Parcel 45-35-0 
+141 Middlesex Turnpike, Parcel 45-36-0 
+ 
+The alteration of MCMOD district boundaries must be approved at Town Meeting by an amendment to this Zoning Bylaw 
+and the Zoning Map. 
+ 
+8.6.3 
+Applicability of Other Overlay Districts 
+ 
+1. Any MCMOD project shall comply with Sections 8.1 – 8.5 to the maximum extent practicable. Residential projects and 
+residential components of mixed-use projects in the MUMOD are exempt from any Special Permitting processes 
+required in Sections 8.1 – 8.5.  
+ 
+8.6.4 
+Definitions 
+ 
+For the following definitions refer to Article II: Definitions, “As of Right”, “Compliance Guidelines”, “MBTA”, “Residential 
+Dwelling Unit” and “Section 3A”.  
+ 
+8.6.5 
+Permitted Land Uses 
+ 
+The MCMOD District is established as an overlay district to all other districts.  
+ 
+1. Uses Permitted as of Right.  
+ 
+The following uses are permitted as of right within the MCMOD: 
+ 
+a. 
+Multi-Family Residential between 15 and 20 dwelling units per acre. 
+ 
+
+[PAGE 7]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-7 
+2. Permitted by Special Permit.  
+ 
+The following uses require a Special Permit from the Planning Board. 
+ 
+a. 
+Mixed-use development. As of right uses in a mixed-use development are as follows: 
+ 
+Ground Floor 
+Community space. 
+Educational uses. 
+Personal services. 
+Retail. 
+Experiential retail, including retail associated with dance or exercise studios, music studios, 
+photography studios, or other combination of education, services, and retail. 
+Restaurant, café, and other eating establishments without a drive-through. 
+Office, professional office, and co-working space 
+Artists’ studios, maker space, and small-scale food production no more than 5,000 SF, and retail 
+associated with each use. 
+ 
+Any Floor 
+       Residential (required component). 
+ 
+3. Accessory Uses. The following uses are considered accessory as of right to any of the permitted uses in subsection 1.  
+ 
+a. 
+Parking, including surface and structure parking such as an above ground or underground parking garage on the 
+same lot as the principal use. 
+ 
+8.6.6 
+Dimensional Standards  
+ 
+1. Table of Dimensional Standards. Notwithstanding anything to the contrary in this Zoning, the dimensional requirements 
+applicable in the MCMOD are as follows: 
+ 
+Maximum Lot Coverage  
+75% 
+Maximum Building Coverage 
+25% 
+Minimum Open Space 
+ 
+60% 
+Maximum Height 
+ 
+3 stories (35 feet) 
+Front Setback 
+ 
+ 
+25 feet 
+Side Setback 
+ 
+ 
+15 feet 
+Rear Setback 
+ 
+ 
+15 feet 
+ 
+2. Multi-Building Lots. In the MCMOD, lots may have more than one principal building. 
+ 
+3. Exceptions. The limitation on height of buildings shall not apply to chimneys, ventilators, towers, silos, spires, or other 
+ornamental features of buildings, which features are in no way used for living purposes and do not constitute more than 
+25% of the ground floor area of the building.  
+ 
+4. Exceptions: Renewable Energy Installations. The Planning Board may waive the height and setbacks in Section 8.6.6.1. 
+ 
+8.6.7 
+Off Street Parking 
+ 
+These parking requirements are applicable to development in the MCMOD. 
+ 
+1. Number of parking spaces. The following maximum numbers of off-street parking spaces shall be permitted by use, 
+either in surface parking or within garages or other structures: 
+ 
+Use 
+                          Required Spaces 
+ 
+Multi-family 
+            1.5 spaces per dwelling unit 
+ 
+
+[PAGE 8]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-8 
+Non-residential uses         See Section 7.2.0 “General Parking Requirements” 
+ 
+2. Number of bicycle parking spaces. The following minimum numbers of covered bicycle storage spaces shall be provided 
+by use: 
+ 
+Use 
+                          Required Spaces  
+ 
+Multi-family 
+            1 bicycle parking space per dwelling unit 
+ 
+Non-residential uses        1 bicycle parking space for every 10 parking spaces 
+ 
+3. Bicycle storage. For a multi-family development of 25 units or more, or a mixed-use development of 25,000 square feet 
+or more, covered parking bicycle parking spaces shall be integrated into the structure of the building(s). 
+ 
+4. Shared Parking within a Mixed-Use Development. Parkin
+. . .
+ew shall 
+be reviewed by the Planning Board for consistency with the purpose and intent of Section 8.6. 
+ 
+2. Submission Requirements. As part of any application for Site Plan Review for a project within the MCMOD, the 
+Applicant must submit the following documents to the Town:  
+ 
+a. Application and fee for Site Plan Review.  
+b. Site plans that show the position of the building on the site, points of vehicular access to and from the site and 
+vehicular circulation on the site, stormwater management, utilities, and landscape treatments, including any 
+screening of adjacent properties, and other information commonly required by Municipality for Site Plan 
+Review.  
+c. 
+Elevations of the building(s) showing the architectural design of the building.  
+d. All site plans shall be prepared by a certified architect, landscape architect, and/or a civil engineer registered 
+in the Commonwealth of Massachusetts. All landscape plans shall be prepared by a certified landscape 
+architect registered in the Commonwealth of Massachusetts. All building elevations shall be prepared by a 
+certified architect registered in the Commonwealth of Massachusetts. All plans shall be signed and stamped, 
+and drawings prepared at a scale of [one inch equals forty feet (1"=40') or larger], or at a scale as approved in 
+advance by the Permitting Authority.  
+e. 
+Narrative of compliance with the applicable design standards of this Section 8.6.9.  
+ 
+All submission materials must comply with the Burlington Planning Board Site Plan Rules and Regulations which 
+are available at the Planning Department office or on the town’s website. 
+ 
+3. Timeline. Site Plan Review should be commenced no later than 30 days of the submission of a complete application and 
+should be completed expeditiously. The Planning Board may, when appropriate, seek the input of other municipal 
+boards or officials. In general, site plan review should be completed no more than 6 months after the submission of the 
+application.  
+ 
+4. Site Plan Approval. Site Plan approval for uses listed in Section 8.6.5.1 Permitted Uses shall be granted upon 
+determination by the Site Plan Review Authority that the following conditions have been satisfied. The Planning Board 
+may impose reasonable conditions, at the expense of the applicant, to ensure that these conditions have been satisfied.   
+ 
+a. The Applicant has submitted the required fees and information as set forth in Burlington’s requirements for a 
+Building Permit and Site Plan Review; and   
+b. The project as described in the application meets the development standards set forth in Section 8.6.7. General 
+Development Standards.  
+ 
+5. Project Phasing. An Applicant may propose, in a Site Plan Review submission, that a project be developed in phases 
+subject to the approval of the Site Plan Review Authority, provided that the submission shows the full buildout of the 
+project and all associated impacts as of the completion of the final phase. 
+ 
+8.6.10     Severability 
+ 
+If any provision of this Section 8.6 is found to be invalid by a court of competent jurisdiction, the remainder of Section 8.6 shall not be 
+affected but shall remain in full force. The invalidity of any provision of this Section 8.6 shall not affect the validity of the remainder 
+of the Burlington’s Zoning. 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 11]
+Article VIII 
+Town of Burlington Zoning Bylaw  
+Page 8-11 
+7) Amend the Zoning Map to add the following areas shown on maps on file with the Town Clerk to the 
+MBTA Communities Multifamily Overlay District (MCMOD) 
+ 
+a. Beacon Village Apartments located at 26 Beacon Street said land is further identified as being 
+the parcel as shown generally on the Town of Burlington Assessor’s Map 37 Parcel 52-0. 
+  
+b. Beacon Woods Condominiums located at Georgia Drive and Dover Drive. Said land is further 
+identified as being the parcels as shown generally on the Town of Burlington Assessor’s Map 
+37C Parcels 1-0 through 26-0. 
+ 
+c. Westgate Apartments located at 103 and 105 Westgate Drive. Said land is further identified as 
+being the parcels as shown generally on the Town of Burlington Assessor’s Map 37C Parcels 56-
+0 and 55-0 
+ 
+d. Heritage at Stoneridge Apartments located at 1 Littles Brook Court. Said land is further 
+identified as being the parcel as shown generally on the Town of Burlington Assessor’s Map 42 
+Parcel 99-0. The portion of the property deeded as age restricted is not included in the MCMOD. 
+ 
+e. The Tremont and Huntington Apartments located at 20 Second Ave. and 32 Second Ave. Said 
+land is further identified as being the parcels as shown generally on the Town of Burlington 
+Assessor’s Map 45 Parcels 23-0 and 27-0. 
+ 
+f. Lifetime Living Apartments located at 20 Fourth Ave and an unimproved adjacent parcel known 
+as 0 Middlesex Turnpike. Said land is further identified as being the parcels as shown generally 
+on the Town of Burlington Assessor’s Map 39 Parcels 11-0 and 11-1. 
+ 
+g. The following properties located between Middlesex Turnpike and Great Meadow Road. These 
+properties consist of 111 Middlesex Turnpike, 121 Middlesex Turnpike, 131 Middlesex 
+Turnpike, 0 Middlesex Turnpike, and 141 Middlesex Turnpike. Said land is further identified as 
+being the parcels as shown generally on the Town of Burlington Assessor’s Map 45 Parcels 32-0, 
+33-0, 34-0, 34-1, 35-0, 36-0. 
+ 
+ 
+Or to act in any other manner in relation thereto.  
+ 
+Submitted by the Board of Selectmen at the request of the 
+Planning Board 
+ 
+ PASSED ( ) DEFEATED ( ) POSTPONED INDEFINITELY ( ) OTHER ( ) 
+
+
+### DOC 7c37a9f14c | town=Cambridge | community_type=subway or light rail | governing_body=City Council | screened_board= | screened_doctype= | url=https://www.cambridgema.gov/-/media/Files/CDD/ZoningDevel/OtherProjects/mbtacommunities/mbtacomm_cambridge_ActionPlan_20230131.pdf
+
+[PAGE 1]
+Exported January 31, 2023  2:50 PM
+Action Plan for MBTA Communities
+Description Area
+Please read the Section 3A Guidelines before attempting to complete this
+form.Please note: &nbsp;Action Plan Forms must be submitted by a
+municipal official with authority to act on behalf of the municipality on
+matters of zoning, such as the municipal CEO or planning director.
+Section 1: Identification
+Description Area
+The Section 3A Guidelines establish zoning metrics that apply uniquely to
+each MBTA community based on its local transit stations, existing housing
+stock, population, &nbsp;and developable land. &nbsp;This section of the
+Action Plan helps to identify the transit stations that determined each
+community's category. &nbsp;Appendix 1 of the Section 3A Guidelines lists
+each community's category and minimum multi-family unit capacity
+requirement.&nbsp;
+1.1  MBTA Community Name
+Cambridge
+1.2. Community Category
+Rapid transit community
+1.3. Multifamily Unit Capacity
+Requirement
+13477
+1.4. Does this municipality have any
+MBTA rapid transit stations within its
+boundaries?
+Yes
+1.4a. Please list MBTA rapid transit
+stations that are located within this
+municipality's boundaries
+Lechmere, Kendall/MIT, Central, Harvard, Porter, Alewife
+1.5. Does this municipality have any
+MBTA commuter rail stations within its
+boundaries?
+Yes
+Description Area
+Although there is an MBTA commuter rail station within its municipal
+boundaries, this municipality's community category is Rapid Transit. This is
+because a community's category is determined by the transit station with
+the highest level of transit service. If there are 100 or more acres of rapid
+transit stations' developable station area within municipal boundaries, then
+the community category is Rapid Transit regardless of whether the
+community is also served by the commuter rail. Section 1 of the Guidelines
+provides definitions of "transit station area", "developable station area" and
+"developable land" to explain how this determination was made.&nbsp;
+
+[PAGE 2]
+1.5a. Please list MBTA commuter rail
+stations that are located within the
+municipal boundaries
+Porter
+1.6. Does this municipality have any
+other MBTA transit stations that are
+located outside of its municipal
+boundaries that may have "developable
+station area" within them?
+Yes
+Description Area
+Stations that are located outside of municipal boundaries but that have
+"developable station area" within the boundaries might affect district
+location criteria, as further described in Section 8 of the Guidelines. Please
+refer to Section 1 of the Guidelines for definitions of "transit station area",
+"developable station area", and "developable land".
+1.6a. Please list the MBTA transit
+stations that are located outside of the
+municipal boundaries but might have
+developable station area within them.
+Davis, Community College, Union Square, B.U. West, B.U. Central
+1.7. Please provide the name of the
+person filling out this form
+Iram Farooq
+1.7a. Title
+Assistant City Manager for Community Development
+1.7b. Email Address
+ifarooq@cambridgema.gov
+1.7c. Phone Number
+(617) 349-4606
+1.8 Please provide the name of the
+municipal CEO
+Yi-An Huang
+1.8b Mailing address of municipal CEO
+795 Massachusetts Avenue
+1st Floor
+Cambridge, MA 02139
+1.8c Email address of municipal CEO
+citymanager@cambridgema.gov
+1.9. Please briefly describe other
+members of the core team developing
+the multi-family zoning district.
+City of Cambridge staff from the Community Development Department's
+Zoning Division, Housing Division, and Community Planning Division, and
+the Law Department. This project is coordinated by Jeff Roberts, Director of
+Zoning and Development (jroberts@cambridgema.gov), and Mason Wells,
+Associate Zoning Planner (mwells@cambridgema.gov). Additional support
+for mapping and data analysis is being provided by Cliff Cook, Senior
+Planning Information Manager, Brendan Monroe, GIS Planner, and Scott
+Walker, Planning Data Analyst.
+Section 2: Housing Overview
+
+[PAGE 3]
+2.1. Does this municipality have any
+established housing related goals or
+strategies from municipal planning
+documents, such as a Housing
+Production Plan, Master Plan, or
+Economic Development Plan?
+Yes
+
+[PAGE 4]
+2.1a. Please briefly describe any
+relevant strategies, goals, or objectives,
+and the work that has been done to
+date.
+In 2019, the city published a comprehensive plan entitled "Envision
+Cambridge." The extensive planning process affirmed our community's
+commitment to safe, affordable, and life-enriching housing. The "Housing
+Plan" section is found on pages 137 to 155 of "Envision Cambridge." Below
+are several relevant strategies and actions from this plan:
+Strategy 1 - Increase overall housing production.
+o	Action - Change zoning to enable more housing, including affordable
+housing, to be built along major corridors, squares, and in other areas that
+have the capacity to accommodate growth and are well served by transit
+o	Action - Require the creation of significant new housing in areas that are
+being rezoned.
+Strategy 2 - Encourage affordable housing production for low-, moderate-,
+and middle-income households through regulatory and zoning incentives.
+o	Action - Offer density bonuses and relief from other dimensional
+regulations for fully affordable housing developments through a citywide
+affordable housing overlay. 
+Strategy 3 - Expand resources for affordable housing production and
+preservation 
+Strategy 4 - Maintain a range of housing options to enable households to
+transition to units best suited to them as their needs change.
+Strategy 5 - Expand tools and resources to prevent displacement and
+housing insecurity, and address homelessness.
+Strategy 6 - Develop a broader coalition of public and private entities to
+support housing production, especially affordable housing, in Cambridge
+and the region.
+Cambridge also has many longstanding policies related to housing
+production and affordability. These initiatives are reviewed and updated on
+an ongoing basis:
+•	Incentive Zoning (linkage) Ordinance adopted in 1989 to generate funds
+for affordable housing. More than $55 million has been raised to-date. 
+•	Affordable Housing Trust created in 1989. The Trust has supported more
+than 4,000 affordable units and more than $317 million in City funds have
+been provided to-date.
+•	Inclusionary Housing Ordinance adopted in 1998 to create affordable
+units in new market-rate housing. 1,500 affordable units have been created
+to-date under this ordinance, along with market-rate units. The ordinance
+was last amended in 2017 following a study that assessed financial
+feasibility.
+•	Community Preservation Act adopted in 2001. 80% of CPA funds have
+been used to fund affordable housing.
+•	Short-Term Rentals are regulated to minimize housing units lost as
+permanent housing.
+•	In redeveloping areas of the City, such as Kendall Square and North
+Point, new housing is required as a component of mixed-use development.
+•	The City offers several programs supporting homeownership, including
+education and funding assistance for first-time homebuyers, and funding for
+
+[PAGE 5]
+homeowners to complete needed home repairs and improvements. 
+•	Housing is recognized as a critical pillar of public health in the City's
+Community Health Improvement Plan (CHIP).
+•	Cambridge is part of the Metro Mayors Coalition, a group of regional
+municipal city leaders, who set a goal to produce 185,000 new housing
+units across fifteen towns and cities in the region by 2030.
+
+[PAGE 6]
+2.2. Is this municipality currently
+working on any other planning for
+housing?
+Yes
+2.2a. Please briefly describe the
+housing work underway.
+The following zoning initiatives are completed or underway based on the
+Housing Plan section of Envision Cambridge: •	2020 adoption of Affordable
+Housing Overlay Zoning - relaxed zoning requirements and established
+as-of-right approvals for affordable housing. The City has permitted ~500
+new units of affordable housing through this zoning. City Council discussing
+revisions to increase allowable housing in some areas. •	2022 Zoning
+Amendment - eliminated minimum parking requirements for new housing. 
+•	2022 Cambridge Street Planning Study - recommends increased height
+and density for housing along a major mixed-use corridor. •	Alewife Zoning
+Working Group - in progress, discussions have included increasing allowed
+residential heights and densities and requiring housing as part of
+mixed-use development in an area expected to have major redevelopment.
+•	Allowing multifamily housing citywide - City Council discussing zoning
+changes to allow multifamily in districts that allow only single-family,
+two-family, or townhouse development, which cover about ¼ of the city and
+tend to be farther from transit.  •	North Massachusetts Avenue Planning
+Study - City is planning to start a study process that will consider zoning
+changes along this major mixed-use corridor. •	The City will continue its
+periodic studies of Incentive Zoning and Inclusionary Housing policies.
+Section 3: Preliminary Zoning Strategies
+3.1.	To the best of your knowledge,
+which of the following zoning strategies
+is this community most likely to use for
+compliance?  (Select all that apply)
+a. An existing zoning district or districts that might already comply with the
+Section 3A Guidelines
+
+[PAGE 7]
+3.1a. Please identify and briefly describe
+the possibly-compliant district(s),
+including any characteristics of existing
+development or transit options that
+make it suitable for use as this
+community's 3A-compliant district.
+Optional: Attach any supporting
+documents.
+Cambridge is a dense urban community with approximately 6.4 square
+miles of land area, 117,000 residents, and 6 MBTA rapid transit stations.
+Most of Cambridge is zoned to allow multifamily housing as-of-right. The
+districts that allow the highest residential densities tend to be directly next
+to MBTA rapid transit stations. The districts that do not allow multifamily
+housing are Open Space districts and Residence A and B districts, which
+cover about one quarter of the total land area of the city and tend to be
+further from rapid transit. 
+The attached map identifies zoning districts that are (90% by area) within a
+half-mile of at least one rapid transit station and allow multi-family housing
+as-of-right at a density that could potentially meet the Section 3A criteria.
+Because Cambridge's zoning districts are small and fine-grained, compliant
+zoning districts that are geographically contiguous will need to be combined
+to meet all of the DHCD guidelines, particularly the guidelines for minimum
+unit capacity. Our initial review suggests that a subset of these existing
+districts can constitute a "compliant district" meeting all of the DHCD
+guidelines. 
+File
+https://www.formstack.com/admin/download/file/14094589834
+3.2. What non-housing characteristics
+are important for this community to
+consider in its 3A zoning district?
+Our ongoing zoning and planning work is guided by the "Envision
+Cambridge" plan. Important non-housing characteristics identified in this
+plan include: livability, diversity and equity, economic opportunity,
+sustainability and resilience, community health and wellbeing, and learning.
+Envision Cambridge describes a set of policies and actions that are part of
+an integrated planning strategy for the entire city.
+Section 4: Action Plan Timeline
+Description Area
+This section creates a framework to input preliminary plans for a zoning
+adoption process. On the table below, please use Column 1 (from the left)
+to describe a task, Column 2 to input a start date, and Column 3 to input a
+finish date. Every community must provide a timeline for the below-listed
+tasks. &nbsp;Additional space is provided for any other tasks that a
+community wishes to list. DHCD will review proposed timelines for
+feasibility before approving an Action Plan.&nbsp;Public
+outreachDeveloping zoning&nbsp;Applying DHCD's compliance model to
+test for density and unit capacityHolding planning board
+hearings&nbsp;Holding legislative sessions and adopt compliant
+zoning&nbsp;Submit District Compliance application to DHCD
+Description Area
+Task
+Description Area
+Start
+Description Area
+Finish
+
+[PAGE 8]
+Short Answer
+Apply DHCD's compliance model to test current zoning for density and unit
+capacity.
+Dec 01, 2022
+Oct 31, 2023
+Short Answer
+Submit District Compliance application to DHCD
+Nov 01, 2023
+Dec 31, 2023
+Short Answer
+N/A - Cambridge expects to submit existing zoning for compliance.
+Therefore, no formal adoption process is anticipated.
+Jan 31, 2023
+Jan 31, 2023
+Short Answer
+N/A
+Jan 31, 2023
+Jan 31, 2023
+Short Answer
+N/A
+Jan 31, 2023
+Jan 31, 2023
+Short Answer
+N/A
+Jan 31, 2023
+Jan 31, 2023
+
+[PAGE 9]
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+Fresh Pond
+Charles River
+NP
+IB-2
+IB-2
+BB
+BA
+BA
+BA
+BA
+BA
+O-2A
+O-3A
+O-2
+O-3A
+IA-1
+IA-1
+IA-1
+IA-1
+IA-1
+IA-1
+O-1
+O-1
+C-3B
+C-3A
+C-2B
+C-1A
+C-3A
+C-3
+C-2B
+C-1A
+C-2A
+C-1
+OS
+OS
+!
+C-3B
+!
+C-3B
+C-2B
+BA
+BA
+O-3A
+BA
+BA
+BA
+BA
+BA
+C-3B
+C-3
+C-3B
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+MXD
+SD-8
+SD-3
+CRDD
+SD-4
+SD-6
+SD-5
+SD-4A
+SD-7
+SD-8A
+SD-9
+SD-1
+ASD
+SD-2
+SD-10(H)
+SD-15
+SD-11
+SD-2
+SD-13
+SD-14
+SD-12
+SD-10(F)
+SD-11
+SD-4A
+IB
+IA
+IA
+IB-1
+IA-2
+IA-1
+IA-1
+IA-1
+IA-1
+BB
+BC
+BB
+BB
+BB-1
+BB
+BB
+BB-2
+BA
+BA
+BA-2
+BA-1
+BA
+BA-1
+BA
+BA-3
+BA-2
+BA
+BA
+BA-2
+BA
+BA
+BA
+BA-1
+BA-4
+BA
+BA
+BA-1
+BA-1
+BA-3
+BA-1
+BA-1
+BA-2
+BA-1
+BA-1
+BA
+O-1
+O-1
+O-1
+O-1
+O-1
+O-1
+C-3
+C-3
+C-3
+C-3B
+C-2
+C-2
+C-2
+C-2
+C-2
+C-3
+C-2A
+C-2
+C-2B
+C-2
+C-2
+C-3
+C-3
+C-2B
+C-2B
+C-2
+C-1A
+C-2B
+C-2
+C-2A
+C-1A
+C-2B
+C-1A
+C-3
+C-2
+C-2
+C-3
+C-2
+C-3
+C-2
+C-2B
+C-2
+C-2
+C-2B
+C-2
+C-2B
+C-2A
+C-2B
+C-3
+C-2
+C-2
+C-2B
+C-2A
+C-2A
+C-3
+C-1
+B
+B
+C
+B
+B
+C-1
+B
+B
+B
+C-1
+C-1
+B
+B
+B
+C-1
+B
+B
+B
+C-1
+B
+C-1
+C-1
+C-1
+C-1
+C-1
+B
+C-1
+B
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+B
+C-1
+C
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+O-3
+O-3
+O-2
+O-3
+O-3
+O-2
+O-2
+A-1
+A-2
+A-2
+A-2
+A-2
+A-2
+A-2
+A-2
+A-1
+A-1
+A-2
+A-2
+!
+C-3B
+C-3
+OS
+OS
+OS
+OS
+OS
+OS
+C-1
+BA
+C-3
+!
+MXD
+B
+B
+B
+B
+B
+B
+B
+C-1
+C-1
+C-1
+C-1
+C-1
+C
+C
+C-1
+Map prepared by Brendan Monroe on January 30, 2023.  CDD GIS   C:\Projects\Zoning\MBTACommunities\ZoneSelectionFigure11x17.mxd
+¯
+0
+0.25
+0.5
+Miles
+Qualifying Zones
+in Proximity to T Stations
+Cambridge, Massachusetts
+Highlighted Zoning Districts
+Half-mile buffer
+of T stations
+Zones at least 90%
+within the T buffers
+are in color
+Residence C-1
+Residence C-1A
+Residence C-2
+Residence C-2A
+Residence C-2B
+Residence C-3
+Residence C-3A
+Residence C-3B
+Office-1
+Business B
+Office-2
+Office-2A
+Office-3
+Office-3A
+Business A
+Business A-1
+Business A-2
+Business A-3
+Business-1
+Business 2
+Business C
+Industry A-1
+Industry A-2
+Industry A
+Industry B-1
+Industry B-2
+Industry B
+Special District-7
+Special District-10(F)
+Special District-10(H)
+Special District-11
+Special District-14
+Special District-15
+Mixed Use Development
+Ames Street District
+North Point District
+Special District-1
+Cambridgeport Revitalization
+   Development District
+Special District-2
+Special District-3
+Special District-5
+C-1
+C-1A
+C-2
+C-2A
+C-2B
+C-3
+C-3A
+C-3B
+O-1
+O-2
+O-2A
+O-3
+O-3A
+BA
+BA-1
+BA-2
+BA-3
+BB
+BB-1
+BB-2
+BC
+IA-1
+IA-2
+IA
+IB-1
+IB-2
+IB
+CRDD
+SD-11
+SD-14
+SD-15
+MXD
+ASD
+NP
+SD-1
+SD-2
+SD-3
+SD-5
+SD-10(F)
+SD-10(H)
+SD-7
+

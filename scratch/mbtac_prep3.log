@@ -1,0 +1,17 @@
+selected 312 docs: 105 towns via CONFIRMED, 8 via PROBABLE-fallback
+  fetched 25/312
+  fetched 50/312
+  fetched 75/312
+  fetched 100/312
+  fetched 125/312
+  fetched 150/312
+  fetched 175/312
+  fetched 200/312
+  fetched 225/312
+  fetched 250/312
+  fetched 275/312
+  fetched 300/312
+309/312 docs have usable snippet text
+wrote 26 batch files (<= 12 docs each) to mbtac_batches/
+  total snippet chars: 3,873,145  (~968,286 tokens of doc text, pre-overhead)
+wrote mbtac_extract_index.csv

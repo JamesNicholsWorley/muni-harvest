@@ -1,0 +1,386 @@
+municipality,year,verdict,signals,url,kind
+Abington,2022,RESULTS_FOUND,"heads=3,blanks=7,offices=3,tallies=48,yr=False,pp=0",https://www.abingtonma.gov/article/2936041,election_page
+Abington,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=5,tallies=117,yr=True,pp=12",https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4608/toa/4021230/2023_Town_Meeting_Warrant_with_finance_committee_votes_and_town_manager_comments.pdf,townmtg_election
+Abington,2024,RESULTS_FOUND,"heads=5,blanks=0,offices=9,tallies=402,yr=True,pp=40",https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4608/toa/4113595/Abington_Annual_Town_Meeting_Warrant_for_April_1__2024_w_Exhibits.pdf,townmtg_election
+Abington,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=7,tallies=321,yr=True,pp=21",https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/4608/toa/5468119/Warrant_for_Annual_Town_Meeting_April_7_2025_TO_BE_POSTED.pdf,townmtg_election
+Acushnet,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=5,pp=1",https://acushnet.ma.us/ImageRepository/Document?documentID=363,annual_report
+Acushnet,2024,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=128,yr=True,pp=23",https://www.acushnet.ma.us/DocumentCenter/View/1595/Special-Fall-Town-Meeting-Warrant---September-30-2024,townmtg_election
+Acushnet,2025,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=12,pp=17",https://www.acushnet.ma.us/DocumentCenter/View/1587/Annual-Town-Meeting---Zoning-Articles---June-16-2025,townmtg_election
+Adams,2024,RESULTS_FOUND,"heads=5,blanks=0,offices=4,tallies=46,pp=0",https://iberkshires.com/election,election_page
+Agawam,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=22",https://agawam.ma.us/DocumentCenter/View/3032/Permit-Year-Six-Annual-Report---Final,annual_report
+Alford,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://www.townofalford.org/town-clerk,election_page
+Alford,2023,NO_RESULTS,"heads=0,blanks=0,offices=3,tallies=47,pp=6",https://www.townofalford.org/sites/g/files/vyhlif6926/f/events/3-14-2023sepcial_town_meeting_letter_size.pdf,townmtg_election
+Alford,2024,NO_RESULTS,"heads=0,blanks=0,offices=3,tallies=49,pp=6",https://www.townofalford.org/sites/g/files/vyhlif6926/f/news/special_town_meeting_11-19-2024_final-letter.pdf,townmtg_election
+Aquinnah,2021,RESULTS_FOUND,"heads=5,blanks=0,offices=11,tallies=1174,yr=True,pp=108",https://www.aquinnah-ma.gov/sites/g/files/vyhlif261/f/news/2021_aquinnah_annual_town_report.pdf,annual_report
+Aquinnah,2022,RESULTS_FOUND,"heads=2,blanks=0,offices=11,tallies=990,yr=True,pp=88",https://www.aquinnah-ma.gov/sites/g/files/vyhlif261/f/news/aquinnah_town_report_2022.pdf,annual_report
+Aquinnah,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=11,tallies=1009,yr=True,pp=81",https://www.aquinnah-ma.gov/sites/g/files/vyhlif261/f/events/2023_aquinnah_town_report.indd_.pdf,annual_report
+Ashby,2021,RESULTS_FOUND,"heads=49,blanks=16,offices=10,tallies=1495,yr=True,pp=170",https://drive.google.com/uc?export=download&id=1DUlVVGaRnzPpp3_KX17Bn6P_gvfs2zq0,annual_report
+Ashby,2022,RESULTS_FOUND,"heads=37,blanks=58,offices=10,tallies=1303,yr=True,pp=148",https://drive.google.com/uc?export=download&id=17Fdp0LJbSLHJ7LOtSzAOUV0y2Rd-rHcC,annual_report
+Ashby,2023,RESULTS_FOUND,"heads=75,blanks=52,offices=11,tallies=2147,yr=True,pp=160",https://drive.google.com/uc?export=download&id=1YRzQb19zslqov98vFBRoHiBmDaEP5ncP,annual_report
+Ashby,2024,RESULTS_FOUND,"heads=27,blanks=65,offices=10,tallies=1747,yr=True,pp=170",https://drive.google.com/uc?export=download&id=1sHM1XgUU5A-7iVpDZEtTQQzwKQKcMUHY,annual_report
+Ashby,2025,RESULTS_FOUND,"heads=10,blanks=15,offices=10,tallies=1521,yr=True,pp=162",https://drive.google.com/uc?export=download&id=1Ilvq8PWi-rpG-5kxxqCYtGfI_ntzuMi2,annual_report
+Ayer,2021,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=5,pp=9",https://www.ayer.ma.us/DocumentCenter/View/667/2021-Spring-Town-Meeting-Presentation-PDF,townmtg_election
+Ayer,2023,RESULTS_FOUND,"heads=2,blanks=0,offices=5,tallies=67,pp=4",https://www.ayer.ma.us/DocumentCenter/View/4767/Summary-of-the-2023-Annual-Town-Meeting-Warrant---March-7-2023,townmtg_election
+Becket,2021,RESULTS_FOUND,"heads=10,blanks=64,offices=9,tallies=1296",https://www.townofbecket.org/sites/g/files/vyhlif4146/f/uploads/becket_2020_town_report_for_web.pdf,annual_report
+Becket,2025,RESULTS_FOUND,"heads=14,blanks=8,offices=8,tallies=1239",https://www.townofbecket.org/sites/g/files/vyhlif4146/f/uploads/becket_web_2024.pdf,annual_report
+Berlin,2022,RESULTS_FOUND,"heads=10,blanks=53,offices=11,tallies=2539,yr=True,pp=110",https://townofberlin.com/DocumentCenter/View/1162/2022-Annual-Town-Report,annual_report
+Berlin,2023,RESULTS_FOUND,"heads=6,blanks=10,offices=10,tallies=1973,yr=True,pp=96",https://townofberlin.com/DocumentCenter/View/1164/2023-Annual-Town-Report,annual_report
+Bernardston,2021,FETCH_FAIL,"HTTPError,pp=0",http://townofbernardston.org/images/clerk/townmeetings/Minutes/FY22/ATM_2021_Town_Clerk_Meeting_Minutes_Official.pdf,townmtg_election
+Bernardston,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://townofbernardston.org/town-clerk,election_page
+Bernardston,2024,RESULTS_FOUND,"heads=11,blanks=0,offices=11,tallies=1399,yr=True,pp=171",https://townofbernardston.org/sites/g/files/vyhlif12736/files/media/selectboard/file/4966/Bernardston_Annual%20Report_2024.pdf,annual_report
+Blandford,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=6,pp=54",https://townofblandford.com/wp-content/uploads/2022/05/annual-town-report-2020-2021.pdf,annual_report
+Blandford,2022,RESULTS_FOUND,"heads=1,blanks=0,offices=10,tallies=468,pp=54",https://townofblandford.com/wp-content/uploads/2024/05/annual-town-report-2022-2023.pdf,annual_report
+Blandford,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=10,tallies=468,yr=True,pp=54",https://townofblandford.com/wp-content/uploads/2024/05/annual-town-report-2022-2023.pdf,annual_report
+Blandford,2025,RESULTS_FOUND,"heads=4,blanks=9,offices=10,tallies=436,yr=True,pp=72",https://townofblandford.com/wp-content/uploads/2025/05/annual-town-report-2023-2024.pdf,annual_report
+Bolton,2021,RESULTS_FOUND,"heads=4,blanks=0,offices=11,tallies=1889,yr=True,pp=125",https://www.bolton-ma.gov/DocumentCenter/View/405/2021-Annual-Town-Report,annual_report
+Bolton,2022,RESULTS_FOUND,"heads=6,blanks=0,offices=11,tallies=1836,yr=True,pp=124",https://www.bolton-ma.gov/DocumentCenter/View/406/2022-Annual-Town-Report,annual_report
+Bourne,2021,RESULTS_FOUND,"heads=5,blanks=76,offices=11,tallies=3734,yr=True,pp=275",https://www.bourne-ma.gov/DocumentCenter/View/3317/2021-Town-Report,annual_report
+Bourne,2022,RESULTS_FOUND,"heads=3,blanks=0,offices=11,tallies=3450,yr=True,pp=228",https://www.bourne-ma.gov/DocumentCenter/View/3316/2022-Town-Report,annual_report
+Bourne,2025,RESULTS_FOUND,"heads=9,blanks=61,offices=9,tallies=3089,yr=True,pp=263",https://www.bourne-ma.gov/DocumentCenter/View/11920,annual_report
+Boylston,2021,FETCH_FAIL,"HTTPError,pp=0",https://boylston-ma.gov/services/clerk/Documents/Services/Clerk/Town Meetings/stm_12062021_minutes_0.pdf?t=202406101022130,townmtg_election
+Boylston,2025,NO_RESULTS,"heads=0,blanks=0,offices=7,tallies=7,pp=0",https://boylston-ma.gov/services/clerk/index.php,election_page
+Brewster,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=3,tallies=15,yr=True,pp=1",http://www.brewster-ma.gov/sites/g/files/vyhlif16031/f/uploads/annual_town_election_2025_0.pdf,townmtg_election
+Bridgewater,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0",https://cms6.revize.com/revize/security/index.jsp?webspace=bridgewaterma&filename=/government/town_clerk/annual_town_reports.php,annual_report
+Bridgewater,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0",https://cms6.revize.com/revize/security/index.jsp?webspace=bridgewaterma&filename=/government/town_clerk/annual_town_reports.php,annual_report
+Bridgewater,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0",https://cms6.revize.com/revize/security/index.jsp?webspace=bridgewaterma&filename=/government/town_clerk/annual_town_reports.php,annual_report
+Bridgewater,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0",https://cms6.revize.com/revize/security/index.jsp?webspace=bridgewaterma&filename=/government/town_clerk/annual_town_reports.php,annual_report
+Brimfield,2021,RESULTS_FOUND,"heads=8,blanks=14,offices=8,tallies=747,yr=True,pp=160",https://www.brimfieldma.org/sites/g/files/vyhlif4181/f/news/townreport2021.pdf,annual_report
+Brimfield,2024,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=53",https://www.brimfieldma.org/sites/g/files/vyhlif4181/f/pages/brimfield_town_report_1_2.pdf,annual_report
+Brimfield,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=53",https://www.brimfieldma.org/sites/g/files/vyhlif4181/f/pages/brimfield_town_report_1_2.pdf,annual_report
+Brookfield,2021,RESULTS_FOUND,"heads=5,blanks=0,offices=7,tallies=11,yr=False,pp=0",https://www.brookfieldma.us/announcement-brookfield-annual-town-election/,election_page
+Brookfield,2022,RESULTS_FOUND,"heads=2,blanks=0,offices=11,tallies=529,yr=True,pp=134",https://www.brookfieldma.us/wp-content/uploads/2026/01/brookfield_tr_22_web_cc_0.pdf,annual_report
+Brookfield,2023,RESULTS_FOUND,"heads=3,blanks=0,offices=6,tallies=12,pp=1",https://www.brookfieldma.us/wp-content/uploads/2026/01/annual_town_election_info_to_publish-2023_0-1.pdf,townmtg_election
+Brookfield,2024,RESULTS_FOUND,"heads=2,blanks=0,offices=7,tallies=9,pp=1",https://www.brookfieldma.us/wp-content/uploads/2026/01/annual_town_election_info_to_publish-2024_1.pdf,townmtg_election
+Brookfield,2025,RESULTS_FOUND,"heads=5,blanks=0,offices=7,tallies=11,yr=False,pp=0",https://www.brookfieldma.us/announcement-brookfield-annual-town-election/,election_page
+Cambridge,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=169,pp=13",https://www.cambridgema.gov/-/media/Files/publicworksdepartment/vehiclemaintenance/cleanfleetannualreport2025v71.pdf,annual_report
+Carver,2021,RESULTS_FOUND,"heads=2,blanks=16,offices=9,tallies=1621",https://www.carverma.gov/sites/g/files/vyhlif4221/f/pages/1983_town_report.pdf,annual_report
+Carver,2023,RESULTS_FOUND,"heads=3,blanks=11,offices=10,tallies=1598,yr=True,pp=148",https://www.carverma.gov/sites/g/files/vyhlif4221/f/pages/2023_town_report.pdf,annual_report
+Carver,2025,RESULTS_FOUND,"heads=2,blanks=16,offices=9,tallies=1621",https://www.carverma.gov/sites/g/files/vyhlif4221/f/pages/1983_town_report.pdf,annual_report
+Charlemont,2022,RESULTS_FOUND,"heads=11,blanks=3,offices=10,tallies=2775,yr=True,pp=143",https://www.charlemont-ma.us/files/Town_Report_for_year_ending_December_312022.pdf,annual_report
+Charlemont,2024,RESULTS_FOUND,"heads=7,blanks=13,offices=10,tallies=3231,yr=True,pp=136",https://charlemont-ma.us/news/newsfile_20171_Town_Report_2024.pdf,annual_report
+Charlemont,2025,RESULTS_FOUND,"heads=5,blanks=12,offices=10,tallies=3247,yr=True,pp=143",https://charlemont-ma.us/news/newsfile_20242_Town_Report_Year_end_2025.pdf,annual_report
+Cheshire,2021,RESULTS_FOUND,"heads=11,blanks=16,offices=11,tallies=1634,pp=80",https://storage.googleapis.com/juniper-media-library/56/2024/01/2021 Annual Town Report.pdf,annual_report
+Cheshire,2023,RESULTS_FOUND,"heads=6,blanks=9,offices=10,tallies=1725,pp=88",https://storage.googleapis.com/juniper-media-library/56/2024/07/2023 Cheshire Town Report full.pdf,annual_report
+Chester,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=8,tallies=393,yr=True,pp=44",https://townofchester.net/wp-content/uploads/2024/05/Town-of-Chester-Annual-Report-FY22-23.pdf,annual_report
+Chesterfield,2021,NO_RESULTS,"heads=0,blanks=0,offices=7,tallies=368,pp=100",https://www.townofchesterfieldma.com/sites/g/files/vyhlif7606/f/uploads/chesterfield_fy2021_town_report_final_4.13.22.pdf,annual_report
+Chesterfield,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://www.townofchesterfieldma.com/town-clerk,election_page
+Chilmark,2022,RESULTS_FOUND,"heads=3,blanks=0,offices=7,tallies=168,pp=11",https://www.chilmarkma.gov/sites/g/files/vyhlif8411/f/uploads/chilmark_annual_town_meeting_and_election_warrant_april_25_and_27_2022_town_clerk_true_copy_attest.pdf,townmtg_election
+Chilmark,2025,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=20,pp=4",https://www.chilmarkma.gov/sites/g/files/vyhlif8411/f/agendas/chilmark_planning_board_draft_minutes_12082025.pdf,minutes
+Clarksburg,2022,RESULTS_FOUND,"heads=2,blanks=0,offices=6,tallies=152,yr=True,pp=24",https://clarksburgma.gov/specMedia/Clarksburg-Annual-Report-FY2022.pdf,annual_report
+Clarksburg,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=8,tallies=165,yr=True,pp=24",https://clarksburgma.gov/specMedia/Clarkburg-Annual-Report-FY2023.pdf,annual_report
+Clarksburg,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=3,tallies=202,yr=True,pp=35",https://clarksburgma.gov/specMedia/ANNUAL-TOWN-REPORT-FY-25_4-14-26.pdf,annual_report
+Colrain,2021,NO_RESULTS,"heads=0,blanks=0,offices=10,tallies=576,pp=63",https://colrain-ma.gov/files/Colrain_2021_Annual_Report.pdf,annual_report
+Conway,2021,RESULTS_FOUND,"heads=40,blanks=1,offices=8,tallies=81,yr=False,pp=0",https://conwayma.gov/p/104/Elections,election_page
+Conway,2022,RESULTS_FOUND,"heads=40,blanks=1,offices=8,tallies=81,yr=False,pp=0",https://conwayma.gov/p/104/Elections,election_page
+Conway,2023,RESULTS_FOUND,"heads=40,blanks=1,offices=8,tallies=81,yr=True,pp=0",https://conwayma.gov/p/104/Elections,election_page
+Conway,2024,RESULTS_FOUND,"heads=25,blanks=0,offices=10,tallies=3461,yr=True,pp=148",https://conwayma.gov/files/2004_through_2024_Certified_Town_Meeting_Minutes.pdf,townmtg_election
+Conway,2025,RESULTS_FOUND,"heads=40,blanks=1,offices=8,tallies=81,yr=True,pp=0",https://conwayma.gov/p/104/Elections,election_page
+Cummington,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=1",https://cummington-ma.gov/DDGAssets/Content/FY2022TownReport.pdf,annual_report
+Cummington,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=1",https://cummington-ma.gov/PDFs/TownReportFY2023.pdf,annual_report
+Cummington,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=1",https://cummington-ma.gov/PDFs/TownReportFY2024.pdf,annual_report
+Cummington,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=1",https://cummington-ma.gov/DDGAssets/Board/WWildScAnnRpt2025Rev.pdf,annual_report
+Dalton,2025,RESULTS_FOUND,"heads=3,blanks=1,offices=8,tallies=1120,yr=True,pp=82",https://dalton-ma.gov/wp-content/uploads/2025/05/2024-Annual-Report-FINAL.pdf,annual_report
+Deerfield,2025,RESULTS_FOUND,"heads=2,blanks=0,offices=5,tallies=405,yr=True,pp=51",https://deerfieldma.us/DocumentCenter/View/2123,townmtg_election
+Douglas,2025,MAYBE,"heads=2,blanks=0,offices=4,tallies=1,pp=1",https://douglas-ma.gov/DocumentCenter/View/4495,townmtg_election
+Dracut,2021,MAYBE,"heads=1,blanks=1,offices=1,tallies=15",https://dracutma.gov/245/Town-Clerk,election_page
+Dracut,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=12",https://dracutma.gov/ImageRepository/Document?documentID=568,townmtg_election
+Dudley,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=1,pp=0",https://dudleyma.gov/AgendaCenter/ViewFile/Agenda/_06152026-369,election_page
+Dunstable,2023,RESULTS_FOUND,"heads=7,blanks=0,offices=8,tallies=14,pp=0",https://dunstable-ma.gov/town-clerk,election_page
+East Bridgewater,2021,RESULTS_FOUND,"heads=24,blanks=10,offices=9,tallies=3242,yr=True,pp=210",https://ma-eastbridgewater.civicplus.com/DocumentCenter/View/1765/2021-Annual-Town-Report-PDF,annual_report
+East Bridgewater,2022,RESULTS_FOUND,"heads=20,blanks=58,offices=10,tallies=3133,yr=True,pp=220",https://ma-eastbridgewater.civicplus.com/DocumentCenter/View/1766/2022-Annual-Town-Report-PDF,annual_report
+East Bridgewater,2023,RESULTS_FOUND,"heads=20,blanks=8,offices=11,tallies=3329,yr=True,pp=225",https://ma-eastbridgewater.civicplus.com/DocumentCenter/View/1760/2023-Annual-Town-Report-PDF,annual_report
+East Bridgewater,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=18,pp=0",https://eastbridgewaterma.gov/DocumentCenter/View/1754/Town-Meeting---May-12-2025---Warrant---Final-Version-DOCX,townmtg_election
+East Brookfield,2021,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=5,pp=0",https://eastbrookfieldma.us/1201/Town-Clerk,election_page
+East Brookfield,2022,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=5,pp=0",https://eastbrookfieldma.us/1201/Town-Clerk,election_page
+East Brookfield,2023,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=5,pp=0",https://eastbrookfieldma.us/1201/Town-Clerk,election_page
+East Brookfield,2024,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=5,pp=0",https://eastbrookfieldma.us/1201/Town-Clerk,election_page
+Edgartown,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://edgartown-ma.us/departments/town-clerk,election_page
+Edgartown,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://edgartown-ma.us/departments/town-clerk,election_page
+Egremont,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=70,pp=5",https://www.egremont-ma.gov/DocumentCenter/View/231,annual_report
+Erving,2022,RESULTS_FOUND,"heads=1,blanks=0,offices=8,tallies=65,pp=9",https://erving-ma.gov/AgendaCenter/ViewFile/Minutes/_02022026-343,minutes
+Erving,2023,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=7,pp=0",https://erving-ma.gov/255/Town-Clerk,election_page
+Erving,2025,RESULTS_FOUND,"heads=34,blanks=16,offices=11,tallies=1493,yr=True,pp=136",https://www.erving-ma.gov/DocumentCenter/View/2973/2025-Annual-Town-Report-PDF,annual_report
+Foxborough,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=28",https://foxboroughma.gov/UserFiles/Servers/Server_15207780/File/Departments/Conservation/Annual Report/AR18.pdf,annual_report
+Georgetown,2021,FETCH_FAIL,"HTTPError,pp=0",https://georgetownma.gov/government/boards___commissions/planning_board/Document Center/Government/Boards & Commissions/Planning Board/MA Dept. of Energy Resources - Green/georgetown_gc-annual-report-2021.xlsx?t=202306300850250,annual_report
+Georgetown,2022,FETCH_FAIL,"HTTPError,pp=0",https://www.georgetownma.gov/sites/g/files/vyhlif616/f/uploads/light_department_annual_report-2022.pdf,annual_report
+Gill,2021,RESULTS_FOUND,"heads=7,blanks=19,offices=9,tallies=41,pp=0",https://gillmass.org/TownClerk,election_page
+Gill,2022,RESULTS_FOUND,"heads=7,blanks=19,offices=9,tallies=41,yr=True,pp=0",https://gillmass.org/TownClerk,election_page
+Gill,2023,RESULTS_FOUND,"heads=7,blanks=19,offices=9,tallies=41,yr=True,pp=0",https://gillmass.org/TownClerk,election_page
+Gill,2024,RESULTS_FOUND,"heads=7,blanks=19,offices=9,tallies=41,yr=True,pp=0",https://gillmass.org/TownClerk,election_page
+Gill,2025,RESULTS_FOUND,"heads=7,blanks=19,offices=9,tallies=41,yr=True,pp=0",https://gillmass.org/TownClerk,election_page
+Gosnold,2021,NO_RESULTS,"heads=0,blanks=0,offices=3,tallies=4,pp=0",https://www.gosnold-ma.gov/222/Town-Clerk,election_page
+Gosnold,2022,NO_RESULTS,"heads=0,blanks=0,offices=3,tallies=4,pp=0",https://www.gosnold-ma.gov/222/Town-Clerk,election_page
+Gosnold,2023,NO_RESULTS,"heads=0,blanks=0,offices=3,tallies=4,pp=0",https://www.gosnold-ma.gov/222/Town-Clerk,election_page
+Gosnold,2024,NO_RESULTS,"heads=0,blanks=0,offices=3,tallies=4,pp=0",https://www.gosnold-ma.gov/222/Town-Clerk,election_page
+Gosnold,2025,NO_RESULTS,"heads=0,blanks=0,offices=3,tallies=4,pp=0",https://www.gosnold-ma.gov/222/Town-Clerk,election_page
+Granby,2021,MAYBE,"heads=1,blanks=0,offices=7,tallies=1,pp=0",https://granby-ma.gov/townclerk,election_page
+Granby,2022,MAYBE,"heads=1,blanks=0,offices=7,tallies=1,pp=0",https://granby-ma.gov/townclerk,election_page
+Granby,2023,MAYBE,"heads=1,blanks=0,offices=7,tallies=1,pp=0",https://granby-ma.gov/townclerk,election_page
+Granby,2024,MAYBE,"heads=1,blanks=0,offices=7,tallies=1,pp=0",https://granby-ma.gov/townclerk,election_page
+Granby,2025,MAYBE,"heads=1,blanks=0,offices=7,tallies=1,pp=0",https://granby-ma.gov/townclerk,election_page
+Great Barrington,2021,RESULTS_FOUND,"heads=1,blanks=0,offices=10,tallies=831,yr=True,pp=63",https://www.townofgb.org/DocumentCenter/View/924,annual_report
+Great Barrington,2023,RESULTS_FOUND,"heads=3,blanks=0,offices=9,tallies=840,yr=True,pp=66",https://www.townofgb.org/DocumentCenter/View/923,annual_report
+Great Barrington,2025,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=63,pp=18",https://townofgb.org/DocumentCenter/View/2448/SCAC-Annual-Report-2025,annual_report
+Hadley,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://hadleyma.org/town-clerk,election_page
+Hampden,2021,RESULTS_FOUND,"heads=11,blanks=0,offices=4,tallies=25,pp=0",https://hampdenma.gov/274/Town-Meetings-Elections,election_page
+Hampden,2022,RESULTS_FOUND,"heads=11,blanks=0,offices=4,tallies=25,yr=False,pp=0",https://hampdenma.gov/274/Town-Meetings-Elections,election_page
+Hampden,2023,RESULTS_FOUND,"heads=11,blanks=0,offices=4,tallies=25,yr=False,pp=0",https://hampdenma.gov/274/Town-Meetings-Elections,election_page
+Hampden,2024,RESULTS_FOUND,"heads=11,blanks=0,offices=4,tallies=25,pp=0",https://hampdenma.gov/274/Town-Meetings-Elections,election_page
+Hancock,2022,RESULTS_FOUND,"heads=1,blanks=1,offices=10,tallies=531,yr=True,pp=44",https://town.hancock.ma.us/files/2023/04/OFFICIAL-TOWN-REPORT-FY2022.pdf,annual_report
+Hancock,2023,RESULTS_FOUND,"heads=1,blanks=1,offices=10,tallies=531,yr=True,pp=44",https://town.hancock.ma.us/files/2023/04/OFFICIAL-TOWN-REPORT-FY2022.pdf,annual_report
+Hancock,2024,RESULTS_FOUND,"heads=1,blanks=1,offices=9,tallies=506",https://town.hancock.ma.us/files/2023/04/OFFICIAL-TOWN-REPORT-FY2022.pdf,annual_report
+Hanson,2025,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=41,pp=4",https://www.hanson-ma.gov/sites/g/files/vyhlif3231/f/minutes/january_22_2025_minutes.pdf,minutes
+Hatfield,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=1",https://townofhatfield.org/DocumentCenter/View/1083,townmtg_election
+Hatfield,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=15",https://townofhatfield.org/DocumentCenter/View/1133,townmtg_election
+Hatfield,2023,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=11,pp=0",https://townofhatfield.org/217/Town-Clerk,election_page
+Hatfield,2024,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=11,pp=0",https://townofhatfield.org/217/Town-Clerk,election_page
+Hatfield,2025,MAYBE,"heads=1,blanks=0,offices=2,tallies=9",https://townofhatfield.org/DocumentCenter/View/3529/2026-Election-Calendar,election_page
+Hawley,2023,RESULTS_FOUND,"heads=2,blanks=0,offices=10,tallies=1446,yr=False,pp=95",https://townofhawley.com/wp-content/uploads/2023/09/2012-Hawley-Annual-Town-Report.pdf,annual_report
+Hawley,2025,RESULTS_FOUND,"heads=4,blanks=1,offices=11,tallies=1361,yr=True,pp=105",https://townofhawley.com/wp-content/uploads/2025/04/Hawley-Town-Report-2024.pdf,annual_report
+Heath,2021,RESULTS_FOUND,"heads=1,blanks=0,offices=10,tallies=452,yr=True,pp=42",https://townofheath.org/news/newsfile_9143_2021HeathAnnualReport-web.pdf,annual_report
+Heath,2022,RESULTS_FOUND,"heads=2,blanks=0,offices=8,tallies=16,pp=0",https://townofheath.org/p/19/Town-Clerk,election_page
+Heath,2023,RESULTS_FOUND,"heads=4,blanks=0,offices=6,tallies=264",https://townofheath.org/news/newsfile_9198_Annual_Town_Meeting_Warrant_2023_Handout.pdf,election_doc
+Heath,2024,RESULTS_FOUND,"heads=4,blanks=0,offices=6,tallies=30,yr=True,pp=2",https://townofheath.org/files/2024_Local_Town_Elections.pdf,townmtg_election
+Heath,2025,NO_RESULTS,"heads=0,blanks=1,offices=10,tallies=490,pp=39",https://townofheath.org/files/2025_Annual_Town_Report_WEB_FINAL.pdf,annual_report
+Hinsdale,2021,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=4,pp=0",https://hinsdalemass.com/1265/Town-Clerk,election_page
+Hinsdale,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0",https://hinsdalemass.com/ImageRepository/Document?documentID=36,annual_report
+Hinsdale,2024,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=4,pp=0",https://hinsdalemass.com/1265/Town-Clerk,election_page
+Hinsdale,2025,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=4,pp=0",https://hinsdalemass.com/1265/Town-Clerk,election_page
+Holland,2022,RESULTS_FOUND,"heads=2,blanks=1,offices=9,tallies=37",https://town.holland.ma.us/sites/g/files/vyhlif3266/f/uploads/election_warrant_2022_003.pdf,election_doc
+Hopedale,2021,RESULTS_FOUND,"heads=9,blanks=1,offices=10,tallies=1186",https://hopedale-ma.gov/DocumentCenter/View/955/FY20-Annual-Town-Report,annual_report
+Hopedale,2025,RESULTS_FOUND,"heads=17,blanks=24,offices=9,tallies=1960",https://hopedale-ma.gov/DocumentCenter/View/957/FY24-Annual-Town-Report,annual_report
+Hopkinton,2021,RESULTS_FOUND,"heads=23,blanks=63,offices=9,tallies=3526,yr=True,pp=310",https://ehop.org/wp/wp-content/uploads/2021/05/2020-ANNUAL-TOWN-REPORT-HOPKINTON-MA-WEB-sm.pdf,annual_report
+Hopkinton,2023,RESULTS_FOUND,"heads=15,blanks=65,offices=9,tallies=2690,yr=True,pp=376",https://ehop.org/wp/wp-content/uploads/2023/04/Hopkinton-Annual-Town-Report-2022_sm.pdf,annual_report
+Hubbardston,2021,MAYBE,"heads=24,blanks=0,offices=2,tallies=41,pp=0",https://hubbardstonma.us/275/ElectionTown-Meeting-Information,election_page
+Huntington,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://huntingtonma.us/node/371,election_page
+Huntington,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://huntingtonma.us/node/371,election_page
+Huntington,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://huntingtonma.us/node/371,election_page
+Huntington,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://huntingtonma.us/node/371,election_page
+Lanesborough,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=1",https://cms5.revize.com/revize/security/index.jsp?webspace=lanesboroughma&filename=/government/town_reports/index.php,annual_report
+Lanesborough,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=1",https://cms5.revize.com/revize/security/index.jsp?webspace=lanesboroughma&filename=/government/town_reports/index.php,annual_report
+Lanesborough,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=1",https://cms5.revize.com/revize/security/index.jsp?webspace=lanesboroughma&filename=/government/town_reports/index.php,annual_report
+Lee,2023,RESULTS_FOUND,"heads=5,blanks=0,offices=4,tallies=59,yr=True,pp=0",https://lee.ma.us/174/Town-Clerk,election_page
+Lee,2024,RESULTS_FOUND,"heads=5,blanks=0,offices=4,tallies=59,yr=False,pp=0",https://lee.ma.us/174/Town-Clerk,election_page
+Lee,2025,RESULTS_FOUND,"heads=5,blanks=0,offices=4,tallies=59,pp=0",https://lee.ma.us/174/Town-Clerk,election_page
+Lenox,2021,NO_RESULTS,"heads=0,blanks=0,offices=9,tallies=924,pp=84",https://townoflenox.com/DocumentCenter/View/371/Annual-Town-Report-2021,annual_report
+Lenox,2022,RESULTS_FOUND,"heads=2,blanks=1,offices=9,tallies=918,yr=True,pp=84",https://townoflenox.com/DocumentCenter/View/375/Annual-Town-Report-2022,annual_report
+Lenox,2023,RESULTS_FOUND,"heads=2,blanks=0,offices=9,tallies=901,yr=True,pp=89",https://townoflenox.com/DocumentCenter/View/376/Annual-Town-Report-2023,annual_report
+Lenox,2024,RESULTS_FOUND,"heads=4,blanks=0,offices=9,tallies=427,yr=True,pp=70",https://townoflenox.com/DocumentCenter/View/377/Annual-Town-Report-2024,annual_report
+Lenox,2025,RESULTS_FOUND,"heads=1,blanks=1,offices=9,tallies=672,yr=True,pp=120",https://townoflenox.com/DocumentCenter/View/3428/Annual-Town-Report-2025,annual_report
+Leverett,2024,NO_RESULTS,"heads=0,blanks=0,offices=7,tallies=333,pp=6",https://leverett.ma.us/news/newsfile_12135_2024_budget_for_town_meeting.pdf,townmtg_election
+Leverett,2025,MAYBE,"heads=2,blanks=0,offices=6,tallies=5",https://leverett.ma.us/n/12187/Leverett-Election-Results,election_page
+Leyden,2021,RESULTS_FOUND,"heads=4,blanks=0,offices=9,tallies=20,pp=0",https://townofleyden.com/p/111/Voting-and-Elections,election_page
+Leyden,2022,RESULTS_FOUND,"heads=4,blanks=0,offices=10,tallies=814,yr=True,pp=107",https://townofleyden.com/files/2022_Annual_Town_Report.pdf,annual_report
+Ludlow,2021,RESULTS_FOUND,"heads=4,blanks=0,offices=10,tallies=1640,yr=True,pp=138",https://ludlow.ma.us/wp-content/uploads/sites/2/2025/05/2021-Annual-Town-Report.pdf,annual_report
+Ludlow,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=138",https://ludlow.ma.us/wp-content/uploads/sites/2/2025/05/2022-Annual-Town-Report.pdf,annual_report
+Mansfield,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://www.mansfieldma.com/DocumentCenter/View/5395/Annual-Town-Report-2021-PDF,annual_report
+Marion,2021,MAYBE,"heads=1,blanks=0,offices=2,tallies=24,pp=0",https://marionma.gov/272/Town-Meeting-Election-Information,election_page
+Marion,2022,MAYBE,"heads=1,blanks=0,offices=2,tallies=24,pp=0",https://marionma.gov/272/Town-Meeting-Election-Information,election_page
+Marion,2023,RESULTS_FOUND,"heads=4,blanks=8,offices=9,tallies=5678,yr=True,pp=240",https://marionma.gov/DocumentCenter/View/1157,annual_report
+Mashpee,2022,RESULTS_FOUND,"heads=2,blanks=104,offices=11,tallies=3164,yr=True,pp=189",https://mashpeema.gov/DocumentCenter/View/1282/2022-Annual-Report,annual_report
+Mashpee,2023,RESULTS_FOUND,"heads=7,blanks=10,offices=11,tallies=2954,yr=True,pp=188",https://mashpeema.gov/DocumentCenter/View/1283/2023-Annual-Report,annual_report
+Mendon,2021,RESULTS_FOUND,"heads=9,blanks=15,offices=11,tallies=2118,yr=True,pp=226",https://mendonma.gov/DocumentCenter/View/181/2021-Annual-Town-Report,annual_report
+Mendon,2024,RESULTS_FOUND,"heads=7,blanks=48,offices=8,tallies=1691,yr=True,pp=613",https://www.mendonma.gov/DocumentCenter/View/851/2024-Annual-Town-Report,annual_report
+Mendon,2025,RESULTS_FOUND,"heads=11,blanks=14,offices=10,tallies=1690,yr=True,pp=232",https://mendonma.gov/DocumentCenter/View/1528/2025--Annual-Town-Report,annual_report
+Middlefield,2021,RESULTS_FOUND,"heads=2,blanks=0,offices=4,tallies=8,yr=False,pp=0",https://middlefield-ma.gov/230/Town-Clerk,election_page
+Middlefield,2022,RESULTS_FOUND,"heads=2,blanks=0,offices=4,tallies=8,yr=False,pp=0",https://middlefield-ma.gov/230/Town-Clerk,election_page
+Middlefield,2025,RESULTS_FOUND,"heads=2,blanks=0,offices=4,tallies=8,yr=False,pp=0",https://middlefield-ma.gov/230/Town-Clerk,election_page
+Millbury,2021,RESULTS_FOUND,"heads=5,blanks=47,offices=9,tallies=1612",https://millburyma.gov/DocumentCenter/View/243/Annual-Town-Report---FY-2009,annual_report
+Millbury,2022,RESULTS_FOUND,"heads=4,blanks=0,offices=10,tallies=1890,yr=True,pp=135",https://millburyma.gov/DocumentCenter/View/1817/Annual-Town-Report---FY-2022,annual_report
+Millbury,2023,RESULTS_FOUND,"heads=4,blanks=0,offices=11,tallies=1064,yr=True,pp=132",https://millburyma.gov/DocumentCenter/View/1818/Annual-Town-Report---FY-2023,annual_report
+Millis,2021,NO_RESULTS,"heads=0,blanks=0,offices=7,tallies=51,pp=0",https://millisma.gov/documents/departments/town-clerk/citizen's-guide-to-citizens-petition/27784801,election_page
+Millis,2025,NO_RESULTS,"heads=0,blanks=0,offices=7,tallies=51,pp=0",https://millisma.gov/documents/departments/town-clerk/citizen's-guide-to-citizens-petition/27784801,election_page
+Monson,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=24,pp=1",https://monson-ma.gov/DocumentCenter/View/2485/Town-Report-2022,annual_report
+Monterey,2021,RESULTS_FOUND,"heads=1,blanks=1,offices=10,tallies=1096",https://www.montereyma.gov/sites/g/files/vyhlif3496/f/uploads/fy21townreport.pdf,annual_report
+Monterey,2022,RESULTS_FOUND,"heads=1,blanks=1,offices=10,tallies=1096",https://www.montereyma.gov/sites/g/files/vyhlif3496/f/uploads/fy21townreport.pdf,annual_report
+Monterey,2025,RESULTS_FOUND,"heads=1,blanks=1,offices=10,tallies=1096",https://www.montereyma.gov/sites/g/files/vyhlif3496/f/uploads/fy21townreport.pdf,annual_report
+Montgomery,2022,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=9,yr=False,pp=0",https://montgomeryma.gov/2023/03/town-clerk-notice/,election_page
+Mount Washington,2021,RESULTS_FOUND,"heads=1,blanks=0,offices=10,tallies=13,yr=False,pp=0",https://mountwashington-ma.gov/departments/town-clerk/,election_page
+Mount Washington,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=9,tallies=13",https://mountwashington-ma.gov/departments/town-clerk/,election_page
+Mount Washington,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=10,tallies=13,pp=0",https://mountwashington-ma.gov/departments/town-clerk/,election_page
+Nantucket,2022,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=7,pp=0",https://nantucket-ma.gov/180/Advisory-Committee-of-Non-Voting-Taxpaye,election_page
+Nantucket,2023,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=7,pp=0",https://nantucket-ma.gov/180/Advisory-Committee-of-Non-Voting-Taxpaye,election_page
+Needham,2024,RESULTS_FOUND,"heads=7,blanks=0,offices=10,tallies=1592,pp=212",https://needhamma.gov/DocumentCenter/View/62105,annual_report
+New Ashford,2021,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=12",https://www.newashford-ma.us/wp-content/uploads/2021/05/NewAshford-2021-ATM-Warrant-Final.pdf,election_doc
+New Ashford,2022,MAYBE,"heads=3,blanks=0,offices=4,tallies=0,pp=0",https://www.newashford-ma.us/town-elections-may-24th-200pm-400pm-and-600pm-800pm/,election_page
+New Ashford,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=8,tallies=93",https://www.newashford-ma.us/wp-content/uploads/2023/05/FY24Warrant-Recaps.pdf,election_doc
+New Ashford,2025,MAYBE,"heads=3,blanks=0,offices=4,tallies=0,pp=0",https://www.newashford-ma.us/town-elections-may-24th-200pm-400pm-and-600pm-800pm/,election_page
+New Braintree,2021,FETCH_FAIL,"HTTPError,pp=0",https://www.newbraintreema.us/vertical/Sites/%7BDB28C06A-9981-4746-94BD-D376054BB741%7D/uploads/Meeting_Minutes_Archive_2018-2021.pdf,minutes
+New Braintree,2022,FETCH_FAIL,"HTTPError,pp=0",https://www.newbraintreema.us/vertical/Sites/%7BDB28C06A-9981-4746-94BD-D376054BB741%7D/uploads/NBCC_7_12_2022_Meeting_Minutes.pdf,minutes
+New Braintree,2023,FETCH_FAIL,"HTTPError,pp=0",https://www.newbraintreema.us/vertical/Sites/%7BDB28C06A-9981-4746-94BD-D376054BB741%7D/uploads/Assessors_Meeting_Minutes_FY_2023(1).pdf,minutes
+New Braintree,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0",https://www.newbraintreema.us/vertical/Sites/%7BDB28C06A-9981-4746-94BD-D376054BB741%7D/uploads/2024_ATM_Warrant_6.17.24.pdf,election_doc
+New Braintree,2025,MAYBE,"heads=1,blanks=0,offices=3,tallies=0",https://www.newbraintreema.us/vertical/sites/%7BDB28C06A-9981-4746-94BD-D376054BB741%7D/uploads/Election_Warrant_2025.docx.pdf,election_doc
+New Marlborough,2021,RESULTS_FOUND,"heads=2,blanks=0,offices=3,tallies=19,yr=False,pp=0",https://newmarlboroughma.gov/1208/Town-Clerk,election_page
+New Marlborough,2022,RESULTS_FOUND,"heads=2,blanks=0,offices=3,tallies=19,yr=False,pp=0",https://newmarlboroughma.gov/1208/Town-Clerk,election_page
+New Marlborough,2024,RESULTS_FOUND,"heads=2,blanks=0,offices=3,tallies=19,pp=0",https://newmarlboroughma.gov/1208/Town-Clerk,election_page
+New Marlborough,2025,RESULTS_FOUND,"heads=2,blanks=0,offices=3,tallies=19,yr=False,pp=0",https://newmarlboroughma.gov/1208/Town-Clerk,election_page
+New Salem,2021,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=9,pp=0",https://newsalemma.org/1455/Town-Clerk,election_page
+New Salem,2023,NO_RESULTS,"heads=0,blanks=0,offices=8,tallies=54,pp=6",https://newsalemma.org/DocumentCenter/View/290/2023-Annual-Town-Meeting-Warrant,townmtg_election
+New Salem,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=1",https://newsalemma.org/DocumentCenter/View/262/Special-Town-Meeting-February-1-2024,townmtg_election
+New Salem,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=8",https://newsalemma.org/DocumentCenter/View/291/2025-Annual-Town-Meeting-Warrant,townmtg_election
+Newbury,2023,RESULTS_FOUND,"heads=3,blanks=0,offices=10,tallies=709",https://www.newburyma.gov/DocumentCenter/View/2880/Newbury-Annual-Report-2022-PDF,annual_report
+Newbury,2025,NO_RESULTS,"heads=0,blanks=0,offices=9,tallies=381,pp=58",https://townofnewbury.org/DocumentCenter/View/2958,townmtg_election
+Newton,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://newtonma.gov/government/elections,election_page
+Norfolk,2023,RESULTS_FOUND,"heads=1,blanks=2,offices=7,tallies=5,yr=False,pp=0",https://norfolk.ma.us/departments/town_clerk/census_information.php,election_page
+North Adams,2021,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=3,pp=0",https://northadams-ma.gov/government/departments_offices/city_clerk/government/departments_offices/city_clerk/becoming_an_election_worker.php,election_page
+North Adams,2023,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=3,pp=0",https://northadams-ma.gov/government/departments_offices/city_clerk/government/departments_offices/city_clerk/becoming_an_election_worker.php,election_page
+North Adams,2025,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=3,pp=0",https://northadams-ma.gov/government/departments_offices/city_clerk/government/departments_offices/city_clerk/becoming_an_election_worker.php,election_page
+North Andover,2021,RESULTS_FOUND,"heads=4,blanks=0,offices=7,tallies=146",https://drive.google.com/uc?export=download&id=1g5dXsoxACDnVpB0f5NgUw-rjp05PggGO,annual_report
+North Andover,2022,RESULTS_FOUND,"heads=12,blanks=48,offices=9,tallies=1538,yr=True,pp=168",https://drive.google.com/uc?export=download&id=1SV_gRmyLbuGl6xexi3QaBm8AlZDezNNR,annual_report
+North Brookfield,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=149",https://northbrookfield.net/DocumentCenter/View/357,annual_report
+North Brookfield,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=153",https://northbrookfield.net/DocumentCenter/View/359,annual_report
+North Brookfield,2024,RESULTS_FOUND,"heads=8,blanks=53,offices=11,tallies=1938,yr=True,pp=133",https://northbrookfield.net/DocumentCenter/View/358,annual_report
+North Brookfield,2025,RESULTS_FOUND,"heads=4,blanks=53,offices=10,tallies=1938",https://northbrookfield.net/DocumentCenter/View/358,annual_report
+Northborough,2023,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=73,pp=5",https://www.town.northborough.ma.us/sites/g/files/vyhlif12221/f/uploads/zoning-related_articles_approved_at_april_2023_town_meeting_0.pdf,townmtg_election
+Northbridge,2024,RESULTS_FOUND,"heads=3,blanks=9,offices=2,tallies=99,pp=2",https://northbridgemass.org/DocumentCenter/View/6100/5-21-2024-Annual-Town-Election,townmtg_election
+Northbridge,2025,RESULTS_FOUND,"heads=6,blanks=12,offices=3,tallies=321,pp=5",https://northbridgemass.org/DocumentCenter/View/6099/5-20-2025-Annual-Town-Election,townmtg_election
+Norwell,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=7,tallies=13,pp=0",https://townofnorwell.net/departments/town_clerk/election_information/index.php,election_page
+Oak Bluffs,2023,RESULTS_FOUND,"heads=4,blanks=17,offices=9,tallies=2951,yr=True,pp=102",https://oakbluffsma.gov/DocumentCenter/View/11505/Town-of-Oak-Bluffs---Annual-Report-2023,annual_report
+Oakham,2021,RESULTS_FOUND,"heads=3,blanks=44,offices=10,tallies=2160,yr=True,pp=121",https://www.oakham-ma.gov/DocumentCenter/View/302/Fy2021-Annual-Town-Report-PDF,annual_report
+Oakham,2022,RESULTS_FOUND,"heads=3,blanks=6,offices=9,tallies=2362,yr=True,pp=124",https://www.oakham-ma.gov/DocumentCenter/View/303/Fy2022-Annual-Town-Report-PDF,annual_report
+Oakham,2023,RESULTS_FOUND,"heads=3,blanks=48,offices=9,tallies=1128,yr=True,pp=160",https://www.oakham-ma.gov/DocumentCenter/View/304/Fy2023-Annual-Town-Report-PDF,annual_report
+Oakham,2024,RESULTS_FOUND,"heads=6,blanks=23,offices=11,tallies=2604,yr=True,pp=158",https://www.oakham-ma.gov/DocumentCenter/View/305/Fy2024-Annual-Town-Report-PDF,annual_report
+Oakham,2025,RESULTS_FOUND,"heads=5,blanks=23,offices=10,tallies=2581",https://www.oakham-ma.gov/DocumentCenter/View/305/Fy2024-Annual-Town-Report-PDF,annual_report
+Orange,2021,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=15,pp=0",https://townoforange.org/266/Town-Clerk,election_page
+Orange,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=82,pp=12",https://www.townoforange.org/DocumentCenter/View/877,annual_report
+Palmer,2025,FETCH_FAIL,"HTTPError,pp=0",https://www.townofpalmer.com/vertical/sites/%7B034F9CAE-5196-4551-90C2-FBFD76374BDB%7D/uploads/5_21_2025_MPIC_Minutes.pdf,minutes
+Paxton,2024,FETCH_FAIL,"URLError,pp=0",http://www.townofpaxton.net/sites/g/files/vyhlif4846/f/uploads/special_town_meeting_warrant_11.18.2024.pdf,townmtg_election
+Petersham,2021,RESULTS_FOUND,"heads=1,blanks=0,offices=9,tallies=198,yr=True,pp=82",https://townofpetersham.gov/wp-content/uploads/2025/12/FY21-Town-report-2020-2021.pdf,annual_report
+Petersham,2022,RESULTS_FOUND,"heads=1,blanks=0,offices=4,tallies=35,yr=True,pp=98",https://townofpetersham.gov/wp-content/uploads/2025/12/FY23-Town-report-2022-2023.pdf,annual_report
+Petersham,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=4,tallies=35,yr=True,pp=98",https://townofpetersham.gov/wp-content/uploads/2025/12/FY23-Town-report-2022-2023.pdf,annual_report
+Phillipston,2021,RESULTS_FOUND,"heads=1,blanks=0,offices=7,tallies=10",https://phillipston-ma.gov/DocumentCenter/View/491/Election,election_page
+Phillipston,2022,RESULTS_FOUND,"heads=1,blanks=0,offices=7,tallies=10",https://phillipston-ma.gov/DocumentCenter/View/491/Election,election_page
+Phillipston,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=7,tallies=10",https://phillipston-ma.gov/DocumentCenter/View/491/Election,election_page
+Phillipston,2024,RESULTS_FOUND,"heads=1,blanks=0,offices=7,tallies=10",https://phillipston-ma.gov/DocumentCenter/View/491/Election,election_page
+Phillipston,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=9,tallies=867,yr=True,pp=110",https://phillipston-ma.gov/DocumentCenter/View/965,annual_report
+Pittsfield,2025,NO_RESULTS,"heads=1,blanks=0,offices=0,tallies=16,pp=0",https://www.pittsfieldma.gov/380/Registrar-of-Voters-Elections,election_page
+Plainfield,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://plainfield-ma.us/town-clerk,election_page
+Plainfield,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://plainfield-ma.us/town-clerk,election_page
+Plympton,2022,RESULTS_FOUND,"heads=14,blanks=65,offices=10,tallies=1635,yr=True,pp=164",https://town.plympton.ma.us/DocumentCenter/View/1151/2022-Annual-Town-Report,annual_report
+Plympton,2023,RESULTS_FOUND,"heads=13,blanks=12,offices=10,tallies=1232,yr=True,pp=142",https://town.plympton.ma.us/DocumentCenter/View/1154/2023-Annual-Town-Report,annual_report
+Plympton,2024,RESULTS_FOUND,"heads=7,blanks=43,offices=10,tallies=1617,yr=True,pp=136",https://town.plympton.ma.us/DocumentCenter/View/1171/2024-Annual-Town-Report,annual_report
+Plympton,2025,RESULTS_FOUND,"heads=26,blanks=0,offices=4,tallies=21,pp=0",https://town.plympton.ma.us/242/Historical-Town-Elections,election_page
+Princeton,2021,RESULTS_FOUND,"heads=8,blanks=8,offices=11,tallies=1965,yr=True,pp=144",https://storage.googleapis.com/proudcity/princetonma/2025/09/2021_princeton_annual_town_report_final.pdf,annual_report
+Princeton,2022,RESULTS_FOUND,"heads=19,blanks=53,offices=10,tallies=2247,yr=True,pp=160",https://storage.googleapis.com/proudcity/princetonma/2025/09/2022_annual_town_report.pdf,annual_report
+Raynham,2021,RESULTS_FOUND,"heads=7,blanks=70,offices=8,tallies=1546",https://www.town.raynham.ma.us/sites/g/files/vyhlif1111/f/news/raynham_annual_report_2020.pdf,annual_report
+Raynham,2022,RESULTS_FOUND,"heads=3,blanks=0,offices=7,tallies=440,pp=38",https://www.town.raynham.ma.us/sites/g/files/vyhlif1111/f/pages/annual_town_meeting_warrant_05-16-2022.pdf,townmtg_election
+Richmond,2021,RESULTS_FOUND,"heads=2,blanks=0,offices=7,tallies=12,pp=0",https://richmondma.org/government/town_clerk/government_town_clerk_index.php,election_page
+Richmond,2024,RESULTS_FOUND,"heads=2,blanks=0,offices=7,tallies=12,yr=False,pp=0",https://richmondma.org/government/town_clerk/government_town_clerk_index.php,election_page
+Richmond,2025,RESULTS_FOUND,"heads=2,blanks=0,offices=7,tallies=12,yr=True,pp=0",https://richmondma.org/government/town_clerk/government_town_clerk_index.php,election_page
+Rochester,2022,RESULTS_FOUND,"heads=1,blanks=0,offices=11,tallies=1596,yr=True,pp=134",https://townofrochestermass.com/DocumentCenter/View/263/2022-Annual-Report,annual_report
+Rochester,2023,RESULTS_FOUND,"heads=2,blanks=0,offices=10,tallies=1394,yr=True,pp=110",https://townofrochestermass.com/DocumentCenter/View/264/2023-Annual-Report,annual_report
+Rochester,2024,RESULTS_FOUND,"heads=2,blanks=0,offices=9,tallies=1394",https://townofrochestermass.com/DocumentCenter/View/264/2023-Annual-Report,annual_report
+Rochester,2025,NO_RESULTS,"heads=0,blanks=0,offices=2,tallies=22,pp=0",https://sippican.theweektoday.com/article/marion-welcomes-new-town-clerk/158634,election_page
+Rockport,2021,RESULTS_FOUND,"heads=4,blanks=0,offices=6,tallies=28,pp=0",https://rockportma.gov/266/Town-Clerk,election_page
+Rowley,2021,RESULTS_FOUND,"heads=5,blanks=1,offices=11,tallies=1840,yr=True,pp=128",https://www.townofrowley.net/sites/g/files/vyhlif4956/f/uploads/2021_town_report_final.pdf,annual_report
+Rowley,2024,RESULTS_FOUND,"heads=1,blanks=0,offices=9,tallies=897",https://www.townofrowley.net/sites/g/files/vyhlif4956/f/uploads/townreport_2006_vol_2.1.pdf,annual_report
+Rowley,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=9,tallies=897",https://www.townofrowley.net/sites/g/files/vyhlif4956/f/uploads/townreport_2006_vol_2.1.pdf,annual_report
+Russell,2021,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=8,pp=0",https://townofrussell.us/229/Town-Clerk,election_page
+Russell,2022,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=8,pp=0",https://townofrussell.us/229/Town-Clerk,election_page
+Russell,2024,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=8,pp=0",https://townofrussell.us/229/Town-Clerk,election_page
+Russell,2025,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=8,pp=0",https://townofrussell.us/229/Town-Clerk,election_page
+Rutland,2021,RESULTS_FOUND,"heads=12,blanks=45,offices=11,tallies=1355,yr=True,pp=107",https://rutlandma.gov/DocumentCenter/View/859/FY2021-Annual-Town-Report,annual_report
+Rutland,2022,RESULTS_FOUND,"heads=7,blanks=0,offices=10,tallies=1431,yr=True,pp=128",https://rutlandma.gov/DocumentCenter/View/860/FY2022-Annual-Town-Report,annual_report
+Rutland,2023,RESULTS_FOUND,"heads=7,blanks=0,offices=10,tallies=1431",https://townofrutland.org/DocumentCenter/View/616,annual_report
+Salisbury,2025,RESULTS_FOUND,"heads=4,blanks=48,offices=9,tallies=1099",https://www.salisburyma.gov/sites/g/files/vyhlif1166/f/u316/fy15_salisbury_town_report.pdf,annual_report
+Sandisfield,2025,RESULTS_FOUND,"heads=2,blanks=8,offices=9,tallies=613",https://www.sandisfieldma.gov/sites/g/files/vyhlif1171/f/news/fy23_annual_town_report_-_final_1.pdf,annual_report
+Saugus,2024,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=29,pp=4",https://www.saugus-ma.gov/DocumentCenter/View/188,townmtg_election
+Savoy,2021,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=13,yr=False,pp=0",https://townofsavoy.com/town-clerk,election_page
+Savoy,2022,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=13,yr=False,pp=0",https://townofsavoy.com/town-clerk,election_page
+Savoy,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=13,pp=0",https://townofsavoy.com/town-clerk,election_page
+Savoy,2024,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=13,pp=0",https://townofsavoy.com/town-clerk,election_page
+Savoy,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=88",https://storage.googleapis.com/juniper-media-library/394/2026/06/2025 Annual Report-FINAL FOR PRINTING.pdf,annual_report
+Scituate,2023,RESULTS_FOUND,"heads=1,blanks=0,offices=9,tallies=1769,yr=True,pp=312",https://scituatema.gov/DocumentCenter/View/859/2023-Annual-Town-Report,annual_report
+Shelburne,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=3,pp=2",https://townofshelburne.com/files/2021_Open_Space_annual_report.pdf,annual_report
+Shelburne,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=6,pp=2",https://townofshelburne.com/files/2024_Open_Space_annual_report.pdf,annual_report
+Shelburne,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://townofshelburne.com/files/2025FYAnnual_Town_Meeting_Warrant-Final.docx,townmtg_election
+Shutesbury,2021,MAYBE,"heads=2,blanks=0,offices=8,tallies=0,pp=7",https://www.shutesbury.org/sites/default/files/files-and-images/Annual%20Town%20Reports/AnnualTownReport_FY2021.pdf,annual_report
+Shutesbury,2022,MAYBE,"heads=2,blanks=0,offices=8,tallies=0,pp=7",https://www.shutesbury.org/sites/default/files/files-and-images/Annual%20Town%20Reports/AnnualTownReport_FY2022.pdf,annual_report
+Somerset,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://townofsomerset.org/DocumentCenter/View/1330/Annual-town-Report-2023,annual_report
+Southbridge,2022,RESULTS_FOUND,"heads=6,blanks=39,offices=6,tallies=775",https://ci.southbridge.ma.us/DocumentCenter/View/1543/2021-Annual-Town-Report_Southbridge,annual_report
+Southbridge,2023,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=5,pp=0",https://ci.southbridge.ma.us/479/Town-Clerk,election_page
+Southbridge,2024,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=5,pp=0",https://ci.southbridge.ma.us/479/Town-Clerk,election_page
+Southbridge,2025,RESULTS_FOUND,"heads=13,blanks=0,offices=6,tallies=373",https://ci.southbridge.ma.us/DocumentCenter/View/5012,election_doc
+Springfield,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=41,pp=10",https://www.springfield-ma.gov/cos/fileadmin/mayor/2023/BOPC/2024_BOPC_Annual_report_3.12.25__pdf.pdf,annual_report
+Springfield,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=41",https://www.springfield-ma.gov/cos/fileadmin/mayor/2023/BOPC/2024_BOPC_Annual_report_3.12.25__pdf.pdf,annual_report
+Stockbridge,2021,FETCH_FAIL,"URLError,pp=0",https://stockbridge-ma.gov/wp-content/uploads/2021/04/FINAL-2020-Annual-Report-2.pdf,annual_report
+Stockbridge,2022,FETCH_FAIL,"URLError,pp=0",https://stockbridge-ma.gov/wp-content/uploads/2022/05/FINAL-2021-Annual-Report.pdf,annual_report
+Sturbridge,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://sturbridge.gov/town-clerk,election_page
+Sturbridge,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://sturbridge.gov/town-clerk,election_page
+Sturbridge,2024,MAYBE,"heads=38,blanks=0,offices=2,tallies=577",https://www.sturbridge.gov/sites/g/files/vyhlif12111/f/news/information_for_voters-2024_ballot_questions_and_election_info-red_booklet.pdf,election_doc
+Sturbridge,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://sturbridge.gov/town-clerk,election_page
+Sudbury,2021,RESULTS_FOUND,"heads=14,blanks=10,offices=10,tallies=1336,pp=209",https://cdn.sudbury.ma.us/wp-content/uploads/sites/342/2021/03/Sudbury-2019-Town-Report.pdf?version=7613194b04113666d493d6f30a09a35d,annual_report
+Sudbury,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=60",https://cdn.sudbury.ma.us/wp-content/uploads/sites/270/2025/01/2023-ATE-pre-campaign-report.pdf?version=0166c11c82a805772164fe19c06366e0,townmtg_election
+Sutton,2021,RESULTS_FOUND,"heads=3,blanks=0,offices=3,tallies=25",https://www.suttonma.gov/470/Town-Meeting-Election,election_page
+Sutton,2022,RESULTS_FOUND,"heads=3,blanks=0,offices=5,tallies=108,yr=True,pp=11",https://www.suttonma.gov/DocumentCenter/View/773/2022-Fall-Town-Meeting-Minutes,townmtg_election
+Sutton,2024,RESULTS_FOUND,"heads=1,blanks=0,offices=7,tallies=82,pp=7",https://www.suttonma.gov/DocumentCenter/View/775/2024-Spring-Town-Meeting-Minutes,townmtg_election
+Sutton,2025,RESULTS_FOUND,"heads=1,blanks=0,offices=6,tallies=95",https://www.suttonma.gov/DocumentCenter/View/772/2025-Spring-Town-Meeting-Minutes,election_doc
+Swampscott,2025,RESULTS_FOUND,"heads=12,blanks=22,offices=9,tallies=555",https://swampscottma.gov/DocumentCenter/View/539/FY2024-Annual-Town-Report,annual_report
+Templeton,2022,RESULTS_FOUND,"heads=5,blanks=16,offices=10,tallies=2481,yr=True,pp=248",https://www.templetonma.gov/DocumentCenter/View/2426/Annual-Report-for-Fiscal-Year-2022-PDF,annual_report
+Tisbury,2021,RESULTS_FOUND,"heads=4,blanks=0,offices=8,tallies=19",https://tisburyma.gov/229/Annual-Town-Election-Date-2023,election_page
+Tisbury,2022,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=10,pp=0",https://tisburyma.gov/228/Town-Clerk,election_page
+Tisbury,2023,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=1,pp=2",https://tisburyma.gov/DocumentCenter/View/393/IT-Annual-Town-Report-January-2023-PDF,annual_report
+Tisbury,2024,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=10,pp=0",https://tisburyma.gov/228/Town-Clerk,election_page
+Tisbury,2025,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=10,pp=0",https://tisburyma.gov/228/Town-Clerk,election_page
+Tolland,2021,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=12,pp=0",https://tolland-ma.gov/1201/Town-Clerk,election_page
+Tolland,2022,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=12,pp=0",https://tolland-ma.gov/1201/Town-Clerk,election_page
+Tolland,2023,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=12,pp=0",https://tolland-ma.gov/1201/Town-Clerk,election_page
+Tolland,2024,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=12,pp=0",https://tolland-ma.gov/1201/Town-Clerk,election_page
+Tolland,2025,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=12,pp=0",https://tolland-ma.gov/1201/Town-Clerk,election_page
+Topsfield,2024,RESULTS_FOUND,"heads=1,blanks=0,offices=4,tallies=71,yr=True,pp=2",https://www.topsfield-ma.gov/DocumentCenter/View/1585/FY25-Budget-Preparation-Schedule-for-2024-Town-Meeting,townmtg_election
+Topsfield,2025,RESULTS_FOUND,"heads=14,blanks=27,offices=10,tallies=1911,yr=True,pp=130",https://www.topsfield-ma.gov/DocumentCenter/View/8188,annual_report
+Townsend,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0",https://cms3.revize.com/revize/security/index.jsp?webspace=townsend&filename=/government/board_of_selectmen/annual_town_reports.php,annual_report
+Townsend,2025,FETCH_FAIL,"HTTPError,pp=0",https://townsendma.gov/government/board_of_selectmen/Annual Town Reports/2024 Townsend Annual Town Report updated 4.10.2025 (1).pdf?t=202508051706390,annual_report
+Truro,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=50",https://truro-ma.gov/DocumentCenter/View/863/2021-Annual-Town-Meeting-Minutes-June-26-2021,townmtg_election
+Tyringham,2022,RESULTS_FOUND,"heads=1,blanks=8,offices=6,tallies=32,pp=1",https://www.tyringham-ma.gov/DocumentCenter/View/1598/Annual-Town-Election-Results-5182026,election_page
+Tyringham,2023,RESULTS_FOUND,"heads=1,blanks=8,offices=6,tallies=32,pp=1",https://www.tyringham-ma.gov/DocumentCenter/View/1598/Annual-Town-Election-Results-5182026,election_page
+Tyringham,2024,RESULTS_FOUND,"heads=1,blanks=8,offices=6,tallies=32,pp=1",https://www.tyringham-ma.gov/DocumentCenter/View/1598/Annual-Town-Election-Results-5182026,election_page
+Tyringham,2025,RESULTS_FOUND,"heads=1,blanks=8,offices=6,tallies=32,pp=1",https://www.tyringham-ma.gov/DocumentCenter/View/1598/Annual-Town-Election-Results-5182026,election_page
+Upton,2021,RESULTS_FOUND,"heads=7,blanks=12,offices=9,tallies=1481",https://www.uptonma.gov/DocumentCenter/View/3345,annual_report
+Uxbridge,2022,NO_RESULTS,"heads=1,blanks=0,offices=1,tallies=13,pp=0",https://uxbridge-ma.gov/171/Town-Clerk,election_page
+Uxbridge,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=1,pp=0",https://ma-uxbridge.civicplus.com/DocumentCenter/View/5973,annual_report
+Wakefield,2025,RESULTS_FOUND,"heads=11,blanks=10,offices=10,tallies=1472,yr=True,pp=159",https://www.wakefieldma.gov/DocumentCenter/View/2642,annual_report
+Warren,2022,RESULTS_FOUND,"heads=5,blanks=0,offices=4,tallies=85,pp=0",https://www.warrenct.gov/town-clerk,election_page
+Warwick,2021,RESULTS_FOUND,"heads=5,blanks=18,offices=6,tallies=76,yr=False,pp=0",https://warwickma.org/town-clerk/2022-11-08-state-election-results/,election_page
+Warwick,2022,RESULTS_FOUND,"heads=5,blanks=18,offices=6,tallies=76,yr=True,pp=0",https://warwickma.org/town-clerk/2022-11-08-state-election-results/,election_page
+Warwick,2023,RESULTS_FOUND,"heads=5,blanks=18,offices=6,tallies=76,yr=False,pp=0",https://warwickma.org/town-clerk/2022-11-08-state-election-results/,election_page
+Warwick,2025,RESULTS_FOUND,"heads=5,blanks=18,offices=6,tallies=76,yr=False,pp=0",https://warwickma.org/town-clerk/2022-11-08-state-election-results/,election_page
+Washington,2021,RESULTS_FOUND,"heads=5,blanks=6,offices=8,tallies=802",https://www.washington-ma.gov/sites/g/files/vyhlif7491/f/uploads/fy2020_annual_report.pdf,annual_report
+Webster,2023,RESULTS_FOUND,"heads=4,blanks=7,offices=9,tallies=2774,yr=True,pp=173",https://www.webster-ma.gov/DocumentCenter/View/23136/2023-Annual-Town-Report,annual_report
+Wendell,2021,MAYBE,"heads=1,blanks=0,offices=2,tallies=12",https://www.wendellmass.us/may-5th-election-for-wendell-officials/,election_page
+Wendell,2022,MAYBE,"heads=1,blanks=0,offices=2,tallies=12",https://www.wendellmass.us/may-5th-election-for-wendell-officials/,election_page
+Wendell,2023,RESULTS_FOUND,"heads=3,blanks=0,offices=10,tallies=663,yr=True,pp=88",https://storage.googleapis.com/proudcity/wendellma/2025/02/Wendell-2023-Annual-Report-8.5x5.5-final.pdf,annual_report
+West Bridgewater,2024,RESULTS_FOUND,"heads=1,blanks=2,offices=6,tallies=26,pp=0",https://westbridgewaterma.org/departments/town_clerk/index.php,election_page
+West Bridgewater,2025,RESULTS_FOUND,"heads=1,blanks=2,offices=6,tallies=26,pp=0",https://westbridgewaterma.org/departments/town_clerk/index.php,election_page
+West Brookfield,2021,RESULTS_FOUND,"heads=2,blanks=11,offices=11,tallies=881,yr=True,pp=101",https://storage.googleapis.com/juniper-media-library/43/2023/10/2021%20Annual%20Town%20Report.pdf,annual_report
+West Springfield,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://www.townofwestspringfield.org/Government/Town-Clerk,election_page
+West Springfield,2023,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://www.townofwestspringfield.org/Government/Town-Clerk,election_page
+West Springfield,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://www.townofwestspringfield.org/Government/Town-Clerk,election_page
+West Stockbridge,2021,MAYBE,"heads=3,blanks=0,offices=2,tallies=26,pp=0",https://www.weststockbridge-ma.gov/1328/Town-Clerk,election_page
+West Stockbridge,2024,MAYBE,"heads=3,blanks=0,offices=2,tallies=26,pp=0",https://www.weststockbridge-ma.gov/1328/Town-Clerk,election_page
+Westhampton,2023,RESULTS_FOUND,"heads=5,blanks=0,offices=9,tallies=984",https://westhamptonma.gov/wp-content/uploads/2022_AnnualTownReport_ReducedSize-for-Web.pdf,annual_report
+Westhampton,2024,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=3",https://westhamptonma.gov/wp-content/uploads/2024-0109-minutes-trustees.pdf,minutes
+Westminster,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://www.westminster-ma.gov/town-clerk,election_page
+Westwood,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://townhall.westwood.ma.us/government/current-election-information,election_page
+Westwood,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://townhall.westwood.ma.us/government/current-election-information,election_page
+Westwood,2025,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=0,pp=0",https://townhall.westwood.ma.us/government/current-election-information,election_page
+Weymouth,2023,RESULTS_FOUND,"heads=4,blanks=2,offices=8,tallies=2161,yr=True,pp=329",https://weymouth.ma.us/DocumentCenter/View/1871/FY2023-Annual-Town-Report,annual_report
+Weymouth,2025,RESULTS_FOUND,"heads=2,blanks=0,offices=8,tallies=1809,yr=True,pp=232",https://weymouth.ma.us/DocumentCenter/View/13170/FY2025-Annual-Town-Report,annual_report
+Whately,2021,FETCH_FAIL,"HTTPError,pp=0",https://www.whately.org/sites/g/files/vyhlif5211/f/uploads/2021_annual_report_of_the_personnel_committee_002.pdf,annual_report
+Whately,2025,RESULTS_FOUND,"heads=3,blanks=0,offices=6,tallies=18,pp=0",https://whately.org/departments/town_clerk/index.php,election_page
+Wilbraham,2021,RESULTS_FOUND,"heads=5,blanks=0,offices=9,tallies=981,yr=True,pp=69",https://wilbraham-ma.gov/DocumentCenter/View/4911/Wilbraham-2021-Annual-Town-Report,annual_report
+Williamsburg,2021,RESULTS_FOUND,"heads=5,blanks=13,offices=10,tallies=2148,yr=True,pp=133",https://www.burgy.org/sites/g/files/vyhlif1451/f/uploads/2021_annual_town_report_0.pdf,annual_report
+Williamsburg,2025,RESULTS_FOUND,"heads=5,blanks=65,offices=10,tallies=2169",https://www.burgy.org/sites/g/files/vyhlif1451/f/uploads/0_annual_report_total_final_0521.pdf,annual_report
+Williamstown,2021,RESULTS_FOUND,"heads=3,blanks=0,offices=6,tallies=47",https://williamstownma.gov/voting/,election_page
+Windsor,2021,MAYBE,"heads=7,blanks=0,offices=6,tallies=5,pp=0",https://www.windsormass.com/requests-1/elections,election_page
+Windsor,2022,MAYBE,"heads=7,blanks=0,offices=6,tallies=5,pp=0",https://www.windsormass.com/requests-1/elections,election_page
+Windsor,2023,MAYBE,"heads=7,blanks=0,offices=6,tallies=5,pp=0",https://www.windsormass.com/requests-1/elections,election_page
+Windsor,2024,MAYBE,"heads=7,blanks=0,offices=6,tallies=5,pp=0",https://www.windsormass.com/requests-1/elections,election_page
+Windsor,2025,MAYBE,"heads=7,blanks=0,offices=6,tallies=5,pp=0",https://www.windsormass.com/requests-1/elections,election_page
+Winthrop,2023,MAYBE,"heads=3,blanks=0,offices=2,tallies=211,pp=0",https://winthroptranscript.com/2025/10/30/polls-open-tuesday-for-town-election/,election_page
+Winthrop,2025,MAYBE,"heads=3,blanks=0,offices=2,tallies=211,pp=0",https://winthroptranscript.com/2025/10/30/polls-open-tuesday-for-town-election/,election_page
+Worthington,2021,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=56,pp=2",https://worthington-ma.us/wp-content/uploads/2021/04/FY2020-Annual-Report.pdf,annual_report
+Worthington,2022,NO_RESULTS,"heads=0,blanks=0,offices=0,tallies=52,pp=2",https://worthington-ma.us/wp-content/uploads/2022/08/2021-Annual-Report.pdf,annual_report
+Worthington,2023,NO_RESULTS,"heads=0,blanks=0,offices=1,tallies=52,pp=2",https://worthington-ma.us/wp-content/uploads/2023/05/FY2022-Annual-Report-1.pdf,annual_report
+Worthington,2024,NO_RESULTS,"heads=2,blanks=0,offices=1,tallies=18,pp=0",https://worthington-ma.us/2018/11/early-voting-dates-hours/,election_page
+Worthington,2025,NO_RESULTS,"heads=2,blanks=0,offices=1,tallies=18,pp=0",https://worthington-ma.us/2018/11/early-voting-dates-hours/,election_page

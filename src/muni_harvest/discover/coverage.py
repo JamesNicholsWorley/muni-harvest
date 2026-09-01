@@ -15,6 +15,7 @@ from collections import Counter, defaultdict
 
 from ..config import data_dir
 from ..core import iter_jsonl, write_jsonl
+from ..config import load_settings
 from .docclass import BOARD_LABEL, classify_document
 
 PRIORITY = ["select_board", "city_council", "planning_board", "zba", "conservation",
@@ -22,7 +23,15 @@ PRIORITY = ["select_board", "city_council", "planning_board", "zba", "conservati
             "town_meeting"]
 
 
-def build(total_towns: int = 351) -> dict:
+def build(total_towns: int | None = None) -> dict:
+    # The coverage denominator is the number of municipalities being harvested,
+    # which is a property of the host list -- not a constant. It was 351 (the
+    # Massachusetts town count) because that was the only host list this project
+    # had. A sibling corpus covering the other five New England states harvests
+    # 1,171, and a hardcoded 351 would report >100% coverage for it.
+    if total_towns is None:
+        total_towns = load_settings().get("discover", {}).get(
+            "total_towns", 351)
     from .agendacenter_recover import load_recovered
     ac_map = load_recovered()  # (town, meeting_id) -> board, fills AgendaCenter gaps
     nodes = data_dir() / "discover" / "nodes.jsonl"

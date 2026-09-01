@@ -1,0 +1,531 @@
+screening 1626 candidate docs (<= 10/town) across 172 towns, 10 workers
+  [CONFIRMED] Abington /  t=5 v=1 b=3 pp=1
+  [CONFIRMED] Abington /notice  t=5 v=1 b=3 pp=1
+  [CONFIRMED] Acton town_meeting/warrant  t=16 v=276 b=234 pp=57,64,65,66,78
+  [CONFIRMED] Acton town_meeting/warrant  t=2 v=246 b=275 pp=58
+  [PROBABLE] Amesbury /  t=28 v=0 b=2 pp=1
+  [CONFIRMED] Amesbury zoning/bylaw  t=12 v=1 b=1 pp=1,2
+  [PROBABLE] Andover /  t=16 v=0 b=2 pp=1,2,6,7
+  [PROBABLE] Andover /  t=14 v=0 b=1 pp=1,3,4,5,21
+  [CONFIRMED] Andover /  t=21 v=1 b=6 pp=1,3,4,5,7,11,15
+  [CONFIRMED] Andover /  t=14 v=2 b=6 pp=1,2,3,19
+  [CONFIRMED] Andover /  t=7 v=2 b=7 pp=1,3,4,17
+  [CONFIRMED] Andover /  t=14 v=2 b=14 pp=1,3,4,31,32
+  [CONFIRMED] Andover /  t=14 v=1 b=9 pp=1,26,27,28
+  [PROBABLE] Andover /  t=13 v=0 b=8 pp=1,3,4,5,8
+  [CONFIRMED] Andover /  t=6 v=1 b=6 pp=1,4
+  [CONFIRMED] Andover /  t=32 v=1 b=2 pp=1,2,3,4,5,6,7,8,9,10,11,15,17
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.arlingtonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [PROBABLE] Ashburnham zoning/ 2025 t=6 v=1 b=0 pp=1,2,4,10
+  [CONFIRMED] Ashburnham zoning/ 2025 t=8 v=1 b=1 pp=1,2,4,6,15
+  [CONFIRMED] Ashby /  t=17 v=1 b=11 pp=1,2,3
+  [PROBABLE] Ashby planning_board/  t=14 v=0 b=15 pp=1
+  [CONFIRMED] Ashland /  t=9 v=6 b=2 pp=1,2,3,5
+  [CONFIRMED] Ashland /  t=18 v=5 b=2 pp=1,2,3,5
+  [PROBABLE] Ashland /  t=17 v=0 b=1 pp=1,2,3,4,5
+  [CONFIRMED] Ashland /  t=27 v=2 b=29 pp=1
+  [PROBABLE] Ashland planning_board/  t=10 v=1 b=0 pp=1,2,4,5,9
+  [CONFIRMED] Attleboro planning_board/minutes 2026 t=1 v=6 b=14 pp=4
+  [PROBABLE] Ayer /  t=5 v=0 b=5 pp=1
+  [CONFIRMED] Ayer /bylaw  t=9 v=1 b=6 pp=1,5,6
+  [CONFIRMED] Bedford /  t=9 v=2 b=8 pp=1,2,3
+  [CONFIRMED] Bedford /  t=9 v=2 b=8 pp=1,2,3
+  [CONFIRMED] Bedford /bylaw  t=8 v=2 b=6 pp=1,2
+  [CONFIRMED] Bedford zoning/  t=10 v=2 b=5 pp=4,5,8,15,16,22,24,25
+  [CONFIRMED] Bedford zoning/  t=10 v=2 b=5 pp=4,5,8,15,16,22,24,25
+  [PROBABLE] Bedford zoning/ 2023 t=6 v=0 b=1 pp=1,2,3,16
+  [CONFIRMED] Belmont /  t=10 v=2 b=11 pp=1,2,3,4
+  [CONFIRMED] Belmont /  t=204 v=4 b=1 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,25,26
+  [CONFIRMED] Belmont city_council/  t=87 v=11 b=35 pp=1,2,3,4,5,6,8,10,12,14,16,18,20,23,24,26
+  [PROBABLE] Belmont finance/  t=5 v=0 b=1 pp=1,2
+  [CONFIRMED] Berkley /bylaw  t=4 v=1 b=9 pp=1
+  [CONFIRMED] Berkley town_meeting/minutes 2025 t=4 v=126 b=38 pp=5
+  [CONFIRMED] Beverly zoning/  t=51 v=2 b=2 pp=1
+  [CONFIRMED] Billerica /  t=146 v=1 b=1 pp=1,2,3,4,5,6,7,8,9,10,11
+  [PROBABLE] Billerica /  t=12 v=0 b=6 pp=1,4,5,6,7,9,27
+  [PROBABLE] Billerica /  t=11 v=0 b=2 pp=1,2,3,4,6,7,10,13,16
+  [PROBABLE] Billerica /  t=21 v=8 b=0 pp=1,3,5,6,7,8
+MuPDF error: format error: No default Layer config
+
+  [PROBABLE] Billerica /  t=4 v=0 b=2 pp=2,3,14
+  [CONFIRMED] Bourne zoning/  t=17 v=1 b=7 pp=1
+  [CONFIRMED] Bourne zoning/  t=9 v=2 b=2 pp=1,2,3
+  [CONFIRMED] Bourne zoning/  t=17 v=1 b=7 pp=1
+  [CONFIRMED] Bourne zoning/  t=17 v=1 b=9 pp=1
+  [CONFIRMED] Boxborough /  t=146 v=1 b=1 pp=1,2,3,4,5,6,7,8,9,10,11
+  [CONFIRMED] Boxborough /  t=51 v=6 b=1 pp=1,2,3,4,5,6,7
+  [CONFIRMED] Boxborough /  t=4 v=1 b=3 pp=1
+  [CONFIRMED] Boxborough /  t=12 v=2 b=10 pp=1,3,8,9,11,14,15
+  [PROBABLE] Boxborough /  t=1 v=1 b=0 pp=1
+  [PROBABLE] Boxborough /  t=5 v=1 b=0 pp=1,2
+  [CONFIRMED] Boxborough / 2022 t=28 v=2 b=3 pp=1,6,8,9,10,11,13,14,17,18,19,20,21
+  [CONFIRMED] Boxborough zoning/  t=99 v=10 b=16 pp=1,2,3,4,5,6,7,8,10,11,12,13,14,16,17,18,19,20,21,22
+  [CONFIRMED] Boxford /  t=9 v=1 b=6 pp=1,3,4,7,8,12
+  [CONFIRMED] Boxford /  t=33 v=13 b=41 pp=1
+  [CONFIRMED] Boxford /  t=9 v=1 b=6 pp=1,3,4,7,8,12
+  [CONFIRMED] Boxford /  t=8 v=1 b=7 pp=1,2,3,4,9
+  [CONFIRMED] Braintree zoning/ 2023 t=33 v=3 b=19 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+  [CONFIRMED] Braintree zoning/ 2023 t=33 v=3 b=20 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+  [CONFIRMED] Braintree zoning/ 2023 t=37 v=3 b=22 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+  [CONFIRMED] Brockton /  t=4 v=11 b=43 pp=1,25
+  [PROBABLE] Brockton /  t=4 v=0 b=1 pp=1
+  ... 200/1626  {'CONFIRMED': 49, 'FETCH_FAIL': 32, 'NO': 93, 'TOPIC_ONLY': 8, 'PROBABLE': 18}
+  [PROBABLE] Brockton /  t=1 v=0 b=1 pp=1
+  [CONFIRMED] Brockton /  t=8 v=2 b=3 pp=1,3
+  [PROBABLE] Brockton /  t=5 v=0 b=4 pp=1,2
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'brockton.ma.us'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'brockton.ma.us'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [CONFIRMED] Brookline /  t=11 v=6 b=2 pp=1,2,3
+  [CONFIRMED] Brookline /  t=11 v=6 b=2 pp=1,2,3
+  [CONFIRMED] Brookline /  t=9 v=1 b=1 pp=1,2
+  [CONFIRMED] Brookline /  t=8 v=8 b=9 pp=1,2,3
+  [CONFIRMED] Brookline /  t=87 v=11 b=35 pp=1,2,3,4,5,6,8,10,12,14,16,18,20,23,24,26
+  [CONFIRMED] Brookline /  t=24 v=64 b=81 pp=1,2,3,5,8,11,13,14,16,17,18
+  [CONFIRMED] Burlington /  t=22 v=15 b=9 pp=1,2,3,5,6,11
+  [CONFIRMED] Burlington /  t=22 v=15 b=9 pp=1,2,3,5,6,11
+  [CONFIRMED] Burlington /  t=22 v=15 b=9 pp=1,2,3,5,6,11
+  [PROBABLE] Cambridge /  t=18 v=0 b=1 pp=1,2,3,4,5,6,7,8,9
+  [CONFIRMED] Cambridge /  t=11 v=8 b=3 pp=1,2,6,7,9
+  [CONFIRMED] Cambridge / 2024 t=10 v=30 b=29 pp=2,10,14,19,20,22,24
+  [PROBABLE] Canton /  t=5 v=0 b=2 pp=1,2
+  [CONFIRMED] Canton / 2023 t=213 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [CONFIRMED] Canton town_meeting/warrant  t=1 v=19 b=9 pp=29
+  [CONFIRMED] Carlisle town_meeting/warrant  t=8 v=2 b=13 pp=1
+  [CONFIRMED] Carlisle /  t=14 v=1 b=4 pp=1,2,3
+  [PROBABLE] Carlisle /  t=9 v=5 b=0 pp=1,2,3
+  [PROBABLE] Carlisle /  t=1 v=1 b=0 pp=1
+  [PROBABLE] Carlisle /  t=19 v=3 b=0 pp=1,2,3,4,5,6,7,8
+  [CONFIRMED] Chelmsford /  t=25 v=15 b=2 pp=1,4,5,6
+  [CONFIRMED] Chelmsford /  t=204 v=4 b=1 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,25,26
+  [PROBABLE] Chelmsford /  t=24 v=0 b=29 pp=1,3,4,6,7,8,9,10,11,12,13,14,15
+  [PROBABLE] Chelmsford /  t=13 v=0 b=5 pp=1,3,5,6,7,9,22,23,26
+  [PROBABLE] Chelmsford /  t=21 v=10 b=0 pp=1,3,4,6
+  [PROBABLE] Chelmsford /  t=13 v=0 b=5 pp=1,3,5,6,7,9,22,23,26
+  [CONFIRMED] Cohasset /  t=14 v=1 b=1 pp=1,2,3,4,7,9,10,11,14
+  [CONFIRMED] Cohasset /  t=10 v=6 b=1 pp=1,2,3
+  [CONFIRMED] Cohasset /  t=8 v=7 b=1 pp=1,2,3
+  [CONFIRMED] Cohasset /  t=14 v=1 b=1 pp=1,2,3,4,7,9,10,11,14
+  [CONFIRMED] Cohasset /  t=10 v=6 b=1 pp=1,2,3
+  [CONFIRMED] Cohasset /  t=10 v=6 b=1 pp=1,2,3
+  [CONFIRMED] Cohasset /  t=11 v=5 b=4 pp=1,3,5,6
+  [CONFIRMED] Cohasset /  t=17 v=3 b=10 pp=1
+  [PROBABLE] Cohasset / 2024 t=30 v=3 b=0 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+  [PROBABLE] Concord /  t=1 v=0 b=2 pp=1
+  [CONFIRMED] Concord /  t=1 v=1 b=5 pp=1
+  [PROBABLE] Concord /  t=22 v=6 b=0 pp=6,7,11,19,20,21,22,30,32,33,34,35,39,42,46
+  [PROBABLE] Concord /  t=1 v=11 b=0 pp=1
+  [CONFIRMED] Danvers town_meeting/warrant  t=5 v=27 b=28 pp=4
+  [CONFIRMED] Danvers town_meeting/warrant  t=1 v=8 b=44 pp=1
+  [PROBABLE] Dover /  t=14 v=0 b=7 pp=1,3,4,5,6,7,9
+  [PROBABLE] Dover /  t=15 v=0 b=2 pp=1,2,3,4
+  [PROBABLE] Dover /  t=13 v=1 b=0 pp=1,2
+  [CONFIRMED] Dover /  t=8 v=3 b=9 pp=1,2,3
+  [PROBABLE] Dover /  t=15 v=0 b=2 pp=1,2,3,4
+  [PROBABLE] Dover /  t=16 v=0 b=5 pp=1,2,3,4,5,6,7,9
+  [CONFIRMED] Dover /  t=29 v=1 b=6 pp=1,2,3,4,5,6,7,8
+  [CONFIRMED] Dover /  t=51 v=8 b=48 pp=1
+  [PROBABLE] Dover / 2023 t=4 v=0 b=2 pp=1,2
+  [PROBABLE] Dover / 2025 t=16 v=0 b=7 pp=1,2,3,4,5,6,7,9
+  [CONFIRMED] Dracut /  t=8 v=4 b=8 pp=1,2,3,6,7
+  [CONFIRMED] Dracut / 2026 t=4 v=1 b=3 pp=1,2
+  [CONFIRMED] Dracut / 2026 t=5 v=8 b=10 pp=1,3,5,11
+  [CONFIRMED] Dracut zoning/  t=11 v=3 b=2 pp=1
+  [CONFIRMED] Duxbury /  t=11 v=2 b=9 pp=1,2,5,6
+  [CONFIRMED] Duxbury /  t=146 v=1 b=1 pp=1,2,3,4,5,6,7,8,9,10,11
+  [CONFIRMED] Duxbury /  t=42 v=9 b=4 pp=1,2,3,4,5,6,7,8
+  [PROBABLE] Duxbury /  t=9 v=0 b=6 pp=1,2
+  [CONFIRMED] Duxbury / 2023 t=216 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,26
+  [CONFIRMED] Duxbury / 2024 t=10 v=5 b=12 pp=1,2,4
+  [PROBABLE] Duxbury /agenda 2024 t=1 v=0 b=1 pp=1
+  [CONFIRMED] East Bridgewater town_meeting/warrant  t=6 v=148 b=106 pp=20,21,22
+  [CONFIRMED] East Bridgewater town_meeting/warrant 2026 t=6 v=148 b=106 pp=20,21,22
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'eastontownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'eastontownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'eastontownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'eastontownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'eastontownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [PROBABLE] Fitchburg city_council/  t=14 v=0 b=3 pp=1,8,9,10,12,17,24,25
+  ... 400/1626  {'CONFIRMED': 92, 'FETCH_FAIL': 72, 'NO': 177, 'TOPIC_ONLY': 16, 'PROBABLE': 43}
+  [CONFIRMED] Framingham /  t=6 v=4 b=3 pp=1,2
+  [PROBABLE] Framingham /  t=7 v=0 b=10 pp=1
+  [CONFIRMED] Freetown /  t=18 v=1 b=5 pp=1,3,4,5
+  [PROBABLE] Freetown zoning/bylaw  t=16 v=0 b=8 pp=1,2,6
+  [PROBABLE] Gloucester /  t=7 v=4 b=0 pp=1
+  [CONFIRMED] Gloucester /  t=24 v=3 b=36 pp=1
+  [CONFIRMED] Gloucester /  t=24 v=3 b=36 pp=1
+  [CONFIRMED] Gloucester / 2024 t=75 v=2 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+  [PROBABLE] Gloucester planning_board/  t=1 v=0 b=1 pp=4
+  [PROBABLE] Gloucester planning_board/ 2024 t=19 v=0 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+  [CONFIRMED] Gloucester planning_board/ 2024 t=22 v=2 b=13 pp=1,2,3,4,5,6,7,8
+  [PROBABLE] Grafton town_meeting/warrant 2023 t=18 v=0 b=2 pp=1,2
+  [PROBABLE] Grafton town_meeting/warrant 2023 t=18 v=0 b=2 pp=1,2
+  [PROBABLE] Grafton town_meeting/warrant 2023 t=18 v=0 b=2 pp=1,2
+  [CONFIRMED] Grafton /  t=11 v=3 b=3 pp=1,2,3,4,5
+  [PROBABLE] Grafton /  t=4 v=1 b=0 pp=1
+  [PROBABLE] Grafton / 2022 t=4 v=1 b=0 pp=1
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'grovelandtownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'grovelandtownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'grovelandtownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'grovelandtownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'grovelandtownma.documents-on-demand.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [CONFIRMED] Halifax zoning/  t=9 v=4 b=5 pp=1,2
+  [CONFIRMED] Halifax zoning/  t=9 v=4 b=5 pp=1,2
+  [PROBABLE] Halifax zoning/  t=9 v=0 b=2 pp=1
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'hamiltonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [CONFIRMED] Hanson /  t=146 v=1 b=1 pp=1,2,3,4,5,6,7,8,9,10,11
+  [CONFIRMED] Harvard town_meeting/minutes  t=1 v=124 b=95 pp=19
+  [CONFIRMED] Harvard town_meeting/minutes 2023 t=1 v=124 b=95 pp=19
+  [CONFIRMED] Harvard town_meeting/minutes 2024 t=18 v=433 b=63 pp=19,20,21,28
+  [PROBABLE] Hingham /  t=22 v=0 b=4 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+  [PROBABLE] Hingham /  t=1 v=0 b=1 pp=1
+  [CONFIRMED] Hingham /  t=8 v=1 b=4 pp=1,2,10,11,13
+  [CONFIRMED] Hingham /  t=12 v=4 b=13 pp=1
+  [CONFIRMED] Hingham / 2022 t=20 v=1 b=5 pp=1,2,3,4,5,6,7,8,9,10,11,12
+  [PROBABLE] Hingham / 2023 t=10 v=0 b=3 pp=1,2,3,4,5,6,7
+  [CONFIRMED] Holden planning_board/minutes 2022 t=1 v=13 b=5 pp=2
+  [CONFIRMED] Holliston town_meeting/  t=10 v=1 b=3 pp=1,2
+  [CONFIRMED] Holliston zoning/  t=4 v=1 b=2 pp=1
+  [CONFIRMED] Holliston zoning/  t=15 v=29 b=10 pp=1
+  [CONFIRMED] Holliston zoning/bylaw  t=16 v=29 b=8 pp=1
+  [CONFIRMED] Holliston town_meeting/minutes 2024 t=24 v=355 b=52 pp=1,6,7,8,9
+  [CONFIRMED] Hopkinton planning_board/ 2024 t=14 v=5 b=10 pp=1,2,3,4,6
+  [CONFIRMED] Hopkinton planning_board/bylaw 2024 t=18 v=2 b=32 pp=1,2,3,4,10
+  [CONFIRMED] Hopkinton town_meeting/warrant 2024 t=20 v=290 b=152 pp=35,36,37,44,46
+  ... 600/1626  {'CONFIRMED': 117, 'FETCH_FAIL': 145, 'NO': 255, 'TOPIC_ONLY': 26, 'PROBABLE': 57}
+  [CONFIRMED] Hull /  t=11 v=3 b=7 pp=1,2,3
+  [CONFIRMED] Hull /  t=216 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,26
+  [CONFIRMED] Hull /  t=6 v=1 b=10 pp=1
+  [PROBABLE] Hull / 2024 t=11 v=0 b=1 pp=1
+  [CONFIRMED] Hull town_meeting/minutes  t=1 v=627 b=112 pp=16
+  [CONFIRMED] Hull town_meeting/minutes 2025 t=1 v=627 b=112 pp=16
+  [CONFIRMED] Hull town_meeting/warrant  t=2 v=179 b=119 pp=23,35
+  [CONFIRMED] Ipswich /  t=28 v=1 b=5 pp=1
+  [PROBABLE] Ipswich /bylaw  t=219 v=9 b=0 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+  [CONFIRMED] Ipswich zoning/bylaw 2025 t=17 v=1 b=5 pp=1,2,3,5
+  [PROBABLE] Kingston /  t=7 v=0 b=8 pp=2,3,7,8,9
+  [PROBABLE] Kingston /  t=7 v=0 b=8 pp=2,3,7,8,9
+  [PROBABLE] Kingston /  t=7 v=0 b=8 pp=2,3,7,8,9
+  [PROBABLE] Kingston /  t=7 v=0 b=8 pp=2,3,7,8,9
+  [PROBABLE] Kingston /  t=3 v=1 b=0 pp=1
+  [CONFIRMED] Kingston / 2024 t=7 v=1 b=8 pp=2,3,7,8,9
+  [CONFIRMED] Kingston town_meeting/minutes 2024 t=25 v=149 b=72 pp=3,4,5,13
+  [CONFIRMED] Lakeville /  t=69 v=6 b=1 pp=1,2,3,4,5,6,7,8,9
+  [CONFIRMED] Lakeville /  t=204 v=4 b=1 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,25,26
+  [CONFIRMED] Lancaster /  t=10 v=1 b=3 pp=1
+  [PROBABLE] Leicester /  t=9 v=4 b=0 pp=1,2
+  [CONFIRMED] Leicester /  t=15 v=1 b=6 pp=1
+  [CONFIRMED] Leicester zoning/bylaw 2025 t=10 v=2 b=4 pp=1,7
+  [CONFIRMED] Lexington /  t=204 v=4 b=1 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,25,26
+  [CONFIRMED] Lexington zoning/  t=3 v=2 b=1 pp=1
+  [CONFIRMED] Lexington zoning/  t=3 v=5 b=29 pp=1,2
+  [CONFIRMED] Lexington zoning/  t=3 v=2 b=1 pp=1
+  [CONFIRMED] Lexington zoning/  t=11 v=24 b=55 pp=1
+  [CONFIRMED] Lexington zoning/ 2025 t=1 v=1 b=4 pp=1
+  [CONFIRMED] Lincoln /  t=146 v=1 b=1 pp=1,2,3,4,5,6,7,8,9,10,11
+  [CONFIRMED] Lincoln /  t=29 v=24 b=6 pp=1,3,4,6,7,8,9,11,12
+  [CONFIRMED] Lincoln /  t=29 v=24 b=6 pp=1,3,4,6,7,8,9,11,12
+  [PROBABLE] Lincoln /  t=21 v=10 b=0 pp=1,3,5,6,7,8
+  [CONFIRMED] Lincoln / 2023 t=26 v=18 b=8 pp=1,2,3,4,5,7,8,9,11,12,13,15,16,17,19,20,21,24
+  [CONFIRMED] Lincoln / 2023 t=26 v=22 b=18 pp=1,4,6,7,9,10,12,13,15,16,18,19,21,23,25,26,27,28
+  [CONFIRMED] Littleton /  t=15 v=6 b=10 pp=1,2,3,4,5,6
+  [CONFIRMED] Littleton /  t=17 v=5 b=6 pp=1,2,10,11,12,13,15
+  [CONFIRMED] Littleton /  t=14 v=3 b=3 pp=1,2,3
+  [CONFIRMED] Littleton /  t=22 v=2 b=8 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+  [PROBABLE] Littleton /  t=7 v=0 b=16 pp=1
+  [CONFIRMED] Littleton / 2023 t=215 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+  [CONFIRMED] Lowell zoning/  t=20 v=2 b=7 pp=2,6,7,9,10,15,16
+  [PROBABLE] Lunenburg /  t=8 v=0 b=1 pp=1,2,3,5
+  [PROBABLE] Lunenburg /  t=8 v=0 b=1 pp=1,2,3,5
+  [PROBABLE] Lunenburg /  t=8 v=0 b=1 pp=1,2,3,5
+  [PROBABLE] Lunenburg /  t=8 v=0 b=1 pp=1,2,3,5
+  [PROBABLE] Lunenburg /  t=1 v=9 b=0 pp=1
+  [PROBABLE] Lunenburg /  t=1 v=19 b=0 pp=1
+  [PROBABLE] Lunenburg /  t=1 v=7 b=0 pp=1
+  [PROBABLE] Lunenburg /  t=1 v=7 b=0 pp=1
+  [PROBABLE] Lunenburg /  t=2 v=0 b=3 pp=1,14
+  [PROBABLE] Lunenburg /  t=1 v=9 b=0 pp=1
+  [CONFIRMED] Lynnfield / 2024 t=14 v=5 b=15 pp=1,2,3
+  [CONFIRMED] Lynnfield select_board/ 2024 t=2 v=2 b=9 pp=1
+  [CONFIRMED] Lynnfield zoning/  t=17 v=7 b=1 pp=1,2,3,4,5,6
+  [CONFIRMED] Lynnfield zoning/  t=216 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,26
+  [CONFIRMED] Lynnfield zoning/ 2024 t=14 v=3 b=7 pp=1,2,3,4
+  [CONFIRMED] Malden /  t=204 v=4 b=1 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,25,26
+  [CONFIRMED] Malden /  t=204 v=4 b=1 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,25,26
+  [PROBABLE] Malden /  t=42 v=25 b=0 pp=1,2,3,4,6,7,8,9,10,12,13,14,15,16,18,19,21,24,25,27
+  [CONFIRMED] Malden / 2022 t=202 v=5 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,26,27
+  [CONFIRMED] Malden / 2022 t=202 v=5 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,26,27
+  [CONFIRMED] Malden / 2023 t=213 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [CONFIRMED] Malden / 2023 t=213 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [CONFIRMED] Malden / 2025 t=10 v=5 b=1 pp=1,2,3
+  [PROBABLE] Malden city_council/ 2022 t=63 v=0 b=2 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+  [PROBABLE] Malden city_council/ 2023 t=29 v=0 b=6 pp=1,2,3,4,5,6,7,8,9,10,11
+  [CONFIRMED] Manchester /  t=146 v=1 b=1 pp=1,2,3,4,5,6,7,8,9,10,11
+  [PROBABLE] Manchester /  t=27 v=4 b=0 pp=1,2,3,4,5,6,7,14,18,19,20,21,22
+  [CONFIRMED] Manchester /  t=213 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [CONFIRMED] Manchester /  t=213 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [PROBABLE] Manchester /  t=15 v=1 b=0 pp=1
+  [CONFIRMED] Manchester /  t=8 v=4 b=1 pp=1,2,3
+  [CONFIRMED] Manchester / 2022 t=69 v=6 b=1 pp=1,2,3,4,5,6,7,8,9
+  [CONFIRMED] Manchester / 2022 t=12 v=3 b=1 pp=1,3,4,5,7
+  [PROBABLE] Manchester / 2022 t=7 v=0 b=1 pp=1
+  [CONFIRMED] Mansfield /  t=69 v=6 b=1 pp=1,2,3,4,5,6,7,8,9
+  [CONFIRMED] Mansfield / 2024 t=10 v=3 b=2 pp=1,2
+  [CONFIRMED] Mansfield zoning/  t=20 v=9 b=39 pp=1
+  [PROBABLE] Marblehead /  t=3 v=0 b=8 pp=1
+  [PROBABLE] Marblehead /  t=6 v=0 b=8 pp=1
+  [CONFIRMED] Marblehead /  t=4 v=1 b=11 pp=1
+  [CONFIRMED] Marblehead / 2025 t=11 v=4 b=3 pp=1,3,19,20
+  [CONFIRMED] Marblehead / 2025 t=11 v=4 b=3 pp=1,3,19,20
+  [PROBABLE] Marblehead planning_board/ 2024 t=2 v=0 b=11 pp=1
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'cms3.revize.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [CONFIRMED] Marshfield select_board/  t=7 v=2 b=6 pp=1
+  ... 800/1626  {'CONFIRMED': 174, 'FETCH_FAIL': 178, 'NO': 322, 'TOPIC_ONLY': 40, 'PROBABLE': 86}
+  [CONFIRMED] Maynard town_meeting/minutes 2024 t=6 v=359 b=103 pp=41,45,46,47
+  [CONFIRMED] Medfield / 2023 t=10 v=2 b=4 pp=1,2,3
+  [CONFIRMED] Medfield zoning/  t=12 v=1 b=17 pp=1
+  [PROBABLE] Medway /  t=2 v=0 b=1 pp=1
+  [PROBABLE] Medway /  t=7 v=0 b=3 pp=1
+  [PROBABLE] Medway /  t=6 v=0 b=2 pp=1
+  [PROBABLE] Medway /  t=7 v=0 b=3 pp=1
+  [CONFIRMED] Medway /notice  t=4 v=1 b=1 pp=1
+  [CONFIRMED] Medway /notice  t=2 v=1 b=1 pp=1
+  [CONFIRMED] Medway /notice  t=6 v=1 b=2 pp=1
+  [CONFIRMED] Medway /notice  t=4 v=1 b=1 pp=1
+  [CONFIRMED] Melrose /  t=9 v=4 b=1 pp=1,2,3
+  [PROBABLE] Melrose /  t=14 v=0 b=1 pp=1
+  [CONFIRMED] Merrimac /  t=3 v=1 b=6 pp=1
+  [CONFIRMED] Merrimac /bylaw  t=5 v=1 b=6 pp=1
+  [PROBABLE] Methuen /  t=85 v=0 b=2 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+  [PROBABLE] Methuen /  t=85 v=0 b=2 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+  [PROBABLE] Methuen city_council/ 2024 t=43 v=0 b=10 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [PROBABLE] Methuen city_council/ 2024 t=43 v=0 b=10 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [PROBABLE] Methuen city_council/ 2024 t=43 v=0 b=10 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [CONFIRMED] Methuen zoning/  t=24 v=2 b=5 pp=1
+  [CONFIRMED] Middleborough zoning/  t=9 v=1 b=3 pp=1,2,3,4,5
+  [PROBABLE] Middleton / 2024 t=10 v=1 b=0 pp=1
+  [CONFIRMED] Millbury town_meeting/warrant  t=10 v=199 b=116 pp=21,24,28,31
+  [CONFIRMED] Millbury town_meeting/warrant  t=11 v=51 b=49 pp=2,12,13,16,17
+  [PROBABLE] Milton town_meeting/warrant  t=40 v=0 b=4 pp=1,2,3,5,6,7,8,9,10,11,12,13,14,15,16,17,22,23,24,25
+  [CONFIRMED] Milton town_meeting/warrant  t=29 v=19 b=28 pp=1,2,3,30,31,32,33,34
+  [PROBABLE] Milton town_meeting/warrant  t=40 v=0 b=4 pp=1,2,3,5,6,7,8,9,10,11,12,13,14,15,16,17,22,23,24,25
+  [CONFIRMED] Milton town_meeting/warrant  t=29 v=19 b=28 pp=1,2,3,30,31,32,33,34
+  [CONFIRMED] Milton /  t=40 v=2 b=2 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+  [CONFIRMED] Milton /  t=35 v=4 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,27,28,29,30,31
+  [CONFIRMED] Milton /  t=12 v=3 b=2 pp=1,2,3,4,5,16,17,18,19,20,21,22
+  [CONFIRMED] Milton /  t=41 v=2 b=4 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+  [PROBABLE] Nahant /  t=6 v=0 b=2 pp=1
+  [PROBABLE] Nahant /  t=8 v=0 b=3 pp=1
+  [CONFIRMED] Nahant / 2022 t=8 v=2 b=2 pp=1,2,3
+  [PROBABLE] Nahant / 2022 t=8 v=0 b=3 pp=1
+  [PROBABLE] Nahant / 2026 t=12 v=0 b=3 pp=1
+  [PROBABLE] Nahant planning_board/notice 2025 t=8 v=0 b=7 pp=1
+  [PROBABLE] Nahant zoning/  t=26 v=0 b=4 pp=1
+  [CONFIRMED] Nahant zoning/ 2025 t=7 v=1 b=6 pp=1,2
+  [PROBABLE] Nahant zoning/ 2025 t=12 v=0 b=4 pp=1,2
+  [CONFIRMED] Needham /  t=51 v=6 b=1 pp=1,2,3,4,5,6,7
+  [CONFIRMED] Needham /  t=5 v=4 b=6 pp=1
+  [CONFIRMED] Needham /  t=14 v=1 b=6 pp=1,2,3,4,5,6,7
+  [CONFIRMED] Needham /  t=11 v=2 b=2 pp=1,2,3,4
+  [CONFIRMED] Needham /  t=21 v=4 b=13 pp=1,2,3,4,5,7,10,12,16,23
+  [CONFIRMED] Needham /  t=3 v=1 b=10 pp=1
+  [CONFIRMED] Needham /  t=4 v=1 b=11 pp=1
+  [CONFIRMED] Needham /  t=3 v=1 b=7 pp=1
+  [CONFIRMED] Newbury /  t=6 v=1 b=4 pp=1,2
+  [CONFIRMED] Newbury zoning/  t=28 v=3 b=19 pp=1
+  [CONFIRMED] Newbury zoning/  t=28 v=3 b=19 pp=1
+  [CONFIRMED] Newburyport / 2024 t=54 v=5 b=5 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.newtonma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [PROBABLE] North Andover /  t=8 v=0 b=12 pp=1
+  [CONFIRMED] North Andover zoning/  t=27 v=4 b=15 pp=1
+  [CONFIRMED] North Attleborough zoning/bylaw 2025 t=9 v=2 b=7 pp=1,2
+  [CONFIRMED] Northborough town_meeting/minutes 2024 t=2 v=874 b=150 pp=44
+  [CONFIRMED] Northborough town_meeting/warrant 2024 t=2 v=654 b=139 pp=33
+  [CONFIRMED] Northborough town_meeting/warrant 2024 t=2 v=214 b=42 pp=24
+  ... 1000/1626  {'CONFIRMED': 213, 'FETCH_FAIL': 231, 'NO': 404, 'TOPIC_ONLY': 45, 'PROBABLE': 107}
+  [CONFIRMED] North Reading /  t=23 v=6 b=20 pp=1
+  [CONFIRMED] Norwood /  t=20 v=11 b=30 pp=1
+  [CONFIRMED] Norwood /  t=17 v=4 b=32 pp=1
+  [PROBABLE] Peabody zoning/  t=6 v=0 b=6 pp=1,7
+  [PROBABLE] Plymouth /  t=11 v=5 b=0 pp=2,4,5,7,11,15,16,18
+  [PROBABLE] Plymouth /  t=1 v=0 b=1 pp=1
+  [CONFIRMED] Plymouth /  t=7 v=2 b=8 pp=1
+  [CONFIRMED] Plymouth zoning/bylaw 2024 t=14 v=7 b=16 pp=1,2,3,4,5,6,7
+  [CONFIRMED] Plymouth town_meeting/minutes 2024 t=3 v=301 b=120 pp=25
+  [CONFIRMED] Plympton town_meeting/minutes  t=5 v=159 b=57 pp=11,12,16
+  [PROBABLE] Randolph /  t=9 v=0 b=2 pp=1
+  [PROBABLE] Reading /  t=1 v=40 b=0 pp=1
+  [PROBABLE] Reading /  t=1 v=12 b=0 pp=1
+  [CONFIRMED] Reading /  t=9 v=6 b=5 pp=1,2,3
+  [PROBABLE] Reading /  t=3 v=3 b=0 pp=1
+  [CONFIRMED] Rehoboth town_meeting/warrant 2023 t=2 v=18 b=26 pp=4
+  [CONFIRMED] Rehoboth town_meeting/warrant 2025 t=11 v=23 b=38 pp=2,6,8,13
+  [CONFIRMED] Rockland /  t=3 v=1 b=1 pp=1
+  [CONFIRMED] Rockland /  t=3 v=1 b=1 pp=1
+  [CONFIRMED] Rockland /  t=22 v=5 b=4 pp=1,2,3,4
+  [CONFIRMED] Rockland /  t=22 v=5 b=4 pp=1,2,3,4
+  [CONFIRMED] Rockland /  t=4 v=1 b=1 pp=1,2
+  [CONFIRMED] Rockland /  t=29 v=11 b=5 pp=1,2,3,4,5
+  [CONFIRMED] Rockland /  t=32 v=19 b=11 pp=1,2,3,4,5,6
+  [CONFIRMED] Rockland / 2024 t=4 v=1 b=2 pp=1,2
+  [CONFIRMED] Rockland zoning/  t=15 v=7 b=36 pp=1,2,14
+  [CONFIRMED] Rockport / 2022 t=204 v=4 b=1 pp=1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,25,26
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.townofrowley.net'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  ... 1200/1626  {'CONFIRMED': 233, 'FETCH_FAIL': 320, 'NO': 486, 'TOPIC_ONLY': 47, 'PROBABLE': 114}
+  [PROBABLE] Saugus /  t=21 v=5 b=0 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14
+  [CONFIRMED] Seekonk town_meeting/minutes  t=2 v=211 b=64 pp=20
+  [CONFIRMED] Seekonk town_meeting/minutes  t=2 v=205 b=54 pp=10
+  [CONFIRMED] Sharon /  t=18 v=1 b=1 pp=1,2,3,4,5
+  [PROBABLE] Sharon / 2023 t=9 v=0 b=1 pp=1,2,3,4,5,6,7,10,11
+  [CONFIRMED] Sherborn town_meeting/warrant 2025 t=10 v=1 b=5 pp=1,2,3,10
+  [CONFIRMED] Sherborn /  t=3 v=6 b=5 pp=1,2,8
+  [CONFIRMED] Sherborn / 2024 t=17 v=1 b=2 pp=1,2,3,7,8,9,10,13,16,17,19,25,35,47
+  [CONFIRMED] Sherborn / 2024 t=35 v=4 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+  [CONFIRMED] Sherborn / 2024 t=9 v=1 b=10 pp=1,2
+  [PROBABLE] Sherborn /bylaw 2024 t=8 v=0 b=5 pp=1,2
+  [PROBABLE] Shirley /bylaw  t=5 v=0 b=5 pp=1
+  [CONFIRMED] Shirley planning_board/bylaw 2024 t=8 v=2 b=8 pp=1,2,3,4
+  [PROBABLE] Shrewsbury / 2023 t=27 v=4 b=0 pp=1,2,3,4,5,6,7,14,18,19,20,21,22
+  [CONFIRMED] Shrewsbury zoning/  t=213 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [PROBABLE] Shrewsbury zoning/  t=5 v=2 b=0 pp=1
+  [CONFIRMED] Shrewsbury zoning/  t=5 v=1 b=2 pp=1
+  [PROBABLE] Shrewsbury zoning/  t=20 v=0 b=7 pp=1
+  [CONFIRMED] Southborough /  t=204 v=5 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,24,25
+  [CONFIRMED] Southborough /  t=69 v=6 b=1 pp=1,2,3,4,5,6,7,8,9
+  [CONFIRMED] Southborough /  t=99 v=10 b=16 pp=1,2,3,4,5,6,7,8,10,11,12,13,14,16,17,18,19,20,21,22
+  [CONFIRMED] Sterling town_meeting/minutes 2025 t=11 v=111 b=45 pp=2,3,6
+  [PROBABLE] Stow /  t=24 v=5 b=0 pp=1,2
+  [PROBABLE] Stow /  t=1 v=0 b=1 pp=1
+  [CONFIRMED] Stow /  t=3 v=1 b=1 pp=1
+  [CONFIRMED] Stow /  t=32 v=9 b=16 pp=1,2,4,5,6,7,8,9,11
+  [CONFIRMED] Stow /  t=20 v=4 b=3 pp=1,2,3,6,8
+  [CONFIRMED] Stow /  t=9 v=1 b=5 pp=1
+  [PROBABLE] Stow /  t=9 v=0 b=4 pp=1
+  [PROBABLE] Sutton /  t=9 v=0 b=2 pp=1,2
+  [CONFIRMED] Sutton /  t=11 v=1 b=12 pp=1
+  [PROBABLE] Sutton /  t=9 v=0 b=2 pp=1,2
+  [CONFIRMED] Sutton /  t=11 v=1 b=12 pp=1
+  [CONFIRMED] Tewksbury /  t=4 v=1 b=6 pp=1,3
+  [PROBABLE] Tewksbury /  t=6 v=0 b=1 pp=1,2,5
+  [CONFIRMED] Tewksbury /  t=5 v=1 b=6 pp=1,2,14
+  [CONFIRMED] Tewksbury /  t=13 v=5 b=3 pp=1,2,3,4,5,7
+  [CONFIRMED] Tewksbury /  t=5 v=1 b=6 pp=1,2,14
+  [CONFIRMED] Tewksbury / 2023 t=8 v=1 b=5 pp=1,3,4
+  [PROBABLE] Tewksbury select_board/  t=7 v=0 b=6 pp=1,3,6,7
+  [PROBABLE] Topsfield /  t=13 v=1 b=0 pp=1,2
+  [PROBABLE] Topsfield /  t=11 v=0 b=13 pp=1
+  [PROBABLE] Topsfield /bylaw  t=13 v=1 b=0 pp=1,2
+  ... 1400/1626  {'CONFIRMED': 259, 'FETCH_FAIL': 364, 'NO': 583, 'TOPIC_ONLY': 63, 'PROBABLE': 131}
+  [CONFIRMED] Tyngsborough /  t=22 v=2 b=12 pp=1
+  [PROBABLE] Tyngsborough zoning/  t=10 v=0 b=3 pp=1,2
+  [PROBABLE] Tyngsborough zoning/ 2024 t=10 v=0 b=2 pp=1,2,3
+  [PROBABLE] Tyngsborough zoning/ 2024 t=11 v=0 b=2 pp=1,2,3
+  [CONFIRMED] Upton town_meeting/warrant  t=18 v=5 b=10 pp=1,3
+  [CONFIRMED] Upton town_meeting/warrant  t=18 v=5 b=10 pp=1,3
+  [CONFIRMED] Upton town_meeting/warrant  t=17 v=2 b=6 pp=1,2,3
+  [CONFIRMED] Wareham town_meeting/minutes  t=1 v=151 b=83 pp=24
+  [CONFIRMED] Wareham town_meeting/minutes  t=1 v=151 b=83 pp=24
+  [CONFIRMED] Wareham town_meeting/minutes  t=1 v=151 b=83 pp=24
+  [CONFIRMED] Wareham town_meeting/minutes  t=1 v=151 b=83 pp=24
+  [CONFIRMED] Wayland zoning/  t=22 v=3 b=10 pp=1
+  [CONFIRMED] Wayland zoning/  t=22 v=3 b=10 pp=1
+  [CONFIRMED] Wayland zoning/bylaw  t=5 v=31 b=18 pp=1,7,9
+  [CONFIRMED] Wellesley /  t=12 v=7 b=9 pp=1,2,4,5,6
+  [CONFIRMED] Wellesley town_meeting/ 2024 t=9 v=19 b=3 pp=1,2,3,9,16,17
+  [CONFIRMED] Wenham /  t=6 v=1 b=5 pp=1,3,4,5
+  [CONFIRMED] Wenham /  t=3 v=3 b=1 pp=1
+  [PROBABLE] Wenham /  t=21 v=0 b=3 pp=1
+  [PROBABLE] Wenham / 2023 t=16 v=0 b=6 pp=1
+  [PROBABLE] Wenham / 2024 t=5 v=0 b=6 pp=2,3,7,12,14
+  [CONFIRMED] Wenham / 2025 t=10 v=7 b=4 pp=1,4,6
+  [CONFIRMED] Westford /  t=44 v=6 b=4 pp=1,2,9,10,12,14,15,16,18,19,20,21,22,24,26,28,29
+  [CONFIRMED] Westford /  t=4 v=1 b=4 pp=1
+  [PROBABLE] Westford /  t=14 v=0 b=2 pp=1,2,3,4
+  [CONFIRMED] Westford /  t=43 v=3 b=10 pp=1,2,4,5,6,7,8,10,11,12,14,15,16,17,18,19,20,27,30,31
+  [PROBABLE] Westford /  t=3 v=1 b=0 pp=1,2
+  [CONFIRMED] Westford /  t=4 v=1 b=4 pp=1
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.westminster-ma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [CONFIRMED] West Newbury /  t=27 v=13 b=2 pp=1,3,4,5,6,8,9,11
+  [CONFIRMED] West Newbury /  t=18 v=4 b=62 pp=1,3,4,6,36,38,39
+  [PROBABLE] West Newbury /  t=3 v=0 b=4 pp=1,2,3
+  [CONFIRMED] West Newbury / 2023 t=213 v=8 b=1 pp=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+  [CONFIRMED] West Newbury / 2023 t=6 v=1 b=1 pp=1,2
+  [PROBABLE] West Newbury / 2025 t=19 v=3 b=0 pp=1,2,3,4,5,6
+  [PROBABLE] Weston /  t=9 v=1 b=0 pp=1,2
+  [CONFIRMED] Weston zoning/  t=9 v=5 b=12 pp=1
+  [PROBABLE] Weston zoning/bylaw  t=1 v=0 b=1 pp=3
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.townhall.westwood.ma.us'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.townhall.westwood.ma.us'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  [PROBABLE] Weymouth city_council/report  t=1 v=4 b=0 pp=3
+  [CONFIRMED] Winthrop /  t=14 v=1 b=18 pp=1
+  [PROBABLE] Winthrop /  t=8 v=1 b=0 pp=1
+  [PROBABLE] Winthrop /  t=10 v=0 b=3 pp=1
+  [CONFIRMED] Winthrop /  t=14 v=1 b=18 pp=1
+  [CONFIRMED] Winthrop / 2024 t=8 v=1 b=1 pp=1
+  [CONFIRMED] Winthrop / 2025 t=15 v=12 b=20 pp=1,3,4,5,6,7
+  [CONFIRMED] Winthrop city_council/ 2024 t=13 v=2 b=1 pp=1
+  [CONFIRMED] Winthrop zoning/  t=15 v=1 b=3 pp=1,2,3,4,5,6,7,8,9
+  [CONFIRMED] Winthrop zoning/ 2024 t=17 v=1 b=6 pp=1
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Owner\documents\muni-harvest\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'woburnma.gov'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+  ... 1600/1626  {'CONFIRMED': 291, 'FETCH_FAIL': 412, 'NO': 680, 'TOPIC_ONLY': 71, 'PROBABLE': 146}
+  [CONFIRMED] Wrentham /  t=8 v=4 b=11 pp=2,8,9,10,15
+  [PROBABLE] Wrentham /  t=4 v=1 b=0 pp=1
+
+done. verdicts: {'CONFIRMED': 292, 'FETCH_FAIL': 416, 'NO': 700, 'TOPIC_ONLY': 71, 'PROBABLE': 147}
+wrote mbtac_screen.csv

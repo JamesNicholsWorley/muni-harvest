@@ -1,0 +1,1606 @@
+
+===== PAGE 1 =====
+ 
+Issue Date: August 10, 2022 
+ 
+Compliance Guidelines for Multi-family Zoning Districts 
+Under Section 3A of the Zoning Act 
+ 
+ 
+1. 
+Overview of Section 3A of the Zoning Act 
+ 
+Section 3A of the Zoning Act provides:  An MBTA community shall have a zoning 
+ordinance or by-law that provides for at least 1 district of reasonable size in which multi-family 
+housing is permitted as of right; provided, however, that such multi-family housing shall be without 
+age restrictions and shall be suitable for families with children. For the purposes of this section, a 
+district of reasonable size shall: (i) have a minimum gross density of 15 units per acre, subject to 
+any further limitations imposed by section 40 of chapter 131 and title 5 of the state environmental 
+code established pursuant to section 13 of chapter 21A; and (ii) be located not more than 0.5 miles 
+from a commuter rail station, subway station, ferry terminal or bus station, if applicable. 
+ 
+The purpose of Section 3A is to encourage the production of multi-family housing by 
+requiring MBTA communities to adopt zoning districts where multi-family housing is allowed as of 
+right, and that meet other requirements set forth in the statute. 
+ 
+The Department of Housing and Community Development, in consultation with the 
+Massachusetts Bay Transportation Authority and the Massachusetts Department of Transportation, 
+is required to promulgate guidelines to determine if an MBTA community is in compliance with 
+Section 3A.  DHCD promulgated preliminary guidance on January 29, 2021.  DHCD updated that 
+preliminary guidance on December 15, 2021, and on that same date issued draft guidelines for 
+public comment.  These final guidelines supersede all prior guidance and set forth how MBTA 
+communities may achieve compliance with Section 3A. 
+ 
+2. 
+Definitions 
+ 
+“Adjacent community” means an MBTA community that (i) has within its boundaries less 
+than 100 acres of developable station area, and (ii) is not an adjacent small town. 
+ 
+“Adjacent small town” means an MBTA community that (i) has within its boundaries less 
+than 100 acres of developable station area, and (ii) either has a population density of less than 500 
+persons per square mile, or a population of not more than 7,000 year-round residents as determined 
+in the most recently published United States Decennial Census of Population and Housing. 
+ 
+Commonwealth of Massachusetts 
+DEPARTMENT OF HOUSING & 
+COMMUNITY DEVELOPMENT 
+Charles D. Baker, Governor      Karyn E. Polito, Lt. Governor      Jennifer D. Maddox, Undersecretary 
+ 
+100 Cambridge Street, Suite 300 
+  
+ 
+www.mass.gov/dhcd 
+Boston, Massachusetts  02114 
+ 
+617.573.1100  
+
+===== PAGE 2 =====
+ 
+2 
+“Affordable unit” means a multi-family housing unit that is subject to an affordable housing 
+restriction with a term of no less than 30 years and eligible for inclusion on DHCD’s Subsidized 
+Housing Inventory. 
+ 
+“Age-restricted housing” means any housing unit encumbered by a title restriction requiring 
+a minimum age for some or all occupants. 
+ 
+“As of right” means development that may proceed under a zoning ordinance or by-law 
+without the need for a special permit, variance, zoning amendment, waiver, or other discretionary 
+zoning approval. 
+ 
+“Bus station” means a location with a passenger platform and other fixed infrastructure 
+serving as a point of embarkation for the MBTA Silver Line. Upon the request of an MBTA 
+community, DHCD, in consultation with the MBTA, may determine that other locations qualify as a 
+bus station if (i) such location has a sheltered platform or other fixed infrastructure serving a point 
+of embarkation for a high-capacity MBTA bus line, and (ii) the area around such fixed 
+infrastructure is highly suitable for multi-family housing. 
+ 
+“Commuter rail community” means an MBTA community that (i) does not meet the criteria 
+for a rapid transit community, and (ii) has within its borders at least 100 acres of developable station 
+area associated with one or more commuter rail stations.   
+ 
+“Commuter rail station” means any MBTA commuter rail station with year-round, rather 
+than intermittent, seasonal, or event-based, service, including stations under construction and 
+scheduled to being service before the end of 2023, but not including existing stations at which 
+service will be terminated, or reduced below regular year-round service, before the end of 2023. 
+ 
+“Compliance model” means the model created by DHCD to determine compliance with 
+Section 3A’s reasonable size, gross density, and location requirements.  The compliance model is 
+described in further detail in Appendix 2. 
+ 
+“Determination of compliance” means a determination made by DHCD as to whether an 
+MBTA community has a multi-family zoning district that complies with the requirements of Section 
+3A.  A determination of compliance may be determination of interim compliance or a determination 
+of district compliance, as described in section 9. 
+ 
+“Developable land” means land on which multi-family housing can be permitted and 
+constructed.  For purposes of these guidelines, developable land consists of: (i) all privately-owned 
+land except lots or portions of lots that meet the definition of excluded land, and (ii) developable 
+public land. 
+ 
+“Developable public land” means any publicly-owned land that (i) is used by a local housing 
+authority; (ii) has been identified as a site for housing development in a housing production plan 
+approved by DHCD; or (iii) has been designated by the public owner for disposition and 
+redevelopment. Other publicly-owned land may qualify as developable public land if DHCD 
+determines, at the request of an MBTA community and after consultation with the public owner, 
+that such land is the location of obsolete structures or uses, or otherwise is suitable for conversion to 
+
+===== PAGE 3 =====
+ 
+3 
+multi-family housing, and will be converted to or made available for multi-family housing within a 
+reasonable period of time. 
+ 
+ 
+“Developable station area” means developable land that is within 0.5 miles of a transit 
+station. 
+ 
+“DHCD” means the Department of Housing and Community Development. 
+ 
+“EOHED” means the Executive Office of Housing and Economic Development. 
+ 
+“Excluded land” means land areas on which it is not possible or practical to construct multi-
+family housing.  For purposes of these guidelines, excluded land is defined by reference to the 
+ownership, use codes, use restrictions, and hydrological characteristics in MassGIS and consists of 
+the following: 
+ 
+(i) 
+All publicly-owned land, except for lots or portions of lots determined to be 
+developable public land. 
+(ii) 
+All rivers, streams, lakes, ponds and other surface waterbodies. 
+(iii) 
+All wetland resource areas, together with a buffer zone around wetlands and 
+waterbodies equivalent to the minimum setback required by title 5 of the state 
+environmental code. 
+(iv) 
+Protected open space and recreational land that is legally protected in perpetuity (for 
+example, land owned by a local land trust or subject to a conservation restriction), or 
+that is likely to remain undeveloped due to functional or traditional use (for example, 
+cemeteries). 
+(v) 
+All public rights-of-way and private rights-of-way. 
+(vi) 
+Privately-owned land on which development is prohibited to protect private or public 
+water supplies, including, but not limited to, Zone I wellhead protection areas and 
+Zone A surface water supply protection areas. 
+(vii) 
+Privately-owned land used for educational or institutional uses such as a hospital, 
+prison, electric, water, wastewater or other utility, museum, or private school, college 
+or university. 
+ 
+“Ferry terminal” means the location where passengers embark and disembark from regular, 
+year-round MBTA ferry service.   
+ 
+“Gross density” means a units-per-acre density measurement that includes land occupied by 
+public rights-of-way and any recreational, civic, commercial, and other nonresidential uses. 
+ 
+“Housing suitable for families” means housing comprised of residential dwelling units that 
+are not age-restricted housing, and for which there are no zoning restriction on the number of 
+bedrooms, the size of bedrooms, or the number of occupants. 
+ 
+“Listed funding sources” means (i) the Housing Choice Initiative as described by the 
+governor in a message to the general court dated December 11, 2017; (ii) the Local Capital Projects 
+Fund established in section 2EEEE of chapter 29; and (iii) the MassWorks infrastructure program 
+established in section 63 of chapter 23A.   
+
+===== PAGE 4 =====
+ 
+4 
+“Lot” means an area of land with definite boundaries that is used or available for use as the 
+site of a building or buildings.   
+ 
+“MassGIS data” means the comprehensive, statewide database of geospatial information and 
+mapping functions maintained by the Commonwealth's Bureau of Geographic Information, within 
+the Executive Office of Technology Services and Security, including the lot boundaries and use 
+codes provided by municipalities. 
+ 
+“MBTA” means the Massachusetts Bay Transportation Authority. 
+  
+“MBTA community” means a city or town that is: (i) one of the 51 cities and towns as 
+defined in section 1 of chapter 161A; (ii) one of the 14 cities and towns as defined in said section 1 
+of said chapter 161A; (iii) other served communities as defined in said section 1 of said chapter 
+161A; or (iv) a municipality that has been added to the Massachusetts Bay Transportation Authority 
+under section 6 of chapter 161A or in accordance with any special law relative to the area 
+constituting the authority. 
+ 
+“Multi-family housing” means a building with 3 or more residential dwelling units or 2 or 
+more buildings on the same lot with more than 1 residential dwelling unit in each building. 
+ 
+“Multi-family unit capacity” means an estimate of the total number of multi-family housing 
+units that can be developed as of right within a multi-family zoning district, made in accordance 
+with the requirements of section 5.b below. 
+ 
+“Multi-family zoning district” means a zoning district, including a base district or an overlay 
+district, in which multi-family housing is allowed as of right; provided that the district shall be in a 
+fixed location or locations, and shown on a map that is part of the zoning ordinance or by-law. 
+ 
+ 
+“One Stop Application” means the single application portal for the Community One Stop for 
+Growth through which (i) the Executive Office of Housing and Economic Development considers 
+requests for funding from the MassWorks infrastructure program; (ii) DHCD considers requests for 
+funding from the Housing Choice Initiative, (iii) EOHED, DHCD and other state agencies consider 
+requests for funding from other discretionary grant programs. 
+ 
+ 
+“Private rights-of-way” means land area within which private streets, roads and other ways 
+have been laid out and maintained, to the extent such land areas can be reasonably identified by 
+examination of available tax parcel data.   
+ 
+ 
+“Publicly-owned land” means (i) any land owned by the United States or a federal agency or 
+authority; (ii) any land owned by the Commonwealth of Massachusetts or a state agency or 
+authority; and (iii) any land owned by a municipality or municipal board or authority. 
+ 
+ 
+“Public rights-of-way” means land area within which public streets, roads and other ways 
+have been laid out and maintained, to the extent such land areas can be reasonably identified by 
+examination of available tax parcel data.   
+ 
+
+===== PAGE 5 =====
+ 
+5 
+ 
+“Rapid transit community” means an MBTA community that has within its borders at least 
+100 acres of developable station area associated with one or more subway stations, or MBTA Silver 
+Line bus rapid transit stations. 
+ 
+“Residential dwelling unit” means a single unit providing complete, independent living 
+facilities for one or more persons, including permanent provisions for living, sleeping, eating, 
+cooking and sanitation. 
+ 
+“Section 3A” means section 3A of the Zoning Act. 
+ 
+“Sensitive land” means developable land that, due to its soils, slope, hydrology, or other 
+physical characteristics, has significant conservation values that could be impaired, or 
+vulnerabilities that could be exacerbated, by the development of multi-family housing.  It also 
+includes locations where multi-family housing would be at increased risk of damage caused by 
+flooding.  Sensitive land includes, but is not limited to, wetland buffer zones extending beyond the 
+title 5 setback area; land subject to flooding that is not a wetland resource area; priority habitat for 
+rare or threatened species; DEP-approved wellhead protection areas in which development may be 
+restricted, but is not prohibited (Zone II and interim wellhead protection areas); and land areas with 
+prime agricultural soils that are in active agricultural use.  
+ 
+“Site plan review” means a process established by local ordinance or by-law by which a 
+local board reviews, and potentially imposes conditions on, the appearance and layout of a specific 
+project prior to the issuance of a building permit.   
+ 
+“Subway station” means any of the stops along the MBTA Red Line, Green Line, Orange 
+Line, or Blue Line, including any extensions to such lines now under construction and scheduled to 
+begin service before the end of 2023. 
+ 
+“Transit station” means an MBTA subway station, commuter rail station, ferry terminal or 
+bus station.  
+ 
+“Transit station area” means the land area within 0.5 miles of a transit station. 
+ 
+“Zoning Act” means chapter 40A of the Massachusetts General Laws. 
+ 
+3. 
+General Principles of Compliance 
+ 
+These compliance guidelines describe how an MBTA community can comply with the 
+requirements of Section 3A.  The guidelines specifically address: 
+ 
+• What it means to allow multi-family housing “as of right.” 
+ 
+• The metrics that determine if a multi-family zoning district is “of reasonable size.” 
+ 
+• How to determine if a multi-family zoning district has a minimum gross density of 15 
+units per acre, subject to any further limitations imposed by section 40 of chapter 
+131 and title 5 of the state environmental code. 
+
+===== PAGE 6 =====
+ 
+6 
+• The meaning of Section 3A’s mandate that “such multi-family housing shall be without 
+age restrictions and shall be suitable for families with children.” 
+ 
+• The extent to which MBTA communities have flexibility to choose the location of a 
+multi-family zoning district. 
+ 
+The following general principles have informed the more specific compliance criteria that 
+follow: 
+ 
+• MBTA communities with subway stations, commuter rail stations and other transit 
+stations benefit from having these assets located within their boundaries and should 
+provide opportunity for multi-family housing development around these assets.  MBTA 
+communities with no transit stations within their boundaries benefit from proximity to 
+transit stations in nearby communities.  
+ 
+• The multi-family zoning districts required by Section 3A should encourage the 
+development of multi-family housing projects of a scale, density and aesthetic that are 
+compatible with existing surrounding uses, and minimize impacts to sensitive land.   
+ 
+• “Reasonable size” is a relative rather than an absolute determination.  Because of the 
+diversity of MBTA communities, a multi-family zoning district that is “reasonable” in 
+one city or town may not be reasonable in another city or town.   
+ 
+• When possible, multi-family zoning districts should be in areas that have safe, 
+accessible, and convenient access to transit stations for pedestrians and bicyclists.  
+ 
+4. 
+Allowing Multi-Family Housing “As of Right”  
+ 
+ 
+To comply with Section 3A, a multi-family zoning district must allow multi-family housing 
+“as of right,” meaning that the construction and occupancy of multi-family housing is allowed in 
+that district without the need for a special permit, variance, zoning amendment, waiver, or other 
+discretionary approval.  DHCD will determine whether zoning provisions allow for multi-family 
+housing as of right consistent with the following guidelines. 
+ 
+ 
+a. 
+Site plan review 
+ 
+The Zoning Act does not establish nor recognize site plan review as an independent method 
+of regulating land use. However, the Massachusetts courts have recognized site plan review as a 
+permissible regulatory tool, including for uses that are permitted as of right.  The court decisions 
+establish that when site plan review is required for a use permitted as of right, site plan review 
+involves the regulation of a use and not its outright prohibition.  The scope of review is therefore 
+limited to imposing reasonable terms and conditions on the proposed use, consistent with applicable 
+case law.1  These guidelines similarly recognize that site plan review may be required for multi-
+ 
+1   See, e.g., Y.D. Dugout, Inc. v. Board of Appeals of Canton, 357 Mass. 25 (1970); Prudential Insurance Co. of 
+America v. Board of Appeals of Westwood, 23 Mass. App. Ct. 278 (1986); Osberg v. Planning Bd. of Sturbridge, 44 
+Mass. App. Ct. 56, 59 (1997) (Planning Board “may impose reasonable terms and conditions on the proposed use, but it 
+does not have discretionary power to deny the use”). 
+
+===== PAGE 7 =====
+ 
+7 
+family housing projects that are allowed as of right, within the parameters established by the 
+applicable case law.  Site plan approval may regulate matters such as vehicular access and 
+circulation on a site, architectural design of a building, and screening of adjacent properties.  Site 
+plan review should not unreasonably delay a project nor impose conditions that make it infeasible or 
+impractical to proceed with a project that is allowed as of right and complies with applicable 
+dimensional regulations.   
+ 
+b. 
+Affordability requirements 
+ 
+Section 3A does not include any express requirement or authorization for an MBTA 
+community to require affordable units in a multi-family housing project that is allowed as of right.  
+It is a common practice in many cities and towns to require affordable units in a multi-family 
+project that requires a special permit, or as a condition for building at greater densities than the 
+zoning otherwise would allow.  These inclusionary zoning requirements serve the policy goal of 
+increasing affordable housing production.  If affordability requirements are excessive, however, 
+they can make it economically infeasible to construct new multi-family housing. 
+ 
+For purposes of making compliance determinations with Section 3A, DHCD will consider 
+an affordability requirement to be consistent with as of right zoning as long as: (i) any affordable 
+units required by the zoning are eligible to be listed on DHCD’s Subsidized Housing Inventory; (ii) 
+the zoning requires not more than 10 percent of the units in a project to be affordable units; and (iii) 
+the cap on the income of families or individuals who are eligible to occupy the affordable units is 
+not less than 80 percent of area median income.  Notwithstanding the foregoing, the percentage of 
+units required to be affordable units may be up to, but not more than, 20 percent of the units in a 
+project, only if (i) the affordability requirement applicable in the multi-family zoning district pre-
+dates the enactment of Section 3A and the MBTA community demonstrates to DHCD that the 
+affordability requirement has not made and will not make multi-family housing production 
+infeasible, or (ii) the multi-family zoning district requires DHCD review and approval as a smart 
+growth district under chapter 40R, or under another zoning incentive program administered by 
+DHCD. 
+ 
+c. 
+Other requirements that do not apply uniformly in the multi-family zoning district 
+ 
+Zoning will not be deemed compliant with Section 3A’s requirement that multi-family 
+housing be allowed as of right if the zoning imposes requirements on multi-family housing that are 
+not generally applicable to other uses.  The following are examples of requirements that would be 
+deemed to be inconsistent with “as of right” use: (i) a requirement that multi-family housing meet 
+higher energy efficiency standards than other uses; (ii) a requirement that a multi-family use 
+achieve a third party certification that is not required for other uses in the district; and (iii) a 
+requirement that multi-family use must be combined with commercial or other uses on the same lot 
+or as part of a single project.  Mixed use projects may be allowed as of right in a multi-family 
+zoning district, as long as multi-family housing is separately allowed as of right.   
+ 
+5. 
+Determining “Reasonable Size” 
+ 
+ 
+In making determinations of “reasonable size,” DHCD will take into consideration both the 
+land area of the multi-family zoning district, and the multi-family zoning district’s multi-family unit 
+capacity.   
+
+===== PAGE 8 =====
+ 
+8 
+a. 
+ Minimum land area 
+ 
+A zoning district is a specifically delineated land area with uniform regulations and 
+requirements governing the use of land and the placement, spacing, and size of buildings.  For 
+purposes of compliance with Section 3A, a multi-family zoning district should be a neighborhood-
+scale district, not a single development site on which the municipality is willing to permit a 
+particular multi-family project.  DHCD will certify compliance with Section 3A only if an MBTA 
+community’s multi-family zoning district meets the minimum land area applicable to that MBTA 
+community, if any, as set forth in Appendix 1.  The minimum land area for each MBTA community 
+has been determined as follows:  
+ 
+(i) 
+In rapid transit communities, commuter rail communities, and adjacent communities, 
+the minimum land area of the multi-family zoning district is 50 acres, or 1.5% of the 
+developable land in an MBTA community, whichever is less.  In certain cases, noted 
+in Appendix 1, a smaller minimum land area applies. 
+ 
+(ii) 
+In adjacent small towns, there is no minimum land area.  In these communities, the 
+multi-family zoning district may comprise as many or as few acres as the community 
+determines is appropriate, as long as the district meets the applicable minimum 
+multi-family unit capacity and the minimum gross density requirements. 
+ 
+In all cases, at least half of the multi-family zoning district land areas must comprise 
+contiguous lots of land.  No portion of the district that is less than 5 contiguous acres land will count 
+toward the minimum size requirement.  If the multi-family unit capacity and gross density 
+requirements can be achieved in a district of fewer than 5 acres, then the district must consist 
+entirely of contiguous lots. 
+ 
+b. 
+Minimum multi-family unit capacity 
+ 
+A reasonably sized multi-family zoning district must also be able to accommodate a 
+reasonable number of multi-family housing units as of right.  For purposes of determinations of 
+compliance with Section 3A, DHCD will consider a reasonable multi-family unit capacity for each 
+MBTA community to be a specified percentage of the total number of housing units within the 
+community, with the applicable percentage based on the type of transit service in the community, as 
+shown on Table 1:  
+ 
+Table 1. 
+Category 
+Percentage of total housing units 
+Rapid transit community 
+25% 
+Commuter rail community 
+15% 
+Adjacent community 
+10% 
+Adjacent small town 
+5% 
+ 
+To be deemed in compliance with Section 3A, each MBTA community must have a multi-
+family zoning district with a multi-family unit capacity equal to or greater than the minimum unit 
+capacity shown for it in Appendix 1.  The minimum multi-family unit capacity for each MBTA 
+community has been determined as follows: 
+
+===== PAGE 9 =====
+ 
+9 
+ 
+(i) 
+First, by multiplying the number of housing units in that community by 0.25, 0.15, 
+0.10, or .05 depending on the MBTA community category.  For example, a rapid 
+transit community with 7,500 housing units is required to have a multi-family zoning 
+district with a multi-family unit capacity of 7,500 x 0.25 = 1,875 multi-family units.  
+For purposes of these guidelines, the number of total housing units in each MBTA 
+community has been established by reference to the most recently published United 
+States Decennial Census of Population and Housing. 
+ 
+(ii) 
+Second, when there is a minimum land area applicable to an MBTA community, by 
+multiplying that minimum land area (up to 50 acres) by Section 3A’s minimum gross 
+density requirement of 15 units per acre.  The product of that multiplication creates a 
+floor on multi-family unit capacity.  For example, an MBTA community with a 
+minimum land area of 40 acres must have a district with a multi-family unit capacity 
+of at least 600 (40 x 15) units.   
+ 
+(iii) 
+The minimum unit capacity applicable to each MBTA community is the greater of 
+the numbers resulting from steps (i) and (ii) above, but subject to the following 
+limitation:  In no case does the minimum multi-family unit capacity exceed 25% of 
+the total housing units in that MBTA community.    
+ 
+Example:  The minimum multi-family unit capacity for an adjacent community with 1,000 
+housing units and a minimum land area of 50 acres is determined as follows:(i) first, by multiplying 
+1,000 x .1 = 100 units; (ii) second, by multiplying 50 x 15 = 750 units;(iii) by taking the larger 
+number, but adjusting that number down, if necessary, so that unit capacity is no more than 25% of 
+1,000 = 250 units.  In this case, the adjustment in step (iii) results in a minimum unit capacity of 
+250 units. 
+ 
+c. 
+Methodology for determining a multi-family zoning district’s multi-family unit 
+capacity 
+ 
+MBTA communities seeking a determination of compliance must use the DHCD 
+compliance model to provide an estimate of the number of multi-family housing units that can be 
+developed as of right within the multi-family zoning district.  The multi-family unit capacity of an 
+existing or proposed district shall be calculated using the unit capacity worksheet described in 
+Appendix 2.   This worksheet produces an estimate of a district’s multi-family unit capacity using 
+inputs such as the amount of developable land in the district, the dimensional requirements 
+applicable to lots and buildings (including, for example, height limitations, lot coverage limitations, 
+and maximum floor area ratio), and the parking space requirements applicable to multi-family uses.   
+ 
+Minimum unit capacity is a measure of whether a multi-family zoning district is of a 
+reasonable size, not a requirement to produce housing units.  Nothing in Section 3A or these 
+guidelines should be interpreted as a mandate to construct a specified number of housing units, nor 
+as a housing production target.  Demonstrating compliance with the minimum multi-family unit 
+capacity requires only that an MBTA community show that the zoning allows multi-family housing 
+as of right and that a sufficient number of multi-family housing units could be added to or replace 
+existing uses and structures over time—even though such additions or replacements may be 
+unlikely to occur soon.   
+
+===== PAGE 10 =====
+ 
+10 
+If an MBTA community has two or more zoning districts in which multi-family housing is 
+allowed as of right, then two or more districts may be considered cumulatively to meet the 
+minimum land area and minimum multi-family unit capacity requirements, as long as each district 
+independently complies with Section 3A’s other requirements. 
+ 
+d. 
+Water and wastewater infrastructure within the multi-family zoning district 
+ 
+MBTA communities are encouraged to consider the availability of water and wastewater 
+infrastructure when selecting the location of a new multi-family zoning district.  But compliance 
+with Section 3A does not require a municipality to install new water or wastewater infrastructure, or 
+add to the capacity of existing infrastructure, to accommodate future multi-family housing 
+production within the multi-family zoning district.  In most cases, multi-family housing can be 
+created using private septic and wastewater treatment systems that meet state environmental 
+standards.  Where public systems currently exist, but capacity is limited, private developers may be 
+able to support the cost of necessary water and sewer extensions.  While the zoning must allow for 
+gross average density of at least 15 units per acre, there may be other legal or practical limitations, 
+including lack of infrastructure or infrastructure capacity, that result in actual housing production at 
+lower density than the zoning allows. 
+ 
+The multi-family unit capacity analysis does not need to take into consideration limitations 
+on development resulting from existing water or wastewater infrastructure within the multi-family 
+zoning district, or, in areas not served by public sewer, any applicable limitations under title 5 of the 
+state environmental code.  For purposes of the unit capacity analysis, it is assumed that housing 
+developers will design projects that work within existing water and wastewater constraints, and that 
+developers, the municipality, or the Commonwealth will provide funding for infrastructure upgrades 
+as needed for individual projects.  
+ 
+6. 
+Minimum Gross Density 
+ 
+Section 3A expressly requires that a multi-family zoning district—not just the individual lots 
+of land within the district—must have a minimum gross density of 15 units per acre, subject to any 
+further limitations imposed by section 40 of chapter 131 and title 5 of the state environmental code 
+established pursuant to section 13 of chapter 21A.  The Zoning Act defines “gross density” as “a 
+units-per-acre density measurement that includes land occupied by public rights-of-way and any 
+recreational, civic, commercial and other nonresidential uses.” 
+ 
+a. 
+District-wide gross density 
+ 
+To meet the district-wide gross density requirement, the dimensional restrictions and 
+parking requirements for the multi-family zoning district must allow for a gross density of 15 units 
+per acre of land within the district.  By way of example, to meet that requirement for a 40-acre 
+multi-family zoning district, the zoning must allow for at least 15 multi-family units per acre, or a 
+total of at least 600 multi-family units.   
+ 
+For purposes of determining compliance with Section 3A’s gross density requirement, the 
+DHCD compliance model will not count in the denominator any excluded land located within the 
+multi-family zoning district, except public rights-of-way, private rights-of-way, and publicly-owned 
+land used for recreational, civic, commercial, and other nonresidential uses.  This method of 
+
+===== PAGE 11 =====
+ 
+11 
+calculating minimum gross density respects the Zoning Act’s definition of gross density—“a units-
+per-acre density measurement that includes land occupied by public rights-of-way and any 
+recreational, civic, commercial and other nonresidential uses”—while making it unnecessary to 
+draw patchwork multi-family zoning districts that carve out wetlands and other types of excluded 
+land that are not developed or developable. 
+ 
+b. 
+Achieving district-wide gross density by sub-districts 
+ 
+Zoning ordinances and by-laws typically limit the unit density on individual lots.  To 
+comply with Section 3A’s gross density requirement, an MBTA community may establish 
+reasonable sub-districts within a multi-family zoning district, with different density limits for each 
+sub-district, provided that the gross density for the district as a whole meets the statutory 
+requirement of not less than 15 multi-family units per acre.  DHCD will review sub-districts to 
+ensure that the density allowed as of right in each sub-district is reasonable and not intended to 
+frustrate the purpose of Section 3A by allowing projects of a such high density that they are not 
+likely to be constructed. 
+ 
+ 
+c. 
+Wetland and septic considerations relating to density 
+ 
+Section 3A provides that a district of reasonable size shall have a minimum gross density of 
+15 units per acre, “subject to any further limitations imposed by section 40 of chapter 131 and title 5 
+of the state environmental code established pursuant to section 13 of chapter 21A.”  This directive 
+means that even though the zoning district must permit 15 units per acre as of right, any multi-
+family housing produced within the district is subject to, and must comply with, the state wetlands 
+protection act and title 5 of the state environmental code—even if such compliance means a 
+proposed project will be less dense than 15 units per acre. 
+ 
+7. 
+Determining Suitability for Families with Children 
+ 
+Section 3A states that a compliant multi-family zoning district must allow multi-family 
+housing as of right, and that “such multi-family housing shall be without age restrictions and shall 
+be suitable for families with children.”  DHCD will deem a multi-family zoning district to comply 
+with these requirements as long as the zoning does not require multi-family uses to include units 
+with age restrictions, and does not limit or restrict the size of the units, cap the number of bedrooms, 
+the size of bedrooms, or the number of occupants, or impose a minimum age of occupants.  Limits, 
+if any, on the size of units or number of bedrooms established by state law or regulation are not 
+relevant to Section 3A or to determinations of compliance made pursuant to these guidelines. 
+ 
+8. 
+Location of Districts 
+ 
+a. General rule for determining the applicability of Section 3A’s location requirement  
+ 
+Section 3A states that a compliant multi-family zoning district shall “be located not more 
+than 0.5 miles from a commuter rail station, subway station, ferry terminal or bus station, if 
+applicable.”  When an MBTA community has only a small amount of transit station area within its 
+boundaries, it may not be possible or practical to locate all of the multi-family zoning district within 
+0.5 miles of a transit station.  Transit station area may not be a practical location for a multi-family 
+zoning district if it does not include developable land where multi-family housing can actually be 
+
+===== PAGE 12 =====
+ 
+12 
+constructed.  Therefore, for purposes of determining compliance with Section 3A, DHCD will 
+consider the statute’s location requirement to be “applicable” to a particular MBTA community 
+only if that community has within its borders at least 100 acres of developable station area.  DHCD 
+will require more or less of the multi-family zoning district to be located within transit station areas 
+depending on how much total developable station area is in that community, as shown on Table 2: 
+ 
+Table 2. 
+Total developable station area within  
+the MBTA community (acres) 
+ 
+Portion of the multi-family zoning district  
+that must be within a transit station area 
+0-100 
+0% 
+101-250 
+20% 
+251-400 
+40% 
+401-600 
+50% 
+601-800 
+75% 
+801+ 
+90% 
+ 
+ 
+The percentages specified in this table apply to both the minimum land area and the 
+minimum multi-family unit capacity.  For example, in an MBTA community that has a total of 500 
+acres of transit station area within its boundaries, a multi-family zoning district will comply with 
+Section 3A’s location requirement if at least 50 percent of the district’s minimum land area is 
+located within the transit station area, and at least 50 percent of the district’s minimum multi-family 
+unit capacity is located within the transit station area. 
+ 
+A community with transit station areas associated with more than one transit station may 
+locate the multi-family zoning district in any of the transit station areas.  For example, a rapid transit 
+community with transit station area around a subway station in one part of town, and transit station 
+area around a commuter rail station in another part of town, may locate its multi-family zoning 
+district in either or both transit station areas. 
+ 
+b. MBTA communities with limited or no transit station area 
+ 
+When an MBTA community has less than 100 acres of developable station area within its 
+boundaries, the MBTA community may locate the multi-family zoning district anywhere within its 
+boundaries.  To encourage transit-oriented multi-family housing consistent with the general intent 
+of Section 3A, MBTA communities are encouraged to consider locating the multi-family zoning 
+district in an area with reasonable access to a transit station based on existing street 
+patterns, pedestrian connections, and bicycle lanes, or in an area that qualifies as an “eligible 
+location” as defined in Chapter 40A—for example, near an existing downtown or village center, 
+near a regional transit authority bus stop or line, or in a location with existing under-utilized 
+facilities that can be redeveloped into new multi-family housing.   
+ 
+c. General guidance on district location applicable to all MBTA communities 
+ 
+When choosing the location of a new multi-family zoning district, every MBTA community 
+should consider how much of a proposed district is sensitive land on which permitting requirements 
+and other considerations could make it challenging or inadvisable to construct multi-family housing.  
+For example, an MBTA community may want to avoid including in a multi-family zoning district 
+
+===== PAGE 13 =====
+ 
+13 
+areas that are subject to flooding, or are known habitat for rare or threatened species, or have prime 
+agricultural soils in active agricultural use.   
+ 
+9. 
+Determinations of Compliance 
+ 
+ 
+Section 3A provides that any MBTA community that fails to comply with Section 3A’s 
+requirements will be ineligible for funding from any of the listed funding sources.  DHCD will 
+make determinations of compliance with Section 3A in accordance with these guidelines to inform 
+state agency decisions on which MBTA communities are eligible to receive funding from the listed 
+funding sources.  Determinations of compliance also may inform funding decisions by EOHED, 
+DHCD, the MBTA and other state agencies which consider local housing policies when evaluating 
+applications for discretionary grant programs, or making other discretionary funding decisions.    
+ 
+ 
+DHCD interprets Section 3A as allowing every MBTA community a reasonable opportunity 
+to enact zoning amendments as needed to come into compliance. Accordingly, DHCD will 
+recognize both interim compliance, which means an MBTA community is taking active steps to 
+enact a multi-family zoning district that complies with Section 3A, and district compliance, which 
+is achieved when DHCD determines that an MBTA community has a multi-family zoning district 
+that complies with Section 3A.  The requirements for interim and district compliance are described 
+in more detail below.    
+ 
+Table 3. 
+Transit Category (# of 
+municipalities) 
+Deadline to Submit 
+Action Plan  
+ 
+Deadline to Submit  
+District Compliance Application 
+Rapid transit community (12) 
+January 31, 2023 
+December 31, 2023 
+Commuter rail community (71) 
+January 31, 2023 
+December 31, 2024 
+Adjacent community (58) 
+January 31, 2023 
+December 31, 2024 
+Adjacent small town (34) 
+January 31, 2023 
+December 31, 2025 
+ 
+a. 
+Process to achieve interim compliance 
+ 
+Many MBTA communities do not currently have a multi-family zoning district of 
+reasonable size that complies with the requirements of Section 3A.  Prior to achieving district 
+compliance (but no later than the deadlines set forth in Table 3), these MBTA communities can 
+achieve interim compliance by taking the following affirmative steps towards the creation of a 
+compliant multi-family zoning district.     
+ 
+i. 
+Creation and submission of an action plan.  An MBTA community seeking to 
+achieve interim compliance must first submit an action plan on a form to be provided 
+by DHCD.  An MBTA community action plan must provide information about 
+current zoning, past planning for multi-family housing, if any, and potential locations 
+for a multi-family zoning district.  The action plan also will require the MBTA 
+community to establish a timeline for various actions needed to create a compliant 
+multi-family zoning district.    
+ 
+ii. 
+DHCD approval of an action plan.  DHCD will review each submitted action plan 
+for consistency with these guidelines, including but not limited to the timelines in 
+
+===== PAGE 14 =====
+ 
+14 
+Table 3.  If DHCD determines that the MBTA community’s action plan is reasonable 
+and will lead to district compliance in a timely manner, DHCD will issue a 
+determination of interim compliance.  DHCD may require modifications to a 
+proposed action plan prior to approval.   
+ 
+iii. 
+Implementation of the action plan.  After DHCD approves an action plan and issues 
+a determination of interim compliance, an MBTA community must diligently 
+implement the action plan.  DHCD may revoke a determination of interim 
+compliance if an MBTA community has not made sufficient progress in 
+implementing an approved action plan.  DHCD and EOHED will review an MBTA 
+community’s progress in implementing its action plan prior to making an award of 
+funds under the Housing Choice Initiative and Massworks infrastructure program.   
+ 
+iv. 
+Deadlines for submitting action plans.  To achieve interim compliance for grants 
+made through the 2023 One Stop Application, action plans must be submitted by no 
+later than January 31, 2023.  An MBTA community that does not submit an action 
+plan by that date may not receive a DHCD determination of interim compliance in 
+time to receive an award of funds from the listed funding sources in 2023.  An 
+MBTA community that does not achieve interim compliance in time for the 2023 
+One Stop Application may submit an action plan to become eligible for a subsequent 
+round of the One Stop Application, provided that an action plan must be submitted 
+by no later than January 31 of the year in which the MBTA community seeks to 
+establish grant eligibility; and provided further that no action plan may be submitted 
+or approved after the applicable district compliance application deadline set forth in 
+Table 3.   
+  
+b. 
+Assistance for communities implementing an action plan.   
+ 
+MBTA communities are encouraged to communicate as needed with DHCD staff 
+throughout the process of implementing an action plan.  DHCD will endeavor to respond to 
+inquiries about whether a proposed multi-family zoning district complies with Section 3A prior to a 
+vote by the municipal legislative body to create or modify such a district.  Such requests shall be 
+made on a form to be provided by DHCD and should be submitted at least 90 days prior to the vote 
+of the legislative body.   
+ 
+c. Requests for determination of district compliance 
+ 
+When an MBTA community believes it has a multi-family zoning district that complies with 
+Section 3A, it may request a determination of district compliance from DHCD.  Such a request may 
+be made for a multi-family zoning district that was in existence on the date that Section 3A became 
+law, or for a multi-family zoning district that was created or amended after the enactment of Section 
+3A.  In either case, such request shall be made on an application form required by DHCD and shall 
+include, at a minimum, the following information.  Municipalities will need to submit:  
+ 
+(i) 
+A certified copy of the municipal zoning ordinance or by-law and zoning map, 
+including all provisions that relate to uses and structures in the multi-family zoning 
+district. 
+(ii) 
+An estimate of multi-family unit capacity using the compliance model. 
+
+===== PAGE 15 =====
+ 
+15 
+(iii) 
+GIS shapefile for the multi-family zoning district. 
+(iv) 
+In the case of a by-law enacted by a town, evidence that the clerk has submitted a 
+copy of the adopted multi-family zoning district to the office of the Attorney General 
+for approval as required by state law, or evidence of the Attorney General’s 
+approval. 
+ 
+After receipt of a request for determination of district compliance, DHCD will notify the 
+requesting MBTA community within 30 days if additional information is required to process the 
+request.  Upon reviewing a complete application, DHCD will provide the MBTA community a 
+written determination either stating that the existing multi-family zoning district complies with 
+Section 3A, or identifying the reasons why the multi-family zoning district fails to comply with 
+Section 3A and the steps that must be taken to achieve compliance.  An MBTA community that has 
+achieved interim compliance prior to requesting a determination of district compliance shall remain 
+in interim compliance for the period during which a request for determination of district 
+compliance, with all required information, is pending at DHCD. 
+ 
+10. 
+Ongoing Obligations; Rescission of a Determination of Compliance 
+ 
+After receiving a determination of compliance, an MBTA community must notify DHCD in 
+writing of any zoning amendment or proposed zoning amendment that affects the compliant multi-
+family zoning district, or any other by-law, ordinance, rule or regulation that limits the development 
+of multi-family housing in the multi-family zoning district.  DHCD may rescind a determination of 
+district compliance, or require changes to a multi-family zoning district to remain in compliance, if 
+DHCD determines that:  
+ 
+(i) 
+The MBTA community submitted inaccurate information in its application for a 
+determination of compliance; 
+(ii) 
+The MBTA community failed to notify DHCD of a zoning amendment that affects 
+the multi-family zoning district; 
+(iii) 
+The MBTA community enacts or amends any by-law or ordinance, or other rule or 
+regulation, that materially alters the minimum land area and/or the multi-family unit 
+capacity in the multi-family zoning district;  
+(iv) 
+A board, authority or official in the MBTA community does not issue permits, or 
+otherwise acts or fails to act, to allow construction of a multi-family housing project 
+that is allowed as of right in the multi-family zoning district; 
+(v) 
+The MBTA community takes other action that causes the multi-family zoning district 
+to no longer comply with Section 3A; or 
+(vi) 
+An MBTA community with an approved multi-family zoning district has changed 
+transit category as a result of a newly opened or decommissioned transit station, or 
+the establishment of permanent, regular service at a transit station where there was 
+formerly intermittent or event-based service. 
+ 
+11. 
+Changes to MBTA Service 
+ 
+Section 3A applies to the 175 MBTA communities identified in section 1A of the Zoning 
+Act and section 1 of chapter 161A of the General Laws. When MBTA service changes, the list of 
+MBTA communities and/or the transit category assignments of those MBTA communities in 
+Appendix 1 may change as well.  
+
+===== PAGE 16 =====
+ 
+16 
+The transit category assignments identified in Appendix 1 of these guidelines reflect certain 
+MBTA service changes that will result from new infrastructure now under construction in 
+connection with the South Coast Rail and Green Line Extension projects.  These service changes 
+include the opening of new Green Line stations and commuter rail stations, as well as the 
+elimination of regular commuter rail service at the Lakeville station.  These changes are scheduled 
+to take effect in all cases a year or more before any municipal district compliance deadline.  
+Affected MBTA communities are noted in Appendix 1. 
+ 
+Municipalities that are not now identified as MBTA communities and may be identified as 
+such in the future are not addressed in these guidelines or included in Appendix 1.  New MBTA 
+communities will be addressed with revisions to Appendix 1, and separate compliance timelines, in 
+the future.  
+ 
+Future changes to Silver Line routes or stations may change district location requirements 
+when expanded high-capacity service combined with new facilities creates a bus station where there 
+was not one before.  Changes to other bus routes, including the addition or elimination of bus stops 
+or reductions or expansions of bus service levels, do not affect the transit categories assigned to 
+MBTA communities and will not affect location requirements for multi-family zoning districts.  
+Any future changes to MBTA transit service, transit routes and transit service levels are determined 
+by the MBTA Board of Directors consistent with the MBTA’s Service Delivery Policy.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+List of Appendices: 
+ 
+Appendix 1:  MBTA Community Categories and Requirements 
+ 
+Appendix 2:  Compliance Methodology/Model 
+ 
+
+===== PAGE 17 =====
+ 
+Appendix 1 
+Page 1 
+Appendix 1:  
+MBTA Community Categories and Requirements 
+ 
+Community 
+Community 
+category 
+2020 
+Housing 
+Units 
+ Minimum 
+multi-family 
+unit capacity*  
+ Minimum 
+land 
+area**  
+ Developable 
+station 
+area***  
+% of district to 
+be located in 
+station area 
+Abington 
+Commuter Rail 
+   
+6,811  
+   
+1,022  
+   
+50  
+   
+307  
+40% 
+Acton 
+Commuter Rail 
+   
+9,219  
+   
+1,383  
+   
+50  
+   
+246  
+20% 
+Amesbury 
+Adjacent Community 
+   
+7,889  
+   
+789  
+   
+50  
+   
+-   
+0% 
+Andover 
+Commuter Rail 
+   
+13,541  
+   
+2,031  
+   
+50  
+   
+587  
+50% 
+Arlington 
+Adjacent Community 
+   
+20,461  
+   
+2,046  
+   
+32  
+   
+58  
+0% 
+Ashburnham 
+Adjacent Small Town 
+   
+2,730  
+   
+137  
+   
+-   
+   
+-   
+0% 
+Ashby 
+Adjacent Small Town 
+   
+1,243  
+   
+62  
+   
+-   
+   
+-   
+0% 
+Ashland 
+Commuter Rail 
+   
+7,495  
+   
+1,124  
+   
+50  
+   
+272  
+40% 
+Attleboro 
+Commuter Rail 
+   
+19,097  
+   
+2,865  
+   
+50  
+   
+467  
+50% 
+Auburn 
+Adjacent Community 
+   
+6,999  
+   
+750  
+   
+50  
+   
+-   
+0% 
+Ayer 
+Commuter Rail 
+   
+3,807  
+   
+750  
+   
+50  
+   
+284  
+40% 
+Bedford 
+Adjacent Community 
+   
+5,444  
+   
+750  
+   
+50  
+   
+-   
+0% 
+Bellingham 
+Adjacent Community 
+   
+6,749  
+   
+750  
+   
+50  
+   
+-   
+0% 
+Belmont 
+Commuter Rail 
+   
+10,882  
+   
+1,632  
+   
+27  
+   
+502  
+50% 
+Berkley 
+Adjacent Small Town 
+   
+2,360  
+   
+118  
+   
+-   
+   
+79  
+0% 
+Beverly 
+Commuter Rail 
+   
+17,887  
+   
+2,683  
+   
+50  
+   
+1,435  
+90% 
+Billerica 
+Commuter Rail 
+   
+15,485  
+   
+2,323  
+   
+50  
+   
+308  
+40% 
+Bourne 
+Adjacent Small Town 
+   
+11,140  
+   
+557  
+   
+-   
+   
+-   
+0% 
+Boxborough 
+Adjacent Small Town 
+   
+2,362  
+   
+118  
+   
+-   
+   
+-   
+0% 
+Boxford 
+Adjacent Small Town 
+   
+2,818  
+   
+141  
+   
+-   
+   
+-   
+0% 
+Braintree 
+Rapid Transit 
+   
+15,077  
+   
+3,769  
+   
+50  
+   
+485  
+50% 
+Bridgewater 
+Commuter Rail 
+   
+9,342  
+   
+1,401  
+   
+50  
+   
+181  
+20% 
+Brockton 
+Commuter Rail 
+   
+37,304  
+   
+5,596  
+   
+50  
+   
+995  
+90% 
+Brookline 
+Rapid Transit 
+   
+27,961  
+   
+6,990  
+   
+41  
+   
+1,349  
+90% 
+
+===== PAGE 18 =====
+ 
+Appendix 1 
+Page 2 
+Community 
+Community 
+category 
+2020 
+Housing 
+Units 
+ Minimum 
+multi-family 
+unit capacity*  
+ Minimum 
+land 
+area**  
+ Developable 
+station 
+area***  
+% of district to 
+be located in 
+station area 
+Burlington 
+Adjacent Community 
+   
+10,431  
+   
+1,043  
+   
+50  
+   
+-   
+0% 
+Cambridge 
+Rapid Transit 
+   
+53,907  
+   
+13,477  
+   
+32  
+   
+1,392  
+90% 
+Canton 
+Commuter Rail 
+   
+9,930  
+   
+1,490  
+   
+50  
+   
+451  
+50% 
+Carlisle 
+Adjacent Small Town 
+   
+1,897  
+   
+95  
+   
+-   
+   
+-   
+0% 
+Carver 
+Adjacent Small Town 
+   
+4,701  
+   
+235  
+   
+-   
+   
+-   
+0% 
+Chelmsford 
+Adjacent Community 
+   
+14,769  
+   
+1,477  
+   
+50  
+   
+-   
+0% 
+Chelsea 
+Rapid Transit 
+   
+14,554  
+   
+3,639  
+   
+14  
+   
+608  
+75% 
+Cohasset 
+Commuter Rail 
+   
+3,341  
+   
+638  
+   
+43  
+   
+241  
+20% 
+Concord 
+Commuter Rail 
+   
+7,295  
+   
+1,094  
+   
+50  
+   
+519  
+50% 
+Danvers 
+Adjacent Community 
+   
+11,763  
+   
+1,176  
+   
+50  
+   
+-   
+0% 
+Dedham 
+Commuter Rail 
+   
+10,459  
+   
+1,569  
+   
+49  
+   
+507  
+50% 
+Dover 
+Adjacent Small Town 
+   
+2,046  
+   
+102  
+   
+-   
+   
+-   
+0% 
+Dracut 
+Adjacent Community 
+   
+12,325  
+   
+1,233  
+   
+50  
+   
+-   
+0% 
+Duxbury 
+Adjacent Community 
+   
+6,274  
+   
+750  
+   
+50  
+   
+-   
+0% 
+East Bridgewater 
+Adjacent Community 
+   
+5,211  
+   
+750  
+   
+50  
+   
+-   
+0% 
+Easton 
+Adjacent Community 
+   
+9,132  
+   
+913  
+   
+50  
+   
+-   
+0% 
+Essex 
+Adjacent Small Town 
+   
+1,662  
+   
+83  
+   
+-   
+   
+-   
+0% 
+Everett 
+Rapid Transit 
+   
+18,208  
+   
+4,552  
+   
+22  
+   
+200  
+20% 
+Fitchburg 
+Commuter Rail 
+   
+17,452  
+   
+2,618  
+   
+50  
+   
+601  
+75% 
+Foxborough 
+Adjacent Community 
+   
+7,682  
+   
+768  
+   
+50  
+   
+-   
+0% 
+Framingham 
+Commuter Rail 
+   
+29,033  
+   
+4,355  
+   
+50  
+   
+270  
+40% 
+Franklin 
+Commuter Rail 
+   
+12,551  
+   
+1,883  
+   
+50  
+   
+643  
+75% 
+Freetown 
+Commuter Rail 
+   
+3,485  
+   
+750  
+   
+50  
+   
+346  
+40% 
+Georgetown 
+Adjacent Community 
+   
+3,159  
+   
+750  
+   
+50  
+   
+-   
+0% 
+Gloucester 
+Commuter Rail 
+   
+15,133  
+   
+2,270  
+   
+50  
+   
+430  
+50% 
+Grafton 
+Adjacent Community 
+   
+7,760  
+   
+776  
+   
+50  
+   
+82  
+0% 
+Groton 
+Adjacent Small Town 
+   
+4,153  
+   
+208  
+   
+-   
+   
+-   
+0% 
+
+===== PAGE 24 =====
+ 
+Appendix 1 
+Page 8 
+ 
+
+===== PAGE 25 =====
+Appendix 2 
+Page 1 
+Appendix 2 
+ 
+Compliance Model Overview 
+ 
+ 
+The purpose of the compliance model is to ensure a consistent approach to measuring and 
+evaluating multi-family zoning districts for compliance with Section 3A.  The compliance model 
+is intended to create a reasonable estimate of multi-family unit capacity of each multi-family 
+zoning district.  It is not intended to provide a precise determination of how many units may be 
+developed on any individual lot or combination of lots.  
+ 
+The model uses geospatial tax parcel data from local assessors, compiled and hosted by 
+MassGIS, to define lot boundaries and dimensions in each multi-family zoning district. The 
+model also captures key dimensional and regulatory elements of the multi-family zoning district 
+that impact multi-family unit capacity.  The product of the compliance model is a Microsoft 
+Excel workbook that must be submitted as part of a compliance application to DHCD.  
+Consultant support is available at no cost to assist MBTA communities in meeting all the 
+technical requirements of compliance.   
+ 
+The Compliance Modeling Process at a Glance: 
+ 
+ 
+
+===== PAGE 26 =====
+Appendix 2 
+Page 2 
+ 
+ 
+Components of the Compliance Model 
+ 
+Land database 
+ 
+The compliance model includes geospatial parcel data for each MBTA community that 
+identifies how much land area on each lot within a multi-family zoning district is developable 
+land. Applicants will prepare this parcel data for the model’s calculations by creating a shapefile 
+for each district, measuring each district’s land area, and exporting all lot records within the 
+district’s boundaries into an Excel or .csv file. These exported tables can then be pasted into the 
+zoning review checklist and unit capacity estimator, described below.  
+ 
+Zoning review checklist and unit capacity estimator 
+ 
+To capture the data needed to estimate a district’s multi-family unit capacity, 
+municipalities will be required to complete a zoning review checklist.  The checklist is of a series 
+of questions and responses about allowed residential uses, parking requirements, dimensional 
+restrictions (such as maximum building height and minimum open space), and other regulatory 
+elements applicable in the district.  
+ 
+The unit capacity estimator uses the GIS exported lot information from the land database 
+and the information entered into the zoning review checklist to calculate an estimate of the 
+maximum number of multi-family residential units that could be constructed on each lot in each 
+district as of right. It then aggregates the unit capacity estimates for each lot into an estimate of 
+total unit capacity for each district.  It also derives an estimate of the gross density for each 
+district. 
+ 
+Case-Specific Refinements to the Compliance Model Inputs and Outputs 
+ 
+To ensure the integrity and reasonableness of each unit capacity estimate, DHCD may 
+adjust the compliance model inputs and outputs as necessary to account for physical conditions 
+or zoning restrictions not adequately captured by the compliance model.  For example, DHCD 
+may override the GIS data and change one or more lots from excluded land to developable land 
+where a municipality demonstrates those lots meet the definition of developable land.  DHCD 
+may also adjust the unit capacity estimator’s algorithm when it does not adequately account for 
+an atypical zoning requirement or other local development restriction that will clearly impact 
+unit capacity. 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 

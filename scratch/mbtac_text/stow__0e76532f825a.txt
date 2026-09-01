@@ -1,0 +1,445 @@
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+1 
+ 
+September 18, 2025 
+Rachel Heller 
+Chief Executive Officer 
+Citizens’ Housing and Planning Association 
+One Beacon Street, 5th Fl. 
+Boston, MA 02108 
+ 
+Re: Available Relief in MBTA Communities Enforcement Actions 
+ 
+Dear Rachel: 
+ 
+The Massachusetts Attorney General’s Office (“AGO”) recently issued a legal 
+advisory1 clarifying its plan to enforce the MBTA Communities Act. The advisory 
+states that the AGO will defer litigation against non-compliant municipalities 
+through the end of 2025, provided those municipalities make “good faith” efforts 
+to adopt required zoning districts. With that year-end deadline looming, and town 
+meetings on the horizon, planners and residents have begun to seek clarity on 
+the legal consequences their communities might face if compliance efforts fail.  
+ 
+To ensure that CHAPA staff are fully informed, this memo outlines the authority 
+of Massachusetts courts to correct municipal violations of state law. The upshot 
+is that judges have broad discretion in this realm.2 Not only can they order cities 
+and towns to obey state mandates, but they possess “every power necessary to 
+… enforce their decrees and make them completely effective.”3 Such powers run 
+the gamut from dictating the actions of local officials to appointing “special 
+masters” to plan and oversee compliance. These remedies and more would be 
+available to courts in AGO litigation to enforce the Act.  
+ 
+I. 
+Background 
+ 
+Massachusetts codified the MBTA Communities Act (the “Act”) in January 2021. 
+The Act dictates that: (1) covered municipalities (“MBTA Communities”) “shall 
+have” zoning districts of “reasonable size” where multi-family housing can be 
+ 
+1 See generally Massachusetts Attorney General’s Office, Second Advisory Concerning 
+Enforcement 
+of 
+the 
+MBTA 
+Communities 
+Zoning 
+Law 
+(July 
+14, 
+2025), 
+https://www.mass.gov/doc/second-advisory-on-3a-enforcement-final/download.  
+2 See Johnson v. Martignetti, 374 Mass. 784, 794 (1978).  
+3 Commonwealth v. Hudson, 315 Mass. 335, 346 (1943).  
+
+===== PAGE 2 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+2 
+ 
+built “as of right;” (2) non-compliant communities “shall” lose access to certain 
+funding grants; and (3) the Executive Office of Housing and Livable Communities 
+(“HLC”) “shall promulgate” compliance guidelines.4 HLC followed the latter 
+command and issued guidelines in August 2022.5  
+ 
+Since the Act’s passage, the Commonwealth has repeatedly instructed MBTA 
+Communities that compliance with the Act’s zoning provisions is mandatory. 
+HLC’s guidelines stated that the Act “requir[es] MBTA communities to adopt 
+[compliant] zoning districts” and set final compliance deadlines for each 
+community ranging from the end of 2023 to the end of 2025.6 Likewise, in March 
+2023, the AGO notified MBTA Communities that the Act “does not provide any 
+mechanism by which” to “opt out of [the zoning] requirement.”7  
+ 
+On January 8, 2025, in Attorney General v. Milton, the Supreme Judicial Court 
+(“SJC”) confirmed the Act’s obligatory nature, ruling that it is constitutional and 
+creates “an affirmative duty” for MBTA Communities to adopt compliant 
+districts.8 After explaining that the Act was designed “to address the ongoing 
+housing crisis,” the Court elaborated that “the public has an interest in the [Act’s] 
+enforcement” and declared that the AGO is “empowered to enforce [the Act].”9  
+ 
+Although the SJC invalidated HLC’s guidelines on a procedural technicality,10 HLC 
+quickly re-issued them almost verbatim as emergency regulations.11 Those 
+ 
+4 G.L. c. 40A, § 3A.  
+5 Based on community feedback, HLC subsequently issued revised versions of the 
+guidelines in October 2022 and August 2023. See Executive Office of Housing and Livable 
+Communities, Compliance Guidelines for Multi-Family Zoning Districts Under Section 3A 
+of the Zoning Act 1 (Aug. 17, 2023), https://www.mass.gov/doc/compliance-guidelines-
+for-multi-family-zoning-districts-under-section-3a-of-the-zoning-act/download.  
+6 Id. at 1, 15-16. The quoted statement and deadlines were consistent in all three versions 
+of the guidelines that HLC promulgated in 2022 and 2023.  
+7 Massachusetts Attorney General’s Office, Advisory Concerning Enforcement of the 
+MBTA Communities Law (March 15, 2023), https://www.mass.gov/doc/advisory-
+concerning-enforcement-of-the-mbta-communities-zoning-law/download. 
+8 Attorney General v. Milton, 495 Mass. 183, 185, 196 (2025). 
+9 Id. at 185, 192. 
+10 See id. at 195-196.  
+11 See Press Release, Executive Office of Housing and Livable Communities, 
+Implementation of MBTA Communities Law Continues with Filing of Emergency 
+
+===== PAGE 3 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+3 
+ 
+regulations, now formally in place as 760 CMR 72.00, set a new final compliance 
+deadline of July 14, 2025, for any community that HLC had previously required 
+to adopt a compliant district before the end of 2024.12  
+ 
+Following the SJC’s January decision, several municipalities filed suit to 
+challenge the Act on the new ground that it is an “unfunded mandate.” However, 
+a Superior Court judge dismissed those cases and roundly rejected the unfunded 
+mandate argument.13 This second major decision upholding the Act reaffirms that 
+all MBTA Communities are duty-bound to adopt compliant zoning.  
+ 
+II. 
+Legal Framework 
+ 
+Should any community fail to uphold that duty, as the SJC has held, the AGO can 
+sue “for … injunctive relief to enforce [the Act].”14 Injunctive relief, also called 
+“equitable” relief or an “injunction”, is a court order directing a party to do 
+something, or stop doing something, to comply with the law. This Section surveys 
+the breadth of equitable powers available to Massachusetts judges15 and the next 
+traces how judges could utilize those powers to secure adherence to the Act.  
+ 
+Before continuing, it is important to note—for CHAPA staff and anyone they share 
+this memo with—that this memo is intended for informational purposes only. It 
+does not constitute legal advice and should not be relied upon as such.  
+ 
+A. Injunctive Relief in Massachusetts Generally 
+ 
+The SJC has repeatedly explained that “in fashioning appropriate relief, the 
+issuance and scope of equitable relief rests within the sound discretion of the 
+ 
+Regulations (Jan. 14, 2025), https://www.mass.gov/news/implementation-of-mbta-
+communities-law-continues-with-filing-of-emergency-regulations.  
+12 See 760 CMR 72.09(3), available at https://www.mass.gov/doc/section-3a-
+regulations/download.  
+13 See generally Duxbury v. Commonwealth, No. 2583CV00303, Dkt. No. 10, available at: 
+https://drive.google.com/file/d/1DJEL7iayai2vShuCVhjfoVoaucO3s6wf/view.  
+14 Milton, 495 Mass. at 196.  
+15 In the Milton case, the AGO sued under G.L. c. 214, § 1, which confers, via “general 
+equity jurisdiction,” the broadest set of equitable powers available to state judges. Thus, 
+as used herein, “courts” and “judges” refer to those with access to this full set of powers.    
+
+===== PAGE 4 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+4 
+ 
+judge.”16 It has also emphasized that judges “possess[] a particularly broad 
+latitude of discretion where the public interest is involved.”17  
+ 
+Fundamentally, Massachusetts courts enjoy “broad powers” both to “determine 
+the appropriate relief to remedy the wrong complained of and to make the 
+judgment effective.”18 Court orders would mean little if judges lacked the ability 
+to enforce them. So, once a judge decides on the appropriate relief in a case and 
+begins issuing orders, they may “adopt all necessary, reasonable, and lawful 
+means to … accomplish the objects intended.”19  
+ 
+Injunctive powers extend to, among other things: stopping or preventing specific 
+actions,20 directing parties to “take affirmative remedial steps,”21 and securing 
+compliance from those who disobey the court by holding them in “contempt” and 
+requiring them to pay fines or, in egregious circumstances, even serve jail time.22  
+Courts may also respond to disobedience by doing things like “stat[ing] more 
+explicitly the steps to be taken” or “order[ing] the filing of compliance reports.”23  
+ 
+But a party’s defiance of a prior order is not a prerequisite to the issuance of a 
+detailed or tightly controlling injunction. Judges may issue such injunctions in the 
+first instance, for example, where the party in question has “a history of [a] 
+hardened position of resistance to the objectives of the … injunction.”24 
+ 
+Further, the “[t]he power to compel affirmative action” enables courts to “call to 
+[their] assistance any agents or … parajudicial officers whose services appear to 
+be reasonably necessary to attain a legitimate objective.”25 Such officers, 
+typically called “special masters,” are appointed to “assist the court not only in 
+delineating remedies, but often in conducting or overseeing … implementation of 
+ 
+16 Commonwealth v. Guilfoyle, 402 Mass. 130, 135 (1988) (cleaned up).  
+17 Johnson, 374 Mass. at 794 (emphasis added).  
+18 Demoulas v. Demoulas, 428 Mass. 555, 591 (1998) (cleaned up).  
+19 Nigro v. Conti, 319 Mass. 480, 484 (1946). 
+20 Dep’t of Pub. Utils. v. Trs. of Props. of N.Y., N.H. & H.R. Co., 304 Mass. 664, 671 (1939).  
+21 Perez v. Bos. Hous. Auth., 379 Mass. 703, 729 (1980).  
+22 See Hudson, 315 Mass. at 346-348.  
+23 Blaney v. Comm’r of Corr., 374 Mass. 337, 342 (1978).  
+24 Borne v. Haverhill Golf & Country Club, Inc., 71 N.E.2d 903, 917 (Mass. App. Ct. 2003).  
+25 Perez, 379 Mass. at 732.  
+
+===== PAGE 5 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+5 
+ 
+the remedies.”26 Courts frequently turn to these officers where “[i]njunctive 
+remedies are called for, but the judge lacks expertness in the particular field.”27 
+ 
+B. Injunctive Relief Against Massachusetts Municipalities  
+ 
+Although the Home Rule Amendment gives municipalities “the right … to self-
+government in local matters” it does not supersede the “Commonwealth’s right 
+to legislate with respect to State, regional, and general matters.”28 Thus, where 
+the Legislature has enacted a “general law” that applies to two or more 
+municipalities,29 any local ordinances or bylaws that “conflict” with that general 
+law “must give way.”30 In this sense, cities and towns cannot “defy the 
+Commonwealth, or … attempt to nullify legislative mandates.”31  
+ 
+Municipalities are also “fully subject to the judicial power.”32 As a result, judges 
+have authority both to restrain illegal municipal conduct33 and to “order[] towns 
+as well as cities to perform affirmative acts” as needed to bring them in line with 
+legislative mandates.34 The SJC has stated that local officials “may be required 
+to do all acts within their power to cause the municipality to obey a decree 
+against it” and indicated that voters share a “duty to use their powers so as to 
+cause [a] town to obey” state mandates and court orders.35 
+ 
+These principles apply with full force in the zoning context. The Legislature 
+maintains “supreme power in zoning matters” and, therefore, municipalities 
+cannot zone “in a manner which frustrates the purpose or implementation” of a 
+ 
+26 Id. at 734.  
+27 Id. at 735 n. 29.  
+28 Clean Harbors of Braintree, Inc. v. Bd. of Health of Braintree, 415 Mass. 876, 881 (1993) 
+(cleaned up).  
+29 Mass. Const., Art. LXXXIX, § 8. 
+30 Arlington v. Bd. of Conciliation & Arbitration, 370 Mass. 769, 774 (1976).  
+31 Bd. of Health of N. Adams v. Mayor of N. Adams, 368 Mass. 554, 564-565 (1975) (cleaned 
+up).  
+32 Hudson, 315 Mass. at 345.  
+33 See Lane v. Commonwealth, 401 Mass. 549, 552-553 (1988) (citing cases).  
+34 Hudson, 315 Mass. at 343, 345.  
+35 Id. at 348, 349.  
+
+===== PAGE 6 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+6 
+ 
+state zoning law.36 Indeed, courts can, and often do, invalidate local zoning 
+provisions that conflict with the Commonwealth’s Zoning Act, G.L. c. 40A.37 
+ 
+As one example, in Bible Speaks v. Board of Appeals of Lenox, the Massachusetts 
+Appeals Court invalidated local zoning provisions that required, among other 
+things, site plan review and a special permit application for “all new religious and 
+educational uses” in residential districts.38 The Court determined that these 
+provisions “create a scheme of land use regulation for [educational] institutions 
+which is antithetical to the limitations on municipal zoning power … prescribed by 
+G.L. c. 40A, s 3,” more commonly known as the Dover Amendment.39  
+ 
+Ultimately, “[m]unicipalities that have not performed their statutory and 
+constitutional duties should not expect a sympathetic judicial reception.”40 In 
+some cases, “drastic relief” can be warranted to ensure they uphold those duties, 
+“resulting in some loss of local control by the city or town and its officials.”41   
+ 
+III. 
+Potential Relief in MBTA Communities Act Enforcement Litigation  
+ 
+Courts will theoretically have the whole spectrum of injunctive powers at their 
+disposal in litigation to enforce the Act. The SJC has already declared that the 
+Act is a “legislative mandate” for municipalities, which the AGO can seek to 
+enforce through injunctive relief.42 Moreover, because the Court has found such 
+ 
+36 Bd. of Appeals of Hanover v. Hous. Appeals Cmte. In Dep’t of Cmty. Affairs, 363 Mass. 
+339, 409 (1973).  
+37 See, e.g., Attorney General v. Inhabitants of Dover, 327 Mass. 601, 608 (1951) 
+(instructing Superior Court to enter order invalidating part of a local zoning bylaw “so 
+far as it prohibits or limits the use of buildings or premises for sectarian educational 
+purposes” in violation of the Dover Amendment). Although the statute the AGO sued 
+under in Dover is no longer in effect, Section 7 of the Zoning Act currently empowers the 
+superior and land courts to “enforce the provisions of this chapter” which now include 
+the Act, and “restrain by injunction violations thereof.” G.L. c. 40A, § 7.  
+38 8 Mass. App. Ct. 19, 19, 33-34 (Mass. App. Ct. 1979).  
+39 Id. at 33. There are many other examples like this. See, e.g., SCIT, Inc. v. Plan. Bd. of 
+Braintree, 19 Mass. App. Ct. 101, 107, 111 (Mass. App. Ct. 1984) (voiding zoning rule that 
+imposed discretionary special permit requirement on all uses in business district as it 
+“conflict[ed] with the uniformity and special permit provisions of the Zoning Act”). 
+40 Commonwealth v. Andover, 378 Mass. 370, 379 (Mass. 1979).  
+41 Id. at 380.  
+42 Milton, 495 Mass at 193, 196. 
+
+===== PAGE 7 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+7 
+ 
+enforcement to be in the public interest,43 judges will have “particularly broad” 
+discretion over the methods they employ to compel compliance.44  
+ 
+Those methods could be hands-on and controlling. As noted above, if a judge 
+finds that the relevant facts establish a “hardened position of resistance” to the 
+goal of the AGO’s requested relief—which, in this context, would be compliance 
+with the Act—they have the option to start with strict measures they deem 
+necessary to generate compliant zoning and protect the public interest.45  
+ 
+It is impossible to compile an exhaustive list of remedies courts could devise to 
+generate compliant zoning. Any order will hinge on the circumstances presented 
+in the case, including factors like the structure of the zoning ordinance at issue 
+and the level of defiance displayed by the defendant municipality.  
+ 
+However, remedies endorsed in guiding Massachusetts cases demonstrate that 
+it is possible for courts in this context to:    
+ 
+• Declare invalid, or otherwise render unenforceable, any local zoning rule 
+deemed to be inconsistent with/antithetical to the Act’s requirements;46 
+• Command a city or town to adopt compliant zoning on a short timeline;47 
+• Compel local officials to take specific compliance steps, like holding a 
+special town meeting and listing a valid zoning proposal on the warrant;48 
+ 
+43 Id. at 192. 
+44 Johnson, 374 Mass. at 794. 
+45 Borne, 71 N.E.2d at 917 (affirming initial injunction that was “detailed” and “contained 
+prohibitions, as well as affirmative duties” given that there was “history of [a] hardened 
+position of resistance to the objectives of the … injunction”); see id. (noting also that 
+“[c]ourts often employ detailed orders to correct violations of public rights”).  
+46 See, e.g., Dover, 327 Mass. at 608; SCIT, Inc., 19 Mass. App. Ct. at 107, 111; Bible Speaks, 
+8 Mass. App. Ct. at 33-34. This kind of relief could theoretically take the form of an 
+injunction or a declaratory judgment. See Milton, 495 Mass at 196 (stating that AGO can 
+pursue both forms of relief in litigation to enforce the Act).  
+47 See, e.g., Borne, 71 N.E.2d at 917, 920-925 (affirming order requiring defendants to take 
+a series of specific actions within 60 days). 
+48 See, e.g., Hudson, 315 Mass. at 349-350 (ordering board of selectmen to call and hold 
+a town meeting and “cause to be inserted in the warrant” and “submitted to the voters” 
+articles that “when adopted” would make town compliant with state mandate).   
+
+===== PAGE 8 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+One Beacon Street, 5th Floor, Boston MA, 02108 
+(617) 742-0820 | chapa.org 
+ 
+8 
+ 
+• Appoint a zoning expert in a “special master” type role to prepare 
+compliant zoning plans for the municipality;49 
+• Direct a municipality to adhere to a court- or special master-drawn zoning 
+plan that effectuates the goals of the Act unless/until the municipality 
+adopts its own compliant zoning plan;50 and 
+• Punish municipalities and local officials that disobey the court through 
+fines or other escalating penalties.51  
+ 
+IV. 
+Conclusion 
+ 
+It bears repeating that no one can be sure of the exact remedial approach any 
+court will take in AGO enforcement litigation. That said, two key takeaways for 
+CHAPA staff are that: (1) judges will have broad latitude in crafting relief to 
+secure compliance with the Act; and (2) case law supports that the kinds of orders 
+listed above are all within the range of potential outcomes.  
+ 
+One thing we know for certain is that if MBTA Communities fail to adopt 
+compliant multi-family districts by the end of this year, the AGO is prepared to 
+file suit to compel them to do so. Enforcement litigation could be costly for 
+municipalities and put them at risk of losing some degree of local control over 
+how the Act gets implemented. Fortunately, they have the power to avoid those 
+issues entirely by enacting compliant zoning in 2025.  
+ 
+Sincerely, 
+ 
+/s/ Jacob M. Love, Esq.  
+General Counsel for Policy 
+Citizens’ Housing and Planning Association  
+ 
+49 See Perez, 379 Mass. at 732 (holding that equity powers allow courts to appoint 
+“parajudicial officers whose services appear to be reasonably necessary”).  
+50 See, e.g., Blaney, 374 Mass. at 339-343 (affirming single justice’s order imposing 
+remedial obligations on state officials, which the single justice adopted based on 
+recommendations of a special master).  
+51 See Hudson, 315 Mass. at 346-350. 

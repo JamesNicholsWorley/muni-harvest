@@ -1,0 +1,401 @@
+
+===== PAGE 1 =====
+ 
+ 
+ 
+Section 3A Zoning | Town of Winthrop 
+Prepared by Innes Associates on behalf of RKG Associates 
+1 
+40R Merrimac Street, Suite 201 W 
+Newburyport, MA 01950 
+ 
+ 
+ 
+MEMORANDUM – DRAFT FOR REVIEW AND DISCUSSION 
+ 
+To 
+Eric Halvorsen, AICP, Vice President and Principal, RKG Associates 
+Alison Christensen, Market Analyst, RKG Associates 
+ 
+From 
+Emily Keys Innes, AICP, LEED AP ND, President 
+ 
+Date 
+September 9, 2024 
+ 
+Project 
+24132 – Winthrop 
+ 
+Subject Draft Zoning for Compliance with Section 3A 
+ 
+Cc: 
+ 
+ 
+ 
+Please see attached the revised draft of the zoning text for Winthrop. This draft 
+incorporates the zoning parameters from the compliance model using the two-
+subdistrict compliance scenario. I have also added the modification to the fee-
+in-lieu option for the CB District. 
+Please let me know if you have any questions. 
+ 
+ 
+
+===== PAGE 2 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+2 
+Prepared by Innes Associates on behalf of RKG Associates 
+1. ADD Chapter 17.54: Multi-family Overlay District 
+Chapter 17.54: Multi-family Overlay District 
+17.54.010 Purpose 
+The purpose of the Multi-family Overlay District (MFOD) is to allow multi-family housing as of right in 
+accordance with Section 3A of the Zoning Act (Massachusetts General Laws Chapter 40A). This zoning 
+provides for as of right multi-family housing to accomplish the following purposes: 
+1. Encourage the production of a variety of housing sizes and typologies to provide equal 
+access to new housing throughout the community for people with a variety of needs and 
+income levels; and 
+2. Conly with Section 3A of Massachusetts General Laws Chapter 40A. 
+ 
+17.54.020 Establishment and Applicability 
+This MFOD is an overlay district with an area of approximately 27.6 acres that is superimposed over the 
+underlying zoning district (s) and shown on the Zoning Map. 
+1. Applicability of MFOD. An applicant may develop multi-family housing located within an 
+MFOD in accordance with the provisions of this Chapter 17.54 
+2. Underlying Zoning. The MFOD is an overlay district superimposed on underlying zoning 
+districts. The regulations for use, dimension, and all other provisions of the Zoning Bylaw 
+governing the respective underlying zoning district(s) shall remain in full force, except for 
+uses allowed as of right or by special permit in the MFOD. Uses that are not identified in 
+Chapter 17.54 are governed by the requirements of the underlying zoning district(s). 
+3. Sub-districts. The MFOD contains the following sub-districts, all of which are shown on 
+the MFOD Boundary Map:  
+a. Seal Harbor Road Subdistrict 
+b. Governors Park Subdistrict 
+17.54.030 Definitions. 
+For purposes of this Chapter 17.54, the following definitions shall apply. 
+1. Affordable unit. A multi-family housing unit that is subject to a use restriction recorded in 
+its chain of title limiting the sale price or rent or limiting occupancy to an individual or 
+household of a specified income, or both. 
+2. Affordable housing. Housing that contains Affordable Units as defined by this Chapter 
+17.54. 
+3. Area Median Income (AMI). The median family income for the metropolitan statistical 
+region that includes the Town of Winthrop, as defined by the U.S. Department of Housing 
+and Urban Development (HUD). 
+
+===== PAGE 3 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+3 
+Prepared by Innes Associates on behalf of RKG Associates 
+4. Site Plan Review Authority. The Town of Winthrop Planning Board. 
+5. Sub-district. An area within the MFOD that is geographically smaller than the MFOD 
+district and differentiated from the rest of the district by use, dimensional standards, or 
+development standards. 
+6. Subsidized Housing Inventory (SHI). A list of qualified Affordable Housing Units 
+maintained by EOHLC used to measure a community's stock of low-or moderate- income 
+housing for the purposes of M.G.L. Chapter 40B, the Comprehensive Permit Law. 
+17.54.040 Permitted Uses 
+1. Uses Permitted As of Right. The following uses are permitted as of right within the MFOD. 
+a. Multi-family housing. 
+2. Accessory Uses. The following uses are considered accessory as of right to any of the 
+permitted uses in Section D.1. 
+b. Parking, including surface parking and parking within a structure such as an above-
+ground or underground parking garage or other building on the same lot as the 
+principal use. 
+17.54.050 Dimensional Standards 
+1. Table of Dimensional Standards. Notwithstanding anything to the contrary in this Zoning 
+Bylaw, the dimensional requirements applicable in the MFOD are as follows: 
+ 
+Seal Harbor Road 
+Subdistrict 
+Governors Park 
+Subdistrict 
+Minimum Lot Area (square feet)  
+100,000 
+20,000 
+Maximum Density  
+1,600 SF of lot area  
+per dwelling unit 
+1,900 SF of lot area  
+per dwelling unit 
+Minimum Frontage (feet) 
+100 
+100 
+Minimum Lot Width (feet) 
+100 
+100 
+Maximum Lot Coverage 
+20% 
+30% 
+Minimum Open Space 
+30% 
+30% 
+Minimum Yard Setback (feet)  
+ 
+ 
+Front 
+50 
+25 
+Side  
+50 
+25 
+Rear  
+50 
+40 
+Maximum Number of Stories  
+6 
+3 
+Maximum Height (feet)  
+65 
+35 
+ 
+2. Multi-Building Lots. In the MFOD, lots may have more than one principal building. 
+3. Exceptions. The limitation on the height of buildings shall not apply to chimneys, 
+ventilators, towers, silos, spires, or other ornamental features of buildings, which features 
+are in no way used for living purposes and do not constitute more than 25% of the ground 
+floor area of the building. The Site Plan Review Authority or Special Permit Granting 
+Authority may waive the height and setbacks in this Chapter 17.54 to accommodate the 
+installation of solar photovoltaic, solar thermal, living, and other eco-roofs, energy 
+
+===== PAGE 4 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+4 
+Prepared by Innes Associates on behalf of RKG Associates 
+storage, and air-source heat pump equipment. Such installations shall not create a 
+significant detriment to abutters in terms of noise or shadow and must be appropriately 
+integrated into the architecture of the building and the layout of the site. The installations 
+shall not provide additional habitable space within the development. 
+17.54.060 Off-Street Parking 
+These parking requirements are applicable to development in the MFOD. 
+1. Number of parking spaces. Two (2) parking spaces per dwelling unit are required for 
+multi-family use in this Chapter 17.54. The required number of parking spaces shall be 
+permitted either in surface parking or within garages or other structures. 
+2. Number of bicycle parking spaces. 0.4 bicycle parking spaces per dwelling unit are 
+required for multi-family use in this Chapter 17.54. The required number of parking 
+spaces shall be permitted either in surface parking or within garages or other 
+structures: 
+17.54.070 Affordability Requirements 
+1. Purpose. 
+a. Promote the public health, safety, and welfare by encouraging a diversity of housing 
+opportunities for people of different income levels; 
+b. Provide for a full range of housing choices for households of all incomes, ages, and 
+sizes; and 
+c. Increase the production of affordable housing units to meet existing and anticipated 
+housing needs. 
+2. Applicability. This requirement is applicable to all residential developments with ten (10) 
+or more dwelling units, whether new construction, substantial rehabilitation, expansion, 
+reconstruction, or residential conversion (Applicable Projects). No project may be divided 
+or phased to avoid the requirements of this section. 
+3. Affordability requirement: Subsidized Housing Inventory. All units affordable to 
+households earning 80% or less of AMI created in the MFOD under this section must be 
+eligible for listing on EOHLC’s Subsidized Housing Inventory. 
+4. Provision of Affordable Housing. In Applicable Projects, not fewer than ten percent (10%) 
+of housing units constructed shall be Affordable Housing Units. For purposes of 
+calculating the number of units of Affordable Housing required within a development 
+project, a fractional unit shall be rounded down to the next whole number. The Affordable 
+Units shall be available to households earning income up to eighty percent (80%) of the 
+AMI. 
+5. Development Standards. Affordable Units shall be: 
+a. Integrated with the rest of the development and shall be compatible in design, 
+appearance, construction, and quality of exterior and interior materials with the other 
+units and/or lots; 
+
+===== PAGE 5 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+5 
+Prepared by Innes Associates on behalf of RKG Associates 
+b. Dispersed throughout the development; 
+c. Located such that the units have equal access to shared amenities, including light and 
+air, and utilities (including any bicycle storage and/or Electric Vehicle charging 
+stations) within the development; 
+d. Located such that the units have equal avoidance of any potential nuisances as 
+market-rate units within the development; 
+e. Distributed proportionately among unit sizes; and 
+f. Distributed proportionately across each phase of a phased development. 
+g. Occupancy permits may be issued for market-rate units prior to the end of 
+construction of the entire development, provided that occupancy permits for 
+Affordable Units are issued simultaneously on a pro-rata basis. 
+6. Administration. The Zoning Enforcement Officer shall be responsible for administering 
+and enforcing the requirements in this section. 
+17.54.080  Development Standards 
+1. Development standards in the MFOD are applicable to all multi-family development within 
+the MFOD. These standards are components of the Site Plan Review process in Section 
+17.54.090 Site Plan Review. 
+2. Site Design. 
+a. Connections. Sidewalks shall provide direct connections among building entrances, 
+the public sidewalk (if applicable), bicycle storage, and parking. 
+b. Vehicular access. Where feasible, curb cuts shall be minimized, and shared 
+driveways encouraged. 
+c. Screening for Parking. Surface parking adjacent to a public sidewalk shall be 
+screened by a landscaped buffer of sufficient width to allow the healthy establishment 
+of trees, shrubs, and perennials, but no less than six (6) feet. The buffer may include a 
+fence or wall of no more than three (3) feet in height unless there is a significant grade 
+change between the parking and the sidewalk. 
+d. Parking Materials. The parking surface may be concrete, asphalt, decomposed 
+granite, bricks, or pavers, including pervious materials but not including grass or soil 
+not contained within a paver or other structure. 
+e. Plantings. Plantings shall include species that are native or adapted to the region. 
+Plants on the Massachusetts Prohibited Plant List, as may be amended, shall be 
+prohibited. 
+f. Lighting. Light levels shall meet or exceed the minimum design guidelines defined by 
+the Illuminating Engineering Society of North America (IESNA) and shall provide 
+illumination necessary for safety and convenience while preventing glare and overspill 
+onto adjoining properties and reducing the amount of skyglow. 
+
+===== PAGE 6 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+6 
+Prepared by Innes Associates on behalf of RKG Associates 
+g. Mechanicals. Mechanical equipment at ground level shall be screened by a 
+combination of fencing and plantings. Rooftop mechanical equipment shall be 
+screened if visible from a public right-of-way. 
+h. Dumpsters. Dumpsters shall be screened by fencing and plantings. Where possible, 
+dumpsters or other trash and recycling collection points shall be located within the 
+building. 
+i. 
+Stormwater management. Strategies that demonstrate compliance of the 
+construction activities and the proposed project with the most current versions of the 
+Massachusetts Department of Environmental Protection Stormwater Management 
+Standards, the Massachusetts Stormwater Handbook, Massachusetts Erosion 
+Sediment and Control Guidelines, and, if applicable, additional requirements under 
+the Town of Winthrop’s MS4 Permit for projects that disturb more than one acre and 
+discharge to the Town’s municipal stormwater system, and an Operations and 
+Management Plan for both the construction activities and ongoing post-construction 
+maintenance and reporting requirements. 
+3. Buildings: General. 
+a. Position relative to the principal street. The primary building shall have its principal 
+façade and entrance facing the principal street. 
+b. Entries. Where feasible, entries shall be clearly defined and linked to a paved 
+pedestrian network that includes the public sidewalk. 
+4. Buildings: Multiple buildings on a lot. 
+a. Parking and circulation on the site shall be organized to reduce the amount of 
+impervious surface. Where possible, parking and loading areas shall be connected to 
+minimize curb cuts onto public rights-of-way. 
+b. A paved pedestrian network shall connect parking to the entries to all buildings and 
+the buildings to each other. 
+c. The orientation of multiple buildings on a lot should reinforce the relationships among 
+the buildings. All building façade(s) shall be treated with the same care and attention 
+in terms of entries, fenestration, and materials. 
+d. The building(s) adjacent to the public street shall have a pedestrian entry facing the 
+public street. 
+5. Buildings: Shared Outdoor Space. Multi-family housing shall have common outdoor 
+space that all residents can access. Such space may be on the ground floor, courtyard, 
+rooftop, or terrace.  
+6. Buildings: Corner Lots. A building on a corner lot shall indicate a primary entrance either 
+along one of the street-facing façades or on the primary corner as an entrance serving both 
+streets. 
+a. Such entries shall be connected by a paved surface to the public sidewalk, if 
+applicable. 
+
+===== PAGE 7 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+7 
+Prepared by Innes Associates on behalf of RKG Associates 
+b. All façades visible from a public right-of-way shall be treated with similar care and 
+attention in terms of entries, fenestration, and materials. 
+c. Fire exits serving more than one story shall not be located on either of the street-facing 
+façades. 
+7. Buildings: Infill Lots. If the adjacent buildings are set back at a distance that exceeds the 
+minimum front yard requirements, infill buildings shall meet the requirements of Section 
+17.54.050 Dimensional Standards. Otherwise, infill buildings may match the setback line 
+of either adjacent building or an average of the setback of the two buildings to provide 
+consistency along the street. 
+8. Buildings: Principal Façade and Parking. Parking shall be subordinate in design and 
+location to the principal building façade. 
+a. Surface parking. Surface parking shall be located to the rear or side of the principal 
+building. Parking shall not be located in the setback between the building and any lot 
+line adjacent to the public right-of-way. 
+b. Integrated garages. The principal pedestrian entry into the building shall be more 
+prominent in design and placement than the vehicular entry into the garage. 
+c. Parking structures. Building(s) dedicated to structured parking on the same lot as one 
+or more multi-family buildings shall be subordinate in design and placement to the 
+multi-family building(s) on the lot. 
+9. Waivers. Upon the request of the Applicant, the Site Plan Review Authority may waive the 
+requirements of this Section 17.54.080 Development Standards, in the interests of design 
+flexibility and overall project quality, and upon a finding of consistency of such variation 
+with the overall purpose and objectives of the MFOD. 
+17.54.090  Site Plan Review 
+1. Applicability. All projects within the MFOD are subject to Site Plan Review. An application 
+for Site Plan Review shall be reviewed by the Permitting Authority for consistency with the 
+purpose and intent of Sections 17.54.040 through 17.54.080. 
+2. Other Zoning Sections. The following shall also apply to projects within the MFOD: 
+a. 17.40.020 Flood hazard zones. Under Section 17.040.070 New subdivisions and 
+development, the requirement for adequate drainage and protection of utilities from 
+floodwater damage are incorporated into this Site Plan Review. 
+b. 17.24.020 Environmental performance. The review procedures in this section, 
+which are applicable to projects requiring a special permit, do not apply to projects 
+within the MFOD. 
+3. Submission Requirements. As part of any application for Site Plan Review for a project 
+within the MCMOD submitted under Sections 17.54.050 through 17.54.080, the Applicant 
+must submit the following documents to the Municipality: 
+a. Application and fee for Site Plan Review. 
+
+===== PAGE 8 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+8 
+Prepared by Innes Associates on behalf of RKG Associates 
+b. Site plans that show the position of the building on the site, points of vehicular access 
+to and from the site and vehicular circulation on the site, stormwater management, 
+utilities, and landscape treatments, including any screening of adjacent properties, 
+and other information commonly required by Municipality for Site Plan Review. 
+c. Elevations of the building(s) showing the architectural design of the building. 
+d. All site plans shall be prepared by a certified architect, landscape architect, and/or a 
+civil engineer registered in the Commonwealth of Massachusetts. All landscape plans 
+shall be prepared by a certified landscape architect registered in the Commonwealth 
+of Massachusetts. All building elevations shall be prepared by a certified architect 
+registered in the Commonwealth of Massachusetts. All plans shall be signed and 
+stamped, and drawings prepared at a scale of one inch equals forty feet (1"=40') or 
+larger, or at a scale as approved in advance by the Permitting Authority. 
+e. Narrative of compliance with the applicable development standards of Section 
+17.54.080. 
+4. Timeline. Site Plan Review should commence no later than 30 days after the submission 
+of a complete application and should be completed expeditiously. The site plan review 
+authority may, when appropriate, seek the input of other municipal boards or officials. In 
+general, site plan review should be completed no more than 6 months after the 
+submission of the application. 
+5. Site Plan Approval. Site Plan approval for uses listed in Section 17.54.040 Permitted Uses 
+shall be granted upon a determination by the Site Plan Review Authority that the following 
+conditions have been satisfied. The Site Plan Review Authority may impose reasonable 
+conditions, at the expense of the applicant, to ensure that these conditions have been 
+satisfied. 
+a. the Applicant has submitted the required fees and information as set forth in the Town 
+of Winthrop’s requirements for a Building Permit and Site Plan Review; and 
+b. the project as described in the application meets the development standards set forth 
+in Section17.54.080 Development Standards. 
+6. Project Phasing. An Applicant may propose, in a Site Plan Review submission, that a 
+project be developed in phases subject to the approval of the Site Plan Review Authority, 
+provided that the submission shows the full buildout of the project and all associated 
+impacts as of the completion of the final phase. However, no project may be phased solely 
+to avoid the provisions of Section 17.54.070 Affordability Requirements. 
+17.54.100 Severability. 
+If any provision of this Chapter 17.54 is found to be invalid by a court of competent jurisdiction, the 
+remainder of Chapter 17.54 shall not be affected but shall remain in full force. The invalidity of any 
+provision of this Chapter 17.54 shall not affect the validity of the remainder of the Town of Winthrop’s  
+Zoning. 
+ 
+
+===== PAGE 9 =====
+ 
+Section 3A Zoning | Town of Winthrop 
+ 
+9 
+Prepared by Innes Associates on behalf of RKG Associates 
+2. MODIFY 17.50.210.D 
+D. Fees in Lieu of Parking. In the Center Business district, any commercial or mixed-use structure that 
+is required to provide parking spaces may make payments to the town in lieu of providing for all or part 
+of the on-site required parking. Payment made to the town in-lieu of providing up to fifty (50) percent of 
+the required on-site parking spaces for a project in the central business district (CBD) shall be allowed 
+by special permit from the planning board as part of its Major Site Plan and Design Review Process 
+described under Chapter 17.50, consistent with standards to be adopted by, and published in 
+advance by the planning board. These standards must be kept on file with the Winthrop Town Clerk. 

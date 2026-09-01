@@ -1,0 +1,224 @@
+
+===== PAGE 1 =====
+ 
+ 
+MBTA Community Virtual Public Presentation 
+8/15/23 
+Questions from Attendees 
+Question: 
+ 
+What are the consequences of non-compliance by 12/31/24 deadline? 
+Response: 
+Don’t have an exact list but are aware of actions taken against 
+communities that did not achieve interim compliance. Last January 
+presentations were given to the Select Board and Planning Board. Some 
+consequences have included Housing Authorities losing their funding. 
+Communities could lose eligibility for Housing Choice grants and others. 
+So, both loss of grant opportunities and losing existing funding.  
+Question: 
+Appears that some of the districts are already developed. How were the 
+areas chosen? Shouldn’t the areas be open/ available for development?  
+Response: 
+Due to size constraints and requirement of certain parcel sizes, we looked 
+for large anchor parcels. There are various levels of development 
+opportunities and developability in the areas that are presented.  
+Question: 
+If an area is already developed, then a developer could redevelop based 
+upon these confines. Any way to make it less dense, can we put in height 
+restrictions?  
+Response:  
+It will depend on what district is chosen and the acreage. We will be able 
+to put in place height restrictions.  
+Question:  
+Will the Planning Board lose the power to look at traffic and traffic studies 
+in approving a project?  
+Response: 
+There will be some authority for traffic mitigation, site plan review will be 
+in place to shape the project making sure the development works within 
+neighborhood. 
+Question: 
+Should base choice of a district be made on multiple means of egress? 
+How do we balance opposing forces of transit, we don’t have, and 
+increase vehicular traffic?  
+Response: 
+Choosing a district along a LRTA route makes sense, but regardless as we 
+do not have an MBTA station we will have to plan for additional vehicular 
+traffic.   
+Question:  
+Any consideration for development next to the environmentally sensitive 
+pond? 
+
+===== PAGE 2 =====
+ 
+ 
+Response: 
+Cannot count environmentally sensitive land, wetlands, buffers as acreage 
+for the district and density requirements. Wetlands and buffers would 
+need to be maintained during permitting.  
+Question: 
+Is 300 Ames Pond targeted and would it have more restrictive rules being 
+that it is next to a Pond?  
+Response: 
+300 Ames Pond would be part of a potential district. There would be no 
+sidestepping of wetland permitting requirements. This is not like 40B 
+permitting. 
+Question: 
+ 
+Where are the LRTA routes? 
+Response: 
+ 
+Both Main Street and Andover Street.  
+Question:  
+Did you factor that the survey was prepopulated and may have led to 
+North A coming out first?  The top 3 were the first 3 on the survey. 
+Response: 
+If people did not choose it would have been North A, North B, and Town 
+Center in that order and that was not the case.  
+Question:  
+Found the survey to be flawed; if you logged in did nothing and sent it, it 
+would be prepopulated. Is there a way to see what was sent in without 
+making a choice? Should have been set up so nothing was pre-listed.  
+Response: 
+The design was based on the software that we used. No decisions are 
+being made tonight. If respondents did not make a choice, the individual 
+question was recorded as “skipped.” 
+Question: 
+How were the densities per district derived?  
+Response: 
+We did not calculate the densities; this was something that came out the 
+EOHLC compliance modeling software.  
+Question: 
+Is that formula available for viewing because it appears that some of the 
+acreage was significantly different.  
+Response: 
+The formula in the spreadsheets are locked-in and we cannot change 
+them. They used existing data from GIS layers.  
+Question: 
+Individual does research for a living and takes into consideration how 
+survey is designed. Ranked in direct order of how it appeared on survey. 
+Just drag and drop. Should be taken into serious consideration the design 
+and human elements. Food for thought when evaluating comments.  
+Response: 
+ Appreciate comments.  This was a tool to start the conversation and is by 
+no means binding.  
+
+===== PAGE 3 =====
+ 
+ 
+Question: 
+Does the state consider the severe impact on communities the housing 
+requirements would have on local infrastructure? For instance, what if a 
+new sewer treatment plant is required or what about increases in police 
+and fire fighting services for the new residents.  
+Response: 
+We have not received any indication that there will be additional 
+resources from the State.  
+Question: 
+Rt. 133 bus line provides mediocre service; wasn’t the purpose to get 
+people off the streets and on public transit?  
+Response: 
+Our local bus lines don’t really play into this. We would still be an 
+adjacent MBTA community. We tried to stay within the spirit of transit 
+even though we are not required.  
+Question:  
+ 
+Possibility of using more than 1 site (district)? 
+Response: 
+Not a requirement; we were looking for anchor parcels to meet the 
+requirement of at least 25 contiguous acres. Intent was to have it all 
+together. Would have to run compliance model to look at different 
+scenarios to look at densities to achieve the 1214 units.  
+Question:  
+If more than 1 area is zoned could the Planning Board limit the 
+development in one area based on the development in the other area?  
+Response: 
+Density per acre based on by-right development; would have to be 
+significant finding to limit density on proposed project.  
+Question:  
+LRTA cannot service outside of its region; LRTA Roadrunner service cannot 
+go to MBTA Station in Ballardvale because it is in the MVTRA service 
+area—any discussions from the state about that? Reminded the audience 
+that this is not a mandate to build. 
+Response: 
+A bit outside of the scope of this housing initiative. Public transit separate 
+funding streams. There are examples of services crossing designated 
+areas.  
+Question:  
+Asked about impact on schools with no age restrictions. Shuttle services 
+from a development?  
+Response: 
+Declining school enrollment numbers. 2010-2020 about 1,000 new 
+housing units built. 2008-2022 loss of 1,200 students.  
+If developers bring in their own shuttle services, we encourage it.  
+Question: 
+Shouldn’t a cost benefit analysis of loss of grant funds for  non-
+compliance with additional costs of building/ infrastructure? 
+
+===== PAGE 4 =====
+ 
+ 
+Response: 
+There has been a loss of housing authority funds in some communities. 
+Not a typical cost analysis. From the Attorney General’s 3/15/23 Advisory: 
+“All MBTA Communities must comply with the Law. Communities that do 
+not currently have a compliant multi-family zoning district must take steps 
+outlined in the DHCD guidelines to demonstrate interim compliance. 
+Communities that fail to comply with the Law may be subject to civil 
+enforcement action.8 Non-compliant MBTA Communities are also subject 
+to the administrative consequence of being rendered ineligible to receive 
+certain forms of state funding.9 Importantly, MBTA Communities cannot 
+avoid their obligations under the Law by foregoing this funding. The Law 
+requires that MBTA Communities “shall have” a compliant zoning district 
+and does not provide any mechanism by which a town or city may opt out 
+of this requirement.10 MBTA Communities that fail to comply with the 
+Law’s requirements also risk liability under federal and state fair housing 
+laws.” 
+Question:  
+Special Permit example from marijuana establishments that could locate 
+someplace but were still denied. Would that apply here?  
+Response: 
+This is a site plan review process not a special permit. Just the same as 
+the marijuana applications. All of them received approval under site plan 
+review and some were denied for other purposes. Site plan review would 
+still allow the town to shape the project but does not have discretionary 
+approval authority associated with it.  
+Question:  
+Wasn’t 40B project at 300 Ames Pond denied? Was there any 
+consideration given to the neighborhood having to fight 4 different 
+proposals to rezone the property to some else? 
+Response: 
+The project was not denied, the developer let their project eligibility 
+letter from the state run out. There was one proposed zoning change a 
+few years ago. The 40B did not go forward. Over 20 years ago there was a 
+commercial project proposed that was appealed and was not built 
+because of the market changing after September 11th. There have been 
+attempts over the years to do something that just hasn’t come to fruition.  
+Question:  
+Question the results of the survey; not user friendly, was not well 
+designed and should be disregarded. What was Town Counsel’s 
+involvement in the survey design? Doesn’t have to be one site, 
+recommend that zoning be evenly distributed throughout town. Why was 
+Trull Brook included, but not the old Tewksbury Country Club.  
+Response: 
+Town Counsel was aware but not involved. Survey was a tool to start the 
+conversation. We will look to see about distributing it based on density 
+
+===== PAGE 5 =====
+ 
+ 
+requirements. The TCC could not be used be the open space is a 
+requirement of the Eagles Landing condominium project and would be 
+considered excludable open space.   
+Question:  
+Should have impacts from Police, Fire and DPW before going to Town 
+Meeting. What major infrastructure improvements will be necessary. 
+What are the major financial impacts? North St Fire Station; water/ sewer 
+upgrades.  
+Response: 
+Noted.  
+Question:   
+Is this “forever zoning” or once we reach the 1,214 units, will the zoning 
+still exist? 
+Response: 
+If we close in on 1214, we would go into Town Meeting to remove district 
+after the requirement has been met.  

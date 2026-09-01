@@ -71,6 +71,17 @@ def discover_host(host: str, municipality: str, cfg: dict,
     # Named hosts whose CMS ships a blanket Disallow over public election records. Crawled
     # far slower and shallower than a normal host -- see RobotsPolicy.override.
     polite = [norm_host(h) for h in dc.get("polite_override_hosts", [])]
+    # A corpus may add its own overrides without editing a shared settings list.
+    # One bare host per line; '#' comments ignored. Absent file = no change.
+    _pf = dc.get("polite_override_file", "config/polite_overrides.txt")
+    try:
+        _p = resolve_path(_pf)
+        if _p.exists():
+            polite += [norm_host(ln.strip()) for ln in
+                       _p.read_text(encoding="utf-8").splitlines()
+                       if ln.strip() and not ln.startswith("#")]
+    except Exception:                                          # noqa: BLE001
+        pass
     is_polite = norm_host(host) in polite
     robots = RobotsPolicy(host, override=is_polite).load()
     if is_polite:

@@ -1,0 +1,573 @@
+
+===== PAGE 1 =====
+Form Name: 
+District Compliance Application for MBTA Communities
+Submission Time: 
+April 18, 2024 10:27 am
+Browser: 
+Chrome 123.0.0.0 / Windows
+IP Address: 
+70.20.25.84
+Unique ID: 
+1216484705
+Location: 
+District Compliance Application for MBTA Communities under Section 3A of the Zoning Act
+Description Area
+Please read the Section 3A Compliance Guidelines and the Instructions
+before starting to complete this form. Find these documents at
+mass.gov/mbtacommunities.This application must be submitted for MBTA
+communities to comply with Section 3A of the Zoning Act and with the
+Compliance Guidelines for Multi-family Zoning Districts issued by DHCD
+August 10, 2022, as revised (Compliance Guidelines)This application must
+be submitted by a municipal official and must include the signature of the
+municipal CEO. A red asterisk (*) next to a question on this form indicates
+that a response is required. &nbsp;Users will not be able to submit the form
+unless all required answers are completed. &nbsp;Other documentation
+required to be submitted with this form includes:A completed Compliance
+Model Excel workbook file demonstrating the district's "zoning metrics",
+including land area, estimated unit capacity, gross density, geographic
+contiguity, and, if applicable, the percentage of district land area and unit
+capacity (relative to the community's minimum requirements) that is within
+transit station areas&nbsp;A copy of the municipal zoning ordinance or
+bylaw and zoning mapA zip folder containing GIS shapefile(s) for the
+zoning district(s) designated for compliance&nbsp;If the MBTA community
+is a town, a copy of the Attorney General approval letter for the district(s)
+OR if the district(s) was recently adopted or amended, a copy of “Form 7”
+evidencing that the zoning was submitted to the Attorney General’s officeIf
+the MBTA community has inclusionary zoning applicable in the district, an
+economic feasibility analysis, if necessary.&nbsp;A statement on municipal
+letterhead signed by the city or town clerk, certifying that the zoning maps
+and text submitted in connection with this application is the complete and
+up to date zoning in the municipality
+Section 1.	Community Information
+1.1  Municipality
+Lincoln
+Description Area
+Information about the community's specific zoning requirements under
+Section 3A and the Compliance Guidelines:
+1.2 Community Category
+Commuter Rail
+1.2a Minimum multi-family unit capacity
+635
+1.2b Minimum Land Area in acres
+42
+
+===== PAGE 2 =====
+1.2c Percent of district to be located in
+Transit Station Areas (express as a
+percentage, e.g. "50" for fifty percent)
+20
+1.3 Information about the contact
+person for this application
+Paula Vaughn-MacKenzie
+1.3a Job Title/Description
+Director of Planning and Land Use
+1.3b Email Address
+vaughnp@lincolntown.org
+1.3c Phone Number
+(781) 259-2601
+1.4 Information about the municipal
+CEO
+Timothy Higgins
+1.4a Municipal mailing address of CEO
+16 Lincoln Road
+Lincoln, MA 01773
+1.4b Email address of municipal CEO
+higginst@lincolntown.org
+1.5 Did this community submit an
+application for pre-adoption review?
+Yes
+1.6 Were any changes or amendments
+made to the zoning that was provided to
+DHCD for pre-adoption review?
+Yes
+
+===== PAGE 3 =====
+1.7 Please describe the changes
+Per discussion with EOHLC, changes to the bylaw were as follows and
+submitted to EOHLC by email on January 25th:
+1.	An updated map showing the district and subdistricts as polygons.
+2.	Updated shapefiles that include right of way areas for all subdistricts.
+3.	A screen shot of the Town GIS showing a 20' right of way that provides
+frontage and access to parcels m214532-907035 and m214570-906978.
+4.	The Final Draft of the Zoning Bylaw to be brought to Town Meeting.
+a.	Adding a provision that the requirement for compliance within the Aquifer
+Protection & Watershed Protection Overlay Districts is a permit from the PB
+rather than a special permit. Section 12.9.3
+b.	Revised language regarding parking in the Village Center Overlay
+District which does not require any minimum parking requirements for
+commercial uses. Section 12.9.2.4
+c.	We have included a 10% Inclusionary Zoning Requirement but were
+asking for 15% and was waiting for EOHLC review of the submitted
+Economic Feasibility Study.  Section 12.9.3
+5.	Updated Models for the MMU and the 3A District that use the wetlands
+tab that more accurately reflects conditions on the ground.
+On March 15th feedback was given via a zoom meeting with EOHLC and
+language regarding affordability was revised to include a 15% affordability
+requirement unless EOHLC determined in writing that 15% would not be
+acceptable and then the requirement would revert back to 10%.  See
+section 12.9.3.2.  In connection with this change, the Town will submit a
+revised Economic Feasibility Study with this application that responds to
+the feedback from the March 15th meeting and starts the analysis at the
+threshold of 6 units.
+On the floor of Town Meeting (March 23, 2024), two amendments were
+made:
+1. Max Density for the Village Center District (MMU) was reduced from 25
+to 15 u/a
+2. Lincoln Woods subdistrict max density was increased from 8 to 10 u/a
+3. Lincoln Road/Lewis Street subdistrict max density was increased from
+11 to 12 u/a.
+4. The special permit process for the Planning Board to allow a reduction in
+commercial space in the Village Center District (MMU) was removed.  See
+section 12.9.2.4, 10
+Section 2.	Compliance Documentation
+
+===== PAGE 4 =====
+Description Area
+Responses to the following questions should match the information from
+the Compliance Model Excel workbook which must also be uploaded.
+&nbsp;Please note: &nbsp;the total capacity for file uploads in this
+application is 25MB. &nbsp;If your files are too large for uploading, please
+provide links where DHCD can download the files. &nbsp;If you need
+assistance with this process, contact nathan.carlucci@mass.gov or
+emma.snellings@mass.gov 
+District 1:
+Description Area
+Section 3A requires MBTA communities to have a zoning "district" of
+reasonable size that allows multi-family housing as of right. To demonstrate
+compliance with the law, MBTA communities may submit a "district" that
+differs from boundaries adopted at the municipal level. &nbsp;For example.
+the "district" designated for compliance with Section 3A might consist of a
+portion of a municipal zoning district or might contain all of, or portions of,
+multiple municipal zoning districts. &nbsp;Furthermore, a single zoning
+district might have multiple subdistricts with distinct zoning rules. The
+Compliance Model requires communities to input a separate "district" for
+each distinct set of zoning rules, whether they are derived from districts or
+subdistricts. &nbsp;This does not mean that separate entries are required
+where one district or subdistrict appears in multiple distinct geographies on
+a zoning map. &nbsp;The districts used on this application must match the
+districts used in the Compliance Model workbook. &nbsp;If the MBTA
+community used only one district in the Compliance Model, enter that
+information for "District One". If the MBTA community used multiple districts
+in the Compliance Model, enter the first district for "District One".
+&nbsp;This application will accept up to six distinct districts/subdistricts.
+&nbsp;If more than six are necessary, please contact MBTA communities'
+staff. &nbsp;Once each separate district/subdistrict information has been
+entered, there is a separate section for the cumulative data of all
+districts.&nbsp;
+District 1: 2.1 Brief narrative description
+of the district, including its name and
+location
+Lincoln Woods subdistrict:  located in the town center and it allows
+multifamily housing as of right with a max density of 10 units per acre.  
+Description Area
+Inputs for the quantitative "zoning metrics" &nbsp;fields below can be found
+in the Compliance Model workbook Summary Tab
+District 1: 2.2	Land area in acres
+20.50
+District 1: 2.3 Estimated unit capacity
+201
+District 1: 2.4 Gross density in units per
+acre
+27.50
+
+===== PAGE 5 =====
+District 1: 2.5 Land area (acres) in
+transit station areas
+20.50
+District 1: 2.6 Estimated unit capacity in
+transit station areas
+201
+District 1: 2.7 Is there a second district
+or subdistrict?
+Yes
+District 2:
+District 2: 2.1 Brief narrative description
+of the district, including its name and
+location 
+Lincoln Road/Lewis Street subdistrict.  It is located in the town center and it
+allows multi-family housing as of right at a max density of 12 units per acre
+and it allows mixed-use projects as of right that include multi-family
+housing.
+District 2: 2.2	Land area in acres
+20.30
+District 2: 2.3 Estimated unit capacity
+204
+District 2: 2.4 Gross density in units per
+acre
+16.20
+District 2: 2.5 Land area (acres) in
+transit station areas 
+20.30
+District 2: 2.6 Estimated unit capacity in
+transit station areas
+204
+District 2: 2.7 Is there a third district or
+subdistrict? 
+Yes
+District 3:
+District 3: 2.1 Brief narrative description
+of the district, including its name and
+location
+Codman Road subdistrict is located in the town center and allows
+multi-family housing by right at a max density of 10 units per acre.
+District 3: 2.2	Land area in acres
+23.70
+District 3: 2.3 Estimated unit capacity
+169
+District 3: 2.4 Gross density in units per
+acre
+11.80
+District 3: 2.5 Land area (acres) in
+transit station areas 
+23.70
+District 3: 2.6 Estimated unit capacity in
+transit station areas
+169
+
+===== PAGE 6 =====
+District 3: 2.7 Is there a fourth district or
+subdistrict? 
+Yes
+District 4:
+District 4: 2.1. Brief narrative
+description of the district, including its
+name and location
+Village Center District is located in the town center and is a mandatory
+mixed use district.  It allows multi-family and mixed-use projects by right at
+a max density of 15 units per acre.  
+District 4: 2.2	Land area in acres
+7.10
+District 4: 2.3 Estimated unit capacity
+74
+District 4: 2.4 Gross density in units per
+acre
+10.50
+District 4: 2.5 Land area (acres) in
+transit station areas 
+7.10
+District 4: 2.7 Is there a fifth district or
+subdistrict? 
+No
+Cumulative Zoning Metrics
+Description Area
+This section appears for MBTA communities that are using more than one
+municipal zoning district or subdistrict to demonstrate compliance with
+Section 3A. &nbsp;Find this information in the "Totals" column of the
+"Comparison Table of Requirements and Modeled Results" on the
+Summary Tab of the Compliance Model workbook.&nbsp;
+2.8 Cumulative Land Area in acres
+64.50
+2.9 Cumulative Unit Capacity
+648
+2.10 Overall gross density in units per
+acre
+16.80
+2.11 Cumulative Land area (acres) in
+transit station areas
+64.50
+2.12 Estimated unit capacity in transit
+station areas
+648
+2.13 Percentage of land area (to
+minimum land area requirement) in
+transit station area. Enter as a
+percentage, i.e. "50" for 50%.
+100.00
+
+===== PAGE 7 =====
+2.14 Percentage of unit capacity (to
+minimum unit capacity  requirement) in
+transit station area. Enter as a
+percentage, i.e. "50" for 50%.
+100
+2.15 Is at least 50% of the district land
+area comprised of one contiguous
+geography?
+Yes
+2.16 Are any district geographies
+smaller than 5 acres included in the
+land area calculation?
+No
+Section 3: Compliance Model Uploads
+Description Area
+Please note: &nbsp;the maximum file size for the total of all uploads in this
+application is 25MB. &nbsp;If files are too large for uploading, please
+provide links where DHCD can download the files. Further instructions for
+uploading shapefiles are available in the District Compliance Application
+Instructions. If you need assistance with this process, contact
+nathan.carlucci@mass.gov or emma.snellings@mass.gov 
+3.1 Did this community complete the
+Compliance Model and achieve
+numerical zoning standards that satisfy
+the requirements of Section 3A and the
+Compliance Guidelines?
+Yes
+3.1a Completed Compliance Model
+Excel workbook 
+https://www.formstack.com/admin/download/file/16231242205
+https://www.formstack.com/admin/download/file/16231242206
+3.1c Zip folder containing GIS shapefile
+components for the designated zoning
+district(s)
+https://www.formstack.com/admin/download/file/16231242207
+3.2 Were any modifications made to the
+calculations of the Compliance Model
+workbook, or to the parcel
+configurations or excluded land
+classifications provided by DHCD in the
+land maps?
+No
+
+===== PAGE 8 =====
+Description Area
+Communities may find that modifications are necessary for the data
+contained in the Compliance Model to accurately reflect on-the-ground
+realities. &nbsp; For example, parcel configurations may have changed, or
+publicly owned land may have been disposed for private housing
+development. The Compliance Model workbook component allows users to
+override some of this data to better reflect those realities. If the community
+made any adjustments to that data, please submit a list of the adjustments
+that were made, and, if applicable, provide any evidence justifying the
+override (e.g., copy of a disposition agreement, a recorded plan of land, a
+recorded deed, etc).&nbsp;
+Section 4: Zoning Uploads
+Description Area
+In the following section please provide a copy of the complete municipal
+zoning ordinance or bylaw and zoning map. &nbsp;Please ensure that all
+uploads are in PDF format with searchable text and all map imagery is
+sufficient resolution for a user to zoom in and clearly read all labels and
+texts. &nbsp;If the community's official zoning map is in color, the upload
+must be in full color as well. Please note that this application requires
+certification by the city or town clerk that the uploaded zoning is complete
+and up to date.&nbsp;Please note: &nbsp;the total capacity for file uploads
+in this application is 25MB. &nbsp;If your files are too large for uploading,
+please provide links where DHCD can download the files. &nbsp;If you
+need assistance with this process, contact nathan.carlucci@mass.gov or
+emma.snellings@mass.gov 
+4.1 Please upload the complete zoning
+text, including the adopted district(s)
+designated for compliance
+https://www.formstack.com/admin/download/file/16231242209
+4.1a If needed, please provide a link to
+the bylaw or ordinance
+https://www.lincolntown.org/DocumentCenter/View/85252
+4.2 Please upload the zoning map,
+including the adopted district(s)
+designated for compliance
+https://www.formstack.com/admin/download/file/16231242211
+https://www.formstack.com/admin/download/file/16231242212
+4.2a If needed, a link to the zoning map,
+including the adopted district(s)
+https://next.axisgis.com/LincolnMA/elbn5JmAltk4
+4.3 Is the municipality a town or a city?
+Town
+4.3a Did the Town adopt or amend a
+zoning by-law at Town Meeting in order
+to comply with Section 3A? 
+Yes
+
+===== PAGE 9 =====
+Description Area
+Section 9 of the Compliance Guidelines requires towns to submit evidence
+that a new or amended bylaw was adopted and was submitted to Attorney
+General's Office by submission of "Form 7" prior to submitting an
+application for District Compliance.
+4.3bIs the by-law awaiting a
+determination from the Attorney
+General’s Office, Municipal Law Unit?
+Yes
+4.3c Please upload the "Form 7"
+document that was submitted to the
+Attorney General's Office OR a letter of
+determination from the Attorney
+General's OFfice
+https://www.formstack.com/admin/download/file/16231242217
+Section 5: Inclusionary Zoning/Affordability Requirements
+5.1  Is multi-family housing
+development in this district subject to
+affordability requirements?
+Yes
+5.2 Through which mechanism are
+affordable units required? (check all
+that apply)
+Inclusionary zoning bylaw or ordinance that applies to the whole
+municipality
+Inclusionary zoning bylaw or ordinance that is specific to the district
+designated for compliance with Section 3A, and is NOT connected to any
+DHCD zoning incentive program such as c. 40R
+Local Inclusionary Zoning
+5.3 What is the percentage of units in a
+project that is required to be restricted
+as affordable?
+15% unless EOHLC determines in writing that is infeasible and then 10%
+5.4 What is the cap on the income of
+families or individuals to occupy the
+affordable units, expressed as a
+percentage of Area Median Income?
+(For example, 80% of AMI, 60% of AMI,
+etc)
+80% of AMI
+5.5 What is the threshold of units in a
+project to trigger affordability
+requirements? Please describe how
+rounding and fractional units are
+handled. 
+6 units threshold.  If the calculation results in a fraction of .5 or greater, the
+number of affordable units  shall be rounded up.
+5.6 How does the threshold apply?
+To the number of units added to a lot/to a project, and pre-existing units do
+not count towards the unit threshold
+
+===== PAGE 10 =====
+5.7 Please describe any zoning or
+developer incentives
+N/A
+5.8 May a financial payment be provided
+in lieu of providing on-site affordable
+units?
+Yes
+5.8a  What is the formula used to
+calculate the required payment?
+The Planning Board will determine in consultation with the Lincoln
+Affordable Housing Trust.  The amount in cash equal to or greater than the
+value of development and construction of such affordable housing units.
+5.9 May offsite affordable units be
+provided as an alternative form of
+compliance?
+No
+5.10 Please provide any other
+description of inclusionary zoning
+requirements not captured in the
+preceding questions.
+All affordable units must meet the requirements of EOHLC for approval as
+LIP dwelling units and for inclusion in the Town's SHI and must remain
+affordable in perpetuity.
+Description Area
+If a municipality wants units that are developed as of right in accordance
+with inclusionary zoning requirements to be listed on its Chapter 40B
+Subsidized Housing Inventory, then &nbsp;it must submit an application to
+DHCD to review the units as "Local Action Units" (LAU) for compliance with
+"Local Initiative Program" (LIP) requirements. &nbsp;Learn more about this
+at: &nbsp; Local Initiative Program | Mass.gov&nbsp;
+(https://www.mass.gov/service-details/local-initiative-program)
+5.11 Has the appropriate municipal staff
+reviewed the guidelines for the Local
+Initiative Program/Local Action Unit
+(LIP/LAU) and do they understand the
+process for getting Inclusionary Zoning
+units onto the Subsided Housing
+Inventory?  
+Yes
+Economic Feasibility Analysis
+Description Area
+Section 4.b. of the Compliance Guidelines requires affordability
+requirements that exceed certain thresholds to be supported by an
+economic feasibility analysis, prepared for the municipality by a qualified
+and independent third party. &nbsp;If inclusionary zoning requirements in
+the designated district triggered the requirement for an economic feasibility
+analysis, please upload it below.&nbsp;
+
+===== PAGE 11 =====
+5.22 Do the affordability requirements in
+this MBTA community require
+submission of an Economic Feasibility
+Analysis?
+Yes
+Description Area
+Detailed requirements for submitting an Economic Feasibility Analysis are
+available on the MBTA Communities website at
+mass.gov/mbtacommunities. Please read both the Economic Feasibility
+Analysis Details document and the Economic Feasibility Analysis
+Instructions document prior to attempting to complete this section.&nbsp;
+Description Area
+Economic Feasibility Analysis Uploads:
+Assumptions Checklist Upload
+https://www.formstack.com/admin/download/file/16231242231
+Pro forma Upload
+https://www.formstack.com/admin/download/file/16231242232
+Economic Feasibility Analysis Narrative
+Upload
+https://www.formstack.com/admin/download/file/16231242233
+Section 6: Zoning Data
+6.1 Were changes necessary to comply
+with Section 3A?
+Yes
+6.2  Please describe the zoning (or
+non-zoning) changes that were
+necessary to apply for compliance with
+Section 3A . Select all that apply
+A new zoning district
+Amendments to existing district boundaries
+Amendments to the applicability of other zoning or non-zoning
+requirements in the district (e.g. parking, site plan review, inclusionary
+zoning, mixed use, moratoriums, etc)
+6.5 What was the reason to amend
+district boundaries?
+Other: Designate District boundaries and subdistrict boundaries as overlay
+districts.
+6.6 What kinds of applicability needed
+to change? Select all that apply
+Mandatory retail/commercial component
+Minimum parking requirements
+Other: Mandatory retail/commercial requirements are only in the MMU. 
+Minimum parking requirements are only 1 space per residential unit.
+6.7 Were changes passed using a
+Simple Majority voting threshold under
+c. 40A Section 5?
+Yes
+
+===== PAGE 12 =====
+6.8 Please describe any other changes
+that were necessary to comply with
+Section 3A
+Dimensional controls such as height, stories, setbacks were all relaxed. 
+Lot coverage of building and parking area changed to 50% of the lot. 
+Parking for residences relaxed to 1space per unit.  Commercial Parking
+requirements were removed.
+Special Permit compliance with Aquifer Protection and Watershed sections
+was changed to a permit by the Planning Board.
+Section 7: Signatures, Certifications, and Attestations 
+Description Area
+By signing and submitting this application, the person whose signature
+appears below is making the following attestations and certifications to
+DHCD:All information provided in this application is true and accurate as of
+the date of submission.All zoning maps and text provided in support of this
+application have been validly adopted and are in effect as of the date of
+submission, except that recently adopted zoning bylaws or zoning
+amendments may be subject to approval by the Attorney General under
+section 32 of chapter 40 of the General Laws.No other ordinances, bylaws,
+or municipal rules or regulations, or real estate transactions or plans known
+to me, are in effect or have been proposed that would prohibit, limit, or
+restrict the development of multi-family housing in the district submitted for
+compliance.Based on the actual knowledge of the municipal officials
+engaged in the creation or review of the district submitted for compliance,
+the GIS district map used in the compliance model accurately reflects all
+existing parcel configurations and material land use restrictions in the
+district submitted for compliance.
+Please attach a statement on municipal
+letterhead signed by the city or town
+clerk, certifying that the zoning maps
+and text submitted in connection with
+this application by upload, link, or
+otherwise, is the complete and up to
+date zoning in the municipality.  
+https://www.formstack.com/admin/download/file/16231242240
+I hereby attest that I am duly authorized to submit this application. By
+entering my name in the space above, I further certify, under the pains and
+penalties of perjury, that the responses to the questions provided in this
+application, and the attached documentation, are true, accurate, and
+complete. I understand that the Department of Housing and Community
+Development (DHCD) will rely on the information provided in this
+application to make decisions about compliance with Section 3A of the
+Zoning Act.
+E-Signature for the municipal CEO
+submitting this form
+Timothy Higgins
+
+===== PAGE 13 =====
+Description Area
+After you submit the form, you will receive a message confirming the
+submission. If you do not receive this confirmation message then your form
+was missing a required field and was not submitted. Please look for any
+fields highlighted in red. Correct, and try to submit again.&nbsp;

@@ -1,0 +1,36 @@
+# RI municipal hosts, verified by src/verify_hosts.py
+# name match AND a decisive state signal. 34 hosts.
+barrington.ri.gov
+bristolri.gov
+bristolri.us
+charlestownri.org
+coventryri.gov
+cranstonri.gov
+cumberlandri.org
+eastgreenwichri.com
+eastprovidenceri.net
+glocesterri.org
+jamestownri.gov
+lincolnri.com
+littlecomptonri.org
+middletownri.com
+narragansettri.gov
+new-shoreham.com
+northkingstown.org
+northprovidenceri.com
+northprovidenceri.gov
+nsmithfieldri.org
+pawtucketri.com
+portsmouthri.com
+providenceri.com
+providenceri.gov
+richmondri.com
+scituateri.org
+southkingstownri.com
+tiverton.ri.gov
+townoffoster.com
+townofjohnstonri.com
+townofwarren-ri.gov
+westerlyri.gov
+westwarwickri.org
+wgtownri.org

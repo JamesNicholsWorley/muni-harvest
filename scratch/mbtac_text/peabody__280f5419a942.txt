@@ -1,0 +1,416 @@
+
+===== PAGE 1 =====
+ 
+Section 3.2. Description of zoning districts by replacing the current 3.2.15 DDD Designated 
+Development District Residential Overlay District with the following: 
+3.2.15 MFOD Multi-family Overlay District. To comply with the requirements of Section 3A of the 
+Zoning Act (Massachusetts General Laws Chapter 40A). 
+REPLACE Section 6.6.8 Designated Development District - Residential Overlay district with the 
+following:  
+Section 6.17: Multi-family Overlay District 
+6.17.1   Purpose 
+The purpose of the Multi-family Overlay District (MFOD) is to allow multi-family housing as of right in 
+accordance with Section 3A of the Zoning Act (Massachusetts General Laws Chapter 40A). 
+6.17.2   Establishment and Applicability 
+This MFOD is an overlay district with a land area of approximately 121.3 acres that is superimposed 
+over the underlying zoning districts and shown on the Zoning Map. The MFOD includes the following 
+subdistricts: 
+SUBDISTRICT 
+LOT / 
+LOCATION 
+# Lots 
+Total Lots / 
+Subdistrict 
+Size / 
+Acres 
+Subdistrict 
+(Net Acres) 
+Maximum 
+Density 
+Multi-family 
+Unit 
+Capacity 
+1 
+0 Dearborn / 
+089-010 
+1 
+2 
+24.9 
+30.2 
+23 
+Units/acre 
+706 
+7 Dearborn / 
+078-019 
+1 
+5.79 
+2 
+1 Brooksby 
+Village Drive / 
+027-005X 
+1 
+1 
+90.6 
+81.4 
+18 
+Units/acre 
+1,630 
+ 
+ 
+TOTAL ACRES 
+121.3 
+TOTAL CAPACITY 
+2,336 
+ 
+A. Applicability of MFOD. An applicant may develop multi-family housing located within an 
+MFOD in accordance with the provisions of this Section 6.17. 
+B. Underlying Zoning. The MFOD is an overlay district superimposed on the underlying 
+Designated Development District (DDD) and BR. The regulations for use, dimension, and 
+all other provisions of the Zoning Bylaw governing the DDD and BR shall remain in full 
+force, except for uses allowed as of right in the MFOD. Uses that are not identified in 
+Section 6.17 are governed by the requirements of the underlying zoning district(s). 
+6.17.3   Definitions. 
+For purposes of this Section 6.17, the following definitions shall apply. 
+A. Affordable unit. A multi-family housing unit that is subject to a use restriction recorded in 
+its chain of title limiting the sale price or rent or limiting occupancy to an individual or 
+household of a specified income, or both. 
+
+===== PAGE 2 =====
+ 
+B. Affordable housing. Housing that contains Affordable Units as defined by this Section 
+6.17. 
+C. Area Median Income (AMI). The median family income for the metropolitan statistical 
+region that includes the City of Peabody, as defined by the U.S. Department of Housing 
+and Urban Development (HUD). 
+D. Parking, structured. A structure in which vehicle parking is accommodated on multiple 
+stories; a vehicle parking area that is underneath all or part of any story of a structure; or a 
+vehicle parking area that is not underneath a structure but is entirely covered and has a 
+parking surface at least eight feet below grade. Structured Parking does not include 
+surface parking or carports, including solar carports. 
+E. Parking, surface. One or more parking spaces without a built structure above the space. 
+A solar panel designed to be installed above a surface parking space does not count as a 
+built structure for this definition. 
+F. Site plan review authority. The City of Peabody Planning Board is the Site Plan Review 
+Authority for this MFOD. 
+G. Subsidized Housing Inventory (SHI). A list of qualified Affordable Housing Units 
+maintained by EOHLC used to measure a community's stock of low-or moderate- income 
+housing for the purposes of M.G.L. Chapter 40B, the Comprehensive Permit Law. 
+6.17.4   Permitted Uses  
+A. Uses Permitted As of Right. The following uses are permitted as of right within the MFOD. 
+1. Multi-family housing. 
+B. Accessory Uses. The following uses are considered accessories as of right to any of the 
+permitted uses in Section 6.17.4.A.1. 
+1. Parking, including surface parking and parking within a structure such as an above-
+ground or underground parking garage or other building on the same lot as the 
+principal use. 
+6.17.5   Dimensional Standards 
+A. Table of Dimensional Standards. Notwithstanding anything to the contrary in this Zoning, 
+the dimensional requirements applicable in the MFOD are as follows: 
+Minimum Lot  
+Dimensions  
+Minimum Yard Depths  
+Maximum 
+Height  
+Maximum  
+Lot  
+Coverage  
+Floor  
+Area  
+Ratio  
+Area  
+(s.f.)  
+Frontage  
+(ft.)  
+Front  
+(feet) 
+Side  
+(feet)  
+Rear  
+(feet)  
+Feet 
+(FAR)  
+60,000  
+50 
+25 
+30 
+30 
+55 (4 stories) 
+60% 
+1.5 
+* Setbacks for multifamily buildings are 100 feet from residential abutters 
+ 
+B. Multi-Building Lots. In the MFOD, lots may have more than one principal building. 
+
+===== PAGE 6 =====
+ 
+6.17.8   Affordability Requirements. 
+A. Purpose. 
+1. Promote public health, safety, and welfare by encouraging a diversity of housing 
+opportunities for people of different income levels; 
+2. Provide for a full range of housing choices for households of all incomes, ages, and 
+sizes; 
+3. Increase the production of affordable housing units to meet existing and anticipated 
+housing needs; and 
+4. Work to overcome economic segregation, allowing the city of Peabody to be a 
+community of opportunity in which low and moderate-income households can 
+advance economically. 
+B. Applicability. This requirement is applicable to all residential and mixed-use 
+developments with eight (8) or more dwelling units, whether new construction, substantial 
+rehabilitation, expansion, reconstruction, or residential conversion (Applicable Projects). 
+No project may be divided or phased to avoid the requirements of this section. 
+C. Affordability requirements. Subsidized Housing Inventory. All units affordable to 
+households earning 80% or less of AMI created in the MFOD under this section must be 
+eligible for listing on EOHLC’s Subsidized Housing Inventory. 
+D. Provision of Affordable Housing. In Applicable Projects, not fewer than ten percent (10%) 
+of housing units constructed shall be Affordable Housing Units. For purposes of 
+calculating the number of units of Affordable Housing required within a development 
+project, a fractional unit shall be rounded down to the next whole number. The Affordable 
+Units shall be available to households earning income up to eighty percent (80%) of the 
+AMI. 
+E. Development Standards. Affordable Units shall be: 
+1. Integrated with the rest of the development and shall be compatible in design, 
+appearance, construction, and quality of exterior and interior materials with the other 
+units and/or lots; 
+2. Dispersed throughout the development; 
+3. Located such that the units have equal access to shared amenities, including light and 
+air, and utilities (including any bicycle storage and/or Electric Vehicle charging 
+stations) within the development; 
+4. Located such that the units have equal avoidance of any potential nuisances as 
+market-rate units within the development; 
+5. Distributed proportionately among unit sizes; and 
+6. Distributed proportionately across each phase of a phased development. 
+
+===== PAGE 7 =====
+ 
+7. Occupancy permits may be issued for market-rate units prior to the end of 
+construction of the entire development, provided that occupancy permits for 
+Affordable Units are issued simultaneously on a pro-rata basis. 
+F. Administration. The Zoning Enforcement Officer shall be responsible for administering 
+and enforcing the requirements in this section. 
+6.17.9   Site Plan Review 
+A. Applicability. Site Plan Review is required for all projects within this MFOD. The Permitting 
+Authority shall review an application for Site Plan Review for consistency with the purpose 
+and intent of Sections 6.17.4 through 6.17.8.  
+B. Submission Requirements. The provisions of Sections 12.3 through 12.6 of this zoning 
+ordinance shall apply. 
+C. Site Plan Approval. Site Plan approval for uses listed in Section 6.17.D Permitted Uses 
+shall be granted upon determination by the Site Plan Review Authority that the following 
+conditions have been satisfied. The Site Plan Review Authority may impose reasonable 
+conditions, at the expense of the applicant, to ensure that these conditions have been 
+satisfied. 
+1. The Applicant has submitted the required fees and information as set forth in the City’s 
+requirements for a Building Permit and Site Plan Review; and 
+2. The project, as described in the application, meets the development standards set 
+forth in Section 6.17.7 General Development Standards. 
+D. Project Phasing. An Applicant may propose, in a Site Plan Review submission, that a 
+project be developed in phases subject to the approval of the Site Plan Review Authority, 
+provided that the submission shows the full buildout of the project and all associated 
+impacts as of the completion of the final phase. However, no project may be phased solely 
+to avoid the provisions of Section 6.17.8 Affordability Requirements. 
+E. Additional Requirements. The provisions of Sections 12.8 through 12.15, and 12.18 Fees, 
+of this zoning ordinance shall apply. If the site plan review ordinance in Section 12 is in 
+conflict with any regulation of the subdivision rules and regulations of the Peabody 
+Planning Board, the planning board regulations shall supersede the site plan review 
+ordinance, except where the planning board regulations are inconsistent with the 
+requirements of Massachusetts General Laws Chapter 40A, Section 3A or the Compliance 
+Guidelines promulgated by the Executive Office of Housing and Livable Communities. In 
+such case, the applicable requirements of this Section 16.7 shall take precedence over 
+the subdivision rules and regulations of the Peabody Planning Board. 
+6.17.10   Severability. 
+If any provision of this Section 6.17 is found to be invalid by a court of competent jurisdiction, the 
+remainder of Section 6.17 shall not be affected but shall remain in full force. The invalidity of any 
+provision of this Section 6.17 shall not affect the validity of the remainder of the City of Peabody’s 
+Zoning. 
+
+===== PAGE 8 =====
+R1
+R1
+BN2
+R1
+R1
+MH
+R1
+BN
+R1
+R1
+BR
+BN2
+R3
+DDD
+R1B
+MH
+BR
+R3
+R2
+R1A
+IL
+R1B
+R1B
+R1A
+R1A
+IP
+IP
+BN
+IP
+IL
+R1A
+R2
+R2
+R2
+R1
+R1
+GBD
+BC
+R4
+R4
+R1
+R1A
+R1
+R1B
+BN
+BN
+BR
+R1B
+R5
+R5
+R3
+R2
+R5
+DDD
+R1A
+R1A
+R1B
+R4
+R4
+R4
+BR
+BR1
+BR1
+GB
+R4
+BR1
+GB
+BR1
+IL
+GB
+BR1
+WASHINGTON STREET
+MAIN STREET
+DANVERS
+MIDDLETON
+LYNNFIELD
+LYNN
+SALEM
+1. Disclaimer
+The 
+City 
+of 
+Peabody 
+makes 
+no
+representation, warranty or guarantee as the
+content, 
+accuracy, 
+currency 
+or
+completeness of any of the information
+provided on this map.  The City explicitly
+disclaims any representations, warranties
+and guarantees, including, without limitation,
+the implied warranties of merchantability
+and fitness for a particular purpose.  The
+information displayed in this map is to be
+used solely for informational purposes and
+is not intended nor should be used for
+engineering purposes.  Information and GIS
+layers have been obtained from several
+sources each having its own accuracy
+discrepancies and margins for error.
+2. Limitation of Liability
+The City is not responsible for any special,
+indirect, 
+incidental 
+or 
+consequential
+damages that may arise from the use of or
+the inability to use, any GIS layers and/or
+the materials contained in the Zoning Map
+whether the materials are provided by the
+City or by a third party.  Without limiting the
+generality 
+of 
+the 
+foregoing, 
+the 
+City
+assumes no responsibility whatsoever for:
+any errors, omissions, or inaccuracies in the
+information provided, regardless of how
+caused; or any decision made or action
+taken or not taken by the reader or other
+third party in reliance upon any information
+or data furnished on the Zoning Map.
+City of Peabody
+Dept. of Community Development and Planning
+24 Lowell Street
+Peabody, MA  01960
+Cartography: Pedro Soto
+Parcel
+Boundaries
+Railroads
+Roads
+Legend
+City of Peabody, Massachusetts
+1978 As Amended to November 14th, 2024
+±
+1" = 800'
+800
+0
+800
+1,600 2,400
+Feet
+Official Zoning Map
+City of Peabody
+Planning Board
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+______________________________________
+Date of Approval: _________________________
+Lakes
+Mill Overlay
+Multi-Family
+Overlay
+District
+Residential
+Overlay
+Zoning Districts
+BC
+BH
+BH2
+BHN
+BN
+BN2
+BR
+DDD
+GB
+GBD
+IL
+IP
+MH
+MPRD
+R1
+R1A
+R1B
+R2
+R3
+R4
+R5

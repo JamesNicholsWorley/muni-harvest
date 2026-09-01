@@ -1,0 +1,24 @@
+[1/22] Arlington (arlingtonma.gov): pages=0 files=0 kept=0 budget_hit=False
+[2/22] Bellingham (www.bellinghamma.org): pages=323 files=1035 kept=58 budget_hit=True
+[3/22] Bridgewater (bridgewaterma.org): pages=135 files=1016 kept=126 budget_hit=False
+[4/22] Carver (carverma.gov): pages=0 files=0 kept=0 budget_hit=False
+[5/22] Dedham (dedham-ma.gov): pages=0 files=0 kept=0 budget_hit=False
+[6/22] Georgetown (georgetownma.gov): pages=1 files=13 kept=1 budget_hit=False
+[7/22] Groveland (grovelandma.com): pages=1 files=10 kept=4 budget_hit=False
+[8/22] Hanover (hanover-ma.gov): pages=0 files=0 kept=0 budget_hit=False
+[9/22] Newton (newtonma.gov): pages=0 files=0 kept=0 budget_hit=False
+[10/22] Norfolk (norfolk.ma.us): pages=1 files=2 kept=0 budget_hit=False
+[11/22] Norton (nortonma.org): pages=326 files=768 kept=228 budget_hit=True
+[12/22] Paxton (townofpaxton.net): pages=0 files=0 kept=0 budget_hit=False
+[13/22] Quincy (quincyma.gov): pages=1 files=3 kept=0 budget_hit=False
+[14/22] Raynham (town.raynham.ma.us): pages=0 files=0 kept=0 budget_hit=False
+[15/22] Rowley (townofrowley.net): pages=0 files=0 kept=0 budget_hit=False
+[16/22] Salisbury (www.salisburyma.gov): pages=0 files=0 kept=0 budget_hit=False
+[17/22] Townsend (townsendma.gov): pages=1 files=3 kept=0 budget_hit=False
+[18/22] Walpole (www.walpole-ma.gov): pages=0 files=0 kept=0 budget_hit=False
+[19/22] West Bridgewater (westbridgewaterma.org): pages=1 files=3 kept=0 budget_hit=False
+[20/22] Westminster (www.westminster-ma.gov): pages=1 files=2 kept=0 budget_hit=False
+[21/22] Westwood (townhall.westwood.ma.us): pages=0 files=0 kept=0 budget_hit=False
+[22/22] Wilmington (www.wilmingtonma.gov): pages=3 files=1 kept=0 budget_hit=True
+
+appended 417 relevant nodes to nodes_mbtac_live.jsonl

@@ -1,0 +1,301 @@
+
+===== PAGE 1 =====
+Saugus
+MBTA Communities 3A
+Zoning overlay
+May 29, 2025
+
+===== PAGE 2 =====
+MBTA Communities
+Introduction
+MBTA Communities Requirements
+The compliance deadline is
+July 14, 2025
+2
+* Minimum density 15 units per acre on average
+** 50% contiguous, each subdistrict must be at least 5 acres
+Glossary of terms
+3A: Shorthand for MBTA Communities legislation
+Capacity: An estimate of the total number of units that could be built in the district, if every parcel (empty and not) was developed 
+into by-right multi-family housing at the maximum allowed density
+Contiguity: A requirement of all 3A districts wherein at least 50% of the total district area must consist of contiguous parcels 
+(touching or separated only by right-of-way). 
+District: All areas to which the 3A-compliant overlay applies 
+EOHLC: Executive Oﬃce of Housing and Livable Communities, the State oﬃce responsible for enacting the MBTA Comunities 
+process. EOHLC replaced the Department of Housing and Development (DHCD)
+Net new units: An estimate of how many additional units would be allowed to be built in the district - the district sum of the 
+parcel-by-parcel difference between zoned capacity and existing units. 
+Community 
+category
+Minimum multi 
+family unit 
+capacity*
+Minimum land 
+area**
+% of district to 
+be located in 
+station area
+Adjacent 
+community
+1,130
+50
+0%
+
+===== PAGE 3 =====
+MBTA Communities
+3
+
+===== PAGE 4 =====
+MBTA Communities
+Draft scenario
+MBTA Communities 
+Overlay - Map
+4
+Subdistricts
+21 units per acre
+A
+15 units per acre
+B
+12 units per acre
+C
+
+===== PAGE 5 =====
+MBTA Communities
+5
+Avalon, two parcels (front 
+and back), 855 857 863 
+BROADWAY, currently 214 
+units, new combined 
+capacity is 232 units
+
+===== PAGE 6 =====
+MBTA Communities
+6
+McDonalds, two parcels, 
+738-748 BROADWAY, 
+currently 0 units, new 
+combined capacity is 28 
+units
+
+===== PAGE 7 =====
+MBTA Communities
+7
+Walmart, 770 BROADWAY, 
+currently 0 units, new 
+capacity is 164 units
+
+===== PAGE 8 =====
+MBTA Communities
+8
+NOBO, two parcels, 860 R 
+BROADWAY, currently 245 
+units, new combined 
+capacity is 140 units
+
+===== PAGE 9 =====
+MBTA Communities
+9
+Saugus Ridge, REAR 
+BROADWAY, currently 300 
+units, new capacity is 309 
+units
+
+===== PAGE 10 =====
+MBTA Communities
+10
+Mobile Home Park, 846 
+BROADWAY, currently 71 
+units, new capacity is 96 
+units
+
+===== PAGE 11 =====
+MBTA Communities
+11
+Holiday Inn and Kavida 
+Healthcare, 961 999 
+BROADWAY, currently 0 
+units, new capacity is 174 
+units, currently the subject 
+of a Ch. 40B development 
+proposal for 189 units
+
+===== PAGE 12 =====
+MBTA Communities
+Draft scenario
+MBTA Communities Overlay - summary of districts, acres, capacity, and current 
+or approved multifamily units
+12
+Subdistrict
+Name
+Address
+District 
+acres
+Capacity 
+acres
+DU/AC
+Capacity 
+units
+Capacity 
+units with 
+dimensional 
+standards
+Current 
+units
+A
+NOBO
+860 R BROADWAY, BROADWAY, SAUG, 01906
+9.7
+6.7
+21
+140
+140
+245
+A
+NOBO access drive
+0 BROADWAY, BROADWAY, SAUG, 01906
+0.6
+0.6
+21
+12
+0
+0
+A
+Walmart
+770 BROADWAY, BROADWAY, SAUG, 01906
+8.4
+7.8
+21
+164
+164
+0
+A
+McDonalds
+748 BROADWAY, BROADWAY, SAUG, 01906
+0.6
+0.5
+21
+11
+11
+0
+A
+McDonalds
+738 BROADWAY, BROADWAY, SAUG, 01906
+0.8
+0.8
+21
+17
+17
+0
+A
+Avalon, front
+855 BROADWAY, BROADWAY, SAUG, 01906
+4.1
+4.1
+21
+85
+85
+214
+A
+Avalon, back
+857 863 BROADWAY, BROADWAY, SAUG, 01906
+7.4
+7.0
+21
+147
+147
+214
+B
+10D-1-3
+999 BROADWAY, BROADWAY, SAUG, 01906
+2.0
+2.0
+15
+29
+29
+0
+B
+10D-1-2
+999 BROADWAY, BROADWAY, SAUG, 01906
+8.4
+8.4
+15
+127
+127
+0
+B
+10D-1-4
+961 BROADWAY, BROADWAY, SAUG, 01906
+0.7
+0.7
+15
+11
+11
+0
+B
+10D-1-6
+39 R FOREST ST, FOREST ST, SAUG, 01906
+0.5
+0.5
+15
+7
+7
+0
+C
+Saugus Ridge
+0 REAR BROADWAY, BROADWAY, SAUG, 01906
+26.7
+25.7
+12
+309
+309
+300
+C
+Mobile Home Park
+846 BROADWAY, BROADWAY, SAUG, 01906
+8.0
+8.0
+12
+96
+96
+71
+Total
+77.9
+72.7
+15.7
+1,154
+1,143
+
+===== PAGE 13 =====
+MBTA Communities
+Draft scenario
+MBTA Communities Overlay - Dimensional standards
+13
+
+===== PAGE 14 =====
+MBTA Communities
+Draft scenario
+MBTA Communities Overlay - check against requirements
+14
+Required
+Realized
+Achieved
+Land area (acres)
+50.0
+77.9
+Yes
+Units
+1,130
+1,143
+Yes
+Overall density (units/acre)
+15.0
+15.7
+Yes
+50% contiguous land area
+38.6
+77.9
+Yes
+50% contiguous capacity
+579.5
+1,141
+Yes

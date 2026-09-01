@@ -1,0 +1,4452 @@
+
+### DOC 9f37c5cede | town=Cohasset | community_type=commuter rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.cohassetma.org/DocumentCenter/View/11471
+
+[PAGE 1]
+Z3: 3A Multi-Family Overlay District 
+ 
+03/19/2024 
+MOVED, that the Town implement the Commonwealth’s Housing Choice legislation as follows: 
+ 
+A. By creating a new overlay district overlaying certain lots designated as “3A Multi-Family 
+Overlay” with the abbreviation “3A-MFO”, consisting of the following parcels: 
+ 
+B5-74-008 
+132 CJC Hwy.  
+ 
+  
+B5-74-007 
+138 & 140 CJC Hwy.  
+  
+B5-74-007T 
+132 CJC Hwy.  
+ 
+  
+B5-74-014 
+165 CJC Hwy.  
+C5-74-005 
+164 CJC Hwy.  
+  
+C5-74-015 
+179 CJC Hwy.  
+ 
+  
+C5-73-016 
+215 CJC Hwy.  
+ 
+  
+C5-73-004A 20 Crocker Lane 
+ 
+  
+C5-73-008 
+223 CJC Hwy.  
+ 
+  
+C5-73-007 
+231 CJC Hwy.  
+ 
+ 
+  
+C6-73-020> 
+  
+ 
+C6-73-019> 
+Scituate Hill Road 
+C6-73-014> 
+C5-73-006> 
+ 
+As a consequence of this change, Section 300-3.1(B) would be further amended to read as 
+follows: 
+ 
+ B. In addition, there are four overlay districts:  
+ 
+Overlay District 
+Abbreviation 
+Floodplain and Watershed Protection District 
+FWPD 
+Water Resource District 
+WRD 
+Ground-Mounted Solar Photovoltaic Installations Overlay 
+District 
+GMSP 
+3A Multi-Family Overlay District 
+3A-MFO 
+ 
+ 
+B. By adding new Section 300-4.7 to read as follows: 
+ 
+§ 300-4.7 
+Additional Use Regulations for the 3A-MFO District    
+ 
+A.   
+The purpose of the 3A-MFO Overlay District is to allow multifamily housing development in 
+accordance with G.L. c. 40A, § 3A and the Section 3A Compliance Guidelines of the Executive 
+Office of Housing and Livable Communities (HLC), as may be amended from time to time. In 
+addition, Section 300-4.7 is intended to encourage:  
+ 
+1. 
+New or redeveloped housing in close proximity to the Cohasset commuter rail station; 
+ 
+
+[PAGE 2]
+Z3: 3A Multi-Family Overlay District 
+ 
+03/19/2024 
+2. A mix of housing sizes and types in walkable areas to promote public health, reduce 
+greenhouse gases, improve air quality, and concentrate development where adequate facilities 
+and services exist to support it;  
+ 
+3. New investment in housing and mixed-use developments in the Overlay District 
+ 
+B.   Unless otherwise regulated within this Section 300-4.7, all use, dimension, and all other 
+provisions of the Zoning Bylaw shall remain in full force. Where the 3A-MFO authorizes uses 
+not otherwise allowed in the underlying district, the provisions of the 3A-MFO shall control. 
+ 
+C. All projects proposed within the 3A-MFO District shall be subject to Site Plan Review before 
+the Planning Board pursuant to Section 12.7 herein, however, such Section 12.7 to be applied 
+and construed in a manner consistent with Section 4A of the Compliance Guidelines of the 
+Executive Office of Housing and Livable Communities (HLC), as may be amended from time to 
+time. 
+ 
+D. All projects proposed within the 3A-MFO District shall be subject to all other applicable 
+General and Zoning Bylaws of the Town, including, but not limited to, Chapter 223 of the 
+General Bylaws (Stormwater Management). 
+ 
+E.  Uses. 
+ 
+(1) Multi-Family Use within the 3A-MFO District is allowed as of right.  
+(2) Mixed Use is encouraged to be developed as part of a project within the 3A-MFO District 
+especially if a project proposed replaces a pre-existing commercial use.  
+(a) Commercial uses, if constructed, shall be constructed on the first floor of Buildings. 
+(b) The allowed Commercial uses in a Mixed-Use project in the 3A-MFO District would be the 
+same Retail, Office and Service uses allowed in the underlying 3A-C District, and additionally 
+Home Occupation, and Government Service Provider.  
+ 
+C. By amending Section 300-4.2(D) and adding a new table as follows to define the use 
+regulations for the overlay district: 
+ 
+Principle Uses in the 3A Multi-Family Overlay District 
+Multi-Family Dwelling 
+Yes 
+Mixed Use Building 
+Yes 
+Commercial Uses 
+As permitted in the 
+underlying District (on 1st fl.) 
+Government Use 
+Yes (on 1st fl.) 
+Open Space Recreational Use 
+Yes, as part of a Multi-
+Family or Mixed Use 
+development 
+Accessory Uses in the 3A Multi-Family Overlay District 
+ 
+As permitted in the underlying District  
+or VIL District 
+ 
+
+[PAGE 3]
+Z3: 3A Multi-Family Overlay District 
+ 
+03/19/2024 
+ 
+D. By amending Section 300-5.3 and adding a new table as follows to define the dimensional 
+regulations for the overlay district: 
+ 
+Dimensional Limits in the 3A Multi-Family Overlay District 
+Maximum Density 
+15 units per acre 
+Minimum Frontage 
+75 ft. 
+Minimum Green Strip where project abuts Rte. 3A 
+25 ft. 
+Minimum Primary Structure Front Setback 
+50 ft. 
+Minimum Primary Structure Side & Rear Setbacks 
+25 ft. 
+Minimum Accessory Structure Front Setback 
+75 ft. 
+Minimum Accessory Structure Side & Rear Setbacks 
+10 ft. 
+15 ft. if > 15 ft. high 
+Maximum Height 
+35 ft. or 3 stories 
+Maximum Lot Clearing 
+80% 
+Maximum Coverage – Hardscape + Primary Structure 
+70% 
+Maximum Floor Area Ratio 
+ 1.3 
+ 
+ 
+ 
+Note: This article implements the state-mandated so-called Housing Choice or MBTA Communities 
+legislation. It has five necessary components: 1) designating the area to be zoned and the properties 
+included – here, an overlay district upon the commercial district of 3A; 2) adding the overlay district 
+to the list of overlay district within Article 3 of the Bylaw; 3) adding necessary bylaw text, as a new 
+Sect. 4.7 within the Uses article; 4) adding to the Table of Use Regulations – here by adding a 
+separate table for this district; 5) adding to the Table of Dimensional Regulations – here by adding a 
+separate table for this district. 
+
+
+### DOC 36a2a79716 | town=Cohasset | community_type=commuter rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.cohassetma.org/DocumentCenter/View/7942
+
+[PAGE 1]
+Action Plan for MBTA Communities
+Please read the Section 3A Guidelines before attempting to complete this form.
+Please note:  Action Plan Forms must be submitted by a municipal official with authority to act on behalf of the
+municipality on matters of zoning, such as the municipal CEO or planning director.
+Section 1: Identification
+The Section 3A Guidelines establish zoning metrics that apply uniquely to each MBTA community based on its
+local transit stations, existing housing stock, population,  and developable land.  This section of the Action Plan
+helps to identify the transit stations that determined each community's category.  Appendix 1 of the Section 3A
+Guidelines lists each community's category and minimum multi-family unit capacity requirement. 
+1.1 MBTA Community Name *
+Cohasset
+1.2. Community Category *
+Rapid transit community
+Commuter rail community
+Adjacent community
+Adjacent small town
+Community categories are listed in Appendix I of the Guidelines. For more information about the methodology that was used to determine
+community categories, please refer to the Definitions of each category in Section 2 of the Guidelines.
+1.3. Multifamily Unit Capacity Requirement *
+638
+Multifamily unit capacity requirements are listed in Appendix I of the Guidelines. For more information about the methodology that was used to
+determine capacity requirement, please see Section 5 of the Guidelines. The capacity requirement represents the number of multifamily housing
+units that a compliant district's zoning must accommodate. It does not represent a production requirement or expectation.
+1.4. Does this municipality have any MBTA rapid transit stations within its boundaries? *
+Yes
+
+[PAGE 2]
+Lauren 
+First Name
+Lind
+Last Name
+No
+1.5. Does this municipality have any MBTA commuter rail stations within its boundaries? *
+Yes
+No
+1.5a. Please list MBTA commuter rail stations that are located within the municipal boundaries *
+Cohasset Commuter Rail Station 
+Please enter all station names separated by commas
+1.6. Does this municipality have any other MBTA transit stations that are located outside of its municipal
+boundaries that may have "developable station area" within them? *
+Yes
+No
+Generally, stations located within 0.5 miles outside of municipal boundaries can cause developable station area to be inside of the municipal
+boundaries.
+Stations that are located outside of municipal boundaries but that have "developable station area" within the
+boundaries might affect district location criteria, as further described in Section 8 of the Guidelines. Please refer
+to Section 1 of the Guidelines for definitions of "transit station area", "developable station area", and
+"developable land".
+1.6a. Please list the MBTA transit stations that are located outside of the municipal boundaries but might have
+developable station area within them. *
+North Scituate Station
+Please enter all station names separated by commas. If unsure, consider that generally, stations located within 0.5 miles outside of municipal
+boundaries can cause developable station area to be inside of municipal boundaries.
+1.7. Please provide the name of the person filling out this form *
+1.7a. Title *
+
+[PAGE 3]
+Christopher
+First Name
+Senior
+Last Name
+41 Highland Avenue
+Address Line 1
+Cohasset Town Hall
+Address Line 2
+Cohasset
+City
+Massachusetts
+State
+02025
+ZIP Code
+Planning & Zoning Director
+1.7b. Email Address *
+LLind@Cohassetma.org
+1.7c. Phone Number *
+(781) 383-4100 ext. 5128
+1.8 Please provide the name of the municipal CEO *
+1.8b Mailing address of municipal CEO *
+1.8c Email address of municipal CEO *
+CSenior@CohassetMA.org
+1.9. Please briefly describe other members of the core team developing the multi-family zoning district. *
+
+[PAGE 4]
+Select Board, Planning Board, Zoning Bylaw Committee, Planning & Zoning Office staff, and Town Counsel; Future work may 
+include professional consultants
+(Municipal staff, planning board members, regional planning agency, private consultants, etc)
+Section 2: Housing Overview
+2.1. Does this municipality have any established housing related goals or strategies from municipal planning
+documents, such as a Housing Production Plan, Master Plan, or Economic Development Plan? *
+Yes
+No
+2.1a. Please briefly describe any relevant strategies, goals, or objectives, and the work that has been done to
+date. *
+2019 Master Plan & 2020 Housing Production Plan 
+2.2. Is this municipality currently working on any other planning for housing? *
+Yes
+No
+2.2a. Please briefly describe the housing work underway. *
+Working to implement housing goals of Master Plan & HPP with Affordable Housing Steering Committee & Affordable Housin
+Section 3: Preliminary Zoning Strategies
+
+[PAGE 5]
+3.1. To the best of your knowledge, which of the following zoning strategies is this community most likely to use
+for compliance? (Select all that apply) *
+a. An existing zoning district or districts that might already comply with the Section 3A Guidelines
+b. An existing zoning district or districts that must be amended to comply with the Section 3A Guidelines
+c. A new 40R or other overlay zoning district
+d. A new base zoning district or districts
+e. Other zoning strategy
+3.1b. Please select the changes that may be necessary for the existing district to comply. Optional: Attach any
+supporting documents that describe this district. *
+District boundaries
+Use schedule
+Dimensional regulations
+Parking requirements
+Other:
+Select all that apply
+Explanation: *
+Opportunity to modify existing commercial and/or Transit-Oriented Development Overlay Districts 
+File
+Choose File Remove File No File Chosen
+File uploads may not work on some mobile devices.
+3.1c. Please briefly describe the potential district and location. Optional: Attach any supporting documents that
+show planning work the community has already done for this district(s). *
+
+[PAGE 6]
+Considering parcels that are within reasonable proximity to transit station & consistent with appropriate locations identified 
+in HPP; Two sites in particular identified for further research in preliminary review and other general locations identified that 
+may be appropriate for further study 
+File
+Choose File Remove File MBTA Communities Zoning Presentation for SB 1.10.23.pdf
+File uploads may not work on some mobile devices.
+3.2. What non-housing characteristics are important for this community to consider in its 3A zoning district? *
+Sustainability & resiliency; Affordability; Traffic generation & multimodal circulation impacts; Architectural aesthetics for 
+compatibility with community history; Infrastructure & linkage improvement opportunities
+(For example: walkability, bike lanes, street retail, bus connections, accessibility, street tree canopy, municipal services, etc)
+Section 4: Action Plan Timeline
+This section creates a framework to input preliminary plans for a zoning adoption process. On the table below,
+please use Column 1 (from the left) to describe a task, Column 2 to input a start date, and Column 3 to input a
+finish date. Every community must provide a timeline for the below-listed tasks.  Additional space is provided for
+any other tasks that a community wishes to list. DHCD will review proposed timelines for feasibility before
+approving an Action Plan. 
+Public outreach
+Developing zoning 
+Applying DHCD's compliance model to test for density and unit capacity
+Holding planning board hearings 
+Holding legislative sessions and adopt compliant zoning 
+Submit District Compliance application to DHCD
+
+[PAGE 7]
+Task
+Start
+Finish
+Short Answer *
+Public Outreach
+Jan
+01
+2023
+*
+Dec
+31
+2024
+*
+Short Answer *
+Developing Zoning
+Jan
+31
+2023
+*
+Jan
+31
+2024
+*
+
+[PAGE 8]
+Short Answer *
+Applying DHCD compliance model to test for density & unit capacity
+Jan
+31
+2023
+*
+Jan
+31
+2024
+*
+Short Answer *
+Holding legislative sessions and adopt compliant zoning
+Feb
+01
+2024
+*
+Jun
+30
+2024
+*
+Short Answer *
+Submit district compliance application to DHCD
+Nov
+01
+2024
+*
+Dec
+31
+2024
+*
+
+[PAGE 9]
+Short Answer *
+*
+*
+Short Answer
+Short Answer
+If there is any other feedback you would like to share about the compliance process, please use this space to
+provide it.
+
+[PAGE 10]
+Save and Resume Later
+Submit Form
+
+
+### DOC e0e0a7058f | town=Cohasset | community_type=commuter rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.cohassetma.gov/706/MBTA-Communities-Overlay-District-Inform
+
+[PAGE 1]
+
+ 
+ 
+ 
+
+	 
+ 
+				 
+				 
+				 
+	 
+			
+
+	 
+		 
+
+	 
+	 
+
+	 
+ 
+ 
+ 
+ 
+
+	
+	 
+	 
+	 
+		 MBTA Communities Overlay District Information&#160; | Cohasset, MA 
+
+		 
+		 
+			 
+	 
+	
+
+	   
+	   
+	   
+	   
+	 
+	
+ 	 	 
+
+	 
+	 
+	 
+	 
+	
+	
+	
+	
+
+
+
+
+	   
+	   
+	   
+	   
+
+	 
+	 
+ 
+ 
+
+     
+	 
+	 
+		  
+		 
+			 
+				  
+			 
+		 
+	 
+	 
+		  
+	 
+	 
+		 
+			 
+		 
+	 
+ 
+      
+ 
+ Skip to Main Content 
+ 
+      
+
+         
+
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+
+      
+     
+         
+                 
+                    
+
+
+
+                 
+             
+                  
+                
+ 
+  
+  
+
+
+
+
+				   
+  
+          Government   			            Services   			            Business   			            Community   			            How Do I...   			    
+ 
+
+
+	 
+
+
+    	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+    	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+	
+	 
+	 
+	 
+
+	 
+				 
+		 
+			 
+						   
+
+			 Search 
+		 
+
+	 
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+   
+  
+ 
+  	 
+				                
+
+
+
+	 
+  
+ 
+ 
+
+
+
+
+		  
+		 
+			      
+			      
+		 
+			 
+
+ 
+   
+  
+ 
+ 	 
+				                
+
+
+
+	 
+  
+
+
+
+
+
+	 
+	 
+		 
+			 Grants 
+				  
+		 
+					 
+						 
+			 
+				  Coastal Zone Management (CZM)   
+					  
+			 
+							 
+							 
+			 
+				  CZM Coastal Resilience Grant FY23  
+			 
+					 
+		 
+			 
+				  Coastal Resilience FY24  
+			 
+					 
+
+				 
+		 
+		 
+			 
+				  Municipal Vulnerabilities Preparedness (MVP)  
+					  
+			 
+							 
+							 
+			 
+				  MVP 2.0 Pilot Program FY24/25  
+			 
+					 
+		 
+			 
+				  MVP Planning Grant FY18  
+			 
+					 
+		 
+			 
+				  MVP Action Grant FY19  
+			 
+					 
+		 
+			 
+				  MVP Action Grant FY67/FY27  
+			 
+					 
+
+				 
+		 
+		 
+			 
+				  Energy &amp; Environmental Affairs (EEA)   
+					  
+			 
+							 
+							 
+			 
+				  Planning Action FY24  
+			 
+					 
+
+				 
+		 
+		 
+			 
+				  One Stop For Growth   
+					  
+			 
+							 
+							 
+			 
+				  MBTA 3A Compliance FY24   
+			 
+					 
+
+				 
+		 
+		 
+			 
+				  General Status  
+			 
+					 
+		 
+			 
+				  Making it Public  
+			 
+					 
+
+			 
+	 
+	 
+		 
+			 Cohasset Bylaws - eCode360 
+		 
+			 
+	 
+		 
+			 Cohasset Harbor Committee 
+		 
+			 
+	 
+		 
+			 Planning Board 
+		 
+			 
+	 
+		 
+			 Master Plan Implementation Committee 
+		 
+			 
+	 
+		 
+			 Community Resources &amp; Affordable Housing Opportunities 
+		 
+			 
+	 
+		 
+			 Zoning Bylaw Committee 
+		 
+			 
+	 
+		 
+			 Zoning Board of Appeals 
+		 
+			 
+	 
+		 
+			 Affordable Housing Steering Committee 
+		 
+			 
+	 
+		 
+			 Affordable Housing Trust 
+		 
+			 
+	 
+		 
+			 MBTA Communities Overlay District Information&#160; 
+		 
+			 
+
+	 
+
+
+	 
+
+	 
+
+
+
+  	 
+				                
+
+
+
+	 
+ 
+  
+ 
+ 		 
+			  Home    Government    Departments P - Z    Planning and Zoning Office    MBTA Communities Overlay District Information   
+		 
+
+	   
+    
+  
+	
+	 
+		
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+				 
+
+MBTA Communities Overlay District Information&#160;		 
+	
+		 
+			
+
+		   				
+	 
+	
+	 	
+ 
+	     
+
+
+         As of 05/07/2025 Cohasset has received District Compliance&nbsp;  Project Background   This new law requires that an MBTA community shall have at least one zoning district of reasonable size in which multi-family housing is permitted as of right and meets other criteria set forth in the statute:     Minimum gross density of 15 units per acre    Located not more than 0.5 miles from a commuter rail station, subway station, ferry terminal or bus station, if applicable    No age restrictions and suitable for families with children     In 2020, Governor Baker signed into law a requirement that Cohasset, along with 174 other communities in eastern Massachusetts with access to MBTA service, create a district or districts were multifamily housing is allowed by right. Updated guidelines from the Executive Office of Housing and Livable Communities (Formerly DHCD, now EOHLC) indicate that Cohasset is an &quot;Commuter Rail&quot; community, and 50% of the new zoning district(s) need to be within proximity of the Commuter Rail Station.  More information from the state regarding this law can be found here .    On March 15, 2023, the   Attorney General issued an advisory concerning enforcement of the law  . By complying with this requirement, the Town will:     remain eligible for important state grants for infrastructure projects;    take part in a regional response to the region&apos;s housing crisis by encouraging development of smaller multifamily housing          Throughout 2023, the Town, supported by resident volunteers in the Zoning Bylaw Committee, has been leading a planning process with to determine the location and details of Cohasset&apos;s district(s).  &nbsp;    The deadline for Cohasset to comply with this law is December 31st, 2024. Our hope is to have the new overlay district accepted at Annual Town Meeting June 3rd, 2024.  
+     
+
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+	     
+
+
+         Background Documents and Resources    Mass.gov MBTA Communities Page : Description of the new MBTA Communities law (MGL Ch. 40A, Section 3A), along with information about compliance, technical assistance, and other resources.   Massachusetts Executive Office of Housing and Livable Communities (EOHLC) Guidelines : Final guidelines for compliance.   Massachusetts Housing Parntership (MHP) : A round-up of information and resources regarding MBTA Communities.   Massachusetts Housing Partnership (MHP) MBTA Communities Webinar Series : MHP has developed a series of ten webinars regarding the MBTA Communities legislation. All webinars have been recorded, and videos are posted to MHP&apos;s website.  
+     
+
+ 
+ 
+	   
+
+	   
+	 
+	
+	 	
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+                     Related Documents 
+
+	 
+		 
+					  Cohasset - Determination of Compliance 20250502 Signed 
+					 
+					  MBTA Communities Overlay District Article ZBC 5 
+					 
+					  Proposed MBTA District with Parcel IDs 
+					 
+					  Cohasset 3A Community Fact Sheet 
+					 
+					  FAQ Cohasset 3A MBTA Communities 
+					 
+					  2024-06-03 Update_ Cohasset MBTA Communities Compliance 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+	   
+
+	   
+
+			      
+		   				
+	 
+	
+	 	
+ 
+	     
+
+
+         Planning Process and Prior Meetings    &nbsp;March 22, 2022   &nbsp;- Former Director of Planning and Zoning, Lauren Lind, presented an overview of the draft regulations to the Select Board, Town Manager Chris Senior, and members of the public.&nbsp;        View the Presentation Slides          Watch the Recording          Read the Meeting Minutes        &nbsp;     November 29th, 2022   &nbsp;- Former Director of Planning and Zoning, Lauren Lind, gave a presentation to the Select Board and members of the public, summarizing Affordable Housing, including Affordable Housing in Cohasset, and how that relates to the MBTA Community Guidelines. This presentation included three proposed sites for the overlay, for discussion purposes only.&nbsp;       View the Presentation Slides         Watch the Recording          Read the Meeting Minutes        &nbsp;     January 10th, 2023   - Former Director of Planning and Zoning, Lauren Lind, provided a plan for Interim Compliance to the Select Board at the January 10th, 2023 meeting. Cohasset was able to achieve Interim Compliance by the end of January 2023 and remains in compliance until the December 31st, 2024 deadline for full compliance.&nbsp;       View the Presentation Slides        Watch the Recording        Read the Meeting Minutes        Cohasset DHCD Interim Compliance Approval Letter 01-27-2023        November 8 th , 2023-&nbsp;   The Zoning Bylaw Committee (ZBC) has been working with a consultant, Utile, provided through technical assistance funding from Mass Housing Partnership (MHP). At the November 8 th , 2023 ZBC meeting, Utile gave a presentation with draft overlay districts to ZBC members and members of the public.&nbsp;      View the Presentation Slides      Watch the Recording       December 12th, 2023 - Utile and the Zoning Bylaw Committee presented options to the Select Board during their meeting. Options included three different areas in town, the Cohasset Station, 3A South, and an area on Beechwood. The Board expressed that they would like to explore the Cohasset Station area more.&nbsp;      View the Presentation Slides      Watch the Recording        January 10th, 2024 - Utile and the Zoning Bylaw Committee presented a public forum to explain the new law and the proposed district around the Cohasset Station. Zoning Bylaw Chair, Tom Callahan, also explained the language of the proposed bylaw amendment.&nbsp;        View Proposed Bylaw Amendment Language Here        View Presentation Slides        Watch the Recording         April 3rd, 2024   - The Cohasset Planning Board held their Section Five Public Hearing on all proposed zoning amendments, including the proposed 3A Compliance district.&nbsp;     Watch the Recording      June 3rd, 2024 - Annual Town Meeting. The proposed overlay district, Article 20, was passed by a majority vote.&nbsp;     Watch the Recording   
+     
+
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+		 
+
+	 
+
+	
+	 
+
+	 
+ 
+  	 
+				                
+
+
+
+	 
+ 
+ 
+  
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			   Forms &amp; Permits   
+		 
+	 
+ 
+		 
+
+    
+
+ 
+	 
+		 
+			   Online Payments  Learn More   
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			   All Facilities Permits  Click to Purchase   
+		 
+	 
+ 
+		 
+
+    
+
+ 
+	 
+		 
+			   Register for Emergency Alerts  Learn More   
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			   Agendas &amp; Minutes  Learn More   
+		 
+	 
+ 
+		 
+
+    
+
+ 
+	 
+		 
+			   Cohasset Bylaws   
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			   Police  Learn More   
+		 
+	 
+ 
+		 
+
+    
+
+ 
+	 
+		 
+			   Cohasset Select Board      
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+     
+
+
+
+
+
+	 
+			 
+		 
+								 
+	 
+	 
+		 
+					 
+						 
+
+ 
+	     
+ 						 
+					 
+		 
+	 
+	 
+
+	 
+
+	 
+
+
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+     
+
+
+
+
+
+	 
+			 
+		 
+					 Contact Us 
+								 
+	 
+	 
+		 
+					 
+						 
+
+ 
+	 Town Hall 
+ 
+ 
+	 41 Highland Avenue 
+ 
+ 
+	 Cohasset, MA 02025 
+ 
+ 
+	  Hours  
+ 						 
+					 
+		 
+	 
+	 
+
+	 
+
+	 
+
+
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+	 
+
+
+
+
+
+
+
+
+	 
+			 
+		 
+					  Helpful Links  
+						 
+	 
+	 
+         
+				 
+					 
+
+     
+         OFFICIAL RESULTS-2026 Annual Town Election 
+          
+     
+
+     
+         2026 Annual Town Meeting Minutes 
+          
+     
+
+     
+         2026 All Facilities Permit-Purchase  
+          
+     
+
+     
+         2026 All Facilities Permit Purchase Quick Start Guide 
+          
+     
+
+     
+         The Town of Cohasset Weekly Update 
+          
+     
+
+     
+         Town Project Updates 
+          
+     
+					 
+				 
+		 
+        
+	 
+	 
+	 
+	 
+		 /QuickLinks.aspx 
+	 
+
+	 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+	 
+
+
+
+
+
+
+
+
+	 
+			 
+		 
+					  Site Links  
+						 
+	 
+	 
+         
+				 
+					 
+
+     
+         Accessibility 
+          
+     
+
+     
+         Contact Us 
+          
+     
+
+     
+         Copyright Notices 
+          
+     
+
+     
+         Home 
+          
+     
+
+     
+         Intranet 
+          
+     
+
+     
+         Site Map 
+          
+     
+					 
+				 
+		 
+        
+	 
+	 
+	 
+	 
+		 /QuickLinks.aspx 
+	 
+
+	 
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					      
+
+  
+           
+
+  
+           
+
+  
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+	 
+	 
+		   
+
+ 
+   
+      
+      
+   
+   Government Websites by  CivicPlus&reg;  
+ 
+  
+	 
+	 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+ 
+ 
+
+             
+         
+     
+
+ 
+
+ 
+	 
+		 
+			 Loading 
+			 
+				 
+					  
+				 
+			 
+		 
+		 
+			 
+				 
+				Loading
+			 
+		 
+		 
+			 Do Not
+
+### DOC e93bfef63f | town=Concord | community_type=commuter rail | governing_body=Select Board | screened_board= | screened_doctype= | url=https://concordma.gov/DocumentCenter/View/43264/MBTA-Communities-Timeline-
+
+[PAGE 1]
+June
+June 7th - Virtual Housing
+Roundtable with Town
+Housing Groups from
+6:30-9:00PM
+June 28th - MBTA
+Communities Public
+Information Session:
+Harvey Wheeler
+Community Center 
+6:30-8:30PM and by Zoom
+July - 
+August
+Mapping Sessions - show us
+where you think multi-family
+zoning might be appropriate
+both in person and virtually
+Virtual Engagement begins!
+Provide thoughts and
+feedback through online
+mapping (available through
+the fall)
+September -
+November
+December - 
+January
+September - Draft maps and
+zoning comment sessions 
+October/November
+Draft Zoning reviewed by
+Planning Board and other
+Key Stakeholders
+Finalize - Finalize overlay
+district maps and zoning 
+January - Warrant Closes -
+May Town Meeting 2024
+closes, must have finalize
+zoning overlay district maps
+and zoning language
+submitted in early January
+Engagement Sessions - Continue
+to host engagement sessions to
+help community understand and
+answer questions about MBTA
+Communities
+Engagement Sessions -
+Continue to host engagement
+sessions to receive community
+feedback on draft zoning and
+overlay map  
+Engagement Sessions -
+Continue to host engagement
+sessions to receive community
+feedback on draft zoning and
+overlay map 
+ April-May
+Town Meeting - Town Meeting
+will take place in late April or
+early May where the Town will
+vote on the proposed zoning
+MBTA Communities Timeline
+Last updated 6/14/2023
+March - Town Meeting Public
+Hearing - Annual public
+hearings will go over Town
+Meeting warrant articles and
+allow for questions and
+comments
+February -
+April 
+
+
+### DOC a0db64a6ce | town=Danvers | community_type=bus | governing_body=Select Board | screened_board=town_meeting | screened_doctype=warrant | url=https://www.danversma.gov/DocumentCenter/View/2268
+
+ 
+Herb Chambers 
+$186 
+ 
+DPW – Other Auto Supplies 
+ 
+ 
+J’s Automotive 
+$2,063  
+DPW – Contract Cleaning 
+ 
+ 
+S.J. Services 
+$354 
+ 
+DPW – Security System Maintenance 
+ 
+SOS Home Systems 
+$875 
+ 
+DPW – Aeration 
+ 
+ 
+ 
+Clark Hydroseeding 
+$56 
+ 
+WATER – Subscriptions  
+ 
+ 
+Gatehouse Media 
+$295 
+ 
+MANAGEMENT – Conference Fees 
+ 
+Mass. Municipal Management Assn. 
+ 
+Article 2: Opioid Settlement Fund.  To see what sum Town Meeting will vote to transfer from Free Cash 
+for programs and projects set out in the Massachusetts State-Subdivision Agreement for Statewide Opioid 
+Settlements and the National Opioid Settlement Agreement to combat the opioid epidemic, or take any 
+other action thereon. 
+ 
+This article seeks to appropriate funds the Town has received through the Massachusetts State-Subdivision 
+Agreement for Statewide Opioid Settlements and the National Opioid Settlement Agreement.  Although 
+these funds must be used for purposes outlined in the agreements, such as substance use disorder pre-
+vention, harm reduction, treatment, and recovery, Massachusetts finance law in Fiscal Year 2023 treated 
+the settlement payouts as general fund revenue subject to appropriation.  Through the end of Fiscal Year 
+2023, the Town had received $178,522.45.  We recommend appropriating $178,522.45 from available Free 
+Cash to begin this work. In Fiscal Year 2024 and beyond, the State Legislature and Department of Revenue 
+have amended the process so that these funds can be spent as they are received. 
+ 
+
+[PAGE 2]
+SPECIAL TOWN MEETING – FEBRUARY 5, 2024 
+2 
+ 
+Article 3: School Transportation Vehicles.  To see if Town Meeting will vote to amend the May 2023 Annual 
+Town Meeting Article 12 to allow funding to be used for the purchase of school vehicles and related equip-
+ment, or take any other action thereon.   
+ 
+Based on current supply and district need, the School Department believes it prudent to purchase a school 
+bus (rather than two passenger vans) using the $150,000 appropriated in May 2023. Due to the specificity 
+of the original article, an amendment to authorize this purchase is required. Broadening the language al-
+lows greater flexibility to Public Works and the School Department in maintaining the appropriate fleet. 
+ 
+Article 4: Building & Electrical Permit Fees.  To see if Town Meeting will vote to amend Chapters V and 
+IX.A of the General By-law, or take any other action  thereon. 
+ 
+Every three to five years, the Inspectional Services office reviews its fees to ensure their constistency with 
+(a) the amount of staff time it takes to administer such permits and (b) similar fees across the region.  
+Chapter V (Inspector of Wires) was last updated in 2013, while Chapter IX.A (Building Permits) was last 
+updated in 2019.   
+Based on staff’s most recent review of building and electrical permit fees, the following changes are rec-
+ommended: 
+- 
+Adjust the Town minimum fees from $25 to $50 in both chapters. 
+- 
+Make residential permit fees consistent throughout the bylaw at $10 per thousand (currently the 
+fees range from $8 per thousand to $12 per thousand depending on the type of work being done) 
+- 
+Adjust by $0.50 per thousand the basic electrical permit fees for single- and two-family homes 
+- 
+Adjust by $1 per thousand the electric permit fee for multi-family and non-residential 
+- 
+Adjust other fees associated with larger projects requiring higher amperage or temporary services   
+- 
+Delete reference to the non-residential fee structure adopted as part of the 2012 Essex North 
+Shore Agricultural and Technical High School building project, the fees for which were discounted 
+as part of the $140 million project 
+Secondarily, this review identified several desirable minor changes pertaining to formatting and grammar 
+that would improve the clarity of these Chapters and are included in the proposed article.  To improve the 
+readability of the documents, the housekeeping changes include adding section titles, removing a duplica-
+tive paragraph, correcting departmental and position titles, and addressing grammatical issues. 
+A full copy of the proposal, including a redlined version of the proposed amendment, is available on the 
+Town Clerk’s page of the website: https://www.danversma.gov/799/Town-Meeting-Warrants.  
+ 
+ 
+ 
+ 
+
+[PAGE 3]
+SPECIAL TOWN MEETING – FEBRUARY 5, 2024 
+3 
+ 
+Article 5: Pool Fencing.  To see if Town Meeting will vote to amend Chapter XX of the General By-Laws, 
+as follows, or take any other action thereon. 
+ 
+This Chapter, first adopted in 1975, when State law was silent on pool safety requirements, has never been 
+amended.  Since that time, the Commonwealth’s Building Code introduced its own safety standards, which 
+created a conflict between the two laws.  This has led to difficulty for residents who can incur unexpected 
+expenses satisfying both requirements.  This amendment addresses this by striking the inconsistent lan-
+guage to mirror the State’s, as shown below.  Deletions are struck through, and insertions are underlined. 
+All permanently installed private swimming pools and all other pools capable of retaining 
+over two-and-one-half feet of water shall be fully enclosed by a suitable fence or an equiv-
+alent enclosure, or means of protection from access to the pool as defined in the Massa-
+chusetts State Building Code, not less than fourfive feet in height and containing a self-
+latching gate to ensure that small children will be barred from the swimming pool area.  
+A full copy of the proposal, including a redlined version of the proposed amendment, is available on the 
+Town Clerk’s page of the website: https://www.danversma.gov/799/Town-Meeting-Warrants.  
+ 
+Article 6: Easement at 42 Summer Street.  To see if Town Meeting will vote (1)  to authorize the Select 
+Board to grant to C.P. Berry Residences, LLC, on such terms as the Select Board deems appropriate, an 
+easement within an area containing three hundred twenty nine (329) square feet, more or less, shown as 
+“Easement Area=329+/- S.F.” on a plan entitled “Exhibit Easement Plan of Land in Danvers, MA, Prepared 
+for C.P. Berry Residences, LLC”; prepared by Hancock Survey Associates, Inc.; 185 Centre Street, Danvers, 
+MA 01923, Scale: 1”=20’; Date 7/19/23; and to authorize the Select Board to take all action necessary to 
+accomplish the purposes of this article; or take any other action thereon. 
+ 
+The easement area in question is located on Town of Danvers property, which abuts the property at 42 
+Summer Street.  The structure on said property is known as the James Putnam, Jr. House, which is listed 
+on the National Register of Historic Places.  The purpose of this grant of easement is to allow said James 
+Putnam, Jr. House to continue to encroach, in part, within the layout of Summer Street, a public way, but 
+not on the travelled way of Summer Street, and not on the sidewalk within the layout of Summer Street.  
+As the structure in question predated both moden zoning and the layout of Summer Street by at least a 
+century, staff strongly supports this easement request.  Please refer to Exhibit A in your warrant booklets 
+for a map depicting the impacted area. 
+ 
+Article 7: Adaptive Reuse.  To see if Town Meeting will vote to amend Section 30 of the Zoning By-Law, 
+or take any other action thereon. 
+ 
+At the 2023 Annual Town Meeting, a study committee (with representatives from the Finance Committee, 
+Planning Board, Zoning Board, Preservation Commission, and Historic District Commission) was created to 
+review this and other related preservation concepts.   
+ 
+
+[PAGE 4]
+SPECIAL TOWN MEETING – FEBRUARY 5, 2024 
+4 
+ 
+“Adaptive reuse” refers to re-using an existing building for a purpose other than for what it was originally 
+built or designed.  This can be a viable and attractive alternative to demolition or new construction, while 
+retaining historic features of the original building.  In 2022, the Planning office forwarded a similar proposal 
+as an option for the building at 42 Summer Street, which was slated for demolition as part of a larger 
+project.  Ultimately, demolition of that building was avoided when a buyer emerged with plans to restore 
+the structure. 
+The formation of the Study Committee in 2023 presented an opportunity to revisit the concept, as there 
+are dozens of other pre-1890 structures in Danvers that may be suitable candidates for Adaptive Reuse.  
+This amendment would allow property owners of such structures to request dimensional relief (e.g., set-
+backs or uses, through a special permit before the Zoning Board).  The Study Committee recommends the 
+approval of this version of the proposed by-law. 
+A full copy of the proposal, including a redlined version of the proposed amendment, is available on the 
+Town Clerk’s page of the website: https://www.danversma.gov/799/Town-Meeting-Warrants.  
+ 
+Article 8: MBTA Communities Act Compliance.  To see if Town Meeting will vote to amend the Zoning 
+Bylaw to adjust the minimum densities, parking ratios, and related provisions in the Character Based Zon-
+ing Districts to comply with the MBTA Communities Act and its implementing regulations, or take any 
+other action thereon. 
+ 
+The MBTA Communities Law was passed in January 2021.  The law intends to address Massachusetts’ hous-
+ing shortage by requiring all MBTA Communities, of which Danvers is one of 177, to allow multifamily hous-
+ing by right.  Fortunately, the downtown zoning adopted by Town Meeting in February 2020 was informed 
+by a draft version of the law, the article passed at Town Meeting, and remains compliant with the Act.  
+What needs to be addressed now stems from details included in the implementing regulations, which were 
+not finalized until August 2023. 
+The proposal under this article amends the downtown zoning districts to satisfy the Commonwealth’s reg-
+ulations regarding the minimum densities for multi-family dwellings and the parking rules.  While these 
+changes are significant, their impact is not projected to dramatically impact the overall build-out of the 
+corridor.  This is partly because the state’s regulations affect the minimum number of units allowed in the 
+district rather than the maximum.   
+This proposal was workshopped extensively by the Planning Board throughout the fall, with Town Meeting 
+members invited to participate on all occasions.  The feedback was instructive, and the proposal has been 
+adjusted based on public feedback. 
+Failure to fully comply with the MBTA Communities Act would disqualify the Town from participating in 
+certain grant programs. e.g. MassWorks, which several years ago provided the Town with $1 million grant 
+used to extend the Danvers Rail Trail toward Middleton. 
+A full copy of the proposal, including a redlined version of the proposed amendment, is available on the 
+Town Clerk’s page of the website: https://www.danversma.gov/799/Town-Meeting-Warrants.  
+ 
+
+[PAGE 5]
+SPECIAL TOWN MEETING – FEBRUARY 5, 2024 
+5 
+ 
+Article 9: Housekeeping.  To see if Town Meeting will vote to amend the Zoning Bylaw to to improve 
+internal consistency in language, provide clarity where vague, conform to state or case law, and move all 
+signage standards to one place, or take any other action thereon. 
+ 
+As the warrant language suggests, staff has noted several instances where the bylaw's language could be 
+amended to improve the readability and clarity of the By-Law.  These changes are meant to minimize con-
+fusion and/or enforcement actions in the daily administration of the zoning rules.  Changes include: 
+• 
+Reorganize Section 3, General Provisions, to improve the language around non-conformities.  There 
+is no change in policy here. 
+• 
+Section 4, Site Plan Review.  This section is amended to parallel many elements of special permits, 
+such as abutter notification and action deadlines. 
+• 
+Clarify language in Section 9 (Accessory Uses) and Section 10 (Off Street Parking Standards). 
+• 
+Merge language regarding the affordable housing provisions into one section while addressing an er-
+ror in the formula. 
+• 
+Clarify the language of Section 30, Special Permits. 
+• 
+Move all signage requirements into Section 37, Signage.  Based on business feedback, this also in-
+cludes allowing temporary signs, typically grand opening or special promotion signage, to remain in 
+place for forty-five (45) days rather than ten (10) days. 
+• 
+Correct any grammatical errors or terminology changes throughout the By-Law to ensure consistency. 
+A full copy of the proposal, including a redlined version of the proposed amendment, is available on the 
+Town Clerk’s page of the website: https://www.danversma.gov/799/Town-Meeting-Warrants.  
+ 
+Article 10: Citizens’ Petition.  To see if Town will vote to adopt the following bylaw: “No fee shall be 
+established for curbside rubbish removal or recycling without the establishment of a by-law establishing 
+such fee and the enforcement of such fee.  This provision shall not apply to yard waste, heavy items, white 
+good or household hazardous waste”, or take any other action thereon. 
+ 
+This article is included on the Special Town Meeting Warrant because a citizens’ petition (containing valid 
+signatures from 100 or more registered voters) was delivered to the Town Clerk’s Office on January 8, 2024.  
+The language contained in the petition is currently being reviewed by Town Counsel.  
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 6]
+SPECIAL TOWN MEETING – FEBRUARY 5, 2024 
+6 
+ 
+Select Board 
+ 
+__________________________________ 
+__________________________________ 
+/s/ David A. Mills  
+ 
+              /s/ Matthew E. Duggan 
+David A. Mills, Chair 
+Matthew E. Duggan  
+ 
+_________________________________ 
+      ___________________________________ 
+/s/ Daniel C. Bennett 
+ 
+ 
+       /s/ Gardner S. Trask III 
+Daniel C. Bennett 
+ 
+ 
+ 
+       Gardner S. Trask III  
+ 
+____________________________________ 
+/s/ Maureen A. Bernard 
+Maureen A. Bernard 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[PAGE 7]
+SPECIA
+
+### DOC 46a2fc80fa | town=Danvers | community_type=bus | governing_body=Select Board | screened_board=town_meeting | screened_doctype=warrant | url=https://www.danversma.gov/799/Town-Meeting-Warrants
+	 
+	
+	 	
+
+	 
+
+		 
+					 
+						 	  2026 Annual Town Meeting  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+                     Included below are supporting materials for the 2026 Annual Town Meeting 
+
+	 
+		 
+					  2026 Annual Town Meeting Warrant (PDF) 
+					 
+					  2026 Annual Town Meeting Warrant and Finance Committee Recommendations (PDF) 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+						 	  2026 Special Town Meeting  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+                     Included below is supporting materials for the 2026 Special Town Meeting. Including the warrant, full copies of the proposed redlines to the Town Meeting Act and Town Manager Act, the current Town Meeting Act (included in the Town Bylaws) and Town Manager Act, and the report of the Town Meeting and Town Manager Acts Review Committee. 
+
+	 
+		 
+					  Feb STM Warrant - FINAL - 01.09.26 
+					 
+					  Feb STM Finance Committee Recommendations - 01.23.26 
+					 
+					  SB__PROPOSED REDLINED REVISIONS TO DANVERS TOWN MEETING ACT - Jan2026 
+					 
+					  SB_PROPOSED REDLINED REVISIONS TO DANVERS TOWN MANAGER ACT - Jan2026 
+					 
+					  Danvers Town Meeting Act (1973) 
+					 
+					  Town Manager Act (PDF) 
+					 
+					  Report of Town Meeting Town Manager Acts Review Cmte_with redline proposals_May 2025 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+						 	  2025 Anual Town Meeting  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+				   Town Meeting Warrants   
+		 
+			
+ 
+         
+                     2025 Annual Town Meeting 
+
+	 
+		 
+					  Annual Town Meeting / Town Election Warrant 5-19-2025 
+					 
+					  Warrant and Finance Committee Recommendations 5_19_25 
+					 
+					  Warrant and Explanation Report 05-19-25 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+						 	  2025 - Special Town Meeting  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+                     2025 February Special Town Meeting 
+
+	 
+		 
+					  Special Town Meeting Warrant and Explanations 02-03-25 
+					 
+					  Warrant & Finance Committee Recommendations 2-3-25 
+					 
+					  Article 4-Dog Leash and Licensing By-Law - Proposed (Tracked) 2025 01-29 REVISED 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+						 	  2024-Annual Town Meeting  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+        
+	 
+		 
+					  Annual Town Meeting Warrant & Finance Committee Recommendations 05-20-24 (PDF) 
+					 
+					  Annual Town Meeting Warrant and Explanations Report 05-20-24 (PDF) 
+					 
+					  Article 7 - Danvers Town Manager Act (1973) 
+					 
+					  Article 7 - Danvers Town Manager Act (1997) 
+					 
+					  Articles 35-37 - Final Report of the Ad-Hoc Historic Preservation Study Committee (March 2024) 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+						 	  2024-Special Town Meeting  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+        
+	 
+		 
+					  Special Town Meeting Warrant and Finance Committee Recommendations 02-05-24 
+					 
+					  Special Town Meeting Warrant and Explanations 02-05-24 (PDF) 
+					 
+					  Special Town Meeting Article 4 Draft 02-05-24 
+					 
+					  Special Town Meeting Article 5 Draft 02-05-24 
+					 
+					  Special Town Meeting Article 7 Draft 02-05-24 
+					 
+					  Art 7 FINAL Adaptive Reuse of Historic Buildings 1-10-2024 CLEAN 
+					 
+					  Special Town Meeting Article 8 Draft 02-05-24 
+					 
+					  Art 8 FINAL MBTA 3A Zoning Sections 18-22 1-10-2024 CLEAN 
+					 
+					  Special Town Meeting Article 9 Draft 02-05-24 
+					 
+					  Art 9 FINAL Housekeeping Zoning Amendments 1-10-2024CLEAN 
+					 
+					  Special Town Meeting Danvers Citizens Petition Legal Opinion 
+					 
+					  Special Town Meeting PPT to FinCom 02-05-24 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+						 	  2023  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+        
+	 
+		 
+					  Annual Town Meeting Warrant & Finance Committee Recommendations 5-15-23 (PDF) 
+					 
+					  Annual Town Meeting Warrant 5-15-23 (PDF) 
+					 
+					  Annual Town Meeting Warrant and Explanations_05-15-23 (PDF) 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+						 	  2022  
+ 
+					 
+				 
+
+
+
+
+	 
+			 
+		 
+			
+ 
+         
+        
+	 
+		 
+					  May 16, 2022 Annual Town Meeting Warrant and Explanation Report (PDF) 
+					 
+
+		 
+	 
+                     
+ 
+
+
+ 
+		 
+
+ 
+
+	 
+
+
+ 
+				 
+					 
+	 
+	 
+
+
+	   
+
+	   
+
+			      
+
+
+		 
+
+	 
+
+	
+	 
+
+	 
+ 
+  	 
+				                
+
+
+
+	 
+ 
+    
+ 	 
+				                
+
+
+
+	 
+  
+
+
+
+
+
+	 
+	 
+		 
+			 Town Meeting Warrants&#160; 
+		 
+			 
+	 
+		 
+			 Town Meeting Guide (PDF) 
+		 
+			 
+	 
+		 
+			 Current Town Meeting Members (PDF) 
+		 
+			 
+	 
+		 
+			 Town Meeting Act 
+		 
+			 
+	 
+		 
+			 For More on the 2025 STM Click Here 
+		 
+			 
+
+	 
+
+
+	 
+
+	 
+
+
+
+  	 
+				                
+
+
+
+	 
+ 
+ 
+   
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Payments  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Alerts &amp; Notifications  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Employment  
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Agendas &amp; Minutes  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Projects and Development  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Permits  
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+   
+     
+        
+     
+    -->  
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+     
+
+
+
+
+
+	 
+			 
+		 
+								 
+	 
+	 
+		 
+					 
+						 
+
+ 
+	   
+ 						 
+					 
+		 
+	 
+	 
+
+	 
+
+	 
+
+
+
+  	   
+
+	   
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					      
+
+  
+           
+
+  
+           
+
+  
+           
+
+  
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+     
+
+
+
+
+
+	 
+			 
+		 
+					 Contact Us 
+								 
+	 
+	 
+		 
+					 
+						 
+
+ 
+	  Town of Danvers  1 Sylvan Street
+ Danvers, MA 01923
+  Phone:  978-777-0001  
+ 						 
+					 
+		 
+	 
+	 
+
+	 
+
+	 
+
+
+
+  	   
+
+	   
+
+			    				
+	 
+	
+	 	
+	 
+
+
+
+
+
+
+
+
+	 
+			 
+		 
+					  Quick Links  
+						 
+	 
+	 
+         
+				 
+					 
+
+     
+         Budgets 
+          
+     
+
+     
+         Bylaws 
+          
+     
+
+     
+         Flag Status 
+          
+     
+
+     
+         Resilient Danvers 
+          
+     
+
+     
+         Strategic Danvers 
+          
+     
+
+     
+         Trash and Recycling 
+          
+     
+					 
+				 
+		 
+        
+	 
+	 
+	 
+	 
+		 /QuickLinks.aspx 
+	 
+
+	 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+
+### DOC 7ccfaacbda | town=Dover | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://doverma.gov/DocumentCenter/View/4231
+
+[PAGE 1]
+Exported January 25, 2023  10:42 AM
+Action Plan for MBTA Communities
+Description Area
+Please read the Section 3A Guidelines before attempting to complete this
+form.Please note: &nbsp;Action Plan Forms must be submitted by a
+municipal official with authority to act on behalf of the municipality on
+matters of zoning, such as the municipal CEO or planning director.
+Section 1: Identification
+Description Area
+The Section 3A Guidelines establish zoning metrics that apply uniquely to
+each MBTA community based on its local transit stations, existing housing
+stock, population, &nbsp;and developable land. &nbsp;This section of the
+Action Plan helps to identify the transit stations that determined each
+community's category. &nbsp;Appendix 1 of the Section 3A Guidelines lists
+each community's category and minimum multi-family unit capacity
+requirement.&nbsp;
+1.1  MBTA Community Name
+Dover
+1.2. Community Category
+Adjacent small town
+1.3. Multifamily Unit Capacity
+Requirement
+102
+1.4. Does this municipality have any
+MBTA rapid transit stations within its
+boundaries?
+No
+1.5. Does this municipality have any
+MBTA commuter rail stations within its
+boundaries?
+No
+1.6. Does this municipality have any
+other MBTA transit stations that are
+located outside of its municipal
+boundaries that may have "developable
+station area" within them?
+No
+1.7. Please provide the name of the
+person filling out this form
+Laura Harbottle
+1.7a. Title
+Interim Town Planner
+1.7b. Email Address
+lharbottle@doverma.gov
+1.7c. Phone Number
+(508) 785-0032 ext. 240
+1.8 Please provide the name of the
+municipal CEO
+Robyn Hunter
+
+[PAGE 2]
+1.8b Mailing address of municipal CEO
+Dover Town House
+5 Springdale Ave.
+Dover, MA 02030
+1.8c Email address of municipal CEO
+rhunter@doverma.gov
+1.9. Please briefly describe other
+members of the core team developing
+the multi-family zoning district.
+Robyn Hunter, Chair, Board of Selectmen
+Carol Lisbon, Chair, Planning Board
+Carl Valente, Interim Town Administrator
+Town Planner (when permanent position is filled)
+Board of Selectmen
+Planning Board
+Section 2: Housing Overview
+2.1. Does this municipality have any
+established housing related goals or
+strategies from municipal planning
+documents, such as a Housing
+Production Plan, Master Plan, or
+Economic Development Plan?
+Yes
+2.1a. Please briefly describe any
+relevant strategies, goals, or objectives,
+and the work that has been done to
+date.
+HPP Goal 2) - Promote a... diverse and inclusive community with a mix of
+housing opportunities...by making key regulator y updates. The Planning
+Board is sponsoring a zoning amendment for May, 2023 Town Meeting
+which would allow Accessory Dwelling Units by right where attached and
+by SP where detached. It will also remove a cap on the annual number of
+ADU's and a restriction on the age of house where they can be permitted. 
+2.2. Is this municipality currently
+working on any other planning for
+housing?
+Yes
+2.2a. Please briefly describe the
+housing work underway.
+The Planning Board hired a consultant to review zoning for Dover's village
+center.  More work is needed, but mixed use with apartments above
+businesses is under discussion. 
+Section 3: Preliminary Zoning Strategies
+3.1.	To the best of your knowledge,
+which of the following zoning strategies
+is this community most likely to use for
+compliance?  (Select all that apply)
+d. A new base zoning district or districts
+3.1d. Please briefly describe the
+potential district and location. Optional:
+Attach any supporting documents that
+show planning work this community
+has already done for this district.
+The Town anticipates using a consultant to identify the best location(s) for a
+new base zoning district. 
+
+[PAGE 3]
+3.2. What non-housing characteristics
+are important for this community to
+consider in its 3A zoning district?
+Availability of utilities including water 
+Capacity of land to absorb wastewater and septic waste unless sewer
+becomes available 
+Access to transit stations and/or public transportation in neighboring
+communities 
+Access to shopping and services
+Section 4: Action Plan Timeline
+Description Area
+This section creates a framework to input preliminary plans for a zoning
+adoption process. On the table below, please use Column 1 (from the left)
+to describe a task, Column 2 to input a start date, and Column 3 to input a
+finish date. Every community must provide a timeline for the below-listed
+tasks. &nbsp;Additional space is provided for any other tasks that a
+community wishes to list. DHCD will review proposed timelines for
+feasibility before approving an Action Plan.&nbsp;Public
+outreachDeveloping zoning&nbsp;Applying DHCD's compliance model to
+test for density and unit capacityHolding planning board
+hearings&nbsp;Holding legislative sessions and adopt compliant
+zoning&nbsp;Submit District Compliance application to DHCD
+Description Area
+Task
+Description Area
+Start
+Description Area
+Finish
+Short Answer
+Begin work with MHP consultant assistance 
+Jun 01, 2023
+Oct 31, 2023
+Short Answer
+Hire consultant to develop zoning
+Nov 01, 2023
+Apr 30, 2025
+Short Answer
+Education process for Town boards and committees
+Nov 01, 2023
+Dec 31, 2023
+Short Answer
+Public education and outreach
+Jan 01, 2024
+Oct 31, 2024
+
+[PAGE 4]
+Short Answer
+Develop zoning map and text amendments
+Mar 01, 2024
+Dec 31, 2024
+Short Answer
+Apply compliance model on preliminary basis. Review results with DHCD.
+Mar 31, 2024
+May 15, 2024
+Short Answer
+Submit zoning map and text amendments to Town Meeting vote
+Jan 01, 2025
+May 15, 2025
+Short Answer
+Submit District Compliance Application for DHCD approval.
+May 15, 2025
+Aug 15, 2025
+If there is any other feedback you would
+like to share about the compliance
+process, please use this space to
+provide it. 
+Submission of this Action Plan was approved by the Board of Selectmen on
+January 20, 2023.
+
+
+### DOC 442dc1cb86 | town=Dover | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://doverma.gov/DocumentCenter/View/4294
+
+[PAGE 1]
+1
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED
+QUESTIONS
+3-12-25
+OVERVIEW
+What is the MBTA Communities Act?
+Massachusetts created a requirement that each of the 177 designated MBTA Communities in the
+Commonwealth must develop a zoned district that allows multi-family housing “as of right.” 
+(References: MGL c.40A Section 3A; MGL c.161A Section 1)
+What does “as of right” mean?
+The term “as of right” in zoning means that a proposed development project may proceed 
+according to a zoning bylaw without the need for a special permit, variance, zoning amendment, or
+other discretionary zoning approval. Notably “as of right” does allow for a site plan review process 
+as well as reviews by all relevant boards, commissions and departments to ensure that the 
+development adheres to Dover’s existing bylaws and regulations.
+What is the definition of “multi-family” under the law?
+“Multi-family” refers to a building with three or more residential units, or two or more buildings on 
+the same lot with more than one residential unit in each building. The definition encompasses a 
+range of housing types, including townhomes, triple-deckers, and single-family cluster-style 
+developments.
+Why was Dover designated as an MBTA Community?
+Even though Dover does not have MBTA services within its borders, because it abuts a town that 
+does provide services, it has been deemed to be a “Small Adjacent Community” and so must 
+comply with the law.
+Supreme Judicial Court Ruling Attorney General v. Town of Milton – What the ruling says and 
+what this means for Dover
+
+[PAGE 2]
+2
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+The SJC found that the MBTA Communities statute itself is constitutional. The ruling may be read 
+here.
+The SJC found that the AG has the authority to bring suit against communities that are not 
+compliant (“We further declare that the Attorney General has the power to bring suit for declaratory
+and injunctive relief to enforce § 3A and its corresponding guidelines.”). The SJC found that the 
+state did not follow the proper procedure in promulgating the guidelines (“However, because HLC's
+current guidelines were not promulgated in accordance with the APA, we declare them ineffective 
+and, as such, presently unenforceable.”). There is a public comment period for 
+EOHLC’s regulations which began January 31, 2025 and will remain open until February 21, 2025,
+and a form for submitting comments is available with the EOHLC. Secretary Augustus clarified that
+Dover, previously determined to be in interim compliance with the MBTA Communities law under 
+its implementing Guidelines, remains in interim compliance with the law under EOHLC’s 
+emergency regulations until December 31, 2025. In essence, Dover is still required to comply with 
+the MBTA Communities Act or risk loss of grant funding or risk potential legal action.
+What are MBTA Community Act requirements for Dover?
+By Dec. 31, 2025, Dover must establish and approve a zoning district that could be developed at
+some point that:
+●Provides for a minimum of 102 units
+●Is not age-restricted and must be suitable for families with children.
+●Has a minimum gross density of 15 housing units per acre.
+What are the most common misconceptions about the new law?
+The MBTA Communities Act is not:
+●A mandate to build housing.
+●A housing production target.
+●Meant to specifically address affordable housing needs, though it may do so.
+●A one-size-fits-all tool to address all housing needs in a community.
+Designed to override existing local zoning bylaws, wetlands regulations, septic and well 
+regulations, and other general bylaws and regulations.
+MBTA vs. 40B
+
+[PAGE 3]
+3
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+The key differences between Chapter 40B and the MBTA Communities zoning requirement in 
+Massachusetts are:
+Chapter 40B
+Allows developers to override local zoning bylaws and regulations if a town has less than 
+10% affordable housing stock, in order to build affordable housing developments.
+At least 20-25% of units in the development must be
+income-restricted as affordable.
+Developers can appeal to the state Housing Appeals Committee if their project is denied 
+locally in
+non-compliant towns.
+Applies statewide to all cities and towns that don't meet the 10% affordable housing 
+threshold.
+MBTA Communities Zoning (Section 3A)
+Requires MBTA communities to have at least one zoning district allowing multi-family 
+housing as-of-right near transit stations.
+Does not mandate a specific percentage of affordable units, but the housing must be suitable
+for families.
+Applies only to the 177 cities and towns served by the MBTA transit system.
+Non-compliant communities become ineligible for certain state housing, infrastructure and 
+transportation funding programs.
+Aims to promote transit-oriented housing development near public transit to increase housing
+supply.
+In summary, 40B is a state override to require affordable housing production, while the 
+MBTA zoning law requires zoning for multi-family housing near transit in communities served
+by the MBTA, regardless of their existing affordable housing stock levels
+TOWN REQUIREMENTS & PLANNING
+How and when must Dover comply with the law?
+Dover must comply with the law by selecting a district or districts to be zoned for MBTA compliance
+and writing a zoning bylaw regulating this specific type of development. The proposed bylaw and 
+map amendment will be proposed at a Special Town Meeting scheduled for September 29, 2025. 
+The Town of Dover has until December 31, 2025 to comply.
+
+[PAGE 4]
+4
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+What are the penalties for not complying?
+The Town would lose access to the following state-funded grants:
+Loss of access to grant funds, per Section 3A:
+‣ Housing Choice Initiative
+‣ Local Capital Projects Fund
+‣ MassWorks infrastructure program
+‣ Additional grant programs:
+‣ Community Planning Grants, EOHLC
+‣ Massachusetts Downtown Initiative, EOED
+‣ Urban Agenda, EOED
+‣ Rural and Small Town Development Fund, EOED
+‣ Brownfields Redevelopment Fund, MassDevelopment
+‣ Site Readiness Program, MassDevelopment
+‣ Underutilized Properties Program, MassDevelopment
+‣ Collaborative Workspace Program, MassDevelopment
+‣ Real Estate Services Technical Assistance, MassDevelopment
+‣ Commonwealth Places Programs, MassDevelopment
+‣ Land Use Planning Grants, EOEEA
+‣ Local Acquisitions for Natural Diversity (LAND) Grants, EOEEA
+‣ Municipal Vulnerability Preparedness
+Attorney General’s Advisory Guidance (March 2023)
+‣ All MBTA Communities must comply with the Law. Communities that do not currently have a 
+compliant multi- family zoning district must take steps outlined in the EOHLC (DHCD) guidelines 
+to demonstrate interim compliance.
+‣ Communities that fail to comply with the Law may be subject to civil enforcement 
+action.
+How has Dover been planning for its compliance with the law?
+The Dover Planning Board and Housing Task Force are discussing compliance strategies in open 
+meetings, and will host public workshops to educate and engage the public, as well as public 
+
+[PAGE 5]
+5
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+hearing(s) to discuss the proposed zoning language in advance of the Special 2025 Town 
+Meeting. Dover has been working with the Horsley Witten Group to ensure the proposed zoning 
+meets the State’s requirements.
+How can community members weigh in?
+Community members are encouraged to submit a response to our Community Survey and attend
+one or both of the Planning Board Public Information Sessions scheduled for Tuesday, March 
+25, 2025 via Zoom at 7:00 PM and Tuesday, April 22, 2025 via Zoom at 7:00 PM. There will also 
+be two Planning Board public hearings held in September, 2025. The Dover Housing Task Force 
+will also be sponsoring opportunities for education and dialogue. 
+Which town parcels will be targeted for MBTA Communities compliance?
+Please check the Town’s MBTA Zoning webpage here to see the latest iteration of the currently 
+proposed MBTA Zoning Districts. The Planning Board is reviewing multiple districts for this zone.
+How many new housing units will be built in Dover as a result of the new law?
+This  is not a housing production mandate, so this is difficult to predict. In fact, the Act does not 
+require Dover to build anything at all. What it does do is require us to create a designated district 
+where this type of development would theoretically be allowed, subject to Dover’s existing bylaws 
+and regulations (including water and septic requirements among other things).
+What will this cost Dover?
+There is no cost for complying with MBTA Communities. On the contrary, non-compliance will 
+result in a financial burden to residents, due to our inability to access state grant funding. Lack of 
+compliance will also lead to potential legal action taken by the Attorney General against the Town. 
+Most notably:  The Act does not require Dover to expend funds to meet the infrastructure 
+(water and septic) needs of development built under this Act.
+ZONING BASICS & STRATEGY
+What is zoning?
+Zoning refers to a set of regulations that restrict how a property can and cannot be used. It can 
+also refer to  regulations concerning the size, shape and scale of the buildings on a certain 
+
+[PAGE 6]
+6
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+property within a specific geographic area.
+Will a Zoning Overlay District be used, and if so, what does that mean?
+A Zoning Overlay gives property developers the choice to follow either the Overlay District rules 
+or the original Underlying Zoning rules. For instance, an MBTA Overlay District would introduce 
+new development guidelines that developers can choose to follow. An Overlay District is a type of
+land use zoning district that "lies" on top of the existing zoning and potentially covers many 
+underlying districts or portions thereof. The use of Overlay Districts provides communities with an
+opportunity to meet the unique needs of geographic areas that may either require higher  levels of
+protection or that may not be reaching their fullest development potential. Overlay Districts 
+provide one of the most flexible means to alter zoning as they can impose either greater 
+restrictions or more flexible provisions depending on the goals for the district. Examples of typical 
+overlays that are more restrictive include those for sensitive resources such as flood plains or 
+aquifer protection districts. Examples of typical overlays that are more flexible include those for 
+village centers, or other areas designated for higher levels of density and economic development.
+An example of an existing overlay district in Dover is the Large-Scale Solar District which is 
+located on Powisset Street by the Town Transfer Station
+PERMITTING FUTURE DEVELOPMENTS
+How would  a potential development in the MBTA Zone be permitted?
+Just like any other development in Dover, MBTA projects will still be subject to the review of the 
+Planning Board, Board of Health, Conservation Commission, Building Inspector, and Fire and 
+Police, and will need to comply with all other local regulations and bylaws.
+AFFORDABLE HOUSING
+Will Dover’s proposed compliance with the new law result in creation of more affordable 
+housing?
+Dover had the option to require a percentage of all units under MBTA Zoning be made affordable 
+(up to 10%). Dover decided that affordability would not be a requirement of the MBTA zoning.
+Will new multi-family units built in MBTA Communities zones count toward the town’s Subsidized
+Housing Inventory (SHI)?
+
+[PAGE 7]
+7
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+If affordability were required, any new affordable units would count towards our Subsidized 
+Housing Inventory, allowing us to keep pace with 40B requirements. Dover decided that 
+affordability would not be a requirement of the MBTA zoning.
+PUBLIC FORUM QUESTIONS
+Can a MBTA district be located on town owned land?
+No, an overlay may not be placed on Town owned land.
+Can a developer put a CR or easement on a property that has been used for MBTA development?
+Yes, a developer may choose to put a portion of the MBTA overlay into a CR. A developer may 
+also include an easement on the property.
+Does the MBTA district have to be the same size as the lot? (i.e. could a portion of the Junction 
+St property be used instead of the whole thing as long as enough was used to meet requirements
+(15 units per acre and 102 units)?
+No, the MBTA district may be smaller than the lot as long as it meets the compliance model 
+standards.
+Do we have any information about the cost to educate a population that may include children?
+Dover does not have these numbers at this time.
+Does the state compliance modelling factor in wetlands and vernal pools?/ How are wetlands 
+and buffer zones and groundwater protection districts accounted for in an overlay?
+The state compliance model takes into account registered wetlands and vernal pools when 
+calculating acreage and density.
+How is this different than a subdivision?
+A subdivision is the separation of one lot into multiple lots with the creation of a roadway. A 
+developer may choose to create a subdivision within the overlay.
+How many units are currently built at County Court and also at The Meadows
+There are currently X units at County Court and X units at The Meadows
+
+[PAGE 8]
+8
+DOVER MBTA COMMUNITIES ACT – FREQUENTLY ASKED QUESTIONS
+Looking at the developments in Meadows and County Court:  how are these different than the 
+multi-family housing we are talking about for MBTA?
+The Meadows and County Court are 40B developments which supersede Zoning requirements 
+such as setbacks, height, density, and other Zoning factors. They also include a specific 
+percentage of affordable units. MBTA overlay must comply with the Zoning of the proposed district 
+and is not required to provide any affordable units.
+Can property with a CR on it be included in the overlay and be used for housing?
+No, a property with an existing CR may not be designated as an MBTA District.
+Can DLCT land be an overlay district?
+No, an existing DLCT site may not be designated as an MBTA District.
+How would a developer utilize the MBTA zone near County Court?
+A developer would need to purchase one or more lots within County Court and construct new units
+that meet the MBTA Zoning requirements, the 40B density and setbacks shall not apply to any 
+MBTA housing 
+MORE INFORMATION
+https://www.mass.gov/info-details/multi-family-zoning-requirement-for-mbta-communities
+If you have any additional questions, please email Jasmin Farinacci, Town Planner, at 
+planning@doverma.gov
+
+
+### DOC e81c8edca1 | town=Dover | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://doverma.gov/675/MBTA-Communities-Act
+
+[PAGE 1]
+
+ 
+ 
+ 
+
+	 
+ 
+				 
+				 
+				 
+	 
+			
+
+	 
+		 
+
+	 
+	
+	 
+ 
+ 
+ 
+
+	
+	 
+	 
+	 
+		 MBTA Communities Act: | Dover, MA 
+
+		 
+		 
+			 
+	 
+	
+
+	   
+	   
+	   
+	   
+	 
+	
+	 	 
+
+	 
+	 
+	 
+	 
+	
+	
+	
+	
+
+
+
+
+	   
+	   
+	   
+	   
+
+	 
+	 
+ 
+ 
+
+     
+	 
+	 
+		  
+		 
+			 
+				  
+			 
+		 
+	 
+	 
+		  
+	 
+	 
+		 
+			 
+		 
+	 
+ 
+      
+ 
+ Skip to Main Content 
+ 
+      
+
+         
+
+
+
+     
+     
+     
+     
+     
+     
+     
+     
+
+      
+     
+         
+                 
+                    
+
+
+
+ 
+ 
+     
+          Create a Website Account   - Manage notification subscriptions, save form progress and more. &nbsp;&nbsp;  
+         
+	          Website Sign In  
+         
+     
+ 
+ 
+ 
+
+                 
+             
+                  
+                
+ 
+   -->  
+  
+ 
+
+
+
+
+				   
+  
+          Government   			            Departments   			            Community   			            Business   			            How Do I...   			    
+ 
+
+
+	 
+
+
+    	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+  	 
+				                
+
+
+
+	 
+    	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					      
+
+  
+           
+
+  
+           
+
+  
+           
+
+  
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+	
+	 
+	 
+	 
+
+	 
+				 
+		 
+			 
+						   
+
+			 Search 
+		 
+
+	 
+
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+ 
+  
+   
+  
+ 
+  
+ 
+ 
+
+
+
+
+		  
+			 
+
+ 
+   
+  
+ 
+ 	 
+				                
+
+
+
+	 
+  
+
+
+
+
+
+	 
+	 
+		 
+			 40B 
+		 
+			 
+	 
+		 
+			 MBTA Communities Act: 
+		 
+			 
+	 
+		 
+			 Housing Production Plan 
+		 
+			 
+
+	 
+
+
+	 
+
+	 
+
+
+
+  	 
+				                
+
+
+
+	 
+ 
+  
+ 
+ 		 
+			  Home    Community    Land Use & Housing Development     MBTA Communities Act:  
+		 
+
+	   
+    
+  
+	
+	 
+		
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+				 
+
+MBTA Communities Act:		 
+	
+		 
+			
+
+		   				
+	 
+	
+	 	
+ 
+	     
+
+
+                    At the Special Town Meeting, the Warrant Article passed 250-29, so Dover will adopt the proposed update to the zoning bylaw that would allow multi-family housing by right in a specific overlay district location in Town, in compliance with the MBTA Communities Act Requirements. (section 3A, of MGL c. 40A)         MBTA Communities Act Special Town Meeting    Monday, September 29, 2025, at 7:00 PM&nbsp;    Mudge Auditorium, Dover Sherborn High School    &nbsp;9 Junction Street, Dover, MA 02030       The Special Town Meeting Warrant is available&nbsp;   here   .    The Special Town Meeting Executive Summary is available&nbsp;   here   .     Dover citizens will be asked to vote on a proposed update to the zoning bylaw that would allow multi-family housing by right in a specific overlay district location in Town in compliance with the MBTA communities&apos; Act Requirements. Learn more&nbsp;   here   .    What is the MBTA Communities Act?  This law (passed by the State legislature and signed by former Governor Charlie Baker in 2021) requires that the 177 municipalities in the MBTA&apos;s service area (including Dover) have at least one zoning district of reasonable size in which multi-family housing (housing with at least 3 units on one piece of property) with no age restrictions and suitable for families with children is permitted as of right.  The requirement is codified as &nbsp;   Section 3A of MGL c. 40A     MBTA Communities Act Proposed Overlay District and Zoning Bylaw   In order to be in compliance with the MBTA Communities Act the Town of Dover has prepared an Overlay District and a Zoning Bylaw for review and consideration at the September 29th Special Town Meeting.     Proposed MBTA Communities Multi-Family Overlay District -&nbsp;    County Court - Tisdale Drive               Proposed Zoning Bylaw New Section 185-50 and Overlay District Map filed 7/15/25:    To review the text of the proposed Zoning Bylaw please click   HERE.       Proposed Zoning Bylaw New Section 185-50 and Overlay District Map Revision #1 and the Planning Board Report to Town Meeting     At their Meeting on September 8, 2025, the Planning Board held a Public Hearing on the MBTA Communities Act Zoning Amendment. &nbsp;As part of the Public Hearing the Planning Board considered revisions to the Text and Overlay District. &nbsp;The Public Hearing was closed and the Planning Board made a recommendation, as required to Town Meeting.  Revision #1 Filed with the Town Clerk on September 10, 2025 can be reviewed   HERE   .  This is the most recently revised material on filed with the Town Clerk and the version to be voted on at STM.&nbsp;  Planning Board Report to Town Meeting can be reviewed   HERE.       Resources for Dover Residents:  Selecting a location for the MBTA Zoning District:  The MBTA Communities Act requires that Dover create at least one zoning district of reasonable size in which multi-family housing is permitted as of right.  The Planning Board began its work to identify possible locations for an MBTA overlay zoning district in 2023. In the beginning, (5) locations were identified.    A presentation on the MBTA Communities Act was given to the Housing Task Force on March 27, 2024 by Dover&apos;s MBTA Compliance consultant Jeff Davis of Horsley Witten Group. Initially, five (5) identified locations were presented for consideration. Please click   HERE   to review slides produced by Jeff Davis of Horsley Witten Group in 2024 describing Dover&apos;s MBTA requirements and reviewing the compliance model with identified sites within Dover.    Over time, identified locations have evolved. In the coming months the Planning Board will be soliciting feedback to these and other possible zoning district locations. Please click   HERE   to view slides from a presentation given to the COA on February 26, 2025 that outlined Dover&apos;s compliance requirements and showcased (3) identified locations for potential overlay districts.    On March 25th and April 22nd, the Planning Board hosted a public information sessions on the Zoom platform for residents. During this session, the Planning Board shared information about Dover&rsquo;s efforts to comply with the MBTA Communities Act and provided residents with an opportunity to participate in community polling regarding the location of an MBTA overlay district. A link to the zoom session can be reviewed   HERE     Community Survey: In an effort to solicit resident feedback about the three (3) identified locations (and to secure resident input about locations which we are not yet aware of), the Planning Board worked with Horsley Witten to develop a Community Survey which received over 170 submissions online. In addition, the Planning Board conducted community pop polling at its Information sessions hosted on March 25 and April 22         &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;        Possible Zoning Locations:    The Meadows        **County Court - Tisdale Drive**      (This Location has been chosen as the MBTA Communities Multi-Family Overlay District)          Junction Street      Bylaw Development:  A draft MBTA Communities Act Zoning Bylaw and Overlay District Map Amendment was filed with the Board of Selectmen and the Town Clerk on July 15, 2025. &nbsp;See below in Summer of 2025 for more information.&nbsp;  More ways to learn:    Please Visit Our MBTA FAQ sheet   Here   For Answers To Frequently Asked Questions About MBTA Communities Act Zoning And Requirements     Explore the Massachusetts government MBTA Communities Act website -&nbsp;  https://www.mass.gov/info- details/multi-family-zoning- requirement-for-mbta- communities     We don&apos;t have an MBTA station in Dover. Why do we need to comply?  Even though Dover does not have MBTA services within its borders, because it abuts a town that does provide services, it has been deemed to be an &quot;Adjacent Small Town&quot; and so must comply with the law.  Adjacent Small Town: Adjacent Communities of 7,000 people or less or a population density of less than 500 persons per square mile.)  What are Dover&apos;s compliance requirements?  By Dec. 31, 2025, Dover must establish and approve a zoning district that could (but is not required to) be developed at some point that:    Allows for a minimum of 102 units at a gross density of 15 housing units per acre.    Is not age-restricted and must be suitable for families with children    May or may not include affordable housing    So what do we actually need to do?    Select a district or districts to be zoned for MBTA compliance    Write a zoning bylaw regulating this specific type of development in the proposed district    Vote at Town Meeting to approve this bylaw and Zoning map amendment before December 31, 2025    The Dover Planning Board and Housing Task Force are discussing compliance strategies in open meetings, and will host public workshops to educate and engage residents, as well as public hearing(s) to discuss the proposed zoning language in advance of the 2025 Town Meeting. Dover is working with Horsley Witten Group to ensure the proposed zoning meets the State&apos;s requirements.  It should be noted that the MBTA Communities Act:    Does NOT require that multi-family housing, in fact, be built    Does NOT compel Dover to pay for or approve new infrastructure like sewer or water    Does NOT supersede or override Dover wetlands or Title V laws or any of Dover&apos;s general bylaws or regulations..    The law DOES allow Dover to maintain control of future development in the proposed district through our local regulations and bylaws and allows us to develop specific zoning regulations for any proposed MBTA multi-family district, such as design criteria, setbacks, and dimensional requirements.  What happens if Dover does not comply with the law?  If Dover neglects to meet the new MBTA requirements, the Town would lose access to the following state-funded grants per Section 3A of the law:    Housing Choice Initiative    Local Capital Projects Fund    MassWorks infrastructure program    Additional grant programs:    Community Planning Grants, EOHLC    Massachusetts Downtown Initiative, EOED    Urban Agenda, EOED    Rural and Small Town Development Fund, EOED    Brownfields Redevelopment Fund, MassDevelopment    Site Readiness Program, MassDevelopment    Underutilized Properties Program, MassDevelopment    Collaborative Workspace Program, MassDevelopment    Real Estate Services Technical Assistance, MassDevelopment    Commonwealth Places Programs, MassDevelopment    Land Use Planning Grants, EOEEA    Local Acquisitions for Natural Diversity (LAND) Grants, EOEEA    Municipal Vulnerability Preparedness    Attorney General&apos;s Advisory Guidance (March 2023):  &quot;All MBTA Communities must comply with the Law. Communities that do not currently have a compliant multi- family zoning district must take steps outlined in the EOHLC (DHCD) guidelines to demonstrate interim compliance. Communities that fail to comply with the Law may be subject to civil enforcement action.&quot;  In January 2025 The Supreme Judicial Court ruled in the Attorney General vs. Town of Milton case that &quot;Conclusion. For the foregoing reasons, we declare that the act creates an affirmative duty for each MBTA community to have a zoning bylaw that allows for at least one district of reasonable size where multifamily housing is permitted as of right, as dictated by G. L. c. 40A, &sect; 3A, and that the act&apos;s delegation of authority to HLC to promulgate guidelines does not violate art. 30 of the Massachusetts Declaration of Rights. We further declare that the Attorney General has the power to bring suit for declaratory and injunctive relief to enforce &sect; 3A and its corresponding guidelines.&quot;  On June 6, 2025 the Massachusetts Superior Court ruled on a lawsuit brought by the Towns of Duxbury, Hanson, Holden, Marshfield, Middleton, Wenham, Weston and Wrentham, and Hamilton residents related to the State Auditor&rsquo;s February 2025 declaration that the MBTA Communities Act was an &ldquo;unfunded mandate.&rdquo; The Court dismissed the complaint stating that the Auditor&rsquo;s determination was &ldquo;flawed as a matter of law,&rdquo; and that the regulations &ldquo;do not compel construction. They merely encourage it.&rdquo;  Helpful terms:  Here are some key terms that you will hear a lot in discussions about MBTA Communities Act compliance in Dover. We&apos;ll keep adding to this list:    Zoning is the principal way in which towns like Dover regulate the use of land within its borders.    The Zoning Bylaw is the legal framework that regulates development in Dover. It has two major parts: the official zoning map that illustrates how the town is divided into different zoning districts, and the zoning text that describes the regulations that apply in each district.    As of right means that development projects that comply with the zoning bylaw can move through the approvals process (Site Plan Review) without requiring any discretionary approvals such as special permits, variances, or waivers. Sometimes this is also referred to as &quot;by right&quot;    Multi-family housing means a building with 3 or more residential dwelling units or 2 or more buildings on the same lot with more than 1 residential dwelling unit in each building.    Unit capacity refers to the total number of units that could be placed on one piece of property, based on the town&apos;s zoning regulations. Unit capacity is not a count of existing homes nor a projection of what will be built, it is an estimated count of what is technically allowable.     Overlay District  is a Land Use zoning district that adds additional regulations to an area within a defined boundary.    MBTA Communities Act: What to expect in 2025  In the coming months there will be many opportunities for citizen engagement in this process. We sincerely want your input and feedback. Please email Town of Dover Planning Department (planning@doverma.gov) to share your thoughts, review past materials that have been posted on this page, and familiarize yourself with the   MBTA Communities Act   .  Make sure to fill out the upcoming Town Survey in February and join one of our Public Information sessions. Stay abreast of ongoing developments by checking this page regularly for updates and attend a special Town Meeting in September to make your voice heard.   January 2025:    Planning Board approved the proposal to hire Jeff Davis of Horsley Witten on January 27, 2025 as project consultant for this work in 2025  First draft of MBTA Communities Act Bylaw will be posted on Town Website  Dover was notified by EOHLC that the town remains in interim compliance with Section 3A under 760 CMR 72.00 Multifamily Zoning Requirement for MBTA Communities until December 31, 2025. You may read that compliance letter   here.      February 2025:    February 26, 2025:   Planning Board Presentation to the COA   at 11:00 at the Dover Library  Notification to owners and abutters of locations currently identified as potential MBTA overlay districts (sent February 28, 2025). That notice can be found   here.      March 2025:    A town-wide Survey will be released by the Planning Board focused on Overlay District Locations and citizen feedback. That can be found   here.    March 25, 2025: Planning Board Information Session #1 to discuss MBTA Communities Act compliance. The meeting link will also be posted to the Town Calendar.  On March 25th, the Planning Board hosted a public information session on the Zoom platform for residents. During this session, the Planning Board shared information about Dover&rsquo;s efforts to comply with the MBTA Communities Act and provided residents with an opportunity to participate in community polling regarding the location of an MBTA overlay district. A link to the zoom session can be reviewed   HERE.      April 2025    On April 22nd, the Planning Board hosted a public information session on the Zoom platform for residents. During this session, the Planning Board shared information about Dover&rsquo;s efforts to comply with the MBTA Communities Act and provided residents with an opportunity to participate in community polling regarding the location of an MBTA overlay district. A link to the zoom session can be reviewed   HERE.      May 2025:    Dover Annual Town Meeting. Please note: there will  NOT  be a vote on MBTA Communities Act compliance at Annual Town Meeting this Spring  Ongoing Legal Review of proposed bylaw language and overlay district location  The Planning Board submitted the draft bylaw and proposed overlay district to EOHLC on May 15, 2025    Summer 2025:    EOHLC Pre-Adoption Review of Dover&apos;s MBTA Communities Act Draft Zoning Bylaw and Overlay District Map have been completed. A copy of the comment letter dated June 27, 2025 can be found   HERE .   On July 15, 2025 the Planning Board submitted the Draft Zoning Bylaw and Overlay District Map Amendment for the MBTA Communities to the Board of Selectmen. &nbsp;At their July 24, 2025 meeting, the Planning Board presented the Amendment   LINK TO PRESENTATION   and the Board of Selectmen by unanimous vote motioned to transmit the Zoning Amendment to the Planning Board for review. &nbsp;A copy of the package that was submitted can be found   HERE.    In August the Draft Zoning Bylaw and Overlay District Map Amendment is undergoing a Pre-Adoption review by the office of the Attorney General.  On August 18, 2025 the Planning Board hosted an All Board and Committee Meeting on ZOOM to provide further information and progress updates to the Town. &nbsp;To review the presentation please click   HERE.    On August 26, 2025 the Planning Board hosted an Information Session on ZOOM for the residents and property owners of County Court (Location of Proposed MBTA Overlay District). &nbsp;To review the presentation please click   HERE.      September 2025:    Town-wide mailing containing information about MBTA Communities Act  Sept 8: Planning Board Public Hearing #1. The link for this meeting may be found  here . The meeting link will also be posted to the Town Calendar.  Sept 15: Planning Board Public Hearing #2. The link for this meeting may be found  here . The meeting link will also be posted to the Town Calendar.  Sept 29: Special Town Meeting to consider and vote on the MBTA Communities Zoning Bylaw and related Overlay District    November 2025:    November 17 Special Town Meeting #2 if needed   Actions taken to maintain compliance prior to 2025  The Town of Dover began taking action toward compliance in 2023.   Here   is a list of actions take prior to 2025 to maintain interim compliance with the MBTA Communities Act.  How is the MBTA Communities Act different from Chapter 40B?  The key differences between Chapter 40B and the MBTA Communities zoning requirement in Massachusetts are:  MBTA Communities Act (Section 3A): emphasis is on multi-family housing    Requires MBTA communities to have at least one zoning district allowing multi-family housing as-of-right.    Does not mandate the inclusion of affordable units, but the housing must be suitable for families.    Applies only to the 177 cities and towns served by the MBTA transit system.    Non-compliant communities become ineligible for certain state housing, infrastructure and transportation funding programs.    Aims to promote transit-oriented housing development near public transit to increase housing supply.    Allows Dover to control where and what, from a design perspective, gets developed.    Chapter 40B: emphasis is on affordable housing    Allows developers to override local zoning bylaws and regulations if a town has less than 10% affordable housing stock, in order to build affordable housing developments. Once approved by the State, Dover cannot reject a development except through legal action.    At least 20-25% of units in the affordable housing development must be income-restricted as affordable.    Developers can appeal to the state Housing Appeals Committee if their project is denied locally in non-compliant towns.    Applies statewide to all cities and towns that don&apos;t meet the 10% affordable housing threshold. Dover does not currently meet this threshold.    For more information on Chapter 40B in Dover, please visit our 40B information page   here   .  
+     
+
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+		 
+
+	 
+
+	
+	 
+
+	 
+ 
+  	 
+				                
+
+
+
+	 
+ 
+ 
+  
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Agendas &amp; Minutes  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Property Records  
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Online Bill Pay  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Notify Me®  
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			    				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Stay Informed  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Employment  
+		 
+	 
+ 
+		 
+
+      
+				 
+			 
+		 
+	 
+			 
+ 
+ 
+	   
+
+	   
+
+			      
+
+
+	 
+  
+   
+  	 
+				                
+
+		   				
+	 
+	
+	 	
+ 
+
+
+
+
+ 
+	 
+		 
+				 
+	 
+	 
+		 
+				 
+					     
+
+ 
+	 
+		 
+			  Top Links  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Elections  
+		 
+	 
+ 
+		 
+
+          
+
+ 
+	 
+		 
+			  Alerts  
+		 
+	 
+ 
+		 
+
+          
+
+### DOC bca9e8d288 | town=Dracut | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://www.dracutma.gov/DocumentCenter/View/3231/MBTA-Communities-Survey-Results-PDF
+
+[PAGE 1]
+The Town of Dracut MBTA Communities Survey was available to everyone from 
+February 8th through March 6th.  It was available to take online, to print and return, 
+and by picking up a paper copy at the Library, Town Hall or Senior Center.
+We appreciate the time that people took to learn about this new Law and then to 
+take the survey.  This information will be vital as we craft compliant Zoning for 
+Town Meeting consideration.
+The following pages share the results from this survey.
+
+[PAGE 2]
+Dracut MBTA Communities Survey
+Section 3A of Massachusetts General Laws Chapter 40A requires that Dracut and 176 other Massachusetts 
+communities provide at least one zoning district of reasonable size in which multi family housing appropriate for 
+families is permitted "as-of-right." Dracut must adopt this zoning no later than December 31, 2024.
+The Zoning Bylaw Review Committee, working with the Planning Board and Board of Selectmen, is working to create a 
+compliant district for Town Meeting consideration in Fall of 2024.
+This survey is intended for Dracut residents to provide initial feedback to the Zoning Bylaw Review Committee. We 
+appreciate your time to answer the following questions and provide input on this process. This survey will be open 
+until March 6, 2024, after which time the Zoning Bylaw Review Committee will host subsequent virtual and in-person 
+meetings to discuss the results and compliance for the Town of Dracut.
+For more information on this law, the process, and to attend the virtual community meeting on February 29, please 
+visit www.dracutma.gov/MBTA-Zoning
+If you would like to receive email updates on the Town of Dracut MBTA Compliance process please sign up using the 
+Notify Me button on the left side of the Town of Dracut webpage www.dracutma.gov
+
+[PAGE 3]
+The Three Options
+The Zoning Bylaw Review Committee has proposed three options for an MBTA Communities 
+Overlay District. We are calling these options "Collinsville and Tennis Plaza", "Broadway/Loon Hill 
+and Tennis Plaza", and "Broadway/Loon Hill and Navy Yard".
+Collinsville and Tennis Plaza
+This area includes the Collinsville Mill and 
+residential parcels around Tennis Plaza. This option 
+would allow additional residential development in 
+Collinsville Mill and longer-term division or 
+redevelopment of nearby properties into smaller 
+multifamily buildings. New homes that may be 
+eventually developed would be within walking 
+distance to Dracut High School and the businesses 
+in and near the mill.
+
+[PAGE 4]
+Broadway/Loon Hill and Tennis Plaza
+This area does not include Collinsville Mill, and instead 
+pairs the parcels around the Tennis Plaza with parcels near 
+the Broadway and Loon Hill Road intersection. This option 
+would allow larger developments set back from the road in 
+the Broadway/Loon Hill area, possibly mixed with 
+commercial areas. New homes that may be eventually 
+developed would be within walking distance to Veterans 
+Park, Dracut High School, and many businesses.
+Broadway/Loon Hill and Navy Yard
+Instead of the Tennis Plaza area, this area pairs 
+Broadway/Loon Hill with the Navy Yard Mill and 
+surrounding neighborhood. This option would allow 
+additional residential development in the Navy Yard Mill 
+and longer-term division or redevelopment of nearby 
+properties into smaller multifamily buildings. New homes 
+that may be eventually developed would be within walking 
+distance to the businesses in the Navy Yard neighborhood 
+along with the businesses near Veterans Park.
+
+[PAGE 5]
+Which Option do you Prefer?
+
+[PAGE 6]
+•
+110 would've been an obvious selection, perhaps the box between Varnum, Methuen St, Hillside Dr, and 110, excluding the Nickel Mine Brook and trails in that area. If that sprawling complex on the farm 
+comes through, then establishing that area as multifamily might be enough to get a LRTA line heading that direction, which might help pull some of the hundreds of extra cars it'll introduce off 110. 
+•
+Areas closer to Lowell line would be better suited for multi family housing, where there's already a lot of multi family housing. Shoehorning in multi family housing among all single family zoning doesn't 
+make sense. 
+•
+Can we reject this? 
+•
+East Dracut
+•
+East Dracut 
+•
+East Dracut needs multi family housing. There is enough multi family housing and 40B developments on the west side.
+•
+Extend area of Broadway Rd down past Almos to Lowell. Area of Hannaford's, Coventry Gardens, and the Condominiums, Liquor store at Pleasant and Hildreth St. intersection. 
+•
+Greenmont Avenue   
+•
+Hildreth and Pleasant near Hannafords,   Bridge and Pleasant to the Lowell line
+•
+I heavily advise DRACUT choose not to comply with this MBTA ACT. Let’s be honest, this is not about creating homes in Dracut for more people to access public transit. Dracut is a small town with little big 
+city problems. Do not think for one second this will have a happy ending. It is the state legislatures’ deliberate attempt to bring more ghetto style living to the entire state. I advise selectmen and women of 
+Dracut to look to the east (LAWRENCE) and to the south (LOWELL) as examples of cities run into the ground by similar ideologies. My wife and I moved to DRACUT because it is not those things. You 
+comply with this ridiculous MBTA Act, you (DRACUT SELECTMEN) bring this lovely farm town closer to mirroring the cities I mentioned earlier and becoming another shithole. I for one choose not to be a 
+part of this great town’s demise, and neither should you. STAND UP FOR DRACUT and do not cower to less than intelligent members running our state house
+•
+I say you extend the MBTA services to east Dracut off of Marsh Hill road and put them there. On a side note, it is only mandatory if allow it to be. Other towns are taking on the fight. 
+•
+If the zoning change is kept to Tennis Plaza, the changes would be limited to one area.
+•
+I'm not sure I understand WHY the zoning has to be multi-family housing.  Why isn't standard housing and the mix we have - houses, condos, townhomes, multi-family - considered appropriate?  Also, I 
+thought this was related to the MBTA - are all the options listed supposed to be on a bus line or something that provides easy access to the station in Lowell?  If not, why does it matter where the zoning is 
+as long as there is zoning?
+•
+Just tennis plaza
+•
+Loosen all zoning restrictions, and allow multi-family housing everywhere. People should be able to do what they want with land they own.
+•
+MURPH's FARM ONLY
+•
+Murphy's Farm ONLY.
+•
+Navy yard plus the larger Collinsville/Tennis Plaza combo would be my first choice.    Would Mammoth Road by the Lowell line make sense? More bus routes. 
+•
+not knowing about where conservation land is - it seems that east dracut has the least amount of development - any area around lakeview is totally congested.  Can we look at creating more, smaller 
+developments maybe some near axis rd/bridge street - maybe around jones ave/methuen ave/ off of loon hill?  
+•
+Open-Ended Response
+•
+Original Tennis Plaza entirely option
+•
+Revolt
+•
+Rt 110/113 area East Dracut for more space
+•
+Stand with Milton, Rockport and other towns
+•
+Tennis Plaza area only
+•
+Tennis Plaza should be expanded to be just one district.  The reason is that the area already has a bunch of condos/apartments, and using that area will be least disruptive to the culture and style of the 
+town.  
+•
+The area between Broadway Road, Fox Ave, Bridge St, Greenmont Ave, Pleasant St and Arlington St.  This area is near public transportation.  The area between Mammoth Rd, Burdette St, Howe St, Myron 
+St and Mill St, which is also near public transportation  
+•
+The Board of Selectman should send a letter to Governor Healy to Repeal this Law.
+•
+The lakeshore apartments parcels on Mascuppic lake could be zoned as an MBTA communities district. This would reduce the amount of land that elsewhere would need to be zoned as such.  
+•
+The MBTA does not service Dracut and therefore we should not be forced to comply!
+•
+there is an area off of fox ave that has a paved road, but no homes - seems like it may be a more affordable option since utilities may already have been put in there.  Dracut is getting too many 
+megahouses - houses that are starting at 799,900  - who can afford that? 
+•
+There is no where in town this should be zoned.  The town needs to push back against the state. This is a town not a city.  We have enough multi unit buildings.
+•
+We will move if there are any additional large developments built on Tennis Plaza Rd.  There is no logical place to put additional housing without upsetting the land/housing balance we have.
+•
+When do we get to vote on this matter? As i know the town of Milton voted overwhelmingly a ‘no’ on this idea. 
+•
+Why is there no option for a navy yard/ Tennis plaza
+Did we miss a possibility?  Knowing that this zoning is mandatory, please describe any other areas of 
+Town not shown as options that may be suitable locations for the “MBTA Communities” district.
+
+[PAGE 7]
+Should the new MBTA Communities Overlay District require Affordable Housing?
+Currently less than 5% of the housing in Dracut is included on the State's Affordable Housing Inventory. Reaching the State goal of 10% would give Dracut more 
+control over Comprehensive Permit (40B) developments. Including a requirement that 10% of future development in our MBTA Communities District be 
+Affordable will ensure that we don't fall further behind in our progress toward this goal. Do you support requiring 10% of development in the new MBTA 
+Compliant Overlay District be affordable?
+
+[PAGE 8]
+How do you currently get information about Town projects such as this? (Check all that apply)
+
+[PAGE 9]
+How would you prefer to get information about Town projects such as this? (Check all that apply)
+
+[PAGE 10]
+Select your Age Group
+
+[PAGE 11]
+How long have you lived in the Town of Dracut?
+
+[PAGE 12]
+After bylaw language is drafted the proposed overlay district will need to be approved at Dracut's Annual Town 
+Meeting in November. Any resident of Dracut who is a registered voter may vote at Dracut Town Meetings. 
+How often do you attend Dracut's Town Meetings?
+
+
+### DOC c85c03dd6a | town=Dracut | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://dracutma.gov/DocumentCenter/View/5564/MBTA-Communities-Act-Frequently-Asked-Questions-2-26-2026-PDF
+
+[PAGE 1]
+What is Zoning? 
+Towns are divided into diƯerent 
+zones; each with rules for 
+development. 
+One goal of zoning is to keep like 
+land uses together, preventing a big 
+box store from building next to your 
+home. 
+Zoning also controls the height and 
+placement of buildings on a parcel 
+of land.  
+ 
+What is Required? 
+Approval of a zoning district that allows density of 15 housing units per acre; and 
+creates capacity for 1,233 dwelling units. 
+ 
+What has happened to date? 
+The MBTA Communities Housing Law was created in 2021. 
+A proposal was rejected by voters at Town Meeting in November of 2024.   
+A request to consider another option was rejected by Town Meeting in June 2025. 
+The Attorney General has ﬁled a lawsuit in Superior Court against nine non-
+compliant communities, including Dracut. 
+ 
+ 
+
+[PAGE 2]
+The Town can ﬁght 
+the State lawsuit, 
+with uncertain cost 
+and outcomes
+Approve a district that 
+complies, targeting 
+areas where 
+development is diƯicult.
+What if we remain non-compliant? 
+Per Chapter 40A Section 3A - An MBTA community that fails to comply with this 
+section shall not be eligible for funds from the Housing Choice Initiative; the Local 
+Capital Projects Fund;  the MassWorks infrastructure; and the HousingWorks 
+infrastructure programs. 
+In Attorney General v. Milton, 495 Mass. 183 (2025), the Supreme Judicial Court 
+conﬁrmed that the Act is constitutional, that communities must comply, and that the 
+Attorney General may enforce against noncompliance. 
+In June 2025, the Superior Court determined that the Act is not an “unfunded 
+mandate”. 
+MBTA Communities that fail to comply risk lawsuit under federal and state fair 
+housing laws.  
+As of July 2025, non-compliant communities may lose discretionary state funding. 
+ 
+What are the current options? 
+ 
+        OR 
+ 
+ 
+ 
+ 
+
+[PAGE 3]
+Sub-district 
+#1
+Sub-district 
+#2
+Sub-district 
+#3
+Sub-district 
+#4
+Sub-district 
+#5
+Sub-district 
+#6
+Sub-district 
+#7
+Sub-district 
+#8
+Beaver Brook Mill 
+& Dallas Park
+Modified Tennis 
+Plaza
+Arbor Drive
+Hampson & 
+Pleasant Streets
+Pleasant Street 
+to Lowell line
+Modified Loon 
+Hill
+Fox Hill Lane
+Cascades
+Parcels
+7
+10
+2
+3
+156
+3
+7
+10
+Sub-District Acreage
+23.3
+50.6
+16.8
+5.6
+62.6
+9.4
+22.4
+30.2
+Parcels Acreage
+22.4
+49.2
+16.7
+5.6
+47.5
+9.4
+22.1
+30.2
+Current Housing Units 
+167
+423
+82
+0
+147
+79
+116
+190
+47 rentals, 
+120 condos
+entirely 
+condos
+entirely 
+condos
+primarily one 
+& two family 
+assisted living 
+units
+entirely 
+condos
+condos with 1 
+single family 
+home
+Estimated Buildable Acreage 
+(remove wetlands and buffers)
+20.1
+41
+15.9
+5.4
+44.86
+8.8
+20.3
+28.2
+Excluded Land Acreage
+3.2
+9.57
+0.9
+0.2
+17.69
+0.56
+2.09
+2
+Sensitive Lands outside 
+Excluded Lands in Acres
+2.92
+2.92
+2
+0
+8.28
+0
+0.48
+0
+Unit Capacity 
+(including sensitive lands)
+358
+788
+268
+60
+612
+150
+331
+482
+Dwelling Units per Acre 
+(including sensitive lands)
+17.9
+19.2
+16.9
+16.7
+13.6
+17.0
+16.3
+15.9
+Frequently Asked Questions: 
+Based on the zones currently being considered is there a way to ﬁnd out how many units 
+are currently in each zone?  
+Based on those same zones how many housing units could be built. 
+The existing unit information is available in our GIS property information system.  The proposed 
+units are estimated currently due to the complexity of the compliance model.  Below are the 
+totals for each sub-district. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Would a developer need to buy out the current occupants to redevelop an area? 
+Generally yes, an applicant for building permit needs to show they own or have owner’s 
+permission to develop.  In the case of a condo complex, such permission of the ‘owner’ would 
+require purchase of the units as spelled out in the Master Deed. 
+What would be the anticipated increase in local residential tax revenue for potential new units? 
+The average home tax bill in Dracut is currently just over $5,000, we can’t predict what will be 
+constructed or what actual revenue could be. 
+Is there or has there been any other towns where development occurred where they just 
+claimed the zone developed as eminent domain?    
+Eminent Domain requires public beneﬁt and payment for the appraised value of land taken.  Such 
+needs to be approved at Town Meeting. 
+If the developments where to be built who would monitor the 10% that are required to be 
+aƯordable?  How are rental or sale prices set? 
+NMCOG, our regional planning authority, has a new Housing Services OƯice that is intended to 
+exactly this - https://www.nmcog.org/301/Northern-Middlesex-Regional-Housing-Serv.  Deeds 
+are tracked prior to and following sales and rental properties are monitored to ensure that they 
+meet State criteria.  The State caps are based on income, family size and location on an annual 
+basis. 
+
+[PAGE 4]
+Can you conﬁrm that the current building in each zone is currently tied into the town Water 
+and Sewer Lines?  
+Water and Sewer Service are available for each of the sub-districts. 
+Voters may soon be asked to approve the new Cambell School.  How will possible 
+development impact enrollment and the schools? 
+There is no way to predict the number of students or
+
+### DOC 59254a59b7 | town=Dracut | community_type=MBTA adjacent | governing_body=Select Board | screened_board= | screened_doctype= | url=https://dracutma.gov/DocumentCenter/View/5565/MBTA-Communities-Act-Community-Input-Session-Slides-2-26-2026-PDF
+
+[PAGE 1]
+MBTA Communities Act 
+Community Input Session 
+
+[PAGE 2]
+Approval of a zoning district
+allowing at least 15 housing units per acre;
+with capacity for at least 1,233 housing units
+What is required?
+
+[PAGE 3]
+The MBTA Communities Housing Law was created in 2021.
+A proposal for compliant Zoning Bylaw and Map was 
+rejected by voters at Town Meeting in November of 2024.  
+A request to consider an amended proposal was rejected 
+by Town Meeting in June of 2025.
+The Attorney General has filed a lawsuit in Superior Court 
+against nine non-compliant communities, including Dracut
+What has happened to date?
+
+[PAGE 4]
+Grant revenues are not available 
+Legal fees could be significant
+(current litigation or future under fair housing laws)
+???
+What if we remain 
+non-compliant?
+
+[PAGE 5]
+Section 3A of MGL c. 40A states that
+An MBTA community that fails to comply with this section shall 
+not be eligible for funds from: 
+(i)
+the Housing Choice Initiative 
+(ii) the Local Capital Projects
+(iii) the MassWorks infrastructure program
+(iv) the HousingWorks infrastructure program
+Per the AG’s second advisory – “As of July 15, 2025, these 
+communities will be noncompliant with the Act and will face the 
+loss of discretionary state grant funding.”
+What Grants are impacted?
+
+[PAGE 6]
+Attorney General’s Second Advisory
+
+[PAGE 7]
+Attorney General’s First Advisory
+
+[PAGE 8]
+Litigation in Court
+How much is spending 
+is supported?
+What are the
+current options?
+Approve a district
+Stay to hear about 
+options
+
+[PAGE 9]
+Litigation
+State has asked Superior Court to:
+A.
+Declare that Towns have failed to comply with §3A(a) 
+and the Regulations;
+B.
+Declare that each must amend its zoning by-law to 
+ensure compliance, as affirmed by EOHLC;
+C.
+Award injunctive relief to achieve compliance 
+(injunctive relief is a court-ordered remedy designed 
+to prevent or compel specific actions by a party);
+D.
+Order further and other relief.
+
+[PAGE 10]
+Approve a District
+Town Meeting can approve a proposal to amend the 
+Zoning Bylaw language; the proposed District seeks to 
+comply with the requirements of the law in areas where 
+actual construction would be very costly and difficult.
+Such approval requires recommendation of the 
+Planning Board to reconsider within a two year window 
+and approval of Town Meeting voters to reconsider 
+within one year.
+
+[PAGE 11]
+Timeline leading 
+to Town Meetings
+Spring 2026 
+Fall 2026 
+Town Meeting
+Town Meeting
+February 26
+MBTA Community Input Session
+TBD
+March 11
+Lowell Sun Notice 1st Run
+September 9th
+March 25
+Planning Board Public Hearing
+September 23
+April 17
+Warrant Articles Due
+September 25
+June 1
+Town Meeting
+November 9
+
+[PAGE 12]
+Questions So Far?
+
+[PAGE 13]
+
+[PAGE 14]
+Seven parcels totaling 22 acres
+(Inc. Beaver Brook Mill & Dallas Park Condos)
+Individual Condo ownership creates a high bar for 
+redevelopment
+Excluded land areas are removed from 
+consideration.
+Estimated Compliance Contribution
+358 units
+
+[PAGE 15]
+Ten parcels totaling approximately 51 acres
+(Inc. Tennis Plaza Condos and one commercial 
+building)
+Individual Condo ownership creates a high bar for 
+redevelopment
+Excluded land areas are removed from 
+consideration.
+Estimated Compliance Contribution
+788 units
+
+[PAGE 16]
+Two parcels totaling approximately 17 acres
+Individual Condo ownership creates a high bar for 
+redevelopment
+Excluded land areas are removed from 
+consideration.
+Estimated Compliance Contribution
+268 units
+
+[PAGE 17]
+103+ parcels totaling approximately 66 acres
+Parcels smaller than 10,000sf do not count 
+toward compliance.
+Smaller single parcels can readily be purchased, 
+combined and redeveloped.
+Excluded land areas are removed from 
+consideration.
+Estimated Compliance Contribution
+672 units
+
+[PAGE 18]
+Three parcels totaling approximately 9 acres
+Redevelopment costs are expected to be 
+prohibitive – the new storage facility, The 
+Arbors and Circle Health are all recent 
+developments with significant financial 
+investment.
+Excluded land areas are removed from 
+consideration.
+Estimated Compliance Contribution
+150 units
+New 
+storage 
+facility
+
+[PAGE 19]
+Seven parcels totaling approximately 22 acres
+Individual Condo ownership creates a high bar for 
+redevelopment
+Excluded land areas are removed from 
+consideration.
+Estimated Compliance Contribution
+331 units
+
+[PAGE 20]
+Ten parcels totaling approximately 31 acres
+Individual Condo ownership creates a high bar for 
+redevelopment
+Excluded land areas are removed from 
+consideration.
+Estimated Compliance Contribution
+482 units
+
+[PAGE 21]
+Estimated Sub-District Analysis
+Based on 15 Dwelling Units per Acre
+Sub-district 
+#1
+Sub-district 
+#2
+Sub-district 
+#3
+Sub-district 
+#4
+Sub-district 
+#5
+Sub-district 
+#6
+Sub-district 
+#7
+Sub-district 
+#8
+Beaver Brook Mill 
+& Dallas Park
+Modified Tennis 
+Plaza
+Arbor Drive
+Hampson & 
+Pleasant Streets
+Pleasant Street 
+to Lowell line
+Modified Loon 
+Hill
+Fox Hill Lane
+Cascades
+Parcels
+7
+10
+2
+3
+156
+3
+7
+10
+Sub-District Acreage
+23.3
+50.6
+16.8
+5.6
+62.6
+9.4
+22.4
+30.2
+Parcels Acreage
+22.4
+49.2
+16.7
+5.6
+47.5
+9.4
+22.1
+30.2
+Current Housing Units 
+167
+423
+82
+0
+147
+79
+116
+190
+47 rentals, 
+120 condos
+entirely 
+condos
+entirely 
+condos
+primarily one 
+& two family 
+assisted living 
+units
+entirely 
+condos
+condos with 1 
+single family 
+home
+Estimated Buildable Acreage 
+(remove wetlands and buffers)
+20.1
+41
+15.9
+5.4
+44.86
+8.8
+20.3
+28.2
+Excluded Land Acreage
+3.2
+9.57
+0.9
+0.2
+17.69
+0.56
+2.09
+2
+Sensitive Lands outside 
+Excluded Lands in Acres
+2.92
+2.92
+2
+0
+8.28
+0
+0.48
+0
+Unit Capacity 
+(including sensitive lands)
+336
+738
+251
+84
+576
+141
+331
+449
+Dwelling Units per Acre 
+(including sensitive lands)
+16.8
+18.0
+15.8
+15.6
+12.8
+16.0
+16.3
+15.9
+District Combination Yields
+1,187 Units and 80 acres
+
+[PAGE 22]
+Estimated Sub-District Analysis
+Based on 16 Dwelling Units per Acre
+District Combination Yields
+1,270 Units and 80 acres
+Sub-district 
+#1
+Sub-district 
+#2
+Sub-district 
+#3
+Sub-district 
+#4
+Sub-district 
+#5
+Sub-district 
+#6
+Sub-

@@ -1,0 +1,4 @@
+# Hosts whose CMS ships a blanket 'Disallow: /' template over legally public
+# records, crawled slower and shallower by explicit documented owner decision.
+# One bare host per line. This file supplements (does not replace)
+# discover.polite_override_hosts in settings.toml.

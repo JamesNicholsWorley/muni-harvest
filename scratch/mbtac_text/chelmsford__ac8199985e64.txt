@@ -1,0 +1,318 @@
+
+===== PAGE 1 =====
+IMPORTANT 
+All Action Plans must be submitted online through 
+www.mass.gov/mbtacommunities. 
+This PDF copy of the form is a courtesy guide to MBTA communities. If you have 
+questions, please reach out to the DHCD Section 3A Team at 
+DHCD3A@mass.gov. 
+ 
+Action Plan for MBTA Communities 
+ 
+Section 3A of MGL. c. 40A requires all MBTA communities to have at least one zoning district of reasonable 
+size in which multi-family housing is permitted as of right. DHCD's Section 3A Guidelines allow an MBTA 
+community to obtain "interim compliance" before it adopts a compliant zoning district by submitting an 
+Action Plan that establishes an achievable path to zoning adoption. The Action Plan provides guidance to 
+MBTA communities and establishes communication between DHCD and MBTA communities that are 
+developing strategies for compliance. During the development and implementation of the Action Plan, 
+MBTA communities are strongly encouraged to explore and use the abundant technical assistance 
+resources described at: www.mass.gov/mbtacommunities 
+ 
+For all MBTA communities that have not achieved DHCD-certified district compliance, the deadline to 
+submit this Action Plan is January 31, 2023. Action Plans submitted after January 31, 2023 will not establish 
+FY2024 eligibility for the funds described in Section 3A. 
+ 
+Please read the Section 3A Guidelines before attempting to complete this form. 
+ 
+Section 1: Identification 
+The Section 3A Guidelines establish zoning metrics that apply uniquely to each MBTA community based 
+on its local transit stations, existing housing stock, population, and developable land.  This section of the 
+Action Plan helps to identify the transit stations that determined each community's category.  Appendix 
+1 of the Section 3A Guidelines lists each community's category and minimum multi-family unit capacity 
+requirement. 
+ 
+1.1. MBTA Community Name* 
+ 
+ 
+ 
+1.2. 
+ Community Category* 
+Rapid Transit 
+Commuter Rail
+Adjacent
+Adjacent Small Town 
+Community categories are listed in Appendix I of the Guidelines. For more information about the methodology that 
+was used to determine community categories, please refer to the Definitions of each category in Section 2 of the 
+Guidelines. 
+ 
+1.3. Multifamily Unit Capacity Requirement* 
+ 
+Multifamily unit capacity requirements are listed in Appendix I of the Guidelines. For more information about the 
+methodology that was used to determine capacity requirement, please see Section 5 of the Guidelines. The capacity 
+
+===== PAGE 2 =====
+requirement represents the number of multifamily housing units that a compliant district's zoning must 
+accommodate. It does not represent a production requirement or expectation. 
+ 
+1.4. Does this municipality have any MBTA rapid transit stations within its boundaries?* 
+Yes
+No 
+If Rapid Transit to 1.2 and no to 1.4 
+Although there are no MBTA rapid transit stations within its municipal boundaries, this 
+municipality's community category is Rapid Transit. This is because the methodology used to 
+determine community category considers not only stations located within municipal boundaries, 
+but also any stations that create 100 or more acres of "developable station area" within the 
+boundaries. Section 1 of the Guidelines provides definitions of "transit station area", "developable 
+station area", and "developable land" to explain how this determination was made. Developable 
+station area from stations located outside of municipal boundaries may also affect district location 
+criteria as further described in Section 8 of the Guidelines.  
+If Commuter Rail to 1.2 and yes to 1.4 
+Although there is a MBTA rapid transit station within its municipal boundaries, this municipality's 
+community category is Commuter Rail. This is because the methodology used to determine 
+community category considers not only stations that are located within municipal boundaries, but 
+also whether the transit station area associated with those stations creates at least 100 acres of 
+"developable station area" within the boundaries. Section 1 of the Guidelines provides definitions 
+of "transit station area", "developable station area", and "developable land" to explain how this 
+determination was made. Developable station area from stations located outside of municipal 
+boundaries may also affect district location criteria as further described in Section 8 of the 
+Guidelines.  
+If Adjacent to 1.2 and yes to 1.4 
+Although there is a MBTA rapid transit station within its municipal boundaries, this municipality's 
+community category is Adjacent. This is because the methodology used to determine community 
+category considers not only stations that are located within municipal boundaries, but also 
+whether the transit station area associated with those stations amounts to at least 100 acres of 
+"developable station area" within the boundaries. Section 1 of the Guidelines provides definitions 
+of "transit station area", "developable station area", and "developable land" to explain how this 
+determination was made.  
+If Adjacent Small Town to 1.2 and yes to 1.4 
+Although there is a MBTA rapid transit station within its municipal boundaries, this municipality's 
+community category is Adjacent Small Town. This is because the methodology used to determine 
+community category considers not only stations that are located within municipal boundaries, but 
+also whether transit station areas associated with those stations amount to at least 100 acres of 
+"developable station area" within the boundaries. Section 1 of the Guidelines provides definitions 
+of "transit station area", "developable station area", and "developable land" to explain how this 
+determination was made.  
+ 
+If yes to 1.4 
+1.4a. Please list MBTA rapid transit stations that are located within this municipality's boundaries*
+ 
+Please enter all station names separated by commas 
+ 
+1.5. Does this municipality have any MBTA commuter rail stations within its boundaries?* 
+Yes
+No 
+If Rapid Transit to 1.2 and Yes to 1.5 
+
+===== PAGE 3 =====
+Although there is an MBTA commuter rail station within its municipal boundaries, this 
+municipality's community category is Rapid Transit. This is because a community's category is 
+determined by the transit station with the highest level of transit service. If there are 100 or more 
+acres of rapid transit stations' developable station area within municipal boundaries, then the 
+community category is Rapid Transit regardless of whether the community is also served by the 
+commuter rail. Section 1 of the Guidelines provides definitions of "transit station area", 
+"developable station area" and "developable land" to explain how this determination was made.  
+If Commuter Rail to 1.2 and No to 1.5 
+Although there are no MBTA commuter rail stations within its municipal boundaries, this 
+municipality's community category is Commuter Rail. This is because the methodology used to 
+determine community category considers not only stations located within the boundaries, but 
+also any stations that have 100 acres of "developable station area" within the boundaries. Section 
+1 of the Guidelines provides definitions of "transit station area", "developable station area", and 
+"developable land" to explain how this determination was made. Developable station area from 
+stations located outside of municipal boundaries may also affect location criteria as further 
+described in Section 8 of the Guidelines.  
+If Adjacent to 1.2 and Yes to 1.5 
+Although there is an MBTA commuter rail station within its municipal boundaries, this 
+municipality's community category is Adjacent. This is because the methodology used to 
+determine community category considers not only whether a station is located within municipal 
+boundaries, but also whether that station has at least 100 acres of "developable station area" 
+within the boundaries. Section 1 of the Guidelines provides definitions of "transit station area", 
+"developable station area", and "developable land" to explain how this determination was made.  
+If Adjacent Small Town to 1.2 and Yes to 1.5 
+Although there is an MBTA commuter rail station within its municipal boundaries, this 
+municipality's community category is Adjacent Small Town. This is because the methodology used 
+to determine community category considers not only whether a station is located within 
+municipal boundaries, but also whether that station has at least 100 acres of "developable station 
+area" within municipal boundaries. Section 1 of the Guidelines provides definitions of "transit 
+station area", developable station area", and "developable land" to explain how this 
+determination was made. 
+ 
+1.6. Does this municipality have any other MBTA transit stations that are located outside of its municipal 
+boundaries that may have "developable station area" within them?* 
+Yes
+No 
+Generally, stations located within 0.5 miles outside of municipal boundaries can cause developable station area to 
+be inside of the municipal boundaries. 
+ 
+If Yes to 1.6 
+Stations that are located outside of municipal boundaries but that have "developable station 
+area" within the boundaries might affect district location criteria, as further described in Section 
+8 of the Guidelines. Please refer to Section 1 of the Guidelines for definitions of "transit station 
+area", "developable station area", and "developable land". 
+ 
+1.6a. Please list the MBTA transit stations that are located outside of the municipal boundaries but might 
+have developable station area within them.* 
+ 
+Please enter all station names separated by commas. If unsure, consider that generally, stations located within 0.5 
+miles outside of municipal boundaries can cause developable station area to be inside of municipal boundaries. 
+ 
+1.7. Please provide the name of the person filling out this form* 
+ 
+ 
+
+===== PAGE 4 =====
+First Name* 
+ 
+Last Name* 
+ 
+1.7a. Title*
+ 
+ 
+1.7b. Email Address*
+ 
+ 
+1.7c. Phone Number
+ 
+ 
+1.8. Please briefly describe other members of the core team developing the multi-family zoning district.*
+ 
+(Municipal staff, planning board members, regional planning agency, private consultants, etc) 
+ 
+Section 2: Housing Overview 
+2.1. Does this municipality have any established housing related goals or strategies from municipal 
+planning documents, such as a Housing Production Plan, Master Plan, or Economic Development Plan?* 
+Yes
+No 
+ 
+If Yes to 2.1 
+2.1a. Please briefly describe any relevant strategies, goals, or objectives, and the work that has been done 
+to date.* 
+ 
+ 
+2.2. Is this municipality currently working on any other planning for housing?* 
+Yes
+No 
+ 
+If Yes to 2.2 
+2.2a. Please briefly describe the housing work underway.*
+ 
+ 
+Section 3: Preliminary Zoning Strategies 
+3.1. To the best of your knowledge, which of the following zoning strategies is this community most likely 
+to use for compliance? (Select all that apply)* 
+a. An existing zoning district or districts that you believe already complies with the Section 3A 
+Guidelines 
+b. An existing zoning district or districts that must be amended to comply with the Section 3A 
+Guidelines 
+c. A new 40R or other overlay zoning district 
+d. A new base zoning district or districts 
+e. Other zoning strategy 
+ 
+If select a 
+
+===== PAGE 5 =====
+3.1a. Please identify and briefly describe the possibly-compliant district(s), including any characteristics 
+of existing development or transit options that make it suitable for use as this community's 3A-compliant 
+district. Optional: Attach any supporting documents.* 
+ 
+If select b 
+3.1b. Please select the changes that may be necessary for the existing district to comply. Optional: Attach 
+any supporting documents that describe this district.* 
+District boundaries 
+Use schedule 
+Dimensional regulations 
+Parking requirements 
+Other:
+ 
+Select all that apply 
+ 
+If select c 
+3.1c. Please briefly describe the potential district and location. Optional: Attach any supporting 
+documents that show planning work the community has already done for this district(s). 
+ 
+If select d 
+3.1d. Please briefly describe the potential district and location. Optional: Attach any supporting 
+documents that show planning work this community has already done for this district. 
+ 
+If select e 
+3.1e. Please briefly explain the strategy. Optional: Attach any supporting documents that show planning 
+work this community has already done for this strategy. 
+ 
+For all 3.1. options a-e 
+File (optional) 
+Choose File 
+Remove File 
+File uploads may not work on some mobile devices. 
+ 
+3.2. What non-housing characteristics are important for this community to consider in its 3A zoning 
+district?* 
+ 
+(For example: walkability, bike lanes, street retail, bus connections, accessibility, street tree canopy, municipal 
+services, etc) 
+ 
+Section 4: Action Plan Timeline 
+ 
+This section creates a framework to input preliminary plans for a zoning adoption process. On the table 
+below, please use Column 1 (from the left) to describe a task, Column 2 to input a start date, and Column 
+3 to input a finish date. Every community must provide a timeline for the below-listed tasks.  Additional 
+space is provided for any other tasks that a community wishes to list. DHCD will review proposed timelines 
+for feasibility before approving an Action Plan.  
+ 
+• 
+Public outreach 
+• 
+Developing zoning  
+
+===== PAGE 6 =====
+• 
+Applying DHCD's compliance model to test for density and unit capacity 
+• 
+Holding planning board hearings  
+• 
+Holding legislative sessions and adopt compliant zoning  
+• 
+Submit District Compliance application to DHCD 
+ 
+Task 
+Start Date 
+End Date 
+Short Answer* 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+Short Answer* 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+Short Answer* 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+Short Answer* 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+Short Answer* 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+Short Answer* 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+Short Answer (optional) 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+Short Answer (optional) 
+Click or tap to enter a date. 
+Click or tap to enter a date. 
+ 
+If there is any other feedback you would like to share about the compliance process, please use this space 
+to provide it. 
+ 
+ 
+Save and Resume Later 
+Submit Form 
+ 
+ 
+ 
+IMPORTANT 
+All Action Plans must be submitted online through 
+www.mass.gov/mbtacommunities. 
+This PDF copy of the form is a courtesy guide to MBTA communities. If you have 
+questions, please reach out to the DHCD Section 3A Team at 
+DHCD3A@mass.gov. 
+ 

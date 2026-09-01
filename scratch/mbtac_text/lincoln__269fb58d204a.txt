@@ -1,0 +1,1188 @@
+
+===== PAGE 1 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+Town of Lincoln
+Mass Housing Partnership MBTA Communities Technical Assistance
+MBTA Communities 
+October Update
+1
+
+===== PAGE 2 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+2
+Requirements Overview
+Key Compliance Requirements for Lincoln
+●Minimum Zoned Multifamily Unit Capacity: 635 units
+●Minimum Zoning District Area: 42 acres
+●Minimum % of Zoning District to be Located in Transit Area: 20%
+○Minimum 20% of the multifamily unit capacity and the land area included in the compliant district 
+must be within a half-mile of Lincoln Station
+●Minimum Zoned Density: 15 units/acre
+○The district submitted for compliance must be zoned for a density of at least 15 units/acre. Some 
+individual subdistricts may be less dense than 15 units/acre as long as all subdistricts calculated 
+together are at least 15 units/acre.
+●One contiguous subdistrict area must contain ≥ 50% of total district land area
+●If making use of the Mandatory Mixed Use provision, ≥ 75% of multifamily unit capacity minimum 
+must come from 3A subdistricts alone. All other requirements must be met by 3A subdistricts alone.
+For more information on Section 3A requirements, including key definitions, see: 
+○https://www.mass.gov/doc/compliance-guidelines-for-multi-family-zoning-districts-under-section-3a-of-the-zoning-
+act/download
+○https://www.mass.gov/info-details/multi-family-zoning-requirement-for-mbta-communities
+○https://www.mass.gov/doc/advisory-concerning-enforcement-of-the-mbta-communities-zoning-law/download
+This is a theoretical zoned 
+capacity - not a requirement 
+to build a certain number of 
+units
+
+===== PAGE 3 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+3
+Option C
+Subdistricts
+Lincoln Woods (3A)
+Lincoln Rd (3A)
+Village Center (MMU)
+Codman Rd (3A)
+
+===== PAGE 4 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+4
+Option C
+Draft District Name
+Max. 
+Stories
+Setbacks
+Min. Parking 
+Spaces per Unit
+Max. Units 
+per Acre
+Modeled 
+Multifamily Unit 
+Capacity
+District 
+Acreage
+Subdistrict 
+Density 
+Denominator*
+Modeled Gross 
+Subdistrict Density**
+Lincoln Woods (3A)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+20
+159
+20.2 acres
+7.6 acres
+20.9 Units/Acre =
+159 units / 7.6 acres
+Lincoln Rd (3A)
+3 stories
+Front: 15’
+Sides: 15’
+Rear: 25’
+1
+18
+175
+20.8 acres
+11.4 acres
+15.4 Units/Acre =
+175 units / 11.4 acres
+Codman Rd (3A)
+3 stories
+Front: 30’
+Sides: 30’
+Rear: 50’
+1
+18
+180
+23.4 acres
+14.1 acres
+12.8 Units/Acre =
+180 units / 14.1 acres
+Village Center (MMU)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+25
+125
+7.0 acres***
+7.0 acres***
+17.9 Units/Acre =
+125 units / 7.0 acres***
+TOTAL w/o MMU
+-
+-
+-
+-
+514 units
+64.4 acres***
+33.1 acres***
+15.5 Units/Acre = 
+514 units / 33.1 acres
+TOTAL w/ MMU
+-
+-
+-
+-
+639 units
+64.4 acres*
+33.1 acres***
+15.5 Units/Acre =
+514 / 33.1 acres
+COMPLIANCE 
+TARGET
+635 units
+42 acres
+15 units/acre
+* “District Density Denominator” is the district size MINUS any areas containing: wetlands, water bodies, Title V setbacks, Surface Water Protection Zone A, and Wellhead Protection Zone 1.
+** District Density is calculated as Modeled Unit Capacity / District Density Denominator
+* Mandatory Mixed Use (MMU) subdistricts count towards meeting 3A unit capacity requirements but do not count towards 3A land area requirements. The 3A subdistricts alone must meet at least 75% of the Minimum Multifamily Unit Capacity Requirement. The calculations in this sheet reflect that.
+Zoning Standards & Model Outputs
+
+===== PAGE 5 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+Option C
+5
+Compliance Requirement
+Modeled Result
+Compliant?
+% Land Area in Station Area ≥ 20%
+100%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd (3A)
+●
+Codman Rd (3A)
+Yes.
+% Modeled Unit Capacity in Station Area ≥ 20%
+80%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd (3A)
+●
+Codman Rd (3A)
+Yes.
+One contiguous district area must contain ≥ 50% 
+of total district land area
+80%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd (3A)
+●
+Codman Rd (3A)
+Yes.
+At least 75% of Modeled Unit Capacity 
+Compliance target met by 3A subdistricts alone
+81%
+Yes.
+Additional Compliance Check
+Lincoln Woods (3A)
+Lincoln Rd (3A)
+BRF (3A)
+Lincoln North (3A)
+Codman Corner (3A)
+Village Center (MMU)
+Lincoln Rd Reduced (3A)
+Codman Rd (3A)
+
+===== PAGE 6 =====
+6
+Option C: Delta Between Existing and Modeled Unit Capacity
+Draft District Name
+Existing Residential Units 
+Estimate*
+Modeled Multifamily 
+Unit Capacity
+Delta
+Lincoln Woods (3A)
+125 
+(128 according to Residensity)
+159
++34
+Lincoln Rd (3A)
+49
+175
++126
+Codman Rd (3A)
+11
+180
++169
+Village Center 
+(Mandatory Mixed Use)
+0
+125
++125
+TOTAL
+188 units
+639 units
++454 units
+Compliance Target
+635 units
+* All existing residential unit estimates are pulled from the MHP Residensity tool: https://residensity.mhp.net/
+
+===== PAGE 7 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+7
+Option D-1 (+Lincoln North)
+Subdistricts
+Reduced Station Area Subdistricts
+Lincoln North Subdistrict
+Lincoln Woods (3A)
+Reduced Lincoln Rd (3A)
+Village Center (MMU)
+Codman Corner (3A)
+Lincoln North (3A)
+
+===== PAGE 8 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+8
+Option D-1 (+Lincoln North)
+Draft District Name
+Max. 
+Stories
+Setbacks
+Min. Parking 
+Spaces per Unit
+Max. Units 
+per Acre
+Modeled 
+Multifamily Unit 
+Capacity
+District 
+Acreage
+Subdistrict 
+Density 
+Denominator*
+Modeled Gross 
+Subdistrict Density**
+Lincoln Woods (3A)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+20
+159
+20.2 acres
+7.6 acres
+20.9 Units/Acre
+Lincoln Rd Reduced 
+(3A)
+3 stories
+Front: 15’
+Sides: 15’
+Rear: 25’
+1
+18
+175
+18.8 acres
+11.1 acres
+15.7 Units/Acre
+Codman Corner (3A)
+3 stories
+Front: 30’
+Sides: 30’
+Rear: 50’
+1
+18
+83
+4.6 acres
+4.6 acres
+18.1 Units/Acre
+Village Center (MMU)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+25
+125
+7.0 acres***
+7.0 acres***
+17.9 Units/Acre***
+Lincoln North (3A)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 30’
+1
+10
+94
+9.2 acres
+9.2 acres
+10.3 Units/Acre
+TOTAL w/o MMU
+-
+-
+-
+-
+511 units
+52.8 acres
+32.5 acres
+15.7 Units/Acre
+TOTAL w/ MMU
+-
+-
+-
+-
+636 units
+52.8 acres
+32.5 acres
+15.7 Units/Acre
+COMPLIANCE 
+TARGET
+-
+-
+-
+-
+635 units
+42 acres
+-
+15 Units/Acre
+* “District Density Denominator” is the district size MINUS any areas containing: wetlands, water bodies, Title V setbacks, Surface Water Protection Zone A, and Wellhead Protection Zone 1.
+** District Density is calculated as Modeled Unit Capacity / District Density Denominator
+* Mandatory Mixed Use (MMU) subdistricts count towards meeting 3A unit capacity requirements but do not count towards 3A land area requirements. The 3A subdistricts alone must meet at least 75% of the Minimum Multifamily Unit Capacity Requirement. The calculations in this sheet reflect that.
+Zoning Standards & Model Outputs
+
+===== PAGE 9 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+Option D-1 (+Lincoln North)
+9
+Compliance Requirement
+Modeled Result
+Compliant?
+% Land Area in Station Area ≥ 20%
+83%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+●
+Codman Corner (3A)
+Yes.
+% Modeled Unit Capacity in Station Area ≥ 20%
+66%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+●
+Codman Corner (3A)
+Yes.
+One contiguous district area must contain ≥ 50% 
+of total district land area
+83%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+●
+Codman Corner (3A)
+Yes.
+At least 75% of Modeled Unit Capacity 
+Compliance target met by 3A subdistricts alone
+80%
+Yes.
+Additional Compliance Check
+Lincoln Woods (3A)
+Lincoln Rd (3A)
+BRF (3A)
+Lincoln North (3A)
+Codman Corner (3A)
+Village Center (MMU)
+Lincoln Rd Reduced (3A)
+Codman Rd (3A)
+
+===== PAGE 10 =====
+10
+Option D1: Delta Between Existing and Modeled Unit Capacity
+Draft District Name
+Existing Residential Units 
+Estimate*
+Modeled Multifamily 
+Unit Capacity
+Delta
+Lincoln Woods (3A)
+125 
+(128 according to Residensity)
+159
++34
+Lincoln Rd (3A)
+49
+175
++126
+Lincoln North (3A)
+0
+94
++94
+Codman Corner (3A)
+3
+83
++ 80
+Village Center (Mandatory 
+Mixed Use)
+0
+125
++125
+Delta w/in ½ mile of 
+MBTA Train
+177 units
+542 units
++ 395 units
+TOTAL
+177 units
+636 units
++ 489 units
+Compliance Target
+635 units
+* All existing residential unit estimates are pulled from the MHP Residensity tool: https://residensity.mhp.net/
+
+===== PAGE 11 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+11
+Option D-2
+Subdistricts
+Reduced Station Area Subdistricts
+Battle Road Farm Subdistrict
+Lincoln Woods (3A)
+Reduced Lincoln Rd (3A)
+Village Center (MMU)
+Codman Corner (3A)
+BRF (3A)
+
+===== PAGE 12 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+12
+Option D-2 (+BRF)
+Draft District Name
+Max. 
+Stories
+Setbacks
+Min. Parking 
+Spaces per Unit
+Max. Units 
+per Acre
+Modeled 
+Multifamily Unit 
+Capacity
+District 
+Acreage
+Subdistrict 
+Density 
+Denominator*
+Modeled Gross 
+Subdistrict Density**
+Lincoln Woods (3A)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+20
+159
+20.2 acres
+7.6 acres
+20.9 Units/Acre
+Lincoln Rd Reduced 
+(3A)
+3 stories
+Front: 15’
+Sides: 15’
+Rear: 25’
+1
+18
+175
+18.8 acres
+11.1 acres
+15.7 Units/Acre
+Codman Corner (3A)
+3 stories
+Front: 30’
+Sides: 30’
+Rear: 50’
+1
+18
+83
+4.6 acres
+4.6 acres
+18.1 Units/Acre
+Village Center (MMU)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+25
+125
+7.0 acres***
+7.0 acres***
+17.9 Units/Acre***
+Battle Road Farm (3A)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 30’
+1
+10
+242
+24.2 acres
+19.2 acres
+12.6 Units/Acre
+TOTAL w/o MMU
+-
+-
+-
+-
+659 units
+67.8 acres
+42.5 acres
+15.5 Units/Acre
+TOTAL w/ MMU
+-
+-
+-
+-
+784 units
+67.8 acres
+42.5 acres
+15.5 Units/Acre
+COMPLIANCE 
+TARGET
+-
+-
+-
+-
+635 units
+42 acres
+-
+15 Units/Acre
+* “District Density Denominator” is the district size MINUS any areas containing: wetlands, water bodies, Title V setbacks, Surface Water Protection Zone A, and Wellhead Protection Zone 1.
+** District Density is calculated as Modeled Unit Capacity / District Density Denominator
+* Mandatory Mixed Use (MMU) subdistricts count towards meeting 3A unit capacity requirements but do not count towards 3A land area requirements. The 3A subdistricts alone must meet at least 75% of the Minimum Multifamily Unit Capacity Requirement. The calculations in this sheet reflect that.
+Zoning Standards & Model Outputs
+
+===== PAGE 13 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+Option D-2 (+BRF)
+13
+Compliance Requirement
+Modeled Result
+Compliant?
+% Land Area in Station Area ≥ 20%
+64%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+●
+Codman Corner (3A)
+Yes.
+% Modeled Unit Capacity in Station Area ≥ 20%
+53%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+●
+Codman Corner (3A)
+Yes.
+One contiguous district area must contain ≥ 50% 
+of total district land area
+64%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+●
+Codman Corner (3A)
+Yes.
+At least 75% of Modeled Unit Capacity 
+Compliance target met by 3A subdistricts alone
+104%
+Yes.
+Additional Compliance Check
+Lincoln Woods (3A)
+Lincoln Rd (3A)
+BRF (3A)
+Lincoln North (3A)
+Codman Corner (3A)
+Village Center (MMU)
+Lincoln Rd Reduced (3A)
+Codman Rd (3A)
+
+===== PAGE 14 =====
+14
+Option D2: Delta Between Existing and Modeled Unit Capacity
+Draft District Name
+Existing Residential Units 
+Estimate*
+Modeled Multifamily 
+Unit Capacity
+Delta
+Lincoln Woods (3A)
+125 
+(128 according to Residensity)
+159
++34
+Lincoln Rd (3A)
+49
+175
++126
+Codman Corner (3A)
+3
+83
++ 80
+Village Center (Mandatory 
+Mixed Use)
+0
+125
++125
+Battle Road Farm (3A)
+120
+242
++122
+Delta w/in ½ mile of 
+MBTA Train
+177 units
+542 units
++ 365 units
+TOTAL
+297 units
+784 units
++ 487 units
+Compliance Target
+635 units
+* All existing residential unit estimates are pulled from the MHP Residensity tool: https://residensity.mhp.net/
+
+===== PAGE 15 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+15
+Option D-3
+Subdistricts
+Reduced Station Area Subdistricts
+Battle Road Farm Subdistrict
+Lincoln Woods (3A)
+Reduced Lincoln Rd (3A)
+Village Center (MMU)
+BRF (3A)
+
+===== PAGE 16 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+16
+Option D-3 (+BRF/-Codman Corner)
+Draft District Name
+Max. 
+Stories
+Setbacks
+Min. Parking 
+Spaces per Unit
+Max. Units 
+per Acre
+Modeled 
+Multifamily Unit 
+Capacity
+District 
+Acreage
+Subdistrict 
+Density 
+Denominator*
+Modeled Gross 
+Subdistrict Density**
+Lincoln Woods (3A)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+20
+159
+20.2 acres
+7.6 acres
+20.9 Units/Acre
+Lincoln Rd Reduced 
+(3A)
+3 stories
+Front: 15’
+Sides: 15’
+Rear: 25’
+1
+18
+175
+18.8 acres
+11.1 acres
+15.7 Units/Acre
+Village Center (MMU)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 25’
+1
+25
+125
+7.0 acres***
+7.0 acres***
+17.9 Units/Acre***
+Battle Road Farm (3A)
+3 stories
+Front: 25’
+Sides: 25’
+Rear: 30’
+1
+12
+290
+24.2 acres
+19.2 acres
+15.1 Units/Acre
+TOTAL w/o MMU
+-
+-
+-
+-
+624 units
+63.2 acres
+37.9 acres
+16.5 Units/Acre
+TOTAL w/ MMU
+-
+-
+-
+-
+749 units
+63.2 acres
+37.9 acres
+16.5 Units/Acre
+COMPLIANCE 
+TARGET
+-
+-
+-
+-
+635 units
+42 acres
+-
+15 Units/Acre
+* “District Density Denominator” is the district size MINUS any areas containing: wetlands, water bodies, Title V setbacks, Surface Water Protection Zone A, and Wellhead Protection Zone 1.
+** District Density is calculated as Modeled Unit Capacity / District Density Denominator
+* Mandatory Mixed Use (MMU) subdistricts count towards meeting 3A unit capacity requirements but do not count towards 3A land area requirements. The 3A subdistricts alone must meet at least 75% of the Minimum Multifamily Unit Capacity Requirement. The calculations in this sheet reflect that.
+Zoning Standards & Model Outputs
+
+===== PAGE 17 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+Option D-3 (+BRF/-Codman Corner)
+17
+Compliance Requirement
+Modeled Result
+Compliant?
+% Land Area in Station Area ≥ 20%
+62%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+Yes.
+% Modeled Unit Capacity in Station Area ≥ 20%
+45%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+Yes.
+One contiguous district area must contain ≥ 50% 
+of total district land area
+62%, Contributing Subdistricts:
+●
+Lincoln Woods (3A)
+●
+Lincoln Rd Reduced (3A)
+Yes.
+At least 75% of Modeled Unit Capacity 
+Compliance target met by 3A subdistricts alone
+98%
+Yes.
+Additional Compliance Check
+Lincoln Woods (3A)
+Lincoln Rd (3A)
+BRF (3A)
+Lincoln North (3A)
+Codman Corner (3A)
+Village Center (MMU)
+Lincoln Rd Reduced (3A)
+Codman Rd (3A)
+
+===== PAGE 18 =====
+18
+Option D3: Delta Between Existing and Modeled Unit Capacity
+Draft District Name
+Existing Residential Units 
+Estimate*
+Modeled Multifamily 
+Unit Capacity
+Delta
+Lincoln Woods (3A)
+125 
+(128 according to Residensity)
+159
++34
+Lincoln Rd (3A)
+49
+175
++126
+Battle Road Farm (3A)
+120
+290
++170
+Village Center 
+(Mandatory Mixed Use)
+0
+125
++125
+Delta w/in ½ mile of 
+MBTA Train
+174 units
+459 units
++285 units
+TOTAL
+294 units
+749 units
++455 units
+Compliance Target
+635 units
+* All existing residential unit estimates are pulled from the MHP Residensity tool: https://residensity.mhp.net/
+
+===== PAGE 19 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+19
+Compliant District Options
+District Options
+Modeled 
+Multifamily 
+Unit 
+Capacity
+Zoned Units 
+in North 
+Lincoln
+Zoned Units 
+in South 
+Lincoln
+Acreage
+Density 
+Denominator
+Modeled 
+Gross 
+Density
+Notes
+OPTION C
+Lincoln Woods
+Lincoln Rd
+Codman Rd
+Village Center (MMU)
+639 units
+-
+639 units
+64.4 acres
+33.1 acres
+15.5 
+units/acre
+●
+Most compact
+●
+Reinforces vision for Village Center (RLF site) by concentrating 
+multifamily nearby
+●
+Most aligned with spirit of the 3A legislation
+OPTION D-1
+Lincoln Woods
+Lincoln Rd Reduced
+Codman Corner
+Village Center (MMU)
+Lincoln North
+636 units
+94 units
+542 units
+52.8 acres
+32.5 acres
+15.7
+units/acre
+●
+Allows for mixed-use multifamily potential at Lincoln North parcel
+●
+Reduces units in South Lincoln by about 100 units
+OPTION D-2
+Lincoln Woods
+Lincoln Rd Reduced
+Codman Corner
+Village Center (MMU)
+BRF
+784 units
+242 units
+542 units
+67.8 acres
+42.5 acres
+15.5
+units/acre
+●
+Recognizes existing multifamily at BRF
+●
+Reduces units in South Lincoln by about 100 units
+●
+Results in overall increase of nearly +150 units over Options C 
+and D-1
+OPTION D-3
+Lincoln Woods
+Lincoln Rd Reduced
+Village Center (MMU)
+BRF
+749 units
+290 units
+459 units
+63.2 acres
+37.9 acres
+16.5
+units/acre
+●
+Recognizes existing multifamily at BRF
+●
+Reduces units in South Lincoln by about 180 units
+●
+Results in overall increase of nearly +110 units over Options C 
+and D-1
+COMPLIANCE TARGETS
+635 units
+-
+-
+42 acres
+15 
+units/acre
+-
+
+===== PAGE 20 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+Project Name
+Month DD, YYYY
+20
+FAQs
+20
+
+===== PAGE 21 =====
+Work to Date
+• January 2021:  The Housing Choice Act (HCA) signed into law.
+• January 31, 2022:  Select Board, Planning Board, and South Lincoln Planning Advisory Committee (SLPAC) briefed on the 
+HCA and its application to MBTA communities.
+• Fall 2022:  Select Board and Planning Board appointed the Housing Choice Act Working Group, and it began meeting to 
+understand the law. Update at State of the Town.
+• December 2022:  Town submits documentation for “interim compliance” which has kept us eligible for the state grants that 
+we’ve received since then.
+• January 2023:  The HCAWG began sending out updates to the town via Select Board newsletters, LincolnTalk, and with posts 
+on the Town web page (https://www.lincolntown.org/1327/Housing-Choice-Act-Working-Group)
+• May 2023:  The HCAWG reviewed options in preparation for a June multi-board meeting and sent out a postcard letting 
+residents know about the June public forums. 
+• June – July 2023:  
+ü Multi-board meeting with Planning and Select Board
+ü Two public forums (June)
+ü Neighborhood meetings at Battle Road Farm and The Commons (July)
+• September 2023: 
+ü Neighborhood meetings at Codman Road and Lincoln Woods; 
+ü Public Forum hosted by the First Parish Church.
+ü State of the Town on September 30th.
+• October 10, 2023:  Multi-board meeting to review the input from State of the Town, which was overwhelmingly in favor of 
+Option C. 
+ü The boards agreed to look at whether there might be a viable “Option D” that takes credit for rezoning the Mall area, 
+reduces the subdistrict near the train station, and puts some of the zoning in the northern part of town.
+
+===== PAGE 22 =====
+Timeline
+Fall 2022
+• Select Board 
+appoints 
+Housing 
+Choice 
+Working 
+Group
+• Dec 2022 
+Lincoln 
+submits 
+interim 
+compliance 
+Plan
+Jan 2023
+• Lincoln 
+awarded grant 
+to hire Utile 
+for technical 
+assistance
+• Lincoln’s 
+interim plan 
+approved by 
+state!
+• Lincoln is 
+currently in 
+compliance.
+June/July 
+2023
+• Public forums: 
+Solicit 
+feedback on 
+options for 
+compliance to 
+finalize 
+districts
+• June 6 – Multi-
+Board 
+Meeting
+• June 16 & 20 -
+Public 
+Forums
+• July -
+Neighborhood 
+meetings @ 
+Battle Road 
+Farm & The 
+Commons
+Sept/Oct 
+2023
+• STATE OF THE 
+TOWN Sept. 
+30th!
+• Present 3 
+zoning 
+options; get 
+community 
+feedback
+• OCTOBER 10 -
+MULTI-BOARD 
+MEETING 
+VOTES to 
+submit Option 
+C submitted 
+for 
+compliance 
+• 10/24 Present 
+additional 
+iterations
+Nov/Dec 2023
+• November 8th 
+- two 
+COMMUNITY 
+FORUMS; 
+feedback will 
+choose a D 
+option 
+• DEC. 2nd –
+During 
+Special Town 
+Meeting, 
+residents use 
+informal 
+paper ballots 
+to choose 
+Option C or 
+Option D.
+• This sense of 
+the Town will 
+determine 
+which option 
+goes to the 
+March Town 
+Meeting.
+Mar 2024
+• TOWN 
+MEETING 
+VOTE ON 
+ZONING 
+BYLAW
+• If approved, at 
+Town Meeting, 
+submit to 
+EOHLC and 
+Attorney 
+General for 
+final approval
+Dec 2024
+• Deadline for 
+Commuter 
+Rail towns to 
+comply
+V
+O
+T
+E
+
+===== PAGE 23 =====
+Bus Stop
+•
+Is walkable from Battle Road 
+Farm
+•
+Limited safe pathways to the 
+inbound and outbound sides
+•
+No parking
+•
+Limited service
+
+===== PAGE 24 =====
+MBTA Communities Technical Assistance
+Lincoln
+October 24, 2023
+Town of Lincoln
+Project Name
+Month DD, YYYY
+24
+Thank You!
+24

@@ -1,0 +1,695 @@
+
+===== PAGE 1 =====
+Exported January 31, 2023  2:50 PM
+Action Plan for MBTA Communities
+Description Area
+Please read the Section 3A Guidelines before attempting to complete this
+form.Please note: &nbsp;Action Plan Forms must be submitted by a
+municipal official with authority to act on behalf of the municipality on
+matters of zoning, such as the municipal CEO or planning director.
+Section 1: Identification
+Description Area
+The Section 3A Guidelines establish zoning metrics that apply uniquely to
+each MBTA community based on its local transit stations, existing housing
+stock, population, &nbsp;and developable land. &nbsp;This section of the
+Action Plan helps to identify the transit stations that determined each
+community's category. &nbsp;Appendix 1 of the Section 3A Guidelines lists
+each community's category and minimum multi-family unit capacity
+requirement.&nbsp;
+1.1  MBTA Community Name
+Cambridge
+1.2. Community Category
+Rapid transit community
+1.3. Multifamily Unit Capacity
+Requirement
+13477
+1.4. Does this municipality have any
+MBTA rapid transit stations within its
+boundaries?
+Yes
+1.4a. Please list MBTA rapid transit
+stations that are located within this
+municipality's boundaries
+Lechmere, Kendall/MIT, Central, Harvard, Porter, Alewife
+1.5. Does this municipality have any
+MBTA commuter rail stations within its
+boundaries?
+Yes
+Description Area
+Although there is an MBTA commuter rail station within its municipal
+boundaries, this municipality's community category is Rapid Transit. This is
+because a community's category is determined by the transit station with
+the highest level of transit service. If there are 100 or more acres of rapid
+transit stations' developable station area within municipal boundaries, then
+the community category is Rapid Transit regardless of whether the
+community is also served by the commuter rail. Section 1 of the Guidelines
+provides definitions of "transit station area", "developable station area" and
+"developable land" to explain how this determination was made.&nbsp;
+
+===== PAGE 2 =====
+1.5a. Please list MBTA commuter rail
+stations that are located within the
+municipal boundaries
+Porter
+1.6. Does this municipality have any
+other MBTA transit stations that are
+located outside of its municipal
+boundaries that may have "developable
+station area" within them?
+Yes
+Description Area
+Stations that are located outside of municipal boundaries but that have
+"developable station area" within the boundaries might affect district
+location criteria, as further described in Section 8 of the Guidelines. Please
+refer to Section 1 of the Guidelines for definitions of "transit station area",
+"developable station area", and "developable land".
+1.6a. Please list the MBTA transit
+stations that are located outside of the
+municipal boundaries but might have
+developable station area within them.
+Davis, Community College, Union Square, B.U. West, B.U. Central
+1.7. Please provide the name of the
+person filling out this form
+Iram Farooq
+1.7a. Title
+Assistant City Manager for Community Development
+1.7b. Email Address
+ifarooq@cambridgema.gov
+1.7c. Phone Number
+(617) 349-4606
+1.8 Please provide the name of the
+municipal CEO
+Yi-An Huang
+1.8b Mailing address of municipal CEO
+795 Massachusetts Avenue
+1st Floor
+Cambridge, MA 02139
+1.8c Email address of municipal CEO
+citymanager@cambridgema.gov
+1.9. Please briefly describe other
+members of the core team developing
+the multi-family zoning district.
+City of Cambridge staff from the Community Development Department's
+Zoning Division, Housing Division, and Community Planning Division, and
+the Law Department. This project is coordinated by Jeff Roberts, Director of
+Zoning and Development (jroberts@cambridgema.gov), and Mason Wells,
+Associate Zoning Planner (mwells@cambridgema.gov). Additional support
+for mapping and data analysis is being provided by Cliff Cook, Senior
+Planning Information Manager, Brendan Monroe, GIS Planner, and Scott
+Walker, Planning Data Analyst.
+Section 2: Housing Overview
+
+===== PAGE 3 =====
+2.1. Does this municipality have any
+established housing related goals or
+strategies from municipal planning
+documents, such as a Housing
+Production Plan, Master Plan, or
+Economic Development Plan?
+Yes
+
+===== PAGE 5 =====
+homeowners to complete needed home repairs and improvements. 
+•	Housing is recognized as a critical pillar of public health in the City's
+Community Health Improvement Plan (CHIP).
+•	Cambridge is part of the Metro Mayors Coalition, a group of regional
+municipal city leaders, who set a goal to produce 185,000 new housing
+units across fifteen towns and cities in the region by 2030.
+
+===== PAGE 6 =====
+2.2. Is this municipality currently
+working on any other planning for
+housing?
+Yes
+2.2a. Please briefly describe the
+housing work underway.
+The following zoning initiatives are completed or underway based on the
+Housing Plan section of Envision Cambridge: •	2020 adoption of Affordable
+Housing Overlay Zoning - relaxed zoning requirements and established
+as-of-right approvals for affordable housing. The City has permitted ~500
+new units of affordable housing through this zoning. City Council discussing
+revisions to increase allowable housing in some areas. •	2022 Zoning
+Amendment - eliminated minimum parking requirements for new housing. 
+•	2022 Cambridge Street Planning Study - recommends increased height
+and density for housing along a major mixed-use corridor. •	Alewife Zoning
+Working Group - in progress, discussions have included increasing allowed
+residential heights and densities and requiring housing as part of
+mixed-use development in an area expected to have major redevelopment.
+•	Allowing multifamily housing citywide - City Council discussing zoning
+changes to allow multifamily in districts that allow only single-family,
+two-family, or townhouse development, which cover about ¼ of the city and
+tend to be farther from transit.  •	North Massachusetts Avenue Planning
+Study - City is planning to start a study process that will consider zoning
+changes along this major mixed-use corridor. •	The City will continue its
+periodic studies of Incentive Zoning and Inclusionary Housing policies.
+Section 3: Preliminary Zoning Strategies
+3.1.	To the best of your knowledge,
+which of the following zoning strategies
+is this community most likely to use for
+compliance?  (Select all that apply)
+a. An existing zoning district or districts that might already comply with the
+Section 3A Guidelines
+
+===== PAGE 7 =====
+3.1a. Please identify and briefly describe
+the possibly-compliant district(s),
+including any characteristics of existing
+development or transit options that
+make it suitable for use as this
+community's 3A-compliant district.
+Optional: Attach any supporting
+documents.
+Cambridge is a dense urban community with approximately 6.4 square
+miles of land area, 117,000 residents, and 6 MBTA rapid transit stations.
+Most of Cambridge is zoned to allow multifamily housing as-of-right. The
+districts that allow the highest residential densities tend to be directly next
+to MBTA rapid transit stations. The districts that do not allow multifamily
+housing are Open Space districts and Residence A and B districts, which
+cover about one quarter of the total land area of the city and tend to be
+further from rapid transit. 
+The attached map identifies zoning districts that are (90% by area) within a
+half-mile of at least one rapid transit station and allow multi-family housing
+as-of-right at a density that could potentially meet the Section 3A criteria.
+Because Cambridge's zoning districts are small and fine-grained, compliant
+zoning districts that are geographically contiguous will need to be combined
+to meet all of the DHCD guidelines, particularly the guidelines for minimum
+unit capacity. Our initial review suggests that a subset of these existing
+districts can constitute a "compliant district" meeting all of the DHCD
+guidelines. 
+File
+https://www.formstack.com/admin/download/file/14094589834
+3.2. What non-housing characteristics
+are important for this community to
+consider in its 3A zoning district?
+Our ongoing zoning and planning work is guided by the "Envision
+Cambridge" plan. Important non-housing characteristics identified in this
+plan include: livability, diversity and equity, economic opportunity,
+sustainability and resilience, community health and wellbeing, and learning.
+Envision Cambridge describes a set of policies and actions that are part of
+an integrated planning strategy for the entire city.
+Section 4: Action Plan Timeline
+Description Area
+This section creates a framework to input preliminary plans for a zoning
+adoption process. On the table below, please use Column 1 (from the left)
+to describe a task, Column 2 to input a start date, and Column 3 to input a
+finish date. Every community must provide a timeline for the below-listed
+tasks. &nbsp;Additional space is provided for any other tasks that a
+community wishes to list. DHCD will review proposed timelines for
+feasibility before approving an Action Plan.&nbsp;Public
+outreachDeveloping zoning&nbsp;Applying DHCD's compliance model to
+test for density and unit capacityHolding planning board
+hearings&nbsp;Holding legislative sessions and adopt compliant
+zoning&nbsp;Submit District Compliance application to DHCD
+Description Area
+Task
+Description Area
+Start
+Description Area
+Finish
+
+===== PAGE 8 =====
+Short Answer
+Apply DHCD's compliance model to test current zoning for density and unit
+capacity.
+Dec 01, 2022
+Oct 31, 2023
+Short Answer
+Submit District Compliance application to DHCD
+Nov 01, 2023
+Dec 31, 2023
+Short Answer
+N/A - Cambridge expects to submit existing zoning for compliance.
+Therefore, no formal adoption process is anticipated.
+Jan 31, 2023
+Jan 31, 2023
+Short Answer
+N/A
+Jan 31, 2023
+Jan 31, 2023
+Short Answer
+N/A
+Jan 31, 2023
+Jan 31, 2023
+Short Answer
+N/A
+Jan 31, 2023
+Jan 31, 2023
+
+===== PAGE 9 =====
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+!(
+é
+ç
+Fresh Pond
+Charles River
+NP
+IB-2
+IB-2
+BB
+BA
+BA
+BA
+BA
+BA
+O-2A
+O-3A
+O-2
+O-3A
+IA-1
+IA-1
+IA-1
+IA-1
+IA-1
+IA-1
+O-1
+O-1
+C-3B
+C-3A
+C-2B
+C-1A
+C-3A
+C-3
+C-2B
+C-1A
+C-2A
+C-1
+OS
+OS
+!
+C-3B
+!
+C-3B
+C-2B
+BA
+BA
+O-3A
+BA
+BA
+BA
+BA
+BA
+C-3B
+C-3
+C-3B
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+OS
+MXD
+SD-8
+SD-3
+CRDD
+SD-4
+SD-6
+SD-5
+SD-4A
+SD-7
+SD-8A
+SD-9
+SD-1
+ASD
+SD-2
+SD-10(H)
+SD-15
+SD-11
+SD-2
+SD-13
+SD-14
+SD-12
+SD-10(F)
+SD-11
+SD-4A
+IB
+IA
+IA
+IB-1
+IA-2
+IA-1
+IA-1
+IA-1
+IA-1
+BB
+BC
+BB
+BB
+BB-1
+BB
+BB
+BB-2
+BA
+BA
+BA-2
+BA-1
+BA
+BA-1
+BA
+BA-3
+BA-2
+BA
+BA
+BA-2
+BA
+BA
+BA
+BA-1
+BA-4
+BA
+BA
+BA-1
+BA-1
+BA-3
+BA-1
+BA-1
+BA-2
+BA-1
+BA-1
+BA
+O-1
+O-1
+O-1
+O-1
+O-1
+O-1
+C-3
+C-3
+C-3
+C-3B
+C-2
+C-2
+C-2
+C-2
+C-2
+C-3
+C-2A
+C-2
+C-2B
+C-2
+C-2
+C-3
+C-3
+C-2B
+C-2B
+C-2
+C-1A
+C-2B
+C-2
+C-2A
+C-1A
+C-2B
+C-1A
+C-3
+C-2
+C-2
+C-3
+C-2
+C-3
+C-2
+C-2B
+C-2
+C-2
+C-2B
+C-2
+C-2B
+C-2A
+C-2B
+C-3
+C-2
+C-2
+C-2B
+C-2A
+C-2A
+C-3
+C-1
+B
+B
+C
+B
+B
+C-1
+B
+B
+B
+C-1
+C-1
+B
+B
+B
+C-1
+B
+B
+B
+C-1
+B
+C-1
+C-1
+C-1
+C-1
+C-1
+B
+C-1
+B
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+B
+C-1
+C
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+C-1
+O-3
+O-3
+O-2
+O-3
+O-3
+O-2
+O-2
+A-1
+A-2
+A-2
+A-2
+A-2
+A-2
+A-2
+A-2
+A-1
+A-1
+A-2
+A-2
+!
+C-3B
+C-3
+OS
+OS
+OS
+OS
+OS
+OS
+C-1
+BA
+C-3
+!
+MXD
+B
+B
+B
+B
+B
+B
+B
+C-1
+C-1
+C-1
+C-1
+C-1
+C
+C
+C-1
+Map prepared by Brendan Monroe on January 30, 2023.  CDD GIS   C:\Projects\Zoning\MBTACommunities\ZoneSelectionFigure11x17.mxd
+¯
+0
+0.25
+0.5
+Miles
+Qualifying Zones
+in Proximity to T Stations
+Cambridge, Massachusetts
+Highlighted Zoning Districts
+Half-mile buffer
+of T stations
+Zones at least 90%
+within the T buffers
+are in color
+Residence C-1
+Residence C-1A
+Residence C-2
+Residence C-2A
+Residence C-2B
+Residence C-3
+Residence C-3A
+Residence C-3B
+Office-1
+Business B
+Office-2
+Office-2A
+Office-3
+Office-3A
+Business A
+Business A-1
+Business A-2
+Business A-3
+Business-1
+Business 2
+Business C
+Industry A-1
+Industry A-2
+Industry A
+Industry B-1
+Industry B-2
+Industry B
+Special District-7
+Special District-10(F)
+Special District-10(H)
+Special District-11
+Special District-14
+Special District-15
+Mixed Use Development
+Ames Street District
+North Point District
+Special District-1
+Cambridgeport Revitalization
+   Development District
+Special District-2
+Special District-3
+Special District-5
+C-1
+C-1A
+C-2
+C-2A
+C-2B
+C-3
+C-3A
+C-3B
+O-1
+O-2
+O-2A
+O-3
+O-3A
+BA
+BA-1
+BA-2
+BA-3
+BB
+BB-1
+BB-2
+BC
+IA-1
+IA-2
+IA
+IB-1
+IB-2
+IB
+CRDD
+SD-11
+SD-14
+SD-15
+MXD
+ASD
+NP
+SD-1
+SD-2
+SD-3
+SD-5
+SD-10(F)
+SD-10(H)
+SD-7
