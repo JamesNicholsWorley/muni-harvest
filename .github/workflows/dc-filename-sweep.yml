@@ -1,0 +1,78 @@
+name: dc-filename-sweep
+
+# Read CivicPlus DocumentCenter filenames from content-disposition, sharded.
+# The existing "40k IDs, zero gap-year results" negative matched on the URL SLUG,
+# which CivicPlus ignores -- the server serves by ID. This asks the server for the
+# town's own filename instead. Tens of thousands of ranged GETs, so it runs here.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of parallel runner IPs"
+        default: "8"
+      workers:
+        description: "Threads per runner"
+        default: "8"
+      towns_csv:
+        description: "Input CSV: town,host,years,max_id"
+        default: "config/dc_gap_towns.csv"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  sweep:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: DocumentCenter filename sweep ${{ matrix.shard }}
+        run: |
+          python scripts/dc_filename_sweep.py \
+            --towns-csv "${{ github.event.inputs.towns_csv }}" \
+            --shard "${{ matrix.shard }}" \
+            --workers ${{ github.event.inputs.workers }} --out out
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dc-shard-${{ strategy.job-index }}
+          path: out/
+          if-no-files-found: ignore
+
+  merge:
+    needs: sweep
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge
+        run: |
+          mkdir -p merged
+          echo "town,id,filename,ctype,range" > merged/dc_names.csv
+          find shards -name 'dc_names_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/dc_names.csv
+          echo "town,host,probed,named,errors" > merged/dc_reach.csv
+          find shards -name 'dc_reach_*.csv' -exec sh -c 'tail -n +2 "$1"' _ {} \; >> merged/dc_reach.csv
+          echo "named:  $(($(wc -l < merged/dc_names.csv) - 1))"
+          echo "towns:  $(($(wc -l < merged/dc_reach.csv) - 1))"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dc-merged
+          path: merged/
