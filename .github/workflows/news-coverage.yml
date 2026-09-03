@@ -82,6 +82,7 @@ jobs:
           name: news-coverage-shard-${{ strategy.job-index }}
           path: news_coverage.jsonl
           if-no-files-found: ignore
+          retention-days: 30
 
   merge:
     needs: sweep
@@ -115,3 +116,4 @@ jobs:
         with:
           name: news-coverage-merged
           path: news_coverage.jsonl
+          retention-days: 30

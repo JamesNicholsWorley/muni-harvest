@@ -59,6 +59,7 @@ jobs:
           name: article-dates-shard-${{ strategy.job-index }}
           path: article_dates.jsonl
           if-no-files-found: ignore
+          retention-days: 30
 
   merge:
     needs: dates
@@ -85,3 +86,4 @@ jobs:
         with:
           name: article-dates-merged
           path: article_dates.jsonl
+          retention-days: 30
