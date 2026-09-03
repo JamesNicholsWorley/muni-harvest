@@ -1,0 +1,87 @@
+name: news-article-dates
+
+# Date CivicAtlasMA news articles WITHOUT opening them, by asking an archive index
+# when it first saw the URL. A capture cannot precede publication, so the earliest
+# capture is an upper bound -- accurate enough to place an article in an election
+# window, which is all it is used for.
+#
+# Runs here and not on the maintainer's machine by rule: CivicAtlasMA's
+# RUNBOOK-wayback-without-getting-blocked.md records that archive.org 429s on a
+# single CDX request from that address while answering reliably from a runner.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "8"
+      urls_file:
+        description: "CSV/newline list of article URLs lacking a date"
+        default: "config/news_undated_urls.csv"
+      sleep:
+        description: "Seconds between index requests"
+        default: "1.0"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+
+  dates:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Article dates shard ${{ matrix.shard }}
+        run: |
+          python3 scripts/cdx_article_dates.py \
+            --urls "${{ github.event.inputs.urls_file }}" \
+            --shard "${{ matrix.shard }}" \
+            --sleep ${{ github.event.inputs.sleep }} \
+            --out article_dates.jsonl
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: article-dates-shard-${{ strategy.job-index }}
+          path: article_dates.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: dates
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - run: |
+          find shards -name article_dates.jsonl -exec cat {} + > article_dates.jsonl || true
+          python3 - <<'PY'
+          import json, collections
+          n = dated = 0; src = collections.Counter()
+          for line in open("article_dates.jsonl", encoding="utf-8"):
+              try: o = json.loads(line)
+              except Exception: continue
+              n += 1
+              if o.get("first_capture"):
+                  dated += 1; src[o["source"]] += 1
+          print(f"{dated}/{n} dated", src.most_common())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: article-dates-merged
+          path: article_dates.jsonl

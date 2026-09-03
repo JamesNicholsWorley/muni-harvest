@@ -1,0 +1,117 @@
+name: news-coverage
+
+# CivicAtlasMA: find the JOURNALISM about each municipal election -- previews,
+# candidate profiles, candidates' nights, letters, results, aftermath -- not just
+# the one story that carried a tally (that is what news-rss-2026 does).
+#
+# ~18,800 outlet queries over 2,106 town-years and ~176 searchable Massachusetts
+# outlets. Six hours from one residential IP and a good way to get that address
+# rate-limited; well under an hour split across runner IPs.
+#
+# This workflow only DISCOVERS. Deciding whether an article is about an election
+# happens back in CivicAtlasMA (src/classify_news_relevance.py), offline over the
+# artifact, so the rules can be re-scored over the whole corpus without
+# re-fetching anything and no runner ever carries a stale copy of them.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of shards / parallel runner IPs"
+        default: "16"
+      worklist:
+        description: "Job file built by CivicAtlasMA src/build_news_worklist.py"
+        default: "config/news_coverage_worklist.json"
+      sleep:
+        description: "Seconds between requests"
+        default: "1.2"
+      no_gnews:
+        description: "Skip the Google News RSS channel (true/false)"
+        default: "false"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: gen
+        run: |
+          N=${{ github.event.inputs.shards }}
+          M=$(python3 -c "import json;N=int('$N');print(json.dumps([f'{i}/{N}' for i in range(1,N+1)]))")
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+      - name: Check the worklist is present and sane
+        run: |
+          python3 - <<'PY'
+          import json
+          d = json.load(open("${{ github.event.inputs.worklist }}", encoding="utf-8"))
+          jobs = d["jobs"]
+          q = sum(len(o["queries"]) for j in jobs for o in j["outlets"])
+          print(f"built {d.get('built')}: {len(jobs)} town-years, {q} queries")
+          assert jobs, "empty worklist"
+          PY
+
+  sweep:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 340        # under the 6h hard cap
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # curl_cffi is optional: it defeats TLS-fingerprint 403s, and the script
+      # falls back to urllib without it. Never fail the shard over it.
+      - run: pip install curl_cffi || true
+      - name: News coverage shard ${{ matrix.shard }}
+        run: |
+          EXTRA=""
+          if [ "${{ github.event.inputs.no_gnews }}" = "true" ]; then EXTRA="--no-gnews"; fi
+          python3 scripts/news_coverage_fetch.py \
+            --worklist "${{ github.event.inputs.worklist }}" \
+            --shard "${{ matrix.shard }}" \
+            --sleep ${{ github.event.inputs.sleep }} \
+            --out news_coverage.jsonl $EXTRA
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: news-coverage-shard-${{ strategy.job-index }}
+          path: news_coverage.jsonl
+          if-no-files-found: ignore
+
+  merge:
+    needs: sweep
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: Merge shards
+        run: |
+          find shards -name news_coverage.jsonl -exec cat {} + > news_coverage.jsonl || true
+          python3 - <<'PY'
+          import json, collections
+          items = reach = 0
+          ch = collections.Counter(); st = collections.Counter()
+          for line in open("news_coverage.jsonl", encoding="utf-8"):
+              try: o = json.loads(line)
+              except Exception: continue
+              if o.get("t") == "item":
+                  items += 1; ch[o.get("channel")] += 1
+              else:
+                  reach += 1; st[o.get("status")] += 1
+          print(f"items {items}  reach records {reach}")
+          print("by channel:", ch.most_common())
+          # A silence is not a negative: these counts are how the consumer tells
+          # "searched, nothing there" from "never actually asked".
+          print("reach status:", st.most_common())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: news-coverage-merged
+          path: news_coverage.jsonl
