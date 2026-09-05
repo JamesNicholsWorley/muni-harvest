@@ -1,0 +1,71 @@
+name: QA gate
+
+# The deterministic half of QA.  It needs no model -- layers 0 through 3 are
+# string matching and arithmetic -- so it can run on every push for nothing, and
+# it is the thing that stops a change from making the corpus worse.
+#
+# It does NOT run on a frequent schedule.  The checks only change when the data
+# changes, so running them hourly would burn minutes to reprint yesterday's
+# answer.  The weekly run exists to catch drift from edits made outside this
+# repository, and to keep the workflow from being auto-disabled after 60 days
+# of inactivity -- a silently disabled scraper looks exactly like a clean run.
+
+on:
+  push:
+    branches: [main]
+    paths: ['qa/**', 'src/**', 'config/**']
+  pull_request:
+    paths: ['qa/**', 'src/**', 'config/**']
+  schedule:
+    # 06:17 on Mondays.  Off the hour on purpose: scheduled runs are delayed at
+    # busy times and GitHub documents that queued jobs may be dropped entirely.
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  layers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out the corpus
+        uses: actions/checkout@v4
+        with:
+          repository: JamesNicholsWorley/civicatlasma
+          path: corpus
+          # Only the current tip is needed; the corpus repo carries 1,575 source
+          # documents and a full clone is 600 MB of PDFs this job never reads.
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run the four layers
+        run: |
+          mkdir -p data
+          ln -s "$GITHUB_WORKSPACE/corpus/json" data/json
+          python -m qa.layers
+
+      - name: Build the worklist
+        run: python -m qa.worklist --corpus corpus/json --top 25
+
+      - name: Fail on a regression
+        # The corpus has known open defects, so a nonzero count is not a
+        # failure.  What must fail the build is the count going UP: that means
+        # this change broke something, which is the only question a gate on a
+        # pull request can usefully answer.
+        run: python -m qa.regression --baseline qa/baseline.json
+
+      - name: Keep the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-report
+          path: |
+            qa/layers_report.csv
+            qa/worklist.csv
+          retention-days: 90

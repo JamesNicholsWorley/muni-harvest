@@ -78,7 +78,7 @@ matters more than its size, and the asymmetry is a fact about ballots rather
 than a tuned threshold:
 
     marks >  ballots x seats    impossible at any magnitude. An error.
-    marks == ballots x seats    confirmed. An independent witness to the reading.
+    marks == ballots x seats    the digits were probably read faithfully.
     marks <  ballots x seats    usually legitimate: blanks or write-ins not tallied.
                                 Describe it; do not flag it.
 
@@ -215,8 +215,16 @@ to a clean run.
 
 - Long jobs run in the background. Do not idle-poll waiting on a shell when
   there is other work.
-- Do not run Wayback or CDX queries from a personal machine; this project got an
-  IP-level block that survived two days of silence. Use Actions runners.
+- Where a fetch runs from depends on the target, and the two cases are opposite.
+  **Wayback and CDX from a runner:** this machine took an IP-level block that
+  survived two days of silence. **Municipal WAF hosts from a residential IP:**
+  measured 2026-08-04, `curl_cffi` with `impersonate="chrome"` gets 200 on every
+  host a runner reported as `waf_403`. Datacenter IPs are worse for WAF-protected
+  town sites and fine for archive.org.
+- A municipal host probed with stdlib `urllib` returning 403 or a certificate
+  error looks exactly like an IP block and usually is not: it is the WAF serving
+  a challenge to an un-impersonated TLS fingerprint. Probe with `curl_cffi`
+  before concluding a host is unreachable.
 - One declared writer per shared store. A transient check failure caused by
   another writer is not a defect — verify before repairing.
 - Secrets live in Actions secrets, never in the repo.

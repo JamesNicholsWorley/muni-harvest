@@ -64,7 +64,10 @@ RE_NOT_MUNICIPAL = re.compile(
     r"PRESIDENT OF THE UNITED STATES|PRESIDENTIAL|"
     r"ATTORNEY GENERAL|SECRETARY OF STATE|STATE SENATOR|STATE REPRESENTATIVE|"
     r"COUNTY COMMISSIONER|REGISTER OF|DISTRICT ATTORNEY|SHERIFF|"
-    r"GOVERNOR'S COUNCIL|ASSEMBLY DELEGATE", re.I)
+    r"GOVERNOR'S COUNCIL|ASSEMBLY DELEGATE|"
+    # Massachusetts calls its legislature the General Court.  These are the
+    # state office names as they are actually printed on a MA ballot.
+    r"IN GENERAL COURT|GENERAL COURT\b|COUNCILLOR DISTRICT\b", re.I)
 
 
 # ---------------------------------------------------------------- helpers
@@ -194,11 +197,24 @@ def layer0_right_document(stem, record, text, source):
                 f"document never prints '{town}'; identity rests on the citation alone"))
 
     year = year_of(stem)
-    m = re.search(r"\b" + re.escape(year) + r"\b", text) if year else None
+    # No word boundary: OCR strips spaces, and Medford 2025 prints its heading as
+    # OFFICIAL2025GENERALMUNICIPALELECTIONRESULTS, where a boundary cannot match.
+    m = re.search(re.escape(year), text) if year else None
     out.append((stem, 0, "carries_the_year",
                 PASS if m else FAIL,
                 f"...{text[max(0,m.start()-40):m.end()+40].strip()}..." if m
                 else f"'{year}' does not appear in {source}"))
+
+    # A preliminary is not junk and it is not an annual election.  Like a
+    # special it is cordoned off under its own name -- P<Muni><YYYYMMDD>, in
+    # data/preliminaries/ with a row in preliminaries_register.csv -- and is
+    # tracked without being published.  What makes it a defect is only that it
+    # sits in an ANNUAL town-year slot, which a preliminary must never occupy.
+    # The fix is to register and split it, never to discard it.
+    if re.search(r"\bpreliminar(y|ies)\b", text[:600], re.I):
+        out.append((stem, 0, "preliminary_in_an_annual_slot", FAIL,
+                    "heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> "
+                    "in data/preliminaries/ and find the annual for this town-year"))
 
     # "Is it a return?" cannot be answered by counting digits: Alford 2021 is a
     # real return with 53 ballots cast and barely any numbers, and 235 town-years
@@ -220,7 +236,7 @@ def layer0_right_document(stem, record, text, source):
         return bool(parts) and all(re.search(re.escape(x), text, re.I) for x in parts[:2])
 
     n_hit = sum(1 for n in names if found(n))
-    f_hit = sum(1 for v in figures if re.search(r"" + str(v) + r"", text))
+    f_hit = sum(1 for v in figures if re.search(r"\b" + str(v) + r"\b", text))
     if names or figures:
         supported = n_hit > 0 or f_hit > 0
         out.append((stem, 0, "document_supports_record",
