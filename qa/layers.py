@@ -489,6 +489,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stem", help="check one town-year")
     ap.add_argument("--out", default=os.path.join(BASE, "qa", "layers_report.csv"))
+    ap.add_argument("--compare-to", metavar="REPORT",
+                    help="diff this run against an earlier report, per check. "
+                         "A check fix must only ever UN-flag; this is how you "
+                         "show that instead of asserting it.")
     args = ap.parse_args()
 
     paths = sorted(glob.glob(os.path.join(BASE, "data", "json", "*.json")))
@@ -552,6 +556,37 @@ def main():
     print("-" * 50)
     for (layer, check, verdict), n in sorted(tally.items()):
         print(f"{layer:<6}{check:<26}{verdict:<9}{n:>7}")
+
+    if args.compare_to:
+        # A fix to a check has to be shown, not claimed.  The question is always
+        # the same: did this only stop flagging things, or did it start flagging
+        # something new?  The second is how a "fix" quietly changes the corpus.
+        was = {}
+        with open(args.compare_to, encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                was[(r["stem"], r["check"])] = r["verdict"]
+        now = {(r[0], r[2]): r[3] for r in rows}
+        unflagged, newly, changed = [], [], []
+        for key in set(was) | set(now):
+            a, b = was.get(key), now.get(key)
+            if a == b:
+                continue
+            if b in (None, "PASS") and a in ("FAIL", "UNKNOWN"):
+                unflagged.append((key, a, b))
+            elif a in (None, "PASS") and b in ("FAIL", "UNKNOWN"):
+                newly.append((key, a, b))
+            else:
+                changed.append((key, a, b))
+        print()
+        print(f"against {os.path.basename(args.compare_to)}:")
+        print(f"  un-flagged      {len(unflagged)}")
+        print(f"  newly flagged   {len(newly)}"
+              f"{'   <-- a narrowing fix should show ZERO here' if newly else ''}")
+        print(f"  changed verdict {len(changed)}")
+        for (stem, check), a, b in newly[:12]:
+            print(f"     NEW  {stem:<20} {check}  {a or '-'} -> {b}")
+        for (stem, check), a, b in unflagged[:8]:
+            print(f"     off  {stem:<20} {check}  {a} -> {b or '-'}")
 
 
 if __name__ == "__main__":
