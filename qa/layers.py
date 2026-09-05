@@ -316,16 +316,28 @@ def derive_ballots(record):
 def layer2_arithmetic(stem, record):
     """Does the arithmetic hold?
 
-    Every voter may mark a contest once per seat.  The direction of a
-    discrepancy matters more than its size, and the asymmetry is not a tuned
-    threshold but a fact about ballots:
+    In nearly every election a voter may mark a contest once per seat.  The
+    direction of a discrepancy matters more than its size, and the asymmetry is
+    a fact about ballots rather than a tuned threshold:
 
-        marks >  ballots x seats   impossible at any magnitude
-        marks == ballots x seats   confirmed -- an independent witness to the
-                                   reading, which is what vouches for figures
-                                   OCR cannot confirm
-        marks <  ballots x seats   legitimate: blanks or write-ins not tallied.
-                                   A description of the document, not a defect.
+        marks >  ballots x seats   impossible.  An error.
+        marks == ballots x seats   the digits were probably read faithfully.
+        marks <  ballots x seats   usually legitimate: blanks or write-ins not
+                                   tallied.  Describe it; do not flag it.
+
+    Closure is evidence about FIGURES only, and two blind spots matter:
+
+    It cannot see a FUSED race.  If block A closes at ballots x k1 and block B
+    at ballots x k2, then A+B closes at ballots x (k1+k2) -- merging preserves
+    the identity exactly.  Provincetown 2025 ran two races together into a
+    three-seat Select Board and closed perfectly at 1623 = 541 x 3.  Fusion is a
+    property of the document's LAYOUT, so only the document answers it.
+
+    It cannot see a LOST NAME.  Needham Precinct D summed to the printed total
+    while a candidate had been dropped: her votes captured, her name not.
+
+    A closing contest means "the digits are probably right", never "the record
+    is right".  A flag is only ever cleared after review and documentation.
     """
     out = []
     ballots, why, contributors = derive_ballots(record)

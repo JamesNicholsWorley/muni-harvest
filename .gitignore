@@ -36,3 +36,12 @@ Thumbs.db
 # and recovered_missing_docs.csv across the repo boundary.
 scratch/**/*.jsonl
 _pout3/
+
+# Workflow artifact downloads.  These arrive as untracked directories in the
+# working tree and a `git add -A` sweeps them straight into a commit.
+_rev_out/
+_rev_out2/
+_turley_out/
+_turley_pdf/
+url-batch-*/
+cdx-shard-*/

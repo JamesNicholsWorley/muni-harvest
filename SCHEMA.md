@@ -82,6 +82,11 @@ Every voter may mark a contest once per seat.
 An equality test on the second case produces false alarms, and a checker should
 not have to infer which case it is from whether it happens to find a Blanks row.
 
+Closure is evidence about figures only. It is structurally blind to a fused race
+-- merging two contests preserves `ballots x seats` exactly -- and blind to a
+name dropped while its votes were captured. Treat a closing contest as "the
+digits are probably right", never as "the record is right".
+
 ### `ballots_cast` and `ballots_cast_source`
 
 Derived, never asked for. Every municipality-wide single-seat contest that

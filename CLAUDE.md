@@ -82,11 +82,32 @@ than a tuned threshold:
     marks <  ballots x seats    usually legitimate: blanks or write-ins not tallied.
                                 Describe it; do not flag it.
 
-Exact closure is what vouches for figures OCR cannot confirm. A number cannot
-satisfy that constraint by accident, so a contest that closes is confirmed even
-when its digits are unreadable in the text layer. Record how a figure was
-confirmed — `text`, `arithmetic`, `both`, or `neither` — and work the `neither`
-pile, which is small.
+Exact closure is evidence about FIGURES, and only about figures. It says the
+numbers in a block were read faithfully. It does not say the block is a single
+contest, and it does not say the names are right.
+
+**It is blind to a fused race.** If block A closes at `ballots x k1` and block B
+at `ballots x k2`, then A+B closes at `ballots x (k1+k2)`. Merging two races
+preserves the identity exactly, so no check built on ballots-times-seats can
+ever see one. Provincetown 2025 published a three-seat Select Board containing a
+candidate who stood for Charter Compliance, with two races' blanks and write-ins
+summed together, and it closed perfectly: 400+405+17+94+707 = 1623 = 541 x 3.
+Fusion is a claim about a document's LAYOUT, so only the document answers it --
+compare races-in-parse against office-headings-in-document.
+
+**It is blind to a lost name.** Needham Precinct D summed exactly to the printed
+total while a candidate had been dropped entirely: her votes were captured, her
+name was not. Found by eye, not by the sum. After any coordinate parse, grep the
+output for empty, address-shaped or unlabelled names.
+
+**Two tests, never merged.** `sum == printed` asks whether WE read the block
+faithfully. `printed % seats == 0` asks whether the TOWN's arithmetic divides.
+Requiring both let a clerk's own off-by-two suppress a perfectly-read race -- the
+verifier becoming the bug.
+
+So record how a figure was confirmed -- `text`, `arithmetic`, `both`, `neither`
+-- and read `arithmetic` as "the digits are probably right", never as "the record
+is right".
 
 Deriving the ballot count needs a quorum: two contests that disagree are a
 disagreement, not a derivation. Say "cannot derive" rather than picking one.
