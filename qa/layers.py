@@ -71,7 +71,12 @@ RE_NOT_MUNICIPAL = re.compile(
     r"GOVERNOR'S COUNCIL|ASSEMBLY DELEGATE|"
     # Massachusetts calls its legislature the General Court.  These are the
     # state office names as they are actually printed on a MA ballot.
-    r"IN GENERAL COURT|GENERAL COURT\b|COUNCILLOR DISTRICT\b", re.I)
+    # "General Court" is what Massachusetts calls its legislature, so SENATOR
+    # and REPRESENTATIVE IN GENERAL COURT are the state offices as printed on a
+    # MA ballot.  COUNCILLOR DISTRICT is NOT one: Boston, Lynn and Worcester
+    # elect city councillors by district, which is municipal.  Including it
+    # flagged 6 town-years 43 times and reported them as state elections.
+    r"IN GENERAL COURT|GENERAL COURT\b", re.I)
 
 
 # ---------------------------------------------------------------- helpers

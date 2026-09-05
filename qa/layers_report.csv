@@ -2388,15 +2388,6 @@ Boston2021,0,document_supports_record,FAIL,0/25 names and 0/36 figures located i
 Boston2021,1,names_grounded,FAIL,0/25 names located in data/raw_ocr/Boston2021.txt
 Boston2021,1,figures_grounded,FAIL,0/36 figures located in data/raw_ocr/Boston2021.txt
 Boston2021,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 1
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 2
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 3
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 4
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 5
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 6
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 7
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 8
-Boston2021,3,municipal_only,FAIL,non-municipal office present: City Councillor District 9
 Boston2021,3,office_count_consistent,PASS,11 contests; median 10 in other years
 Boston2023,0,document_self_identifies,PASS,...CITY OF BOSTON MUNICIPAL ELECTION - NOVEMBER...
 Boston2023,0,carries_the_year,PASS,"...BOSTON MUNICIPAL ELECTION - NOVEMBER 7, 2023 CITY COUNCILLOR AT LARGE VOTES CAST BY..."
@@ -2411,15 +2402,6 @@ Boston2025,0,document_supports_record,PASS,0/33 names and 15/54 figures located 
 Boston2025,1,names_grounded,FAIL,0/33 names located in data/raw_ocr/Boston2025.txt
 Boston2025,1,figures_grounded,FAIL,15/54 figures located in data/raw_ocr/Boston2025.txt
 Boston2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 1
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 2
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 3
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 4
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 5
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 6
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 7
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 8
-Boston2025,3,municipal_only,FAIL,non-municipal office present: CITY COUNCILLOR DISTRICT 9
 Boston2025,3,office_count_consistent,PASS,11 contests; median 10 in other years
 Bourne2021,0,document_self_identifies,PASS,...was held on Jackson Field at Bourne High School in order to accom...
 Bourne2021,0,carries_the_year,PASS,"...esented the proposed budget January 12, 2021, to the Board, followed by a separate m..."
@@ -3992,14 +3974,6 @@ Chelsea2023,0,document_supports_record,PASS,33/33 names and 48/51 figures locate
 Chelsea2023,1,names_grounded,PASS,33/33 names located in data/markdown/Chelsea2023.md
 Chelsea2023,1,figures_grounded,FAIL,48/51 figures located in data/markdown/Chelsea2023.md
 Chelsea2023,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 6
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 5
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 8
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 7
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 2
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 3
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 4
-Chelsea2023,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 1
 Chelsea2023,3,office_count_consistent,PASS,18 contests; median 18 in other years
 Chelsea2025,0,document_self_identifies,PASS,...| | | | | | | | | | | City of Chelsea City Election 11/4/2025 <!--...
 Chelsea2025,0,carries_the_year,PASS,...| | City of Chelsea City Election 11/4/2025 <!-- image --> OFTCIAL Report EL45 &amp...
@@ -4007,14 +3981,6 @@ Chelsea2025,0,document_supports_record,PASS,27/28 names and 37/46 figures locate
 Chelsea2025,1,names_grounded,FAIL,27/28 names located in data/markdown/Chelsea2025.md
 Chelsea2025,1,figures_grounded,FAIL,37/46 figures located in data/markdown/Chelsea2025.md
 Chelsea2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District One
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District Two
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District Three
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District Four
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District Five
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District Six
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District Seven
-Chelsea2025,3,municipal_only,FAIL,non-municipal office present: Councillor District Eight
 Chelsea2025,3,office_count_consistent,PASS,18 contests; median 18 in other years
 Cheshire2021,0,document_self_identifies,PASS,...cle 17: To see if the Town of Cheshire will vote to amend funds in a...
 Cheshire2021,0,carries_the_year,PASS,"...r the fiscal year ending June "" sey 30, 2021, to be expended in accordance with the..."
@@ -6136,7 +6102,7 @@ EastBridgewater2026,2,contest_closes,PASS,BOARD OF HEALTH: 693 == 693 x 1
 EastBridgewater2026,2,contest_closes,PASS,PLANNING BOARD: 2079 == 693 x 3
 EastBridgewater2026,2,contest_closes,PASS,HOUSING AUTHORITY: 693 == 693 x 1
 EastBridgewater2026,3,office_count_consistent,PASS,10 contests; median 10 in other years
-EastBrookfield2021,0,document_self_identifies,PASS,...web\20211227174942\https:\www.eastbrookfieldma.us) ›› 2. [Town Clerk](\web...
+EastBrookfield2021,0,document_self_identifies,PASS,...es are only the votes cast in East Brookfield. Totals from both towns are c...
 EastBrookfield2021,0,carries_the_year,PASS,...## You are here 1. [Home](\web\20211227174942\https:\www.eastbrookfieldma.u...
 EastBrookfield2021,0,document_supports_record,PASS,14/14 names and 32/32 figures located in data/markdown/EastBrookfield2021.md
 EastBrookfield2021,1,names_grounded,PASS,14/14 names located in data/markdown/EastBrookfield2021.md
@@ -6154,7 +6120,7 @@ EastBrookfield2021,2,contest_closes,PASS,Planning Board - 3 Yr: 402 == 134 x 3
 EastBrookfield2021,2,contest_closes,PASS,Tree Warden - 1 Yr: 134 == 134 x 1
 EastBrookfield2021,2,regional_exempt,NOTE,Spencer-East Brookfield Regional School Dist: spans several towns; ballot arithmetic does not apply
 EastBrookfield2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
-EastBrookfield2022,0,document_self_identifies,PASS,...20260601181927id_/https://www.eastbrookfieldma.us/sites/g/files/vyhlif541/...
+EastBrookfield2022,0,document_self_identifies,PASS,"...# East Brookfield, Massachusetts -- Annual Town..."
 EastBrookfield2022,0,carries_the_year,PASS,"...usetts -- Annual Town Election, May 10, 2022 Source: the town's own results posting,..."
 EastBrookfield2022,0,document_supports_record,PASS,10/10 names and 0/0 figures located in data/markdown/EastBrookfield2022.md
 EastBrookfield2022,1,names_grounded,PASS,10/10 names located in data/markdown/EastBrookfield2022.md
@@ -14498,7 +14464,7 @@ NorthAndover2021,2,contest_closes,PASS,MODERATOR: 4038 == 4038 x 1
 NorthAndover2021,2,contest_closes,PASS,HOUSING AUTHORITY: 4038 == 4038 x 1
 NorthAndover2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 8076 == 4038 x 2
 NorthAndover2021,3,office_count_consistent,PASS,4 contests; median 3 in other years
-NorthAndover2022,0,document_self_identifies,PASS,...p; Government](\massachusetts\northandover\politics) # North Andover 202...
+NorthAndover2022,0,document_self_identifies,PASS,...etts\northandover\politics) # North Andover 2022 Election Results: Hicks...
 NorthAndover2022,0,carries_the_year,PASS,...\northandover\politics) # North Andover 2022 Election Results: Hicks Wins School Boa...
 NorthAndover2022,0,document_supports_record,PASS,4/4 names and 1/4 figures located in data/markdown/NorthAndover2022.md
 NorthAndover2022,1,names_grounded,PASS,4/4 names located in data/markdown/NorthAndover2022.md
@@ -16946,10 +16912,6 @@ Randolph2025,0,document_supports_record,PASS,30/30 names and 44/44 figures locat
 Randolph2025,1,names_grounded,PASS,30/30 names located in data/markdown/Randolph2025.md
 Randolph2025,1,figures_grounded,PASS,44/44 figures located in data/markdown/Randolph2025.md
 Randolph2025,2,ballots_derivable,UNKNOWN,"4 contests, no two agree: [739, 828, 885, 888]"
-Randolph2025,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT ONE
-Randolph2025,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT TWO
-Randolph2025,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT THREE
-Randolph2025,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT FOUR
 Randolph2025,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Raynham2021,0,document_self_identifies,PASS,...Title of Office: | B-R School Raynham Members | P1 | P2 | P3 | P4 |...
 Raynham2021,0,carries_the_year,FAIL,'2021' does not appear in data/markdown/Raynham2021.md
@@ -24676,11 +24638,6 @@ Worcester2021,0,document_supports_record,PASS,25/30 names and 19/38 figures loca
 Worcester2021,1,names_grounded,FAIL,25/30 names located in data/raw_ocr/Worcester2021.txt
 Worcester2021,1,figures_grounded,FAIL,19/38 figures located in data/raw_ocr/Worcester2021.txt
 Worcester2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
-Worcester2021,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 1
-Worcester2021,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 2
-Worcester2021,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 3
-Worcester2021,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 4
-Worcester2021,3,municipal_only,FAIL,non-municipal office present: COUNCILLOR DISTRICT 5
 Worcester2021,3,office_count_consistent,PASS,8 contests; median 14 in other years
 Worcester2023,0,document_self_identifies,NOTE,document never prints 'Worcester'; identity rests on the citation alone
 Worcester2023,0,carries_the_year,FAIL,'2023' does not appear in data/markdown/Worcester2023.md

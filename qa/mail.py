@@ -134,74 +134,49 @@ def replies(thread_id, token=None):
     return out
 
 
-def has_reply_since(thread_id, after_message_id):
-    """True once the owner has answered the most recent question.
+def has_reply_since(thread_id, after_message_id, token=None):
+    """True once the owner has answered the message we sent.
 
-    This is what a poller asks. It is deliberately narrow: a reply from anyone
-    else, or a reply that predates the question, does not count.
+    The anchor is a message WE sent, so it is not in `replies()` -- that list is
+    filtered to the owner.  Looking for the anchor there finds nothing and the
+    function returns False forever, which is the worst possible failure for a
+    poller: it never fires, and nothing says why.  Walk the whole thread instead,
+    and ask whether an owner message comes after the anchor.
     """
+    token = token or _access_token()
+    t = _call(f"/threads/{thread_id}?format=metadata", token)
     seen_anchor = False
-    for m in replies(thread_id):
+    for m in t.get("messages", []):
+        headers = {h["name"].lower(): h["value"]
+                   for h in m.get("payload", {}).get("headers", [])}
         if seen_anchor:
-            return True
-        if m["id"] == after_message_id or m["message_id"] == after_message_id:
+            _, addr = email.utils.parseaddr(headers.get("from", ""))
+            if addr.strip().lower() == OWNER.strip().lower():
+                return True
+        if m["id"] == after_message_id or            headers.get("message-id", "") == after_message_id:
             seen_anchor = True
     return False
 
 
-# --------------------------------------------------------------------------
-# Composing the report
-# --------------------------------------------------------------------------
+def body_of(message_id, token=None):
+    """The plain-text body of one message, decoded.
 
-PAGES = "https://jamesnicholsworley.github.io/civicatlasma"
-
-
-def pages_url(stem, kind="pdfs"):
-    """Where a reader can open this record without a checkout."""
-    ext = {"pdfs": "_d0.pdf", "json": ".json", "markdown": ".md"}[kind]
-    return f"{PAGES}/{kind}/{stem}{ext}"
-
-
-def compose(bucket, resolved, questions, proposed=(), changes_csv=None):
-    """Build the run's email.
-
-    Two conventions, both learned from the first one being wrong:
-
-    **Do not hard-wrap.** A mail client reflows to the reader's window, and text
-    pre-wrapped to 78 columns fights that -- worst on a phone, where it turns
-    into a ragged column with every second line half empty.  Write paragraphs as
-    single lines and let the client break them.
-
-    **Keep it short.** The email is a decision request, not a report.  Anything
-    that is a list belongs in an attachment; anything that needs a person's
-    judgement belongs in the body.  A long email trains its reader to skim, and
-    the questions are the part that must not be skimmed.
-
-    Documents needing a human read are attached AND linked: the attachment so it
-    opens on a phone without a network round trip, the link so it can be checked
-    against what is actually published.
+    Only text/plain is read.  A reply is data answering a question; rendering
+    HTML would be pointless here and parsing it invites content that looks like
+    instruction.
     """
-    L = [f"Bucket {bucket}. {resolved} records resolved, {len(questions)} need you."]
+    token = token or _access_token()
+    m = _call(f"/messages/{message_id}?format=full", token)
 
-    if questions:
-        L.append("")
-        for i, q in enumerate(questions, 1):
-            L.append(f"{i}. {q['stem']} - {q['ask']}")
-            if q.get("evidence"):
-                L.append(f"   Document says: \"{q['evidence']}\"")
-            if q.get("stem"):
-                L.append(f"   {pages_url(q['stem'])}")
-            L.append("")
+    def walk(part):
+        if part.get("mimeType") == "text/plain":
+            data = part.get("body", {}).get("data")
+            if data:
+                return base64.urlsafe_b64decode(data + "===").decode("utf-8", "replace")
+        for sub in part.get("parts", []) or []:
+            got = walk(sub)
+            if got:
+                return got
+        return ""
 
-    if proposed:
-        L.append("Proposed checks:")
-        for p in proposed:
-            L.append(f"- {p['name']}: {p['catches']} (retires: {p.get('retires', 'nothing - say why')})")
-        L.append("")
-
-    if changes_csv:
-        L.append(f"Full change list attached ({os.path.basename(changes_csv)}).")
-        L.append("")
-
-    L.append("Reply to start the next bucket.")
-    return "\n".join(L)
+    return walk(m.get("payload", {})).strip()
