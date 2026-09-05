@@ -37,8 +37,8 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORT = os.path.join(BASE, "qa", "layers_report.csv")
 WORKLIST = os.path.join(BASE, "qa", "worklist.csv")
 
-FIELDS = ["stem", "priority", "size", "worst_verdict", "layer", "findings",
-          "summary", "status", "claimed_by", "claimed_at", "resolution"]
+FIELDS = ["stem", "bucket", "priority", "size", "worst_verdict", "layer",
+          "findings", "summary", "status", "resolution"]
 
 # A finding's weight.  Layer 0 outranks everything: no later check recovers from
 # the wrong document, so fixing anything else about that record is wasted work.
@@ -155,6 +155,66 @@ def build(corpus_dir):
             "resolution": p.get("resolution", ""),
         })
     out.sort(key=lambda r: -r["priority"])
+    buckets = bucketise(out, rows)
+    for r in out:
+        r["bucket"] = buckets.get(r["stem"], "unsorted")
+        # one agent at a time means no claiming is needed; two runs never overlap
+        r.pop("claimed_by", None)
+        r.pop("claimed_at", None)
+    return out
+
+
+# Buckets.  An agent takes one bucket per run, so a bucket must be small enough
+# to finish and coherent enough that context earned on the first record helps on
+# the fortieth.  Slicing the priority order alone would give a run one wrong
+# document, one ungrounded name and one impossible contest -- three unrelated
+# investigations, none of them cheaper for the others.
+#
+# So buckets are cut by FINDING TYPE first, then by size within a type.  Order
+# follows the layers: nothing later can recover from a wrong document, so a
+# record with a layer-0 problem is not worth grounding or checking arithmetic on
+# until that is settled.
+BUCKET_ORDER = [
+    ("no-document",       "document_held"),
+    ("wrong-document",    "document_supports_record"),
+    ("preliminaries",     "preliminary_in_an_annual_slot"),
+    ("undated",           "carries_the_year"),
+    ("ungrounded-names",  "names_grounded"),
+    ("ungrounded-figures", "figures_grounded"),
+    ("impossible-arithmetic", "marks_exceed_ballots"),
+    ("thin-years",        "office_count_consistent"),
+    ("no-text-held",      "grounded"),
+    ("cannot-derive",     "ballots_derivable"),
+]
+BUCKET_MAX = 200
+
+
+def bucketise(rows, report_rows):
+    """Assign each town-year to exactly one bucket, by its most important finding."""
+    by_stem = collections.defaultdict(set)
+    for r in report_rows:
+        if r["verdict"] in ("FAIL", "UNKNOWN"):
+            by_stem[r["stem"]].add(r["check"])
+
+    order = {check: i for i, (_, check) in enumerate(BUCKET_ORDER)}
+    names = {check: name for name, check in BUCKET_ORDER}
+
+    assigned = {}
+    for stem, checks in by_stem.items():
+        ranked = sorted((order[c], c) for c in checks if c in order)
+        if ranked:
+            assigned[stem] = names[ranked[0][1]]
+
+    # number the slices within each bucket, largest records first, so a run that
+    # only gets through one slice has done the part that matters most
+    out, counters = {}, collections.Counter()
+    for r in sorted(rows, key=lambda r: -r["priority"]):
+        base = assigned.get(r["stem"])
+        if not base:
+            continue
+        n = counters[base]
+        out[r["stem"]] = f"{base}-{n // BUCKET_MAX + 1}"
+        counters[base] += 1
     return out
 
 
