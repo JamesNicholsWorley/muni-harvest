@@ -118,9 +118,10 @@ def send(subject, body, thread_id=None, in_reply_to=None, attachments=()):
 
 STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mail_state.json")
 
-# A body longer than this is a report.  The number is a judgement: about what
-# fits on a phone screen before the reader starts scrolling past the questions.
-MAX_BODY = 4000
+# A body longer than this is a report.  Lowered from 4000 after the owner read
+# one at 3249 and said it was still too long: the questions are the point, and
+# anything a reader scrolls past to reach them is working against the email.
+MAX_BODY = 2200
 
 
 # Gmail groups a mailbox by SUBJECT as well as by References, so a message with a
@@ -185,11 +186,18 @@ def compose(subject, standing, questions, attachments=(), lists=(),
                              f"linked; attach the published copy, not a private one")
     files = list(attachments) + list(lists)
 
-    parts = [standing.strip(), ""]
+    # Collapse newlines inside every field.  A run writes multi-line strings and
+    # they arrive as breaks mid-sentence -- "Needham \"Preliminary / Results of
+    # Annual / Town Election\"" -- which is writing for a terminal.  The client
+    # reflows to the reader's window if we let it.
+    def flow(t):
+        return " ".join(str(t).split())
+
+    parts = [flow(standing), ""]
     for i, q in enumerate(questions, 1):
-        parts.append(f"{i}. {q['title'].strip()}")
-        parts.append(f"   {q['detail'].strip()}")
-        parts.append(f"   ASK: {q['ask'].strip()}")
+        parts.append(f"{i}. {flow(q['title'])}")
+        parts.append(f"   {flow(q['detail'])}")
+        parts.append(f"   ASK: {flow(q['ask'])}")
         for label, url in q.get("docs") or ():
             parts.append(f"   {label}: {url}")
         parts.append("")
