@@ -24,6 +24,7 @@ import argparse
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -65,9 +66,28 @@ def fire(payload_text):
     req.add_header("Authorization", f"Bearer {token}")
     req.add_header("Content-Type", "application/json")
     req.add_header("anthropic-beta", "experimental-cc-routine-2026-04-01")
-    with urllib.request.urlopen(req, timeout=60) as r:
-        print(f"routine fired: HTTP {r.status}")
-    return True
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            print(f"routine fired: HTTP {r.status}")
+        return True
+    except urllib.error.HTTPError as exc:
+        # Say what is wrong in one line.  A traceback here is the same failure
+        # this whole design exists to avoid: something broke, and the message
+        # explaining it is buried where nobody reads it.
+        if exc.code == 401:
+            print("fire refused: HTTP 401. CLAUDE_ROUTINE_TOKEN is not valid for "
+                  "this routine. The trigger token is minted from the routine "
+                  "itself and starts sk-ant-oat01-; a standard sk-ant-api03 API "
+                  "key will not authenticate here.")
+        elif exc.code == 404:
+            print(f"fire refused: HTTP 404. No routine {rid} -- check "
+                  "CLAUDE_ROUTINE_ID.")
+        elif exc.code == 429:
+            print("fire refused: HTTP 429, the daily routine-run cap is spent. "
+                  f"Retry after: {exc.headers.get('Retry-After', 'unspecified')}")
+        else:
+            print(f"fire refused: HTTP {exc.code} {exc.reason}")
+        return False
 
 
 def main():
