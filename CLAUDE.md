@@ -188,6 +188,35 @@ Three properties keep it honest:
 Never weaken a check to accommodate one odd record. That blinds it for the other
 1,899.
 
+## Rules the corpus learned the hard way
+
+Each of these cost something to discover. The full account of each is in
+`docs/notes/`, grouped by the layer it serves — read that layer's notes before
+working it.
+
+- **The `municipality` field exists only to disagree with the stem.** Filling it
+  from the filename silences the corpus's only wrong-town detector.
+- **`num_winners` is SEATS UP, not people who won.** A printed "vote for no more
+  than N" is the seat count and outranks the ballot arithmetic, which is only a
+  lower bound. It is also the most error-prone field here: one digit, it decides
+  who won, and it is invisible to any diff that looks at size.
+- **Enumerate what a return IS, never what it isn't.** A negative definition
+  admits everything nobody thought of.
+- **The office vocabulary is the state fingerprint.** New England reuses town
+  names across state lines, so no name test catches a wrong-state return.
+- **A clerk's index page is a lead, not a return.** And a 403 describes our
+  client, not the town.
+- **An illegible OCR is not an illegible document.** Open the image before
+  writing a document off. Prefer a reader that fails silent: a value invented in
+  a blank cell is the one error arithmetic can never catch.
+- **A pair of documents can be one election.** Register the second by sha256 as a
+  source part rather than inventing a second stem.
+- **Never call a document bad. Say what it is.** `wrong_year` is recoverable and
+  `dead_link` may resolve tomorrow; filing both under one word makes it
+  impossible to tell which condemnations are worth revisiting.
+- **Report coverage two ways** — by town-year and population-weighted. They
+  differ by more than ten points and answer different questions.
+
 ## Rules for changing things
 
 These exist because the project accreted badly once and the cost was real. In
