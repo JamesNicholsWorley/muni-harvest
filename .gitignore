@@ -30,3 +30,9 @@ Thumbs.db
 # CI download staging — working files, not source. 66 of these were committed by
 # mistake in a `git add -A`; scratch/ by contrast holds 71 tracked analysis scripts.
 /ci_out/
+
+# Sweep outputs: derived, regenerable, and 191 MB of the tracked tree.
+# The small CSVs under scratch/ stay -- CivicAtlasMA reads dive_confirmed.csv
+# and recovered_missing_docs.csv across the repo boundary.
+scratch/**/*.jsonl
+_pout3/
