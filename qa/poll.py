@@ -109,7 +109,13 @@ def main():
     from qa import mail
     if not mail.has_reply_since(thread, anchor):
         print(f"no reply yet to {anchor} in thread {thread}")
-        return 1
+        # For --check the exit code IS the answer, so 1 means "no".  For --fire
+        # it is the outcome of the job, and having nothing to do is a success:
+        # the owner has not replied yet, which is the normal state most of the
+        # time.  Exiting 1 there paints the workflow red every twenty minutes,
+        # and a check that cries wolf on its ordinary state is one nobody reads
+        # when it finally means something.
+        return 0 if args.fire else 1
 
     replies = mail.replies(thread)
     latest = replies[-1]
