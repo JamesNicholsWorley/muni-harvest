@@ -114,9 +114,7 @@ def main():
         text = mail.body_of(latest["id"])
         # Strip the quoted original.  A reply carries the whole previous email
         # back, and reading that as the answer feeds a run its own words.
-        for marker in ("
-On ", "
->"):
+        for marker in ('\nOn ', '\n>'):
             cut = text.find(marker)
             if cut > 0:
                 text = text[:cut]
