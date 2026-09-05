@@ -123,6 +123,23 @@ STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mail_state.jso
 MAX_BODY = 4000
 
 
+# Gmail groups a mailbox by SUBJECT as well as by References, so a message with a
+# new subject opens a new conversation however correct its threading headers are.
+# The first two emails proved it: both carried In-Reply-To, and the owner's inbox
+# still showed two chains, because "preliminaries-1: 16 done, 4 unread" is not
+# "Civic Atlas QA - channel test".
+#
+# One chain was the requirement, so the subject is fixed and the specifics go in
+# the body. A run may pass its own subject; it is used only for the first message
+# in a thread.
+SUBJECT = "Civic Atlas QA"
+
+
+def thread_subject(subject, state):
+    """Re: the standing subject once a thread exists, so the chain holds."""
+    return SUBJECT if not state.get("thread_id") else "Re: " + SUBJECT
+
+
 def compose(subject, standing, questions, attachments=(), lists=(),
             state_path=STATE, send_it=True):
     """Build -- and by default send -- one decision request, in the thread.
@@ -186,6 +203,8 @@ def compose(subject, standing, questions, attachments=(), lists=(),
     if os.path.exists(state_path):
         with open(state_path, encoding="utf-8") as fh:
             state = json.load(fh)
+    subject = thread_subject(subject, state)
+
     if not send_it:
         return body, state
 
