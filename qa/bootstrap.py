@@ -20,13 +20,15 @@ What it can and cannot reproduce:
   data/markdown  linked from civicatlasma/markdown      complete for what is public
   data/pdfs      linked from civicatlasma/pdfs, _d0 stripped from the name
   data/pdftext   extracted here with pdftotext          deterministic, exact
-  data/raw_ocr   NOT reproducible without running OCR   see below
+  data/raw_ocr   linked from civicatlasma/raw_ocr        621 of 633
 
-`raw_ocr` is the OCR of documents that have no text layer. It cannot be
-regenerated from the published corpus without actually running Tesseract over
-the scans, which takes real time. Until it is published or rebuilt, a cloud
-session sees fewer readable documents than a local one, and `document_held` and
-the grounding checks will report worse numbers than the corpus deserves.
+`raw_ocr` was published in September 2026 for exactly this reason: it is the only
+reading of a scan, and without it a session saw 210 unreadable records where a
+local checkout sees 125. Twelve are withheld -- OCR of a news article is the
+article -- so a session is short by those twelve and no more.
+
+Anything still unreadable belongs in `qa/ocr_queue.py`, which is how a scan
+somebody read by eye becomes readable to the checks.
 
 **That difference is the point of `--verify`.** A run that compares its counts
 against a baseline built somewhere else is comparing two different corpora and
@@ -69,7 +71,7 @@ def link(src, dst):
 
 def assemble(published):
     made = {}
-    for name in ("json", "markdown", "xlsx"):
+    for name in ("json", "markdown", "xlsx", "raw_ocr"):
         src = os.path.join(published, name)
         if os.path.isdir(src):
             made[name] = link(src, os.path.join(DATA, name))
@@ -136,12 +138,14 @@ def verify():
     print(f"records with no readable text: {len(unreadable)} of {records}")
     if counts["raw_ocr"] == 0:
         print()
-        print("data/raw_ocr is empty. It holds the OCR of documents with no text")
-        print("layer and cannot be rebuilt from the published corpus without")
-        print("running Tesseract over the scans. Until it exists here, the")
-        print("grounding checks will report worse numbers than the corpus")
-        print("deserves, and a regression comparison against a baseline built")
-        print("elsewhere is comparing two different corpora.")
+        print("data/raw_ocr is empty, which should not happen -- it is published")
+        print("in civicatlasma. Without it the grounding checks report worse than")
+        print("the corpus deserves and a regression comparison is meaningless.")
+        print("Check that the civicatlasma clone is present and current.")
+    elif unreadable:
+        print()
+        print(f"{len(unreadable)} records still have no readable text. Queue any")
+        print("you had to read by eye: python -m qa.ocr_queue --add <Stem>")
     return len(unreadable)
 
 
