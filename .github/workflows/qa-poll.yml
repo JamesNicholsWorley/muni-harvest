@@ -1,0 +1,62 @@
+name: Wait for a reply
+
+# The only scheduled thing in the system, and it does no work: it asks whether
+# the owner has answered the last question, and if so starts the run that does.
+#
+# Everything else in this design refuses to be scheduled on purpose.  A routine
+# reports green when its session started and exited, which is not the same as
+# having accomplished anything, and there is no alerting to tell those apart.
+# Here the owner's reply is the clock, so a run that fails to send its email
+# simply never triggers the next one -- the loop stopping IS the alarm, visible
+# in the inbox he already reads.
+
+on:
+  schedule:
+    # every 20 minutes, off the hour.  Scheduled runs are delayed under load and
+    # GitHub documents that queued jobs may be dropped entirely; the offset
+    # avoids the busiest minute and a missed tick costs 20 minutes, not a day.
+    - cron: '7,27,47 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # One agent at a time is a design rule, not a preference.  Two runs working the
+  # same bucket would race on the same rows with no lock to take.
+  group: civicatlas-qa
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Has the owner replied?
+        id: check
+        env:
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          CLAUDE_ROUTINE_ID: ${{ secrets.CLAUDE_ROUTINE_ID }}
+          CLAUDE_ROUTINE_TOKEN: ${{ secrets.CLAUDE_ROUTINE_TOKEN }}
+        run: python -m qa.poll --fire
+
+      - name: Record that the question was answered
+        # mail_state.json is committed because a fresh clone has no memory of
+        # which question is outstanding.  Only the poller writes it.
+        run: |
+          if git diff --quiet qa/mail_state.json; then
+            echo "state unchanged"
+          else
+            git config user.name "civicatlas-qa"
+            git config user.email "jamesnicholsworleyassistant@gmail.com"
+            git add qa/mail_state.json
+            git commit -m "Question answered; next run started"
+            git push
+          fi

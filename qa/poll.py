@@ -48,42 +48,46 @@ def save_state(st):
 
 
 def fire(payload_text):
-    """Start the next run by cutting a GitHub release.
+    """Start the next run.
 
-    The routine is wired to fire on a `release` event in this repository, so
-    starting it needs no Anthropic credential at all -- only the GITHUB_TOKEN
-    that Actions already provides to its own workflows.
-
-    That is worth the indirection. The alternative was a per-routine trigger
-    token that has to be minted in a browser, shown once, and then copied into a
-    secret; it took several attempts to establish that the value being copied
-    was an ordinary API key, which the fire endpoint refuses. A release is a
-    thing this repository can already make.
-
-    The reply text goes in the release body, so the run can read what the owner
-    actually said. It arrives as untrusted content either way -- it came from a
-    mailbox, and a mailbox takes input from anyone.
+    The routine's own prompt decides what to do; the text here is context, and
+    it arrives wrapped and labelled as untrusted, so the prompt must opt in to
+    acting on it. That is deliberate: what is being passed along is an email
+    from a mailbox, and a mailbox takes input from anyone.
     """
-    import datetime
-    import subprocess
-
-    tag = "qa-" + datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S")
-    try:
-        r = subprocess.run(
-            ["gh", "release", "create", tag,
-             "--repo", os.environ.get("GITHUB_REPOSITORY",
-                                      "JamesNicholsWorley/muni-harvest"),
-             "--title", "QA loop: the owner replied",
-             "--notes", payload_text[:60000] or "(empty reply)"],
-            capture_output=True, text=True, timeout=120)
-    except FileNotFoundError:
-        print("gh is not installed; cannot cut the release that starts the run")
+    rid = os.environ.get("CLAUDE_ROUTINE_ID")
+    token = os.environ.get("CLAUDE_ROUTINE_TOKEN")
+    if not (rid and token):
+        print("no routine configured (CLAUDE_ROUTINE_ID / CLAUDE_ROUTINE_TOKEN); "
+              "reply detected but nothing was started")
         return False
-    if r.returncode == 0:
-        print(f"release {tag} created; the routine fires on it")
+    body = json.dumps({"text": payload_text[:60000]}).encode()
+    req = urllib.request.Request(FIRE_URL.format(routine_id=rid), data=body)
+    req.add_header("Authorization", f"Bearer {token}")
+    req.add_header("Content-Type", "application/json")
+    req.add_header("anthropic-beta", "experimental-cc-routine-2026-04-01")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            print(f"routine fired: HTTP {r.status}")
         return True
-    print(f"could not create the release: {r.stderr.strip()[:200]}")
-    return False
+    except urllib.error.HTTPError as exc:
+        # Say what is wrong in one line.  A traceback here is the same failure
+        # this whole design exists to avoid: something broke, and the message
+        # explaining it is buried where nobody reads it.
+        if exc.code == 401:
+            print("fire refused: HTTP 401. CLAUDE_ROUTINE_TOKEN is not valid for "
+                  "this routine. The trigger token is minted from the routine "
+                  "itself and starts sk-ant-oat01-; a standard sk-ant-api03 API "
+                  "key will not authenticate here.")
+        elif exc.code == 404:
+            print(f"fire refused: HTTP 404. No routine {rid} -- check "
+                  "CLAUDE_ROUTINE_ID.")
+        elif exc.code == 429:
+            print("fire refused: HTTP 429, the daily routine-run cap is spent. "
+                  f"Retry after: {exc.headers.get('Retry-After', 'unspecified')}")
+        else:
+            print(f"fire refused: HTTP {exc.code} {exc.reason}")
+        return False
 
 
 def main():
@@ -112,10 +116,8 @@ def main():
 
     if args.show:
         text = mail.body_of(latest["id"])
-        # Strip the quoted original.  A reply carries the whole previous email
-        # back, and reading that as the answer feeds a run its own words.
-        for marker in ('\nOn ', '\n>'):
-            cut = text.find(marker)
+        for m in ('\nOn ', '\n>'):
+            cut = text.find(m)
             if cut > 0:
                 text = text[:cut]
         print()
