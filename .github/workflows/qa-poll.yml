@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write   # cutting a release is what starts the run
 
 concurrency:
   # One agent at a time is a design rule, not a preference.  Two runs working the
@@ -43,8 +43,9 @@ jobs:
           GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
           GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
           GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
-          CLAUDE_ROUTINE_ID: ${{ secrets.CLAUDE_ROUTINE_ID }}
-          CLAUDE_ROUTINE_TOKEN: ${{ secrets.CLAUDE_ROUTINE_TOKEN }}
+          # Starting the run needs no Anthropic credential: the routine fires
+          # on a release in this repository, and GITHUB_TOKEN can cut one.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m qa.poll --fire
 
       - name: Record that the question was answered
