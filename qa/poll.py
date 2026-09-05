@@ -90,6 +90,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--fire", action="store_true")
+    ap.add_argument("--show", action="store_true",
+                    help="print the reply, quoted original stripped")
     args = ap.parse_args()
 
     st = load_state()
@@ -107,6 +109,20 @@ def main():
     replies = mail.replies(thread)
     latest = replies[-1]
     print(f"reply found: {latest['date']}")
+
+    if args.show:
+        text = mail.body_of(latest["id"])
+        # Strip the quoted original.  A reply carries the whole previous email
+        # back, and reading that as the answer feeds a run its own words.
+        for marker in ("
+On ", "
+>"):
+            cut = text.find(marker)
+            if cut > 0:
+                text = text[:cut]
+        print()
+        print(text.strip())
+        return 0
 
     if args.fire:
         text = mail.body_of(latest["id"])
