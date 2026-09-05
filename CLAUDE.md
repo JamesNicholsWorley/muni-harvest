@@ -143,6 +143,51 @@ there, but it is printed in the meeting minutes as a quorum count or a recorded
 vote, so the source differs. Record which: a quorum count and a ballot count are
 both turnout, arrived at differently.
 
+## Read the source before you change anything
+
+**Nothing is corrected, retired, withdrawn or marked wrong on the strength of a
+check alone. Open the document first.**
+
+A check that is wrong deletes good data, and that is the one kind of damage this
+project cannot undo. A false flag costs somebody five minutes; a deletion made on
+a false flag costs a record that may never be recovered, and leaves no trace of
+what was lost. The asymmetry is the whole reason for the rule.
+
+This applies to the checks in `qa/layers.py` exactly as much as to a model's
+opinion. They have been wrong repeatedly -- a word boundary that reported
+correctly-dated documents as undated, a control character that stopped figures
+grounding at all, a scope regex that did not know how Massachusetts names its own
+legislature. Each looked like a finding until somebody read the document.
+
+What "read" means: open the document, find the line, and record what it says. A
+resolution that states a conclusion is not reviewable. A resolution that quotes
+the heading is.
+
+## Overriding a check
+
+Some records are strange and correct, and a check that is right about almost
+everything can be wrong about them. `qa/overrides.py` allows a check to be
+overridden for one record -- as a last resort, and deliberately expensively.
+
+An override needs four things or it is not one: the exact check, the document's
+`source_sha256`, a **verbatim quote of what was read**, and what makes this
+record genuinely unlike the others. An override written without opening the
+document is a guess with a signature on it.
+
+Three properties keep it honest:
+
+- **It does not make the finding pass.** The finding stays in the report as
+  `OVERRIDDEN`, counted and visible. A mechanism that made findings vanish would
+  hide its own growth.
+- **It dies with the document.** Replacing the file retires the reasoning rather
+  than applying it to something nobody examined.
+- **A pile of them is a signal, not a state.** If several records override the
+  same check, that check is wrong about a class of documents. Fix the check and
+  delete the rows; do not accumulate exceptions until the check means nothing.
+
+Never weaken a check to accommodate one odd record. That blinds it for the other
+1,899.
+
 ## Rules for changing things
 
 These exist because the project accreted badly once and the cost was real. In

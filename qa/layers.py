@@ -41,6 +41,10 @@ import sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PASS, FAIL, UNKNOWN, NOTE = "PASS", "FAIL", "UNKNOWN", "NOTE"
+# An overridden finding is NOT a passing one.  It keeps its own verdict so it
+# stays counted and reviewable; a mechanism that turned findings into passes
+# would hide how much of the corpus rests on somebody's judgement call.
+OVERRIDDEN = "OVERRIDDEN"
 
 # A tally row is a line in the return that counts marks, not a person.
 TALLY_ROWS = {"blanks", "blank", "others", "other", "write-ins", "write-in",
@@ -481,6 +485,27 @@ def main():
         rows += layer2_arithmetic(stem, rec)
         rows += layer3_scope(stem, rec, counts)
     rows += cross_year_duplicates(records)
+
+    # An override applies only where its reasoning was formed against the
+    # document we still hold.  A replaced document retires the reasoning.
+    try:
+        from qa import overrides as _ov
+        ovr = _ov.load()
+    except Exception:
+        ovr = {}
+    if ovr:
+        applied = 0
+        for i, r in enumerate(rows):
+            key = (r[0], r[2])
+            row = ovr.get(key)
+            if row and r[3] in (FAIL, UNKNOWN):
+                pdf = os.path.join(BASE, "data", "pdfs", r[0] + ".pdf")
+                if _ov.applies(row, pdf):
+                    rows[i] = (r[0], r[1], r[2], OVERRIDDEN,
+                               f'{r[4]}  [OVERRIDDEN: {row["why"][:90]}]')
+                    applied += 1
+        if applied:
+            print(f"overrides applied: {applied}")
 
     with open(args.out, "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
