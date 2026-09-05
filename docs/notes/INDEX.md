@@ -1,6 +1,6 @@
 # Notes the corpus wrote about itself
 
-Thirty-nine notes, one idea each, kept verbatim. Every one exists because
+Forty notes, one idea each, kept verbatim. Every one exists because
 something went wrong in a way that was not obvious beforehand, and the specifics
 are what make them stick: a summary saying "closure has limits" would not have
 stopped anyone, and Provincetown's exact figures did.
@@ -24,6 +24,7 @@ to know why something is the way it is.
 - [`date-corroboration`](civicatlas-date-corroboration.md) — read the ARCHIVED capture; a live page names the next election
 - [`proximity-not-aboutness`](civicatlas-proximity-not-aboutness.md) — a signed return outranks a forecast calendar
 - [`undated-returns-publishable`](civicatlas-undated-returns-publishable.md) — the owner's rule for an undated return
+- [`preliminary-is-two-words`](civicatlas-preliminary-is-two-words.md) — a preliminary ELECTION and preliminary RESULTS are unrelated things
 
 ## Layer 1 — is the reading grounded?
 

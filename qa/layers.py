@@ -220,10 +220,37 @@ def layer0_right_document(stem, record, text, source):
     # tracked without being published.  What makes it a defect is only that it
     # sits in an ANNUAL town-year slot, which a preliminary must never occupy.
     # The fix is to register and split it, never to discard it.
-    if re.search(r"\bpreliminar(y|ies)\b", text[:600], re.I):
+    #
+    # But the WORD does double duty, and matching it alone was wrong about 19 of
+    # the 20 records it flagged.  A PRELIMINARY ELECTION is the Massachusetts
+    # municipal primary, a distinct election.  "Preliminary results" are the
+    # unofficial figures of ANY election, announced on the night and finalised
+    # later, and that is what nineteen of these documents were saying:
+    #
+    #   Needham 2026  "Preliminary Results of Annual Town Election 4/14/2026"
+    #   Acton 2026    "Annual Town Election PRELIMINARY April 28, 2026"
+    #   Acushnet 2026 "the figures listed below are preliminary and will be
+    #                  finalized within four days following the election"
+    #   Carlisle 2026 "The 2026 Annual Town Election was held Tuesday, June 2,
+    #                  2026 ... PRELIMINARY RESULTS"
+    #
+    # So the word must name the ELECTION, not the figures: "preliminary" within
+    # two words of "election", and not the phrase "preliminary ... election
+    # results", which is how Holliston 2025 and Carlisle 2024 head a full annual
+    # slate.  This is strictly narrower than the old pattern -- it can only
+    # un-flag, never flag something new.  Salem 2023 is what still matches, and
+    # it is a 21-page compilation whose first page is a special preliminary; a
+    # compilation never gets a whole-document verdict, so it carries an override
+    # rather than a weaker check.
+    head = text[:600]
+    m = re.search(r"\bpreliminary\s+(?:\w+\s+){0,2}?election\b(?!\s+results)",
+                  head, re.I)
+    if m:
+        quote = head[max(0, m.start() - 40):m.end() + 40].strip()
         out.append((stem, 0, "preliminary_in_an_annual_slot", FAIL,
-                    "heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> "
-                    "in data/preliminaries/ and find the annual for this town-year"))
+                    f"heading names a PRELIMINARY ELECTION: ...{quote}...; "
+                    "register it as P<Muni><YYYYMMDD> in data/preliminaries/ "
+                    "and find the annual for this town-year"))
 
     # "Is it a return?" cannot be answered by counting digits: Alford 2021 is a
     # real return with 53 ballots cast and barely any numbers, and 235 town-years

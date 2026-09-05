@@ -1,11 +1,11 @@
 stem,bucket,priority,size,worst_verdict,layer,findings,summary,status,resolution
-Needham2026,preliminaries-1,9677.2,25105,FAIL,0,11,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
-Acushnet2026,preliminaries-1,7677.0,8637,FAIL,0,5,carries_the_year: '2026' does not appear in data/raw_ocr/Acushnet2026.txt,open,
+Needham2026,preliminaries-1,9677.2,25105,FAIL,0,11,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: heading reads ""Townwide Offices Preliminary Results of Annual Town Election 4/14/2026"" -- the RESULTS are preliminary, the ELECTION is the annual. Check corrected."
+Acushnet2026,preliminaries-1,7677.0,8637,FAIL,0,5,carries_the_year: '2026' does not appear in data/raw_ocr/Acushnet2026.txt,done,"no-change: clerk's note reads ""* Please note the figures listed below are preliminary and will be finalized within four days following the election."" above ""TOWN ELECTION --- 4/28/26"". Annual return, unofficial figures."
 Boston2021,wrong-document-1,7473.0,438041,FAIL,0,4,document_supports_record: 0/25 names and 0/36 figures located in data/raw_ocr/Boston2021.txt,open,
 Boston2023,wrong-document-1,7449.2,423408,FAIL,0,4,document_supports_record: 0/25 names and 0/45 figures located in data/raw_ocr/Boston2023.txt,open,
 Hopedale2025,wrong-document-1,7067.2,4653,FAIL,0,5,carries_the_year: '2025' does not appear in data/raw_ocr/Hopedale2025.txt,open,
 Wellesley2026,ungrounded-names-1,6928.1,19456,FAIL,1,11,names_grounded: 118/119 names located in data/raw_ocr/Wellesley2026.txt,open,
-Agawam2025,preliminaries-1,6894.3,22971,FAIL,0,4,carries_the_year: '2025' does not appear in data/markdown/Agawam2025.md,open,
+Agawam2025,preliminaries-1,6894.3,22971,FAIL,0,4,carries_the_year: '2025' does not appear in data/markdown/Agawam2025.md,done,"no-change: header reads ""MUNICIPAL ELECTION Preliminary""; the slate is a full general (Mayor 1 candidate + 1388 blanks, 16 City Council for 11 seats, 7 School Committee for 6) and every contest closes on 5088 ballots: 5088x1, 55968=5088x11, 30528=5088x6. A preliminary narrows a field; nothing here is narrowed. NOTE: the document prints no date anywhere -- see the undated bucket."
 Worcester2023,undated-1,6678.4,111459,FAIL,0,5,carries_the_year: '2023' does not appear in data/markdown/Worcester2023.md,open,
 Dunstable2025,wrong-document-1,6485.4,2731,FAIL,0,6,carries_the_year: '2025' does not appear in data/markdown/Dunstable2025.md,open,
 Holyoke2021,undated-1,6361.4,27355,FAIL,0,7,carries_the_year: '2021' does not appear in data/raw_ocr/Holyoke2021.txt,open,
@@ -29,7 +29,7 @@ Wareham2023,undated-1,5374.9,17993,FAIL,0,5,carries_the_year: '2023' does not ap
 Stoneham2026,undated-1,5335.1,17810,FAIL,0,4,carries_the_year: '2026' does not appear in data/raw_ocr/Stoneham2026.txt,open,
 Sturbridge2024,ungrounded-names-1,5333.2,7400,FAIL,1,12,names_grounded: 27/36 names located in data/raw_ocr/Sturbridge2024.txt,open,
 Middleborough2026,wrong-document-1,5296.8,20342,FAIL,0,3,document_supports_record: 0/26 names and 0/44 figures located in data/raw_ocr/Middleborough2026.txt,open,
-Acton2026,preliminaries-1,5270.0,16246,FAIL,0,4,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Acton2026,preliminaries-1,5270.0,16246,FAIL,0,4,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: page heading on all 3 pages reads ""Annual Town Election PRELIMINARY April 28, 2026"". Annual return, unofficial figures."
 Wilmington2022,undated-1,5241.9,17924,FAIL,0,4,carries_the_year: '2022' does not appear in data/raw_ocr/Wilmington2022.txt,open,
 Wilmington2026,wrong-document-1,5239.7,17866,FAIL,0,4,document_supports_record: 0/9 names and 0/17 figures located in data/raw_ocr/Wilmington2026.txt,open,
 NewBedford2025,undated-1,5205.5,71671,FAIL,0,4,carries_the_year: '2025' does not appear in data/markdown/NewBedford2025.md,open,
@@ -49,22 +49,22 @@ Medway2021,wrong-document-1,4946.6,10281,FAIL,0,4,document_supports_record: 0/14
 Lynnfield2024,undated-1,4916.1,9639,FAIL,0,5,carries_the_year: '2024' does not appear in data/raw_ocr/Lynnfield2024.txt,open,
 FallRiver2025,undated-1,4914.4,56321,FAIL,0,3,carries_the_year: '2025' does not appear in data/markdown/FallRiver2025.md,open,
 Dartmouth2026,undated-1,4912.0,24977,FAIL,0,5,carries_the_year: '2026' does not appear in data/raw_ocr/Dartmouth2026.txt,open,
-Holliston2025,preliminaries-1,4903.6,11508,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Holliston2025,preliminaries-1,4903.6,11508,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: source is the Holliston Reporter, headline ""Preliminary Town Election Results 05/20/25"", over the full annual slate (Moderator, Town Clerk, Select Board & Hywy Surv., ...). Annual election, unofficial figures."
 Lynnfield2022,undated-1,4892.8,9525,FAIL,0,4,carries_the_year: '2022' does not appear in data/raw_ocr/Lynnfield2022.txt,open,
 Lynnfield2023,undated-1,4886.0,9434,FAIL,0,4,carries_the_year: '2023' does not appear in data/raw_ocr/Lynnfield2023.txt,open,
 Lynnfield2021,wrong-document-1,4884.4,9412,FAIL,0,4,document_supports_record: 0/10 names and 0/24 figures located in data/raw_ocr/Lynnfield2021.txt,open,
-Agawam2023,preliminaries-1,4880.1,21907,FAIL,0,4,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Agawam2023,preliminaries-1,4880.1,21907,FAIL,0,4,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,escalated,"escalated: no document held in this environment -- civicatlasma publishes no pdf/markdown/xlsx for Agawam2023 and the corpus text (data/raw_ocr/Agawam2023.txt) is not in the clone. The record holds ONE contest, ""Mayor"" dated 2023-11-07, where the Agawam general also elects City Council and School Committee. A one-office record plus a preliminary heading is the shape a real preliminary would have. Cannot be settled without opening the document."
 Lawrence2023,undated-1,4789.4,45191,FAIL,0,3,carries_the_year: '2023' does not appear in data/markdown/Lawrence2023.md,open,
 Hull2021,undated-1,4705.1,8623,FAIL,0,3,carries_the_year: '2021' does not appear in data/raw_ocr/Hull2021.txt,open,
 Peabody2025,undated-1,4702.8,41353,FAIL,0,2,carries_the_year: '2025' does not appear in data/markdown/Peabody2025.md,open,
 Millbury2024,ungrounded-names-1,4694.2,10822,FAIL,1,9,names_grounded: 105/107 names located in data/markdown/Millbury2024.md,open,
 Upton2026,undated-1,4654.9,6657,FAIL,0,5,carries_the_year: '2026' does not appear in data/raw_ocr/Upton2026.txt,open,
 Freetown2026,undated-1,4644.2,7410,FAIL,0,6,carries_the_year: '2026' does not appear in data/raw_ocr/Freetown2026.txt,open,
-Salem2023,preliminaries-1,4607.5,32796,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Salem2023,preliminaries-1,4607.5,32796,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,escalated,"no-change on this check (override written) + escalated for a different defect. The document is a 21-page COMPILATION of every Salem election from 2023 to 2024: p1 ""SPECIAL PRELIMINARY ELECTION MARCH 28, 2023"", p2 ""MAYORAL SPECIAL FINAL ELECTION MAY 16, 2023"", p3 ""PRELIMINARY ELECTION SEPTEMBER 19, 2023"", p4 ""CITY BIENNIAL ELECTION NOVEMBER 7, 2023"", then the 2024 state elections. The check reads p1 and condemns the whole file; a compilation never gets a whole-document verdict. The record holds no preliminary contest. It DOES hold ""2023-05-16 General/Special MAYOR"" in the annual slot, which the specials rule forbids -- see qa/reference/adjudications.csv."
 Townsend2025,undated-1,4597.4,7219,FAIL,0,4,carries_the_year: '2025' does not appear in data/raw_ocr/Townsend2025.txt,open,
-Chatham2026,preliminaries-1,4594.1,6105,FAIL,0,5,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Chatham2026,preliminaries-1,4594.1,6105,FAIL,0,5,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: heading reads ""MAY 14, 2026 ANNUAL TOWN ELECTION""; the string the check matched is the footer ""* PRELIMINARY RESULTS *"" on the last line. Annual return, unofficial figures."
 Townsend2024,undated-1,4593.1,7173,FAIL,0,4,carries_the_year: '2024' does not appear in data/raw_ocr/Townsend2024.txt,open,
-Merrimac2024,preliminaries-1,4589.9,5950,FAIL,0,5,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Merrimac2024,preliminaries-1,4589.9,5950,FAIL,0,5,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: scanned PDF, no text layer (pdftotext yields 4 bytes); read as page images. Page 1 heads ""Preliminary Results / Local Election 5.6.2024"" over Moderator, Selectman, Assessor, Planning Board, School Committee -- the full annual slate the record holds. Annual election, unofficial figures."
 WestBoylston2026,undated-1,4537.4,5744,FAIL,0,4,carries_the_year: '2026' does not appear in data/raw_ocr/WestBoylston2026.txt,open,
 Ayer2026,wrong-document-1,4535.2,6594,FAIL,0,4,document_supports_record: 0/12 names and 0/22 figures located in data/raw_ocr/Ayer2026.txt,open,
 Chatham2022,wrong-document-1,4505.7,6189,FAIL,0,4,document_supports_record: 0/5 names and 0/11 figures located in data/raw_ocr/Chatham2022.txt,open,
@@ -78,10 +78,10 @@ Canton2021,undated-1,4346.7,17431,FAIL,0,3,carries_the_year: '2021' does not app
 Lincoln2022,undated-1,4337.7,4942,FAIL,0,4,carries_the_year: '2022' does not appear in data/raw_ocr/Lincoln2022.txt,open,
 Stoughton2022,undated-1,4329.2,21289,FAIL,0,2,carries_the_year: '2022' does not appear in data/raw_ocr/Stoughton2022.txt,open,
 Carlisle2023,undated-1,4280.6,3975,FAIL,0,4,carries_the_year: '2023' does not appear in data/markdown/Carlisle2023.md,open,
-Kingston2022,preliminaries-1,4260.9,10681,FAIL,0,4,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Kingston2022,preliminaries-1,4260.9,10681,FAIL,0,4,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: heading reads ""ATE 2022 Preliminary 4/23/2022"" -- ATE is the Annual Town Election, and Kingston 2024 spells the same header out as ""PRELIMINARY RESULTS KINGSTON ATE 2024"". Annual return, unofficial figures."
 WestNewbury2024,undated-1,4253.4,3822,FAIL,0,4,carries_the_year: '2024' does not appear in data/raw_ocr/WestNewbury2024.txt,open,
 WestNewbury2025,undated-1,4246.6,3785,FAIL,0,4,carries_the_year: '2025' does not appear in data/raw_ocr/WestNewbury2025.txt,open,
-Carlisle2026,preliminaries-1,4190.7,4061,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Carlisle2026,preliminaries-1,4190.7,4061,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: text reads ""The 2026 Annual Town Election was held Tuesday, June 2, 2026 at the Carlisle Town Hall ... PRELIMINARY RESULTS"". Annual return, unofficial figures."
 WestTisbury2024,ungrounded-figures-1,4166.5,2724,FAIL,1,8,figures_grounded: 31/33 figures located in data/markdown/WestTisbury2024.md,open,
 Dracut2026,no-document-1,4155.2,25363,FAIL,0,3,document_held: no document of any kind held,open,
 Sturbridge2022,ungrounded-names-1,4133.9,7158,FAIL,1,8,names_grounded: 1/12 names located in data/raw_ocr/Sturbridge2022.txt,open,
@@ -90,14 +90,14 @@ Medfield2026,undated-1,4086.2,9752,FAIL,0,8,carries_the_year: '2026' does not ap
 Needham2024,ungrounded-names-1,4083.5,24380,FAIL,1,6,names_grounded: 116/118 names located in data/markdown/Needham2024.md,open,
 Sherborn2021,undated-1,4065.9,3314,FAIL,0,4,carries_the_year: '2021' does not appear in data/raw_ocr/Sherborn2021.txt,open,
 Auburn2022,undated-1,4042.8,12430,FAIL,0,3,carries_the_year: '2022' does not appear in data/markdown/Auburn2022.md,open,
-Bedford2021,preliminaries-1,3955.0,10349,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Bedford2021,preliminaries-1,3955.0,10349,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,escalated,"escalated: no document held in this environment -- civicatlasma publishes no pdf/markdown/xlsx for Bedford2021 and data/raw_ocr/Bedford2021.txt is not in the clone. The record is 6 contests dated 2021-03-13 (Board of Health, Planning Board, School Committee, Library Trustees, Shawsheen Tech, Housing Authority), which is the shape of a Bedford annual town election, but that is inference from the record and not a reading of the document."
 Quincy2021,no-document-1,3925.0,64565,FAIL,0,3,document_held: no document of any kind held,open,
 Littleton2025,undated-1,3917.6,7879,FAIL,0,4,carries_the_year: '2025' does not appear in data/markdown/Littleton2025.md,open,
 Wareham2026,no-document-1,3897.0,19969,FAIL,0,4,document_held: no document of any kind held,open,
 Acushnet2021,undated-1,3893.5,7946,FAIL,0,3,carries_the_year: '2021' does not appear in data/raw_ocr/Acushnet2021.txt,open,
 Rockland2022,undated-1,3882.2,12657,FAIL,0,5,carries_the_year: '2022' does not appear in data/markdown/Rockland2022.md,open,
 Rutland2026,undated-1,3862.7,7531,FAIL,0,3,carries_the_year: '2026' does not appear in data/raw_ocr/Rutland2026.txt,open,
-Acushnet2025,preliminaries-1,3853.2,8637,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Acushnet2025,preliminaries-1,3853.2,8637,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: same clerk's form as Acushnet2026 -- ""* Please note the figures listed below are preliminary and will be finalized within four days following the election."" above ""TOWN ELECTION --- 4/22/25"". The held markdown even cites the source URL slug 2025_ANNUAL_TOWN_ELECTION_PRELIMINARY_RESULTS."
 Holbrook2026,undated-1,3819.5,8571,FAIL,0,2,carries_the_year: '2026' does not appear in data/markdown/Holbrook2026.md,open,
 Holbrook2024,undated-1,3803.0,8321,FAIL,0,2,carries_the_year: '2024' does not appear in data/markdown/Holbrook2024.md,open,
 Medford2021,undated-1,3795.9,41121,FAIL,0,3,carries_the_year: '2021' does not appear in data/markdown/Medford2021.md,open,
@@ -135,11 +135,11 @@ Wilmington2023,undated-1,3277.9,17497,FAIL,0,2,carries_the_year: '2023' does not
 Burlington2022,ungrounded-names-1,3277.4,18841,FAIL,1,4,names_grounded: 79/80 names located in data/markdown/Burlington2022.md,open,
 Wilmington2021,undated-1,3257.4,17990,FAIL,0,1,carries_the_year: '2021' does not appear in data/markdown/Wilmington2021.md,open,
 Halifax2021,undated-1,3232.8,6022,FAIL,0,3,carries_the_year: '2021' does not appear in data/markdown/Halifax2021.md,open,
-WestBridgewater2026,preliminaries-1,3230.8,5998,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+WestBridgewater2026,preliminaries-1,3230.8,5998,FAIL,0,3,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: news-sourced record. The markdown reads ""West Bridgewater, MA - Annual Town Election, Saturday April 11, 2026 (preliminary results)"", source WATD 95.9 FM. Annual election, figures reported as preliminary."
 Goshen2026,undated-1,3213.1,798,FAIL,0,5,carries_the_year: '2026' does not appear in data/raw_ocr/Goshen2026.txt,open,
 Harwich2021,undated-1,3203.1,11518,FAIL,0,3,carries_the_year: '2021' does not appear in data/markdown/Harwich2021.md,open,
 Monterey2023,undated-1,3175.6,752,FAIL,0,5,carries_the_year: '2023' does not appear in data/markdown/Monterey2023.md,open,
-Fairhaven2023,preliminaries-1,3134.9,12603,FAIL,0,2,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Fairhaven2023,preliminaries-1,3134.9,12603,FAIL,0,2,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,escalated,"escalated: no document held in this environment -- civicatlasma publishes no pdf/markdown/xlsx for Fairhaven2023 and data/raw_ocr/Fairhaven2023.txt is not in the clone. The record is 7 contests dated 2023-04-03 (School Committee, Planning Board, Board of Public Works, Board of Health, Select Board, Commissioner of Trust, Housing Authority) -- the shape of the annual -- but that is inference, not a reading."
 Medfield2024,undated-1,3118.6,9546,FAIL,0,3,carries_the_year: '2024' does not appear in data/markdown/Medfield2024.md,open,
 Auburn2023,undated-1,3115.8,12499,FAIL,0,2,carries_the_year: '2023' does not appear in data/markdown/Auburn2023.md,open,
 Medfield2025,undated-1,3113.3,9752,FAIL,0,2,carries_the_year: '2025' does not appear in data/markdown/Medfield2025.md,open,
@@ -148,7 +148,7 @@ Medfield2022,undated-1,3102.7,9524,FAIL,0,2,carries_the_year: '2022' does not ap
 Raynham2022,undated-1,3102.5,12121,FAIL,0,2,carries_the_year: '2022' does not appear in data/markdown/Raynham2022.md,open,
 Medfield2023,undated-1,3099.1,9447,FAIL,0,2,carries_the_year: '2023' does not appear in data/markdown/Medfield2023.md,open,
 Raynham2021,undated-1,3084.2,12040,FAIL,0,1,carries_the_year: '2021' does not appear in data/markdown/Raynham2021.md,open,
-Kingston2024,preliminaries-1,3077.1,11430,FAIL,0,2,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Kingston2024,preliminaries-1,3077.1,11430,FAIL,0,2,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: first line reads ""PRELIMINARY RESULTS KINGSTON ATE 2024 5/18/2024 7:45 PM Saturday, May 18, 2024"". ATE is the Annual Town Election; the timestamp is election night. Annual return, unofficial figures."
 Palmer2021,undated-1,3076.7,8986,FAIL,0,2,carries_the_year: '2021' does not appear in data/markdown/Palmer2021.md,open,
 Kingston2021,undated-1,3055.8,10506,FAIL,0,3,carries_the_year: '2021' does not appear in data/markdown/Kingston2021.md,open,
 Clinton2022,undated-1,3041.7,10531,FAIL,0,2,carries_the_year: '2022' does not appear in data/markdown/Clinton2022.md,open,
@@ -176,7 +176,7 @@ WestTisbury2022,ungrounded-figures-1,2761.7,2750,FAIL,1,10,figures_grounded: 38/
 Lancaster2021,undated-1,2752.2,5376,FAIL,0,2,carries_the_year: '2021' does not appear in data/markdown/Lancaster2021.md,open,
 Washington2024,wrong-document-1,2747.5,415,FAIL,0,4,document_supports_record: 0/19 names and 0/25 figures located in data/raw_ocr/Washington2024.txt,open,
 Granby2024,undated-1,2742.4,5091,FAIL,0,2,carries_the_year: '2024' does not appear in data/markdown/Granby2024.md,open,
-Rowley2026,preliminaries-1,2734.5,4998,FAIL,0,2,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Rowley2026,preliminaries-1,2734.5,4998,FAIL,0,2,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,escalated,"escalated: no document held in this environment -- civicatlasma publishes no pdf/markdown/xlsx for Rowley2026 and data/raw_ocr/Rowley2026.txt is not in the clone. The record is 8 contests dated 2026-05-12 (Selectmen, Planning Board, Triton School Committee, Water Board, Light Board, Assessors, Shellfish Commission, Library Trustees) -- the shape of the annual -- but that is inference, not a reading."
 Milton2026,ungrounded-names-1,2710.7,22112,FAIL,1,5,names_grounded: 123/162 names located in data/raw_ocr/Milton2026.txt,open,
 Stoughton2025,ungrounded-names-1,2694.6,23250,FAIL,1,3,names_grounded: 127/129 names located in data/raw_ocr/Stoughton2025.txt,open,
 Eastham2021,undated-1,2681.2,4554,FAIL,0,2,carries_the_year: '2021' does not appear in data/markdown/Eastham2021.md,open,
@@ -184,12 +184,12 @@ Eastham2023,undated-1,2681.2,4700,FAIL,0,1,carries_the_year: '2023' does not app
 Burlington2026,ungrounded-names-1,2669.1,19632,FAIL,1,5,names_grounded: 30/65 names located in data/raw_ocr/Burlington2026.txt,open,
 NewBraintree2023,undated-1,2649.2,817,FAIL,0,4,carries_the_year: '2023' does not appear in data/raw_ocr/NewBraintree2023.txt,open,
 Milford2023,ungrounded-names-1,2634.9,17804,FAIL,1,5,names_grounded: 281/282 names located in data/markdown/Milford2023.md,open,
-Carlisle2024,preliminaries-1,2617.6,4046,FAIL,0,1,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+Carlisle2024,preliminaries-1,2617.6,4046,FAIL,0,1,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: heading reads ""Preliminary Election Results May 21, 2024"" over Select Board, Town Moderator, Board of Assessors, Town Clerk, Board of Health and Question One - Fire Truck, every contest totalling 759 ballots. That is the annual ballot, not a primary; ""Preliminary"" qualifies ""Results""."
 Worcester2021,ungrounded-names-1,2613.9,104930,FAIL,1,4,names_grounded: 25/30 names located in data/raw_ocr/Worcester2021.txt,open,
 Westwood2026,ungrounded-names-1,2601.3,12398,FAIL,1,4,names_grounded: 13/21 names located in data/raw_ocr/Westwood2026.txt,open,
 Marblehead2021,ungrounded-names-1,2586.4,16226,FAIL,1,4,names_grounded: 30/37 names located in data/raw_ocr/Marblehead2021.txt,open,
-WestNewbury2021,preliminaries-1,2581.6,3716,FAIL,0,1,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
-WestNewbury2022,preliminaries-1,2581.2,3712,FAIL,0,1,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,open,
+WestNewbury2021,preliminaries-1,2581.6,3716,FAIL,0,1,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: heading reads ""MAY 3, 2021 ANNUAL TOWN ELECTION RESULTS WEST NEWBURY, MASSACHUSETTS""; the matched sentence is ""The Town Clerk announced the preliminary results at 8:05 PM."""
+WestNewbury2022,preliminaries-1,2581.2,3712,FAIL,0,1,preliminary_in_an_annual_slot: heading names a PRELIMINARY; register it as P<Muni><YYYYMMDD> in data/preliminaries/ and find the annual for t,done,"no-change: heading reads ""Annual town Election, May 1, 2022 West Newbury, Massachusetts""; the matched sentence is ""The Town Clerk announced the preliminary results at 8:00 p.m."""
 Pelham2021,ungrounded-names-1,2559.0,1058,FAIL,1,6,names_grounded: 2/14 names located in data/raw_ocr/Pelham2021.txt,open,
 Montgomery2023,undated-1,2521.1,637,FAIL,0,5,carries_the_year: '2023' does not appear in data/markdown/Montgomery2023.md,open,
 Sandisfield2023,undated-1,2519.5,659,FAIL,0,3,carries_the_year: '2023' does not appear in data/markdown/Sandisfield2023.md,open,
