@@ -74,6 +74,8 @@ def name_of(cand):
 
 
 def is_tally_row(cand):
+    if cand.get("tally_row") is True:
+        return True
     return name_of(cand).lower() in TALLY_ROWS
 
 
@@ -83,7 +85,16 @@ def votes_of(cand):
 
 
 def scope_of(contest):
-    """at_large | sub_town | regional_district -- inferred until it is a field."""
+    """at_large | sub_town | regional_district.
+
+    Prefer the stored field.  Inference from the office name is the fallback
+    for records the schema migration has not reached, and it is exactly the
+    guessing the field exists to remove -- letter-named districts and regional
+    committees both slipped past it.
+    """
+    stored = contest.get("scope")
+    if stored in ("at_large", "sub_town", "regional_district"):
+        return stored
     office = str(contest.get("office_original") or contest.get("office") or "")
     if RE_REGIONAL.search(office):
         return "regional_district"
@@ -107,6 +118,9 @@ def marks_in(contest):
 
 
 def blanks_printed(contest):
+    stored = contest.get("blanks_printed")
+    if isinstance(stored, bool):
+        return stored
     return any(name_of(c).lower() in ("blanks", "blank")
                for c in contest.get("candidates") or [])
 
