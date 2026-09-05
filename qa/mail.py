@@ -147,3 +147,61 @@ def has_reply_since(thread_id, after_message_id):
         if m["id"] == after_message_id or m["message_id"] == after_message_id:
             seen_anchor = True
     return False
+
+
+# --------------------------------------------------------------------------
+# Composing the report
+# --------------------------------------------------------------------------
+
+PAGES = "https://jamesnicholsworley.github.io/civicatlasma"
+
+
+def pages_url(stem, kind="pdfs"):
+    """Where a reader can open this record without a checkout."""
+    ext = {"pdfs": "_d0.pdf", "json": ".json", "markdown": ".md"}[kind]
+    return f"{PAGES}/{kind}/{stem}{ext}"
+
+
+def compose(bucket, resolved, questions, proposed=(), changes_csv=None):
+    """Build the run's email.
+
+    Two conventions, both learned from the first one being wrong:
+
+    **Do not hard-wrap.** A mail client reflows to the reader's window, and text
+    pre-wrapped to 78 columns fights that -- worst on a phone, where it turns
+    into a ragged column with every second line half empty.  Write paragraphs as
+    single lines and let the client break them.
+
+    **Keep it short.** The email is a decision request, not a report.  Anything
+    that is a list belongs in an attachment; anything that needs a person's
+    judgement belongs in the body.  A long email trains its reader to skim, and
+    the questions are the part that must not be skimmed.
+
+    Documents needing a human read are attached AND linked: the attachment so it
+    opens on a phone without a network round trip, the link so it can be checked
+    against what is actually published.
+    """
+    L = [f"Bucket {bucket}. {resolved} records resolved, {len(questions)} need you."]
+
+    if questions:
+        L.append("")
+        for i, q in enumerate(questions, 1):
+            L.append(f"{i}. {q['stem']} - {q['ask']}")
+            if q.get("evidence"):
+                L.append(f"   Document says: \"{q['evidence']}\"")
+            if q.get("stem"):
+                L.append(f"   {pages_url(q['stem'])}")
+            L.append("")
+
+    if proposed:
+        L.append("Proposed checks:")
+        for p in proposed:
+            L.append(f"- {p['name']}: {p['catches']} (retires: {p.get('retires', 'nothing - say why')})")
+        L.append("")
+
+    if changes_csv:
+        L.append(f"Full change list attached ({os.path.basename(changes_csv)}).")
+        L.append("")
+
+    L.append("Reply to start the next bucket.")
+    return "\n".join(L)
