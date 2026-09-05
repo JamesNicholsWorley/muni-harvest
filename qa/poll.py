@@ -65,6 +65,7 @@ def fire(payload_text):
     req = urllib.request.Request(FIRE_URL.format(routine_id=rid), data=body)
     req.add_header("Authorization", f"Bearer {token}")
     req.add_header("Content-Type", "application/json")
+    req.add_header("anthropic-version", "2023-06-01")
     req.add_header("anthropic-beta", "experimental-cc-routine-2026-04-01")
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
