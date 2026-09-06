@@ -1,0 +1,4 @@
+stem,why,queued_on,status,chars,done_on
+Middleborough2026,"raw_ocr kept the headings and lost every candidate row: it reads ""Select Board (Vote for 2) / 956 490 614 466 716 650 756| 4648 |"" with no names at all. The page renders clean at 150dpi and the record matches it exactly.",2026-09-06,waiting,,
+Pelham2022,"raw_ocr kept every office heading and lost all eleven tables (""| SELECT BOARD (One for Three Years) LIBRARY TRUSTEES (Two for Three Years)"" then nothing). Page renders clean at 150dpi; record matches it exactly.",2026-09-06,waiting,,
+Buckland2022,"clean 3-page scan, never OCR'd: markdown is ""<!-- image -->"" only and there is no raw_ocr, so 0/29 names grounded against a fully legible document.",2026-09-06,waiting,,
