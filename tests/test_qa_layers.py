@@ -363,3 +363,40 @@ def test_a_grouped_figure_grounds_the_record():
         "SELECT BOARD Jane Q. Public 4,271 Blanks 12", "test")
     assert dict((r[2], r[3]) for r in rows)["figures_grounded"] == "PASS"
     assert _supports("SELECT BOARD Jane Q. Public 4,271 Blanks 12") == "PASS"
+
+
+# ---- a clerk dates a return the way a clerk writes a date ------------------
+
+def test_a_two_digit_year_inside_a_date_is_the_year():
+    # Each of these is the heading line of a held document, verbatim, and each
+    # was reported as not carrying its own year.
+    assert layers.year_found(
+        "2021", "TOWN OF WILMINGTON - ANNUAL TOWN ELECTION 24-Apr-21 OFFICES")
+    assert layers.year_found("2025", "ANNUAL TOWN ELECTION 05/17/25 Boad of Health")
+    assert layers.year_found("2026", "BOXBOROUGH TOWN ELECTION Results 2-Jun-26")
+    assert layers.year_found(
+        "2023", "FINAL RESULTS ANNUAL TOWN ELECTION 5/1/23 - 129 VOTERS")
+    assert layers.year_found("2022", "## LOCALELECTION 2-May-22 ## GROVELAND")
+
+
+def test_the_four_digit_year_still_matches_without_a_boundary():
+    # Medford 2025: OCR strips the spaces, so a word boundary cannot match.
+    assert layers.year_found(
+        "2025", "OFFICIAL2025GENERALMUNICIPALELECTIONRESULTS")
+
+
+def test_two_loose_digits_are_not_a_year():
+    # The two-digit form is admitted only inside a whole date. A tally of 21
+    # votes, a precinct numbered 26, or a bare pair of digits is not one.
+    assert not layers.year_found("2021", "Blanks 21 Write-ins 3 TOTAL 24")
+    assert not layers.year_found("2026", "PRECINCT 26 TOTAL 1,204")
+    assert not layers.year_found("2023", "23")
+    # A date in a different year is still a different year.
+    assert not layers.year_found("2024", "ANNUAL TOWN ELECTION 24-Apr-21")
+
+
+def test_an_undated_document_is_still_undated():
+    rows = layer0_right_document(
+        "Anytown2024", {"elections": []},
+        "ANNUAL TOWN ELECTION Blanks 12 Jane Q. Public 4271", "test")
+    assert dict((r[2], r[3]) for r in rows)["carries_the_year"] == "FAIL"

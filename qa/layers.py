@@ -275,6 +275,43 @@ def year_of(stem):
     return m.group(1) if m else None
 
 
+RE_MONTH = (r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?")
+
+
+def year_found(year, text):
+    """Where this year is printed in `text`, in either spelling a clerk uses.
+
+    A clerk dates a return the way a clerk writes a date, and half of them use
+    two digits.  Wilmington heads four consecutive years
+    "TOWN OF WILMINGTON - ANNUAL TOWN ELECTION 24-Apr-21" (and 23-Apr-22,
+    22-Apr-23, 27-Apr-24); Becket 2025 heads "ANNUAL TOWN ELECTION 05/17/25";
+    Boxborough 2026 "BOXBOROUGH TOWN ELECTION Results 2-Jun-26"; New Braintree
+    2023 "FINAL RESULTS ANNUAL TOWN ELECTION 5/1/23 -- 129 VOTERS".  Every one
+    of those documents prints its year, and 34 of them were reported as
+    undated because the check knew only the four-digit spelling.
+
+    The two-digit form is admitted only as part of a whole date -- a month and
+    a day beside it -- which makes it STRICTER than the four-digit match it
+    joins, not looser: a bare "2021" grounds on anything, "24-Apr-21" grounds on
+    a date.  So this can only un-flag.
+
+    Returns the match, or None, so the caller can quote what it found.
+    """
+    if not year:
+        return None
+    m = re.search(re.escape(year), text)
+    if m:
+        return m
+    yy = year[2:]
+    for pat in (r"\b(?:0?[1-9]|1[0-2])[/-](?:0?[1-9]|[12]\d|3[01])[/-]" + yy + r"\b",
+                RE_MONTH + r"\s*[-/]?\s*(?:0?[1-9]|[12]\d|3[01]),?\s*[-/]?\s*" + yy + r"\b",
+                r"\b(?:0?[1-9]|[12]\d|3[01])\s*[-/]\s*" + RE_MONTH + r"\s*[-/]\s*" + yy + r"\b"):
+        m = re.search(pat, text, re.I)
+        if m:
+            return m
+    return None
+
+
 # ---------------------------------------------------------------- layer 0
 
 def layer0_right_document(stem, record, text, source):
@@ -308,13 +345,16 @@ def layer0_right_document(stem, record, text, source):
                 f"document never prints '{town}'; identity rests on the citation alone"))
 
     year = year_of(stem)
-    # No word boundary: OCR strips spaces, and Medford 2025 prints its heading as
-    # OFFICIAL2025GENERALMUNICIPALELECTIONRESULTS, where a boundary cannot match.
-    m = re.search(re.escape(year), text) if year else None
+    # No word boundary on the four-digit form: OCR strips spaces, and Medford
+    # 2025 prints its heading as OFFICIAL2025GENERALMUNICIPALELECTIONRESULTS,
+    # where a boundary cannot match.  Two digits inside a date count too --
+    # see year_found.
+    m = year_found(year, text)
     out.append((stem, 0, "carries_the_year",
                 PASS if m else FAIL,
                 f"...{text[max(0,m.start()-40):m.end()+40].strip()}..." if m
-                else f"'{year}' does not appear in {source}"))
+                else f"'{year}' does not appear in {source}, "
+                     f"in that spelling or as a date ending {year[2:]}"))
 
     # A preliminary is not junk and it is not an annual election.  Like a
     # special it is cordoned off under its own name -- P<Muni><YYYYMMDD>, in

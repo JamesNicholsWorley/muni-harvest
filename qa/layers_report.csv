@@ -142,7 +142,7 @@ Acton2026,2,contest_closes,PASS,WATER DISTRICT COMMISSIONER: 1984 == 1984 x 1
 Acton2026,2,contest_closes,PASS,WATER DISTRICT CLERK: 1984 == 1984 x 1
 Acton2026,3,office_count_consistent,PASS,8 contests; median 6 in other years
 Acushnet2021,0,document_self_identifies,NOTE,document never prints 'Acushnet'; identity rests on the citation alone
-Acushnet2021,0,carries_the_year,FAIL,'2021' does not appear in raw_ocr+pdftext
+Acushnet2021,0,carries_the_year,FAIL,"'2021' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 21"
 Acushnet2021,0,document_supports_record,PASS,42/42 names and 63/63 figures located in raw_ocr+pdftext
 Acushnet2021,1,names_grounded,PASS,42/42 names located in raw_ocr+pdftext
 Acushnet2021,1,figures_grounded,PASS,63/63 figures located in raw_ocr+pdftext
@@ -180,7 +180,7 @@ Acushnet2025,1,figures_grounded,PASS,7/7 figures located in markdown+pdftext
 Acushnet2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Acushnet2025,3,office_count_consistent,PASS,11 contests; median 12 in other years
 Acushnet2026,0,document_self_identifies,PASS,"...Cr nN TOWN OF ACUSHNET Sea iN 130 MAIN STREET, ACUSH..."
-Acushnet2026,0,carries_the_year,FAIL,'2026' does not appear in raw_ocr+pdftext
+Acushnet2026,0,carries_the_year,PASS,...egistered Voters: 565 TOWN ELECTION --- 4/28/26 Voter Turnout (%): 15.72 OFFICE PREC |...
 Acushnet2026,0,document_supports_record,PASS,10/10 names and 10/10 figures located in raw_ocr+pdftext
 Acushnet2026,1,names_grounded,PASS,10/10 names located in raw_ocr+pdftext
 Acushnet2026,1,figures_grounded,PASS,10/10 figures located in raw_ocr+pdftext
@@ -278,7 +278,7 @@ Agawam2023,1,figures_grounded,PASS,2/2 figures located in markdown
 Agawam2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Agawam2023,3,office_count_consistent,FAIL,1 contests; this town's other years median 3
 Agawam2025,0,document_self_identifies,NOTE,document never prints 'Agawam'; identity rests on the citation alone
-Agawam2025,0,carries_the_year,FAIL,'2025' does not appear in markdown+pdftext
+Agawam2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown+pdftext, in that spelling or as a date ending 25"
 Agawam2025,0,document_supports_record,PASS,32/32 names and 38/38 figures located in markdown+pdftext
 Agawam2025,1,names_grounded,PASS,32/32 names located in markdown+pdftext
 Agawam2025,1,figures_grounded,PASS,38/38 figures located in markdown+pdftext
@@ -395,7 +395,7 @@ Amherst2025,1,figures_grounded,PASS,55/55 figures located in markdown+pdftext
 Amherst2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Amherst2025,3,office_count_consistent,PASS,10 contests; median 10 in other years
 Andover2021,0,document_self_identifies,PASS,...TS FOR ANNUAL TOWN ELECTION - ANDOVER MASSACHUSETTS 23-Mar-21 PRECI...
-Andover2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Andover2021,0,carries_the_year,PASS,...L TOWN ELECTION - ANDOVER MASSACHUSETTS 23-Mar-21 PRECINCTS: P-1 P-2 P-3 P-4 P-5 P-6 P-7/...
 Andover2021,0,document_supports_record,PASS,12/12 names and 24/24 figures located in markdown+pdftext
 Andover2021,1,names_grounded,PASS,12/12 names located in markdown+pdftext
 Andover2021,1,figures_grounded,PASS,24/24 figures located in markdown+pdftext
@@ -500,7 +500,7 @@ Aquinnah2024,1,figures_grounded,PASS,10/10 figures located in raw_ocr+pdftext
 Aquinnah2024,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Aquinnah2024,3,office_count_consistent,PASS,7 contests; median 6 in other years
 Aquinnah2025,0,document_self_identifies,PASS,...re than ONE Shall the Town of Aquinnah be allowed to exempt from the...
-Aquinnah2025,0,carries_the_year,FAIL,'2025' does not appear in raw_ocr
+Aquinnah2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr, in that spelling or as a date ending 25"
 Aquinnah2025,0,document_supports_record,PASS,2/9 names and 0/12 figures located in raw_ocr
 Aquinnah2025,1,names_grounded,FAIL,2/9 names located in raw_ocr
 Aquinnah2025,1,figures_grounded,FAIL,0/12 figures located in raw_ocr
@@ -1521,7 +1521,7 @@ Becket2021,2,contest_closes,PASS,"Member, Planning Board: 102 == 102 x 1"
 Becket2021,2,contest_closes,PASS,Constable: 204 == 102 x 2
 Becket2021,3,office_count_consistent,PASS,4 contests; median 7 in other years
 Becket2022,0,document_self_identifies,NOTE,document never prints 'Becket'; identity rests on the citation alone
-Becket2022,0,carries_the_year,FAIL,'2022' does not appear in markdown
+Becket2022,0,carries_the_year,FAIL,"'2022' does not appear in markdown, in that spelling or as a date ending 22"
 Becket2022,0,document_supports_record,PASS,17/17 names and 23/23 figures located in markdown
 Becket2022,1,names_grounded,PASS,17/17 names located in markdown
 Becket2022,1,figures_grounded,PASS,23/23 figures located in markdown
@@ -1554,7 +1554,7 @@ Becket2024,1,figures_grounded,PASS,34/34 figures located in markdown+pdftext
 Becket2024,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Becket2024,3,office_count_consistent,PASS,8 contests; median 5 in other years
 Becket2025,0,document_self_identifies,NOTE,document never prints 'Becket'; identity rests on the citation alone
-Becket2025,0,carries_the_year,FAIL,'2025' does not appear in raw_ocr
+Becket2025,0,carries_the_year,PASS,...ANNUAL TOWN ELECTION 05/17/25 Boad of Health Dr. Howard Lerner 185 Wr...
 Becket2025,0,document_supports_record,PASS,8/8 names and 15/15 figures located in raw_ocr
 Becket2025,1,names_grounded,PASS,8/8 names located in raw_ocr
 Becket2025,1,figures_grounded,PASS,15/15 figures located in raw_ocr
@@ -2122,7 +2122,7 @@ Bernardston2025,1,figures_grounded,PASS,15/15 figures located in markdown+pdftex
 Bernardston2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Bernardston2025,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Bernardston2026,0,document_self_identifies,PASS,...No surprises in Bernardston election - Greenfield Recorde...
-Bernardston2026,0,carries_the_year,FAIL,'2026' does not appear in markdown
+Bernardston2026,0,carries_the_year,FAIL,"'2026' does not appear in markdown, in that spelling or as a date ending 26"
 Bernardston2026,0,document_supports_record,PASS,12/12 names and 11/12 figures located in markdown
 Bernardston2026,1,names_grounded,PASS,12/12 names located in markdown
 Bernardston2026,1,figures_grounded,FAIL,11/12 figures located in markdown
@@ -2157,7 +2157,7 @@ Billerica2021,1,figures_grounded,FAIL,84/116 figures located in markdown
 Billerica2021,2,ballots_derivable,UNKNOWN,"5 contests, no two agree: [2523, 2607, 2619, 2691, 3683]"
 Billerica2021,3,office_count_consistent,PASS,24 contests; median 25 in other years
 Billerica2022,0,document_self_identifies,PASS,"...Report ANNUALTOWNELECTION ## BILLERICA, MA ## Summary For Jurisdicti..."
-Billerica2022,0,carries_the_year,FAIL,'2022' does not appear in markdown
+Billerica2022,0,carries_the_year,PASS,...% | | Write-inVotes | 38 | 1.43% | Date:04/02/22 Time:21:35:08 Page:1 of 6 ## Election S...
 Billerica2022,0,document_supports_record,PASS,197/197 names and 214/214 figures located in markdown
 Billerica2022,1,names_grounded,PASS,197/197 names located in markdown
 Billerica2022,1,figures_grounded,PASS,214/214 figures located in markdown
@@ -2554,7 +2554,7 @@ Boxborough2025,2,contest_closes,PASS,Moderator: 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Constable: 739 == 739 x 1
 Boxborough2025,3,office_count_consistent,PASS,9 contests; median 7 in other years
 Boxborough2026,0,document_self_identifies,PASS,...BOXBOROUGH TOWN ELECTION Results 2-Jun-2...
-Boxborough2026,0,carries_the_year,FAIL,'2026' does not appear in pdftext
+Boxborough2026,0,carries_the_year,PASS,...BOXBOROUGH TOWN ELECTION Results 2-Jun-26 OFFICES GRAND TOTAL Registered voters =...
 Boxborough2026,0,document_supports_record,PASS,13/13 names and 25/25 figures located in pdftext
 Boxborough2026,1,names_grounded,PASS,13/13 names located in pdftext
 Boxborough2026,1,figures_grounded,PASS,25/25 figures located in pdftext
@@ -2613,7 +2613,7 @@ Boxford2023,2,contest_closes,PASS,BOXFORD SCHOOL COMMITTEE: 2270 == 1135 x 2
 Boxford2023,2,contest_closes,PASS,BOARD OF COMMISSIONS OF TRUST FUNDS: 1135 == 1135 x 1
 Boxford2023,3,office_count_consistent,PASS,6 contests; median 11 in other years
 Boxford2024,0,document_self_identifies,PASS,...--|-------------|---------| | BOXFORDSCHOOLCOM | Precinct 1 | HAND...
-Boxford2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr+pdftext
+Boxford2024,0,carries_the_year,FAIL,"'2024' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 24"
 Boxford2024,0,document_supports_record,PASS,18/18 names and 34/34 figures located in raw_ocr+pdftext
 Boxford2024,1,names_grounded,PASS,18/18 names located in raw_ocr+pdftext
 Boxford2024,1,figures_grounded,PASS,34/34 figures located in raw_ocr+pdftext
@@ -2990,7 +2990,7 @@ Brimfield2025,2,contest_closes,PASS,HARDING FUND TTEE - 3 YEARS: 547 == 547 x 1
 Brimfield2025,2,contest_closes,PASS,LINCOLN FUND TTEE - 3 YEARS: 547 == 547 x 1
 Brimfield2025,3,office_count_consistent,PASS,12 contests; median 13 in other years
 Brimfield2026,0,document_self_identifies,NOTE,document never prints 'Brimfield'; identity rests on the citation alone
-Brimfield2026,0,carries_the_year,FAIL,'2026' does not appear in raw_ocr+pdftext
+Brimfield2026,0,carries_the_year,FAIL,"'2026' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 26"
 Brimfield2026,0,document_supports_record,PASS,18/18 names and 38/38 figures located in raw_ocr+pdftext
 Brimfield2026,1,names_grounded,PASS,18/18 names located in raw_ocr+pdftext
 Brimfield2026,1,figures_grounded,PASS,38/38 figures located in raw_ocr+pdftext
@@ -3429,7 +3429,7 @@ Cambridge2025,1,figures_grounded,PASS,41/41 figures located in markdown
 Cambridge2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Cambridge2025,3,office_count_consistent,PASS,2 contests; median 2 in other years
 Canton2021,0,document_self_identifies,NOTE,document never prints 'Canton'; identity rests on the citation alone
-Canton2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Canton2021,0,carries_the_year,PASS,...## ANNUALTOWNELECTION 6-Apr-21 | Threeyearterms SELECTBOARD | 1 | 2 |...
 Canton2021,0,document_supports_record,PASS,13/13 names and 24/27 figures located in markdown
 Canton2021,1,names_grounded,PASS,13/13 names located in markdown
 Canton2021,1,figures_grounded,FAIL,24/27 figures located in markdown
@@ -4052,7 +4052,7 @@ Cheshire2024,1,figures_grounded,PASS,10/10 figures located in markdown
 Cheshire2024,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Cheshire2024,3,office_count_consistent,PASS,8 contests; median 8 in other years
 Cheshire2025,0,document_self_identifies,PASS,...(write-in) (7) | | **HVRSD - Cheshire** | **Adam Emerson (371)*** |...
-Cheshire2025,0,carries_the_year,FAIL,'2025' does not appear in markdown
+Cheshire2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown, in that spelling or as a date ending 25"
 Cheshire2025,0,document_supports_record,PASS,12/12 names and 12/12 figures located in markdown
 Cheshire2025,1,names_grounded,PASS,12/12 names located in markdown
 Cheshire2025,1,figures_grounded,PASS,12/12 figures located in markdown
@@ -4428,7 +4428,7 @@ Clinton2021,2,contest_closes,PASS,SCHOOL COMM.: 1258 == 629 x 2
 Clinton2021,2,contest_closes,PASS,PLANNING BOARD: 629 == 629 x 1
 Clinton2021,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Clinton2022,0,document_self_identifies,PASS,...2019 Town of Clinton Election Results P1 Mach. Han...
-Clinton2022,0,carries_the_year,FAIL,'2022' does not appear in markdown+pdftext
+Clinton2022,0,carries_the_year,FAIL,"'2022' does not appear in markdown+pdftext, in that spelling or as a date ending 22"
 Clinton2022,0,document_supports_record,PASS,17/17 names and 32/32 figures located in markdown+pdftext
 Clinton2022,1,names_grounded,PASS,17/17 names located in markdown+pdftext
 Clinton2022,1,figures_grounded,PASS,32/32 figures located in markdown+pdftext
@@ -5108,14 +5108,14 @@ Dartmouth2024,2,tally_incomplete,NOTE,MEMBER OF PARKS AND RECREATION BOARD: 7600
 Dartmouth2024,2,marks_exceed_ballots,FAIL,MEMBER OF HOUSING AUTHORITY: 3815 marks > 3810 ballots x 1 seats = 3810
 Dartmouth2024,3,office_count_consistent,PASS,20 contests; median 10 in other years
 Dartmouth2025,0,document_self_identifies,NOTE,document never prints 'Dartmouth'; identity rests on the citation alone
-Dartmouth2025,0,carries_the_year,FAIL,'2025' does not appear in raw_ocr+markdown+pdftext
+Dartmouth2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr+markdown+pdftext, in that spelling or as a date ending 25"
 Dartmouth2025,0,document_supports_record,PASS,138/143 names and 146/169 figures located in raw_ocr+markdown+pdftext
 Dartmouth2025,1,names_grounded,FAIL,138/143 names located in raw_ocr+markdown+pdftext
 Dartmouth2025,1,figures_grounded,FAIL,146/169 figures located in raw_ocr+markdown+pdftext
 Dartmouth2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Dartmouth2025,3,office_count_consistent,PASS,19 contests; median 10 in other years
 Dartmouth2026,0,document_self_identifies,NOTE,document never prints 'Dartmouth'; identity rests on the citation alone
-Dartmouth2026,0,carries_the_year,FAIL,'2026' does not appear in raw_ocr+pdftext
+Dartmouth2026,0,carries_the_year,FAIL,"'2026' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 26"
 Dartmouth2026,0,document_supports_record,PASS,17/17 names and 34/34 figures located in raw_ocr+pdftext
 Dartmouth2026,1,names_grounded,PASS,17/17 names located in raw_ocr+pdftext
 Dartmouth2026,1,figures_grounded,PASS,34/34 figures located in raw_ocr+pdftext
@@ -5682,7 +5682,7 @@ Dover2026,2,contest_closes,PASS,Constable (3 Years): 425 == 425 x 1
 Dover2026,2,contest_closes,PASS,Park and Recreation Commission (3 Years): 425 == 425 x 1
 Dover2026,3,office_count_consistent,PASS,13 contests; median 13 in other years
 Dracut2021,0,document_self_identifies,PASS,...DRACUT – In one of the most hotly co...
-Dracut2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Dracut2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown, in that spelling or as a date ending 21"
 Dracut2021,0,document_supports_record,PASS,5/5 names and 5/5 figures located in markdown
 Dracut2021,1,names_grounded,PASS,5/5 names located in markdown
 Dracut2021,1,figures_grounded,PASS,5/5 figures located in markdown
@@ -5925,7 +5925,7 @@ Dunstable2024,2,contest_closes,PASS,BOARD OF SELECTMEN - 3 Years: 584 == 584 x 1
 Dunstable2024,2,contest_closes,PASS,TOWN MODERATOR - 3 Years: 584 == 584 x 1
 Dunstable2024,3,office_count_consistent,PASS,16 contests; median 11 in other years
 Dunstable2025,0,document_self_identifies,NOTE,document never prints 'Dunstable'; identity rests on the citation alone
-Dunstable2025,0,carries_the_year,OVERRIDDEN,'2025' does not appear in markdown+pdftext  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]
+Dunstable2025,0,carries_the_year,OVERRIDDEN,"'2025' does not appear in markdown+pdftext, in that spelling or as a date ending 25  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]"
 Dunstable2025,0,document_supports_record,OVERRIDDEN,"0/14 names and 0/36 figures located in markdown+pdftext; but the document says it is a return -- ""����� ������������������ Write-Ins �������������� ���������""; ""REGISTERED VOTERS 2697 % VOTER TURNOUT 33% Write-Ins TOTAL NUMB"" -- so this text cannot support anything and the record is unread here, not contradicted. Re-OCR the document (python -m qa.ocr_queue --add Dunstable2025)  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]"
 Dunstable2025,1,names_grounded,OVERRIDDEN,0/14 names located in markdown+pdftext  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]
 Dunstable2025,1,figures_grounded,OVERRIDDEN,0/36 figures located in markdown+pdftext  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]
@@ -6132,7 +6132,7 @@ EastBridgewater2026,2,contest_closes,PASS,BOARD OF HEALTH: 693 == 693 x 1
 EastBridgewater2026,2,contest_closes,PASS,PLANNING BOARD: 2079 == 693 x 3
 EastBridgewater2026,2,contest_closes,PASS,HOUSING AUTHORITY: 693 == 693 x 1
 EastBridgewater2026,3,office_count_consistent,PASS,10 contests; median 10 in other years
-EastBrookfield2021,0,document_self_identifies,PASS,...web\20211227174942\https:\www.eastbrookfieldma.us) ›› 2. [Town Clerk](\web...
+EastBrookfield2021,0,document_self_identifies,PASS,...es are only the votes cast in East Brookfield. Totals from both towns are c...
 EastBrookfield2021,0,carries_the_year,PASS,...## You are here 1. [Home](\web\20211227174942\https:\www.eastbrookfieldma.u...
 EastBrookfield2021,0,document_supports_record,PASS,14/14 names and 32/32 figures located in markdown
 EastBrookfield2021,1,names_grounded,PASS,14/14 names located in markdown
@@ -6150,7 +6150,7 @@ EastBrookfield2021,2,contest_closes,PASS,Planning Board - 3 Yr: 402 == 134 x 3
 EastBrookfield2021,2,contest_closes,PASS,Tree Warden - 1 Yr: 134 == 134 x 1
 EastBrookfield2021,2,regional_exempt,NOTE,Spencer-East Brookfield Regional School Dist: spans several towns; ballot arithmetic does not apply
 EastBrookfield2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
-EastBrookfield2022,0,document_self_identifies,PASS,...20260601181927id_/https://www.eastbrookfieldma.us/sites/g/files/vyhlif541/...
+EastBrookfield2022,0,document_self_identifies,PASS,"...# East Brookfield, Massachusetts -- Annual Town..."
 EastBrookfield2022,0,carries_the_year,PASS,"...usetts -- Annual Town Election, May 10, 2022 Source: the town's own results posting,..."
 EastBrookfield2022,0,document_supports_record,PASS,10/10 names and 0/0 figures located in markdown
 EastBrookfield2022,1,names_grounded,PASS,10/10 names located in markdown
@@ -6226,7 +6226,7 @@ EastLongmeadow2026,1,figures_grounded,FAIL,3/13 figures located in raw_ocr+pdfte
 EastLongmeadow2026,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 EastLongmeadow2026,3,office_count_consistent,PASS,3 contests; median 2 in other years
 Eastham2021,0,document_self_identifies,PASS,...6 BLANKS 29 TOTAL 894 TOWN OF EASTHAM TOWN ELECTION 5/18/21 TOWN EL...
-Eastham2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Eastham2021,0,carries_the_year,PASS,...TOTAL 894 TOWN OF EASTHAM TOWN ELECTION 5/18/21 TOWN ELECTION RESULTS Copy of Results 5...
 Eastham2021,0,document_supports_record,PASS,6/6 names and 15/15 figures located in markdown+pdftext
 Eastham2021,1,names_grounded,PASS,6/6 names located in markdown+pdftext
 Eastham2021,1,figures_grounded,PASS,15/15 figures located in markdown+pdftext
@@ -6251,7 +6251,7 @@ Eastham2022,2,contest_closes,PASS,LIBRARY TRUSTEE: 808 == 404 x 2
 Eastham2022,2,regional_exempt,NOTE,NAUSET REGIONAL SCHOOL COMMITTEE: spans several towns; ballot arithmetic does not apply
 Eastham2022,3,office_count_consistent,PASS,6 contests; median 6 in other years
 Eastham2023,0,document_self_identifies,PASS,...BLANKS 19 TOTAL 1086 TOWN OF EASTHAM TOWN ELECTION 5/16/23 TOWN EL...
-Eastham2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Eastham2023,0,carries_the_year,PASS,...OTAL 1086 TOWN OF EASTHAM TOWN ELECTION 5/16/23 TOWN ELECTION TOWN OF EASTHAM TOWN ELEC...
 Eastham2023,0,document_supports_record,PASS,10/10 names and 16/16 figures located in markdown+pdftext
 Eastham2023,1,names_grounded,PASS,10/10 names located in markdown+pdftext
 Eastham2023,1,figures_grounded,PASS,16/16 figures located in markdown+pdftext
@@ -6587,7 +6587,7 @@ Erving2025,2,contest_closes,PASS,Board of Health – 3 Years – Vote For One: 1
 Erving2025,2,contest_closes,PASS,Board of Health – 1 Year – Vote For One: 161 == 161 x 1
 Erving2025,3,office_count_consistent,PASS,16 contests; median 11 in other years
 Erving2026,0,document_self_identifies,PASS,...ERVING — Former Principal Assessor J...
-Erving2026,0,carries_the_year,FAIL,'2026' does not appear in markdown
+Erving2026,0,carries_the_year,FAIL,"'2026' does not appear in markdown, in that spelling or as a date ending 26"
 Erving2026,0,document_supports_record,PASS,10/10 names and 10/10 figures located in markdown
 Erving2026,1,names_grounded,PASS,10/10 names located in markdown
 Erving2026,1,figures_grounded,PASS,10/10 figures located in markdown
@@ -6809,7 +6809,7 @@ FallRiver2023,1,figures_grounded,PASS,30/30 figures located in markdown
 FallRiver2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 FallRiver2023,3,office_count_consistent,PASS,3 contests; median 2 in other years
 FallRiver2025,0,document_self_identifies,PASS,...75 6.85 78 7.12 | ## CITY OF FALL RIVER Run Date:11/05/25 05:42 AM ##...
-FallRiver2025,0,carries_the_year,FAIL,'2025' does not appear in markdown
+FallRiver2025,0,carries_the_year,PASS,...Run Date:11/05/25 05:41AM | PRECINCTS COUNTED (OF 27). 0...
 FallRiver2025,0,document_supports_record,PASS,26/26 names and 23/29 figures located in markdown
 FallRiver2025,1,names_grounded,PASS,26/26 names located in markdown
 FallRiver2025,1,figures_grounded,FAIL,23/29 figures located in markdown
@@ -6859,7 +6859,7 @@ Falmouth2024,2,contest_closes,PASS,Housing Authority: 5843 == 5843 x 1
 Falmouth2024,2,tally_incomplete,NOTE,Housing Authority: 5809 of 5843; 34 marks not tallied
 Falmouth2024,3,office_count_consistent,PASS,23 contests; median 21 in other years
 Falmouth2025,0,document_self_identifies,PASS,...QUESTION 1 Shall the Town of Falmouth be allowed to exempt from the...
-Falmouth2025,0,carries_the_year,FAIL,'2025' does not appear in markdown+pdftext
+Falmouth2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown+pdftext, in that spelling or as a date ending 25"
 Falmouth2025,0,document_supports_record,PASS,137/137 names and 187/187 figures located in markdown+pdftext
 Falmouth2025,1,names_grounded,PASS,137/137 names located in markdown+pdftext
 Falmouth2025,1,figures_grounded,PASS,187/187 figures located in markdown+pdftext
@@ -7731,7 +7731,7 @@ Granby2023,1,figures_grounded,PASS,2/2 figures located in markdown
 Granby2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Granby2023,3,office_count_consistent,PASS,7 contests; median 10 in other years
 Granby2024,0,document_self_identifies,PASS,...ns tight Select Board race in Granby - Daily Hampshire Gazette Clo...
-Granby2024,0,carries_the_year,FAIL,'2024' does not appear in markdown
+Granby2024,0,carries_the_year,FAIL,"'2024' does not appear in markdown, in that spelling or as a date ending 24"
 Granby2024,0,document_supports_record,PASS,18/18 names and 7/7 figures located in markdown
 Granby2024,1,names_grounded,PASS,18/18 names located in markdown
 Granby2024,1,figures_grounded,PASS,7/7 figures located in markdown
@@ -7756,7 +7756,7 @@ Granby2025,2,contest_closes,PASS,LIBRARY TRUSTEE (3 YEARS): 2664 == 888 x 3
 Granby2025,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEE (1 YEAR UNEXPIRED): 890 marks > 888 ballots x 1 seats = 888
 Granby2025,3,office_count_consistent,PASS,11 contests; median 7 in other years
 Granby2026,0,document_self_identifies,PASS,"...GRANBY, Mass. (WWLP) – Voters in the..."
-Granby2026,0,carries_the_year,FAIL,'2026' does not appear in markdown
+Granby2026,0,carries_the_year,FAIL,"'2026' does not appear in markdown, in that spelling or as a date ending 26"
 Granby2026,0,document_supports_record,PASS,14/14 names and 14/16 figures located in markdown
 Granby2026,1,names_grounded,PASS,14/14 names located in markdown
 Granby2026,1,figures_grounded,FAIL,14/16 figures located in markdown
@@ -7879,7 +7879,7 @@ GreatBarrington2023,2,contest_closes,PASS,Planning Board (two seats for three-ye
 GreatBarrington2023,2,contest_closes,PASS,Zoning Board of Appeals (two seats for a fiv: 1900 == 950 x 2
 GreatBarrington2023,3,office_count_consistent,PASS,9 contests; median 8 in other years
 GreatBarrington2024,0,document_self_identifies,NOTE,document never prints 'GreatBarrington'; identity rests on the citation alone
-GreatBarrington2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr+pdftext
+GreatBarrington2024,0,carries_the_year,PASS,...TOWN ELECTION 5/14/24 PRECINCT: A B Cc D TOTAL MODERATOR 133...
 GreatBarrington2024,0,document_supports_record,PASS,16/16 names and 35/35 figures located in raw_ocr+pdftext
 GreatBarrington2024,1,names_grounded,PASS,16/16 names located in raw_ocr+pdftext
 GreatBarrington2024,1,figures_grounded,PASS,35/35 figures located in raw_ocr+pdftext
@@ -8100,7 +8100,7 @@ Groveland2021,2,contest_closes,PASS,Water/Sewer Commission 3 YR: 321 == 321 x 1
 Groveland2021,2,contest_closes,PASS,Water/Sewer Commission 2 Year: 321 == 321 x 1
 Groveland2021,3,office_count_consistent,PASS,18 contests; median 14 in other years
 Groveland2022,0,document_self_identifies,PASS,...## LOCALELECTION 2-May-22 ## GROVELAND Official Results Precinct1 Pr...
-Groveland2022,0,carries_the_year,FAIL,'2022' does not appear in markdown
+Groveland2022,0,carries_the_year,PASS,...## LOCALELECTION 2-May-22 ## GROVELAND Official Results Precinct1...
 Groveland2022,0,document_supports_record,PASS,17/17 names and 43/47 figures located in markdown
 Groveland2022,1,names_grounded,PASS,17/17 names located in markdown
 Groveland2022,1,figures_grounded,FAIL,43/47 figures located in markdown
@@ -8292,7 +8292,7 @@ Hadley2026,2,contest_closes,PASS,OLIVER SMITH WILL ELECTOR: 359 == 359 x 1
 Hadley2026,2,contest_closes,PASS,LIBRARY TRUSTEE: 718 == 359 x 2
 Hadley2026,3,office_count_consistent,PASS,10 contests; median 11 in other years
 Halifax2021,0,document_self_identifies,PASS,...registered voter/resident of Halifax | | Plus scatterings of peopl...
-Halifax2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Halifax2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown, in that spelling or as a date ending 21"
 Halifax2021,0,document_supports_record,PASS,14/14 names and 14/14 figures located in markdown
 Halifax2021,1,names_grounded,PASS,14/14 names located in markdown
 Halifax2021,1,figures_grounded,PASS,14/14 figures located in markdown
@@ -8314,7 +8314,7 @@ Halifax2022,2,contest_closes,PASS,SL School Committee: 1250 == 1250 x 1
 Halifax2022,2,contest_closes,PASS,Water Commissioners: 1250 == 1250 x 1
 Halifax2022,3,office_count_consistent,PASS,12 contests; median 12 in other years
 Halifax2023,0,document_self_identifies,PASS,...Others 5 0 9 Total 227 7 481 Halifax Elementary School Three Year...
-Halifax2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Halifax2023,0,carries_the_year,PASS,...t 7.76% Official Results Local Election 5/13/23 PCT 1 59 184 4 247 168 134 184 8 494 To...
 Halifax2023,0,document_supports_record,PASS,20/20 names and 44/44 figures located in markdown+pdftext
 Halifax2023,1,names_grounded,PASS,20/20 names located in markdown+pdftext
 Halifax2023,1,figures_grounded,PASS,44/44 figures located in markdown+pdftext
@@ -8332,7 +8332,7 @@ Halifax2023,2,regional_exempt,NOTE,Silver Lake Regional School Committee: spans 
 Halifax2023,2,contest_closes,PASS,Board of Water Commissioners: 481 == 481 x 1
 Halifax2023,3,office_count_consistent,PASS,12 contests; median 12 in other years
 Halifax2024,0,document_self_identifies,PASS,...1 5 0 6 TOTAL 527 502 16 1045 HALIFAX HOUSING AUTHORITY Three Year...
-Halifax2024,0,carries_the_year,FAIL,'2024' does not appear in markdown+pdftext
+Halifax2024,0,carries_the_year,PASS,"...CIAL ELECTION RESULTS Reg. Voters 6,387 05/18/24 Ballots Cast 1045 % of Voters 16.36% PC..."
 Halifax2024,0,document_supports_record,PASS,21/21 names and 48/48 figures located in markdown+pdftext
 Halifax2024,1,names_grounded,PASS,21/21 names located in markdown+pdftext
 Halifax2024,1,figures_grounded,PASS,48/48 figures located in markdown+pdftext
@@ -8964,7 +8964,7 @@ Harvard2026,1,figures_grounded,PASS,16/16 figures located in raw_ocr+pdftext
 Harvard2026,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Harvard2026,3,office_count_consistent,PASS,4 contests; median 5 in other years
 Harwich2021,0,document_self_identifies,NOTE,document never prints 'Harwich'; identity rests on the citation alone
-Harwich2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Harwich2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown, in that spelling or as a date ending 21"
 Harwich2021,0,document_supports_record,PASS,12/12 names and 26/26 figures located in markdown
 Harwich2021,1,names_grounded,PASS,12/12 names located in markdown
 Harwich2021,1,figures_grounded,PASS,26/26 figures located in markdown
@@ -9089,7 +9089,7 @@ Haverhill2021,1,figures_grounded,PASS,29/29 figures located in markdown+pdftext
 Haverhill2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Haverhill2021,3,office_count_consistent,FAIL,3 contests; this town's other years median 16
 Haverhill2023,0,document_self_identifies,NOTE,document never prints 'Haverhill'; identity rests on the citation alone
-Haverhill2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr
+Haverhill2023,0,carries_the_year,FAIL,"'2023' does not appear in raw_ocr, in that spelling or as a date ending 23"
 Haverhill2023,0,document_supports_record,PASS,31/32 names and 18/64 figures located in raw_ocr
 Haverhill2023,1,names_grounded,FAIL,31/32 names located in raw_ocr
 Haverhill2023,1,figures_grounded,FAIL,18/64 figures located in raw_ocr
@@ -9124,7 +9124,7 @@ Hawley2023,1,figures_grounded,PASS,8/8 figures located in markdown
 Hawley2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Hawley2023,3,office_count_consistent,PASS,7 contests; median 6 in other years
 Hawley2024,0,document_self_identifies,PASS,...Slew of write-ins elected in Hawley - Greenfield Recorder Close S...
-Hawley2024,0,carries_the_year,FAIL,'2024' does not appear in markdown
+Hawley2024,0,carries_the_year,FAIL,"'2024' does not appear in markdown, in that spelling or as a date ending 24"
 Hawley2024,0,document_supports_record,PASS,6/6 names and 6/6 figures located in markdown
 Hawley2024,1,names_grounded,PASS,6/6 names located in markdown
 Hawley2024,1,figures_grounded,PASS,6/6 figures located in markdown
@@ -9342,7 +9342,7 @@ Hinsdale2025,1,figures_grounded,PASS,6/6 figures located in raw_ocr
 Hinsdale2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Hinsdale2025,3,office_count_consistent,PASS,5 contests; median 9 in other years
 Hinsdale2026,0,document_self_identifies,PASS,...HINSDALE — Newcomer William Goddard wa...
-Hinsdale2026,0,carries_the_year,FAIL,'2026' does not appear in markdown
+Hinsdale2026,0,carries_the_year,FAIL,"'2026' does not appear in markdown, in that spelling or as a date ending 26"
 Hinsdale2026,0,document_supports_record,PASS,13/15 names and 6/16 figures located in markdown
 Hinsdale2026,1,names_grounded,FAIL,13/15 names located in markdown
 Hinsdale2026,1,figures_grounded,FAIL,6/16 figures located in markdown
@@ -9381,7 +9381,7 @@ Holbrook2022,2,marks_exceed_ballots,FAIL,BOARD OF HEALTH 1 YR (1): 1029 marks > 
 Holbrook2022,2,marks_exceed_ballots,FAIL,PLANNING BOARD 5 YRS. (1): 997 marks > 995 ballots x 1 seats = 995
 Holbrook2022,3,office_count_consistent,PASS,12 contests; median 16 in other years
 Holbrook2024,0,document_self_identifies,PASS,...| TOWN OFHOLBROOK | TOWN OFHOLBROOK | TOWN OFHO...
-Holbrook2024,0,carries_the_year,FAIL,'2024' does not appear in markdown
+Holbrook2024,0,carries_the_year,PASS,...ALTOWNELECTION | ANNUALTOWNELECTION | | 6-Apr-24 | 6-Apr-24 | 6-Apr-24 | 6-Apr-24 | 6-Ap...
 Holbrook2024,0,document_supports_record,PASS,74/74 names and 100/101 figures located in markdown
 Holbrook2024,1,names_grounded,PASS,74/74 names located in markdown
 Holbrook2024,1,figures_grounded,FAIL,100/101 figures located in markdown
@@ -9398,7 +9398,7 @@ Holbrook2024,2,contest_closes,PASS,HOUSING AUTHORITY 5 yrs Vote (1): 738 == 738 
 Holbrook2024,2,contest_closes,PASS,HOUSING AUTHORITY 4 yrs Vote (1): 738 == 738 x 1
 Holbrook2024,3,office_count_consistent,PASS,15 contests; median 16 in other years
 Holbrook2025,0,document_self_identifies,PASS,...test: larana Jeanmarie Tarara HolbrookTown Clerk...
-Holbrook2025,0,carries_the_year,FAIL,'2025' does not appear in markdown
+Holbrook2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown, in that spelling or as a date ending 25"
 Holbrook2025,0,document_supports_record,PASS,59/59 names and 89/89 figures located in markdown
 Holbrook2025,1,names_grounded,PASS,59/59 names located in markdown
 Holbrook2025,1,figures_grounded,PASS,89/89 figures located in markdown
@@ -9412,7 +9412,7 @@ Holbrook2025,2,contest_closes,PASS,BOARD OF HEALTH 1 yr. Vote (1): 524 == 524 x 
 Holbrook2025,2,contest_closes,PASS,PLANNING BOARD 5 yrs. Vote (1): 524 == 524 x 1
 Holbrook2025,3,office_count_consistent,PASS,15 contests; median 16 in other years
 Holbrook2026,0,document_self_identifies,PASS,...## TownofHolbrook-AnnualTownElectlon | *Denotes...
-Holbrook2026,0,carries_the_year,FAIL,'2026' does not appear in markdown
+Holbrook2026,0,carries_the_year,FAIL,"'2026' does not appear in markdown, in that spelling or as a date ending 26"
 Holbrook2026,0,document_supports_record,PASS,53/56 names and 90/90 figures located in markdown
 Holbrook2026,1,names_grounded,FAIL,53/56 names located in markdown
 Holbrook2026,1,figures_grounded,PASS,90/90 figures located in markdown
@@ -9635,7 +9635,7 @@ Holliston2026,2,contest_closes,PASS,PLANNING BOARD 5 Year: 1042 == 1042 x 1
 Holliston2026,2,contest_closes,PASS,HOUSING AUTHORITY 5 Year: 1042 == 1042 x 1
 Holliston2026,3,office_count_consistent,PASS,9 contests; median 11 in other years
 Holyoke2021,0,document_self_identifies,NOTE,document never prints 'Holyoke'; identity rests on the citation alone
-Holyoke2021,0,carries_the_year,FAIL,'2021' does not appear in raw_ocr+markdown
+Holyoke2021,0,carries_the_year,PASS,...651 | 9 3 | 342 300 0 | WARD5B | WARD5B 2-Nov-21 651 1988 | | 2 | WARD6AWARD6B 220 | | |...
 Holyoke2021,0,document_supports_record,PASS,34/35 names and 48/97 figures located in raw_ocr+markdown
 Holyoke2021,1,names_grounded,FAIL,34/35 names located in raw_ocr+markdown
 Holyoke2021,1,figures_grounded,FAIL,48/97 figures located in raw_ocr+markdown
@@ -9714,7 +9714,7 @@ Hopedale2024,2,contest_closes,PASS,MODERATOR 3 year term: 1067 == 1067 x 1
 Hopedale2024,2,contest_closes,PASS,WATER & SEWER COMMISSIONER 3 year term: 1067 == 1067 x 1
 Hopedale2024,3,office_count_consistent,PASS,10 contests; median 10 in other years
 Hopedale2025,0,document_self_identifies,PASS,...<!-- image --> <!-- image --> Hopedale Annual Town Election Select B...
-Hopedale2025,0,carries_the_year,FAIL,'2025' does not appear in raw_ocr+markdown
+Hopedale2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr+markdown, in that spelling or as a date ending 25"
 Hopedale2025,0,document_supports_record,PASS,12/14 names and 21/37 figures located in raw_ocr+markdown
 Hopedale2025,1,names_grounded,FAIL,12/14 names located in raw_ocr+markdown
 Hopedale2025,1,figures_grounded,FAIL,21/37 figures located in raw_ocr+markdown
@@ -10203,7 +10203,7 @@ Huntington2021,2,contest_closes,PASS,Trustee Library - 3 yr: 85 == 85 x 1
 Huntington2021,2,contest_closes,PASS,"Trustee, Whiting Street Fund - 3 yr: 85 == 85 x 1"
 Huntington2021,3,office_count_consistent,PASS,15 contests; median 12 in other years
 Huntington2022,0,document_self_identifies,NOTE,document never prints 'Huntington'; identity rests on the citation alone
-Huntington2022,0,carries_the_year,FAIL,'2022' does not appear in raw_ocr+pdftext
+Huntington2022,0,carries_the_year,FAIL,"'2022' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 22"
 Huntington2022,0,document_supports_record,PASS,28/28 names and 40/40 figures located in raw_ocr+pdftext
 Huntington2022,1,names_grounded,PASS,28/28 names located in raw_ocr+pdftext
 Huntington2022,1,figures_grounded,PASS,40/40 figures located in raw_ocr+pdftext
@@ -10337,7 +10337,7 @@ Ipswich2026,2,contest_closes,PASS,School Committee 1 yr (1) one yr to fill une: 
 Ipswich2026,2,contest_closes,PASS,Housing Authority 5 yr (1): 1540 == 1540 x 1
 Ipswich2026,3,office_count_consistent,PASS,5 contests; median 4 in other years
 Kingston2021,0,document_self_identifies,PASS,...1 2 3 12 171 223 203 158 755 KINGSTON ELEMENTARY SCHOOL COMMITTEE (...
-Kingston2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Kingston2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown+pdftext, in that spelling or as a date ending 21"
 Kingston2021,0,document_supports_record,PASS,21/21 names and 46/46 figures located in markdown+pdftext
 Kingston2021,1,names_grounded,PASS,21/21 names located in markdown+pdftext
 Kingston2021,1,figures_grounded,PASS,46/46 figures located in markdown+pdftext
@@ -10561,7 +10561,7 @@ Lakeville2026,2,regional_exempt,NOTE,FREETOWN-LAKEVILLE REGIONAL SCHOOL COMMITTE
 Lakeville2026,2,regional_exempt,NOTE,FREETOWN-LAKEVILLE REGIONAL SCHOOL COMMITTEE: spans several towns; ballot arithmetic does not apply
 Lakeville2026,3,office_count_consistent,PASS,11 contests; median 13 in other years
 Lancaster2021,0,document_self_identifies,PASS,...Town of Lancaster Annual Town Election 5/10/21...
-Lancaster2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Lancaster2021,0,carries_the_year,PASS,...Town of Lancaster Annual Town Election 5/10/21 Pct. 1 Pct. 2 Total Selectman 1 - 3 yea...
 Lancaster2021,0,document_supports_record,PASS,15/15 names and 35/35 figures located in markdown+pdftext
 Lancaster2021,1,names_grounded,PASS,15/15 names located in markdown+pdftext
 Lancaster2021,1,figures_grounded,PASS,35/35 figures located in markdown+pdftext
@@ -10721,7 +10721,7 @@ Lawrence2021,1,figures_grounded,FAIL,55/57 figures located in markdown
 Lawrence2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Lawrence2021,3,office_count_consistent,PASS,15 contests; median 12 in other years
 Lawrence2023,0,document_self_identifies,PASS,...| Times Blank Voted | GREATER LAWRENCE TECHNICAL SCHOOL COMMITTEE |...
-Lawrence2023,0,carries_the_year,FAIL,'2023' does not appear in markdown
+Lawrence2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown, in that spelling or as a date ending 23"
 Lawrence2023,0,document_supports_record,PASS,27/27 names and 48/55 figures located in markdown
 Lawrence2023,1,names_grounded,PASS,27/27 names located in markdown
 Lawrence2023,1,figures_grounded,FAIL,48/55 figures located in markdown
@@ -11128,7 +11128,7 @@ Lincoln2021,2,contest_closes,PASS,TRUSTEES OF BEMIS: 457 == 457 x 1
 Lincoln2021,2,contest_closes,PASS,WATER COMMISSIONER: 457 == 457 x 1
 Lincoln2021,3,office_count_consistent,PASS,12 contests; median 14 in other years
 Lincoln2022,0,document_self_identifies,PASS,...BLANK. SOS 8828 a TRUSTEE OF LINCOLNLIBRARY.——S~C—~SYSSCSCdSCOCdCO...
-Lincoln2022,0,carries_the_year,FAIL,'2022' does not appear in raw_ocr+pdftext
+Lincoln2022,0,carries_the_year,PASS,...? WRITEINS OCS Ce ANNUAL LOCAL ELECTION 28-Mar-22 OFFICIAL RESULTS Total Total Registered...
 Lincoln2022,0,document_supports_record,PASS,21/21 names and 49/49 figures located in raw_ocr+pdftext
 Lincoln2022,1,names_grounded,PASS,21/21 names located in raw_ocr+pdftext
 Lincoln2022,1,figures_grounded,PASS,49/49 figures located in raw_ocr+pdftext
@@ -11150,7 +11150,7 @@ Lincoln2022,2,contest_closes,PASS,WATER COMMISSIONER (3 Year Term): 1195 == 1195
 Lincoln2022,2,contest_closes,PASS,WATER COMMISSIONER (2 Year Term): 1195 == 1195 x 1
 Lincoln2022,3,office_count_consistent,PASS,15 contests; median 13 in other years
 Lincoln2023,0,document_self_identifies,NOTE,document never prints 'Lincoln'; identity rests on the citation alone
-Lincoln2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr+markdown+pdftext
+Lincoln2023,0,carries_the_year,PASS,"...680 3508 1,205 24% ANNUAL TOWN ELECTION 27-Mar-23 OFFICIAL RESULTS Total 4,945 TOTAL 1534..."
 Lincoln2023,0,document_supports_record,PASS,22/22 names and 54/54 figures located in raw_ocr+markdown+pdftext
 Lincoln2023,1,names_grounded,PASS,22/22 names located in raw_ocr+markdown+pdftext
 Lincoln2023,1,figures_grounded,PASS,54/54 figures located in raw_ocr+markdown+pdftext
@@ -11254,14 +11254,14 @@ Littleton2023,1,figures_grounded,FAIL,2/3 figures located in markdown
 Littleton2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Littleton2023,3,office_count_consistent,FAIL,1 contests; this town's other years median 12
 Littleton2024,0,document_self_identifies,NOTE,document never prints 'Littleton'; identity rests on the citation alone
-Littleton2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr+pdftext
+Littleton2024,0,carries_the_year,FAIL,"'2024' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 24"
 Littleton2024,0,document_supports_record,PASS,27/27 names and 27/27 figures located in raw_ocr+pdftext
 Littleton2024,1,names_grounded,PASS,27/27 names located in raw_ocr+pdftext
 Littleton2024,1,figures_grounded,PASS,27/27 figures located in raw_ocr+pdftext
 Littleton2024,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Littleton2024,3,office_count_consistent,PASS,14 contests; median 12 in other years
 Littleton2025,0,document_self_identifies,NOTE,document never prints 'Littleton'; identity rests on the citation alone
-Littleton2025,0,carries_the_year,FAIL,'2025' does not appear in markdown+pdftext
+Littleton2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown+pdftext, in that spelling or as a date ending 25"
 Littleton2025,0,document_supports_record,PASS,23/23 names and 29/35 figures located in markdown+pdftext
 Littleton2025,1,names_grounded,PASS,23/23 names located in markdown+pdftext
 Littleton2025,1,figures_grounded,FAIL,29/35 figures located in markdown+pdftext
@@ -11565,7 +11565,7 @@ Lynnfield2021,2,contest_closes,PASS,Library Trustee: 2238 == 1119 x 2
 Lynnfield2021,2,contest_closes,PASS,School Committee: 2238 == 1119 x 2
 Lynnfield2021,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Lynnfield2022,0,document_self_identifies,NOTE,document never prints 'Lynnfield'; identity rests on the citation alone
-Lynnfield2022,0,carries_the_year,FAIL,'2022' does not appear in raw_ocr+pdftext
+Lynnfield2022,0,carries_the_year,FAIL,"'2022' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 22"
 Lynnfield2022,0,document_supports_record,PASS,11/11 names and 25/25 figures located in raw_ocr+pdftext
 Lynnfield2022,1,names_grounded,PASS,11/11 names located in raw_ocr+pdftext
 Lynnfield2022,1,figures_grounded,PASS,25/25 figures located in raw_ocr+pdftext
@@ -11593,7 +11593,7 @@ Lynnfield2023,2,contest_closes,PASS,Library Trustee: 664 == 664 x 1
 Lynnfield2023,2,contest_closes,PASS,School Committee: 664 == 664 x 1
 Lynnfield2023,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Lynnfield2024,0,document_self_identifies,NOTE,document never prints 'Lynnfield'; identity rests on the citation alone
-Lynnfield2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr+pdftext
+Lynnfield2024,0,carries_the_year,FAIL,"'2024' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 24"
 Lynnfield2024,0,document_supports_record,PASS,15/15 names and 31/31 figures located in raw_ocr+pdftext
 Lynnfield2024,1,names_grounded,PASS,15/15 names located in raw_ocr+pdftext
 Lynnfield2024,1,figures_grounded,PASS,31/31 figures located in raw_ocr+pdftext
@@ -11608,7 +11608,7 @@ Lynnfield2024,2,contest_closes,PASS,SCHOOL COMMITTEE- 1 YEAR: 4366 == 2183 x 2
 Lynnfield2024,2,contest_closes,PASS,TOWN MODERATOR: 2183 == 2183 x 1
 Lynnfield2024,3,office_count_consistent,PASS,8 contests; median 7 in other years
 Lynnfield2025,0,document_self_identifies,NOTE,document never prints 'Lynnfield'; identity rests on the citation alone
-Lynnfield2025,0,carries_the_year,FAIL,'2025' does not appear in markdown+pdftext
+Lynnfield2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown+pdftext, in that spelling or as a date ending 25"
 Lynnfield2025,0,document_supports_record,PASS,10/10 names and 24/24 figures located in markdown+pdftext
 Lynnfield2025,1,names_grounded,PASS,10/10 names located in markdown+pdftext
 Lynnfield2025,1,figures_grounded,PASS,24/24 figures located in markdown+pdftext
@@ -12066,7 +12066,7 @@ Marshfield2023,2,contest_closes,PASS,HOUSING AUTHORITY BOARD OF COMMISSIONERS 5 
 Marshfield2023,2,contest_closes,PASS,HOUSING AUTHORITY BOARD OF COMMISSIONERS 1 Y: 1050 == 1050 x 1
 Marshfield2023,3,office_count_consistent,PASS,9 contests; median 9 in other years
 Marshfield2024,0,document_self_identifies,NOTE,document never prints 'Marshfield'; identity rests on the citation alone
-Marshfield2024,0,carries_the_year,FAIL,'2024' does not appear in markdown+pdftext
+Marshfield2024,0,carries_the_year,FAIL,"'2024' does not appear in markdown+pdftext, in that spelling or as a date ending 24"
 Marshfield2024,0,document_supports_record,PASS,13/13 names and 33/33 figures located in markdown+pdftext
 Marshfield2024,1,names_grounded,PASS,13/13 names located in markdown+pdftext
 Marshfield2024,1,figures_grounded,PASS,33/33 figures located in markdown+pdftext
@@ -12337,7 +12337,7 @@ Medfield2021,2,contest_closes,PASS,Planning Board: 1529 == 1529 x 1
 Medfield2021,2,contest_closes,PASS,Trust Fund Commissioner: 1529 == 1529 x 1
 Medfield2021,3,office_count_consistent,PASS,11 contests; median 8 in other years
 Medfield2022,0,document_self_identifies,NOTE,document never prints 'Medfield'; identity rests on the citation alone
-Medfield2022,0,carries_the_year,FAIL,'2022' does not appear in markdown+pdftext
+Medfield2022,0,carries_the_year,FAIL,"'2022' does not appear in markdown+pdftext, in that spelling or as a date ending 22"
 Medfield2022,0,document_supports_record,PASS,14/14 names and 30/30 figures located in markdown+pdftext
 Medfield2022,1,names_grounded,PASS,14/14 names located in markdown+pdftext
 Medfield2022,1,figures_grounded,PASS,30/30 figures located in markdown+pdftext
@@ -12352,7 +12352,7 @@ Medfield2022,2,contest_closes,PASS,HOUSING AUTHORITY: 1478 == 1478 x 1
 Medfield2022,2,contest_closes,PASS,PLANNING BOARD: 1478 == 1478 x 1
 Medfield2022,3,office_count_consistent,PASS,8 contests; median 10 in other years
 Medfield2023,0,document_self_identifies,NOTE,document never prints 'Medfield'; identity rests on the citation alone
-Medfield2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Medfield2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown+pdftext, in that spelling or as a date ending 23"
 Medfield2023,0,document_supports_record,PASS,12/12 names and 27/27 figures located in markdown+pdftext
 Medfield2023,1,names_grounded,PASS,12/12 names located in markdown+pdftext
 Medfield2023,1,figures_grounded,PASS,27/27 figures located in markdown+pdftext
@@ -12367,7 +12367,7 @@ Medfield2023,2,contest_closes,PASS,PLANNING BOARD: 565 == 565 x 1
 Medfield2023,2,contest_closes,PASS,TRUST FUND COMMISSIONER: 1130 == 565 x 2
 Medfield2023,3,office_count_consistent,PASS,8 contests; median 10 in other years
 Medfield2024,0,document_self_identifies,NOTE,document never prints 'Medfield'; identity rests on the citation alone
-Medfield2024,0,carries_the_year,FAIL,'2024' does not appear in markdown+pdftext
+Medfield2024,0,carries_the_year,FAIL,"'2024' does not appear in markdown+pdftext, in that spelling or as a date ending 24"
 Medfield2024,0,document_supports_record,PASS,12/12 names and 31/31 figures located in markdown+pdftext
 Medfield2024,1,names_grounded,PASS,12/12 names located in markdown+pdftext
 Medfield2024,1,figures_grounded,PASS,31/31 figures located in markdown+pdftext
@@ -12385,7 +12385,7 @@ Medfield2024,2,contest_closes,PASS,HOUSING AUTHORITY: 481 == 481 x 1
 Medfield2024,2,tally_incomplete,NOTE,TRUST FUND COMMISSIONER: 479 of 481; 2 marks not tallied
 Medfield2024,3,office_count_consistent,PASS,11 contests; median 8 in other years
 Medfield2025,0,document_self_identifies,NOTE,document never prints 'Medfield'; identity rests on the citation alone
-Medfield2025,0,carries_the_year,FAIL,'2025' does not appear in markdown+pdftext
+Medfield2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown+pdftext, in that spelling or as a date ending 25"
 Medfield2025,0,document_supports_record,PASS,16/16 names and 32/32 figures located in markdown+pdftext
 Medfield2025,1,names_grounded,PASS,16/16 names located in markdown+pdftext
 Medfield2025,1,figures_grounded,PASS,32/32 figures located in markdown+pdftext
@@ -12400,7 +12400,7 @@ Medfield2025,2,contest_closes,PASS,PLANNING BOARD: 823 == 823 x 1
 Medfield2025,2,contest_closes,PASS,HOUSING AUTHORITY: 823 == 823 x 1
 Medfield2025,3,office_count_consistent,PASS,8 contests; median 10 in other years
 Medfield2026,0,document_self_identifies,NOTE,document never prints 'Medfield'; identity rests on the citation alone
-Medfield2026,0,carries_the_year,FAIL,'2026' does not appear in raw_ocr+pdftext
+Medfield2026,0,carries_the_year,FAIL,"'2026' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 26"
 Medfield2026,0,document_supports_record,PASS,14/14 names and 33/33 figures located in raw_ocr+pdftext
 Medfield2026,1,names_grounded,PASS,14/14 names located in raw_ocr+pdftext
 Medfield2026,1,figures_grounded,PASS,33/33 figures located in raw_ocr+pdftext
@@ -12417,7 +12417,7 @@ Medfield2026,2,tally_incomplete,NOTE,HOUSING AUTHORITY: 1387 of 1391; 4 marks no
 Medfield2026,2,tally_incomplete,NOTE,TRUST FUND COMMISSIONER: 4165 of 4173; 8 marks not tallied
 Medfield2026,3,office_count_consistent,PASS,10 contests; median 8 in other years
 Medford2021,0,document_self_identifies,NOTE,document never prints 'Medford'; identity rests on the citation alone
-Medford2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Medford2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown+pdftext, in that spelling or as a date ending 21"
 Medford2021,0,document_supports_record,PASS,28/28 names and 34/34 figures located in markdown+pdftext
 Medford2021,1,names_grounded,PASS,28/28 names located in markdown+pdftext
 Medford2021,1,figures_grounded,PASS,34/34 figures located in markdown+pdftext
@@ -12668,7 +12668,7 @@ Merrimac2021,2,contest_closes,PASS,LIGHT COMMISSIONER: 252 == 252 x 1
 Merrimac2021,2,contest_closes,PASS,Housing Authority: 252 == 252 x 1
 Merrimac2021,3,office_count_consistent,PASS,12 contests; median 11 in other years
 Merrimac2023,0,document_self_identifies,NOTE,document never prints 'Merrimac'; identity rests on the citation alone
-Merrimac2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Merrimac2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown+pdftext, in that spelling or as a date ending 23"
 Merrimac2023,0,document_supports_record,PASS,9/9 names and 31/31 figures located in markdown+pdftext
 Merrimac2023,1,names_grounded,PASS,9/9 names located in markdown+pdftext
 Merrimac2023,1,figures_grounded,PASS,31/31 figures located in markdown+pdftext
@@ -12739,7 +12739,7 @@ Methuen2021,1,figures_grounded,FAIL,28/44 figures located in raw_ocr+markdown+pd
 Methuen2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Methuen2021,3,office_count_consistent,PASS,9 contests; median 9 in other years
 Methuen2023,0,document_self_identifies,PASS,"...9] 213] 110/246] 158] 4,408 | METHUEN HOUSING AUTHORITY | rwooiae [..."
-Methuen2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr+markdown
+Methuen2023,0,carries_the_year,FAIL,"'2023' does not appear in raw_ocr+markdown, in that spelling or as a date ending 23"
 Methuen2023,0,document_supports_record,PASS,18/29 names and 25/47 figures located in raw_ocr+markdown
 Methuen2023,1,names_grounded,FAIL,18/29 names located in raw_ocr+markdown
 Methuen2023,1,figures_grounded,FAIL,25/47 figures located in raw_ocr+markdown
@@ -13647,7 +13647,7 @@ Montague2026,2,contest_closes,PASS,"TRUSTEE, SOLDIERS MEMORIAL (Veteran), For Th
 Montague2026,2,contest_closes,PASS,"TRUSTEE, SOLDIERS MEMORIAL (Non-Veteran), Fo: 705 == 705 x 1"
 Montague2026,3,office_count_consistent,PASS,20 contests; median 23 in other years
 Monterey2021,0,document_self_identifies,NOTE,document never prints 'Monterey'; identity rests on the citation alone
-Monterey2021,0,carries_the_year,FAIL,'2021' does not appear in raw_ocr
+Monterey2021,0,carries_the_year,FAIL,"'2021' does not appear in raw_ocr, in that spelling or as a date ending 21"
 Monterey2021,0,document_supports_record,PASS,16/17 names and 18/29 figures located in raw_ocr
 Monterey2021,1,names_grounded,FAIL,16/17 names located in raw_ocr
 Monterey2021,1,figures_grounded,FAIL,18/29 figures located in raw_ocr
@@ -13666,7 +13666,7 @@ Monterey2021,2,marks_exceed_ballots,FAIL,SELECT BOARD—three years: 322 marks >
 Monterey2021,2,marks_exceed_ballots,FAIL,TREE WARDEN—one year: 270 marks > 269 ballots x 1 seats = 269
 Monterey2021,3,office_count_consistent,PASS,12 contests; median 14 in other years
 Monterey2023,0,document_self_identifies,NOTE,document never prints 'Monterey'; identity rests on the citation alone
-Monterey2023,0,carries_the_year,FAIL,'2023' does not appear in markdown
+Monterey2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown, in that spelling or as a date ending 23"
 Monterey2023,0,document_supports_record,PASS,13/14 names and 2/27 figures located in markdown
 Monterey2023,1,names_grounded,FAIL,13/14 names located in markdown
 Monterey2023,1,figures_grounded,FAIL,2/27 figures located in markdown
@@ -13721,7 +13721,7 @@ Montgomery2022,1,figures_grounded,PASS,12/12 figures located in markdown
 Montgomery2022,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Montgomery2022,3,office_count_consistent,PASS,8 contests; median 8 in other years
 Montgomery2023,0,document_self_identifies,NOTE,document never prints 'Montgomery'; identity rests on the citation alone
-Montgomery2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Montgomery2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown+pdftext, in that spelling or as a date ending 23"
 Montgomery2023,0,document_supports_record,PASS,56/59 names and 72/72 figures located in markdown+pdftext
 Montgomery2023,1,names_grounded,FAIL,56/59 names located in markdown+pdftext
 Montgomery2023,1,figures_grounded,PASS,72/72 figures located in markdown+pdftext
@@ -14201,7 +14201,7 @@ NewAshford2022,1,names_grounded,PASS,3/3 names located in raw_ocr
 NewAshford2022,1,figures_grounded,PASS,3/3 figures located in raw_ocr
 NewAshford2022,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewAshford2022,3,office_count_consistent,PASS,3 contests; median 4 in other years
-NewAshford2023,0,document_self_identifies,PASS,...her\?weather_zip=01201) Close NewAshfordTownHall (copy) <!-- image -->...
+NewAshford2023,0,document_self_identifies,PASS,"...Hall (copy) <!-- image --> At New Ashford's election Tuesday, 29 percen..."
 NewAshford2023,0,carries_the_year,PASS,"...mmittee - The Berkshire Eagle - May 24, 2023 - May 24, 2023 - 1 min to read - [Faceb..."
 NewAshford2023,0,document_supports_record,PASS,6/6 names and 2/6 figures located in markdown
 NewAshford2023,1,names_grounded,PASS,6/6 names located in markdown
@@ -14230,7 +14230,7 @@ NewAshford2026,1,figures_grounded,PASS,4/4 figures located in raw_ocr
 NewAshford2026,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewAshford2026,3,office_count_consistent,PASS,4 contests; median 3 in other years
 NewBedford2021,0,document_self_identifies,NOTE,document never prints 'NewBedford'; identity rests on the citation alone
-NewBedford2021,0,carries_the_year,FAIL,'2021' does not appear in raw_ocr+markdown
+NewBedford2021,0,carries_the_year,PASS,...NAME HEADING CANVASS RUN DATE:11/02/21 09:05 PM RVT E00 GTT IEA BCT BCB YVTT S...
 NewBedford2021,0,document_supports_record,PASS,0/24 names and 31/33 figures located in raw_ocr+markdown
 NewBedford2021,1,names_grounded,FAIL,0/24 names located in raw_ocr+markdown
 NewBedford2021,1,figures_grounded,FAIL,31/33 figures located in raw_ocr+markdown
@@ -14244,7 +14244,7 @@ NewBedford2023,1,figures_grounded,FAIL,23/24 figures located in markdown
 NewBedford2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewBedford2023,3,office_count_consistent,PASS,10 contests; median 9 in other years
 NewBedford2025,0,document_self_identifies,NOTE,document never prints 'NewBedford'; identity rests on the citation alone
-NewBedford2025,0,carries_the_year,FAIL,'2025' does not appear in markdown
+NewBedford2025,0,carries_the_year,PASS,...| SUMMARY REPT-GROUP DETAIL RUN DATE:11/06/25 10:14 AM | | | | | | | | REPORT-EL45A |...
 NewBedford2025,0,document_supports_record,PASS,24/24 names and 41/41 figures located in markdown
 NewBedford2025,1,names_grounded,PASS,24/24 names located in markdown
 NewBedford2025,1,figures_grounded,PASS,41/41 figures located in markdown
@@ -14265,7 +14265,7 @@ NewBraintree2021,2,contest_closes,PASS,Cemetery Commissioner: 60 == 60 x 1
 NewBraintree2021,2,contest_closes,PASS,Library Trustee: 120 == 60 x 2
 NewBraintree2021,3,office_count_consistent,PASS,9 contests; median 9 in other years
 NewBraintree2023,0,document_self_identifies,NOTE,document never prints 'NewBraintree'; identity rests on the citation alone
-NewBraintree2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr+pdftext
+NewBraintree2023,0,carries_the_year,PASS,...FINAL RESULTS ANNUAL TOWN ELECTION 5/1/23 — 129 VOTERS SELECTBOARD for 3 Years Vo...
 NewBraintree2023,0,document_supports_record,PASS,16/16 names and 17/17 figures located in raw_ocr+pdftext
 NewBraintree2023,1,names_grounded,PASS,16/16 names located in raw_ocr+pdftext
 NewBraintree2023,1,figures_grounded,PASS,17/17 figures located in raw_ocr+pdftext
@@ -14355,7 +14355,7 @@ NewSalem2023,1,names_grounded,PASS,8/8 names located in pdftext
 NewSalem2023,1,figures_grounded,PASS,8/8 figures located in pdftext
 NewSalem2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewSalem2023,3,office_count_consistent,PASS,7 contests; median 8 in other years
-NewSalem2024,0,document_self_identifies,PASS,...selectboard-member-55042385/) NewSalemelectionushersinnewSelectboard...
+NewSalem2024,0,document_self_identifies,PASS,...selectboard-member-55042385/) New Salem election ushers in new Select...
 NewSalem2024,0,carries_the_year,PASS,...(https://recorder.com/2024/05/07/new-salem-election-ushers-in-new-...
 NewSalem2024,0,document_supports_record,PASS,8/8 names and 8/8 figures located in raw_ocr+pdftext
 NewSalem2024,1,names_grounded,PASS,8/8 names located in raw_ocr+pdftext
@@ -14983,7 +14983,7 @@ Northbridge2022,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY 5 year term (vote 
 Northbridge2022,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY 1 year term (vote fo: 573 == 573 x 1
 Northbridge2022,3,office_count_consistent,PASS,8 contests; median 9 in other years
 Northbridge2023,0,document_self_identifies,NOTE,document never prints 'Northbridge'; identity rests on the citation alone
-Northbridge2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr+markdown
+Northbridge2023,0,carries_the_year,FAIL,"'2023' does not appear in raw_ocr+markdown, in that spelling or as a date ending 23"
 Northbridge2023,0,document_supports_record,PASS,0/85 names and 78/104 figures located in raw_ocr+markdown
 Northbridge2023,1,names_grounded,FAIL,0/85 names located in raw_ocr+markdown
 Northbridge2023,1,figures_grounded,FAIL,78/104 figures located in raw_ocr+markdown
@@ -15320,7 +15320,7 @@ Norwood2022,2,contest_closes,PASS,MEM. TOWN PLANNING BD. - 1 (5 YRS.): 3582 == 3
 Norwood2022,2,contest_closes,PASS,CONSTABLE - 1 (3 YRS.): 3582 == 3582 x 1
 Norwood2022,3,office_count_consistent,PASS,18 contests; median 23 in other years
 Norwood2023,0,document_self_identifies,NOTE,document never prints 'Norwood'; identity rests on the citation alone
-Norwood2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr+markdown
+Norwood2023,0,carries_the_year,FAIL,"'2023' does not appear in raw_ocr+markdown, in that spelling or as a date ending 23"
 Norwood2023,0,document_supports_record,PASS,0/119 names and 31/169 figures located in raw_ocr+markdown
 Norwood2023,1,names_grounded,FAIL,0/119 names located in raw_ocr+markdown
 Norwood2023,1,figures_grounded,FAIL,31/169 figures located in raw_ocr+markdown
@@ -15522,7 +15522,7 @@ Oakham2025,2,contest_closes,PASS,Cemetery Commission 3 Year Term: 593 == 593 x 1
 Oakham2025,2,contest_closes,PASS,Planning Board 5 Year Term: 593 == 593 x 1
 Oakham2025,3,office_count_consistent,PASS,9 contests; median 10 in other years
 Oakham2026,0,document_self_identifies,NOTE,document never prints 'Oakham'; identity rests on the citation alone
-Oakham2026,0,carries_the_year,FAIL,'2026' does not appear in raw_ocr+pdftext
+Oakham2026,0,carries_the_year,FAIL,"'2026' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 26"
 Oakham2026,0,document_supports_record,PASS,12/12 names and 22/22 figures located in raw_ocr+pdftext
 Oakham2026,1,names_grounded,PASS,12/12 names located in raw_ocr+pdftext
 Oakham2026,1,figures_grounded,PASS,22/22 figures located in raw_ocr+pdftext
@@ -15889,7 +15889,7 @@ Oxford2026,1,figures_grounded,FAIL,19/20 figures located in raw_ocr+pdftext
 Oxford2026,2,ballots_derivable,UNKNOWN,"2 contests, no two agree: [898, 900]"
 Oxford2026,3,office_count_consistent,PASS,5 contests; median 6 in other years
 Palmer2021,0,document_self_identifies,NOTE,document never prints 'Palmer'; identity rests on the citation alone
-Palmer2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Palmer2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown, in that spelling or as a date ending 21"
 Palmer2021,0,document_supports_record,PASS,5/5 names and 15/15 figures located in markdown
 Palmer2021,1,names_grounded,PASS,5/5 names located in markdown
 Palmer2021,1,figures_grounded,PASS,15/15 figures located in markdown
@@ -15899,7 +15899,7 @@ Palmer2021,2,contest_closes,PASS,PLANNING BOARD: 203 == 203 x 1
 Palmer2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 203 == 203 x 1
 Palmer2021,3,office_count_consistent,PASS,5 contests; median 5 in other years
 Palmer2022,0,document_self_identifies,PASS,...| 14-Jun-22 | TOWNOFPALMERANNUALELECTIONOFFICIALRESULTS...
-Palmer2022,0,carries_the_year,FAIL,'2022' does not appear in markdown
+Palmer2022,0,carries_the_year,PASS,...| 14-Jun-22 | TOWNOFPALMERANNUALELECTIONOFFICIALRES...
 Palmer2022,0,document_supports_record,PASS,12/12 names and 20/21 figures located in markdown
 Palmer2022,1,names_grounded,PASS,12/12 names located in markdown
 Palmer2022,1,figures_grounded,FAIL,20/21 figures located in markdown
@@ -16059,14 +16059,14 @@ Peabody2021,1,figures_grounded,PASS,52/52 figures located in markdown+pdftext
 Peabody2021,2,ballots_derivable,UNKNOWN,"2 contests, no two agree: [7580, 7582]"
 Peabody2021,3,office_count_consistent,PASS,13 contests; median 12 in other years
 Peabody2023,0,document_self_identifies,PASS,...110723 OFFICIAL RESULTS PEABODY MUNICIPAL ELECTION 1-1 1-2 1-...
-Peabody2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr
+Peabody2023,0,carries_the_year,FAIL,"'2023' does not appear in raw_ocr, in that spelling or as a date ending 23"
 Peabody2023,0,document_supports_record,PASS,14/29 names and 19/53 figures located in raw_ocr
 Peabody2023,1,names_grounded,FAIL,14/29 names located in raw_ocr
 Peabody2023,1,figures_grounded,FAIL,19/53 figures located in raw_ocr
 Peabody2023,2,ballots_derivable,UNKNOWN,"2 contests, no two agree: [7501, 7502]"
 Peabody2023,3,office_count_consistent,PASS,12 contests; median 12 in other years
 Peabody2025,0,document_self_identifies,PASS,...110425PeabodyMunicipal ElectionFINALResults...
-Peabody2025,0,carries_the_year,FAIL,'2025' does not appear in markdown
+Peabody2025,0,carries_the_year,FAIL,"'2025' does not appear in markdown, in that spelling or as a date ending 25"
 Peabody2025,0,document_supports_record,PASS,31/31 names and 54/55 figures located in markdown
 Peabody2025,1,names_grounded,PASS,31/31 names located in markdown
 Peabody2025,1,figures_grounded,FAIL,54/55 figures located in markdown
@@ -16690,7 +16690,7 @@ Plainville2022,2,contest_closes,PASS,PLANNING BOARD - 3 YEARS: 955 == 955 x 1
 Plainville2022,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY - 5 YEARS: 955 == 955 x 1
 Plainville2022,3,office_count_consistent,PASS,11 contests; median 11 in other years
 Plainville2023,0,document_self_identifies,PASS,...om/features/nostalgia/) Close Plainville Election <!-- image --> [Buy...
-Plainville2023,0,carries_the_year,FAIL,'2023' does not appear in markdown
+Plainville2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown, in that spelling or as a date ending 23"
 Plainville2023,0,document_supports_record,PASS,10/10 names and 10/10 figures located in markdown
 Plainville2023,1,names_grounded,PASS,10/10 names located in markdown
 Plainville2023,1,figures_grounded,PASS,10/10 figures located in markdown
@@ -16752,7 +16752,7 @@ Plainville2026,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY - 5 YRS (VOTE FOR O
 Plainville2026,2,contest_closes,PASS,TOWN CLERK - 3 YRS (VOTE FOR ONE): 811 == 811 x 1
 Plainville2026,3,office_count_consistent,PASS,11 contests; median 11 in other years
 Plymouth2021,0,document_self_identifies,PASS,...279 345 381 351 222 983 5641 PLYMOUTH SCHOOL COMMITTEE - 3 Years MA...
-Plymouth2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Plymouth2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown+pdftext, in that spelling or as a date ending 21"
 Plymouth2021,0,document_supports_record,PASS,373/373 names and 408/408 figures located in markdown+pdftext
 Plymouth2021,1,names_grounded,PASS,373/373 names located in markdown+pdftext
 Plymouth2021,1,figures_grounded,PASS,408/408 figures located in markdown+pdftext
@@ -17093,7 +17093,7 @@ Randolph2025,1,figures_grounded,PASS,44/44 figures located in markdown+pdftext
 Randolph2025,2,ballots_derivable,UNKNOWN,"4 contests, no two agree: [739, 828, 885, 888]"
 Randolph2025,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Raynham2021,0,document_self_identifies,PASS,...Title of Office: | B-R School Raynham Members | P1 | P2 | P3 | P4 |...
-Raynham2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Raynham2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown, in that spelling or as a date ending 21"
 Raynham2021,0,document_supports_record,PASS,17/17 names and 30/30 figures located in markdown
 Raynham2021,1,names_grounded,PASS,17/17 names located in markdown
 Raynham2021,1,figures_grounded,PASS,30/30 figures located in markdown
@@ -17113,7 +17113,7 @@ Raynham2021,2,contest_closes,PASS,Housing Authority: 499 == 499 x 1
 Raynham2021,2,contest_closes,PASS,Housing Authority: 499 == 499 x 1
 Raynham2021,3,office_count_consistent,PASS,13 contests; median 8 in other years
 Raynham2022,0,document_self_identifies,PASS,...itle of Office: | Bridgewater-Raynham Regional District School Comm...
-Raynham2022,0,carries_the_year,FAIL,'2022' does not appear in markdown
+Raynham2022,0,carries_the_year,FAIL,"'2022' does not appear in markdown, in that spelling or as a date ending 22"
 Raynham2022,0,document_supports_record,PASS,9/9 names and 17/17 figures located in markdown
 Raynham2022,1,names_grounded,PASS,9/9 names located in markdown
 Raynham2022,1,figures_grounded,PASS,17/17 figures located in markdown
@@ -17358,7 +17358,7 @@ Revere2023,1,figures_grounded,PASS,51/51 figures located in raw_ocr
 Revere2023,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Revere2023,3,office_count_consistent,PASS,9 contests; median 11 in other years
 Revere2025,0,document_self_identifies,PASS,...---------------------| | 0008 Revere High School3-1 | | VOTES PERC...
-Revere2025,0,carries_the_year,FAIL,'2025' does not appear in markdown
+Revere2025,0,carries_the_year,PASS,...RUNDATE:11/06/25 04:05PM REPORT-EL45 PAGE 001 | PRECINCT...
 Revere2025,0,document_supports_record,PASS,26/27 names and 31/55 figures located in markdown
 Revere2025,1,names_grounded,FAIL,26/27 names located in markdown
 Revere2025,1,figures_grounded,FAIL,31/55 figures located in markdown
@@ -17467,7 +17467,7 @@ Rockland2021,1,figures_grounded,PASS,5/5 figures located in markdown
 Rockland2021,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Rockland2021,3,office_count_consistent,FAIL,3 contests; this town's other years median 13
 Rockland2022,0,document_self_identifies,NOTE,document never prints 'Rockland'; identity rests on the citation alone
-Rockland2022,0,carries_the_year,FAIL,'2022' does not appear in markdown+pdftext
+Rockland2022,0,carries_the_year,FAIL,"'2022' does not appear in markdown+pdftext, in that spelling or as a date ending 22"
 Rockland2022,0,document_supports_record,PASS,22/22 names and 48/48 figures located in markdown+pdftext
 Rockland2022,1,names_grounded,PASS,22/22 names located in markdown+pdftext
 Rockland2022,1,figures_grounded,PASS,48/48 figures located in markdown+pdftext
@@ -17521,7 +17521,7 @@ Rockland2025,1,figures_grounded,FAIL,28/49 figures located in markdown
 Rockland2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Rockland2025,3,office_count_consistent,PASS,14 contests; median 10 in other years
 Rockland2026,0,document_self_identifies,NOTE,document never prints 'Rockland'; identity rests on the citation alone
-Rockland2026,0,carries_the_year,FAIL,'2026' does not appear in raw_ocr
+Rockland2026,0,carries_the_year,FAIL,"'2026' does not appear in raw_ocr, in that spelling or as a date ending 26"
 Rockland2026,0,document_supports_record,PASS,7/15 names and 11/23 figures located in raw_ocr
 Rockland2026,1,names_grounded,FAIL,7/15 names located in raw_ocr
 Rockland2026,1,figures_grounded,FAIL,11/23 figures located in raw_ocr
@@ -17995,7 +17995,7 @@ Russell2025,2,contest_closes,PASS,Constable - 3 Years: 108 == 36 x 3
 Russell2025,2,contest_closes,PASS,Planning Board - 3 Years: 36 == 36 x 1
 Russell2025,3,office_count_consistent,PASS,13 contests; median 13 in other years
 Russell2026,0,document_self_identifies,NOTE,document never prints 'Russell'; identity rests on the citation alone
-Russell2026,0,carries_the_year,FAIL,'2026' does not appear in pdftext
+Russell2026,0,carries_the_year,FAIL,"'2026' does not appear in pdftext, in that spelling or as a date ending 26"
 Russell2026,0,document_supports_record,PASS,13/13 names and 13/13 figures located in pdftext
 Russell2026,1,names_grounded,PASS,13/13 names located in pdftext
 Russell2026,1,figures_grounded,PASS,13/13 figures located in pdftext
@@ -18173,7 +18173,7 @@ Sandisfield2022,2,contest_closes,PASS,Planning Board - 5 years: 238 == 238 x 1
 Sandisfield2022,2,contest_closes,PASS,Library Trustee - 5 years: 238 == 238 x 1
 Sandisfield2022,3,office_count_consistent,PASS,9 contests; median 7 in other years
 Sandisfield2023,0,document_self_identifies,NOTE,document never prints 'Sandisfield'; identity rests on the citation alone
-Sandisfield2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Sandisfield2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown+pdftext, in that spelling or as a date ending 23"
 Sandisfield2023,0,document_supports_record,PASS,10/11 names and 29/29 figures located in markdown+pdftext
 Sandisfield2023,1,names_grounded,FAIL,10/11 names located in markdown+pdftext
 Sandisfield2023,1,figures_grounded,PASS,29/29 figures located in markdown+pdftext
@@ -19617,7 +19617,7 @@ Southwick2026,2,contest_closes,PASS,PLANNING BOARD: 1650 == 1650 x 1
 Southwick2026,2,contest_closes,PASS,WATER COMMISSION: 1650 == 1650 x 1
 Southwick2026,3,office_count_consistent,PASS,13 contests; median 13 in other years
 Spencer2021,0,document_self_identifies,PASS,...Town of Spencer Annual Town Election 5/11/21...
-Spencer2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Spencer2021,0,carries_the_year,PASS,...Town of Spencer Annual Town Election 5/11/21 Pct. 1 Pct. 2 Pct. 3 Pct. 4 Total Selec...
 Spencer2021,0,document_supports_record,PASS,107/107 names and 119/119 figures located in markdown+pdftext
 Spencer2021,1,names_grounded,PASS,107/107 names located in markdown+pdftext
 Spencer2021,1,figures_grounded,PASS,119/119 figures located in markdown+pdftext
@@ -19654,7 +19654,7 @@ Spencer2022,2,tally_incomplete,NOTE,Sewer Commissioner 3 yr: 733 of 738; 5 marks
 Spencer2022,2,contest_closes,PASS,Constable 3 yr term: 2214 == 738 x 3
 Spencer2022,3,office_count_consistent,PASS,11 contests; median 12 in other years
 Spencer2023,0,document_self_identifies,PASS,...Town of Spencer Annual Town Election 5/9/23 P...
-Spencer2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Spencer2023,0,carries_the_year,PASS,...Town of Spencer Annual Town Election 5/9/23 Pct. 1 Pct. 2 Pct. 3 Pct. 4 Total Selec...
 Spencer2023,0,document_supports_record,PASS,22/22 names and 49/49 figures located in markdown+pdftext
 Spencer2023,1,names_grounded,PASS,22/22 names located in markdown+pdftext
 Spencer2023,1,figures_grounded,PASS,49/49 figures located in markdown+pdftext
@@ -20003,7 +20003,7 @@ Stoughton2021,1,figures_grounded,PASS,18/18 figures located in markdown
 Stoughton2021,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Stoughton2021,3,office_count_consistent,PASS,6 contests; median 12 in other years
 Stoughton2022,0,document_self_identifies,PASS,...: | 24500 | | | | | | | | | | StoughtonVoterTurnout: | 3.4% | | | | |...
-Stoughton2022,0,carries_the_year,FAIL,'2022' does not appear in raw_ocr
+Stoughton2022,0,carries_the_year,PASS,...## ***LOCAL ELECTION RESULTS FINAL*** 5-Apr-22 Pursuant to theWarrant and the Constabl...
 Stoughton2022,0,document_supports_record,PASS,130/135 names and 160/160 figures located in raw_ocr
 Stoughton2022,1,names_grounded,FAIL,130/135 names located in raw_ocr
 Stoughton2022,1,figures_grounded,PASS,160/160 figures located in raw_ocr
@@ -20013,7 +20013,7 @@ Stoughton2022,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY: 843 == 843 x 1
 Stoughton2022,2,contest_closes,PASS,SCHOOL COMMITTEE: 1686 == 843 x 2
 Stoughton2022,3,office_count_consistent,PASS,11 contests; median 12 in other years
 Stoughton2023,0,document_self_identifies,PASS,...e voters: || 24876 | S| | TT [Stoughton Voter Turnout: | 52%] S| S| d...
-Stoughton2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr
+Stoughton2023,0,carries_the_year,PASS,...LOCAL ELECTION RESULTS FINAL 4-Apr-23 Pursuant to the Warrant and the Constab...
 Stoughton2023,0,document_supports_record,PASS,40/58 names and 37/82 figures located in raw_ocr
 Stoughton2023,1,names_grounded,FAIL,40/58 names located in raw_ocr
 Stoughton2023,1,figures_grounded,FAIL,37/82 figures located in raw_ocr
@@ -20025,7 +20025,7 @@ Stoughton2023,2,marks_exceed_ballots,FAIL,School Committee: 2622 marks > 1305 ba
 Stoughton2023,2,contest_closes,PASS,Moderator: 1305 == 1305 x 1
 Stoughton2023,3,office_count_consistent,PASS,13 contests; median 12 in other years
 Stoughton2024,0,document_self_identifies,PASS,...: | 22393 | | | | | | | | | | StoughtonVoterTurnout: | 9.5% | | | | |...
-Stoughton2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr
+Stoughton2024,0,carries_the_year,PASS,...## LOCALELECTIONRESULTSFINAL ## 2-Apr-24 Pursuant totheWarrant andtheConstable's...
 Stoughton2024,0,document_supports_record,PASS,169/178 names and 196/198 figures located in raw_ocr
 Stoughton2024,1,names_grounded,FAIL,169/178 names located in raw_ocr
 Stoughton2024,1,figures_grounded,FAIL,196/198 figures located in raw_ocr
@@ -20324,7 +20324,7 @@ Sunderland2023,1,figures_grounded,PASS,26/26 figures located in markdown
 Sunderland2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Sunderland2023,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Sunderland2024,0,document_self_identifies,PASS,...Town of Sunderland ANNUAL TOWN ELECTION 4-May-24...
-Sunderland2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr+pdftext
+Sunderland2024,0,carries_the_year,PASS,...Town of Sunderland ANNUAL TOWN ELECTION 4-May-24 8:00am-1:00pm Sunderland Public Library...
 Sunderland2024,0,document_supports_record,PASS,12/12 names and 23/23 figures located in raw_ocr+pdftext
 Sunderland2024,1,names_grounded,PASS,12/12 names located in raw_ocr+pdftext
 Sunderland2024,1,figures_grounded,PASS,23/23 figures located in raw_ocr+pdftext
@@ -20362,7 +20362,7 @@ Sunderland2026,2,contest_closes,PASS,PLANNING BOARD: 621 == 621 x 1
 Sunderland2026,2,contest_closes,PASS,SUNDERLAND PUBLIC LIBRARY TRUSTEES: 1863 == 621 x 3
 Sunderland2026,3,office_count_consistent,PASS,9 contests; median 10 in other years
 Sutton2021,0,document_self_identifies,NOTE,document never prints 'Sutton'; identity rests on the citation alone
-Sutton2021,0,carries_the_year,FAIL,'2021' does not appear in pdftext
+Sutton2021,0,carries_the_year,FAIL,"'2021' does not appear in pdftext, in that spelling or as a date ending 21"
 Sutton2021,0,document_supports_record,PASS,9/9 names and 19/19 figures located in pdftext
 Sutton2021,1,names_grounded,PASS,9/9 names located in pdftext
 Sutton2021,1,figures_grounded,PASS,19/19 figures located in pdftext
@@ -20376,7 +20376,7 @@ Sutton2021,2,contest_closes,PASS,Housing Authority: 83 == 83 x 1
 Sutton2021,2,contest_closes,PASS,Housing Authority: 83 == 83 x 1
 Sutton2021,3,office_count_consistent,PASS,7 contests; median 5 in other years
 Sutton2022,0,document_self_identifies,NOTE,document never prints 'Sutton'; identity rests on the citation alone
-Sutton2022,0,carries_the_year,FAIL,'2022' does not appear in pdftext
+Sutton2022,0,carries_the_year,FAIL,"'2022' does not appear in pdftext, in that spelling or as a date ending 22"
 Sutton2022,0,document_supports_record,PASS,8/8 names and 18/18 figures located in pdftext
 Sutton2022,1,names_grounded,PASS,8/8 names located in pdftext
 Sutton2022,1,figures_grounded,PASS,18/18 figures located in pdftext
@@ -20400,7 +20400,7 @@ Sutton2023,2,contest_closes,PASS,Library Trustee: 155 == 155 x 1
 Sutton2023,2,contest_closes,PASS,Housing Authority: 155 == 155 x 1
 Sutton2023,3,office_count_consistent,PASS,5 contests; median 5 in other years
 Sutton2024,0,document_self_identifies,NOTE,document never prints 'Sutton'; identity rests on the citation alone
-Sutton2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr+pdftext
+Sutton2024,0,carries_the_year,FAIL,"'2024' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 24"
 Sutton2024,0,document_supports_record,PASS,10/10 names and 20/20 figures located in raw_ocr+pdftext
 Sutton2024,1,names_grounded,PASS,10/10 names located in raw_ocr+pdftext
 Sutton2024,1,figures_grounded,PASS,20/20 figures located in raw_ocr+pdftext
@@ -20476,7 +20476,7 @@ Swampscott2023,2,contest_closes,PASS,BOARD OF HEALTH: 1646 == 1646 x 1
 Swampscott2023,2,contest_closes,PASS,PLANNING BOARD: 1646 == 1646 x 1
 Swampscott2023,3,office_count_consistent,PASS,14 contests; median 15 in other years
 Swampscott2024,0,document_self_identifies,NOTE,document never prints 'Swampscott'; identity rests on the citation alone
-Swampscott2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr+pdftext
+Swampscott2024,0,carries_the_year,FAIL,"'2024' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 24"
 Swampscott2024,0,document_supports_record,PASS,156/156 names and 184/184 figures located in raw_ocr+pdftext
 Swampscott2024,1,names_grounded,PASS,156/156 names located in raw_ocr+pdftext
 Swampscott2024,1,figures_grounded,PASS,184/184 figures located in raw_ocr+pdftext
@@ -20491,7 +20491,7 @@ Swampscott2024,2,contest_closes,PASS,BOARD OF HEALTH: 2920 == 2920 x 1
 Swampscott2024,2,contest_closes,PASS,PLANNING BOARD: 2920 == 2920 x 1
 Swampscott2024,3,office_count_consistent,PASS,14 contests; median 15 in other years
 Swampscott2025,0,document_self_identifies,NOTE,document never prints 'Swampscott'; identity rests on the citation alone
-Swampscott2025,0,carries_the_year,FAIL,'2025' does not appear in raw_ocr+pdftext
+Swampscott2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 25"
 Swampscott2025,0,document_supports_record,PASS,147/147 names and 181/181 figures located in raw_ocr+pdftext
 Swampscott2025,1,names_grounded,PASS,147/147 names located in raw_ocr+pdftext
 Swampscott2025,1,figures_grounded,PASS,181/181 figures located in raw_ocr+pdftext
@@ -20621,7 +20621,7 @@ Swansea2026,1,figures_grounded,PASS,12/12 figures located in markdown
 Swansea2026,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Swansea2026,3,office_count_consistent,PASS,8 contests; median 11 in other years
 Taunton2021,0,document_self_identifies,PASS,...## CITYOFTAUNTON ## OFFICIALRESULTS-GENERALELE...
-Taunton2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Taunton2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown, in that spelling or as a date ending 21"
 Taunton2021,0,document_supports_record,PASS,118/118 names and 153/153 figures located in markdown
 Taunton2021,1,names_grounded,PASS,118/118 names located in markdown
 Taunton2021,1,figures_grounded,PASS,153/153 figures located in markdown
@@ -21112,7 +21112,7 @@ Townsend2023,1,figures_grounded,FAIL,65/66 figures located in markdown
 Townsend2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Townsend2023,3,office_count_consistent,PASS,19 contests; median 18 in other years
 Townsend2024,0,document_self_identifies,PASS,...Total Registered Town of Townsend es a Peon’ 1 oT [ree ~ Total...
-Townsend2024,0,carries_the_year,FAIL,'2024' does not appear in raw_ocr
+Townsend2024,0,carries_the_year,FAIL,"'2024' does not appear in raw_ocr, in that spelling or as a date ending 24"
 Townsend2024,0,document_supports_record,PASS,6/20 names and 18/60 figures located in raw_ocr
 Townsend2024,1,names_grounded,FAIL,6/20 names located in raw_ocr
 Townsend2024,1,figures_grounded,FAIL,18/60 figures located in raw_ocr
@@ -21139,7 +21139,7 @@ Townsend2024,2,contest_closes,PASS,BOARD OF WATER COMMISSIONERS (3-year): 1307 =
 Townsend2024,2,contest_closes,PASS,BOARD OF WATER COMMISSIONERS (2-year): 1307 == 1307 x 1
 Townsend2024,3,office_count_consistent,PASS,20 contests; median 18 in other years
 Townsend2025,0,document_self_identifies,PASS,"...ction Voters: 7254 P| Town of Townsend | | Ppt 28,2028 | Precinct tt..."
-Townsend2025,0,carries_the_year,FAIL,'2025' does not appear in raw_ocr
+Townsend2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr, in that spelling or as a date ending 25"
 Townsend2025,0,document_supports_record,PASS,5/22 names and 17/53 figures located in raw_ocr
 Townsend2025,1,names_grounded,FAIL,5/22 names located in raw_ocr
 Townsend2025,1,figures_grounded,FAIL,17/53 figures located in raw_ocr
@@ -21699,7 +21699,7 @@ Wakefield2022,2,contest_closes,PASS,CONSTABLE 1YR: 3310 == 3310 x 1
 Wakefield2022,2,contest_closes,PASS,HOUSING AUTHORITY: 3310 == 3310 x 1
 Wakefield2022,3,office_count_consistent,PASS,11 contests; median 10 in other years
 Wakefield2023,0,document_self_identifies,NOTE,document never prints 'Wakefield'; identity rests on the citation alone
-Wakefield2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Wakefield2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown+pdftext, in that spelling or as a date ending 23"
 Wakefield2023,0,document_supports_record,PASS,17/17 names and 37/37 figures located in markdown+pdftext
 Wakefield2023,1,names_grounded,PASS,17/17 names located in markdown+pdftext
 Wakefield2023,1,figures_grounded,PASS,37/37 figures located in markdown+pdftext
@@ -21819,7 +21819,7 @@ Wales2026,1,figures_grounded,FAIL,16/27 figures located in raw_ocr
 Wales2026,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Wales2026,3,office_count_consistent,PASS,10 contests; median 10 in other years
 Walpole2021,0,document_self_identifies,NOTE,document never prints 'Walpole'; identity rests on the citation alone
-Walpole2021,0,carries_the_year,FAIL,'2021' does not appear in raw_ocr
+Walpole2021,0,carries_the_year,FAIL,"'2021' does not appear in raw_ocr, in that spelling or as a date ending 21"
 Walpole2021,0,document_supports_record,PASS,96/96 names and 130/130 figures located in raw_ocr
 Walpole2021,1,names_grounded,PASS,96/96 names located in raw_ocr
 Walpole2021,1,figures_grounded,PASS,130/130 figures located in raw_ocr
@@ -21991,7 +21991,7 @@ Ware2025,1,figures_grounded,PASS,14/14 figures located in markdown
 Ware2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Ware2025,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Wareham2021,0,document_self_identifies,NOTE,document never prints 'Wareham'; identity rests on the citation alone
-Wareham2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Wareham2021,0,carries_the_year,PASS,...Town Election 4-May-21 Total Voters 17460 voted 1187 Selectman...
 Wareham2021,0,document_supports_record,PASS,12/12 names and 12/12 figures located in markdown+pdftext
 Wareham2021,1,names_grounded,PASS,12/12 names located in markdown+pdftext
 Wareham2021,1,figures_grounded,PASS,12/12 figures located in markdown+pdftext
@@ -22005,7 +22005,7 @@ Wareham2022,1,figures_grounded,PASS,8/8 figures located in markdown
 Wareham2022,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Wareham2022,3,office_count_consistent,FAIL,3 contests; this town's other years median 7
 Wareham2023,0,document_self_identifies,NOTE,document never prints 'Wareham'; identity rests on the citation alone
-Wareham2023,0,carries_the_year,FAIL,'2023' does not appear in raw_ocr
+Wareham2023,0,carries_the_year,FAIL,"'2023' does not appear in raw_ocr, in that spelling or as a date ending 23"
 Wareham2023,0,document_supports_record,PASS,6/12 names and 1/12 figures located in raw_ocr
 Wareham2023,1,names_grounded,FAIL,6/12 names located in raw_ocr
 Wareham2023,1,figures_grounded,FAIL,1/12 figures located in raw_ocr
@@ -22295,14 +22295,14 @@ Washington2026,2,contest_closes,PASS,PLANNING BOARD: 49 == 49 x 1
 Washington2026,2,contest_closes,PASS,SELECT BOARD: 49 == 49 x 1
 Washington2026,3,office_count_consistent,PASS,5 contests; median 6 in other years
 Watertown2021,0,document_self_identifies,NOTE,document never prints 'Watertown'; identity rests on the citation alone
-Watertown2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Watertown2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown+pdftext, in that spelling or as a date ending 21"
 Watertown2021,0,document_supports_record,PASS,25/25 names and 39/39 figures located in markdown+pdftext
 Watertown2021,1,names_grounded,PASS,25/25 names located in markdown+pdftext
 Watertown2021,1,figures_grounded,PASS,39/39 figures located in markdown+pdftext
 Watertown2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Watertown2021,3,office_count_consistent,PASS,8 contests; median 8 in other years
 Watertown2023,0,document_self_identifies,NOTE,document never prints 'Watertown'; identity rests on the citation alone
-Watertown2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Watertown2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown+pdftext, in that spelling or as a date ending 23"
 Watertown2023,0,document_supports_record,PASS,18/18 names and 26/26 figures located in markdown+pdftext
 Watertown2023,1,names_grounded,PASS,18/18 names located in markdown+pdftext
 Watertown2023,1,figures_grounded,PASS,26/26 figures located in markdown+pdftext
@@ -23501,7 +23501,7 @@ Westborough2026,2,contest_closes,PASS,SOLDIERS MEMORIALS: 475 == 475 x 1
 Westborough2026,2,contest_closes,PASS,HOUSING AUTHORITY: 475 == 475 x 1
 Westborough2026,3,office_count_consistent,PASS,9 contests; median 8 in other years
 Westfield2021,0,document_self_identifies,NOTE,document never prints 'Westfield'; identity rests on the citation alone
-Westfield2021,0,carries_the_year,FAIL,'2021' does not appear in raw_ocr+markdown
+Westfield2021,0,carries_the_year,FAIL,"'2021' does not appear in raw_ocr+markdown, in that spelling or as a date ending 21"
 Westfield2021,0,document_supports_record,PASS,183/299 names and 275/315 figures located in raw_ocr+markdown
 Westfield2021,1,names_grounded,FAIL,183/299 names located in raw_ocr+markdown
 Westfield2021,1,figures_grounded,FAIL,275/315 figures located in raw_ocr+markdown
@@ -23683,7 +23683,7 @@ Westhampton2026,2,contest_closes,PASS,W'ton Rep to HRHS - 1 for three years: 598
 Westhampton2026,2,contest_closes,PASS,ELEMENTARY SCHOOL COMMITTEE - 2 for three ye: 1196 == 598 x 2
 Westhampton2026,3,office_count_consistent,PASS,10 contests; median 10 in other years
 Westminster2021,0,document_self_identifies,PASS,...## Regional School Committee-Westminster(oneposition)-3years | | Preci...
-Westminster2021,0,carries_the_year,FAIL,'2021' does not appear in markdown
+Westminster2021,0,carries_the_year,FAIL,"'2021' does not appear in markdown, in that spelling or as a date ending 21"
 Westminster2021,0,document_supports_record,PASS,14/14 names and 32/32 figures located in markdown
 Westminster2021,1,names_grounded,PASS,14/14 names located in markdown
 Westminster2021,1,figures_grounded,PASS,32/32 figures located in markdown
@@ -24519,7 +24519,7 @@ Williamstown2026,2,contest_closes,PASS,HOUSING AUTHORITY: 411 == 411 x 1
 Williamstown2026,2,contest_closes,PASS,PLANNING BOARD: 411 == 411 x 1
 Williamstown2026,3,office_count_consistent,PASS,5 contests; median 5 in other years
 Wilmington2021,0,document_self_identifies,PASS,...T - CERTIFIED RESULTS TOWN OF WILMINGTON - ANNUAL TOWN ELECTION 24-Apr...
-Wilmington2021,0,carries_the_year,FAIL,'2021' does not appear in markdown+pdftext
+Wilmington2021,0,carries_the_year,PASS,...WN OF WILMINGTON - ANNUAL TOWN ELECTION 24-Apr-21 OFFICES AND CANDIDATES 1 2 3 4 5 6 TOTA...
 Wilmington2021,0,document_supports_record,PASS,10/10 names and 21/21 figures located in markdown+pdftext
 Wilmington2021,1,names_grounded,PASS,10/10 names located in markdown+pdftext
 Wilmington2021,1,figures_grounded,PASS,21/21 figures located in markdown+pdftext
@@ -24532,21 +24532,21 @@ Wilmington2021,2,contest_closes,PASS,SHAWSHEEN TECH: 1199 == 1199 x 1
 Wilmington2021,2,contest_closes,PASS,WILMINGTON HOUSING AUTHORITY: 1199 == 1199 x 1
 Wilmington2021,3,office_count_consistent,PASS,6 contests; median 4 in other years
 Wilmington2022,0,document_self_identifies,PASS,...- CERTIFIED RESULTS _ TOWN OF WILMINGTON - ANNUAL TOWN ELECTION - 23-A...
-Wilmington2022,0,carries_the_year,FAIL,'2022' does not appear in raw_ocr+markdown
+Wilmington2022,0,carries_the_year,PASS,...OF WILMINGTON - ANNUAL TOWN ELECTION - 23-Apr-22 oo | | womporsuscomy | | | | TT nator s...
 Wilmington2022,0,document_supports_record,PASS,0/7 names and 1/15 figures located in raw_ocr+markdown
 Wilmington2022,1,names_grounded,FAIL,0/7 names located in raw_ocr+markdown
 Wilmington2022,1,figures_grounded,FAIL,1/15 figures located in raw_ocr+markdown
 Wilmington2022,2,ballots_derivable,UNKNOWN,"2 contests, no two agree: [635, 638]"
 Wilmington2022,3,office_count_consistent,PASS,4 contests; median 4 in other years
 Wilmington2023,0,document_self_identifies,PASS,...300 316 204 352 326 328 1826 WILMINGTON HOUSING AUTHORITY WILMINGTON...
-Wilmington2023,0,carries_the_year,FAIL,'2023' does not appear in markdown+pdftext
+Wilmington2023,0,carries_the_year,PASS,...WN OF WILMINGTON - ANNUAL TOWN ELECTION 22-Apr-23 TOTAL TALLY SHEET - OFFICIAL RESULTS TO...
 Wilmington2023,0,document_supports_record,PASS,6/6 names and 12/12 figures located in markdown+pdftext
 Wilmington2023,1,names_grounded,PASS,6/6 names located in markdown+pdftext
 Wilmington2023,1,figures_grounded,PASS,12/12 figures located in markdown+pdftext
 Wilmington2023,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Wilmington2023,3,office_count_consistent,PASS,3 contests; median 4 in other years
 Wilmington2024,0,document_self_identifies,PASS,...ET - OFFICIAL RESULTS TOWN OF WILMINGTON - ANNUAL TOWN ELECTION 27-Apr...
-Wilmington2024,0,carries_the_year,FAIL,'2024' does not appear in markdown+pdftext
+Wilmington2024,0,carries_the_year,PASS,...WN OF WILMINGTON - ANNUAL TOWN ELECTION 27-Apr-24 OFFICES AND CANDIDATES 1 1 EV 2 2 EV 3...
 Wilmington2024,0,document_supports_record,PASS,6/6 names and 14/14 figures located in markdown+pdftext
 Wilmington2024,1,names_grounded,PASS,6/6 names located in markdown+pdftext
 Wilmington2024,1,figures_grounded,PASS,14/14 figures located in markdown+pdftext
@@ -24874,7 +24874,7 @@ Worcester2021,1,figures_grounded,FAIL,35/38 figures located in raw_ocr
 Worcester2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Worcester2021,3,office_count_consistent,PASS,8 contests; median 14 in other years
 Worcester2023,0,document_self_identifies,NOTE,document never prints 'Worcester'; identity rests on the citation alone
-Worcester2023,0,carries_the_year,FAIL,'2023' does not appear in markdown
+Worcester2023,0,carries_the_year,FAIL,"'2023' does not appear in markdown, in that spelling or as a date ending 23"
 Worcester2023,0,document_supports_record,PASS,0/38 names and 48/52 figures located in markdown
 Worcester2023,1,names_grounded,FAIL,0/38 names located in markdown
 Worcester2023,1,figures_grounded,FAIL,48/52 figures located in markdown
@@ -24913,7 +24913,7 @@ Worthington2024,1,figures_grounded,PASS,3/3 figures located in raw_ocr+pdftext
 Worthington2024,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Worthington2024,3,office_count_consistent,FAIL,1 contests; this town's other years median 10
 Worthington2025,0,document_self_identifies,NOTE,document never prints 'Worthington'; identity rests on the citation alone
-Worthington2025,0,carries_the_year,FAIL,'2025' does not appear in raw_ocr
+Worthington2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr, in that spelling or as a date ending 25"
 Worthington2025,0,document_supports_record,PASS,6/11 names and 1/11 figures located in raw_ocr
 Worthington2025,1,names_grounded,FAIL,6/11 names located in raw_ocr
 Worthington2025,1,figures_grounded,FAIL,1/11 figures located in raw_ocr
