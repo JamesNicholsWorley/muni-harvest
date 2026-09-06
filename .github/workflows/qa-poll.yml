@@ -37,6 +37,38 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Land the last run's work on main
+        # A cloud session pushes to a fresh `claude/*` branch and nothing merges
+        # it, so main never moves and the NEXT session clones the same baseline
+        # and redoes the same work.  Six sessions produced four branches and
+        # three independent rewrites of the same function before anyone noticed.
+        #
+        # So land finished branches here, before firing the next run, oldest
+        # first.  A branch that will not merge cleanly is LEFT ALONE and named
+        # in the log: reconciling two different edits to a check is a judgement
+        # about documents, not something to resolve with a merge strategy.
+        # Divergence should now be rare, because main advances after each run.
+        run: |
+          git config user.name "civicatlas-qa"
+          git config user.email "jamesnicholsworleyassistant@gmail.com"
+          git fetch origin '+refs/heads/claude/*:refs/remotes/origin/claude/*' --quiet
+          landed=0; stuck=""
+          for ref in $(git for-each-ref --sort=committerdate --format='%(refname)' refs/remotes/origin/claude); do
+            b=${ref#refs/remotes/}
+            [ "$(git rev-list --count main.."$b")" -gt 0 ] || continue
+            if git merge --no-edit -m "Land ${b#origin/}" "$b" >/dev/null 2>&1; then
+              landed=$((landed+1)); echo "landed $b"
+            else
+              git merge --abort || true
+              stuck="$stuck ${b#origin/}"; echo "CONFLICT, left alone: $b"
+            fi
+          done
+          if [ "$landed" -gt 0 ]; then git push origin main; fi
+          echo "landed=$landed stuck=$stuck"
+          if [ -n "$stuck" ]; then
+            echo "::warning::branches needing a human merge:$stuck"
+          fi
+
       - name: Has the owner replied?
         id: check
         env:
