@@ -1,0 +1,5 @@
+stem,why,queued_on,status,chars,done_on
+Middleborough2026,"scan; held OCR is 874 chars of headings only, table collapsed to noise; read by eye 2026-09-06",2026-09-06,waiting,,
+Pelham2022,"scan; held OCR is 702 chars of headings only, table collapsed to noise; read by eye 2026-09-06",2026-09-06,waiting,,
+Washington2024,held OCR is noise but the PDF has a clean text layer; the OCR should be replaced or dropped,2026-09-06,waiting,,
+Buckland2022,"scan, no text layer at all; read by eye 2026-09-06; a clean 3-page typed return that should OCR well",2026-09-06,waiting,,
