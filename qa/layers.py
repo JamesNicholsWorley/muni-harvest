@@ -151,7 +151,21 @@ def has_ballot_candidate(contest):
 
 
 def document_text(stem):
-    """The best reading of the held document, or None if we hold none."""
+    """EVERY reading we hold of this town-year's document, and which they were.
+
+    There is one document and up to three readings of it: an OCR of the pixels,
+    an extraction of the file, and the PDF's own text layer.  Which is best is
+    not knowable in advance.  Washington2024 is a digital PDF whose text layer
+    prints `David Drugmand            102`, while its OCR renders the same block
+    as `Total SSst~<Cs*é~'sé*d a0]` -- and a pure scan is the other way round,
+    with no text layer at all and only the OCR saying anything.
+
+    Taking the first store that was non-empty asked "is this name in THIS FILE".
+    The check asks whether the DOCUMENT supports the record, so it searches
+    every reading held.  A superset of the old text: a name found before is
+    still found, so this can only ever un-flag.
+    """
+    parts, seen = [], []
     for rel in (f"data/raw_ocr/{stem}.txt",
                 f"data/markdown/{stem}.md",
                 f"data/pdftext/{stem}.txt"):
@@ -160,8 +174,11 @@ def document_text(stem):
             with open(p, encoding="utf-8", errors="replace") as fh:
                 t = fh.read()
             if t.strip():
-                return re.sub(r"\s+", " ", t), rel
-    return None, None
+                parts.append(re.sub(r"\s+", " ", t))
+                seen.append(os.path.basename(os.path.dirname(rel)))
+    if not parts:
+        return None, None
+    return " ".join(parts), "+".join(seen)
 
 
 def municipality_of(stem):
