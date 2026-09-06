@@ -1,0 +1,244 @@
+diff --git a/json/Billerica2023.json b/json/Billerica2023.json
+index 383c183..59ed40d 100644
+--- a/json/Billerica2023.json
++++ b/json/Billerica2023.json
+@@ -110,7 +110,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "MARK P FESTRATIOU",
++          "name_original": "MARK P EFSTRATIOU",
+           "votes": 1463
+         },
+         {
+diff --git a/json/Burlington2022.json b/json/Burlington2022.json
+index 48262b7..2ca316d 100644
+--- a/json/Burlington2022.json
++++ b/json/Burlington2022.json
+@@ -748,7 +748,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "Anthony John Salamone III",
++          "name_original": "Anthoney John Salamone III",
+           "votes": 144
+         },
+         {
+diff --git a/json/Chicopee2025.json b/json/Chicopee2025.json
+index 83fe7de..999d050 100644
+--- a/json/Chicopee2025.json
++++ b/json/Chicopee2025.json
+@@ -58,7 +58,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "Sandra Ann Penet",
++          "name_original": "Sandra Ann Peret",
+           "votes": 3234
+         },
+         {
+@@ -84,7 +84,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "Marie T. LaFlammme",
++          "name_original": "Marie T. Laflamme",
+           "votes": 4976
+         },
+         {
+@@ -106,7 +106,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "Frank Noel LaFlammme",
++          "name_original": "Frank Noel Laflamme",
+           "votes": 3567
+         },
+         {
+@@ -130,7 +130,7 @@
+           "votes": 2360
+         },
+         {
+-          "name_original": "Clark Edward Wolowicz",
++          "name_original": "Clark Edward Wojtowicz",
+           "votes": 2322
+         },
+         {
+@@ -582,7 +582,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "Ronald J. Bernard",
++          "name_original": "Ronald J. Benard",
+           "votes": 638
+         },
+         {
+diff --git a/json/Dunstable2021.json b/json/Dunstable2021.json
+index db1d653..0156b51 100644
+--- a/json/Dunstable2021.json
++++ b/json/Dunstable2021.json
+@@ -335,7 +335,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "Joseph J. Vleek",
++          "name_original": "Joseph J. Vlcek",
+           "votes": 349
+         },
+         {
+diff --git a/json/Lee2021.json b/json/Lee2021.json
+index d534640..b6ef7cd 100644
+--- a/json/Lee2021.json
++++ b/json/Lee2021.json
+@@ -52,7 +52,7 @@
+           "votes": 1
+         },
+         {
+-          "name_original": "CHRIS BRITAIN",
++          "name_original": "CHRIS BRITTAIN",
+           "votes": 2
+         },
+         {
+@@ -275,7 +275,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "RICHARD BRITAIN",
++          "name_original": "RICHARD BRITTAIN",
+           "votes": 619
+         },
+         {
+diff --git a/json/Methuen2021.json b/json/Methuen2021.json
+index c86d7bf..e2d37ac 100644
+--- a/json/Methuen2021.json
++++ b/json/Methuen2021.json
+@@ -41,7 +41,7 @@
+           "votes": 1453
+         },
+         {
+-          "name_original": "JESSICA L. PINOCCHIARO",
++          "name_original": "JESSICA L. FINOCCHIARO",
+           "votes": 2471
+         },
+         {
+@@ -49,7 +49,7 @@
+           "votes": 2120
+         },
+         {
+-          "name_original": "DAVID D.A. BOULANGER, JR.",
++          "name_original": "DAVID D.J. BEAUREGARD, JR.",
+           "votes": 2548
+         },
+         {
+@@ -176,8 +176,8 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "LAUREL J. KEEGAN",
+-          "votes": 1880
++          "name_original": "LAURIE J. KEEGAN",
++          "votes": 1980
+         },
+         {
+           "name_original": "RYAN ROBERT DIZOGLIO",
+@@ -193,7 +193,7 @@
+         },
+         {
+           "name_original": "RACHAEL A. BANKS",
+-          "votes": 1818
++          "votes": 1816
+         },
+         {
+           "name_original": "LOUANN ALANA SANTOS",
+@@ -227,7 +227,7 @@
+           "votes": 1578
+         },
+         {
+-          "name_original": "ANNAYBEL MORETA",
++          "name_original": "ANNGYBEL MORETA",
+           "votes": 1304
+         },
+         {
+diff --git a/json/Millbury2024.json b/json/Millbury2024.json
+index 9b7403a..3db2465 100644
+--- a/json/Millbury2024.json
++++ b/json/Millbury2024.json
+@@ -311,11 +311,11 @@
+           "votes": 1
+         },
+         {
+-          "name_original": "Marissa Vaillancourt",
++          "name_original": "Marissa Vaillancort",
+           "votes": 1
+         },
+         {
+-          "name_original": "Catherine Vaillancourt",
++          "name_original": "Catherine Vaillancort",
+           "votes": 1
+         },
+         {
+diff --git a/json/OakBluffs2026.json b/json/OakBluffs2026.json
+index cf51bb8..02f687f 100644
+--- a/json/OakBluffs2026.json
++++ b/json/OakBluffs2026.json
+@@ -211,7 +211,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "AMY KATHLYNN BILLINGS",
++          "name_original": "AMY KATHLYN BILLINGS",
+           "votes": 547
+         },
+         {
+diff --git a/json/Stoughton2025.json b/json/Stoughton2025.json
+index bf69823..fc104e2 100644
+--- a/json/Stoughton2025.json
++++ b/json/Stoughton2025.json
+@@ -611,7 +611,7 @@
+           "votes": 143
+         },
+         {
+-          "name_original": "Warren Leew",
++          "name_original": "Warren Loew",
+           "votes": 158
+         },
+         {
+diff --git a/json/Wellesley2026.json b/json/Wellesley2026.json
+index b9ec0ea..01b1109 100644
+--- a/json/Wellesley2026.json
++++ b/json/Wellesley2026.json
+@@ -530,7 +530,7 @@
+           "votes": 293
+         },
+         {
+-          "name_original": "Kelly McCould Norris",
++          "name_original": "KELLY MCCOULF NORRIS",
+           "votes": 287
+         },
+         {
+diff --git a/json/Westminster2022.json b/json/Westminster2022.json
+index d8b49e6..a45a9c3 100644
+--- a/json/Westminster2022.json
++++ b/json/Westminster2022.json
+@@ -285,7 +285,7 @@
+           "votes": 413
+         },
+         {
+-          "name_original": "Jeremy Smeltekop",
++          "name_original": "Jeremey Smeltekop",
+           "votes": 357
+         },
+         {
+diff --git a/json/Westminster2023.json b/json/Westminster2023.json
+index 96944f9..1fe869f 100644
+--- a/json/Westminster2023.json
++++ b/json/Westminster2023.json
+@@ -372,7 +372,7 @@
+       "extraction_confidence": 0.95,
+       "candidates": [
+         {
+-          "name_original": "Jeremy Smeltekop",
++          "name_original": "Jeremey Smeltekop",
+           "votes": 404
+         },
+         {
