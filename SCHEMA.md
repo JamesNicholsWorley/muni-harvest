@@ -99,6 +99,22 @@ a hallucination site for a value already held.
     quorum_count            counted to establish a Town Meeting quorum
     recorded_vote           from a recorded vote on the floor
     cannot_derive           fewer than two qualifying contests, or no two agree
+    results_no_turnout      a complete result, and the document states no turnout
+
+`results_no_turnout` is the state the project already wanted turnout for,
+finally given a name: the election is confirmed uncontested, the winners are
+known, and the turnout is not. It is not `cannot_derive`. That says a derivation
+was attempted and failed, which is true here and is not the point -- Hawley 2025
+prints nine offices, eight winners and no count anywhere, and reads as a
+successful parse of a document that simply does not state turnout. Recording it
+as an absence makes it indistinguishable from a parse that went wrong; naming it
+makes it findable when somebody goes looking for the towns whose turnout is
+still outstanding.
+
+Beware the number that is nearby and is not turnout. Hawley's page prints "21
+voters were in attendance" -- that is the annual town meeting a week after the
+election, and taking it would have invented the one figure the record does not
+have.
 
 `cannot_derive` is a real answer. Two contests that disagree are a
 disagreement, not a derivation, and picking one is how stale data becomes
@@ -122,6 +138,18 @@ These replaced the sentinels `-1` and `-3` in September 2026. A sentinel is a
 magic number in a field that otherwise holds real counts: nothing stops a sum
 from including it, and a contest that quietly totals negative passes every check
 that does not think to look. `null` cannot be summed by accident.
+
+### `outcome_verbatim`
+
+On a contest that elected nobody, quoting what the document says happened.
+Hawley 2025 prints "Town Clerk - 3 years / Invalid - Non-Resident": the
+write-ins were for a clerk who lives in Charlemont, so none of them counted and
+the seat went unfilled. The contest carries no candidates and this field carries
+the town's own words for the outcome.
+
+It exists so that "no winner" is never written as a person. A name field holding
+`Invalid - Non-Resident` would ground nowhere, sort as a candidate, and read to
+every later check as a transcription error.
 
 ### `tally_row`
 
