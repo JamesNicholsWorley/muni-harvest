@@ -361,6 +361,16 @@ def test_a_grouped_form_is_no_looser_than_the_plain_one():
     # and it is still no looser about the digits than it was
     assert not layers.figure_found(2505, "the figure 12,505 and nothing else")
     assert not layers.figure_found(1234, "totals 1,234,567 here")
+    # A letter beside the digits is not a longer number either.
+    # data/raw_ocr/Williamsburg2025.txt: the elected marker is glued to the
+    # figure. data/markdown/Tolland2022.md: the scraped page glues every figure
+    # to the label that follows it.
+    assert layers.figure_found(117, "| Glen Everett            | 117E |")
+    assert layers.figure_found(79, "Selectmen for term of 3 yearsEdwin Deming 79Write-Ins:")
+    assert layers.figure_found(85, "Susan H. Voudren 85Write-Ins:")
+    # and a longer number still is one
+    assert not layers.figure_found(117, "1179")
+    assert not layers.figure_found(117, "9117")
     # Under a thousand there is no grouped spelling to try, so a small figure
     # is matched exactly as it was before.
     assert layers.figure_found(275, "Bernard J. Stock 275")

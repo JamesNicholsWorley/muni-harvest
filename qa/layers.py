@@ -121,10 +121,23 @@ def figure_found(value, text):
     with a full stop did.  `(?!\\d)(?!,\\d)` still refuses 2,505 inside 12,505
     and 1,234 inside 1,234,567, so it is strictly weaker than what it replaces
     and can only un-flag.
+
+    The plain form has the same shape of bug, for the same reason.  `\\b117\\b`
+    needs a NON-WORD character after the digits, and an extractor routinely
+    leaves a letter there: Williamsburg 2025's OCR renders its elected marker
+    as `| Glen Everett | 117E |`, and Tolland 2022's scraped page glues every
+    figure to the label that follows it -- `79Write-Ins:`, `85Write-Ins:`,
+    `0Blanks:`.  Both are the figure, printed, and neither grounded.  What the
+    test actually wants is "this number, not part of a longer number", which is
+    `(?<!\\d)117(?!\\d)`.  Everywhere `\\b117\\b` matched, that matches too -- a
+    word boundary before a digit already means the previous character is not a
+    digit -- so this can only un-flag as well.  It admits a letter beside the
+    digits, which is the whole point and is why `43590` still does not ground
+    4359.
     """
     if value is None:
         return False
-    if re.search(r"\b" + str(int(value)) + r"\b", text):
+    if re.search(r"(?<!\d)" + str(int(value)) + r"(?!\d)", text):
         return True
     if abs(int(value)) < 1000:
         return False
