@@ -96,6 +96,32 @@ def votes_of(cand):
     return v if isinstance(v, int) else None
 
 
+def figure_found(value, text):
+    """Is this vote count printed in `text`, in either spelling a clerk uses?
+
+    A figure has two spellings on a page and the check only knew one.  Agawam
+    2021 prints `WILLIAM SAPELLI 4,359 81.31%`, Wellesley 2021 prints
+    `MARK G. KAPLAN 456 554 377 546 373 286 253 508 3,353`, Milton 2026 prints
+    `KEVIN B. CHRISOM, JR. ... 2,517` -- and a search for `4359` finds none of
+    them.  The record stores an integer, the document groups its thousands, and
+    a grounded figure read as ungrounded is the failure this project cares most
+    about: it makes a correct reading look unread, and 112 records were failing
+    `figures_grounded` for no other reason.
+
+    So try the grouped spelling too.  This can only ever un-flag -- every string
+    that matched before still matches -- and it is not looser than the plain
+    form: `(?<![\\d,])2,517(?![\\d,])` is as exact about its digits as `\\b2517\\b`,
+    and the lookarounds are what stop `517` matching inside `2,517`.
+    """
+    if value is None:
+        return False
+    if re.search(r"\b" + str(int(value)) + r"\b", text):
+        return True
+    if abs(int(value)) < 1000:
+        return False
+    return bool(re.search(r"(?<![\d,])" + f"{int(value):,}" + r"(?![\d,])", text))
+
+
 def scope_of(contest):
     """at_large | sub_town | regional_district.
 
@@ -348,7 +374,7 @@ def layer0_right_document(stem, record, text, source):
         return bool(parts) and all(re.search(re.escape(x), text, re.I) for x in parts[:2])
 
     n_hit = sum(1 for n in names if found(n))
-    f_hit = sum(1 for v in figures if re.search(r"\b" + str(v) + r"\b", text))
+    f_hit = sum(1 for v in figures if figure_found(v, text))
     if names or figures:
         ev = (f"{n_hit}/{len(names)} names and {f_hit}/{len(figures)} figures "
               f"located in {source}")
@@ -413,7 +439,7 @@ def layer1_grounded(stem, record, text, source):
         return all(re.search(re.escape(p), text, re.I) for p in parts[:2])
 
     n_ok = sum(1 for n in names if name_found(n))
-    f_ok = sum(1 for v in figures if re.search(r"\b" + str(v) + r"\b", text))
+    f_ok = sum(1 for v in figures if figure_found(v, text))
 
     out = []
     if names:

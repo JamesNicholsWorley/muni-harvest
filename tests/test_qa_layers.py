@@ -321,3 +321,45 @@ def test_a_longer_markdown_never_displaces_the_scan(tmp_path, monkeypatch):
                "**By a staff reporter** " + "article prose. " * 200})
     _text, source = document_text("Dalton2025")
     assert "raw_ocr" in source  # union: no single reading wins
+
+
+# ---- a figure has two spellings and the check knew one --------------------
+
+def test_a_grouped_thousand_is_the_same_figure():
+    # data/raw_ocr/Agawam2021.txt, verbatim: the record stores 4359 and the page
+    # groups its thousands, so `\b4359\b` found nothing on a page that prints it.
+    assert layers.figure_found(
+        4359, "WILLIAM SAPELLI 4,359 81.31% CHARLES ALVANOS 1,002 18.69%")
+    # data/markdown/Wellesley2021.md -- a precinct row ending in its total.
+    assert layers.figure_found(
+        3353, "MARK G. KAPLAN 456 554 377 546 373 286 253 508 3,353")
+    # Boston prints the same kind of figure without the comma; both spellings
+    # are the figure, and the plain one still matches.
+    assert layers.figure_found(91794, "MICHELLE WU  3878 3002 ... 91794")
+
+
+def test_a_grouped_form_is_no_looser_than_the_plain_one():
+    # The lookarounds are the point: the grouped spelling of 2517 must not
+    # ground itself on a printed 12,517, which `\d,\d\d\d` alone would allow.
+    assert not layers.figure_found(2517, "TOTAL 12,517")
+    # What the grouped branch does NOT do is tighten the plain one. `\b517\b`
+    # has always matched inside `2,517` -- a comma is a word boundary -- and 517
+    # therefore still grounds there. That is the pre-existing looseness of
+    # string grounding, left alone deliberately: narrowing it would FLAG records
+    # that pass today, and a check fix must only ever un-flag.
+    assert layers.figure_found(517, "KEVIN B. CHRISOM, JR. ... 2,517")
+    assert not layers.figure_found(4359, "43590")
+    # Under a thousand there is no grouped spelling to try, so a small figure
+    # is matched exactly as it was before.
+    assert layers.figure_found(275, "Bernard J. Stock 275")
+    assert not layers.figure_found(275, "Bernard J. Stock 2750")
+
+
+def test_a_grouped_figure_grounds_the_record():
+    # figures_grounded and document_supports_record read the page the same way,
+    # so the comma must not decide which of them fires.
+    rows = layers.layer1_grounded(
+        "Anytown2024", RECORD,
+        "SELECT BOARD Jane Q. Public 4,271 Blanks 12", "test")
+    assert dict((r[2], r[3]) for r in rows)["figures_grounded"] == "PASS"
+    assert _supports("SELECT BOARD Jane Q. Public 4,271 Blanks 12") == "PASS"
