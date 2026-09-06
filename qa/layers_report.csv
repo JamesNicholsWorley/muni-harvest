@@ -5822,10 +5822,10 @@ Dunstable2024,2,contest_closes,PASS,BOARD OF SELECTMEN - 3 Years: 584 == 584 x 1
 Dunstable2024,2,contest_closes,PASS,TOWN MODERATOR - 3 Years: 584 == 584 x 1
 Dunstable2024,3,office_count_consistent,PASS,16 contests; median 11 in other years
 Dunstable2025,0,document_self_identifies,NOTE,document never prints 'Dunstable'; identity rests on the citation alone
-Dunstable2025,0,carries_the_year,FAIL,'2025' does not appear in markdown+pdftext
-Dunstable2025,0,document_supports_record,FAIL,0/14 names and 0/36 figures located in markdown+pdftext
-Dunstable2025,1,names_grounded,FAIL,0/14 names located in markdown+pdftext
-Dunstable2025,1,figures_grounded,FAIL,0/36 figures located in markdown+pdftext
+Dunstable2025,0,carries_the_year,OVERRIDDEN,'2025' does not appear in markdown+pdftext  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]
+Dunstable2025,0,document_supports_record,OVERRIDDEN,0/14 names and 0/36 figures located in markdown+pdftext  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]
+Dunstable2025,1,names_grounded,OVERRIDDEN,0/14 names located in markdown+pdftext  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]
+Dunstable2025,1,figures_grounded,OVERRIDDEN,0/36 figures located in markdown+pdftext  [OVERRIDDEN: The document is fine and no reading of it reaches the checks. pdftotext returns a form fee]
 Dunstable2025,2,ballots_derivable,PASS,9 of 9 contests agree on 897
 Dunstable2025,2,contest_closes,PASS,Board of Assessors: 897 == 897 x 1
 Dunstable2025,2,contest_closes,PASS,Water Commissioner: 897 == 897 x 1
@@ -6044,7 +6044,7 @@ EastBrookfield2021,2,contest_closes,PASS,Planning Board - 3 Yr: 402 == 134 x 3
 EastBrookfield2021,2,contest_closes,PASS,Tree Warden - 1 Yr: 134 == 134 x 1
 EastBrookfield2021,2,regional_exempt,NOTE,Spencer-East Brookfield Regional School Dist: spans several towns; ballot arithmetic does not apply
 EastBrookfield2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
-EastBrookfield2022,0,document_self_identifies,PASS,...20260601181927id_/https://www.eastbrookfieldma.us/sites/g/files/vyhlif541/...
+EastBrookfield2022,0,document_self_identifies,PASS,"...# East Brookfield, Massachusetts -- Annual Town..."
 EastBrookfield2022,0,carries_the_year,PASS,"...usetts -- Annual Town Election, May 10, 2022 Source: the town's own results posting,..."
 EastBrookfield2022,0,document_supports_record,PASS,10/10 names and 0/0 figures located in markdown
 EastBrookfield2022,1,names_grounded,PASS,10/10 names located in markdown
@@ -14025,7 +14025,7 @@ NewSalem2023,1,names_grounded,PASS,8/8 names located in pdftext
 NewSalem2023,1,figures_grounded,PASS,8/8 figures located in pdftext
 NewSalem2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewSalem2023,3,office_count_consistent,PASS,7 contests; median 8 in other years
-NewSalem2024,0,document_self_identifies,PASS,...selectboard-member-55042385/) NewSalemelectionushersinnewSelectboard...
+NewSalem2024,0,document_self_identifies,PASS,...selectboard-member-55042385/) New Salem election ushers in new Select...
 NewSalem2024,0,carries_the_year,PASS,...(https://recorder.com/2024/05/07/new-salem-election-ushers-in-new-...
 NewSalem2024,0,document_supports_record,PASS,8/8 names and 8/8 figures located in raw_ocr+pdftext
 NewSalem2024,1,names_grounded,PASS,8/8 names located in raw_ocr+pdftext
@@ -15710,15 +15710,15 @@ Pelham2021,1,names_grounded,PASS,14/14 names located in raw_ocr+pdftext
 Pelham2021,1,figures_grounded,PASS,32/32 figures located in raw_ocr+pdftext
 Pelham2021,2,ballots_derivable,PASS,6 of 9 contests agree on 93
 Pelham2021,2,contest_closes,PASS,SELECT BOARD: 93 == 93 x 1
-Pelham2021,2,marks_exceed_ballots,FAIL,BOARD OF ASSESSORS: 104 marks > 93 ballots x 1 seats = 93
+Pelham2021,2,marks_exceed_ballots,OVERRIDDEN,BOARD OF ASSESSORS: 104 marks > 93 ballots x 1 seats = 93  [OVERRIDDEN: The record transcribes the sheet faithfully; the sheet does not add up. In each of the thr]
 Pelham2021,2,contest_closes,PASS,BOARD OF HEALTH: 93 == 93 x 1
 Pelham2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 186 == 93 x 2
 Pelham2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 93 == 93 x 1
 Pelham2021,2,contest_closes,PASS,PLANNING BOARD: 93 == 93 x 1
 Pelham2021,2,contest_closes,PASS,LIBRARY TRUSTEES: 186 == 93 x 2
-Pelham2021,2,marks_exceed_ballots,FAIL,AUDITOR: 96 marks > 93 ballots x 1 seats = 93
+Pelham2021,2,marks_exceed_ballots,OVERRIDDEN,AUDITOR: 96 marks > 93 ballots x 1 seats = 93  [OVERRIDDEN: The record transcribes the sheet faithfully; the sheet does not add up. In each of the thr]
 Pelham2021,2,contest_closes,PASS,CEMETERY COMMISSION: 93 == 93 x 1
-Pelham2021,2,marks_exceed_ballots,FAIL,MODERATOR: 124 marks > 93 ballots x 1 seats = 93
+Pelham2021,2,marks_exceed_ballots,OVERRIDDEN,MODERATOR: 124 marks > 93 ballots x 1 seats = 93  [OVERRIDDEN: The record transcribes the sheet faithfully; the sheet does not add up. In each of the thr]
 Pelham2021,2,contest_closes,PASS,TREE WARDEN: 93 == 93 x 1
 Pelham2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
 Pelham2022,0,document_self_identifies,NOTE,document never prints 'Pelham'; identity rests on the citation alone
