@@ -150,8 +150,37 @@ def has_ballot_candidate(contest):
     return False
 
 
+# What is left of a text once the things that are not a reading are removed:
+# extractor placeholders standing in for a picture, empty markdown table rules,
+# and the replacement character a mis-decoded file is full of.  A placeholder is
+# not an extraction (docs/notes/civicatlas-unsearchable-blind-spot).
+RE_NOT_A_READING = re.compile(r"<!--.*?-->|^\s*\|[\s|:-]*\|\s*$|�",
+                              re.S | re.M)
+
+
+def readable_chars(text):
+    """Letters and digits in `text` that came from the page rather than the tool."""
+    return len(re.sub(r"[^A-Za-z0-9]", "", RE_NOT_A_READING.sub(" ", text)))
+
+
 def document_text(stem):
-    """The best reading of the held document, or None if we hold none."""
+    """The best reading of the held document, or None if we hold none.
+
+    A file can be non-empty and still hold no reading.  `Hopedale2025`'s OCR is
+    32 bytes, both of them the string `<!-- image -->`; `Buckland2022`'s markdown
+    is ten of those and an empty table rule; `Dunstable2025`'s markdown is 1,117
+    replacement characters out of 1,255.  Returning any of these because they
+    are `.strip()`-truthy makes every later check answer about the extractor
+    instead of the document -- Hopedale was reported as not carrying its own year
+    and as a wrong document, while `data/markdown/Hopedale2025.md` holds the
+    whole return in plain text, one source further down this list.
+
+    So the order is still a preference, not a verdict: fall through a source that
+    has nothing in it, and report holding no text only when none of the three
+    does.  The bar is deliberately low -- 30 characters is a heading, not a
+    return -- because this decides which file to READ, and anything above it
+    still faces the grounding checks unchanged.
+    """
     for rel in (f"data/raw_ocr/{stem}.txt",
                 f"data/markdown/{stem}.md",
                 f"data/pdftext/{stem}.txt"):
@@ -159,9 +188,39 @@ def document_text(stem):
         if os.path.exists(p):
             with open(p, encoding="utf-8", errors="replace") as fh:
                 t = fh.read()
-            if t.strip():
+            if readable_chars(t) >= 30:
                 return re.sub(r"\s+", " ", t), rel
     return None, None
+
+
+# Enumerate what a return IS, never what it isn't: the list of things a town
+# publishes has no end, and the negative version left 48 of 100 documents
+# UNCLEAR (docs/notes/civicatlas-empty-parse-is-wrong-doc).  These are the words
+# of a tally SHEET rather than of prose about an election, which is what keeps
+# a set of Town Meeting minutes out: the counts separated cleanly at two.
+RE_RETURN_VOCABULARY = tuple(re.compile(p, re.I) for p in (
+    r"\bblanks?\b",
+    r"\bwrite[\s.-]?ins?\b",
+    r"\bballots?\s+(?:were\s+)?cast\b",
+    r"\bvotes?\s+cast\b",
+    r"\b(?:precincts?|prec\.?\s*\d|wards?\s*\d)\b",
+    r"\bvote\s+for\s+(?:no\s+more\s+than\s+)?"
+    r"(?:one|two|three|four|five|\d+)\b",
+    r"\b(?:was|were)\s+elected\b",
+    r"\bofficial\s+(?:election\s+)?results\b",
+    r"\btally\s+sheet\b",
+    r"\bvoter\s+turnout\b",
+))
+
+
+def return_vocabulary(text):
+    """Verbatim quotes of the tally words this text uses, one per distinct term."""
+    quotes = []
+    for rx in RE_RETURN_VOCABULARY:
+        m = rx.search(text)
+        if m:
+            quotes.append(text[max(0, m.start() - 25):m.end() + 25].strip())
+    return quotes
 
 
 def municipality_of(stem):
@@ -274,11 +333,41 @@ def layer0_right_document(stem, record, text, source):
     n_hit = sum(1 for n in names if found(n))
     f_hit = sum(1 for v in figures if re.search(r"\b" + str(v) + r"\b", text))
     if names or figures:
-        supported = n_hit > 0 or f_hit > 0
-        out.append((stem, 0, "document_supports_record",
-                    PASS if supported else FAIL,
-                    f"{n_hit}/{len(names)} names and {f_hit}/{len(figures)} figures "
-                    f"located in {source}"))
+        ev = (f"{n_hit}/{len(names)} names and {f_hit}/{len(figures)} figures "
+              f"located in {source}")
+        if n_hit or f_hit:
+            out.append((stem, 0, "document_supports_record", PASS, ev))
+        else:
+            # Zero support was calibrated on records holding NO document, and it
+            # does not carry over to a scan whose OCR collapsed.  Boston 2021's
+            # OCR keeps `CITY OF BOSTON MUNICIPAL ELECTION - NOVEMBER 2, 2021
+            # MAYOR VOTES CAST BY WARD` and turns every table under it into rows
+            # of `[canomares [+ [?]2]*]s]*]7]`; Chatham 2022 prints `1,089
+            # ballots were cast (17%)` -- which every contest in the record
+            # closes on exactly -- and renders its tally as `BLANKS S| |`.  Both
+            # are the right document read by the wrong tool, and 14 of the 18
+            # records this check condemned were that.
+            #
+            # Absence of evidence is only evidence of absence where the text
+            # could have carried the evidence.  So the finding stays, and it
+            # stops asserting what it cannot see: a document that DECLARES
+            # itself a return, in the tally vocabulary of the note, is UNKNOWN
+            # -- unread, still to be checked -- rather than wrong.  Brimfield
+            # 2022 is why the bar is two distinct terms: its text is Town
+            # Meeting minutes and mentions `the Annual Town Election` once, in a
+            # bylaw article listing which officers get elected, and it holds
+            # nothing else -- it stays FAIL, as it should.
+            quotes = return_vocabulary(text)
+            if len(quotes) >= 2:
+                out.append((stem, 0, "document_supports_record", UNKNOWN,
+                            f"{ev}; but the document says it is a return -- "
+                            + "; ".join(f'"{q}"' for q in quotes[:3])
+                            + " -- so this text cannot support anything and the "
+                              "record is unread here, not contradicted. Re-OCR "
+                              "the document (python -m qa.ocr_queue --add "
+                              f"{stem})"))
+            else:
+                out.append((stem, 0, "document_supports_record", FAIL, ev))
     return out
 
 
