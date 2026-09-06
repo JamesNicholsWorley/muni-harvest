@@ -1,5 +1,6 @@
 {
-  "thread_id": "1a0739df891744f7",
-  "last_message_id": "1a073cde89d10ec9",
-  "note": "The outstanding question. A run sets last_message_id to the email it just sent and stops; the poller waits for a reply to exactly that message."
+  "answered": "1a073ef4ced02024",
+  "last_message_id": null,
+  "note": "The outstanding question. A run sets last_message_id to the email it just sent and stops; the poller waits for a reply to exactly that message.",
+  "thread_id": "1a0739df891744f7"
 }
