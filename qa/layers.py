@@ -303,7 +303,11 @@ def year_found(year, text):
     if m:
         return m
     yy = year[2:]
-    for pat in (r"\b(?:0?[1-9]|1[0-2])[/-](?:0?[1-9]|[12]\d|3[01])[/-]" + yy + r"\b",
+    # Slash, hyphen and full stop are all separators a clerk uses: Swampscott
+    # 2025 heads "LOCAL ELECTION UNOFFICIAL ELECTION RESULTS 4.29.25".  Across
+    # the corpus the dotted form never once matched a year other than the
+    # stem's own, which is what makes it a separator and not a coincidence.
+    for pat in (r"\b(?:0?[1-9]|1[0-2])[/.-](?:0?[1-9]|[12]\d|3[01])[/.-]" + yy + r"\b",
                 RE_MONTH + r"\s*[-/]?\s*(?:0?[1-9]|[12]\d|3[01]),?\s*[-/]?\s*" + yy + r"\b",
                 r"\b(?:0?[1-9]|[12]\d|3[01])\s*[-/]\s*" + RE_MONTH + r"\s*[-/]\s*" + yy + r"\b"):
         m = re.search(pat, text, re.I)

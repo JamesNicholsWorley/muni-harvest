@@ -35,6 +35,7 @@ to know why something is the way it is.
 - [`unsearchable-blind-spot`](civicatlas-unsearchable-blind-spot.md) — a placeholder is not an extraction
 - [`one-document-several-readings`](civicatlas-one-document-several-readings.md) — ground against every reading held, not the first one
 - [`deskew-before-reading`](civicatlas-deskew-before-reading.md) — 1.3 degrees off square produces a dozen symptoms
+- [`rotate-before-ocr`](civicatlas-rotate-before-ocr.md) — 85 held PDFs carry a /Rotate the reading step ignores; 68 of them fail grounding
 
 ## Layer 2 — does the arithmetic hold?
 

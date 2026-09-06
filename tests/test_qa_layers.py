@@ -400,3 +400,11 @@ def test_an_undated_document_is_still_undated():
         "Anytown2024", {"elections": []},
         "ANNUAL TOWN ELECTION Blanks 12 Jane Q. Public 4271", "test")
     assert dict((r[2], r[3]) for r in rows)["carries_the_year"] == "FAIL"
+
+
+def test_a_full_stop_is_a_date_separator_too():
+    # data/raw_ocr/Swampscott2025.txt, its heading line.
+    assert layers.year_found(
+        "2025", "LOCAL ELECTION UNOFFICIAL ELECTION RESULTS 4.29.25 Voter Total")
+    # It is still a date and not a decimal: the day has to be a day.
+    assert not layers.year_found("2025", "TURNOUT 4.99.25 PERCENT")
