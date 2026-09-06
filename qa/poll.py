@@ -91,6 +91,38 @@ def fire(payload_text):
         return False
 
 
+def outstanding(thread_id, token=None):
+    """Is the owner's answer the newest thing in the thread?
+
+    This used to be answered from `qa/mail_state.json`, and that broke: a run
+    commits its state to a `claude/*` branch, the poller reads `main`, and
+    nobody merges between them -- so main said "nothing outstanding" while a
+    question sat unanswered in the thread. The loop stopped silently, which is
+    the one failure it was built to make visible.
+
+    The thread already knows. If the newest message is ours, we are waiting for
+    him. If the newest is his, he has answered whatever we last asked. No state
+    file, nothing to fall out of sync, and no branch to merge.
+
+    Returns (has_replied, description).
+    """
+    token = token or _access_token()
+    from qa import mail
+    t = mail._call(f"/threads/{thread_id}?format=metadata", token)
+    msgs = t.get("messages", [])
+    if not msgs:
+        return False, "thread is empty"
+    import email.utils
+    newest = msgs[-1]
+    headers = {h["name"].lower(): h["value"]
+               for h in newest.get("payload", {}).get("headers", [])}
+    _, addr = email.utils.parseaddr(headers.get("from", ""))
+    date = headers.get("date", "")
+    if addr.strip().lower() == mail.OWNER.strip().lower():
+        return True, f"newest message is his reply, {date}"
+    return False, f"newest message is ours, {date} -- waiting"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
@@ -101,29 +133,22 @@ def main():
 
     st = load_state()
     thread = st.get("thread_id")
-    anchor = st.get("last_message_id")
-    if not (thread and anchor):
-        print("no outstanding question -- nothing to wait for")
-        return 0
-
-    from qa import mail
-    if not mail.has_reply_since(thread, anchor):
-        print(f"no reply yet to {anchor} in thread {thread}")
-        # For --check the exit code IS the answer, so 1 means "no".  For --fire
-        # it is the outcome of the job, and having nothing to do is a success:
-        # the owner has not replied yet, which is the normal state most of the
-        # time.  Exiting 1 there paints the workflow red every twenty minutes,
-        # and a check that cries wolf on its ordinary state is one nobody reads
-        # when it finally means something.
+    if not thread:
+        print("no thread id in qa/mail_state.json")
         return 0 if args.fire else 1
 
-    replies = mail.replies(thread)
-    latest = replies[-1]
-    print(f"reply found: {latest['date']}")
+    from qa import mail
+    token = mail._access_token()
+    replied, why = outstanding(thread, token)
+    print(why)
+    if not replied:
+        return 0 if args.fire else 1
+
+    latest = mail.replies(thread, token)[-1]
 
     if args.show:
-        text = mail.body_of(latest["id"])
-        for m in ('\nOn ', '\n>'):
+        text = mail.body_of(latest["id"], token)
+        for m in (chr(10) + "On ", chr(10) + ">"):
             cut = text.find(m)
             if cut > 0:
                 text = text[:cut]
@@ -132,20 +157,12 @@ def main():
         return 0
 
     if args.fire:
-        text = mail.body_of(latest["id"])
-        # Strip the quoted original.  A reply carries the whole previous email
-        # back, and passing that along would feed the agent its own words as if
-        # they were the owner's answer.
-        for marker in ("\nOn ", "\n>"):
-            cut = text.find(marker)
+        text = mail.body_of(latest["id"], token)
+        for m in (chr(10) + "On ", chr(10) + ">"):
+            cut = text.find(m)
             if cut > 0:
                 text = text[:cut]
-        if fire(text.strip()):
-            # The question is answered; stop waiting on it.  The run that starts
-            # now is responsible for recording the next one.
-            st["last_message_id"] = None
-            st["answered"] = latest["id"]
-            save_state(st)
+        fire(text.strip())
     return 0
 
 
