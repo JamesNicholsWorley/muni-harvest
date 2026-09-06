@@ -158,3 +158,79 @@ def test_a_real_extraction_still_counts():
     # A picture caption alongside real text does not disqualify the text.
     assert readable_chars(
         "<!-- image -->\nANNUAL TOWN ELECTION MAY 18, 2021 Blanks 808") >= 30
+
+
+# ---------------------------------------------------------------- which reading
+
+import os  # noqa: E402
+import qa.layers as _layers  # noqa: E402
+from qa.layers import document_text  # noqa: E402
+
+
+def _corpus(tmp_path, monkeypatch, **files):
+    """Lay out data/raw_ocr, data/markdown, data/pdftext under a temp BASE."""
+    for rel, body in files.items():
+        p = tmp_path / "data" / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(body, encoding="utf-8")
+    monkeypatch.setattr(_layers, "BASE", str(tmp_path))
+
+
+# data/raw_ocr/NorthReading2021.txt, its first lines -- 631 characters holding
+# no office heading, no Blanks row, and not the COMMUNITY PLANNING winner.
+NR_OCR = ("NORTH READING, MA\nAnnual Town Election\nMAY 4, 2021\n\n"
+          "Kathryn M. Manupelli 232 166 265 295 958\n"
+          "Stephen J. O'Leary 262 165 276 339 1042\n"
+          "TOTALS 648 436 734 834 2652\n")
+# data/pdftext/NorthReading2021.txt -- the same page, read whole.
+NR_PDF = ("                  NORTH READING, MA\n           Annual Town Election\n"
+          "                        MAY 4, 2021\n"
+          "SELECT BOARD          For Three Years -- Vote for not more than TWO\n"
+          "Blanks                 79   38   70  104   291\n"
+          "Kathryn M. Manupelli  232  166  265  295   958\n"
+          "Stephen J. O'Leary    262  165  276  339  1042\n"
+          "COMMUNITY PLANNING    For Three Years -- Vote for not more than TWO\n"
+          "Ryan J. Carroll       253  163  279  293   988\n"
+          "Jeremiah C. Johnston  218  148  242  253   861\n"
+          "   Proof                                  2652\n")
+
+
+def test_the_fuller_reading_of_the_same_pdf_wins(tmp_path, monkeypatch):
+    # Both files are readings of NorthReading2021_d0.pdf. The OCR is above the
+    # 30-character bar, so the old order returned it and the record's only
+    # ungrounded name, Ryan J. Carroll, was simply not in the text being
+    # searched. Between two readings of one PDF the question is which recovered
+    # more of the page.
+    _corpus(tmp_path, monkeypatch,
+            **{"raw_ocr/NorthReading2021.txt": NR_OCR,
+               "pdftext/NorthReading2021.txt": NR_PDF})
+    text, source = document_text("NorthReading2021")
+    assert source == "data/pdftext/NorthReading2021.txt"
+    assert "Ryan J. Carroll" in text
+    assert "Vote for not more than TWO" in text
+
+
+def test_a_scan_keeps_its_ocr_when_pdftotext_found_nothing(tmp_path, monkeypatch):
+    # The ordinary case, and the reason raw_ocr leads: a scan with no text layer
+    # yields an empty pdftext, and the OCR is the only reading there is.
+    _corpus(tmp_path, monkeypatch,
+            **{"raw_ocr/Pelham2022.txt":
+               "ANNUAL TOWN ELECTION MAY 17, 2022 SELECT BOARD (One for Three Years)",
+               "pdftext/Pelham2022.txt": "\f\n \n"})
+    _text, source = document_text("Pelham2022")
+    assert source == "data/raw_ocr/Pelham2022.txt"
+
+
+def test_a_longer_markdown_never_displaces_the_scan(tmp_path, monkeypatch):
+    # markdown is not always an extraction of the same PDF. data/markdown for
+    # Dalton2025 is an iBerkshires article about the election -- five times the
+    # OCR's length and not the return -- so length must not promote it. Only
+    # raw_ocr and pdftext, two readings of one PDF, are compared.
+    _corpus(tmp_path, monkeypatch,
+            **{"raw_ocr/Dalton2025.txt":
+               "TOWN OF DALTON ANNUAL TOWN ELECTION MAY 12, 2025 SELECT BOARD",
+               "markdown/Dalton2025.md":
+               "# Pagliarulo, Strout Win Seats on Dalton Select Board\n"
+               "**By a staff reporter** " + "article prose. " * 200})
+    _text, source = document_text("Dalton2025")
+    assert source == "data/raw_ocr/Dalton2025.txt"

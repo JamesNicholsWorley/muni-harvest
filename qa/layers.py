@@ -180,16 +180,44 @@ def document_text(stem):
     does.  The bar is deliberately low -- 30 characters is a heading, not a
     return -- because this decides which file to READ, and anything above it
     still faces the grounding checks unchanged.
+
+    A file can also hold SOME reading and much less of one than the file beside
+    it, and a bar that only rejects the empty cannot see that.  `raw_ocr` and
+    `pdftext` are two readings of the SAME held PDF, so between those two the
+    question is not which we prefer but which recovered more of the page, and
+    that is answerable without opening anything.  `NorthReading2021`'s OCR keeps
+    631 characters -- no office headings, no Blanks rows, and no `Ryan J.
+    Carroll` at all -- while `data/pdftext/NorthReading2021.txt` holds the whole
+    return, every printed "Vote for not more than TWO" and the clerk's own Proof
+    rows.  `Boston2021`, queued for a re-OCR because its tables read as
+    `[canomares [+ [?]2]*]s]*]7]`, has them in full one file further down.
+
+    The comparison is deliberately by character count and never by how well a
+    source agrees with the record: a chooser that picked whichever text grounds
+    best would make the grounding checks agree with themselves.  It is also
+    confined to those two, because `markdown` is not always an extraction of the
+    same PDF -- some markdown is a news article about the election, which is
+    longer than the return and does not contain it.
     """
-    for rel in (f"data/raw_ocr/{stem}.txt",
-                f"data/markdown/{stem}.md",
-                f"data/pdftext/{stem}.txt"):
+    def reading(rel):
         p = os.path.join(BASE, rel)
-        if os.path.exists(p):
-            with open(p, encoding="utf-8", errors="replace") as fh:
-                t = fh.read()
-            if readable_chars(t) >= 30:
-                return re.sub(r"\s+", " ", t), rel
+        if not os.path.exists(p):
+            return None
+        with open(p, encoding="utf-8", errors="replace") as fh:
+            t = fh.read()
+        n = readable_chars(t)
+        return (t, n) if n >= 30 else None
+
+    ocr, pdf = f"data/raw_ocr/{stem}.txt", f"data/pdftext/{stem}.txt"
+    got = {rel: reading(rel) for rel in (ocr, pdf)}
+    order = [ocr, f"data/markdown/{stem}.md", pdf]
+    if got[ocr] and got[pdf] and got[pdf][1] > got[ocr][1]:
+        order = [pdf, f"data/markdown/{stem}.md", ocr]
+
+    for rel in order:
+        r = got.get(rel) if rel in got else reading(rel)
+        if r:
+            return re.sub(r"\s+", " ", r[0]), rel
     return None, None
 
 
