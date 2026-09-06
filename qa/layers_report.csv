@@ -609,8 +609,8 @@ Ashburnham2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot 
 Ashburnham2025,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Ashburnham2026,0,document_self_identifies,PASS,...2026 Ashburnham Town Election - Results Preci...
 Ashburnham2026,0,carries_the_year,PASS,...2026 Ashburnham Town Election - Results Prec...
-Ashburnham2026,0,document_supports_record,PASS,15/15 names and 23/28 figures located in raw_ocr+pdftext
-Ashburnham2026,1,names_grounded,PASS,15/15 names located in raw_ocr+pdftext
+Ashburnham2026,0,document_supports_record,PASS,14/15 names and 23/28 figures located in raw_ocr+pdftext
+Ashburnham2026,1,names_grounded,FAIL,14/15 names located in raw_ocr+pdftext
 Ashburnham2026,1,figures_grounded,FAIL,23/28 figures located in raw_ocr+pdftext
 Ashburnham2026,2,ballots_derivable,PASS,4 of 4 contests agree on 169
 Ashburnham2026,2,contest_closes,PASS,MODERATOR-For one year: 169 == 169 x 1
@@ -916,8 +916,8 @@ Ashland2024,2,contest_closes,PASS,PLANNING BOARD - 5 YEARS: 443 == 443 x 1
 Ashland2024,3,office_count_consistent,PASS,8 contests; median 9 in other years
 Ashland2025,0,document_self_identifies,PASS,"...62 18 63 15 48 92 124 73 0 80 ASHLAND ANNUAL TOWN ELECTION, MAY 20,..."
 Ashland2025,0,carries_the_year,PASS,"...Last day to register to vote was May 9, 2025 Precinct 2 124 Precinct 3 89 Precinct 4..."
-Ashland2025,0,document_supports_record,PASS,13/13 names and 22/22 figures located in markdown+pdftext
-Ashland2025,1,names_grounded,PASS,13/13 names located in markdown+pdftext
+Ashland2025,0,document_supports_record,PASS,12/13 names and 22/22 figures located in markdown+pdftext
+Ashland2025,1,names_grounded,FAIL,12/13 names located in markdown+pdftext
 Ashland2025,1,figures_grounded,PASS,22/22 figures located in markdown+pdftext
 Ashland2025,2,ballots_derivable,PASS,7 of 7 contests agree on 550
 Ashland2025,2,contest_closes,PASS,MODERATOR - 3 YEARS: 550 == 550 x 1
@@ -1107,8 +1107,8 @@ Auburn2025,2,regional_exempt,NOTE,SOUTHERN WORCESTER COUNTY REGIONAL VOCATIONA: 
 Auburn2025,3,office_count_consistent,PASS,13 contests; median 13 in other years
 Auburn2026,0,document_self_identifies,PASS,"...TOWN OF AUBURN ANNUAL ELECTION MAY 19, 2026..."
 Auburn2026,0,carries_the_year,PASS,"...TOWN OF AUBURN ANNUAL ELECTION MAY 19, 2026 The Annual Election was held in the Tow..."
-Auburn2026,0,document_supports_record,PASS,113/113 names and 136/136 figures located in raw_ocr+pdftext
-Auburn2026,1,names_grounded,PASS,113/113 names located in raw_ocr+pdftext
+Auburn2026,0,document_supports_record,PASS,112/113 names and 136/136 figures located in raw_ocr+pdftext
+Auburn2026,1,names_grounded,FAIL,112/113 names located in raw_ocr+pdftext
 Auburn2026,1,figures_grounded,PASS,136/136 figures located in raw_ocr+pdftext
 Auburn2026,2,ballots_derivable,PASS,2 of 2 contests agree on 1712
 Auburn2026,2,contest_closes,PASS,AUBURN HOUSING AUTHORITY: 1712 == 1712 x 1
@@ -2121,8 +2121,8 @@ Billerica2022,2,ballots_derivable,UNKNOWN,"2 contests, no two agree: [2649, 3396
 Billerica2022,3,office_count_consistent,PASS,17 contests; median 25 in other years
 Billerica2023,0,document_self_identifies,PASS,...==== Billerica2023 page 1 of 9 ==== Election...
 Billerica2023,0,carries_the_year,PASS,...==== Billerica2023 page 1 of 9 ==== Election Summary Repor...
-Billerica2023,0,document_supports_record,PASS,55/56 names and 81/81 figures located in raw_ocr
-Billerica2023,1,names_grounded,FAIL,55/56 names located in raw_ocr
+Billerica2023,0,document_supports_record,PASS,56/56 names and 81/81 figures located in raw_ocr
+Billerica2023,1,names_grounded,PASS,56/56 names located in raw_ocr
 Billerica2023,1,figures_grounded,PASS,81/81 figures located in raw_ocr
 Billerica2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Billerica2023,3,office_count_consistent,PASS,25 contests; median 24 in other years
@@ -2531,8 +2531,8 @@ Boxford2021,2,contest_closes,PASS,Planning Board: 1538 == 769 x 2
 Boxford2021,3,office_count_consistent,PASS,9 contests; median 11 in other years
 Boxford2022,0,document_self_identifies,PASS,"..., OFFICIAL - RESULTS - BOXFORD Annual Town Election May 17,..."
 Boxford2022,0,carries_the_year,PASS,"...- BOXFORD Annual Town Election May 17, 2022 erEwoxee TCC Peter C. Perkins , Margare..."
-Boxford2022,0,document_supports_record,PASS,15/15 names and 33/37 figures located in raw_ocr+pdftext
-Boxford2022,1,names_grounded,PASS,15/15 names located in raw_ocr+pdftext
+Boxford2022,0,document_supports_record,PASS,14/15 names and 33/37 figures located in raw_ocr+pdftext
+Boxford2022,1,names_grounded,FAIL,14/15 names located in raw_ocr+pdftext
 Boxford2022,1,figures_grounded,FAIL,33/37 figures located in raw_ocr+pdftext
 Boxford2022,2,ballots_derivable,PASS,8 of 8 contests agree on 905
 Boxford2022,2,contest_closes,PASS,SELECT BOARD: 1810 == 905 x 2
@@ -3388,8 +3388,8 @@ Canton2021,2,contest_closes,PASS,LIBRARY TRUSTEE: 8154 == 2718 x 3
 Canton2021,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Canton2022,0,document_self_identifies,PASS,...hethe citizens citizens of of Canton Canton forfor their their man...
 Canton2022,0,carries_the_year,PASS,"...erk Clerk ANNUAL TOWN ELECTION APRIL 5, 2022 T h ree y ea r t erms SELECT BOARD ., ...."
-Canton2022,0,document_supports_record,PASS,9/11 names and 17/23 figures located in pdftext
-Canton2022,1,names_grounded,FAIL,9/11 names located in pdftext
+Canton2022,0,document_supports_record,PASS,8/11 names and 17/23 figures located in pdftext
+Canton2022,1,names_grounded,FAIL,8/11 names located in pdftext
 Canton2022,1,figures_grounded,FAIL,17/23 figures located in pdftext
 Canton2022,2,ballots_derivable,PASS,6 of 6 contests agree on 280
 Canton2022,2,contest_closes,PASS,SELECT BOARD: 280 == 280 x 1
@@ -3918,8 +3918,8 @@ Chelsea2023,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot der
 Chelsea2023,3,office_count_consistent,PASS,18 contests; median 18 in other years
 Chelsea2025,0,document_self_identifies,PASS,...| | | | | | | | | | | City of Chelsea City Election 11/4/2025 <!--...
 Chelsea2025,0,carries_the_year,PASS,...| | City of Chelsea City Election 11/4/2025 <!-- image --> OFTCIAL Report EL45 &amp...
-Chelsea2025,0,document_supports_record,PASS,28/28 names and 42/46 figures located in markdown
-Chelsea2025,1,names_grounded,PASS,28/28 names located in markdown
+Chelsea2025,0,document_supports_record,PASS,27/28 names and 42/46 figures located in markdown
+Chelsea2025,1,names_grounded,FAIL,27/28 names located in markdown
 Chelsea2025,1,figures_grounded,FAIL,42/46 figures located in markdown
 Chelsea2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Chelsea2025,3,office_count_consistent,PASS,18 contests; median 18 in other years
@@ -4166,8 +4166,8 @@ Chicopee2023,2,contest_closes,PASS,SCHOOL COMMITTEE AT-LARGE: 8837 == 8837 x 1
 Chicopee2023,3,office_count_consistent,PASS,23 contests; median 24 in other years
 Chicopee2025,0,document_self_identifies,PASS,...IN. | | | | | | | | | City of Chicopee Municipal Election November 4...
 Chicopee2025,0,carries_the_year,PASS,...Chicopee Municipal Election November 4，2025 <!-- image --> Run Date:11/04/25 08:19P...
-Chicopee2025,0,document_supports_record,PASS,23/36 names and 27/59 figures located in raw_ocr+markdown
-Chicopee2025,1,names_grounded,FAIL,23/36 names located in raw_ocr+markdown
+Chicopee2025,0,document_supports_record,PASS,25/36 names and 27/59 figures located in raw_ocr+markdown
+Chicopee2025,1,names_grounded,FAIL,25/36 names located in raw_ocr+markdown
 Chicopee2025,1,figures_grounded,FAIL,27/59 figures located in raw_ocr+markdown
 Chicopee2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Chicopee2025,3,office_count_consistent,PASS,24 contests; median 24 in other years
@@ -4260,8 +4260,8 @@ Chilmark2025,2,contest_closes,PASS,TREE WARDEN- VOTE FOR NOT MORE THAN ONE- 1YR:
 Chilmark2025,3,office_count_consistent,PASS,15 contests; median 10 in other years
 Chilmark2026,0,document_self_identifies,PASS,...1164 TOTAL CAST BALLOTS: 601 CHILMARK ANNUAL TOWN ELECTION - WEDNES...
 Chilmark2026,0,carries_the_year,PASS,"...TO REGISTER TO VOTE: Friday, April 17, 2026 TOTAL VOTERS AS OF LAST DAY TO REGISTER..."
-Chilmark2026,0,document_supports_record,PASS,136/136 names and 146/146 figures located in raw_ocr+pdftext
-Chilmark2026,1,names_grounded,PASS,136/136 names located in raw_ocr+pdftext
+Chilmark2026,0,document_supports_record,PASS,135/136 names and 146/146 figures located in raw_ocr+pdftext
+Chilmark2026,1,names_grounded,FAIL,135/136 names located in raw_ocr+pdftext
 Chilmark2026,1,figures_grounded,PASS,146/146 figures located in raw_ocr+pdftext
 Chilmark2026,2,ballots_derivable,PASS,8 of 8 contests agree on 601
 Chilmark2026,2,contest_closes,PASS,MEMBER SELECT BOARD -3 YRS - VOTE FOR NOT MO: 601 == 601 x 1
@@ -5174,8 +5174,8 @@ Deerfield2023,2,contest_closes,PASS,TILTON LIBRARY TRUSTEE: 183 == 183 x 1
 Deerfield2023,3,office_count_consistent,PASS,9 contests; median 9 in other years
 Deerfield2024,0,document_self_identifies,PASS,...ll others 24 Blanks 1365 1767 DEERFIELD SCHOOL COMMITTEE: VOTE FOR TW...
 Deerfield2024,0,carries_the_year,PASS,"...TOWN ELECTION - MAY 6, 2024 SELECTBOARD: VOTE FOR ONE - 3 YEAR TERM..."
-Deerfield2024,0,document_supports_record,PASS,15/15 names and 34/35 figures located in raw_ocr
-Deerfield2024,1,names_grounded,PASS,15/15 names located in raw_ocr
+Deerfield2024,0,document_supports_record,PASS,14/15 names and 34/35 figures located in raw_ocr
+Deerfield2024,1,names_grounded,FAIL,14/15 names located in raw_ocr
 Deerfield2024,1,figures_grounded,FAIL,34/35 figures located in raw_ocr
 Deerfield2024,2,ballots_derivable,PASS,7 of 7 contests agree on 1767
 Deerfield2024,2,contest_closes,PASS,SELECTBOARD: 1767 == 1767 x 1
@@ -5477,8 +5477,8 @@ Dover2021,2,contest_closes,PASS,Park and Recreation Commission (3 Years): 2090 =
 Dover2021,3,office_count_consistent,PASS,12 contests; median 13 in other years
 Dover2022,0,document_self_identifies,PASS,"...DOVER TOWN ELECTION MONDAY May 16,..."
 Dover2022,0,carries_the_year,PASS,"...DOVER TOWN ELECTION MONDAY May 16, 2022 Moderator (1 Year) TOTALS Vote for one..."
-Dover2022,0,document_supports_record,PASS,21/21 names and 14/47 figures located in raw_ocr
-Dover2022,1,names_grounded,PASS,21/21 names located in raw_ocr
+Dover2022,0,document_supports_record,PASS,20/21 names and 14/47 figures located in raw_ocr
+Dover2022,1,names_grounded,FAIL,20/21 names located in raw_ocr
 Dover2022,1,figures_grounded,FAIL,14/47 figures located in raw_ocr
 Dover2022,2,ballots_derivable,PASS,8 of 8 contests agree on 667
 Dover2022,2,contest_closes,PASS,Moderator (1 Year): 667 == 667 x 1
@@ -5735,8 +5735,8 @@ Dudley2026,2,contest_closes,PASS,Planning Board 1-Year Unexpired Term: 1267 == 1
 Dudley2026,3,office_count_consistent,PASS,10 contests; median 12 in other years
 Dunstable2021,0,document_self_identifies,PASS,...## TOWNOFDUNSTABLE ANNUAL TOWN ELECTION - May 18...
 Dunstable2021,0,carries_the_year,PASS,"...UNSTABLE ANNUAL TOWN ELECTION - May 18, 2021 ## OFFICLALRESULTS Summary: Total Votes..."
-Dunstable2021,0,document_supports_record,PASS,25/26 names and 43/43 figures located in markdown
-Dunstable2021,1,names_grounded,FAIL,25/26 names located in markdown
+Dunstable2021,0,document_supports_record,PASS,26/26 names and 43/43 figures located in markdown
+Dunstable2021,1,names_grounded,PASS,26/26 names located in markdown
 Dunstable2021,1,figures_grounded,PASS,43/43 figures located in markdown
 Dunstable2021,2,ballots_derivable,PASS,14 of 14 contests agree on 472
 Dunstable2021,2,contest_closes,PASS,Board of Selectmen: 472 == 472 x 1
@@ -6041,7 +6041,7 @@ EastBrookfield2021,2,contest_closes,PASS,Planning Board - 3 Yr: 402 == 134 x 3
 EastBrookfield2021,2,contest_closes,PASS,Tree Warden - 1 Yr: 134 == 134 x 1
 EastBrookfield2021,2,regional_exempt,NOTE,Spencer-East Brookfield Regional School Dist: spans several towns; ballot arithmetic does not apply
 EastBrookfield2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
-EastBrookfield2022,0,document_self_identifies,PASS,"...# East Brookfield, Massachusetts -- Annual Town..."
+EastBrookfield2022,0,document_self_identifies,PASS,...20260601181927id_/https://www.eastbrookfieldma.us/sites/g/files/vyhlif541/...
 EastBrookfield2022,0,carries_the_year,PASS,"...usetts -- Annual Town Election, May 10, 2022 Source: the town's own results posting,..."
 EastBrookfield2022,0,document_supports_record,PASS,10/10 names and 0/0 figures located in markdown
 EastBrookfield2022,1,names_grounded,PASS,10/10 names located in markdown
@@ -6622,8 +6622,8 @@ Fairhaven2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot d
 Fairhaven2023,3,office_count_consistent,PASS,7 contests; median 9 in other years
 Fairhaven2024,0,document_self_identifies,PASS,"...SeTtS TOWNHALL·4OCENTERSTREET·FAIRHAVEN,MAO2719 TELEPH0NE:508-979-402..."
 Fairhaven2024,0,carries_the_year,PASS,"...VEN-MA.G0V ## ANNUALTOWNELECTION-APRIL1,2024-OFFICIALRESULTS | SelectBoard-3years |..."
-Fairhaven2024,0,document_supports_record,PASS,23/23 names and 42/43 figures located in markdown
-Fairhaven2024,1,names_grounded,PASS,23/23 names located in markdown
+Fairhaven2024,0,document_supports_record,PASS,22/23 names and 42/43 figures located in markdown
+Fairhaven2024,1,names_grounded,FAIL,22/23 names located in markdown
 Fairhaven2024,1,figures_grounded,FAIL,42/43 figures located in markdown
 Fairhaven2024,2,ballots_derivable,PASS,6 of 6 contests agree on 2760
 Fairhaven2024,2,contest_closes,PASS,Select Board: 5520 == 2760 x 2
@@ -6742,8 +6742,8 @@ Falmouth2025,2,contest_closes,PASS,Housing Authority: 6279 == 6279 x 1
 Falmouth2025,3,office_count_consistent,PASS,25 contests; median 21 in other years
 Falmouth2026,0,document_self_identifies,PASS,...QUESTION 1: SHALL THE TOWN OF FALMOUTH APPROVE CHARTER AMENDMENTS PR...
 Falmouth2026,0,carries_the_year,PASS,"...ANNUAL TOWN ELECTION May 19,2026 ISELECTBOARD |ElectTwofor3yeas | = | S|..."
-Falmouth2026,0,document_supports_record,PASS,110/110 names and 150/150 figures located in raw_ocr+pdftext
-Falmouth2026,1,names_grounded,PASS,110/110 names located in raw_ocr+pdftext
+Falmouth2026,0,document_supports_record,PASS,109/110 names and 150/150 figures located in raw_ocr+pdftext
+Falmouth2026,1,names_grounded,FAIL,109/110 names located in raw_ocr+pdftext
 Falmouth2026,1,figures_grounded,PASS,150/150 figures located in raw_ocr+pdftext
 Falmouth2026,2,ballots_derivable,PASS,2 of 2 contests agree on 6025
 Falmouth2026,2,contest_closes,PASS,SELECT BOARD: 12050 == 6025 x 2
@@ -7106,8 +7106,8 @@ Freetown2023,2,regional_exempt,NOTE,REGIONAL SCHOOL - LAKEVILLE: spans several t
 Freetown2023,3,office_count_consistent,PASS,14 contests; median 15 in other years
 Freetown2024,0,document_self_identifies,PASS,...l School District Committee - Freetown - 3-Year Term Courtney Anne B...
 Freetown2024,0,carries_the_year,PASS,"...RESULTS ANNUAL TOWN ELECTION - APRIL 1, 2024 A true copy attest: Number of Votes Cas..."
-Freetown2024,0,document_supports_record,PASS,24/24 names and 58/58 figures located in markdown+pdftext
-Freetown2024,1,names_grounded,PASS,24/24 names located in markdown+pdftext
+Freetown2024,0,document_supports_record,PASS,23/24 names and 58/58 figures located in markdown+pdftext
+Freetown2024,1,names_grounded,FAIL,23/24 names located in markdown+pdftext
 Freetown2024,1,figures_grounded,PASS,58/58 figures located in markdown+pdftext
 Freetown2024,2,ballots_derivable,PASS,13 of 13 contests agree on 1086
 Freetown2024,2,contest_closes,PASS,Selectman & Personnel Board Member - 3-Year : 1086 == 1086 x 1
@@ -7286,8 +7286,8 @@ Georgetown2026,2,contest_closes,PASS,HOUSING AUTHORITY - 5 Year Term (vote for o
 Georgetown2026,3,office_count_consistent,PASS,8 contests; median 9 in other years
 Gill2021,0,document_self_identifies,PASS,...eb/20211020194503/https://www.gillmass.org/p/36/Town-Clerk Annua...
 Gill2021,0,carries_the_year,PASS,...SOURCE: https://web.archive.org/web/20211020194503/https://www.gillmass.org/p/36...
-Gill2021,0,document_supports_record,PASS,11/11 names and 12/12 figures located in pdftext
-Gill2021,1,names_grounded,PASS,11/11 names located in pdftext
+Gill2021,0,document_supports_record,PASS,10/11 names and 12/12 figures located in pdftext
+Gill2021,1,names_grounded,FAIL,10/11 names located in pdftext
 Gill2021,1,figures_grounded,PASS,12/12 figures located in pdftext
 Gill2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Gill2021,3,office_count_consistent,PASS,8 contests; median 10 in other years
@@ -7813,8 +7813,8 @@ Groton2021,2,contest_closes,PASS,Town Moderator: 1746 == 1746 x 1
 Groton2021,3,office_count_consistent,PASS,15 contests; median 14 in other years
 Groton2022,0,document_self_identifies,PASS,...pe TOWN OFGROTON(MA) oo ANNUAL TOWN ELECTION M...
 Groton2022,0,carries_the_year,PASS,"...OTON(MA) oo ANNUAL TOWN ELECTION May 24,2022000 ee a 8Days Prior | __30 Days After _..."
-Groton2022,0,document_supports_record,PASS,26/26 names and 52/52 figures located in raw_ocr+pdftext
-Groton2022,1,names_grounded,PASS,26/26 names located in raw_ocr+pdftext
+Groton2022,0,document_supports_record,PASS,25/26 names and 52/52 figures located in raw_ocr+pdftext
+Groton2022,1,names_grounded,FAIL,25/26 names located in raw_ocr+pdftext
 Groton2022,1,figures_grounded,PASS,52/52 figures located in raw_ocr+pdftext
 Groton2022,2,ballots_derivable,PASS,8 of 8 contests agree on 2058
 Groton2022,2,contest_closes,PASS,Board of Assessors: 2058 == 2058 x 1
@@ -7995,8 +7995,8 @@ Groveland2024,2,contest_closes,PASS,Water/Sewer Commission: 1351 == 1351 x 1
 Groveland2024,3,office_count_consistent,PASS,12 contests; median 14 in other years
 Groveland2025,0,document_self_identifies,NOTE,document never prints 'Groveland'; identity rests on the citation alone
 Groveland2025,0,carries_the_year,PASS,"...MAY 5, 2025 LOCAL ELECTION OFFICIAL RESULTS pO Prec..."
-Groveland2025,0,document_supports_record,PASS,17/17 names and 40/40 figures located in raw_ocr+pdftext
-Groveland2025,1,names_grounded,PASS,17/17 names located in raw_ocr+pdftext
+Groveland2025,0,document_supports_record,PASS,16/17 names and 40/40 figures located in raw_ocr+pdftext
+Groveland2025,1,names_grounded,FAIL,16/17 names located in raw_ocr+pdftext
 Groveland2025,1,figures_grounded,PASS,40/40 figures located in raw_ocr+pdftext
 Groveland2025,2,ballots_derivable,PASS,9 of 9 contests agree on 594
 Groveland2025,2,contest_closes,PASS,Assessor 3 Year Term: 594 == 594 x 1
@@ -8278,8 +8278,8 @@ Hamilton2024,2,regional_exempt,NOTE,H-W Regional School Committee (3 years): spa
 Hamilton2024,3,office_count_consistent,PASS,8 contests; median 7 in other years
 Hamilton2025,0,document_self_identifies,PASS,...Town of Hamilton Annual Town Election April 10...
 Hamilton2025,0,carries_the_year,PASS,"...Hamilton Annual Town Election April 10, 2025 Precinct 1 1104 Precinct 2 954 OFFICIAL..."
-Hamilton2025,0,document_supports_record,PASS,16/16 names and 28/28 figures located in markdown+pdftext
-Hamilton2025,1,names_grounded,PASS,16/16 names located in markdown+pdftext
+Hamilton2025,0,document_supports_record,PASS,15/16 names and 28/28 figures located in markdown+pdftext
+Hamilton2025,1,names_grounded,FAIL,15/16 names located in markdown+pdftext
 Hamilton2025,1,figures_grounded,PASS,28/28 figures located in markdown+pdftext
 Hamilton2025,2,ballots_derivable,PASS,3 of 3 contests agree on 2058
 Hamilton2025,2,contest_closes,PASS,Select Board (3 years): 4116 == 2058 x 2
@@ -8901,8 +8901,8 @@ Haverhill2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot d
 Haverhill2025,3,office_count_consistent,PASS,17 contests; median 10 in other years
 Hawley2021,0,document_self_identifies,PASS,...Town of Hawley ANNUAL TOWN MEETING MINUTES M...
 Hawley2021,0,carries_the_year,PASS,"...AL TOWN MEETING MINUTES Monday, May 10, 2021 Annual Town Election Results: May 2, 20..."
-Hawley2021,0,document_supports_record,PASS,5/5 names and 5/5 figures located in markdown+pdftext
-Hawley2021,1,names_grounded,PASS,5/5 names located in markdown+pdftext
+Hawley2021,0,document_supports_record,PASS,4/5 names and 5/5 figures located in markdown+pdftext
+Hawley2021,1,names_grounded,FAIL,4/5 names located in markdown+pdftext
 Hawley2021,1,figures_grounded,PASS,5/5 figures located in markdown+pdftext
 Hawley2021,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Hawley2021,3,office_count_consistent,PASS,5 contests; median 6 in other years
@@ -9077,8 +9077,8 @@ Hingham2025,2,contest_closes,PASS,FOR RECREATION COMMISSION - Vote for ONE: 1286
 Hingham2025,3,office_count_consistent,PASS,10 contests; median 10 in other years
 Hingham2026,0,document_self_identifies,NOTE,document never prints 'Hingham'; identity rests on the citation alone
 Hingham2026,0,carries_the_year,PASS,"...Town Election Final Results May 2, 2026 FOR MODERATOR - Vote for ONE PR1 PR2 PR..."
-Hingham2026,0,document_supports_record,PASS,11/11 names and 29/29 figures located in raw_ocr+pdftext
-Hingham2026,1,names_grounded,PASS,11/11 names located in raw_ocr+pdftext
+Hingham2026,0,document_supports_record,PASS,10/11 names and 29/29 figures located in raw_ocr+pdftext
+Hingham2026,1,names_grounded,FAIL,10/11 names located in raw_ocr+pdftext
 Hingham2026,1,figures_grounded,PASS,29/29 figures located in raw_ocr+pdftext
 Hingham2026,2,ballots_derivable,PASS,8 of 8 contests agree on 1354
 Hingham2026,2,contest_closes,PASS,MODERATOR: 1354 == 1354 x 1
@@ -9313,8 +9313,8 @@ Holland2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot der
 Holland2025,3,office_count_consistent,PASS,14 contests; median 14 in other years
 Holliston2021,0,document_self_identifies,PASS,"...Town of Holliston Annual Town Election May 25,..."
 Holliston2021,0,carries_the_year,PASS,"...Holliston Annual Town Election May 25, 2021 Official Results OFFICE & CANDIDATE Pre..."
-Holliston2021,0,document_supports_record,PASS,19/19 names and 37/37 figures located in markdown+pdftext
-Holliston2021,1,names_grounded,PASS,19/19 names located in markdown+pdftext
+Holliston2021,0,document_supports_record,PASS,18/19 names and 37/37 figures located in markdown+pdftext
+Holliston2021,1,names_grounded,FAIL,18/19 names located in markdown+pdftext
 Holliston2021,1,figures_grounded,PASS,37/37 figures located in markdown+pdftext
 Holliston2021,2,ballots_derivable,PASS,5 of 5 contests agree on 1328
 Holliston2021,2,contest_closes,PASS,SELECTMAN & HYWY SURV.: 1328 == 1328 x 1
@@ -9402,8 +9402,8 @@ Holliston2025,2,contest_closes,PASS,HOUSING AUTHORITY: 1631 == 1631 x 1
 Holliston2025,3,office_count_consistent,PASS,12 contests; median 9 in other years
 Holliston2026,0,document_self_identifies,PASS,...Town of Holliston Annual Town Election Official...
 Holliston2026,0,carries_the_year,PASS,"...Town Election Official Results May 19, 2026 OFFICE & CANDIDATE —_—_ Precinct 1. Pre..."
-Holliston2026,0,document_supports_record,PASS,14/14 names and 32/32 figures located in raw_ocr+pdftext
-Holliston2026,1,names_grounded,PASS,14/14 names located in raw_ocr+pdftext
+Holliston2026,0,document_supports_record,PASS,13/14 names and 32/32 figures located in raw_ocr+pdftext
+Holliston2026,1,names_grounded,FAIL,13/14 names located in raw_ocr+pdftext
 Holliston2026,1,figures_grounded,PASS,32/32 figures located in raw_ocr+pdftext
 Holliston2026,2,ballots_derivable,PASS,6 of 6 contests agree on 1042
 Holliston2026,2,contest_closes,PASS,SELECT BOARD & HYWY SURV.: 1042 == 1042 x 1
@@ -10290,8 +10290,8 @@ Lakeville2024,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot d
 Lakeville2024,3,office_count_consistent,PASS,13 contests; median 12 in other years
 Lakeville2025,0,document_self_identifies,PASS,...<!-- image --> TOWNOFLAKEVILLE GRANDTOTALSHEET | Osene | Apr...
 Lakeville2025,0,carries_the_year,PASS,"...EVILLE GRANDTOTALSHEET | Osene | April7,2025 | April7,2025 | #EligibleVoters | #Elig..."
-Lakeville2025,0,document_supports_record,PASS,18/18 names and 40/41 figures located in markdown
-Lakeville2025,1,names_grounded,PASS,18/18 names located in markdown
+Lakeville2025,0,document_supports_record,PASS,17/18 names and 40/41 figures located in markdown
+Lakeville2025,1,names_grounded,FAIL,17/18 names located in markdown
 Lakeville2025,1,figures_grounded,FAIL,40/41 figures located in markdown
 Lakeville2025,2,ballots_derivable,PASS,6 of 6 contests agree on 905
 Lakeville2025,2,tally_incomplete,NOTE,Select Board: 1770 of 1810; 40 marks not tallied
@@ -10476,8 +10476,8 @@ Lanesborough2026,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); canno
 Lanesborough2026,3,office_count_consistent,PASS,4 contests; median 5 in other years
 Lawrence2021,0,document_self_identifies,PASS,"...c, City Clerk for the City of Lawrence, MA, hereby certify the resul..."
 Lawrence2021,0,carries_the_year,PASS,"...Municipal Election held on November 2, 2021. <!-- image --> <!-- image --> 11-12 -2..."
-Lawrence2021,0,document_supports_record,PASS,26/27 names and 55/57 figures located in markdown
-Lawrence2021,1,names_grounded,FAIL,26/27 names located in markdown
+Lawrence2021,0,document_supports_record,PASS,21/27 names and 55/57 figures located in markdown
+Lawrence2021,1,names_grounded,FAIL,21/27 names located in markdown
 Lawrence2021,1,figures_grounded,FAIL,55/57 figures located in markdown
 Lawrence2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Lawrence2021,3,office_count_consistent,PASS,15 contests; median 12 in other years
@@ -10497,8 +10497,8 @@ Lawrence2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot de
 Lawrence2025,3,office_count_consistent,PASS,10 contests; median 14 in other years
 Lee2021,0,document_self_identifies,PASS,"...l 4 sacne bs ee _f BO TOWN OF LEE, MASSACHUSETTS 89 natig BY) T..."
 Lee2021,0,carries_the_year,PASS,"...oceedings of the Town Elections May 17, 2021 R. Christopher Brittain, Town Clerk, de..."
-Lee2021,0,document_supports_record,PASS,116/119 names and 127/127 figures located in raw_ocr
-Lee2021,1,names_grounded,FAIL,116/119 names located in raw_ocr
+Lee2021,0,document_supports_record,PASS,118/119 names and 127/127 figures located in raw_ocr
+Lee2021,1,names_grounded,FAIL,118/119 names located in raw_ocr
 Lee2021,1,figures_grounded,PASS,127/127 figures located in raw_ocr
 Lee2021,2,ballots_derivable,PASS,4 of 4 contests agree on 990
 Lee2021,2,contest_closes,PASS,SELECTMEN: 990 == 990 x 1
@@ -11022,8 +11022,8 @@ Longmeadow2022,2,contest_closes,PASS,PLANNING BOARD - FOR 2 YRS: 1503 == 1503 x 
 Longmeadow2022,3,office_count_consistent,PASS,8 contests; median 4 in other years
 Longmeadow2023,0,document_self_identifies,PASS,...## TOWNOFLONGMEADOW ANNUALTOWNELECTIONMINUTES LON...
 Longmeadow2023,0,carries_the_year,PASS,"...MINUTES LONGMEADOWCOMMUNITYHOUSE June13,2023 The qualified voters of the Town met at..."
-Longmeadow2023,0,document_supports_record,PASS,10/10 names and 11/14 figures located in markdown
-Longmeadow2023,1,names_grounded,PASS,10/10 names located in markdown
+Longmeadow2023,0,document_supports_record,PASS,9/10 names and 11/14 figures located in markdown
+Longmeadow2023,1,names_grounded,FAIL,9/10 names located in markdown
 Longmeadow2023,1,figures_grounded,FAIL,11/14 figures located in markdown
 Longmeadow2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Longmeadow2023,3,office_count_consistent,PASS,4 contests; median 5 in other years
@@ -11955,8 +11955,8 @@ Mattapoisett2026,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); canno
 Mattapoisett2026,3,office_count_consistent,PASS,10 contests; median 11 in other years
 Maynard2021,0,document_self_identifies,PASS,"...dates, write-ins, and blanks. MAYNARD TOWN ELECTION - 8 MAY 2021 CA..."
 Maynard2021,0,carries_the_year,PASS,...d blanks. MAYNARD TOWN ELECTION - 8 MAY 2021 CANDIDATE LIBRARY TRUSTEE SCHOOL COMMIT...
-Maynard2021,0,document_supports_record,PASS,8/8 names and 18/18 figures located in markdown+pdftext
-Maynard2021,1,names_grounded,PASS,8/8 names located in markdown+pdftext
+Maynard2021,0,document_supports_record,PASS,7/8 names and 18/18 figures located in markdown+pdftext
+Maynard2021,1,names_grounded,FAIL,7/8 names located in markdown+pdftext
 Maynard2021,1,figures_grounded,PASS,18/18 figures located in markdown+pdftext
 Maynard2021,2,ballots_derivable,PASS,3 of 3 contests agree on 548
 Maynard2021,2,contest_closes,PASS,MODERATOR: 548 == 548 x 1
@@ -12145,8 +12145,8 @@ Medford2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot der
 Medford2025,3,office_count_consistent,PASS,3 contests; median 3 in other years
 Medway2021,0,document_self_identifies,NOTE,document never prints 'Medway'; identity rests on the citation alone
 Medway2021,0,carries_the_year,PASS,"...ANNUAL TOWN ELECTION MAY 18, 2021 orcas OT I SELECT BOARD Vote tord-ayear..."
-Medway2021,0,document_supports_record,PASS,14/14 names and 36/36 figures located in raw_ocr+pdftext
-Medway2021,1,names_grounded,PASS,14/14 names located in raw_ocr+pdftext
+Medway2021,0,document_supports_record,PASS,13/14 names and 36/36 figures located in raw_ocr+pdftext
+Medway2021,1,names_grounded,FAIL,13/14 names located in raw_ocr+pdftext
 Medway2021,1,figures_grounded,PASS,36/36 figures located in raw_ocr+pdftext
 Medway2021,2,ballots_derivable,PASS,10 of 10 contests agree on 1571
 Medway2021,2,contest_closes,PASS,SELECT BOARD: 3142 == 1571 x 2
@@ -12181,8 +12181,8 @@ Medway2022,2,contest_closes,PASS,WATER SEWER ADVISORY BOARD: 2385 == 2385 x 1
 Medway2022,3,office_count_consistent,PASS,11 contests; median 10 in other years
 Medway2023,0,document_self_identifies,PASS,"...TOWN OF MEDWAY May 16, 2023 TOWN ELECTION OF..."
 Medway2023,0,carries_the_year,PASS,"...TOWN OF MEDWAY May 16, 2023 TOWN ELECTION OFFICIAL RESULTS SELECT B..."
-Medway2023,0,document_supports_record,PASS,15/15 names and 35/35 figures located in markdown+pdftext
-Medway2023,1,names_grounded,PASS,15/15 names located in markdown+pdftext
+Medway2023,0,document_supports_record,PASS,14/15 names and 35/35 figures located in markdown+pdftext
+Medway2023,1,names_grounded,FAIL,14/15 names located in markdown+pdftext
 Medway2023,1,figures_grounded,PASS,35/35 figures located in markdown+pdftext
 Medway2023,2,ballots_derivable,PASS,7 of 7 contests agree on 445
 Medway2023,2,contest_closes,PASS,SELECT BOARD: 445 == 445 x 1
@@ -12439,9 +12439,9 @@ Merrimac2026,2,contest_closes,PASS,PARKS AND RECREATION COMMISSIONERS (3 YEAR): 
 Merrimac2026,3,office_count_consistent,PASS,14 contests; median 11 in other years
 Methuen2021,0,document_self_identifies,PASS,"...2, 2021 MUNICIPAL ELECTION - METHUEN, MA ; Acting CITY CLERK MAYOR..."
 Methuen2021,0,carries_the_year,PASS,"...TION RESULTS Conon. G9. Bro NOVEMBER 2, 2021 MUNICIPAL ELECTION - METHUEN, MA ; Acti..."
-Methuen2021,0,document_supports_record,PASS,21/26 names and 28/44 figures located in raw_ocr+markdown+pdftext
-Methuen2021,1,names_grounded,FAIL,21/26 names located in raw_ocr+markdown+pdftext
-Methuen2021,1,figures_grounded,FAIL,28/44 figures located in raw_ocr+markdown+pdftext
+Methuen2021,0,document_supports_record,PASS,25/26 names and 30/44 figures located in raw_ocr+markdown+pdftext
+Methuen2021,1,names_grounded,FAIL,25/26 names located in raw_ocr+markdown+pdftext
+Methuen2021,1,figures_grounded,FAIL,30/44 figures located in raw_ocr+markdown+pdftext
 Methuen2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Methuen2021,3,office_count_consistent,PASS,9 contests; median 9 in other years
 Methuen2023,0,document_self_identifies,PASS,"...9] 213] 110/246] 158] 4,408 | METHUEN HOUSING AUTHORITY | rwooiae [..."
@@ -14103,8 +14103,8 @@ Newbury2024,2,regional_exempt,NOTE,TRITON REGIONAL SCHOOL COMMITTEE: spans sever
 Newbury2024,3,office_count_consistent,PASS,11 contests; median 11 in other years
 Newbury2025,0,document_self_identifies,PASS,...TOWN OF NEWBURY OFFICIAL RESULTS ANNUAL TOWN...
 Newbury2025,0,carries_the_year,PASS,"...AL RESULTS ANNUAL TOWN ELECTION MAY 13, 2025 * = INCUMBENT | Pet] Pet.2) TOTAL! SELE..."
-Newbury2025,0,document_supports_record,PASS,12/12 names and 30/34 figures located in raw_ocr
-Newbury2025,1,names_grounded,PASS,12/12 names located in raw_ocr
+Newbury2025,0,document_supports_record,PASS,11/12 names and 30/34 figures located in raw_ocr
+Newbury2025,1,names_grounded,FAIL,11/12 names located in raw_ocr
 Newbury2025,1,figures_grounded,FAIL,30/34 figures located in raw_ocr
 Newbury2025,2,ballots_derivable,PASS,8 of 8 contests agree on 1523
 Newbury2025,2,contest_closes,PASS,SELECTMEN (3 YR.): 1523 == 1523 x 1
@@ -15062,8 +15062,8 @@ OakBluffs2025,2,contest_closes,PASS,WATER DISTRICT MODERATOR: 928 == 928 x 1
 OakBluffs2025,3,office_count_consistent,PASS,15 contests; median 12 in other years
 OakBluffs2026,0,document_self_identifies,PASS,...TOWN OF OAK BLUFFS ANNUAL TOWN ELECTION Thursday...
 OakBluffs2026,0,carries_the_year,PASS,"...NNUAL TOWN ELECTION Thursday, April 16, 2026 SELECT BOARD DION PATRICK ALLEY 507 WIL..."
-OakBluffs2026,0,document_supports_record,PASS,17/18 names and 48/48 figures located in raw_ocr
-OakBluffs2026,1,names_grounded,FAIL,17/18 names located in raw_ocr
+OakBluffs2026,0,document_supports_record,PASS,18/18 names and 48/48 figures located in raw_ocr
+OakBluffs2026,1,names_grounded,PASS,18/18 names located in raw_ocr
 OakBluffs2026,1,figures_grounded,PASS,48/48 figures located in raw_ocr
 OakBluffs2026,2,ballots_derivable,PASS,13 of 13 contests agree on 636
 OakBluffs2026,2,contest_closes,PASS,SELECT BOARD: 1272 == 636 x 2
@@ -16476,8 +16476,8 @@ Plympton2023,2,contest_closes,PASS,School Committee: 458 == 229 x 2
 Plympton2023,3,office_count_consistent,PASS,11 contests; median 11 in other years
 Plympton2024,0,document_self_identifies,PASS,"...public bulletin hoanlA at the Plympton Town Hollse, Plympton Puhlic..."
 Plympton2024,0,carries_the_year,PASS,"...eting, for the remainder of fiscal year 2024. VOTE to transfer from the May 17, 2023..."
-Plympton2024,0,document_supports_record,PASS,16/16 names and 32/32 figures located in pdftext
-Plympton2024,1,names_grounded,PASS,16/16 names located in pdftext
+Plympton2024,0,document_supports_record,PASS,15/16 names and 32/32 figures located in pdftext
+Plympton2024,1,names_grounded,FAIL,15/16 names located in pdftext
 Plympton2024,1,figures_grounded,PASS,32/32 figures located in pdftext
 Plympton2024,2,ballots_derivable,PASS,9 of 9 contests agree on 676
 Plympton2024,2,contest_closes,PASS,"SELECTMAN, 3 Years: 676 == 676 x 1"
@@ -16809,8 +16809,8 @@ Reading2023,2,ballots_derivable,UNKNOWN,"2 contests, no two agree: [4639, 4640]"
 Reading2023,3,office_count_consistent,PASS,17 contests; median 15 in other years
 Reading2024,0,document_self_identifies,PASS,"...51 63 44 67 33 43 412 Town of Reading - Local Election March 5, 202..."
 Reading2024,0,carries_the_year,PASS,"...wn of Reading - Local Election March 5, 2024 Official Results Pursuant to the Warran..."
-Reading2024,0,document_supports_record,PASS,229/229 names and 245/245 figures located in markdown+pdftext
-Reading2024,1,names_grounded,PASS,229/229 names located in markdown+pdftext
+Reading2024,0,document_supports_record,PASS,228/229 names and 245/245 figures located in markdown+pdftext
+Reading2024,1,names_grounded,FAIL,228/229 names located in markdown+pdftext
 Reading2024,1,figures_grounded,PASS,245/245 figures located in markdown+pdftext
 Reading2024,2,ballots_derivable,PASS,2 of 2 contests agree on 7350
 Reading2024,2,contest_closes,PASS,Moderator - 1 Year - Vote for One: 7350 == 7350 x 1
@@ -16821,8 +16821,8 @@ Reading2024,2,contest_closes,PASS,School Committee - 3 Years - Vote for Two: 147
 Reading2024,3,office_count_consistent,PASS,16 contests; median 15 in other years
 Reading2025,0,document_self_identifies,PASS,"...1 Year - Vote for One Town of Reading - Local Election April 8, 202..."
 Reading2025,0,carries_the_year,PASS,"...wn of Reading - Local Election April 8, 2025 Official Results Pursuant to the Warran..."
-Reading2025,0,document_supports_record,PASS,171/171 names and 185/185 figures located in markdown+pdftext
-Reading2025,1,names_grounded,PASS,171/171 names located in markdown+pdftext
+Reading2025,0,document_supports_record,PASS,170/171 names and 185/185 figures located in markdown+pdftext
+Reading2025,1,names_grounded,FAIL,170/171 names located in markdown+pdftext
 Reading2025,1,figures_grounded,PASS,185/185 figures located in markdown+pdftext
 Reading2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Reading2025,3,office_count_consistent,PASS,14 contests; median 16 in other years
@@ -16957,8 +16957,8 @@ Revere2023,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot deri
 Revere2023,3,office_count_consistent,PASS,9 contests; median 11 in other years
 Revere2025,0,document_self_identifies,PASS,...---------------------| | 0008 Revere High School3-1 | | VOTES PERC...
 Revere2025,0,carries_the_year,PASS,...RUNDATE:11/06/25 04:05PM REPORT-EL45 PAGE 001 | PRECINCT...
-Revere2025,0,document_supports_record,PASS,27/27 names and 31/55 figures located in markdown
-Revere2025,1,names_grounded,PASS,27/27 names located in markdown
+Revere2025,0,document_supports_record,PASS,26/27 names and 31/55 figures located in markdown
+Revere2025,1,names_grounded,FAIL,26/27 names located in markdown
 Revere2025,1,figures_grounded,FAIL,31/55 figures located in markdown
 Revere2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Revere2025,3,office_count_consistent,PASS,14 contests; median 8 in other years
@@ -17190,8 +17190,8 @@ Rockport2026,2,contest_closes,PASS,SCHOOL COMMITTEE: 1880 == 940 x 2
 Rockport2026,3,office_count_consistent,PASS,8 contests; median 6 in other years
 Rowe2021,0,document_self_identifies,PASS,"...Town of Rowe, Massachusetts Warden: Ramon..."
 Rowe2021,0,carries_the_year,PASS,"...able: Robert Beaumier Saturday, May 15, 2021 Tellers: Colleen Avallone 83 Votes Cast..."
-Rowe2021,0,document_supports_record,PASS,40/46 names and 49/59 figures located in raw_ocr
-Rowe2021,1,names_grounded,FAIL,40/46 names located in raw_ocr
+Rowe2021,0,document_supports_record,PASS,39/46 names and 49/59 figures located in raw_ocr
+Rowe2021,1,names_grounded,FAIL,39/46 names located in raw_ocr
 Rowe2021,1,figures_grounded,FAIL,49/59 figures located in raw_ocr
 Rowe2021,2,ballots_derivable,PASS,12 of 12 contests agree on 83
 Rowe2021,2,contest_closes,PASS,Board of Assessors: 83 == 83 x 1
@@ -17217,8 +17217,8 @@ Rowe2022,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Rowe2022,3,office_count_consistent,FAIL,4 contests; this town's other years median 13
 Rowe2023,0,document_self_identifies,PASS,"...Town of Rowe, Massachusetts Warden: Paul M..."
 Rowe2023,0,carries_the_year,PASS,"...FICIAL RESULTS Police Saturday, May 13, 2023 Officer: Francis Noyes 71 Votes Cast /..."
-Rowe2023,0,document_supports_record,PASS,41/43 names and 40/58 figures located in raw_ocr
-Rowe2023,1,names_grounded,FAIL,41/43 names located in raw_ocr
+Rowe2023,0,document_supports_record,PASS,40/43 names and 40/58 figures located in raw_ocr
+Rowe2023,1,names_grounded,FAIL,40/43 names located in raw_ocr
 Rowe2023,1,figures_grounded,FAIL,40/58 figures located in raw_ocr
 Rowe2023,2,ballots_derivable,PASS,10 of 10 contests agree on 71
 Rowe2023,2,contest_closes,PASS,Board of Assessors: 71 == 71 x 1
@@ -17449,8 +17449,8 @@ Royalston2023,2,contest_closes,PASS,LIBRARY TRUSTEE: 273 == 273 x 1
 Royalston2023,3,office_count_consistent,PASS,9 contests; median 12 in other years
 Royalston2024,0,document_self_identifies,PASS,...EE CEMETERYCOMMISSION 2 years ROYALSTON 3years ROYALSTON Athol total...
 Royalston2024,0,carries_the_year,PASS,...ANNUALTOWNELECTIONRESULTS-4/1/2024 SELECTBOARD 3 years CEMETERYCOMMISSION...
-Royalston2024,0,document_supports_record,PASS,25/25 names and 43/43 figures located in raw_ocr+pdftext
-Royalston2024,1,names_grounded,PASS,25/25 names located in raw_ocr+pdftext
+Royalston2024,0,document_supports_record,PASS,24/25 names and 43/43 figures located in raw_ocr+pdftext
+Royalston2024,1,names_grounded,FAIL,24/25 names located in raw_ocr+pdftext
 Royalston2024,1,figures_grounded,PASS,43/43 figures located in raw_ocr+pdftext
 Royalston2024,2,ballots_derivable,PASS,10 of 10 contests agree on 259
 Royalston2024,2,contest_closes,PASS,SELECT BOARD: 259 == 259 x 1
@@ -18716,8 +18716,8 @@ Somerset2024,2,contest_closes,PASS,HOUSING AUTHORITY - 5 YR VOTE FOR 1: 3386 == 
 Somerset2024,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Somerset2025,0,document_self_identifies,PASS,"...eld on April 14, 2025, at the Somerset Berkley Regional High School,..."
 Somerset2025,0,carries_the_year,PASS,"...Annual Town Election held on April 14, 2025, at the Somerset Berkley Regional High..."
-Somerset2025,0,document_supports_record,PASS,37/37 names and 49/49 figures located in markdown+pdftext
-Somerset2025,1,names_grounded,PASS,37/37 names located in markdown+pdftext
+Somerset2025,0,document_supports_record,PASS,36/37 names and 49/49 figures located in markdown+pdftext
+Somerset2025,1,names_grounded,FAIL,36/37 names located in markdown+pdftext
 Somerset2025,1,figures_grounded,PASS,49/49 figures located in markdown+pdftext
 Somerset2025,2,ballots_derivable,PASS,10 of 10 contests agree on 2366
 Somerset2025,2,contest_closes,PASS,SELECTMEN - 3 YR: 2366 == 2366 x 1
@@ -19263,8 +19263,8 @@ Spencer2026,2,contest_closes,PASS,Housing Authority (5 Year): 1536 == 1536 x 1
 Spencer2026,3,office_count_consistent,PASS,15 contests; median 11 in other years
 Springfield2021,0,document_self_identifies,PASS,"...ER 2, 2021 MUNICIPAL ELECTION SPRINGFIELD -~ MASS RUN DATE: 17/03/21 06..."
 Springfield2021,0,carries_the_year,PASS,"...LUN aed. NOVEMBER 2, 2021 MUNICIPAL ELECTION SPRINGFIELD -~ MASS..."
-Springfield2021,0,document_supports_record,PASS,28/30 names and 54/58 figures located in raw_ocr
-Springfield2021,1,names_grounded,FAIL,28/30 names located in raw_ocr
+Springfield2021,0,document_supports_record,PASS,23/30 names and 54/58 figures located in raw_ocr
+Springfield2021,1,names_grounded,FAIL,23/30 names located in raw_ocr
 Springfield2021,1,figures_grounded,FAIL,54/58 figures located in raw_ocr
 Springfield2021,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Springfield2021,3,office_count_consistent,PASS,14 contests; median 12 in other years
@@ -19277,8 +19277,8 @@ Springfield2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot
 Springfield2023,3,office_count_consistent,PASS,10 contests; median 14 in other years
 Springfield2025,0,document_self_identifies,PASS,"...FIED ELECTION RESULTS CITY OF SPRINGFIELD NOVEMBER 4, 2025 0001 1A VOTE..."
 Springfield2025,0,carries_the_year,PASS,"...RESULTS CITY OF SPRINGFIELD NOVEMBER 4, 2025 0001 1A VOTES PERCENT VOTES PERCENT REG..."
-Springfield2025,0,document_supports_record,PASS,24/31 names and 12/43 figures located in raw_ocr
-Springfield2025,1,names_grounded,FAIL,24/31 names located in raw_ocr
+Springfield2025,0,document_supports_record,PASS,23/31 names and 12/43 figures located in raw_ocr
+Springfield2025,1,names_grounded,FAIL,23/31 names located in raw_ocr
 Springfield2025,1,figures_grounded,FAIL,12/43 figures located in raw_ocr
 Springfield2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Springfield2025,3,office_count_consistent,PASS,14 contests; median 12 in other years
@@ -19528,8 +19528,8 @@ Stoughton2022,2,contest_closes,PASS,SCHOOL COMMITTEE: 1686 == 843 x 2
 Stoughton2022,3,office_count_consistent,PASS,11 contests; median 12 in other years
 Stoughton2023,0,document_self_identifies,PASS,...e voters: || 24876 | S| | TT [Stoughton Voter Turnout: | 52%] S| S| d...
 Stoughton2023,0,carries_the_year,PASS,...LOCAL ELECTION RESULTS FINAL 4-Apr-23 Pursuant to the Warrant and the Constab...
-Stoughton2023,0,document_supports_record,PASS,41/58 names and 37/82 figures located in raw_ocr
-Stoughton2023,1,names_grounded,FAIL,41/58 names located in raw_ocr
+Stoughton2023,0,document_supports_record,PASS,40/58 names and 37/82 figures located in raw_ocr
+Stoughton2023,1,names_grounded,FAIL,40/58 names located in raw_ocr
 Stoughton2023,1,figures_grounded,FAIL,37/82 figures located in raw_ocr
 Stoughton2023,2,ballots_derivable,PASS,2 of 2 contests agree on 1305
 Stoughton2023,2,tally_incomplete,NOTE,SELECT BOARD: 2609 of 2610; 1 marks not tallied
@@ -19540,8 +19540,8 @@ Stoughton2023,2,contest_closes,PASS,Moderator: 1305 == 1305 x 1
 Stoughton2023,3,office_count_consistent,PASS,13 contests; median 12 in other years
 Stoughton2024,0,document_self_identifies,PASS,...: | 22393 | | | | | | | | | | StoughtonVoterTurnout: | 9.5% | | | | |...
 Stoughton2024,0,carries_the_year,PASS,...## LOCALELECTIONRESULTSFINAL ## 2-Apr-24 Pursuant totheWarrant andtheConstable's...
-Stoughton2024,0,document_supports_record,PASS,175/178 names and 196/198 figures located in raw_ocr
-Stoughton2024,1,names_grounded,FAIL,175/178 names located in raw_ocr
+Stoughton2024,0,document_supports_record,PASS,169/178 names and 196/198 figures located in raw_ocr
+Stoughton2024,1,names_grounded,FAIL,169/178 names located in raw_ocr
 Stoughton2024,1,figures_grounded,FAIL,196/198 figures located in raw_ocr
 Stoughton2024,2,ballots_derivable,PASS,2 of 5 contests agree on 2129
 Stoughton2024,2,contest_closes,PASS,SELECT BOARD: 4258 == 2129 x 2
@@ -19553,8 +19553,8 @@ Stoughton2024,2,contest_closes,PASS,SCHOOL COMMITTEE (3 Years): 2129 == 2129 x 1
 Stoughton2024,3,office_count_consistent,PASS,14 contests; median 12 in other years
 Stoughton2025,0,document_self_identifies,PASS,"...## TOWNOFSTOUGHTON-April8,2025-RESULTS ## Pursua..."
 Stoughton2025,0,carries_the_year,PASS,"...## TOWNOFSTOUGHTON-April8,2025-RESULTS ## PursuanttotheWarrantandtheCo..."
-Stoughton2025,0,document_supports_record,PASS,129/129 names and 152/153 figures located in raw_ocr+markdown
-Stoughton2025,1,names_grounded,PASS,129/129 names located in raw_ocr+markdown
+Stoughton2025,0,document_supports_record,PASS,128/129 names and 152/153 figures located in raw_ocr+markdown
+Stoughton2025,1,names_grounded,FAIL,128/129 names located in raw_ocr+markdown
 Stoughton2025,1,figures_grounded,FAIL,152/153 figures located in raw_ocr+markdown
 Stoughton2025,2,ballots_derivable,PASS,3 of 3 contests agree on 5242
 Stoughton2025,2,contest_closes,PASS,SELECT BOARD: 5242 == 5242 x 1
@@ -20326,8 +20326,8 @@ Tewksbury2024,2,regional_exempt,NOTE,SHAWSHEEN VALLEY TECHNICAL HIGH SCHOOL COMM
 Tewksbury2024,3,office_count_consistent,PASS,8 contests; median 7 in other years
 Tewksbury2025,0,document_self_identifies,PASS,"...TOWN OF TEWKSBURY APRIL 5, 2025 ANNUAL TOWN ELE..."
 Tewksbury2025,0,carries_the_year,PASS,"...TOWN OF TEWKSBURY APRIL 5, 2025 ANNUAL TOWN ELECTION OFFICIAL RESULTS 1..."
-Tewksbury2025,0,document_supports_record,PASS,16/16 names and 32/32 figures located in markdown+pdftext
-Tewksbury2025,1,names_grounded,PASS,16/16 names located in markdown+pdftext
+Tewksbury2025,0,document_supports_record,PASS,15/16 names and 32/32 figures located in markdown+pdftext
+Tewksbury2025,1,names_grounded,FAIL,15/16 names located in markdown+pdftext
 Tewksbury2025,1,figures_grounded,PASS,32/32 figures located in markdown+pdftext
 Tewksbury2025,2,ballots_derivable,PASS,2 of 2 contests agree on 2102
 Tewksbury2025,2,contest_closes,PASS,SELECT BOARD: 4204 == 2102 x 2
@@ -21847,8 +21847,8 @@ Wayland2023,2,contest_closes,PASS,HOUSING AUTHORITY: 2475 == 2475 x 1
 Wayland2023,3,office_count_consistent,PASS,13 contests; median 11 in other years
 Wayland2024,0,document_self_identifies,PASS,"...Wayland Annual Town Election May 7th,..."
 Wayland2024,0,carries_the_year,PASS,"...Wayland Annual Town Election May 7th, 2024 WAYLAND TOTALS TOTAL PRECINCT 1 PRECINC..."
-Wayland2024,0,document_supports_record,PASS,19/19 names and 40/40 figures located in markdown+pdftext
-Wayland2024,1,names_grounded,PASS,19/19 names located in markdown+pdftext
+Wayland2024,0,document_supports_record,PASS,18/19 names and 40/40 figures located in markdown+pdftext
+Wayland2024,1,names_grounded,FAIL,18/19 names located in markdown+pdftext
 Wayland2024,1,figures_grounded,PASS,40/40 figures located in markdown+pdftext
 Wayland2024,2,ballots_derivable,PASS,5 of 5 contests agree on 1082
 Wayland2024,2,contest_closes,PASS,SELECT BOARD: 2164 == 1082 x 2
@@ -21974,8 +21974,8 @@ Webster2025,2,contest_closes,PASS,Housing Authority: 336 == 336 x 1
 Webster2025,3,office_count_consistent,PASS,8 contests; median 9 in other years
 Webster2026,0,document_self_identifies,PASS,...Total Regisitered Webster TOTALS Town Election 05/04/20...
 Webster2026,0,carries_the_year,PASS,...ered Webster TOTALS Town Election 05/04/2026 Voters: 13538 Combined Precinct #1 #2 #...
-Webster2026,0,document_supports_record,PASS,35/35 names and 40/43 figures located in raw_ocr
-Webster2026,1,names_grounded,PASS,35/35 names located in raw_ocr
+Webster2026,0,document_supports_record,PASS,34/35 names and 40/43 figures located in raw_ocr
+Webster2026,1,names_grounded,FAIL,34/35 names located in raw_ocr
 Webster2026,1,figures_grounded,FAIL,40/43 figures located in raw_ocr
 Webster2026,2,ballots_derivable,PASS,4 of 4 contests agree on 352
 Webster2026,2,contest_closes,PASS,Board of Selectmen: 704 == 352 x 2
@@ -22243,8 +22243,8 @@ Wenham2021,2,regional_exempt,NOTE,HAMILTON WENHAM REGIONAL SCHOOL COMMITTEE: spa
 Wenham2021,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Wenham2022,0,document_self_identifies,PASS,...WENHAM ANNUAL TOWN ELECTION THURSDAY...
 Wenham2022,0,carries_the_year,PASS,"...NNUAL TOWN ELECTION THURSDAY APRIL 7TH, 2022 OFFICIAL RESULTS SELECT BOARD WENHAM WA..."
-Wenham2022,0,document_supports_record,PASS,18/18 names and 34/34 figures located in markdown+pdftext
-Wenham2022,1,names_grounded,PASS,18/18 names located in markdown+pdftext
+Wenham2022,0,document_supports_record,PASS,17/18 names and 34/34 figures located in markdown+pdftext
+Wenham2022,1,names_grounded,FAIL,17/18 names located in markdown+pdftext
 Wenham2022,1,figures_grounded,PASS,34/34 figures located in markdown+pdftext
 Wenham2022,2,ballots_derivable,PASS,7 of 7 contests agree on 870
 Wenham2022,2,contest_closes,PASS,SELECT BOARD: 870 == 870 x 1
@@ -22598,8 +22598,8 @@ WestNewbury2022,2,contest_closes,PASS,CONSTABLE (For Three Years): 239 == 239 x 
 WestNewbury2022,3,office_count_consistent,PASS,10 contests; median 11 in other years
 WestNewbury2023,0,document_self_identifies,PASS,...ction Results for the Town of West Newbury Total Ballots Cast 356 Select...
 WestNewbury2023,0,carries_the_year,PASS,...Official 2023 Local Election Results for the Town of...
-WestNewbury2023,0,document_supports_record,PASS,13/13 names and 35/35 figures located in markdown+pdftext
-WestNewbury2023,1,names_grounded,PASS,13/13 names located in markdown+pdftext
+WestNewbury2023,0,document_supports_record,PASS,12/13 names and 35/35 figures located in markdown+pdftext
+WestNewbury2023,1,names_grounded,FAIL,12/13 names located in markdown+pdftext
 WestNewbury2023,1,figures_grounded,PASS,35/35 figures located in markdown+pdftext
 WestNewbury2023,2,ballots_derivable,PASS,10 of 10 contests agree on 356
 WestNewbury2023,2,contest_closes,PASS,Selectman: 356 == 356 x 1
@@ -22616,8 +22616,8 @@ WestNewbury2023,2,contest_closes,PASS,Park and Rec. Commission - 2yr: 356 == 356
 WestNewbury2023,3,office_count_consistent,PASS,11 contests; median 11 in other years
 WestNewbury2024,0,document_self_identifies,PASS,...ction Results for the Town of West Newbury Selectboard (3 years) Park an...
 WestNewbury2024,0,carries_the_year,PASS,"...table(Zyearsy) TC ee ee Official May 6, 2024 Local Election Results for the Town of..."
-WestNewbury2024,0,document_supports_record,PASS,15/15 names and 38/38 figures located in raw_ocr+pdftext
-WestNewbury2024,1,names_grounded,PASS,15/15 names located in raw_ocr+pdftext
+WestNewbury2024,0,document_supports_record,PASS,14/15 names and 38/38 figures located in raw_ocr+pdftext
+WestNewbury2024,1,names_grounded,FAIL,14/15 names located in raw_ocr+pdftext
 WestNewbury2024,1,figures_grounded,PASS,38/38 figures located in raw_ocr+pdftext
 WestNewbury2024,2,ballots_derivable,PASS,11 of 11 contests agree on 576
 WestNewbury2024,2,contest_closes,PASS,Selectboard (3 years): 576 == 576 x 1
@@ -23143,8 +23143,8 @@ Westminster2021,2,regional_exempt,NOTE,Regional School Committee-Ashburnham (one
 Westminster2021,3,office_count_consistent,PASS,10 contests; median 12 in other years
 Westminster2022,0,document_self_identifies,PASS,...| 1305 | ## Regional School - Westminster -- 3 Years (2) | | Precinct 1...
 Westminster2022,0,carries_the_year,PASS,"...TAKEN AT ANNUAL TOWN ELECTION APRIL 26,2022 A total of 1,305 voters (Precinct 1-394..."
-Westminster2022,0,document_supports_record,PASS,17/18 names and 36/36 figures located in markdown
-Westminster2022,1,names_grounded,FAIL,17/18 names located in markdown
+Westminster2022,0,document_supports_record,PASS,18/18 names and 36/36 figures located in markdown
+Westminster2022,1,names_grounded,PASS,18/18 names located in markdown
 Westminster2022,1,figures_grounded,PASS,36/36 figures located in markdown
 Westminster2022,2,ballots_derivable,PASS,6 of 6 contests agree on 1305
 Westminster2022,2,contest_closes,PASS,Select Board: 1305 == 1305 x 1
@@ -23160,8 +23160,8 @@ Westminster2022,2,regional_exempt,NOTE,Regional School - Ashburnham: spans sever
 Westminster2022,3,office_count_consistent,PASS,10 contests; median 12 in other years
 Westminster2023,0,document_self_identifies,PASS,...99 Regional School Committee (Westminster) (2) – 3 Years Precinct 1 Pre...
 Westminster2023,0,carries_the_year,PASS,"...N AT THE ANNUAL TOWN ELECTION APRIL 25, 2023 A total of 799 voters (Precinct 1-274,..."
-Westminster2023,0,document_supports_record,PASS,24/26 names and 42/42 figures located in markdown+pdftext
-Westminster2023,1,names_grounded,FAIL,24/26 names located in markdown+pdftext
+Westminster2023,0,document_supports_record,PASS,25/26 names and 42/42 figures located in markdown+pdftext
+Westminster2023,1,names_grounded,FAIL,25/26 names located in markdown+pdftext
 Westminster2023,1,figures_grounded,PASS,42/42 figures located in markdown+pdftext
 Westminster2023,2,ballots_derivable,PASS,12 of 12 contests agree on 799
 Westminster2023,2,contest_closes,PASS,Moderator – 3 Years: 799 == 799 x 1
@@ -23222,8 +23222,8 @@ Westminster2025,2,regional_exempt,NOTE,Regional School Committee (2) – 3 Years
 Westminster2025,3,office_count_consistent,PASS,12 contests; median 12 in other years
 Westminster2026,0,document_self_identifies,PASS,...ool Committee (2) — 3 Years - Westminster Member Precinct | Precinct |...
 Westminster2026,0,carries_the_year,PASS,"...N AT THE ANNUAL TOWN ELECTION APRIL 28, 2026 A total of 290 voters (Precinct 1-72, P..."
-Westminster2026,0,document_supports_record,PASS,16/16 names and 28/28 figures located in raw_ocr+pdftext
-Westminster2026,1,names_grounded,PASS,16/16 names located in raw_ocr+pdftext
+Westminster2026,0,document_supports_record,PASS,15/16 names and 28/28 figures located in raw_ocr+pdftext
+Westminster2026,1,names_grounded,FAIL,15/16 names located in raw_ocr+pdftext
 Westminster2026,1,figures_grounded,PASS,28/28 figures located in raw_ocr+pdftext
 Westminster2026,2,ballots_derivable,PASS,7 of 7 contests agree on 290
 Westminster2026,2,contest_closes,PASS,Moderator – 3 Years: 290 == 290 x 1
@@ -24056,8 +24056,8 @@ Winchendon2026,2,contest_closes,PASS,HOUSING AUTHORITY 5 YR: 614 == 614 x 1
 Winchendon2026,3,office_count_consistent,PASS,6 contests; median 5 in other years
 Winchester2021,0,document_self_identifies,PASS,"...15185 % Turnout: 25% TOWN OF WINCHESTER ANNUAL ELECTION MARCH 30, 202..."
 Winchester2021,0,carries_the_year,PASS,"...OF WINCHESTER ANNUAL ELECTION MARCH 30, 2021 Final Results Weather: Sunny Dry 62 Tot..."
-Winchester2021,0,document_supports_record,PASS,94/94 names and 110/110 figures located in markdown+pdftext
-Winchester2021,1,names_grounded,PASS,94/94 names located in markdown+pdftext
+Winchester2021,0,document_supports_record,PASS,93/94 names and 110/110 figures located in markdown+pdftext
+Winchester2021,1,names_grounded,FAIL,93/94 names located in markdown+pdftext
 Winchester2021,1,figures_grounded,PASS,110/110 figures located in markdown+pdftext
 Winchester2021,2,ballots_derivable,PASS,4 of 4 contests agree on 3831
 Winchester2021,2,contest_closes,PASS,Moderator: 3831 == 3831 x 1
@@ -24194,8 +24194,8 @@ Windsor2023,2,contest_closes,PASS,TREE WARDEN: 57 == 57 x 1
 Windsor2023,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Windsor2024,0,document_self_identifies,PASS,"...muMay23,2024 Sandra G.Kalmus WindsorTownClerk..."
 Windsor2024,0,carries_the_year,PASS,"...## ANNUALTOWNELECTIONRESULTS-May13,2024 ## 42VotedOutofthe705RegisteredVoters |..."
-Windsor2024,0,document_supports_record,PASS,22/22 names and 29/30 figures located in raw_ocr
-Windsor2024,1,names_grounded,PASS,22/22 names located in raw_ocr
+Windsor2024,0,document_supports_record,PASS,21/22 names and 29/30 figures located in raw_ocr
+Windsor2024,1,names_grounded,FAIL,21/22 names located in raw_ocr
 Windsor2024,1,figures_grounded,FAIL,29/30 figures located in raw_ocr
 Windsor2024,2,ballots_derivable,PASS,7 of 7 contests agree on 42
 Windsor2024,2,contest_closes,PASS,SELECT BOARD: 42 == 42 x 1
@@ -24280,8 +24280,8 @@ Woburn2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot deri
 Woburn2025,3,office_count_consistent,PASS,10 contests; median 10 in other years
 Worcester2021,0,document_self_identifies,NOTE,document never prints 'Worcester'; identity rests on the citation alone
 Worcester2021,0,carries_the_year,PASS,...-EL45 PAGE 001 MUNICIPAL ELECTION 11/02/2021 VOTES PERCENT VOTES PERCENT PRECINCTS C...
-Worcester2021,0,document_supports_record,PASS,26/30 names and 35/38 figures located in raw_ocr
-Worcester2021,1,names_grounded,FAIL,26/30 names located in raw_ocr
+Worcester2021,0,document_supports_record,PASS,25/30 names and 35/38 figures located in raw_ocr
+Worcester2021,1,names_grounded,FAIL,25/30 names located in raw_ocr
 Worcester2021,1,figures_grounded,FAIL,35/38 figures located in raw_ocr
 Worcester2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Worcester2021,3,office_count_consistent,PASS,8 contests; median 14 in other years
