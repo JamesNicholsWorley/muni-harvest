@@ -51,7 +51,6 @@ Worthington2025,undated-1,3388.2,1031,FAIL,0,5,"carries_the_year: '2025' does no
 Plainville2023,undated-1,3322.9,7221,FAIL,0,3,"carries_the_year: '2023' does not appear in markdown, in that spelling or as a date ending 23",open,
 Easton2026,no-document-1,3321.5,17947,FAIL,0,2,document_held: no document of any kind held,deferred,"deferred: READ -- mvp-data.js records url 'manual-find', srcfile None, has_src False, qa flags figuresunshown/nosource. civicatlasma publishes no file for this stem. 6 contests, 34533 marks -- the largest of these ten. QUESTION: does your corpus hold a document for this town-year that the publish step is not placing in civicatlasma? If it does, publishing it makes the record checkable here; if it does not, the record rests on a citation nobody can open."
 Halifax2021,undated-1,3232.8,6022,FAIL,0,3,"carries_the_year: '2021' does not appear in markdown, in that spelling or as a date ending 21",open,
-Swampscott2025,undated-1,3229.4,12640,FAIL,0,2,"carries_the_year: '2025' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 25",open,
 Swampscott2024,undated-1,3216.7,12288,FAIL,0,2,"carries_the_year: '2024' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 24",open,
 Harwich2021,undated-1,3203.1,11518,FAIL,0,3,"carries_the_year: '2021' does not appear in markdown, in that spelling or as a date ending 21",open,
 Medfield2026,undated-1,3188.1,9752,FAIL,0,7,"carries_the_year: '2026' does not appear in raw_ocr+pdftext, in that spelling or as a date ending 26",open,
