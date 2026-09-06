@@ -6044,7 +6044,7 @@ EastBrookfield2021,2,contest_closes,PASS,Planning Board - 3 Yr: 402 == 134 x 3
 EastBrookfield2021,2,contest_closes,PASS,Tree Warden - 1 Yr: 134 == 134 x 1
 EastBrookfield2021,2,regional_exempt,NOTE,Spencer-East Brookfield Regional School Dist: spans several towns; ballot arithmetic does not apply
 EastBrookfield2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
-EastBrookfield2022,0,document_self_identifies,PASS,"...# East Brookfield, Massachusetts -- Annual Town..."
+EastBrookfield2022,0,document_self_identifies,PASS,...20260601181927id_/https://www.eastbrookfieldma.us/sites/g/files/vyhlif541/...
 EastBrookfield2022,0,carries_the_year,PASS,"...usetts -- Annual Town Election, May 10, 2022 Source: the town's own results posting,..."
 EastBrookfield2022,0,document_supports_record,PASS,10/10 names and 0/0 figures located in markdown
 EastBrookfield2022,1,names_grounded,PASS,10/10 names located in markdown
@@ -14025,7 +14025,7 @@ NewSalem2023,1,names_grounded,PASS,8/8 names located in pdftext
 NewSalem2023,1,figures_grounded,PASS,8/8 figures located in pdftext
 NewSalem2023,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewSalem2023,3,office_count_consistent,PASS,7 contests; median 8 in other years
-NewSalem2024,0,document_self_identifies,PASS,...selectboard-member-55042385/) New Salem election ushers in new Select...
+NewSalem2024,0,document_self_identifies,PASS,...selectboard-member-55042385/) NewSalemelectionushersinnewSelectboard...
 NewSalem2024,0,carries_the_year,PASS,...(https://recorder.com/2024/05/07/new-salem-election-ushers-in-new-...
 NewSalem2024,0,document_supports_record,PASS,8/8 names and 8/8 figures located in raw_ocr+pdftext
 NewSalem2024,1,names_grounded,PASS,8/8 names located in raw_ocr+pdftext
