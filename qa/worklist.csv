@@ -1,5 +1,5 @@
 stem,bucket,priority,size,worst_verdict,layer,findings,summary,status,resolution
-Wellesley2026,ungrounded-names-1,6928.1,19456,FAIL,1,11,names_grounded: 118/119 names located in raw_ocr+pdftext,open,
+Wellesley2026,ungrounded-names-1,6928.1,19456,FAIL,1,11,names_grounded: 118/119 names located in raw_ocr+pdftext,open,"the page prints ""KELLY MCCOULF NORRIS   287"" between ""COSTAS PANAGOPOULOS   293"" and ""MARCIA TESTA SIMONSON   285""; the record reads ""Kelly McCould Norris"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. NAME SETTLED, ROW STILL OPEN: nine contests here exceed ballots x seats by 1 to 3 marks, which belongs to the arithmetic bucket."
 Brimfield2022,wrong-document-1,6830.8,2885,FAIL,0,6,carries_the_year: '2022' does not appear in pdftext,deferred,"read the PDF: 4 pages of Brimfield ANNUAL TOWN MEETING minutes, page-numbered 110, e.g. ""ARTICLE 18: To see if the Town will vote to raise and appropriate ... $30,000 to the Treasurers Department"" and ""Motion to approve Article 36 passed by a show of voting cards."" The only election text is the bylaw at 4.1: ""The Officers of the Town to be elected at the Annual Town Election in the years in which the terms of the incumbents expire"". It holds no candidate, no figure and no 2022 -- Soto, Adams, 435, 430, 329 all absent. The record itself is news-sourced: document.heading_verbatim reads ""Brimfield, MA - Annual Town Election, Tuesday 21 June 2022 - UNOFFICIAL"". QUESTION: the held _d0 is town-meeting minutes, not the return. Retire it as wrong_doc and register the news source, or is the fuller Annual Town Report (these 4 pages look like an extract from it, so the return may be elsewhere in the same report) worth fetching first?"
 Worcester2023,undated-1,6678.4,111459,FAIL,0,5,carries_the_year: '2023' does not appear in markdown,open,
 Dunstable2025,wrong-document-1,6485.4,2731,FAIL,0,6,carries_the_year: '2025' does not appear in markdown+pdftext,done,"no-change: the document is right and unreadable by the pipeline. PyMuPDF gets the text out (warning ""cannot find ExtGState resource GS6""): ""Annual Town Election / Tuesday, May 20, 2025 / Town of Dunstable, Massachusetts / OFFICIAL RESULTS"", then ""Board of Assessors - Three Years / Brett Rock 670 / Write-Ins 10 / Blanks 217 / Totals 897"" and ten more contests, closing ""TOTAL NUMBER OF REGISTERED VOTERS 2697 / % VOTER TURNOUT 33%"". All 11 contests and every figure in the record are on the page. pdftotext returns a form feed, docling wrote 1255 chars of which 1117 are U+FFFD, and pdftoppm renders the table rules and the town seal with no glyphs at all -- so the page image does not help either. Only PyMuPDF reads it, and across all 1575 held PDFs this is the only such file. Four overrides written (carries_the_year, document_supports_record, names_grounded, figures_grounded) bound to sha 4bd7758e. The record itself needs no correction."
@@ -31,7 +31,7 @@ FallRiver2025,undated-1,4914.4,56321,FAIL,0,3,carries_the_year: '2025' does not 
 Dartmouth2026,undated-1,4912.0,24977,FAIL,0,5,carries_the_year: '2026' does not appear in raw_ocr+pdftext,open,
 Lawrence2023,undated-1,4789.4,45191,FAIL,0,3,carries_the_year: '2023' does not appear in markdown,open,
 Peabody2025,undated-1,4702.8,41353,FAIL,0,2,carries_the_year: '2025' does not appear in markdown,open,
-Millbury2024,ungrounded-names-1,4694.2,10822,FAIL,1,9,names_grounded: 105/107 names located in markdown+pdftext,open,
+Millbury2024,ungrounded-names-1,4694.2,10822,FAIL,1,9,names_grounded: 105/107 names located in markdown+pdftext,open,"the page prints ""Marissa Vaillancort   1   1"" and ""Catherine Vaillancort   1   1"" in the PLANNING BOARD write-in list; the record reads ""Vaillancourt"" for both. Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. NAMES SETTLED, ROW STILL OPEN: six contests here exceed ballots x seats by 1 to 9 marks, which belongs to the arithmetic bucket."
 Townsend2025,undated-1,4597.4,7219,FAIL,0,4,carries_the_year: '2025' does not appear in raw_ocr,open,
 Townsend2024,undated-1,4593.1,7173,FAIL,0,4,carries_the_year: '2024' does not appear in raw_ocr,open,
 Dracut2021,undated-1,4428.3,23910,FAIL,0,3,carries_the_year: '2021' does not appear in markdown,open,
@@ -114,7 +114,7 @@ Bourne2024,no-document-1,3303.3,16011,FAIL,0,3,document_held: no document of any
 Monson2021,no-document-1,3302.7,6193,FAIL,0,4,document_held: no document of any kind held,open,
 Wilmington2024,undated-1,3294.8,18188,FAIL,0,2,carries_the_year: '2024' does not appear in markdown+pdftext,open,
 Wilmington2023,undated-1,3277.9,17497,FAIL,0,2,carries_the_year: '2023' does not appear in markdown+pdftext,open,
-Burlington2022,ungrounded-names-1,3277.4,18841,FAIL,1,4,names_grounded: 79/80 names located in markdown+pdftext,open,
+Burlington2022,ungrounded-names-1,3277.4,18841,FAIL,1,4,names_grounded: 79/80 names located in markdown+pdftext,open,"the page prints ""TOWN MEETING - 3 YR (6)"" then ""Anthoney John Salamone III*   144   144""; the record reads ""Anthony John Salamone III"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. NAME SETTLED, ROW STILL OPEN: this record also has two contests over ballots x seats by 6 and 7 marks, which belongs to the arithmetic bucket."
 Somerset2026,no-document-1,3266.3,14730,FAIL,0,3,document_held: no document of any kind held,open,
 Wilmington2021,undated-1,3257.4,17990,FAIL,0,1,carries_the_year: '2021' does not appear in markdown+pdftext,open,
 Mattapoisett2022,no-document-1,3256.4,5650,FAIL,0,4,document_held: no document of any kind held,open,
@@ -280,7 +280,7 @@ Bernardston2026,no-document-1,2348.3,1805,FAIL,0,3,document_held: no document of
 Bernardston2024,no-document-1,2345.9,1795,FAIL,0,3,document_held: no document of any kind held,open,
 Becket2025,undated-1,2343.5,1692,FAIL,0,2,carries_the_year: '2025' does not appear in raw_ocr,open,
 Bernardston2023,no-document-1,2341.2,1775,FAIL,0,3,document_held: no document of any kind held,open,
-Lowell2021,ungrounded-names-1,2338.9,68163,FAIL,1,3,names_grounded: 39/40 names located in markdown+pdftext,open,
+Lowell2021,ungrounded-names-1,2338.9,68163,FAIL,1,3,names_grounded: 39/40 names located in markdown+pdftext,open,"the page prints ""PAUL RATHA YEM   454   53.92%"" against ""DAVID M OUELLETTE   385   45.72%""; the record reads ""Paul Rathayem"", joining the last two words. Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. NAME SETTLED, ROW STILL OPEN: three figures are still ungrounded and ballots cannot be derived."
 Huntington2022,undated-1,2338.2,1628,FAIL,0,3,carries_the_year: '2022' does not appear in raw_ocr+pdftext,open,
 Brockton2025,ungrounded-names-1,2336.5,67567,FAIL,1,3,names_grounded: 30/37 names located in raw_ocr+markdown+pdftext,open,
 Bernardston2021,no-document-1,2333.2,1742,FAIL,0,3,document_held: no document of any kind held,open,
@@ -297,7 +297,7 @@ Sturbridge2022,impossible-arithmetic-1,2303.0,7158,FAIL,2,5,marks_exceed_ballots
 EastBrookfield2021,no-document-1,2294.3,1631,FAIL,0,3,document_held: no document of any kind held,open,
 Shelburne2025,no-document-1,2285.4,1555,FAIL,0,3,document_held: no document of any kind held,open,
 Leverett2024,no-document-1,2281.6,1541,FAIL,0,3,document_held: no document of any kind held,open,
-Somerville2023,ungrounded-names-1,2276.7,53894,FAIL,1,3,names_grounded: 21/25 names located in markdown+pdftext,open,
+Somerville2023,ungrounded-names-1,2276.7,53894,FAIL,1,3,names_grounded: 21/25 names located in markdown+pdftext,open,"no-change to the names: the record is right and the OCR is not. The PDF is a scan headed ""...lle Official Election Totals - Tuesday November 7, 2023"" carrying an OCR text layer that renders Billy as ""Bflly"", Kristen as ""Krjsten"", McLaughlin as ""Mclaughlrn"" and Pitone as ""Pltone"" -- four names that therefore ground nowhere. ROW STILL OPEN: one figure is ungrounded and ballots cannot be derived."
 Shelburne2024,no-document-1,2271.9,1506,FAIL,0,3,document_held: no document of any kind held,open,
 Conway2024,no-document-1,2268.8,1495,FAIL,0,3,document_held: no document of any kind held,open,
 Conway2025,no-document-1,2268.6,1494,FAIL,0,3,document_held: no document of any kind held,open,
@@ -341,7 +341,7 @@ Pelham2026,no-document-1,2119.8,1043,FAIL,0,3,document_held: no document of any 
 Chilmark2022,no-document-1,2119.7,1097,FAIL,0,2,document_held: no document of any kind held,open,
 Billerica2021,ungrounded-names-1,2117.1,29453,FAIL,1,3,names_grounded: 24/88 names located in markdown,open,
 Pittsfield2021,ungrounded-names-1,2115.2,29251,FAIL,1,3,names_grounded: 147/148 names located in markdown+pdftext,open,
-Hingham2026,ungrounded-names-1,2115.0,20070,FAIL,1,3,names_grounded: 10/11 names located in raw_ocr+pdftext,open,
+Hingham2026,ungrounded-names-1,2115.0,20070,FAIL,1,3,names_grounded: 10/11 names located in raw_ocr+pdftext,done,"the page prints ""MATTHEW LEBRETTON  109 135 129 139 135 126 89 179  1,041"" under RECREATION COMMISSION; the record reads ""MATTHEW LEBRETON"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. Seven figures are still ungrounded -- left for the figures bucket."
 Canton2026,ungrounded-names-1,2094.8,18656,FAIL,1,3,names_grounded: 10/16 names located in raw_ocr,open,
 Charlemont2026,no-document-1,2083.5,954,FAIL,0,3,document_held: no document of any kind held,open,
 Amherst2021,ungrounded-names-1,2072.2,15316,FAIL,1,4,names_grounded: 30/37 names located in markdown+pdftext,open,
@@ -356,7 +356,7 @@ Northampton2023,ungrounded-names-1,2045.7,22477,FAIL,1,3,names_grounded: 10/26 n
 Needham2025,ungrounded-names-1,2040.9,25105,FAIL,1,2,names_grounded: 48/178 names located in raw_ocr+markdown+pdftext,open,
 Stoughton2026,ungrounded-names-1,2037.8,23250,FAIL,1,3,names_grounded: 66/83 names located in raw_ocr,open,
 Rockland2025,ungrounded-names-1,2034.9,13410,FAIL,1,4,names_grounded: 47/48 names located in markdown,open,
-Reading2025,ungrounded-names-1,2029.8,21156,FAIL,1,3,names_grounded: 170/171 names located in markdown+pdftext,open,
+Reading2025,ungrounded-names-1,2029.8,21156,FAIL,1,3,names_grounded: 170/171 names located in markdown+pdftext,open,"the page prints ""Geatano Manganiello"" in the Municipal Light Board write-in column; the record reads ""Gaetano Manganiello"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. NAME SETTLED, ROW STILL OPEN: 24 figures are still ungrounded and ballots cannot be derived."
 Washington2021,no-document-1,2028.8,424,FAIL,0,4,document_held: no document of any kind held,open,
 Norwood2025,ungrounded-names-1,2023.2,23446,FAIL,1,2,names_grounded: 278/279 names located in raw_ocr+markdown+pdftext,open,
 Aquinnah2021,no-document-1,2020.9,416,FAIL,0,4,document_held: no document of any kind held,open,
@@ -364,7 +364,7 @@ Foxborough2022,ungrounded-names-1,2015.0,13973,FAIL,1,3,names_grounded: 3/16 nam
 Alford2026,no-document-1,2014.9,410,FAIL,0,4,document_held: no document of any kind held,open,
 Chelsea2025,ungrounded-names-1,2001.3,18990,FAIL,1,3,names_grounded: 27/28 names located in markdown,open,
 Wendell2024,no-document-1,1993.1,761,FAIL,0,3,document_held: no document of any kind held,open,
-Reading2024,ungrounded-names-1,1990.2,20647,FAIL,1,2,names_grounded: 228/229 names located in markdown+pdftext,open,
+Reading2024,ungrounded-names-1,1990.2,20647,FAIL,1,2,names_grounded: 228/229 names located in markdown+pdftext,open,"the page prints ""Christine Lorranine Ford *   464"" between ""Susan S Craven *   435"" and ""Michael A Storti *   385""; the record reads ""Christine Lorraine Ford"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. NAME SETTLED, ROW STILL OPEN: 23 figures are still ungrounded."
 Milford2025,ungrounded-names-1,1983.2,18867,FAIL,1,3,names_grounded: 27/107 names located in raw_ocr+markdown+pdftext,open,
 Wendell2021,no-document-1,1981.5,739,FAIL,0,3,document_held: no document of any kind held,open,
 Wendell2022,no-document-1,1980.9,738,FAIL,0,3,document_held: no document of any kind held,open,
@@ -422,9 +422,9 @@ Milton2026,ungrounded-figures-1,1706.8,22112,FAIL,1,4,figures_grounded: 171/207 
 Blackstone2021,ungrounded-names-1,1703.4,6803,FAIL,1,2,names_grounded: 59/69 names located in raw_ocr,open,
 NorthBrookfield2025,impossible-arithmetic-1,1699.0,4010,FAIL,2,6,marks_exceed_ballots: Selectman for 2 years to fill a term: 760 marks > 759 ballots x 1 seats = 759,open,
 Needham2022,ungrounded-figures-1,1690.2,23910,FAIL,1,2,figures_grounded: 327/329 figures located in markdown+pdftext,open,
-Boxford2022,ungrounded-names-1,1690.1,6458,FAIL,1,2,names_grounded: 14/15 names located in raw_ocr+pdftext,open,
+Boxford2022,ungrounded-names-1,1690.1,6458,FAIL,1,2,names_grounded: 14/15 names located in raw_ocr+pdftext,done,"the page prints ""Bankson C. Riter, Jr.   203"" under BOARD OF COMMISSIONERS OF TRUST FUNDS; the record reads ""Bankson C. Ritter Jr."". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. Four figures are still ungrounded -- left for the figures bucket."
 Bourne2026,ungrounded-figures-1,1689.4,16418,FAIL,1,7,figures_grounded: 94/95 figures located in markdown,open,
-Ashburnham2026,ungrounded-names-1,1688.8,4936,FAIL,1,7,names_grounded: 14/15 names located in raw_ocr+pdftext,open,
+Ashburnham2026,ungrounded-names-1,1688.8,4936,FAIL,1,7,names_grounded: 14/15 names located in raw_ocr+pdftext,done,"the page prints ""Jeremey Smeltekop (28 Lakeshore Dr.)   49   64   113""; the record reads ""Jeremy Smeltekop"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched. Five figures are still ungrounded here -- left for the figures bucket."
 Burlington2026,ungrounded-figures-1,1680.5,19632,FAIL,1,4,figures_grounded: 82/111 figures located in raw_ocr+pdftext,open,
 Williamsburg2025,ungrounded-figures-1,1672.1,2165,FAIL,1,5,figures_grounded: 21/40 figures located in raw_ocr,open,
 Taunton2025,ungrounded-figures-1,1668.6,42300,FAIL,1,3,figures_grounded: 12/76 figures located in raw_ocr+markdown,open,
@@ -540,7 +540,7 @@ Arlington2022,ungrounded-figures-1,1070.2,32180,FAIL,1,2,figures_grounded: 230/2
 Amesbury2023,ungrounded-figures-1,1068.7,13805,FAIL,1,2,figures_grounded: 29/52 figures located in markdown+pdftext,open,
 Fairhaven2021,ungrounded-figures-1,1062.6,11923,FAIL,1,10,figures_grounded: 26/42 figures located in markdown+pdftext,open,
 Natick2026,ungrounded-figures-1,1059.9,26136,FAIL,1,3,figures_grounded: 71/80 figures located in raw_ocr+pdftext,open,
-Tewksbury2025,ungrounded-names-1,1058.2,25806,FAIL,1,3,names_grounded: 15/16 names located in markdown+pdftext,open,
+Tewksbury2025,ungrounded-names-1,1058.2,25806,FAIL,1,3,names_grounded: 15/16 names located in markdown+pdftext,done,"the page prints ""JONAH J. MCCREARY  152 160 169 136 204 179 223 200  1423"" under BOARD OF LIBRARY TRUSTEES; the record reads ""Jonah J. McCrary"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Swampscott2026,ungrounded-figures-1,1055.8,12640,FAIL,1,2,figures_grounded: 133/135 figures located in raw_ocr+pdftext,open,
 Deerfield2022,impossible-arithmetic-1,1055.7,3943,FAIL,2,3,marks_exceed_ballots: DEERFIELD SCHOOL COMMITTEE: 1917 marks > 958 ballots x 2 seats = 1916,open,
 Arlington2024,ungrounded-figures-1,1053.8,32471,FAIL,1,1,figures_grounded: 144/154 figures located in raw_ocr+pdftext,open,
@@ -555,7 +555,7 @@ Reading2021,ungrounded-figures-1,1043.9,20509,FAIL,1,4,figures_grounded: 177/201
 Gloucester2023,ungrounded-figures-1,1043.7,23169,FAIL,1,2,figures_grounded: 7/32 figures located in markdown,open,
 Alford2025,ungrounded-names-1,1041.6,410,FAIL,1,3,names_grounded: 8/9 names located in raw_ocr+markdown,open,
 Everett2023,ungrounded-figures-1,1040.1,22549,FAIL,1,2,figures_grounded: 50/66 figures located in pdftext,open,
-Falmouth2026,ungrounded-names-1,1038.7,28893,FAIL,1,1,names_grounded: 109/110 names located in raw_ocr+pdftext,open,
+Falmouth2026,ungrounded-names-1,1038.7,28893,FAIL,1,1,names_grounded: 109/110 names located in raw_ocr+pdftext,done,"the page prints ""Susan  Lioyd   3   3"" in the Town Meeting Member list; the record reads ""Susan Lloyd"". The rendered glyphs are Lioyd, so it is the document's spelling and not an extraction slip. Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Agawam2021,ungrounded-figures-1,1038.5,22287,FAIL,1,2,figures_grounded: 0/26 figures located in raw_ocr+pdftext,open,
 Marshfield2025,ungrounded-figures-1,1036.3,21917,FAIL,1,2,figures_grounded: 0/13 figures located in markdown,open,
 Westfield2025,ungrounded-figures-1,1035.6,28224,FAIL,1,1,figures_grounded: 276/296 figures located in markdown+pdftext,open,
@@ -571,9 +571,9 @@ Northampton2025,ungrounded-figures-1,1029.0,23553,FAIL,1,2,figures_grounded: 59/
 Saugus2021,ungrounded-figures-1,1026.7,20407,FAIL,1,2,figures_grounded: 82/104 figures located in raw_ocr,open,
 Reading2023,ungrounded-figures-1,1026.2,20326,FAIL,1,2,figures_grounded: 233/256 figures located in markdown+pdftext,open,
 Natick2025,ungrounded-figures-1,1025.7,26136,FAIL,1,1,figures_grounded: 89/111 figures located in markdown+pdftext,open,
-Medway2021,ungrounded-names-1,1025.5,10281,FAIL,1,2,names_grounded: 13/14 names located in raw_ocr+pdftext,open,
+Medway2021,ungrounded-names-1,1025.5,10281,FAIL,1,2,names_grounded: 13/14 names located in raw_ocr+pdftext,done,"the page prints ""SCHOOL COMMITTEE vote for one - 3 year term"" then ""Cythnia Sullivan   269   263   280   327   11""; the record reads ""Cynthia Sullivan"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Reading2022,ungrounded-figures-1,1025.3,20192,FAIL,1,2,figures_grounded: 409/434 figures located in markdown+pdftext,open,
-Wrentham2026,ungrounded-names-1,1020.2,9913,FAIL,1,2,names_grounded: 9/10 names located in pdftext,open,
+Wrentham2026,ungrounded-names-1,1020.2,9913,FAIL,1,2,names_grounded: 9/10 names located in pdftext,done,"no-change: the record is right and the OCR is not. The PDF is a scan carrying an OCR text layer; the rendered page prints ""Planning Board (2) - 3 years / Robert S. English   167   173   204 ..."" while the text layer reads ""Robeft"". Nothing to correct in the record."
 Northampton2021,ungrounded-figures-1,1019.7,21944,FAIL,1,2,figures_grounded: 52/78 figures located in markdown+pdftext,open,
 Natick2024,ungrounded-figures-1,1019.4,24910,FAIL,1,1,figures_grounded: 72/86 figures located in markdown+pdftext,open,
 Natick2021,ungrounded-figures-1,1016.4,24333,FAIL,1,1,figures_grounded: 82/97 figures located in markdown+pdftext,open,
@@ -604,7 +604,7 @@ Rowe2023,ungrounded-names-1,977.0,325,FAIL,1,2,names_grounded: 40/43 names locat
 Rowe2024,ungrounded-names-1,976.4,324,FAIL,1,2,names_grounded: 35/49 names located in raw_ocr,open,
 EastLongmeadow2025,ungrounded-figures-1,974.3,13796,FAIL,1,2,figures_grounded: 11/13 figures located in markdown+pdftext,open,
 Scituate2021,ungrounded-figures-1,973.8,15491,FAIL,1,2,figures_grounded: 28/29 figures located in raw_ocr+markdown,open,
-Auburn2026,ungrounded-names-1,972.4,13603,FAIL,1,3,names_grounded: 112/113 names located in raw_ocr+pdftext,open,
+Auburn2026,ungrounded-names-1,972.4,13603,FAIL,1,3,names_grounded: 112/113 names located in raw_ocr+pdftext,done,"the page prints ""*CLAIRE JACQELINE SWENSON   35 ARLINGTON STREET   6"" in the town-meeting-member list; the record reads ""Claire Jacqueline Swenson"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 EastLongmeadow2024,ungrounded-figures-1,971.5,13507,FAIL,1,2,figures_grounded: 6/8 figures located in markdown,open,
 Rowe2021,ungrounded-names-1,971.5,316,FAIL,1,2,names_grounded: 39/46 names located in raw_ocr,open,
 Williamsburg2022,impossible-arithmetic-1,970.3,2078,FAIL,2,5,marks_exceed_ballots: Recreation Commission – 3 years – vote for 2: 824 marks > 313 ballots x 2 seats = 626,open,
@@ -616,14 +616,14 @@ Millis2022,ungrounded-names-1,966.3,6853,FAIL,1,2,names_grounded: 8/10 names loc
 Mashpee2024,ungrounded-figures-1,966.2,12986,FAIL,1,2,figures_grounded: 2/17 figures located in markdown,open,
 Rockland2024,ungrounded-figures-1,965.8,12946,FAIL,1,3,figures_grounded: 40/41 figures located in markdown+pdftext,open,
 EastLongmeadow2022,ungrounded-figures-1,964.2,12791,FAIL,1,2,figures_grounded: 11/16 figures located in markdown+pdftext,open,
-Winchester2021,ungrounded-names-1,963.0,16116,FAIL,1,1,names_grounded: 93/94 names located in markdown+pdftext,open,
+Winchester2021,ungrounded-names-1,963.0,16116,FAIL,1,1,names_grounded: 93/94 names located in markdown+pdftext,done,"the page prints ""ELIZAETH S SCHREIBER"" in the town-meeting-member block, between ""REBECCA C TELLEFSEN"" and ""BRYN E BUCK""; the record reads ""Elizabeth S Schreiber"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Georgetown2021,ungrounded-figures-1,960.2,6571,FAIL,1,2,figures_grounded: 13/28 figures located in markdown,open,
 Sudbury2021,ungrounded-names-1,957.8,13715,FAIL,1,2,names_grounded: 17/19 names located in raw_ocr+pdftext,open,
 Auburn2025,ungrounded-figures-1,956.7,13603,FAIL,1,2,figures_grounded: 136/148 figures located in markdown+pdftext,open,
 Grafton2025,ungrounded-figures-1,955.6,15224,FAIL,1,1,figures_grounded: 0/24 figures located in markdown,open,
 Tyngsborough2021,ungrounded-figures-1,953.8,9465,FAIL,1,5,figures_grounded: 25/48 figures located in pdftext,open,
 Uxbridge2024,ungrounded-figures-1,951.9,11669,FAIL,1,2,figures_grounded: 177/189 figures located in markdown+pdftext,open,
-Somerset2025,ungrounded-names-1,951.3,14730,FAIL,1,1,names_grounded: 36/37 names located in markdown+pdftext,open,
+Somerset2025,ungrounded-names-1,951.3,14730,FAIL,1,1,names_grounded: 36/37 names located in markdown+pdftext,done,"the page prints ""Christoper Migneault   398   376   380   269   306"" under HOUSING AUTHORITY; the record reads ""Christopher Migneault"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Westport2025,ungrounded-figures-1,950.7,14655,FAIL,1,1,figures_grounded: 40/41 figures located in pdftext,open,
 Concord2026,ungrounded-figures-1,947.6,14312,FAIL,1,1,figures_grounded: 8/13 figures located in raw_ocr+pdftext,open,
 Seekonk2021,ungrounded-figures-1,947.1,11255,FAIL,1,2,figures_grounded: 25/26 figures located in markdown,open,
@@ -635,9 +635,9 @@ Fairhaven2025,ungrounded-figures-1,940.3,13526,FAIL,1,1,figures_grounded: 27/28 
 Sharon2021,ungrounded-figures-1,938.4,13327,FAIL,1,1,figures_grounded: 23/36 figures located in markdown+pdftext,open,
 Westborough2021,ungrounded-figures-1,937.5,13235,FAIL,1,1,figures_grounded: 25/28 figures located in markdown,open,
 Bedford2022,ungrounded-figures-1,936.7,10408,FAIL,1,2,figures_grounded: 14/16 figures located in markdown,open,
-Groveland2025,ungrounded-names-1,936.0,5562,FAIL,1,2,names_grounded: 16/17 names located in raw_ocr+pdftext,open,
+Groveland2025,ungrounded-names-1,936.0,5562,FAIL,1,2,names_grounded: 16/17 names located in raw_ocr+pdftext,done,"the page prints ""Elizabeth G Greenhagen   205   219   424"" under ""School Committee 3 Year Term""; the record reads ""Elizabeth G Greenhangen"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Hopkinton2023,ungrounded-figures-1,934.8,12966,FAIL,1,1,figures_grounded: 40/41 figures located in raw_ocr+pdftext,open,
-Ashland2025,ungrounded-names-1,934.6,12944,FAIL,1,1,names_grounded: 12/13 names located in markdown+pdftext,open,
+Ashland2025,ungrounded-names-1,934.6,12944,FAIL,1,1,names_grounded: 12/13 names located in markdown+pdftext,done,"the page prints ""JOSPEH J. MAGNANI, JR.   57  81  57  37  56  57  345"" under ""SELECT BOARD - 3 YEARS""; the record reads ""Joseph J. Magnani, Jr."". The clerk's typo is on the sheet -- verified by rendering page 1, where the whole tally sheet is headed ""ASHLAND ANNUAL TOWN ELECTION, MAY 20, 2025 / OFFICIAL RESULTS / TALLY SHEET"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Duxbury2022,ungrounded-figures-1,933.9,12869,FAIL,1,1,figures_grounded: 23/35 figures located in markdown+pdftext,open,
 Duxbury2021,ungrounded-figures-1,933.8,12864,FAIL,1,1,figures_grounded: 18/27 figures located in markdown+pdftext,open,
 Harwich2022,ungrounded-figures-1,932.7,11327,FAIL,1,2,figures_grounded: 12/18 figures located in markdown+pdftext,open,
@@ -652,23 +652,23 @@ Hanover2024,ungrounded-figures-1,923.4,11868,FAIL,1,1,figures_grounded: 8/25 fig
 Ipswich2026,ungrounded-figures-1,921.3,11677,FAIL,1,1,figures_grounded: 4/20 figures located in raw_ocr,open,
 Uxbridge2025,ungrounded-figures-1,920.5,11607,FAIL,1,1,figures_grounded: 148/152 figures located in markdown+pdftext,open,
 NorthAdams2021,ungrounded-figures-1,919.9,9176,FAIL,1,2,figures_grounded: 2/16 figures located in markdown,open,
-Holliston2026,ungrounded-names-1,919.4,11508,FAIL,1,1,names_grounded: 13/14 names located in raw_ocr+pdftext,open,
+Holliston2026,ungrounded-names-1,919.4,11508,FAIL,1,1,names_grounded: 13/14 names located in raw_ocr+pdftext,done,"the page prints ""PLANNING BOARD  5 Year  VT 1"" then ""Barbara D. Peatie   206   231   184   227   848""; the record reads ""Barbara D. Peatle"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Nantucket2026,ungrounded-figures-1,916.4,10007,FAIL,1,2,figures_grounded: 16/39 figures located in raw_ocr+pdftext,open,
 Lakeville2021,ungrounded-figures-1,915.3,8868,FAIL,1,3,figures_grounded: 41/42 figures located in markdown+pdftext,open,
-Holliston2021,ungrounded-names-1,914.0,11036,FAIL,1,1,names_grounded: 18/19 names located in markdown+pdftext,open,
+Holliston2021,ungrounded-names-1,914.0,11036,FAIL,1,1,names_grounded: 18/19 names located in markdown+pdftext,done,"the page prints ""Barbara D. Peatie   140   140   168   106   554""; the record reads ""Barbara D. Peatle"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Charlton2024,ungrounded-figures-1,911.9,10858,FAIL,1,1,figures_grounded: 42/43 figures located in markdown,open,
 Acushnet2025,ungrounded-names-1,911.8,8637,FAIL,1,2,names_grounded: 7/11 names located in markdown+pdftext,done,"no-change: same clerk's form as Acushnet2026 -- ""* Please note the figures listed below are preliminary and will be finalized within four days following the election."" above ""TOWN ELECTION --- 4/22/25"". The held markdown even cites the source URL slug 2025_ANNUAL_TOWN_ELECTION_PRELIMINARY_RESULTS."
-Wayland2024,ungrounded-names-1,909.1,10626,FAIL,1,1,names_grounded: 18/19 names located in markdown+pdftext,open,
+Wayland2024,ungrounded-names-1,909.1,10626,FAIL,1,1,names_grounded: 18/19 names located in markdown+pdftext,done,"the page prints ""BOARD OF HEALTH (2)"" then ""ROBERT DEFRANCESCO   867   300   206   167   194""; the record reads ""Robert DeFramcesco"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Nantucket2021,ungrounded-figures-1,908.1,9390,FAIL,1,2,figures_grounded: 39/48 figures located in raw_ocr+pdftext,open,
 Lakeville2023,ungrounded-figures-1,907.5,9347,FAIL,1,2,figures_grounded: 43/44 figures located in markdown+pdftext,open,
-Medway2023,ungrounded-names-1,906.5,10413,FAIL,1,1,names_grounded: 14/15 names located in markdown+pdftext,open,
+Medway2023,ungrounded-names-1,906.5,10413,FAIL,1,1,names_grounded: 14/15 names located in markdown+pdftext,done,"the page prints ""Crisitina Areti St-Pierre   48   67   65   53   233""; the record reads ""Cristina Areti St-Pierre"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Dudley2026,ungrounded-figures-1,905.6,9217,FAIL,1,2,figures_grounded: 36/40 figures located in raw_ocr+pdftext,open,
 Lakeville2022,ungrounded-figures-1,904.8,9161,FAIL,1,2,figures_grounded: 29/38 figures located in markdown+pdftext,open,
 Brewster2025,ungrounded-figures-1,901.4,8927,FAIL,1,2,figures_grounded: 37/38 figures located in raw_ocr+pdftext,open,
 Groton2025,ungrounded-figures-1,901.0,8898,FAIL,1,2,figures_grounded: 49/53 figures located in markdown+pdftext,open,
 Shutesbury2026,impossible-arithmetic-1,899.4,1562,FAIL,2,3,marks_exceed_ballots: Board of Library Trustees: 1089 marks > 544 ballots x 2 seats = 1088,open,
 Sturbridge2026,ungrounded-figures-1,899.0,7844,FAIL,1,2,figures_grounded: 4/14 figures located in markdown,open,
-Groton2022,ungrounded-names-1,898.9,8757,FAIL,1,2,names_grounded: 25/26 names located in raw_ocr+pdftext,open,
+Groton2022,ungrounded-names-1,898.9,8757,FAIL,1,2,names_grounded: 25/26 names located in raw_ocr+pdftext,done,"the page prints ""Evan Thackaberrry   272   230   268   22   792"" -- three r's -- under ""Board of Health - 1 Year""; the record reads ""Evan Thackaberry"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Groton2023,ungrounded-figures-1,898.3,8715,FAIL,1,2,figures_grounded: 44/46 figures located in markdown+pdftext,open,
 Dudley2023,ungrounded-figures-1,897.2,8645,FAIL,1,2,figures_grounded: 32/44 figures located in markdown+pdftext,open,
 Southborough2024,ungrounded-figures-1,894.9,7607,FAIL,1,3,figures_grounded: 39/43 figures located in markdown+pdftext,open,
@@ -677,18 +677,18 @@ Lunenburg2024,ungrounded-figures-1,893.3,9397,FAIL,1,1,figures_grounded: 49/50 f
 Southborough2023,ungrounded-figures-1,892.1,7444,FAIL,1,2,figures_grounded: 3/14 figures located in markdown,open,
 Carlisle2021,ungrounded-figures-1,888.7,4011,FAIL,1,2,figures_grounded: 23/25 figures located in markdown+pdftext,open,
 Dudley2024,ungrounded-figures-1,888.7,9069,FAIL,1,1,figures_grounded: 30/35 figures located in markdown+pdftext,open,
-Freetown2024,ungrounded-names-1,888.7,7260,FAIL,1,3,names_grounded: 23/24 names located in markdown+pdftext,open,
+Freetown2024,ungrounded-names-1,888.7,7260,FAIL,1,3,names_grounded: 23/24 names located in markdown+pdftext,done,"the page prints ""Christopher Johathan Dudley   198   243   198   639"" under Finance Committee; the record reads ""Christopher Jonathan Dudley"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Carlisle2022,ungrounded-figures-1,887.6,3980,FAIL,1,2,figures_grounded: 22/26 figures located in markdown+pdftext,open,
 Townsend2023,ungrounded-figures-1,881.7,6886,FAIL,1,2,figures_grounded: 65/66 figures located in markdown,open,
 Westminster2024,ungrounded-names-1,880.7,6833,FAIL,1,3,names_grounded: 19/20 names located in markdown,open,
 Norwell2024,ungrounded-figures-1,880.6,8518,FAIL,1,1,figures_grounded: 29/30 figures located in raw_ocr+pdftext,open,
 Weston2023,ungrounded-names-1,880.3,8496,FAIL,1,1,names_grounded: 17/18 names located in markdown,open,
-Westminster2026,ungrounded-names-1,880.1,6804,FAIL,1,3,names_grounded: 15/16 names located in raw_ocr+pdftext,open,
+Westminster2026,ungrounded-names-1,880.1,6804,FAIL,1,3,names_grounded: 15/16 names located in raw_ocr+pdftext,done,"the page prints ""Jeremey Smeltekop   45   56   22   68   191""; the record reads ""Jeremy Smeltekop"" -- the same person and the same slip as Ashburnham2026, on the same regional school committee. Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Westminster2023,ungrounded-names-1,875.3,6561,FAIL,1,3,names_grounded: 24/26 names located in markdown+pdftext,open,
 Newbury2024,ungrounded-figures-1,874.3,5865,FAIL,1,4,figures_grounded: 34/37 figures located in raw_ocr+pdftext,open,
 Westminster2022,ungrounded-names-1,873.3,6464,FAIL,1,3,names_grounded: 17/18 names located in markdown,open,
 Winchendon2024,ungrounded-names-1,872.5,7998,FAIL,1,1,names_grounded: 13/14 names located in markdown,open,
-Maynard2021,ungrounded-names-1,872.4,7992,FAIL,1,1,names_grounded: 7/8 names located in markdown+pdftext,open,
+Maynard2021,ungrounded-names-1,872.4,7992,FAIL,1,1,names_grounded: 7/8 names located in markdown+pdftext,done,"the page prints ""SELECT BOARD"" then ""Armand Diarbekirian   110   111   122   83   426""; the record reads ""Armand Diarbekiarian"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Montague2021,ungrounded-figures-1,868.0,6211,FAIL,1,3,figures_grounded: 85/86 figures located in markdown,open,
 Provincetown2025,ungrounded-figures-1,867.3,3456,FAIL,1,2,figures_grounded: 5/14 figures located in markdown,open,
 Upton2021,ungrounded-figures-1,866.4,6134,FAIL,1,3,figures_grounded: 19/28 figures located in raw_ocr+pdftext,open,
@@ -702,7 +702,7 @@ Boxford2026,ungrounded-figures-1,851.5,6791,FAIL,1,1,figures_grounded: 38/40 fig
 Berkley2026,ungrounded-figures-1,851.1,5467,FAIL,1,2,figures_grounded: 5/13 figures located in raw_ocr+pdftext,open,
 Newbury2026,ungrounded-figures-1,850.7,6054,FAIL,1,2,figures_grounded: 33/34 figures located in raw_ocr+pdftext,open,
 Ayer2022,ungrounded-names-1,846.3,5855,FAIL,1,2,names_grounded: 8/17 names located in markdown+pdftext,open,
-Hamilton2025,ungrounded-names-1,844.3,5765,FAIL,1,2,names_grounded: 15/16 names located in markdown+pdftext,open,
+Hamilton2025,ungrounded-names-1,844.3,5765,FAIL,1,2,names_grounded: 15/16 names located in markdown+pdftext,done,"the page prints ""Ellizabeth L. Herr **   674   589   1263""; the record reads ""Elizabeth L. Herr"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Rowley2021,ungrounded-figures-1,841.9,5097,FAIL,1,3,figures_grounded: 30/31 figures located in markdown,open,
 Newbury2022,ungrounded-figures-1,841.1,5625,FAIL,1,2,figures_grounded: 28/30 figures located in raw_ocr+pdftext,open,
 Southampton2025,ungrounded-figures-1,841.0,5062,FAIL,1,2,figures_grounded: 3/25 figures located in raw_ocr+pdftext,open,
@@ -737,8 +737,8 @@ Warren2021,ungrounded-names-1,791.7,3479,FAIL,1,3,names_grounded: 33/34 names lo
 WestBrookfield2025,ungrounded-names-1,780.6,3197,FAIL,1,3,names_grounded: 43/44 names located in raw_ocr,open,
 WestBrookfield2026,ungrounded-figures-2,780.6,3197,FAIL,1,2,figures_grounded: 24/25 figures located in raw_ocr,open,
 Cummington2021,impossible-arithmetic-1,778.5,692,FAIL,2,4,marks_exceed_ballots: Finance Committee two for three years: 155 marks > 76 ballots x 2 seats = 152,open,
-WestNewbury2024,ungrounded-names-1,778.1,3822,FAIL,1,1,names_grounded: 14/15 names located in raw_ocr+pdftext,open,
-WestNewbury2023,ungrounded-names-1,774.6,3719,FAIL,1,1,names_grounded: 12/13 names located in markdown+pdftext,open,
+WestNewbury2024,ungrounded-names-1,778.1,3822,FAIL,1,1,names_grounded: 14/15 names located in raw_ocr+pdftext,done,"the page prints ""School Committee (3 years)"" then ""Emily Zeitsev   456""; the record reads ""Emily Zeitser"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
+WestNewbury2023,ungrounded-names-1,774.6,3719,FAIL,1,1,names_grounded: 12/13 names located in markdown+pdftext,done,"the page prints ""School Committee"" then ""Chrstine M. Reading   302""; the record reads ""Christine M. Reading"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Millville2021,ungrounded-figures-2,774.4,2315,FAIL,1,6,figures_grounded: 47/48 figures located in raw_ocr+pdftext,open,
 Ashby2023,ungrounded-figures-2,772.0,2486,FAIL,1,5,figures_grounded: 64/65 figures located in raw_ocr+pdftext,open,
 Billerica2026,thin-years-1,771.2,31927,FAIL,3,4,office_count_consistent: 3 contests; this town's other years median 25,open,
@@ -748,11 +748,11 @@ Millville2022,ungrounded-figures-2,753.0,2357,FAIL,1,4,figures_grounded: 38/39 f
 Northfield2025,ungrounded-figures-2,752.1,2567,FAIL,1,2,figures_grounded: 39/41 figures located in raw_ocr+pdftext,open,
 Millville2023,ungrounded-figures-2,751.1,2324,FAIL,1,4,figures_grounded: 68/70 figures located in markdown+pdftext,open,
 Oakham2022,ungrounded-figures-2,747.9,1484,FAIL,1,2,figures_grounded: 21/22 figures located in pdftext,open,
-Wenham2022,ungrounded-names-1,745.9,2965,FAIL,1,1,names_grounded: 17/18 names located in markdown+pdftext,open,
+Wenham2022,ungrounded-names-1,745.9,2965,FAIL,1,1,names_grounded: 17/18 names located in markdown+pdftext,done,"the page prints ""WATER COMMISIONER"" then ""ERNEST C ASHELY   661""; the record reads ""Ernest C Ashley"". The office heading is misspelled on the sheet too. Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Mashpee2022,impossible-arithmetic-1,743.2,12392,FAIL,2,2,marks_exceed_ballots: Moderator: 2184 marks > 1469 ballots x 1 seats = 1469,open,
 Haverhill2021,thin-years-1,737.2,48419,FAIL,3,3,office_count_consistent: 3 contests; this town's other years median 16,open,
 NewMarlborough2025,ungrounded-figures-2,726.2,1267,FAIL,1,2,figures_grounded: 11/19 figures located in raw_ocr+pdftext,open,
-Plympton2024,ungrounded-names-1,725.7,2524,FAIL,1,1,names_grounded: 15/16 names located in pdftext,open,
+Plympton2024,ungrounded-names-1,725.7,2524,FAIL,1,1,names_grounded: 15/16 names located in pdftext,done,"the page prints ""Wendy Puljanowksi   16"" beside ""Jon Wilhelmsen   87""; the record reads ""Wendy Puljanowkski"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Russell2021,ungrounded-names-1,723.3,1241,FAIL,1,2,names_grounded: 15/16 names located in raw_ocr,open,
 Webster2025,impossible-arithmetic-1,706.7,13738,FAIL,2,6,marks_exceed_ballots: Board of Selectmen: 673 marks > 336 ballots x 2 seats = 672,open,
 Shutesbury2023,ungrounded-figures-2,706.1,1509,FAIL,1,5,figures_grounded: 23/27 figures located in pdftext,open,
@@ -767,18 +767,18 @@ Conway2021,ungrounded-figures-2,678.5,1444,FAIL,1,2,figures_grounded: 1/6 figure
 Shutesbury2024,ungrounded-figures-2,675.6,1541,FAIL,1,2,figures_grounded: 28/31 figures located in markdown+pdftext,open,
 Westhampton2021,ungrounded-names-1,666.7,1315,FAIL,1,2,names_grounded: 14/15 names located in pdftext,open,
 Shutesbury2025,ungrounded-figures-2,666.2,1562,FAIL,1,1,figures_grounded: 19/22 figures located in markdown+pdftext,open,
-Gill2024,ungrounded-names-1,662.3,1269,FAIL,1,2,names_grounded: 11/13 names located in raw_ocr+pdftext,open,
+Gill2024,ungrounded-names-1,662.3,1269,FAIL,1,2,names_grounded: 11/13 names located in raw_ocr+pdftext,done,"no-change: the record is right and the extraction is not. The rendered page prints ""Thomas Storrow 73 River Road ... 44"" and ""Anna E. Hendricks 69 Boyle Road ... 45"", each with its initial capital drawn as a separate object on its own line; the text layer therefore reads ""T / homas Storrow"" and ""A / nna E. Hendricks"", so neither name grounds. Nothing to correct in the record."
 Marblehead2021,impossible-arithmetic-1,658.6,16226,FAIL,2,2,marks_exceed_ballots: Selectmen - 1 Year Term: 22802 marks > 4560 ballots x 5 seats = 22800,open,
 Dudley2022,impossible-arithmetic-1,658.2,8318,FAIL,2,6,marks_exceed_ballots: Planning Board 2-Year Term: 573 marks > 571 ballots x 1 seats = 571,open,
-Royalston2024,ungrounded-names-1,654.9,1100,FAIL,1,4,names_grounded: 24/25 names located in raw_ocr+pdftext,open,
-Gill2021,ungrounded-names-1,652.4,1172,FAIL,1,2,names_grounded: 10/11 names located in pdftext,open,
+Royalston2024,ungrounded-names-1,654.9,1100,FAIL,1,4,names_grounded: 24/25 names located in raw_ocr+pdftext,done,"the page prints ""MODERATOR   3 years"" then ""Andew West   232""; the record reads ""Andrew West"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
+Gill2021,ungrounded-names-1,652.4,1172,FAIL,1,2,names_grounded: 10/11 names located in pdftext,done,"the page prints ""Board of Selectmen 3 yrs: Charles J. Garbiel II 74 votes"" -- a news-style summary that also reads ""Very light turnout: 78 voters came out to vote.""; the record reads ""Charles J. Gabriel II"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Hopkinton2026,impossible-arithmetic-1,640.2,13169,FAIL,2,2,marks_exceed_ballots: CONSTABLE: 1336 marks > 966 ballots x 1 seats = 966,open,
 Southbridge2023,impossible-arithmetic-1,638.6,12935,FAIL,2,2,marks_exceed_ballots: School Committee: 3292 marks > 1098 ballots x 2 seats = 2196,open,
 Norwood2024,thin-years-1,638.1,22722,FAIL,3,2,office_count_consistent: 9 contests; this town's other years median 23,open,
 Gill2022,ungrounded-figures-2,634.9,1207,FAIL,1,1,figures_grounded: 23/26 figures located in pdftext,open,
 Milton2021,thin-years-1,634.3,21702,FAIL,3,2,office_count_consistent: 10 contests; this town's other years median 24,open,
 Chilmark2025,ungrounded-figures-2,633.7,1195,FAIL,1,1,figures_grounded: 121/123 figures located in raw_ocr+pdftext,open,
-Chilmark2026,ungrounded-names-1,633.7,1195,FAIL,1,1,names_grounded: 135/136 names located in raw_ocr+pdftext,open,
+Chilmark2026,ungrounded-names-1,633.7,1195,FAIL,1,1,names_grounded: 135/136 names located in raw_ocr+pdftext,done,"the page prints ""Cauder Martin  0 0 1 0 ... 1"" in the FENCE VIEWER write-in list; the record reads ""Caulder Martin"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Duxbury2026,impossible-arithmetic-1,626.2,13420,FAIL,2,1,marks_exceed_ballots: PLANNING BOARD - 2 year unexpired term: 4204 marks > 4142 ballots x 1 seats = 4142,open,
 Leyden2021,ungrounded-names-1,625.6,592,FAIL,1,2,names_grounded: 25/26 names located in raw_ocr,open,
 Belchertown2025,impossible-arithmetic-1,620.8,12611,FAIL,2,1,marks_exceed_ballots: HOUSING AUTHORITY 5 YR TERM: 4289 marks > 4284 ballots x 1 seats = 4284,open,
@@ -791,7 +791,7 @@ NewSalem2022,ungrounded-figures-2,612.7,847,FAIL,1,2,figures_grounded: 4/13 figu
 Chester2022,ungrounded-figures-2,612.4,918,FAIL,1,2,figures_grounded: 28/30 figures located in pdftext,open,
 Pepperell2024,impossible-arithmetic-1,609.2,9269,FAIL,2,2,marks_exceed_ballots: Lawrence Library Board of Trustees: 5032 marks > 2506 ballots x 2 seats = 5012,open,
 Groton2024,impossible-arithmetic-1,606.3,8967,FAIL,2,2,marks_exceed_ballots: Planning Board: 3895 marks > 1298 ballots x 3 seats = 3894,open,
-Chester2025,ungrounded-names-1,604.9,938,FAIL,1,1,names_grounded: 17/18 names located in markdown+pdftext,open,
+Chester2025,ungrounded-names-1,604.9,938,FAIL,1,1,names_grounded: 17/18 names located in markdown+pdftext,done,"no-change: the record is right and the extraction is not. The rendered page prints ""Martenson, E --- 118 / McAuliffe, M --- 48 / Write in-2""; pdftotext renders the ff ligature as a capital O and yields ""McAuliOe, M --- 48"", which is why the name grounds nowhere. Nothing to correct in the record; the reading needs replacing."
 Montague2024,impossible-arithmetic-1,598.6,6984,FAIL,2,3,"marks_exceed_ballots: Trustee, Soldiers Memorial (Veteran): 721 marks > 718 ballots x 1 seats = 718",open,
 Princeton2021,impossible-arithmetic-1,596.4,2956,FAIL,2,2,marks_exceed_ballots: WRSD School Comm - 3 year: 190 marks > 185 ballots x 1 seats = 185,open,
 Windsor2025,ungrounded-figures-2,595.9,736,FAIL,1,2,figures_grounded: 27/28 figures located in raw_ocr,open,
@@ -824,7 +824,7 @@ Cheshire2022,impossible-arithmetic-1,495.6,2516,FAIL,2,2,marks_exceed_ballots: N
 Pelham2025,impossible-arithmetic-1,493.9,1043,FAIL,2,2,marks_exceed_ballots: CEMETERY COMMISSION (3 Years): 126 marks > 124 ballots x 1 seats = 124,open,
 Oakham2021,impossible-arithmetic-1,492.1,1439,FAIL,2,6,marks_exceed_ballots: CONSTABLE: 511 marks > 255 ballots x 2 seats = 510,open,
 WestTisbury2021,impossible-arithmetic-1,488.9,2682,FAIL,2,1,marks_exceed_ballots: Selectman: 98 marks > 97 ballots x 1 seats = 97,open,
-Hawley2021,ungrounded-names-1,487.6,274,FAIL,1,2,names_grounded: 4/5 names located in markdown+pdftext,open,
+Hawley2021,ungrounded-names-1,487.6,274,FAIL,1,2,names_grounded: 4/5 names located in markdown+pdftext,done,"the page prints ""Selectman/Board of Health - 3 years   Robert MacLean""; the record reads ""Robert McLean"". Read off the rendered page, not the text layer, because the text layer is what is in dispute. Adjudication row written against the document's sha256; the record is otherwise untouched."
 Northfield2022,impossible-arithmetic-1,484.6,2550,FAIL,2,1,marks_exceed_ballots: Board of Library Trustees: 218 marks > 108 ballots x 2 seats = 216,open,
 Plympton2026,impossible-arithmetic-1,484.3,2539,FAIL,2,1,marks_exceed_ballots: BOARD OF HEALTH - 3 Years: 388 marks > 377 ballots x 1 seats = 377,open,
 Northfield2023,impossible-arithmetic-1,479.8,2406,FAIL,2,1,marks_exceed_ballots: Board of Trustees of Veterans Memorials: 412 marks > 399 ballots x 1 seats = 399,open,
