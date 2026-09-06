@@ -150,18 +150,94 @@ def has_ballot_candidate(contest):
     return False
 
 
+# What is left of a text once the things that are not a reading are removed:
+# extractor placeholders standing in for a picture, empty markdown table rules,
+# and the replacement character a mis-decoded file is full of.  A placeholder is
+# not an extraction (docs/notes/civicatlas-unsearchable-blind-spot).
+RE_NOT_A_READING = re.compile(r"<!--.*?-->|^\s*\|[\s|:-]*\|\s*$|�",
+                              re.S | re.M)
+
+
+def readable_chars(text):
+    """Letters and digits in `text` that came from the page rather than the tool."""
+    return len(re.sub(r"[^A-Za-z0-9]", "", RE_NOT_A_READING.sub(" ", text)))
+
+
+
+RE_RETURN_VOCABULARY = tuple(re.compile(p, re.I) for p in (
+    r"\bblanks?\b",
+    r"\bwrite[\s.-]?ins?\b",
+    r"\bballots?\s+(?:were\s+)?cast\b",
+    r"\bvotes?\s+cast\b",
+    r"\b(?:precincts?|prec\.?\s*\d|wards?\s*\d)\b",
+    r"\bvote\s+for\s+(?:no\s+more\s+than\s+)?"
+    r"(?:one|two|three|four|five|\d+)\b",
+    r"\b(?:was|were)\s+elected\b",
+    r"\bofficial\s+(?:election\s+)?results\b",
+    r"\btally\s+sheet\b",
+    r"\bvoter\s+turnout\b",
+))
+
+def return_vocabulary(text):
+    """Verbatim quotes of the tally words this text uses, one per distinct term."""
+    quotes = []
+    for rx in RE_RETURN_VOCABULARY:
+        m = rx.search(text)
+        if m:
+            quotes.append(text[max(0, m.start() - 25):m.end() + 25].strip())
+    return quotes
+
 def document_text(stem):
-    """The best reading of the held document, or None if we hold none."""
-    for rel in (f"data/raw_ocr/{stem}.txt",
-                f"data/markdown/{stem}.md",
-                f"data/pdftext/{stem}.txt"):
+    """EVERY reading of the held document, joined, and which ones they were.
+
+    We hold up to three readings of ONE document -- the published OCR of the
+    pixels, the markdown extraction, and pdftotext over the same `_d0` PDF -- and
+    each is lossy in a different place.  Taking the first that exists asks the
+    wrong question, because there is no reading that is right in general:
+
+        Boston 2021   raw_ocr is 4,231 chars of collapsed table
+                      ("pvescsr | oa ez] oira]ar] roe] eal sos]"), while pdftext
+                      reads "MICHELLE WU  3878 3002 ... 91794".  0 of 25 names
+                      and 0 of 36 figures grounded, and the document was right
+                      all along.
+        Auburn 2022   markdown extracts the heading as "MAY 1 7 , 202 2";
+                      pdftext reads "MAY 17, 2022".  The year check failed on a
+                      document that prints the year.
+        Hopedale 2025 raw_ocr is "<!-- image -->" and nothing else.
+
+    So preferring raw_ocr blinds the checks on a born-digital PDF, and preferring
+    pdftext blinds them on a scan, which is why `unsearchable-blind-spot` was
+    written.  The document is the thing being asked about and a reading is only a
+    lossy view of it, so the union of the readings is strictly closer to the
+    document than any one of them.  It can only ever un-flag: every string that
+    matched one reading still matches the join.
+
+    Returns (text, source) where source names the readings actually searched, so
+    a failure still says where we looked.
+    """
+    parts, used = [], []
+    for name, rel in (("raw_ocr", f"data/raw_ocr/{stem}.txt"),
+                      ("markdown", f"data/markdown/{stem}.md"),
+                      ("pdftext", f"data/pdftext/{stem}.txt")):
         p = os.path.join(BASE, rel)
-        if os.path.exists(p):
-            with open(p, encoding="utf-8", errors="replace") as fh:
-                t = fh.read()
-            if t.strip():
-                return re.sub(r"\s+", " ", t), rel
-    return None, None
+        if not os.path.exists(p):
+            continue
+        with open(p, encoding="utf-8", errors="replace") as fh:
+            t = fh.read()
+        if t.strip():
+            parts.append(t)
+            used.append(name)
+    # A file can be non-empty and hold no reading: Hopedale2025's OCR is 32
+    # bytes, both of them "<!-- image -->"; Dunstable2025's markdown is 1,117
+    # replacement characters out of 1,255.  Joining such a file into the union
+    # is harmless -- it adds no string anything can match -- but letting it
+    # stand as the ONLY reading is not, because `document_held` would then be
+    # answering about the extractor rather than the document.  So the union
+    # carries everything and the bar decides one thing: whether we hold a
+    # reading at all.  30 characters is a heading, not a return.
+    if not parts or max(readable_chars(t) for t in parts) < 30:
+        return None, None
+    return re.sub(r"\s+", " ", "\n".join(parts)), "+".join(used)
 
 
 def municipality_of(stem):
@@ -274,11 +350,32 @@ def layer0_right_document(stem, record, text, source):
     n_hit = sum(1 for n in names if found(n))
     f_hit = sum(1 for v in figures if re.search(r"\b" + str(v) + r"\b", text))
     if names or figures:
-        supported = n_hit > 0 or f_hit > 0
-        out.append((stem, 0, "document_supports_record",
-                    PASS if supported else FAIL,
-                    f"{n_hit}/{len(names)} names and {f_hit}/{len(figures)} figures "
-                    f"located in {source}"))
+        ev = (f"{n_hit}/{len(names)} names and {f_hit}/{len(figures)} figures "
+              f"located in {source}")
+        if n_hit > 0 or f_hit > 0:
+            out.append((stem, 0, "document_supports_record", PASS, ev))
+        else:
+            # Zero support is a statement about the TEXT, and the text may be a
+            # collapsed OCR of exactly the right document.  Boston 2021's tables
+            # read as `[canomares [+ [?]2]*]s]*]7]` and nothing in the record is
+            # findable, yet the document is the return.  So when the text still
+            # speaks the vocabulary of a return, say the record is unread here
+            # -- still to be checked -- rather than contradicted.  Brimfield 2022
+            # is why the bar is two distinct terms: its text is Town Meeting
+            # minutes mentioning `the Annual Town Election` once, in a bylaw
+            # article listing which officers get elected, and nothing else.  It
+            # stays FAIL, as it should.
+            quotes = return_vocabulary(text)
+            if len(quotes) >= 2:
+                out.append((stem, 0, "document_supports_record", UNKNOWN,
+                            f"{ev}; but the document says it is a return -- "
+                            + "; ".join(f'"{q}"' for q in quotes[:3])
+                            + " -- so this text cannot support anything and the "
+                              "record is unread here, not contradicted. Re-OCR "
+                              "the document (python -m qa.ocr_queue --add "
+                              f"{stem})"))
+            else:
+                out.append((stem, 0, "document_supports_record", FAIL, ev))
     return out
 
 
