@@ -95,3 +95,7 @@ Tisbury2026,"raw_ocr lost the results table; page renders clean at 200dpi and th
 Mendon2026,raw_ocr lost the Summary Results Report tables; page renders clean at 200dpi and the record matches.,2026-09-06,waiting,,
 Bellingham2026,"raw_ocr lost the tables, headings printed in colour; page renders clean at 200dpi and the record matches, 6468 = 3234 x 2.",2026-09-06,waiting,,
 NorthBrookfield2021,hand-annotated official ballot; raw_ocr keeps the printed names and loses the ink figures. Read at 200dpi; eleven contests total 630.,2026-09-06,waiting,,
+Rockport2022,raw_ocr/pdftext lost the results table; page opened 2026-09-06 and the record matches it. Verbatim reading is in the worklist resolution.,2026-09-06,waiting,,
+Southampton2024,raw_ocr/pdftext lost the results table; page opened 2026-09-06 and the record matches it. Verbatim reading is in the worklist resolution.,2026-09-06,waiting,,
+NorthBrookfield2023,raw_ocr/pdftext lost the results table; page opened 2026-09-06 and the record matches it. Verbatim reading is in the worklist resolution.,2026-09-06,waiting,,
+Freetown2021,raw_ocr/pdftext lost the results table; page opened 2026-09-06 and the record matches it. Verbatim reading is in the worklist resolution.,2026-09-06,waiting,,
