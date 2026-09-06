@@ -408,3 +408,65 @@ def test_a_full_stop_is_a_date_separator_too():
         "2025", "LOCAL ELECTION UNOFFICIAL ELECTION RESULTS 4.29.25 Voter Total")
     # It is still a date and not a decimal: the day has to be a day.
     assert not layers.year_found("2025", "TURNOUT 4.99.25 PERCENT")
+
+
+# ---- a wrong surname is the one a name check has to catch -------------------
+
+def _names_grounded(record, text):
+    rows = layers.layer1_grounded("Anytown2024", record, text, "test")
+    return dict((r[2], r[3]) for r in rows)["names_grounded"]
+
+
+def _one(name):
+    return {"elections": [{"office_original": "COUNCILOR AT-LARGE",
+                           "num_winners": 4,
+                           "candidates": [{"name_original": name, "votes": 4993}]}]}
+
+
+# Chicopee 2023, page 1 of Chicopee2023_d0.pdf, verbatim:
+CHICOPEE_2023 = ("COUNCILOR AT-LARGE\n(VOTE FOR) 4\n"
+                 "Frank N. Laflamme. . . 5,409 20.36\n"
+                 "Gerard (Jerry) A. Roy . 5,255 19.78\n"
+                 "Robert Joseph Zygarowski . 4,993 18.80\n"
+                 "Sean Goonan. . . . 3,058 11.51\n"
+                 "Joel David McAuliffe. . 3,510 13.21\n"
+                 "Timothy Joseph Wagner . 4,261 16.04\n")
+
+
+def test_a_wrong_surname_does_not_ground():
+    # The published record says Zaporowski; the page says Zygarowski. Testing
+    # only the first two parts asks whether "Robert" and "Joseph" are in the
+    # document -- they are, twice over -- and never looks at the name in
+    # dispute. Same for "Timothy Joseph Hagner" against a printed Wagner.
+    assert _names_grounded(_one("Robert Joseph Zaporowski"), CHICOPEE_2023) == "FAIL"
+    assert _names_grounded(_one("Timothy Joseph Hagner"), CHICOPEE_2023) == "FAIL"
+
+
+def test_the_right_surname_still_grounds():
+    assert _names_grounded(_one("Robert Joseph Zygarowski"), CHICOPEE_2023) == "PASS"
+    assert _names_grounded(_one("Timothy Joseph Wagner"), CHICOPEE_2023) == "PASS"
+
+
+def test_a_two_part_name_is_unaffected():
+    # parts[:2] already ends on the surname here, so nothing changes: the check
+    # is no stricter on the two-part names that are most of the corpus.
+    assert _names_grounded(_one("Sean Goonan"), CHICOPEE_2023) == "PASS"
+    assert _names_grounded(_one("Sean Gonan"), CHICOPEE_2023) == "FAIL"
+
+
+def test_a_generational_suffix_is_not_a_surname():
+    # A return that prints "Sean Goonan" for a record's "Sean Goonan III" has
+    # printed the same person. The suffix is skipped and the part before it is
+    # the surname, so this must not become a new way to fail.
+    assert _names_grounded(_one("Sean Goonan III"), CHICOPEE_2023) == "PASS"
+    assert _names_grounded(_one("Sean Gonan III"), CHICOPEE_2023) == "FAIL"
+
+
+def test_nothing_after_the_second_part_was_ever_checked_before():
+    # What the change actually costs, stated as a test: the old rule stopped at
+    # parts[:2], so anything a record put in the third position was unchecked.
+    # A record may still carry a middle name the return omits -- the check has
+    # never tolerated that, before or after -- but it can no longer carry a
+    # surname the return does not print.
+    assert _names_grounded(_one("Robert Joseph Zygarowski"), CHICOPEE_2023) == "PASS"
+    assert _names_grounded(_one("Robert Joseph Zaporowski"), CHICOPEE_2023) == "FAIL"

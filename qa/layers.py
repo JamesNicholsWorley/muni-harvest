@@ -451,6 +451,12 @@ def layer0_right_document(stem, record, text, source):
 
 # ---------------------------------------------------------------- layer 1
 
+# A generational suffix is not a surname.  A return that prints "John Stokes"
+# for a record's "John Stokes III" has printed the same person.
+GENERATIONAL = frozenset(("jnr", "jun", "junior", "senior", "iii", "iiii",
+                          "vii", "viii", "the"))
+
+
 def layer1_grounded(stem, record, text, source):
     """Is the reading grounded in the document?
 
@@ -477,10 +483,30 @@ def layer1_grounded(stem, record, text, source):
                 figures.append(v)
 
     def name_found(n):
+        """The first two name parts AND the surname must all be in the text.
+
+        Taking `parts[:2]` alone cannot see a wrong SURNAME, which is the part
+        that identifies the person.  On a three-part name it tests two given
+        names and stops: Chicopee 2023 publishes "Robert Joseph Zaporowski"
+        where the page prints "Robert Joseph Zygarowski" and "Timothy Joseph
+        Hagner" where it prints "Timothy Joseph Wagner", and both passed --
+        Robert, Joseph and Timothy are all in the document, so the check never
+        looked at the name in dispute.  Deerfield 2026 passed "Paul Raymond
+        Ouzewski" against a printed "Paul Raymond Olszewski" the same way.
+        Four wrong surnames, read off the page, sitting inside PASS.
+
+        A generational suffix is not the surname and is not required: a clerk
+        who prints "John Stokes" for a record's "John Stokes III" has not
+        printed a different person.  Skipping those, the surname test costs 49
+        names across 33 records corpus-wide, and changes nothing for a two-part
+        name, where parts[:2] already ends on the surname.
+        """
         parts = [p for p in re.split(r"[^A-Za-z]+", n) if len(p) > 2]
         if not parts:
             return True
-        return all(re.search(re.escape(p), text, re.I) for p in parts[:2])
+        surnames = [p for p in parts if p.lower() not in GENERATIONAL] or parts
+        wanted = parts[:2] + surnames[-1:]
+        return all(re.search(re.escape(p), text, re.I) for p in wanted)
 
     n_ok = sum(1 for n in names if name_found(n))
     f_ok = sum(1 for v in figures if figure_found(v, text))
