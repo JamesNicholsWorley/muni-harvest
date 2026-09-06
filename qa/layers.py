@@ -110,8 +110,17 @@ def figure_found(value, text):
 
     So try the grouped spelling too.  This can only ever un-flag -- every string
     that matched before still matches -- and it is not looser than the plain
-    form: `(?<![\\d,])2,517(?![\\d,])` is as exact about its digits as `\\b2517\\b`,
-    and the lookarounds are what stop `517` matching inside `2,517`.
+    form: `(?<![\\d,])2,517` is as exact about its digits as `\\b2517\\b`, and the
+    lookarounds are what stop `517` matching inside `2,517`.
+
+    The trailing lookaround has to reject a thousands separator and nothing
+    else.  `(?![\\d,])` rejected any comma at all, and a figure quoted in prose
+    is usually followed by one: Marshfield 2025's source reads "Greer received
+    the most votes, 2,505, Brait, 2,218, and Swain, 1,749" -- three correct
+    figures, and the two with a comma after them did not ground while the one
+    with a full stop did.  `(?!\\d)(?!,\\d)` still refuses 2,505 inside 12,505
+    and 1,234 inside 1,234,567, so it is strictly weaker than what it replaces
+    and can only un-flag.
     """
     if value is None:
         return False
@@ -119,7 +128,7 @@ def figure_found(value, text):
         return True
     if abs(int(value)) < 1000:
         return False
-    return bool(re.search(r"(?<![\d,])" + f"{int(value):,}" + r"(?![\d,])", text))
+    return bool(re.search(r"(?<![\d,])" + f"{int(value):,}" + r"(?!\d)(?!,\d)", text))
 
 
 def scope_of(contest):

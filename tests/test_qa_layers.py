@@ -349,6 +349,18 @@ def test_a_grouped_form_is_no_looser_than_the_plain_one():
     # that pass today, and a check fix must only ever un-flag.
     assert layers.figure_found(517, "KEVIN B. CHRISOM, JR. ... 2,517")
     assert not layers.figure_found(4359, "43590")
+    # A thousands separator is the only comma the trailing lookaround may
+    # refuse.  data/markdown/Marshfield2025.md, verbatim: three correct figures,
+    # and the two followed by a comma did not ground while the one followed by
+    # a full stop did.
+    _prose = ("Greer received the most votes, 2,505, Brait, 2,218, "
+              "and Swain, 1,749. ")
+    assert layers.figure_found(2505, _prose)
+    assert layers.figure_found(2218, _prose)
+    assert layers.figure_found(1749, _prose)
+    # and it is still no looser about the digits than it was
+    assert not layers.figure_found(2505, "the figure 12,505 and nothing else")
+    assert not layers.figure_found(1234, "totals 1,234,567 here")
     # Under a thousand there is no grouped spelling to try, so a small figure
     # is matched exactly as it was before.
     assert layers.figure_found(275, "Bernard J. Stock 275")

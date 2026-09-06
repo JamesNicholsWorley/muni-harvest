@@ -166,11 +166,11 @@ Acushnet2024,1,names_grounded,PASS,10/10 names located in raw_ocr+pdftext
 Acushnet2024,1,figures_grounded,PASS,10/10 figures located in raw_ocr+pdftext
 Acushnet2024,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Acushnet2024,3,office_count_consistent,PASS,10 contests; median 12 in other years
-Acushnet2025,0,document_self_identifies,PASS,"...# Acushnet, Massachusetts -- Annual Town..."
+Acushnet2025,0,document_self_identifies,PASS,...TOWN OF ACUSHNET OFFICE OF THE TOWN CLERK TEL:...
 Acushnet2025,0,carries_the_year,PASS,"...Massachusetts -- Annual Town Election, 2025-04-22 **Source: the town clerk's tally..."
-Acushnet2025,0,document_supports_record,PASS,7/11 names and 7/7 figures located in markdown+pdftext
-Acushnet2025,1,names_grounded,FAIL,7/11 names located in markdown+pdftext
-Acushnet2025,1,figures_grounded,PASS,7/7 figures located in markdown+pdftext
+Acushnet2025,0,document_supports_record,PASS,7/11 names and 7/7 figures located in raw_ocr+markdown+pdftext
+Acushnet2025,1,names_grounded,FAIL,7/11 names located in raw_ocr+markdown+pdftext
+Acushnet2025,1,figures_grounded,PASS,7/7 figures located in raw_ocr+markdown+pdftext
 Acushnet2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Acushnet2025,3,office_count_consistent,PASS,11 contests; median 12 in other years
 Acushnet2026,0,document_self_identifies,PASS,"...Cr nN TOWN OF ACUSHNET Sea iN 130 MAIN STREET, ACUSH..."
@@ -6050,7 +6050,7 @@ EastBrookfield2021,2,contest_closes,PASS,Planning Board - 3 Yr: 402 == 134 x 3
 EastBrookfield2021,2,contest_closes,PASS,Tree Warden - 1 Yr: 134 == 134 x 1
 EastBrookfield2021,2,regional_exempt,NOTE,Spencer-East Brookfield Regional School Dist: spans several towns; ballot arithmetic does not apply
 EastBrookfield2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
-EastBrookfield2022,0,document_self_identifies,PASS,"...# East Brookfield, Massachusetts -- Annual Town..."
+EastBrookfield2022,0,document_self_identifies,PASS,...20260601181927id_/https://www.eastbrookfieldma.us/sites/g/files/vyhlif541/...
 EastBrookfield2022,0,carries_the_year,PASS,"...usetts -- Annual Town Election, May 10, 2022 Source: the town's own results posting,..."
 EastBrookfield2022,0,document_supports_record,PASS,10/10 names and 0/0 figures located in markdown
 EastBrookfield2022,1,names_grounded,PASS,10/10 names located in markdown
@@ -7563,9 +7563,9 @@ Grafton2025,2,contest_closes,PASS,BOARD OF LIBRARY TRUSTEES: 3196 == 1598 x 2
 Grafton2025,3,office_count_consistent,PASS,6 contests; median 6 in other years
 Grafton2026,0,document_self_identifies,PASS,"...Town of Grafton Annual Town Election May 19,..."
 Grafton2026,0,carries_the_year,PASS,"...of Grafton Annual Town Election May 19, 2026 OFFICIAL RESULTS Precinct1 Precinct2 Pr..."
-Grafton2026,0,document_supports_record,PASS,11/12 names and 8/24 figures located in raw_ocr
+Grafton2026,0,document_supports_record,PASS,11/12 names and 10/24 figures located in raw_ocr
 Grafton2026,1,names_grounded,FAIL,11/12 names located in raw_ocr
-Grafton2026,1,figures_grounded,FAIL,8/24 figures located in raw_ocr
+Grafton2026,1,figures_grounded,FAIL,10/24 figures located in raw_ocr
 Grafton2026,2,ballots_derivable,PASS,4 of 4 contests agree on 3912
 Grafton2026,2,contest_closes,PASS,SELECT BOARD: 7824 == 3912 x 2
 Grafton2026,2,contest_closes,PASS,SCHOOL COMMITTEE - GRAFTON PUBLIC SCHOOLS: 3912 == 3912 x 1
@@ -11820,9 +11820,9 @@ Marshfield2024,2,contest_closes,PASS,TOWN CLERK: 3690 == 3690 x 1
 Marshfield2024,3,office_count_consistent,PASS,10 contests; median 9 in other years
 Marshfield2025,0,document_self_identifies,PASS,...age Simpson Defeats Fidler in Marshfield Select Board Race-Override Fa...
 Marshfield2025,0,carries_the_year,PASS,...Election | Marshfield Select Board Race 2025 | Trish Simpson | WATD — WATD 95.9 News...
-Marshfield2025,0,document_supports_record,PASS,13/13 names and 11/13 figures located in markdown
+Marshfield2025,0,document_supports_record,PASS,13/13 names and 13/13 figures located in markdown
 Marshfield2025,1,names_grounded,PASS,13/13 names located in markdown
-Marshfield2025,1,figures_grounded,FAIL,11/13 figures located in markdown
+Marshfield2025,1,figures_grounded,PASS,13/13 figures located in markdown
 Marshfield2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Marshfield2025,3,office_count_consistent,PASS,8 contests; median 9 in other years
 Marshfield2026,0,document_self_identifies,PASS,"...ALLY ALL VOTES LOCAL ELECTION MARSHFIELD, MA May 02, 2026 Registered P..."
