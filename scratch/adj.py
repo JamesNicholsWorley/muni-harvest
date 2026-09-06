@@ -16,7 +16,7 @@ with open(PATH, newline="", encoding="utf-8") as fh:
 
 new = [r for r in rows if (r["stem"], r["field"], r["should_be"]) not in have]
 with open(PATH, "a", newline="", encoding="utf-8") as fh:
-    w = csv.DictWriter(fh, fieldnames=FIELDS)
+    w = csv.DictWriter(fh, fieldnames=FIELDS, lineterminator="\n")
     for r in new:
         r.setdefault("status", "proposed")
         r.setdefault("decided_by", "civicatlas-qa (unattended run)")
