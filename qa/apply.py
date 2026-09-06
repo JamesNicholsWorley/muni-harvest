@@ -171,12 +171,24 @@ def consider(row):
     # The gate.
     if norm(should) not in text:
         return "skip", f"corrected value is not in {source}", None
-    if norm(was) and norm(was) in text:
-        return "needs-owner", f"{source} contains BOTH spellings; a string test cannot choose", None
 
-    # A digit is short enough to appear by coincidence; a name is not.
-    if kind == "figure" and (row.get("status") or "").strip() != "verified":
-        return "needs-owner", "figure needs a session to reopen the document (status: verified)", None
+    if kind == "figure":
+        # A digit is short enough to appear by coincidence; a name is not. So a
+        # figure is never settled by the string test alone -- it needs a session
+        # to have rendered the page and read it.
+        if (row.get("status") or "").strip() != "verified":
+            return "needs-owner", "figure needs a session to reopen the document (status: verified)", None
+        # The both-present rule below is right for a name and wrong for a
+        # figure. On a multi-page return almost every number appears somewhere
+        # -- a precinct column, another contest, a page number -- so "the old
+        # value is also in the text" is nearly always true and says nothing.
+        # Applying it to figures blocked all 44 rows a session had already read
+        # off the page, which is how the mistake was found. Where a session has
+        # read the page, the reading is the evidence and the string test is not
+        # the authority.
+        pass
+    elif norm(was) and norm(was) in text:
+        return "needs-owner", f"{source} contains BOTH spellings; a string test cannot choose", None
 
     with io.open(jpath, encoding="utf-8") as fh:
         record = json.load(fh)

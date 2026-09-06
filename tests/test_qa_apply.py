@@ -96,8 +96,12 @@ def test_a_figure_needs_a_session_to_have_reopened_the_document(tmp_path, monkey
     assert "verified" in note
 
 
-def test_a_verified_figure_applies(tmp_path, monkeypatch):
-    _tree(tmp_path, monkeypatch, record=RECORD, reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS MAGNANI 346")
+def test_a_verified_figure_applies_even_though_the_old_number_is_also_on_the_page(tmp_path, monkeypatch):
+    # The both-present rule is right for a name and wrong for a figure: on a
+    # multi-page return almost every number appears somewhere. Requiring the old
+    # value to be absent blocked all 44 rows a session had read off the page.
+    _tree(tmp_path, monkeypatch, record=RECORD,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS MAGNANI 346 ... 345 elsewhere on the sheet")
     verdict, _, payload = A.consider(_row(field="candidates[].votes", was="345",
                                           should_be="346", status="verified"))
     assert verdict == "apply"
