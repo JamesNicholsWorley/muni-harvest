@@ -151,17 +151,48 @@ def has_ballot_candidate(contest):
 
 
 def document_text(stem):
-    """The best reading of the held document, or None if we hold none."""
-    for rel in (f"data/raw_ocr/{stem}.txt",
-                f"data/markdown/{stem}.md",
-                f"data/pdftext/{stem}.txt"):
+    """EVERY reading of the held document, joined, and which ones they were.
+
+    We hold up to three readings of ONE document -- the published OCR of the
+    pixels, the markdown extraction, and pdftotext over the same `_d0` PDF -- and
+    each is lossy in a different place.  Taking the first that exists asks the
+    wrong question, because there is no reading that is right in general:
+
+        Boston 2021   raw_ocr is 4,231 chars of collapsed table
+                      ("pvescsr | oa ez] oira]ar] roe] eal sos]"), while pdftext
+                      reads "MICHELLE WU  3878 3002 ... 91794".  0 of 25 names
+                      and 0 of 36 figures grounded, and the document was right
+                      all along.
+        Auburn 2022   markdown extracts the heading as "MAY 1 7 , 202 2";
+                      pdftext reads "MAY 17, 2022".  The year check failed on a
+                      document that prints the year.
+        Hopedale 2025 raw_ocr is "<!-- image -->" and nothing else.
+
+    So preferring raw_ocr blinds the checks on a born-digital PDF, and preferring
+    pdftext blinds them on a scan, which is why `unsearchable-blind-spot` was
+    written.  The document is the thing being asked about and a reading is only a
+    lossy view of it, so the union of the readings is strictly closer to the
+    document than any one of them.  It can only ever un-flag: every string that
+    matched one reading still matches the join.
+
+    Returns (text, source) where source names the readings actually searched, so
+    a failure still says where we looked.
+    """
+    parts, used = [], []
+    for name, rel in (("raw_ocr", f"data/raw_ocr/{stem}.txt"),
+                      ("markdown", f"data/markdown/{stem}.md"),
+                      ("pdftext", f"data/pdftext/{stem}.txt")):
         p = os.path.join(BASE, rel)
-        if os.path.exists(p):
-            with open(p, encoding="utf-8", errors="replace") as fh:
-                t = fh.read()
-            if t.strip():
-                return re.sub(r"\s+", " ", t), rel
-    return None, None
+        if not os.path.exists(p):
+            continue
+        with open(p, encoding="utf-8", errors="replace") as fh:
+            t = fh.read()
+        if t.strip():
+            parts.append(t)
+            used.append(name)
+    if not parts:
+        return None, None
+    return re.sub(r"\s+", " ", "\n".join(parts)), "+".join(used)
 
 
 def municipality_of(stem):

@@ -33,6 +33,7 @@ to know why something is the way it is.
 - [`ocr-is-not-the-page`](civicatlas-ocr-is-not-the-page.md) — an illegible OCR is not an illegible document
 - [`ocr-invention-vs-silence`](civicatlas-ocr-invention-vs-silence.md) — prefer a reader that fails silent
 - [`unsearchable-blind-spot`](civicatlas-unsearchable-blind-spot.md) — a placeholder is not an extraction
+- [`one-document-several-readings`](civicatlas-one-document-several-readings.md) — ground against every reading held, not the first one
 - [`deskew-before-reading`](civicatlas-deskew-before-reading.md) — 1.3 degrees off square produces a dozen symptoms
 
 ## Layer 2 — does the arithmetic hold?
