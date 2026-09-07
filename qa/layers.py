@@ -403,11 +403,45 @@ def layer0_right_document(stem, record, text, source):
     # where a boundary cannot match.  Two digits inside a date count too --
     # see year_found.
     m = year_found(year, text)
-    out.append((stem, 0, "carries_the_year",
-                PASS if m else FAIL,
-                f"...{snippet(text[max(0,m.start()-40):m.end()+40])}..." if m
-                else f"'{year}' does not appear in {source}, "
-                     f"in that spelling or as a date ending {year[2:]}"))
+    if m:
+        out.append((stem, 0, "carries_the_year", PASS,
+                    f"...{snippet(text[max(0,m.start()-40):m.end()+40])}..."))
+    else:
+        # "Carries no year" and "carries a DIFFERENT year" are not the same
+        # finding, and collapsing them is what made this check unhelpful on 49
+        # records at once.
+        #
+        # A document printing another election's year is evidence of a wrong
+        # document -- Clinton 2022's file is headed "2019 Town of Clinton
+        # Election Results" -- and must stay FAIL however well corroborated the
+        # date is. Corroboration says when the election was; it says nothing
+        # about which election this piece of paper reports.
+        #
+        # A document printing NO year is a different thing. Plenty of clerks
+        # never date a return, and where the date is corroborated from outside
+        # the absence is documented rather than unexplained. That is a NOTE:
+        # visible, counted, and not pretending the document said something it
+        # did not.
+        others = sorted({y for y in re.findall(r"(?<!\d)20[12]\d(?!\d)", text)
+                         if y != year})
+        corr = (record.get("document") or {}).get("date_corroboration") or {}
+        if others:
+            out.append((stem, 0, "carries_the_year", FAIL,
+                        f"'{year}' does not appear in {source}; the text does "
+                        f"print {', '.join(others[:4])}. That may be incidental "
+                        f"-- a term expiry, a copyright line, a prior year in a "
+                        f"list -- or it may be another year's document. Not "
+                        f"downgraded to a note on corroboration alone: read it"))
+        elif corr.get("value"):
+            out.append((stem, 0, "carries_the_year", NOTE,
+                        f"the document prints no year at all; the date rests on "
+                        f"corroboration ({corr.get('source', 'unstated')}): "
+                        f"{snippet(str(corr.get('quote') or corr.get('value')))}"))
+        else:
+            out.append((stem, 0, "carries_the_year", FAIL,
+                        f"'{year}' does not appear in {source}, "
+                        f"in that spelling or as a date ending {year[2:]}, and "
+                        f"no corroboration is recorded"))
 
     # A preliminary is not junk and it is not an annual election.  Like a
     # special it is cordoned off under its own name -- P<Muni><YYYYMMDD>, in

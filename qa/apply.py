@@ -286,7 +286,15 @@ def consider(row):
         # read the page, the reading is the evidence and the string test is not
         # the authority.
         pass
-    elif norm(was) and norm(was) in text:
+    elif (norm(was) and norm(was) in text
+          # "Both spellings are present" is vacuous when one spelling CONTAINS
+          # the other. Tisbury 2026 holds "Hillary Conklin" and the page prints
+          # "J. Hillary Conklin"; Wellesley 2021 holds "Robertfragasso" and the
+          # page prints "Robert-Fragasso", which is the same string once
+          # punctuation is stripped. In both cases the old value was only ever
+          # found inside the new one, so there is nothing for the document to be
+          # ambiguous about and the correction is the fuller reading.
+          and norm(was) not in norm(should) and norm(should) not in norm(was)):
         return "needs-owner", f"{source} contains BOTH spellings; a string test cannot choose", None
 
     with io.open(jpath, encoding="utf-8") as fh:

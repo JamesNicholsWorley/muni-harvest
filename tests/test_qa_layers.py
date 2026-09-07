@@ -449,3 +449,41 @@ def test_a_short_quotation_is_returned_whole():
 
 def test_a_quotation_is_flattened_so_it_cannot_carry_layout():
     assert layers.snippet("two\n\n   lines") == "two lines"
+
+
+def test_a_document_printing_a_different_year_is_not_downgraded(): 
+    # Clinton 2022's file is headed "2019 Town of Clinton Election Results".
+    # A stray year may be incidental -- a term expiry, a copyright line -- so
+    # the check does not claim to know which. What it will not do is downgrade
+    # to a note on corroboration alone, because that is what would have
+    # silenced Clinton.
+    rows = layers.layer0_right_document(
+        "Anytown2022",
+        {"document": {"date_corroboration": {"value": "2022-05-03",
+                                             "quote": "the clerk's own page"}},
+         "elections": []},
+        "2019 TOWN OF ANYTOWN ELECTION RESULTS OFFICIAL", "test")
+    v = next(r[3] for r in rows if r[2] == "carries_the_year")
+    assert v == "FAIL"
+
+
+def test_an_undated_document_with_corroboration_is_a_note_not_a_failure():
+    # Plenty of clerks never date a return. Where the date is corroborated from
+    # outside, the absence is documented rather than unexplained.
+    rows = layers.layer0_right_document(
+        "Anytown2022",
+        {"document": {"date_corroboration": {"source": "town clerk page",
+                                             "value": "2022-05-03",
+                                             "quote": "May 3, 2022"}},
+         "elections": []},
+        "TOWN OF ANYTOWN ANNUAL ELECTION OFFICIAL RESULTS SELECT BOARD", "test")
+    v = next(r[3] for r in rows if r[2] == "carries_the_year")
+    assert v == "NOTE"
+
+
+def test_an_undated_document_with_no_corroboration_still_fails():
+    rows = layers.layer0_right_document(
+        "Anytown2022", {"elections": []},
+        "TOWN OF ANYTOWN ANNUAL ELECTION OFFICIAL RESULTS SELECT BOARD", "test")
+    v = next(r[3] for r in rows if r[2] == "carries_the_year")
+    assert v == "FAIL"

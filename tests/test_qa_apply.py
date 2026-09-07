@@ -180,3 +180,30 @@ def test_the_page_printing_a_different_number_does_not_apply(tmp_path, monkeypat
         _row(field="elections[0].num_winners", was="1", should_be="3"))
     assert verdict == "needs-owner"
     assert "prints 1" in note or "[1]" in note
+
+
+def test_one_spelling_containing_the_other_is_not_an_ambiguity(tmp_path, monkeypatch):
+    # Tisbury 2026: we hold "Hillary Conklin", the page prints "J. Hillary
+    # Conklin". Both are "present" only because one contains the other, so
+    # there is nothing for the document to be ambiguous about.
+    rec = {"elections": [{"office_original": "SELECT BOARD", "num_winners": 1,
+                          "candidates": [{"name_original": "Hillary Conklin",
+                                          "votes": 10}]}]}
+    _tree(tmp_path, monkeypatch, record=rec,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS J. Hillary Conklin 10")
+    verdict, note, _ = A.consider(_row(was="Hillary Conklin",
+                                       should_be="J. Hillary Conklin"))
+    assert verdict == "apply", note
+
+
+def test_punctuation_alone_is_not_two_spellings(tmp_path, monkeypatch):
+    # Wellesley 2021: "Robertfragasso" against "Robert-Fragasso" is one string
+    # once punctuation is stripped, which is how the comparison is made.
+    rec = {"elections": [{"office_original": "TOWN MEETING", "num_winners": 1,
+                          "candidates": [{"name_original": "Laura W. Robertfragasso",
+                                          "votes": 10}]}]}
+    _tree(tmp_path, monkeypatch, record=rec,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS Laura W. Robert-Fragasso 10")
+    verdict, note, _ = A.consider(_row(was="Laura W. Robertfragasso",
+                                       should_be="Laura W. Robert-Fragasso"))
+    assert verdict == "apply", note
