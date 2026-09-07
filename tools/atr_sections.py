@@ -125,7 +125,11 @@ def page_texts(doc):
     return out
 
 
-MAX_SECTION = 14
+# 14 pages holds every ordinary return. It bound on 65 of 1,333 cuts -- Plymouth,
+# Bedford, Chatham -- all towns whose returns run over a dozen precincts, and all
+# of them were therefore still truncated. So it is settable, and a run that hits
+# it says so in the manifest rather than trimming quietly.
+MAX_SECTION = int(os.environ.get("MAX_SECTION", "14"))
 
 
 def continues(text):
@@ -161,7 +165,8 @@ def grow(texts, best, page_count):
     # One page either side, for the run-up that names the election and the
     # run-out that carries a stray final total. Cheap, and the alternative is
     # the truncation this function exists to fix.
-    return max(0, lo - 1), min(page_count - 1, hi + 1)
+    capped = (hi + 1) - lo >= MAX_SECTION
+    return max(0, lo - 1), min(page_count - 1, hi + 1), capped
 
 
 def score_pages(doc, texts=None):
@@ -189,7 +194,7 @@ def main():
         rec = {"municipality": row["municipality"], "year": row["year"],
                "stem": stem, "url": row["url"], "status": "", "pages": 0,
                "picked": "", "score": 0, "runner_up": 0, "bytes": 0,
-               "mean_line": 0, "ballot_paper": "", "detail": ""}
+               "mean_line": 0, "ballot_paper": "", "capped": "", "detail": ""}
         t0 = time.time()
         try:
             r = requests.get(row["url"], impersonate="chrome", timeout=90)
@@ -213,7 +218,8 @@ def main():
                     best = scored[0]
                     rec["score"] = best[0]
                     rec["runner_up"] = scored[1][0] if len(scored) > 1 else 0
-                    lo, hi = grow(texts, best[1], doc.page_count)
+                    lo, hi, capped = grow(texts, best[1], doc.page_count)
+                    rec["capped"] = "yes" if capped else ""
                     cut = pymupdf.open()
                     cut.insert_pdf(doc, from_page=lo, to_page=hi)
                     path = os.path.join(OUT, "pdf", f"{stem}_atr.pdf")

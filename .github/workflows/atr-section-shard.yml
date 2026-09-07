@@ -41,6 +41,9 @@ on:
       ocr:
         description: "OCR pages that have no text layer (1 = yes). Much slower."
         default: "0"
+      max_section:
+        description: "Longest section to cut, in pages. 14 truncates big towns."
+        default: "14"
 
 permissions:
   contents: read
@@ -86,6 +89,7 @@ jobs:
           PER_MINUTE: ${{ inputs.per_minute }}
           LIMIT: ${{ inputs.limit }}
           OCR: ${{ inputs.ocr }}
+          MAX_SECTION: ${{ inputs.max_section }}
         run: python tools/atr_sections.py
 
       - uses: actions/upload-artifact@v4
