@@ -46,12 +46,21 @@ PASS, FAIL, UNKNOWN, NOTE = "PASS", "FAIL", "UNKNOWN", "NOTE"
 # would hide how much of the corpus rests on somebody's judgement call.
 OVERRIDDEN = "OVERRIDDEN"
 
-# How a figure is spelled when a sentence rather than a table carries it.  Only
-# as far as a reporter actually writes numbers out; past that they use digits.
-WORD_FIGURE = {n: w for n, w in enumerate(
-    ("zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
-     "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
-     "sixteen", "seventeen", "eighteen", "nineteen", "twenty"))}
+# How a figure is spelled when a sentence rather than a table carries it.  Two
+# digits is as far as a reporter writes a number out; past that they use digits.
+_ONES = ("zero", "one", "two", "three", "four", "five", "six", "seven",
+         "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
+         "fifteen", "sixteen", "seventeen", "eighteen", "nineteen")
+_TENS = {2: "twenty", 3: "thirty", 4: "forty", 5: "fifty", 6: "sixty",
+         7: "seventy", 8: "eighty", 9: "ninety"}
+WORD_FIGURE = {n: _ONES[n] for n in range(20)}
+WORD_FIGURE.update({t * 10 + o: _TENS[t] + ("-" + _ONES[o] if o else "")
+                    for t in _TENS for o in range(10)})
+
+# The words a page counts WITH.  A spelled figure grounds only next to one of
+# these, which is what keeps the word form narrower than the digit form.  It is
+# the tally vocabulary this file already knows, in the singular and the plural.
+COUNTING_WORD = (r"(?:votes?|voters?|ballots?|blanks?|write[\s-]?ins?|others?)")
 
 # A tally row is a line in the return that counts marks, not a person.
 TALLY_ROWS = {"blanks", "blank", "others", "other", "write-ins", "write-in",
@@ -151,19 +160,25 @@ def figure_found(value, text):
     write-in votes".  Every one of those figures is in the document, correctly
     transcribed, and none of them grounded.
 
+    Two digits is as far as it goes, because that is as far as a reporter
+    goes: Tisbury 2023 "Forty-nine votes went to candidate MacAleer
+    Schilcher", Mashpee 2025 "Seventy-one voters left this section blank".
+
     The word alone would be far looser than a digit -- "one" and "two" are in
     every article ever written -- so it counts only where the page is plainly
-    counting with it: the word, then `vote`/`votes` within a few words and no
-    sentence break.  That is what makes this narrower than the digit form
-    rather than wider, and like the two branches above it can only un-flag.
+    counting with it: the word, then a COUNTING_WORD within a few words and no
+    sentence break.  Plympton 2022 "There were 74 blanks and four others" is
+    why the vocabulary is the tally words rather than "votes" alone.  That is
+    what makes this narrower than the digit form rather than wider, and like
+    the two branches above it can only un-flag.
     """
     if value is None:
         return False
     if re.search(r"(?<!\d)" + str(int(value)) + r"(?!\d)", text):
         return True
     word = WORD_FIGURE.get(int(value))
-    if word and re.search(r"\b" + word + r"\b[^.;:!?]{0,25}?\bvotes?\b",
-                          text, re.I):
+    if word and re.search(r"\b" + word + r"\b[^.;:!?]{0,25}?\b" + COUNTING_WORD
+                          + r"\b", text, re.I):
         return True
     if abs(int(value)) < 1000:
         return False

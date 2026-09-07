@@ -388,6 +388,13 @@ def test_a_figure_spelled_as_a_word_is_the_same_figure():
         4, "Planning Board, five-year term - Felicia Curtis, four votes (write-in).")
     assert layers.figure_found(
         2, "The race also had two write-in votes, and 12 voters left it blank.")
+    # Two digits is as far as a reporter writes a number out, and the counting
+    # word beside it is not always "votes".
+    assert layers.figure_found(
+        49, "Forty-nine votes went to candidate MacAleer Schilcher.")
+    assert layers.figure_found(
+        71, "Seventy-one voters left this section blank.")
+    assert layers.figure_found(4, "There were 74 blanks and four others.")
 
 
 def test_a_spelled_figure_counts_only_where_the_page_is_counting():
