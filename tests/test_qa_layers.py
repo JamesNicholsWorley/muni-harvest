@@ -387,6 +387,43 @@ def test_a_grouped_figure_grounds_the_record():
     assert _supports("SELECT BOARD Jane Q. Public 4,271 Blanks 12") == "PASS"
 
 
+def _grounds(name, text):
+    rec = {"elections": [{"office_original": "COUNCILOR AT-LARGE",
+                          "num_winners": 6,
+                          "candidates": [{"name_original": name, "votes": 4993}]}]}
+    rows = layers.layer1_grounded("Anytown2024", rec, text, "test")
+    return dict((r[2], r[3]) for r in rows)["names_grounded"]
+
+
+def test_a_wrong_surname_does_not_ground():
+    # Chicopee 2023, page 1 verbatim: "Robert Joseph Zygarowski 4,993 18.80"
+    # and "Timothy Joseph Wagner 4,261 16.04". The record held Zaporowski and
+    # Hagner -- the figures read correctly and the surnames invented. Probing
+    # the first two tokens grounded both, because Robert, Timothy and Joseph
+    # are on the page and the surname was never tested. The same candidate is
+    # "Robert Joseph Oparowkski" in Chicopee 2021.
+    page = ("COUNCILOR AT-LARGE (VOTE FOR) 6 Frank N. Laflamme. 5,409 20.36 "
+            "Gerard (Jerry) A. Roy 5,255 19.78 Robert Joseph Zygarowski 4,993 "
+            "18.80 Sean Goonan. 3,058 11.51 Joel David McAuliffe. 3,510 13.21 "
+            "Timothy Joseph Wagner 4,261 16.04 WRITE-IN. 78 .29")
+    assert _grounds("Robert Joseph Zaporowski", page) == "FAIL"
+    assert _grounds("Timothy Joseph Hagner", page) == "FAIL"
+    # and the names the page does print still ground
+    assert _grounds("Robert Joseph Zygarowski", page) == "PASS"
+    assert _grounds("Timothy Joseph Wagner", page) == "PASS"
+
+
+def test_a_middle_name_and_a_suffix_still_ground():
+    # The reason only two tokens are probed: the record spells a middle name
+    # the document abbreviates, and requiring every token would fail on that
+    # difference rather than on the reading.
+    assert _grounds("Joel David McAuliffe", "Joel D. McAuliffe. 3,510") == "PASS"
+    # A generational suffix is not a surname. Adams 2025 holds this name and
+    # the page prints it; probing III instead of John would have failed it.
+    assert _grounds("Edmund R. St. John III",
+                    "Edmund R. St. John III 214") == "PASS"
+
+
 # ---- a clerk dates a return the way a clerk writes a date ------------------
 
 def test_a_two_digit_year_inside_a_date_is_the_year():

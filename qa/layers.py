@@ -326,6 +326,12 @@ def year_of(stem):
 
 RE_MONTH = (r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?")
 
+# Tokens that trail a name without being part of it.  Two-letter ones (Jr, Sr,
+# II) never reach here -- the tokeniser drops anything shorter than three
+# letters -- but III and IV do, and a name must not be grounded on them.
+NAME_SUFFIX = frozenset(("jnr", "jun", "junior", "senior", "iii", "iiii", "iv",
+                         "vii", "viii", "esq", "phd"))
+
 
 def year_found(year, text):
     """Where this year is printed in `text`, in either spelling a clerk uses.
@@ -560,10 +566,27 @@ def layer1_grounded(stem, record, text, source):
                 figures.append(v)
 
     def name_found(n):
+        # Two tokens are probed rather than every one, because a document
+        # prints a middle initial where a record spells the middle name out,
+        # and requiring all of them would fail on the difference.  But the two
+        # must be the FORENAME and the SURNAME.  Taking the first two left the
+        # surname untested whenever a middle name stood between them, and the
+        # surname is the identifying part -- Chicopee 2023 holds "Robert Joseph
+        # Zaporowski" and "Timothy Joseph Hagner" where the return prints
+        # Zygarowski and Wagner, both with the right figures, and both grounded
+        # because Robert, Timothy and Joseph are on the page.  The same
+        # candidate is "Robert Joseph Oparowkski" in Chicopee 2021.  A wrong
+        # surname is what grounding exists to catch and this was the one shape
+        # it could not see.
+        #
+        # A generational suffix is not a surname: "Edmund R. St. John III" must
+        # be probed on John, not on III.
         parts = [p for p in re.split(r"[^A-Za-z]+", n) if len(p) > 2]
-        if not parts:
+        core = [p for p in parts if p.lower() not in NAME_SUFFIX] or parts
+        if not core:
             return True
-        return all(re.search(re.escape(p), text, re.I) for p in parts[:2])
+        probe = core[:1] if len(core) == 1 else [core[0], core[-1]]
+        return all(re.search(re.escape(p), text, re.I) for p in probe)
 
     n_ok = sum(1 for n in names if name_found(n))
     f_ok = sum(1 for v in figures if figure_found(v, text))
