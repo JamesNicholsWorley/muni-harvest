@@ -3931,13 +3931,13 @@ Chelmsford2022,2,ballots_derivable,UNKNOWN,"4 contests, no two agree: [3148, 315
 Chelmsford2022,3,office_count_consistent,PASS,19 contests; median 26 in other years
 Chelmsford2023,0,document_self_identifies,PASS,...123456789 1 0 1 1 TOTAL « « « CHELMSFORD MASSACHUSETTS « « « SELECT BO...
 Chelmsford2023,0,carries_the_year,PASS,"...IAL Results of Local Election, April 4, 2023 In accordance with the warrant, the pol..."
-Chelmsford2023,0,document_supports_record,PASS,76/76 names and 125/125 figures located in markdown+pdftext
-Chelmsford2023,1,names_grounded,PASS,76/76 names located in markdown+pdftext
-Chelmsford2023,1,figures_grounded,PASS,125/125 figures located in markdown+pdftext
-Chelmsford2023,2,ballots_derivable,PASS,4 of 5 contests agree on 3312
+Chelmsford2023,0,document_supports_record,PASS,75/75 names and 124/124 figures located in markdown+pdftext
+Chelmsford2023,1,names_grounded,PASS,75/75 names located in markdown+pdftext
+Chelmsford2023,1,figures_grounded,PASS,124/124 figures located in markdown+pdftext
+Chelmsford2023,2,ballots_derivable,PASS,5 of 5 contests agree on 3312
 Chelmsford2023,2,contest_closes,PASS,SELECT BOARD: 3312 == 3312 x 1
-Chelmsford2023,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE: 9164 marks > 3312 ballots x 2 seats = 6624
-Chelmsford2023,2,tally_incomplete,NOTE,MODERATOR: 3218 of 3312; 94 marks not tallied
+Chelmsford2023,2,contest_closes,PASS,SCHOOL COMMITTEE: 6624 == 3312 x 2
+Chelmsford2023,2,contest_closes,PASS,MODERATOR: 3312 == 3312 x 1
 Chelmsford2023,2,contest_closes,PASS,PLANNING BOARD: 6624 == 3312 x 2
 Chelmsford2023,2,contest_closes,PASS,PLANNING BOARD ASSOCIATE: 3312 == 3312 x 1
 Chelmsford2023,2,contest_closes,PASS,BOARD OF HEALTH: 3312 == 3312 x 1
@@ -11726,7 +11726,7 @@ Lynnfield2025,0,document_self_identifies,NOTE,document never prints 'Lynnfield';
 Lynnfield2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr+markdown+pdftext, in that spelling or as a date ending 25, and no corroboration is recorded"
 Lynnfield2025,0,document_supports_record,PASS,10/10 names and 20/24 figures located in raw_ocr+markdown+pdftext
 Lynnfield2025,1,names_grounded,PASS,10/10 names located in raw_ocr+markdown+pdftext
-Lynnfield2025,1,figures_grounded,FAIL,20/24 figures located in raw_ocr+markdown+pdftext
+Lynnfield2025,1,figures_grounded,OVERRIDDEN,"20/24 figures located in raw_ocr+markdown+pdftext  [OVERRIDDEN: The record now holds 467 and 507, which the document does not print anywhere as a single f]"
 Lynnfield2025,2,ballots_derivable,PASS,5 of 5 contests agree on 1634
 Lynnfield2025,2,contest_closes,PASS,SELECTBOARD: 1634 == 1634 x 1
 Lynnfield2025,2,contest_closes,PASS,BOARD OF ASSESSORS: 1634 == 1634 x 1
@@ -14362,7 +14362,7 @@ NewAshford2022,1,names_grounded,PASS,3/3 names located in raw_ocr
 NewAshford2022,1,figures_grounded,PASS,3/3 figures located in raw_ocr
 NewAshford2022,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewAshford2022,3,office_count_consistent,PASS,3 contests; median 4 in other years
-NewAshford2023,0,document_self_identifies,PASS,...her\?weather_zip=01201) Close NewAshfordTownHall (copy) <!-- image -->...
+NewAshford2023,0,document_self_identifies,PASS,"...Hall (copy) <!-- image --> At New Ashford's election Tuesday, 29 percen..."
 NewAshford2023,0,carries_the_year,PASS,"...mmittee - The Berkshire Eagle - May 24, 2023 - May 24, 2023 - 1 min to read - [Faceb..."
 NewAshford2023,0,document_supports_record,PASS,6/6 names and 4/6 figures located in news_text
 NewAshford2023,1,names_grounded,PASS,6/6 names located in news_text
@@ -14520,7 +14520,7 @@ NewSalem2025,1,names_grounded,PASS,10/10 names located in news_text
 NewSalem2025,1,figures_grounded,PASS,10/10 figures located in news_text
 NewSalem2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewSalem2025,3,office_count_consistent,PASS,9 contests; median 8 in other years
-NewSalem2026,0,document_self_identifies,PASS,...# NewSalem2026 - Recovered from: http://...
+NewSalem2026,0,document_self_identifies,PASS,...it does not reproduce it. --- New Salem rejects Proposition 2½ overri...
 NewSalem2026,0,carries_the_year,PASS,...# NewSalem2026 - Recovered from: http://web.archive.or...
 NewSalem2026,0,document_supports_record,PASS,9/9 names and 7/9 figures located in news_text
 NewSalem2026,1,names_grounded,PASS,9/9 names located in news_text
