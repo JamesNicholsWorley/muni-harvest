@@ -58,10 +58,11 @@ CANDIDATE_ROOTS = [
 # simply never linked, so those records arrived with no readable text at all and
 # `document_held` reported 209 failures where a local checkout sees 14.
 #
-# Linking it makes them checkable. What must NOT follow is the text reaching
-# `qa/layers_report.csv`, which is committed to a public repository: two layer-0
-# checks quote their source verbatim as evidence. `qa.layers.quotable` is what
-# stops that, and it is the reason this link is safe.
+# Linking it makes them checkable. Two layer-0 checks answer with a verbatim
+# window of the document, and that window is written to `qa/layers_report.csv`,
+# which is committed to a public repository -- so a quotation is bounded to
+# `qa.layers.MAX_QUOTE`. A short window is a citation; the whole story would be
+# a reproduction. That bound is why this link is safe.
 PRIVATE_ROOTS = [
     os.path.join(os.path.dirname(BASE), "civicatlas-private"),
     "/home/user/civicatlas-private",
@@ -143,7 +144,7 @@ def extract_text():
 def verify():
     """What the checks will and will not be able to read."""
     counts = {}
-    for name in ("json", "pdfs", "markdown", "pdftext", "raw_ocr"):
+    for name in ("json", "pdfs", "markdown", "pdftext", "raw_ocr", "news_text"):
         d = os.path.join(DATA, name)
         counts[name] = len(os.listdir(d)) if os.path.isdir(d) else 0
 
@@ -153,7 +154,7 @@ def verify():
         stem = os.path.basename(p)[:-5]
         if not any(os.path.exists(os.path.join(DATA, d, stem + ext))
                    for d, ext in (("raw_ocr", ".txt"), ("markdown", ".md"),
-                                  ("pdftext", ".txt"))):
+                                  ("pdftext", ".txt"), ("news_text", ".md"))):
             unreadable.append(stem)
 
     print(f"{'store':<12}{'files':>8}")
