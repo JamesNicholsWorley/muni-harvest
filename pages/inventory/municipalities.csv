@@ -1,0 +1,352 @@
+Municipality,County,Form_of_Government,Municipal_Election
+Boston,Suffolk,Mayor – Council,2023-11-07T00:00:00
+Worcester,Worcester,Council – Manager – Mayor,2023-11-07T00:00:00
+Springfield,Hampden,Mayor – Council,2023-11-07T00:00:00
+Cambridge,Middlesex,Council – Manager – Mayor,2023-11-07T00:00:00
+Lowell,Middlesex,Council – Manager – Mayor,2023-11-07T00:00:00
+Brockton,Plymouth,Mayor – Council,2023-11-07T00:00:00
+Quincy,Norfolk,Mayor – Council,2023-11-07T00:00:00
+Lynn,Essex,Mayor – Council,2023-11-07T00:00:00
+New Bedford,Bristol,Mayor – Council,2023-11-07T00:00:00
+Fall River,Bristol,Mayor – Council,2023-11-07T00:00:00
+Lawrence,Essex,Mayor – Council,2023-11-07T00:00:00
+Newton,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Somerville,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Framingham,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Haverhill,Essex,Mayor – Council,2023-11-07T00:00:00
+Malden,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Waltham,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Brookline,Norfolk,Select Board – Town Meeting,2023-05-02T00:00:00
+Revere,Suffolk,Mayor – Council,2023-11-07T00:00:00
+Plymouth,Plymouth,Select Board – Town Meeting,2023-05-20T00:00:00
+Medford,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Taunton,Bristol,Mayor – Council,2023-11-07T00:00:00
+Weymouth,Norfolk,Mayor – Council,2023-11-07T00:00:00
+Chicopee,Hampden,Mayor – Council,2023-11-07T00:00:00
+Peabody,Essex,Mayor – Council,2023-11-07T00:00:00
+Methuen,Essex,Mayor – Council,2023-11-07T00:00:00
+Everett,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Barnstable,Barnstable,Council – Manager,2023-11-07T00:00:00
+Attleboro,Bristol,Mayor – Council,2023-11-07T00:00:00
+Arlington,Middlesex,Select Board – Town Meeting,2023-04-01T00:00:00
+Salem,Essex,Mayor – Council,2023-11-07T00:00:00
+Pittsfield,Berkshire,Mayor – Council,2023-11-07T00:00:00
+Leominster,Worcester,Mayor – Council,2023-11-07T00:00:00
+Beverly,Essex,Mayor – Council,2023-11-07T00:00:00
+Billerica,Middlesex,Select Board – Town Meeting,2023-04-01T00:00:00
+Fitchburg,Worcester,Mayor – Council,2023-11-07T00:00:00
+Marlborough,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Woburn,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Westfield,Hampden,Mayor – Council,2023-11-07T00:00:00
+Chelsea,Suffolk,Council – Manager,2023-11-07T00:00:00
+Amherst,Hampshire,Council – Manager,2023-11-07T00:00:00
+Braintree,Norfolk,Mayor – Council,2023-11-07T00:00:00
+Shrewsbury,Worcester,Select Board – Town Meeting,2023-05-02T00:00:00
+Holyoke,Hampden,Mayor – Council,2023-11-07T00:00:00
+Natick,Middlesex,Select Board – Town Meeting,2023-03-28T00:00:00
+Andover,Essex,Select Board – Town Meeting,2023-03-28T00:00:00
+Chelmsford,Middlesex,Select Board – Town Meeting,2023-04-04T00:00:00
+Watertown,Middlesex,Council – Manager,2023-11-07T00:00:00
+Randolph,Norfolk,Council – Manager,2023-11-07T00:00:00
+Lexington,Middlesex,Select Board – Town Meeting,2023-03-06T00:00:00
+Dartmouth,Bristol,Select Board – Town Meeting,2023-04-04T00:00:00
+Franklin,Norfolk,Council – Manager,2023-11-07T00:00:00
+Dracut,Middlesex,Select Board – Town Meeting,2023-05-06T00:00:00
+Falmouth,Barnstable,Select Board – Town Meeting,2023-05-16T00:00:00
+Needham,Norfolk,Select Board – Town Meeting,2023-04-11T00:00:00
+Norwood,Norfolk,Select Board – Town Meeting,2023-04-03T00:00:00
+Tewksbury,Middlesex,Select Board – Town Meeting,2023-04-01T00:00:00
+North Andover,Essex,Select Board – Town Meeting,2023-03-28T00:00:00
+North Attleborough,Bristol,Council – Manager,2023-04-04T00:00:00
+Milford,Worcester,Select Board – Town Meeting,2023-04-04T00:00:00
+Melrose,Middlesex,Mayor – Council,2023-11-07T00:00:00
+Gloucester,Essex,Mayor – Council,2023-11-07T00:00:00
+Northampton,Hampshire,Mayor – Council,2023-11-07T00:00:00
+Wellesley,Norfolk,Select Board – Town Meeting,2023-03-07T00:00:00
+Stoughton,Norfolk,Select Board – Town Meeting,2023-04-04T00:00:00
+West Springfield,Hampden,Mayor – Council,2023-11-07T00:00:00
+Agawam,Hampden,Mayor – Council,2023-11-07T00:00:00
+Bridgewater,Plymouth,Council – Manager,2023-04-22T00:00:00
+Milton,Norfolk,Select Board – Town Meeting,2023-04-25T00:00:00
+Saugus,Essex,Select Board – Town Meeting,2023-11-07T00:00:00
+Danvers,Essex,Select Board – Town Meeting,2023-05-02T00:00:00
+Belmont,Middlesex,Select Board – Town Meeting,2023-04-04T00:00:00
+Wakefield,Middlesex,Select Board – Town Meeting,2023-04-25T00:00:00
+Walpole,Norfolk,Select Board – Town Meeting,2023-06-03T00:00:00
+Burlington,Middlesex,Select Board – Town Meeting,2023-04-01T00:00:00
+Marshfield,Plymouth,Select Board – Town Meeting,2023-04-29T00:00:00
+Reading,Middlesex,Select Board – Town Meeting,2023-04-04T00:00:00
+Dedham,Norfolk,Select Board – Town Meeting,2023-04-08T00:00:00
+Easton,Bristol,Select Board – Town Meeting,2023-04-22T00:00:00
+Yarmouth,Barnstable,Select Board – Town Meeting,2023-05-16T00:00:00
+Westford,Middlesex,Select Board – Town Meeting,2023-05-02T00:00:00
+Canton,Norfolk,Select Board – Town Meeting,2023-04-04T00:00:00
+Hingham,Plymouth,Select Board – Town Meeting,2023-04-29T00:00:00
+Middleborough,Plymouth,Select Board – Town Meeting,2023-04-01T00:00:00
+Acton,Middlesex,Select Board – Town Meeting,2023-04-25T00:00:00
+Mansfield,Bristol,Select Board – Town Meeting,2023-05-09T00:00:00
+Wilmington,Middlesex,Select Board – Town Meeting,2023-04-22T00:00:00
+Wareham,Plymouth,Select Board – Town Meeting,2023-05-02T00:00:00
+Stoneham,Middlesex,Select Board – Town Meeting,2023-04-04T00:00:00
+Winchester,Middlesex,Select Board – Town Meeting,2023-03-18T00:00:00
+Westborough,Worcester,Select Board – Town Meeting,2023-03-14T00:00:00
+Gardner,Worcester,Mayor – Council,2023-11-07T00:00:00
+Ludlow,Hampden,Select Board – Town Meeting,2023-03-27T00:00:00
+Bourne,Barnstable,Select Board – Town Meeting,2023-05-16T00:00:00
+Marblehead,Essex,Select Board – Town Meeting,2023-06-20T00:00:00
+Sandwich,Barnstable,Select Board – Town Meeting,2023-05-04T00:00:00
+Hudson,Middlesex,Select Board – Town Meeting,2023-05-08T00:00:00
+Holden,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Grafton,Worcester,Select Board – Town Meeting,2023-05-16T00:00:00
+Winthrop,Suffolk,Council – Manager,2023-11-07T00:00:00
+Norton,Bristol,Select Board – Town Meeting,2023-04-29T00:00:00
+Scituate,Plymouth,Select Board – Town Meeting,2023-05-20T00:00:00
+Sudbury,Middlesex,Select Board – Town Meeting,2023-03-27T00:00:00
+Ashland,Middlesex,Select Board – Town Meeting,2023-05-16T00:00:00
+Hopkinton,Middlesex,Select Board – Town Meeting,2023-05-15T00:00:00
+Foxborough,Norfolk,Select Board – Town Meeting,2023-05-01T00:00:00
+Sharon,Norfolk,Select Board – Town Meeting,2023-05-16T00:00:00
+Concord,Middlesex,Select Board – Town Meeting,2023-03-28T00:00:00
+Pembroke,Plymouth,Select Board – Town Meeting,2023-05-13T00:00:00
+Somerset,Bristol,Select Board – Town Meeting,2023-04-10T00:00:00
+Newburyport,Essex,Mayor – Council,2023-11-07T00:00:00
+South Hadley,Hampshire,Select Board – Town Meeting,2023-04-11T00:00:00
+Rockland,Plymouth,Select Board – Town Meeting,2023-04-08T00:00:00
+Webster,Worcester,Select Board – Town Meeting,2023-05-01T00:00:00
+Greenfield,Franklin,Mayor – Council,2023-11-07T00:00:00
+Southbridge,Worcester,Council – Manager,2023-06-13T00:00:00
+Amesbury,Essex,Mayor – Council,2023-11-07T00:00:00
+Swansea,Bristol,Select Board – Town Meeting,2023-04-10T00:00:00
+Abington,Plymouth,Select Board – Town Meeting,2023-04-29T00:00:00
+Bellingham,Norfolk,Select Board – Town Meeting,2023-05-02T00:00:00
+Auburn,Worcester,Select Board – Town Meeting,2023-05-16T00:00:00
+East Longmeadow,Hampden,Council – Manager,2023-06-06T00:00:00
+Westport,Bristol,Select Board – Town Meeting,2023-04-11T00:00:00
+Northbridge,Worcester,Select Board – Town Meeting,2023-05-16T00:00:00
+Westwood,Norfolk,Select Board – Town Meeting,2023-04-25T00:00:00
+Easthampton,Hampshire,Mayor – Council,2023-11-07T00:00:00
+Duxbury,Plymouth,Select Board – Town Meeting,2023-03-25T00:00:00
+Fairhaven,Bristol,Select Board – Town Meeting,2023-04-03T00:00:00
+Longmeadow,Hampden,Select Board – Town Meeting,2023-06-13T00:00:00
+Northborough,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+North Reading,Middlesex,Select Board – Town Meeting,2023-05-02T00:00:00
+Seekonk,Bristol,Select Board – Town Meeting,2023-04-03T00:00:00
+Clinton,Worcester,Select Board – Town Meeting,2023-06-12T00:00:00
+Belchertown,Hampshire,Select Board – Town Meeting,2023-05-15T00:00:00
+Raynham,Bristol,Select Board – Town Meeting,2023-04-22T00:00:00
+Whitman,Plymouth,Select Board – Town Meeting,2023-05-20T00:00:00
+Swampscott,Essex,Select Board – Town Meeting,2023-04-25T00:00:00
+Mashpee,Barnstable,Select Board – Town Meeting,2023-05-06T00:00:00
+Holliston,Middlesex,Select Board – Town Meeting,2023-05-23T00:00:00
+Hanover,Plymouth,Select Board – Town Meeting,2023-05-13T00:00:00
+Dennis,Barnstable,Select Board – Town Meeting,2023-05-09T00:00:00
+Wilbraham,Hampden,Select Board – Town Meeting,2023-05-20T00:00:00
+East Bridgewater,Plymouth,Select Board – Town Meeting,2023-05-13T00:00:00
+Bedford,Middlesex,Select Board – Town Meeting,2023-03-11T00:00:00
+Nantucket,Nantucket,Select Board – Town Meeting,2023-05-23T00:00:00
+Uxbridge,Worcester,Select Board – Town Meeting,2023-05-23T00:00:00
+Wayland,Middlesex,Select Board – Town Meeting,2023-04-25T00:00:00
+Millbury,Worcester,Select Board – Town Meeting,2023-04-25T00:00:00
+Ipswich,Essex,Select Board – Town Meeting,2023-05-16T00:00:00
+Kingston,Plymouth,Select Board – Town Meeting,2023-04-22T00:00:00
+Harwich,Barnstable,Select Board – Town Meeting,2023-05-16T00:00:00
+Oxford,Worcester,Select Board – Town Meeting,2023-05-16T00:00:00
+Charlton,Worcester,Select Board – Town Meeting,2023-05-06T00:00:00
+Medway,Norfolk,Select Board – Town Meeting,2023-05-16T00:00:00
+Lynnfield,Essex,Select Board – Town Meeting,2023-04-11T00:00:00
+North Adams,Berkshire,Mayor – Council,2023-11-07T00:00:00
+Medfield,Norfolk,Select Board – Town Meeting,2023-03-27T00:00:00
+Rehoboth,Bristol,Select Board – Town Meeting,2023-04-04T00:00:00
+Palmer,Hampden,Council – Manager,2023-06-13T00:00:00
+Tyngsborough,Middlesex,Select Board – Town Meeting,2023-05-16T00:00:00
+Wrentham,Norfolk,Select Board – Town Meeting,2023-04-03T00:00:00
+Spencer,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+Athol,Worcester,Select Board – Town Meeting,2023-04-03T00:00:00
+Dudley,Worcester,Select Board – Town Meeting,2023-06-12T00:00:00
+Weston,Middlesex,Select Board – Town Meeting,2023-05-06T00:00:00
+Lunenburg,Worcester,Select Board – Town Meeting,2023-05-20T00:00:00
+Norfolk,Norfolk,Select Board – Town Meeting,2023-05-02T00:00:00
+Carver,Plymouth,Select Board – Town Meeting,2023-04-22T00:00:00
+Pepperell,Middlesex,Select Board – Town Meeting,2023-04-24T00:00:00
+Lakeville,Plymouth,Select Board – Town Meeting,2023-04-03T00:00:00
+Holbrook,Norfolk,Select Board – Town Meeting,2023-04-01T00:00:00
+Norwell,Plymouth,Select Board – Town Meeting,2023-05-20T00:00:00
+Groton,Middlesex,Select Board – Town Meeting,2023-05-23T00:00:00
+Leicester,Worcester,Select Board – Town Meeting,2023-06-13T00:00:00
+Maynard,Middlesex,Select Board – Town Meeting,2023-05-02T00:00:00
+Hanson,Plymouth,Select Board – Town Meeting,2023-05-20T00:00:00
+Acushnet,Bristol,Select Board – Town Meeting,2023-05-13T00:00:00
+Southborough,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+Winchendon,Worcester,Select Board – Town Meeting,2023-05-01T00:00:00
+Brewster,Barnstable,Select Board – Town Meeting,2023-05-16T00:00:00
+Littleton,Middlesex,Select Board – Town Meeting,2023-05-06T00:00:00
+Hull,Plymouth,Select Board – Town Meeting,2023-05-15T00:00:00
+Ware,Hampshire,Select Board – Town Meeting,2023-04-10T00:00:00
+Plainville,Norfolk,Select Board – Town Meeting,2023-04-03T00:00:00
+Sturbridge,Worcester,Select Board – Town Meeting,2023-04-10T00:00:00
+Middleton,Essex,Select Board – Town Meeting,2023-05-16T00:00:00
+Sutton,Worcester,Select Board – Town Meeting,2023-05-23T00:00:00
+Salisbury,Essex,Select Board – Town Meeting,2023-05-09T00:00:00
+Southwick,Hampden,Select Board – Town Meeting,2023-05-09T00:00:00
+Blackstone,Worcester,Select Board – Town Meeting,2023-04-03T00:00:00
+Freetown,Bristol,Select Board – Town Meeting,2023-04-03T00:00:00
+Townsend,Middlesex,Select Board – Town Meeting,2023-04-24T00:00:00
+Rutland,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Douglas,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+Montague,Franklin,Select Board – Town Meeting,2023-05-16T00:00:00
+Ayer,Middlesex,Select Board – Town Meeting,2023-05-09T00:00:00
+Georgetown,Essex,Select Board – Town Meeting,2023-05-08T00:00:00
+Millis,Norfolk,Select Board – Town Meeting,2023-05-08T00:00:00
+Lancaster,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Cohasset,Norfolk,Select Board – Town Meeting,2023-05-13T00:00:00
+Westminster,Worcester,Select Board – Town Meeting,2023-04-25T00:00:00
+Boxford,Essex,Select Board – Town Meeting,2023-05-16T00:00:00
+Adams,Berkshire,Select Board – Town Meeting,2023-05-01T00:00:00
+Monson,Hampden,Select Board – Town Meeting,2023-06-13T00:00:00
+Templeton,Worcester,Select Board – Town Meeting,2023-05-15T00:00:00
+Dighton,Bristol,Select Board – Town Meeting,2023-04-08T00:00:00
+Upton,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+Sterling,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+West Boylston,Worcester,Select Board – Town Meeting,2023-06-06T00:00:00
+Halifax,Plymouth,Select Board – Town Meeting,2023-05-13T00:00:00
+West Bridgewater,Plymouth,Select Board – Town Meeting,2023-04-08T00:00:00
+Orange,Franklin,Select Board – Town Meeting,2023-03-06T00:00:00
+Hamilton,Essex,Select Board – Town Meeting,2023-04-06T00:00:00
+Williamstown,Berkshire,Select Board – Town Meeting,2023-05-09T00:00:00
+Shirley,Middlesex,Select Board – Town Meeting,2023-05-02T00:00:00
+Stow,Middlesex,Select Board – Town Meeting,2023-05-20T00:00:00
+Great Barrington,Berkshire,Select Board – Town Meeting,2023-05-09T00:00:00
+Lincoln,Middlesex,Select Board – Town Meeting,2023-03-27T00:00:00
+Rockport,Essex,Select Board – Town Meeting,2023-05-09T00:00:00
+Harvard,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+Berkley,Bristol,Select Board – Town Meeting,2023-05-06T00:00:00
+Groveland,Essex,Select Board – Town Meeting,2023-05-01T00:00:00
+Merrimac,Essex,Select Board – Town Meeting,2023-05-01T00:00:00
+Newbury,Essex,Select Board – Town Meeting,2023-05-09T00:00:00
+Chatham,Barnstable,Select Board – Town Meeting,2023-05-11T00:00:00
+Topsfield,Essex,Select Board – Town Meeting,2023-05-04T00:00:00
+Mattapoisett,Plymouth,Select Board – Town Meeting,2023-05-16T00:00:00
+Dalton,Berkshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Ashburnham,Worcester,Select Board – Town Meeting,2023-04-25T00:00:00
+Orleans,Barnstable,Select Board – Town Meeting,2023-05-16T00:00:00
+Mendon,Worcester,Select Board – Town Meeting,2023-05-16T00:00:00
+Southampton,Hampshire,Select Board – Town Meeting,2023-05-16T00:00:00
+Rowley,Essex,Select Board – Town Meeting,2023-05-09T00:00:00
+Granby,Hampshire,Select Board – Town Meeting,2023-05-15T00:00:00
+Hopedale,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+Dover,Norfolk,Select Board – Town Meeting,2023-05-15T00:00:00
+Lee,Berkshire,Select Board – Town Meeting,2023-05-15T00:00:00
+Eastham,Barnstable,Select Board – Town Meeting,2023-05-16T00:00:00
+Rochester,Plymouth,Select Board – Town Meeting,2023-05-24T00:00:00
+Bolton,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Barre,Worcester,Select Board – Town Meeting,2023-04-03T00:00:00
+Boxborough,Middlesex,Select Board – Town Meeting,2023-05-16T00:00:00
+Manchester,Essex,Select Board – Town Meeting,2023-05-16T00:00:00
+Marion,Plymouth,Select Board – Town Meeting,2023-05-12T00:00:00
+Oak Bluffs,Dukes,Select Board – Town Meeting,2023-04-13T00:00:00
+Hadley,Hampshire,Select Board – Town Meeting,2023-05-16T00:00:00
+Carlisle,Middlesex,Select Board – Town Meeting,2023-05-16T00:00:00
+Edgartown,Dukes,Select Board – Town Meeting,2023-04-13T00:00:00
+Lenox,Berkshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Deerfield,Franklin,Select Board – Town Meeting,2023-05-01T00:00:00
+Paxton,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Wenham,Essex,Select Board – Town Meeting,2023-04-06T00:00:00
+Warren,Worcester,Select Board – Town Meeting,2023-05-02T00:00:00
+Hampden,Hampden,Select Board – Town Meeting,2023-05-15T00:00:00
+Boylston,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Tisbury,Dukes,Select Board – Town Meeting,2023-05-09T00:00:00
+Avon,Norfolk,Select Board – Town Meeting,2023-04-11T00:00:00
+North Brookfield,Worcester,Select Board – Town Meeting,2023-05-01T00:00:00
+West Newbury,Essex,Select Board – Town Meeting,2023-05-01T00:00:00
+Sherborn,Middlesex,Select Board – Town Meeting,2023-05-09T00:00:00
+Hubbardston,Worcester,Select Board – Town Meeting,2023-06-13T00:00:00
+West Brookfield,Worcester,Select Board – Town Meeting,2023-05-02T00:00:00
+Brimfield,Hampden,Select Board – Town Meeting,2023-06-20T00:00:00
+Essex,Essex,Select Board – Town Meeting,2023-05-08T00:00:00
+Provincetown,Barnstable,Select Board – Town Meeting,2023-05-09T00:00:00
+Sunderland,Franklin,Select Board – Town Meeting,2023-05-06T00:00:00
+Wellfleet,Barnstable,Select Board – Town Meeting,2023-04-29T00:00:00
+West Tisbury,Dukes,Select Board – Town Meeting,2023-04-13T00:00:00
+Princeton,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Brookfield,Worcester,Select Board – Town Meeting,2023-05-01T00:00:00
+Dunstable,Middlesex,Select Board – Town Meeting,2023-05-16T00:00:00
+Hatfield,Hampshire,Select Board – Town Meeting,2023-05-16T00:00:00
+Nahant,Essex,Select Board – Town Meeting,2023-04-29T00:00:00
+Sheffield,Berkshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Cheshire,Berkshire,Select Board – Town Meeting,2023-05-01T00:00:00
+Ashby,Middlesex,Select Board – Town Meeting,2023-04-24T00:00:00
+Millville,Worcester,Select Board – Town Meeting,2023-04-03T00:00:00
+Berlin,Worcester,Select Board – Town Meeting,2023-05-08T00:00:00
+Lanesborough,Berkshire,Select Board – Town Meeting,2023-06-20T00:00:00
+Plympton,Plymouth,Select Board – Town Meeting,2023-05-20T00:00:00
+Northfield,Franklin,Select Board – Town Meeting,2023-05-02T00:00:00
+Hardwick,Worcester,Select Board – Town Meeting,2023-04-10T00:00:00
+Holland,Hampden,Select Board – Town Meeting,2023-06-13T00:00:00
+Williamsburg,Hampshire,Select Board – Town Meeting,2023-05-01T00:00:00
+Truro,Barnstable,Select Board – Town Meeting,2023-05-09T00:00:00
+East Brookfield,Worcester,Select Board – Town Meeting,2023-05-09T00:00:00
+Bernardston,Franklin,Select Board – Town Meeting,2023-05-01T00:00:00
+Huntington,Hampshire,Select Board – Town Meeting,2023-05-20T00:00:00
+Stockbridge,Berkshire,Select Board – Town Meeting,2023-05-16T00:00:00
+Becket,Berkshire,Select Board – Town Meeting,2023-05-20T00:00:00
+Hinsdale,Berkshire,Select Board – Town Meeting,2023-05-13T00:00:00
+Shelburne,Franklin,Select Board – Town Meeting,2023-05-16T00:00:00
+Leverett,Franklin,Select Board – Town Meeting,2023-04-29T00:00:00
+Oakham,Worcester,Select Board – Town Meeting,2023-05-15T00:00:00
+Wales,Hampden,Select Board – Town Meeting,2023-05-24T00:00:00
+Buckland,Franklin,Select Board – Town Meeting,2023-06-06T00:00:00
+Conway,Franklin,Select Board – Town Meeting,2023-06-08T00:00:00
+Phillipston,Worcester,Select Board – Town Meeting,2023-05-15T00:00:00
+Shutesbury,Franklin,Select Board – Town Meeting,2023-06-03T00:00:00
+Ashfield,Franklin,Select Board – Town Meeting,2023-05-06T00:00:00
+Erving,Franklin,Select Board – Town Meeting,2023-05-01T00:00:00
+Clarksburg,Berkshire,Select Board – Town Meeting,2023-05-30T00:00:00
+Russell,Hampden,Select Board – Town Meeting,2023-06-05T00:00:00
+Otis,Berkshire,Select Board – Town Meeting,2023-05-23T00:00:00
+Westhampton,Hampshire,Select Board – Town Meeting,2023-06-03T00:00:00
+Whately,Franklin,Select Board – Town Meeting,2023-06-13T00:00:00
+Colrain,Franklin,Select Board – Town Meeting,2023-05-02T00:00:00
+Gill,Franklin,Select Board – Town Meeting,2023-05-15T00:00:00
+Granville,Hampden,Select Board – Town Meeting,2023-04-10T00:00:00
+New Marlborough,Berkshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Richmond,Berkshire,Select Board – Town Meeting,2023-05-20T00:00:00
+Egremont,Berkshire,Select Board – Town Meeting,2023-05-09T00:00:00
+West Stockbridge,Berkshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Pelham,Hampshire,Select Board – Town Meeting,2023-05-16T00:00:00
+Royalston,Worcester,Select Board – Town Meeting,2023-04-03T00:00:00
+Chester,Hampden,Select Board – Town Meeting,2023-05-06T00:00:00
+Blandford,Hampden,Select Board – Town Meeting,2023-06-10T00:00:00
+Chilmark,Dukes,Select Board – Town Meeting,2023-04-26T00:00:00
+Petersham,Worcester,Select Board – Town Meeting,2023-03-06T00:00:00
+Worthington,Hampshire,Select Board – Town Meeting,2023-05-06T00:00:00
+Chesterfield,Hampshire,Select Board – Town Meeting,2023-05-01T00:00:00
+Charlemont,Franklin,Select Board – Town Meeting,2023-05-23T00:00:00
+Monterey,Berkshire,Select Board – Town Meeting,2023-05-09T00:00:00
+New Braintree,Worcester,Select Board – Town Meeting,2023-05-01T00:00:00
+Sandisfield,Berkshire,Select Board – Town Meeting,2023-05-15T00:00:00
+New Salem,Franklin,Select Board – Town Meeting,2023-05-01T00:00:00
+Goshen,Hampshire,Select Board – Town Meeting,2023-06-03T00:00:00
+Wendell,Franklin,Select Board – Town Meeting,2023-05-01T00:00:00
+Windsor,Berkshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Cummington,Hampshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Montgomery,Hampden,Select Board – Town Meeting,2023-05-01T00:00:00
+Peru,Berkshire,Select Board – Town Meeting,2023-06-10T00:00:00
+Warwick,Franklin,Select Board – Town Meeting,2023-05-15T00:00:00
+Hancock,Berkshire,Select Board – Town Meeting,2023-05-08T00:00:00
+Leyden,Franklin,Select Board – Town Meeting,2023-06-26T00:00:00
+Heath,Franklin,Select Board – Town Meeting,2023-05-05T00:00:00
+Florida,Berkshire,Select Board – Town Meeting,2023-05-01T00:00:00
+Savoy,Berkshire,Select Board – Town Meeting,2023-05-17T00:00:00
+Plainfield,Hampshire,Select Board – Town Meeting,2023-05-06T00:00:00
+Washington,Berkshire,Select Board – Town Meeting,2023-05-20T00:00:00
+Alford,Berkshire,Select Board – Town Meeting,2023-05-16T00:00:00
+Tolland,Hampden,Select Board – Town Meeting,2023-05-23T00:00:00
+Aquinnah,Dukes,Select Board – Town Meeting,2023-05-11T00:00:00
+Tyringham,Berkshire,Select Board – Town Meeting,2023-05-15T00:00:00
+Rowe,Franklin,Select Board – Town Meeting,2023-05-13T00:00:00
+Middlefield,Hampshire,Select Board – Town Meeting,2023-05-06T00:00:00
+Hawley,Franklin,Select Board – Town Meeting,2023-05-01T00:00:00
+New Ashford,Berkshire,Select Board – Town Meeting,2023-05-23T00:00:00
+Mount Washington,Berkshire,Select Board – Town Meeting,2023-05-09T00:00:00
+Monroe,Franklin,Select Board – Town Meeting,2023-05-01T00:00:00
+Gosnold,Dukes,Select Board – Town Meeting,2023-05-22T00:00:00
