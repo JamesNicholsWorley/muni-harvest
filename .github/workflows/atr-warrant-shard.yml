@@ -1,0 +1,97 @@
+name: atr-warrant-shard
+
+# Find the ELECTION WARRANT in the full Annual Town Report.
+#
+# `atr-section-shard` cuts around the return. The warrant is almost never in
+# that cut -- it is printed with the town meeting material, often a hundred
+# pages away; of 1,327 cut sections, 22 happened to contain one. So a section
+# with no tally page cannot say whether its election was uncontested or whether
+# we cut the wrong pages, and only the warrant settles it: it enumerates the
+# offices to be filled and the seats for each, so a return listing one name
+# against each of them is uncontested as a matter of record rather than as an
+# inference from missing figures.
+#
+# It runs only on the 609 town-years that need it, not the whole corpus.
+#
+# The locator is the inverse of the section locator. A warrant addresses the
+# constables in statutory language -- GREETING, "you are hereby directed",
+# "qualified to vote in town elections" -- names offices and terms, and prints
+# NO figures. That last part is the discriminator: a page dense in both offices
+# and numbers is the return, not the warrant.
+
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Parallel runner IPs"
+        default: "20"
+      url_csv:
+        description: "Input CSV (municipality,year,url)"
+        default: "config/atr_warrant_urls.csv"
+      per_minute:
+        description: "Requests per minute per runner"
+        default: "20"
+      limit:
+        description: "Cap rows per shard (0 = no cap). Use a small number first."
+        default: "0"
+      ocr:
+        description: "OCR pages that have no text layer (1 = yes). Much slower."
+        default: "0"
+      threshold:
+        description: "Minimum warrant score to accept a page"
+        default: "6"
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: gen
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          n = int("${{ inputs.shards }}")
+          print("matrix=" + json.dumps({"shard": list(range(n))}))
+          PY
+
+  fetch:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pymupdf curl_cffi
+
+      - name: Tesseract, for the reports with no text layer
+        if: inputs.ocr == '1'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
+
+      - name: Find the warrant in each report
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: ${{ inputs.shards }}
+          URL_CSV: ${{ inputs.url_csv }}
+          PER_MINUTE: ${{ inputs.per_minute }}
+          LIMIT: ${{ inputs.limit }}
+          OCR: ${{ inputs.ocr }}
+          THRESHOLD: ${{ inputs.threshold }}
+        run: python tools/atr_warrant_sweep.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atr-warrants-${{ matrix.shard }}
+          path: warrants_out/
+          retention-days: 30
+          if-no-files-found: warn
