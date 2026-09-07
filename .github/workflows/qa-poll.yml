@@ -1,21 +1,22 @@
 name: Wait for a reply
 
-# The only scheduled thing in the system, and it does no work: it asks whether
-# the owner has answered the last question, and if so starts the run that does.
+# Runs only when somebody asks it to.
 #
-# Everything else in this design refuses to be scheduled on purpose.  A routine
-# reports green when its session started and exited, which is not the same as
-# having accomplished anything, and there is no alerting to tell those apart.
-# Here the owner's reply is the clock, so a run that fails to send its email
-# simply never triggers the next one -- the loop stopping IS the alarm, visible
-# in the inbox he already reads.
+# This used to poll every twenty minutes, on the reasoning that a routine
+# reports green when its session merely started, so the owner's reply should be
+# the clock instead. The reasoning was sound and the mechanism was not:
+# measured over a night, roughly one scheduled tick in thirteen actually fired.
+# GitHub documents that scheduled workflows are delayed under load and may be
+# dropped, and that is what happened.
+#
+# The routine's own scheduler, by contrast, fired 06:20, 08:20, 10:20 and 12:20
+# exactly, four for four. So the schedule lives there now, and a reply is picked
+# up by the next scheduled run rather than within twenty minutes of arriving.
+# That is slower and it actually happens, which is the better trade.
+#
+# Kept dispatchable because firing a run by hand is still useful.
 
 on:
-  schedule:
-    # every 20 minutes, off the hour.  Scheduled runs are delayed under load and
-    # GitHub documents that queued jobs may be dropped entirely; the offset
-    # avoids the busiest minute and a missed tick costs 20 minutes, not a day.
-    - cron: '7,27,47 * * * *'
   workflow_dispatch:
 
 permissions:
