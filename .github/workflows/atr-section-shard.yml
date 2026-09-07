@@ -1,0 +1,89 @@
+name: atr-section-shard
+
+# Fetch a pre-2021 Annual Town Report and return the ELECTION PAGES, not the
+# report and not merely its text.
+#
+# `atr-text-shard` answered "does this report contain the return, and where" and
+# it answered it: 2,722 town-years fetched, 1,338 with a locatable section, and
+# the harvest is complete. What it could not leave behind was anything to parse
+# FROM. Text alone is the wrong input here -- 98% of these reports are scans, and
+# every expensive failure this corpus has had came from trusting the OCR of a
+# table rather than looking at it.
+#
+# So this returns a two-to-four page PDF per town-year, cut around the election
+# section. A hundred-page town report becomes ~150KB; the whole pre-2021 corpus
+# becomes ~200MB instead of ~8GB, and the parser gets an image of the actual
+# page.
+#
+# The locator is the part worth reading. An earlier version required ballot
+# vocabulary -- Blanks, Write-ins, Total Votes -- and found NOTHING in Hawley's
+# report, whose election page lists nine offices, nine names and not one figure
+# because every race was uncontested. Small towns print returns like that, and
+# small towns are exactly where ATR coverage is best. So a page counts if it
+# heads itself an election AND lists the offices a town elects, whether or not
+# any number appears.
+
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Parallel runner IPs"
+        default: "20"
+      url_csv:
+        description: "Input CSV (municipality,year,url,...)"
+        default: "config/atr_section_urls.csv"
+      per_minute:
+        description: "Requests per minute per runner"
+        default: "20"
+      limit:
+        description: "Cap rows per shard (0 = no cap). Use a small number first."
+        default: "0"
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: gen
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          n = int("${{ inputs.shards }}")
+          print("matrix=" + json.dumps({"shard": list(range(n))}))
+          PY
+
+  fetch:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pymupdf curl_cffi
+
+      - name: Cut the election pages out of each report
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: ${{ inputs.shards }}
+          URL_CSV: ${{ inputs.url_csv }}
+          PER_MINUTE: ${{ inputs.per_minute }}
+          LIMIT: ${{ inputs.limit }}
+        run: python tools/atr_sections.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atr-sections-${{ matrix.shard }}
+          path: sections_out/
+          retention-days: 30
+          if-no-files-found: warn
