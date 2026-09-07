@@ -132,14 +132,26 @@ def page_texts(doc):
 MAX_SECTION = int(os.environ.get("MAX_SECTION", "14"))
 
 
+# A results page is a table. A page of Town Meeting minutes is prose. Both are
+# full of the words SELECTMEN, MODERATOR, ASSESSOR and FINANCE COMMITTEE, which
+# is why vocabulary alone cannot separate them and why raising MAX_SECTION to 40
+# turned North Reading 2018 into a 42-page section that was mostly the June town
+# meeting. Shape separates them where vocabulary cannot: the return's
+# continuation pages run 5 to 17 characters a line, the minutes run 47 to 69.
+MAX_CONTINUATION_LINE = 30
+
+
 def continues(text):
     """Does this page still look like part of the return?
 
-    Deliberately looser than the test that FINDS the section. Finding it needs a
-    heading; continuing it does not -- page two of a return is candidates and
-    numbers with no heading at all.
+    Deliberately looser than the test that FINDS the section in one respect --
+    finding it needs a heading, continuing it does not, because page two of a
+    return is candidates and numbers with no heading at all -- and strictly
+    tighter in another: it must still be laid out as a table.
     """
-    return len(BALLOT.findall(text)) >= 3 or len(OFFICE.findall(text)) >= 3
+    if not (len(BALLOT.findall(text)) >= 3 or len(OFFICE.findall(text)) >= 3):
+        return False
+    return prose_score(text) < MAX_CONTINUATION_LINE
 
 
 def grow(texts, best, page_count):
