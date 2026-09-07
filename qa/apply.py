@@ -201,6 +201,18 @@ def _seat_target(jpath, was, want, note):
         jpath, record, hits[0][0], want)
 
 
+def _by_value(jpath, kind, was, should, note):
+    """Locate the one place holding `was`, or refuse. Shared by both routes in."""
+    with io.open(jpath, encoding="utf-8") as fh:
+        record = json.load(fh)
+    hits = find_targets(record, kind, was)
+    if not hits:
+        return "skip", f"record holds no {kind} equal to {was!r}", None
+    if len(hits) > 1:
+        return "needs-owner", f"{len(hits)} places hold {was!r}; ambiguous", None
+    return "apply", f"{hits[0][1]} -- {note}", (jpath, record, hits[0][0], should)
+
+
 def consider(row):
     """(verdict, note) for one ledger row. Verdict is apply / skip / needs-owner."""
     stem = row["stem"]
@@ -269,6 +281,21 @@ def consider(row):
 
     # The gate.
     if norm(should) not in text:
+        # Unless the ledger row quotes the corrected value in its own recorded
+        # reading. The string test is a cheap stand-in for somebody opening the
+        # document; where somebody DID open it and wrote down what the page
+        # says, that is the better evidence, not the worse.
+        #
+        # This is the case the test cannot handle on its own: Lakeville 2026's
+        # names are wrong in the record BECAUSE the OCR is wrong, so the OCR can
+        # never confirm the correction. A session rendered the page at 170dpi
+        # and recorded "Maureen E. Candito 134 185 118 437". Refusing that in
+        # favour of an OCR that reads "Conello" is preferring the machine that
+        # got it wrong.
+        if norm(should) and norm(should) in norm(row.get("read") or ""):
+            return _by_value(jpath, kind, was, should,
+                             "not in " + str(source) + ", but the row's own "
+                             "reading of the page quotes it")
         return "skip", f"corrected value is not in {source}", None
 
     if kind == "figure":

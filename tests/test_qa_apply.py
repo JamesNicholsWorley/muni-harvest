@@ -207,3 +207,32 @@ def test_punctuation_alone_is_not_two_spellings(tmp_path, monkeypatch):
     verdict, note, _ = A.consider(_row(was="Laura W. Robertfragasso",
                                        should_be="Laura W. Robert-Fragasso"))
     assert verdict == "apply", note
+
+
+def test_the_rows_own_reading_can_stand_in_for_a_broken_ocr(tmp_path, monkeypatch):
+    # Lakeville 2026's names are wrong in the record BECAUSE the OCR is wrong,
+    # so the OCR can never confirm the correction. A session rendered the page
+    # and wrote down what it says. Preferring the OCR there is preferring the
+    # machine that got it wrong.
+    rec = {"elections": [{"office_original": "SELECT BOARD", "num_winners": 2,
+                          "candidates": [{"name_original": "Maureen E. Conello",
+                                          "votes": 437}]}]}
+    _tree(tmp_path, monkeypatch, record=rec,
+          reading="OFFICIAL RESULTS TOWN OF LAKEVILLE Maureen E. Conello 437")
+    verdict, note, payload = A.consider(_row(
+        was="Maureen E. Conello", should_be="Maureen E. Candito",
+        read="Page 1 rendered at 170dpi: 'Maureen E. Candito 134 185 118 437'"))
+    assert verdict == "apply", note
+    jpath, record, target, value = payload
+    A.write_value(record, target, value)
+    assert record["elections"][0]["candidates"][0]["name_original"] == "Maureen E. Candito"
+
+
+def test_a_reading_that_does_not_quote_the_correction_is_still_refused(tmp_path, monkeypatch):
+    rec = {"elections": [{"office_original": "SELECT BOARD", "num_winners": 1,
+                          "candidates": [{"name_original": "A. Smith", "votes": 10}]}]}
+    _tree(tmp_path, monkeypatch, record=rec,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS A. Smith 10")
+    verdict, _, _ = A.consider(_row(was="A. Smith", should_be="A. Smythe",
+                                    read="I rendered the page and it looked fine"))
+    assert verdict == "skip"
