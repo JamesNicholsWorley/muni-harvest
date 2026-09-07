@@ -56,6 +56,8 @@ def review(record):
         reasons.append("no two contests agree on a ballot count")
 
     for c in contests:
+        if c.get("is_recount"):
+            continue
         office = c.get("office_original", "?")
         cands = c.get("candidates", [])
         seats = c.get("num_winners")
@@ -73,14 +75,19 @@ def review(record):
         if any(cand.get("votes") is None for cand in cands):
             reasons.append(f"{office}: a figure was not readable")
 
-        if not seats:
-            reasons.append(f"{office}: no seat count")
+        if seats is None:
+            # A null seat count is the spec's honest answer, not a defect --
+            # but it is also the field that decides who won, so it is bought
+            # again rather than published on the cheap model's uncertainty.
+            reasons.append(f"{office}: seat count left null by the transcriber")
+        elif not seats:
+            reasons.append(f"{office}: seat count is zero")
         elif c.get("scope") != "regional_district" and ballots and marks is not None:
             if marks > ballots * seats:
                 reasons.append(
                     f"{office}: {marks} marks exceeds {ballots}x{seats}"
                     f"={ballots*seats} -- impossible")
-            elif c.get("num_winners_source") == "inferred":
+            elif c.get("num_winners_source") in ("derived", "marked"):
                 implied = round(marks / ballots) if ballots else None
                 if implied and implied != seats:
                     reasons.append(
@@ -90,7 +97,13 @@ def review(record):
     # A return with one contest is nearly always a cut that lost the rest.
     if len(contests) == 1:
         reasons.append("only one contest -- a return usually elects several")
-    if record.get("problems"):
-        reasons.append(f"transcriber flagged: {'; '.join(record['problems'])[:160]}")
+    flagged = list(record.get("document_problems") or [])
+    for c in contests:
+        flagged += list(c.get("problems") or [])
+    if flagged:
+        reasons.append(f"transcriber flagged: {'; '.join(flagged)[:160]}")
+    # A recount is a second reading of one office, so it does not owe the
+    # ballot arithmetic anything and must not drag the record into escalation.
+    
 
     return ("escalate" if reasons else "accept"), reasons

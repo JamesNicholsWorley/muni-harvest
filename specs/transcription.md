@@ -13,8 +13,11 @@ Emit `_original` fields and nothing else:
 
 - `name_original` — the candidate exactly as printed. Not Title Case. Not
   expanded. `WM. J. O'BRIEN, JR` stays `WM. J. O'BRIEN, JR`.
-- `office_original` — the office heading exactly as printed, including the seat
-  and term text on the same line: `Selectmen - 2 for 3 Years`.
+- `office_original` — the office heading exactly as printed. Where the heading
+  spans two printed rows — `Town Meeting Members` above
+  `Precinct 1 - Vote for 6 for 3 Years` — join them with ` | ` and keep both.
+  Dropping either half loses the office or loses the seat count.
+- Trim leading and trailing whitespace; never alter whitespace inside a value.
 - `district_original` — whatever the document prints for precinct, ward,
   district or region. Empty if it prints nothing.
 
@@ -43,21 +46,65 @@ If the page prints `Vote for not more than TWO`, `2 for 3 Years`, or
 `Vote for THREE`, then `num_winners` is that number — **even if only one
 candidate stood, even if nobody won, even if three were elected.**
 
-Record where you got it in `num_winners_source`:
+Record where you got it in `num_winners_source`, which has exactly four values:
 
-- `printed` — the page states the seat count. Quote it in `seats_quote`.
-- `inferred` — the page does not state it and you counted winners or asterisks.
+- `printed` — **the return itself** states the seat count. Quote it verbatim in
+  `seats_quote`. A warrant, an officers directory or a table of contents
+  elsewhere in the report is not the return; that is `derived`.
+- `marked` — the return marks winners (asterisks, bold, `ELECTED`) and you
+  counted the marks. Say what the mark was in `num_winners_basis`.
+- `derived` — neither of the above, and you worked it out from the arithmetic:
+  a contest's figures sum to about the ballot count times the seats, so a race
+  totalling roughly twice another race's total is a two-seat race. Put the
+  reasoning in `num_winners_basis`.
+- `null` — you could not tell. **This is a permitted answer and often the right
+  one.** `num_winners: null` with a note beats a confident guess, because a
+  null is visible to every later pass and a wrong number is not.
 
-`printed` outranks everything downstream, including arithmetic. `inferred` is
-treated as a guess and re-checked. Saying which you did is worth more than
-being right, because a wrong `printed` is caught and a wrong `inferred` that
-claims to be printed is not.
+`printed` outranks everything downstream, including arithmetic. The other three
+are re-checked. Saying which you did is worth more than being right, because a
+wrong `printed` is caught and a wrong guess wearing `printed` is not.
+
+**Deriving the seat count is the one place arithmetic is allowed to choose a
+value**, and only because the alternative is a number with no basis at all.
+It never applies to a vote figure — see rule 4.
+
+## 3a. Precinct columns on a town-wide race
+
+The commonest layout in this corpus prints one town-wide race across a row of
+precinct columns and then a `Total` column:
+
+    Precinct                 1    2    3    4   Total
+    MATTHEW E. DUGGAN       92   71   48   80     291
+
+That is **one `at_large` contest**, not four `sub_town` contests. The precincts
+are how the town counted, not what it elected.
+
+Put the printed total in `votes`, and the precinct figures, in printed order,
+in `votes_by_precinct`, with the column headings in `precinct_labels`. Both are
+transcription, so both are allowed; neither is derived.
+
+Keeping them is not decoration. The row states its own total, so the precinct
+figures let code check the total without a model and without the document —
+the only check in this pipeline that can catch a misread digit in a figure that
+is otherwise perfectly plausible.
+
+A precinct contest is `sub_town` only when the precinct elects its own officer:
+`Town Meeting Members, Precinct 3` is a `sub_town` contest, because Precinct 3
+alone chooses them.
 
 ## 4. Never compute. Never complete.
 
 Do not emit a total you did not read. Do not emit `ballots_cast` at all — it is
 derived from the return and compared against any printed figure, and that
 comparison is only a check because you did not supply it.
+
+**You may add figures up in order to REPORT a disagreement. You may never emit
+the result as a value.** If a column of figures does not match the total printed
+beneath it, both numbers are transcribed exactly as printed and the discrepancy
+goes in `problems`. Transcribing a corrected total would destroy the evidence
+that the document disagrees with itself, which is often the most useful thing on
+the page.
 
 If a cell is blank, empty, illegible or absent, the value is `null`. Not zero.
 Not the row total. Not what the arithmetic implies.
@@ -106,6 +153,22 @@ salary schedule. Transcribe **only the annual municipal election**.
 If the section holds more than one election date, transcribe the annual
 municipal one and list the others in `other_dates_seen`.
 
+`saw_special` means a **municipal** special election. A state or federal special
+is skipped under the rule above and does not set the flag; it goes in
+`other_dates_seen` like any other date.
+
+### A recount is the same election, not another one
+
+A recount block carries a later date and often precinct-level figures, and it is
+still the annual municipal election — Sterling 2010's return was recounted on
+8 June for a single seat. Do not list it as another date and do not merge it
+into the original figures.
+
+Transcribe it as its own contest with `is_recount: true`, `recount_date`, and
+the office it recounted. Which figures stand is a question about the town's
+certification, decided later by somebody who can read the clerk's record; the
+transcription's job is to make both readings available rather than to choose.
+
 ## 7. Say what you could not do.
 
 Populate `problems` with anything that would change how a reader treats the
@@ -121,9 +184,104 @@ things a human should look at:
 An empty `problems` list on a page you found difficult is worse than a wrong
 transcription, because it removes the only signal that anyone should look.
 
-## 8. What "the document" means
+`problems` is per-contest. Anything about the document as a whole — no
+municipality named, two elections on one page, a heading you could not place —
+goes in the record's top-level `document_problems`.
+
+### Marks the document makes that are not figures
+
+Returns annotate. An asterisk beside a name marks a winner; `CFR` marks a
+candidate for re-election; a dagger marks a write-in who qualified. These are
+printed information and they need somewhere to go, so:
+
+- `elected_marked` — `true` when the row carries a winner mark, `false` when it
+  does not, `null` when the document marks nobody.
+- `annotation_original` — any other mark beside the name, verbatim: `"CFR"`.
+
+`elected_marked` is **not** `num_winners`. It records who the document says
+won; `num_winners` records how many seats were up. A race can mark two winners
+for three seats, and that difference is a fact about the election, not an error.
+
+## 8. The shape of the output
+
+One JSON **object** per document — not a bare array:
+
+```json
+{
+  "municipality_original": "DANVERS",
+  "municipality_printed": true,
+  "date_original": "June 2, 2020",
+  "elections": [
+    {
+      "office_original": "Selectmen - 1 for 3 Years",
+      "district_original": "",
+      "scope": "at_large",
+      "num_winners": 1,
+      "num_winners_source": "printed",
+      "seats_quote": "Selectmen - 1 for 3 Years",
+      "num_winners_basis": null,
+      "is_recount": false,
+      "precinct_labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+      "candidates": [
+        {"name_original": "MATTHEW E. DUGGAN", "votes": 575,
+         "votes_by_precinct": [92, 71, 48, 80, 96, 76, 68, 44],
+         "elected_marked": false, "annotation_original": null},
+        {"name_original": "BLANKS", "votes": 10,
+         "votes_by_precinct": [2, 4, 9, 3, 9, 2, 3, 4],
+         "elected_marked": null, "annotation_original": null}
+      ],
+      "printed_total": 1807,
+      "problems": []
+    }
+  ],
+  "questions": [],
+  "saw_special": false,
+  "other_dates_seen": [],
+  "document_problems": ["no municipality named in this section"]
+}
+```
+
+Rules that follow from the shape:
+
+- `municipality_printed` is `false` when the section never names the town. The
+  municipality field exists to disagree with the filename, so an invented value
+  silences the only wrong-town detector there is. Say you did not see it.
+- `printed_total` is the `TOTALS` line the document prints for the contest, or
+  `null`. It is transcription, not a sum you performed.
+- `votes_by_precinct` is `null` where the return prints no precinct columns.
+- Omit no key. A key you leave out is indistinguishable from a document that
+  said nothing, and those are different facts.
+- `is_recount` is `false` on an ordinary contest; `true` adds `recount_date`.
+- `num_winners_basis` is `null` when `num_winners_source` is `printed`, and a
+  sentence otherwise.
+
+## 9. What "the document" means
 
 Where you are given both an image and extracted text, **the image is the
 document.** Text extraction reorders columns, fuses adjacent races and drops
 digits, and does so silently. Where the two disagree, read the image and record
 the disagreement in `problems`.
+
+Where you have only text, say so in `document_problems` and transcribe it
+anyway. A born-digital return whose text layer is clean is not a lesser source,
+but the record must show that nothing was checked against an image, because
+"the text was right" and "the text was never doubted" look identical afterwards.
+
+## 10. Small things that recur
+
+- **A heading that wraps.** `office_original` is the whole heading, across
+  however many printed lines it occupies, joined with a single space. Stopping
+  at the line break drops the seat count, which is usually on the second line.
+- **A heading that repeats itself.** `Assessor - One year Unexpired Term - One
+  year Unexpired Term` is copied exactly as printed. It is the document's
+  duplication, not yours, and tidying it is normalisation.
+- **An unheaded final column.** A column of larger figures at the right of a
+  precinct table, with no heading, is the total column; put it in `votes`. Say
+  so in `problems` — it is a reading of the layout, not something printed.
+- **`district_original` for a regional contest.** If the only district text is
+  inside the office heading, leave `district_original` empty. Copying it across
+  invents a field the document did not print, and `office_original` already
+  holds it.
+- **A contest with no candidates.** A block with only `Blanks` and `Write-Ins`
+  is transcribed as it stands. It usually means nobody stood, which is a real
+  and reportable outcome, not a parse failure.
