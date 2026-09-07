@@ -185,3 +185,32 @@ def test_best_text_reports_which_reading_it_returned():
     text, how, _ = zones.best_text(page)
     assert how in ("zoned", "raw")
     assert text.strip()
+
+
+# ------------------------------------------------------------------- importable
+
+def test_every_tool_entrypoint_imports_as_a_script():
+    """Run each tool the way CI runs it, not the way a test imports it.
+
+    `atr_warrant_sweep.py` passed a syntax check, was committed, and then
+    failed on all fifteen runners with `ModuleNotFoundError: No module named
+    'tools'` -- because `python tools/x.py` puts tools/ on sys.path and not the
+    repository root. Parsing a file does not execute its imports, so the check
+    that passed could never have caught it.
+    """
+    import pathlib
+    import subprocess
+    import sys
+
+    root = pathlib.Path(__file__).resolve().parent.parent
+    for name in ("atr_sections.py", "atr_warrant_sweep.py", "make_text.py",
+                 "parse_run.py", "text_arith.py", "warrant.py", "zones.py"):
+        path = root / "tools" / name
+        r = subprocess.run(
+            [sys.executable, "-c",
+             f"import runpy,sys; sys.argv=['{name}','--help'];"
+             f" exec(compile(open(r'{path}').read(), r'{path}', 'exec'),"
+             f" {{'__name__':'__not_main__','__file__':r'{path}'}})"],
+            capture_output=True, text=True, cwd=str(root), timeout=120)
+        assert "ModuleNotFoundError" not in r.stderr, f"{name}: {r.stderr[-300:]}"
+        assert "ImportError" not in r.stderr, f"{name}: {r.stderr[-300:]}"

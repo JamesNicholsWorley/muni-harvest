@@ -20,12 +20,17 @@ import csv
 import io
 import os
 import subprocess
+import sys
 import time
 
 import pymupdf
 from curl_cffi import requests
 
-from tools import warrant
+# Running `python tools/atr_warrant_sweep.py` puts tools/ on sys.path, not the
+# repository root, so the package import below needs the root added first.
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from tools import warrant                                   # noqa: E402
 
 SHARD = int(os.environ.get("SHARD", "0"))
 SHARDS = int(os.environ.get("SHARDS", "1"))
