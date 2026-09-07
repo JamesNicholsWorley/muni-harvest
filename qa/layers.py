@@ -266,7 +266,11 @@ def document_text(stem):
     parts, used = [], []
     for name, rel in (("raw_ocr", f"data/raw_ocr/{stem}.txt"),
                       ("markdown", f"data/markdown/{stem}.md"),
-                      ("pdftext", f"data/pdftext/{stem}.txt")):
+                      ("pdftext", f"data/pdftext/{stem}.txt"),
+                      # For 197 town-years this is the only reading there is.
+                      # It is paid journalism, so nothing quoted from it may
+                      # reach the public report -- see `quotable`.
+                      ("news_text", f"data/news_text/{stem}.md")):
         p = os.path.join(BASE, rel)
         if not os.path.exists(p):
             continue
@@ -286,6 +290,29 @@ def document_text(stem):
     if not parts or max(readable_chars(t) for t in parts) < 30:
         return None, None
     return re.sub(r"\s+", " ", "\n".join(parts)), "+".join(used)
+
+
+# The longest verbatim window any check may put in the report.
+#
+# Evidence is a quotation and quoting is the point: a verdict without the line
+# it rests on is not reviewable. Where the source is a town's return, quoting it
+# is free. Where it is a subscription news article -- the only reading for 197
+# town-years -- a short window is a citation and fair dealing, and the whole
+# story is a reproduction. The distinction the project has always drawn is
+# between citing journalism and republishing it.
+#
+# So the rule is length, not source. 160 characters is comfortably more than the
+# +/-40 window these checks take and comfortably less than a paragraph, and it
+# stops any future check from putting a document into the report by accident.
+MAX_QUOTE = 160
+
+
+def snippet(text):
+    """A quotation bounded to something nobody could mistake for the article."""
+    if not text:
+        return text
+    t = " ".join(text.split())
+    return t if len(t) <= MAX_QUOTE else t[:MAX_QUOTE].rstrip() + "…"
 
 
 def municipality_of(stem):
@@ -367,7 +394,7 @@ def layer0_right_document(stem, record, text, source):
             break
     out.append((stem, 0, "document_self_identifies",
                 PASS if hit else NOTE,
-                f"...{hit}..." if hit else
+                f"...{snippet(hit)}..." if hit else
                 f"document never prints '{town}'; identity rests on the citation alone"))
 
     year = year_of(stem)
@@ -378,7 +405,7 @@ def layer0_right_document(stem, record, text, source):
     m = year_found(year, text)
     out.append((stem, 0, "carries_the_year",
                 PASS if m else FAIL,
-                f"...{text[max(0,m.start()-40):m.end()+40].strip()}..." if m
+                f"...{snippet(text[max(0,m.start()-40):m.end()+40])}..." if m
                 else f"'{year}' does not appear in {source}, "
                      f"in that spelling or as a date ending {year[2:]}"))
 

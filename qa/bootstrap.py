@@ -53,10 +53,31 @@ CANDIDATE_ROOTS = [
     os.path.join(os.path.dirname(BASE), "CivicAtlasMA", "publish"),
 ]
 
+# 197 town-years were parsed from a news article and from nothing else. The
+# article is in `civicatlas-private`, which a session already clones -- it was
+# simply never linked, so those records arrived with no readable text at all and
+# `document_held` reported 209 failures where a local checkout sees 14.
+#
+# Linking it makes them checkable. What must NOT follow is the text reaching
+# `qa/layers_report.csv`, which is committed to a public repository: two layer-0
+# checks quote their source verbatim as evidence. `qa.layers.quotable` is what
+# stops that, and it is the reason this link is safe.
+PRIVATE_ROOTS = [
+    os.path.join(os.path.dirname(BASE), "civicatlas-private"),
+    "/home/user/civicatlas-private",
+]
+
 
 def find_published():
     for root in CANDIDATE_ROOTS:
         if os.path.isdir(os.path.join(root, "json")):
+            return root
+    return None
+
+
+def find_private():
+    for root in PRIVATE_ROOTS:
+        if os.path.isdir(os.path.join(root, "news_text")):
             return root
     return None
 
@@ -89,6 +110,11 @@ def assemble(published):
             if link(p, os.path.join(out, stem + ".pdf")):
                 n += 1
         made["pdfs"] = n
+
+    priv = find_private()
+    if priv:
+        made["news_text"] = link(os.path.join(priv, "news_text"),
+                                 os.path.join(DATA, "news_text"))
     return made
 
 

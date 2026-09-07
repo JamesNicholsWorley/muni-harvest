@@ -430,3 +430,22 @@ def test_a_full_stop_is_a_date_separator_too():
         "2025", "LOCAL ELECTION UNOFFICIAL ELECTION RESULTS 4.29.25 Voter Total")
     # It is still a date and not a decimal: the day has to be a day.
     assert not layers.year_found("2025", "TURNOUT 4.99.25 PERCENT")
+
+
+def test_a_quotation_is_bounded_so_an_article_cannot_become_the_evidence():
+    # 197 town-years are read from a subscription news article and nothing else.
+    # Quoting a window of one is a citation; putting the story in the public
+    # report is republishing it. The rule is length, not source.
+    long_story = "HAWLEY - All nine positions on the ballot are uncontested. " * 20
+    out = layers.snippet(long_story)
+    assert len(out) <= layers.MAX_QUOTE + 1
+    assert out.endswith("…")
+
+
+def test_a_short_quotation_is_returned_whole():
+    line = "ANNUAL TOWN ELECTION May 5, 2025"
+    assert layers.snippet(line) == line
+
+
+def test_a_quotation_is_flattened_so_it_cannot_carry_layout():
+    assert layers.snippet("two\n\n   lines") == "two lines"
