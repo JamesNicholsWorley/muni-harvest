@@ -92,6 +92,19 @@ Put the printed total in `votes`, and the precinct figures, in printed order,
 in `votes_by_precinct`, with the column headings in `precinct_labels`. Both are
 transcription, so both are allowed; neither is derived.
 
+The contest's `TOTALS` line is a row like any other and usually prints a figure
+per precinct as well as the grand total. Keep both: `printed_total` for the
+grand total, `printed_total_by_precinct` for the row. Those per-precinct totals
+are recoverable by adding the column up, but a figure the document printed is
+evidence and a figure we computed is not -- and where the two differ, the
+difference is the finding.
+
+**A `sub_town` contest keeps the grid too.** Town Meeting Members for Precinct 3
+are printed inside the same eight-column table, and the seven columns belonging
+to other precincts are blank on its candidate rows. Blank is `null`, per rule 4;
+do not write the zeros the TOTALS row happens to print there. The grid is kept
+so that the contest's own column still adds up.
+
 Keeping them is not decoration. The row states its own total, so the precinct
 figures let code check the total without a model and without the document —
 the only check in this pipeline that can catch a misread digit in a figure that
@@ -244,6 +257,7 @@ One JSON **object** per document — not a bare array:
          "elected_marked": null, "annotation_original": null}
       ],
       "printed_total": 1807,
+      "printed_total_by_precinct": [201, 206, 181, 318, 292, 241, 233, 135],
       "problems": []
     }
   ],
@@ -257,7 +271,9 @@ One JSON **object** per document — not a bare array:
 
 Rules that follow from the shape:
 
-- `municipality_printed` is `false` when the section never names the town. The
+- `municipality_printed` is `false` when the section never names the town, and
+  `municipality_original` is then `null` -- not an empty string, which reads as
+  a name that was printed and was blank. The
   municipality field exists to disagree with the filename, so an invented value
   silences the only wrong-town detector there is. Say you did not see it.
 - `printed_total` is the `TOTALS` line the document prints for the contest, or
@@ -301,10 +317,13 @@ but the record must show that nothing was checked against an image, because
 - **An unheaded final column.** A column of larger figures at the right of a
   precinct table, with no heading, is the total column; put it in `votes`. Say
   so in `problems` — it is a reading of the layout, not something printed.
-- **`district_original` for a regional contest.** If the only district text is
-  inside the office heading, leave `district_original` empty. Copying it across
-  invents a field the document did not print, and `office_original` already
-  holds it.
+- **`district_original` and where the district is named.** For a `sub_town`
+  contest, set it to the precinct or ward -- `Precinct 3` -- even when the only
+  place that text appears is the office heading. It is the field that says which
+  part of the town voted, and losing it makes the contest unplaceable. For a
+  `regional_district` contest, leave it empty when the region is named only in
+  the heading: `office_original` already holds it, and the region is not a
+  subdivision of this town.
 - **A qualifier printed inside a name.** `Lance E. Harris (Write-In)` keeps the
   parenthetical in `name_original`, because it is printed as part of the name.
   `annotation_original` is for a mark set *beside* the name, in its own column
