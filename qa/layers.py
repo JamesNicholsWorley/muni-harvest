@@ -671,6 +671,29 @@ def layer2_arithmetic(stem, record):
     if not ballots:
         return out
 
+    # The derived count is the MODE of the qualifying contests, so it is not
+    # always their maximum -- and where a contributing contest reports more
+    # marks than the mode, "impossible" is a claim about a figure the
+    # derivation itself is not certain of.  The verdict stays FAIL, because
+    # something IS wrong; what changes is that the evidence stops reading as
+    # though the town printed a ballot count it never printed.
+    #
+    # Attleboro 2023 is the case that found it.  Four town-wide single-seat
+    # contests report 4,944 / 4,764 / 4,749 / 4,749; the mode is 4,749, and
+    # MAYOR was then reported as "4944 marks > 4749 ballots x 1 seats".  The
+    # page prints "Times Cast 4,712 / 34,213  13.77%" in every block and puts
+    # "Unresolved Write-In  232" in a table of its own below a block that has
+    # already closed at 3,662 + 1,050 = 4,712.  So the real ballot count is
+    # 4,712, the four contests differ only by their write-in aggregates, and
+    # the mode was never the town's figure.  157 of the 195 findings this check
+    # reports are measured against a mode one of its own contributors exceeds.
+    spread = ""
+    if contributors:
+        highest = max(v for v, _ in contributors)
+        if highest > ballots:
+            spread = (f" -- ballots derived, not printed: {why}, "
+                      f"and one of them reports {highest}")
+
     for e in record.get("elections") or []:
         scope = scope_of(e)
         office = str(e.get("office_original") or e.get("office") or "")[:44]
@@ -689,7 +712,8 @@ def layer2_arithmetic(stem, record):
         expect = ballots * seats
         if m > expect:
             out.append((stem, 2, "marks_exceed_ballots", FAIL,
-                        f"{office}: {m} marks > {ballots} ballots x {seats} seats = {expect}"))
+                        f"{office}: {m} marks > {ballots} ballots x {seats} "
+                        f"seats = {expect}{spread}"))
         elif m == expect:
             out.append((stem, 2, "contest_closes", PASS,
                         f"{office}: {m} == {ballots} x {seats}"))

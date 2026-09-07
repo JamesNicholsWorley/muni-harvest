@@ -1051,8 +1051,8 @@ Attleboro2023,0,document_supports_record,PASS,29/30 names and 63/65 figures loca
 Attleboro2023,1,names_grounded,FAIL,29/30 names located in raw_ocr
 Attleboro2023,1,figures_grounded,FAIL,63/65 figures located in raw_ocr
 Attleboro2023,2,ballots_derivable,PASS,2 of 4 contests agree on 4749
-Attleboro2023,2,marks_exceed_ballots,FAIL,MAYOR: 4944 marks > 4749 ballots x 1 seats = 4749
-Attleboro2023,2,marks_exceed_ballots,FAIL,CITY CLERK: 4764 marks > 4749 ballots x 1 seats = 4749
+Attleboro2023,2,marks_exceed_ballots,FAIL,"MAYOR: 4944 marks > 4749 ballots x 1 seats = 4749 -- ballots derived, not printed: 2 of 4 contests agree on 4749, and one of them reports 4944"
+Attleboro2023,2,marks_exceed_ballots,FAIL,"CITY CLERK: 4764 marks > 4749 ballots x 1 seats = 4749 -- ballots derived, not printed: 2 of 4 contests agree on 4749, and one of them reports 4944"
 Attleboro2023,2,contest_closes,PASS,CITY COLLECTOR: 4749 == 4749 x 1
 Attleboro2023,2,contest_closes,PASS,CITY TREASURER: 4749 == 4749 x 1
 Attleboro2023,2,tally_incomplete,NOTE,COUNCILOR AT LARGE: 23662 of 23745; 83 marks not tallied
@@ -1320,9 +1320,9 @@ Ayer2024,1,names_grounded,PASS,47/47 names located in markdown+pdftext
 Ayer2024,1,figures_grounded,PASS,58/58 figures located in markdown+pdftext
 Ayer2024,2,ballots_derivable,PASS,5 of 7 contests agree on 482
 Ayer2024,2,contest_closes,PASS,Select Board: 482 == 482 x 1
-Ayer2024,2,marks_exceed_ballots,FAIL,Commissioner of Trust Funds: 513 marks > 482 ballots x 1 seats = 482
+Ayer2024,2,marks_exceed_ballots,FAIL,"Commissioner of Trust Funds: 513 marks > 482 ballots x 1 seats = 482 -- ballots derived, not printed: 5 of 7 contests agree on 482, and one of them reports 515"
 Ayer2024,2,contest_closes,PASS,Constable: 482 == 482 x 1
-Ayer2024,2,marks_exceed_ballots,FAIL,Assessor: 515 marks > 482 ballots x 1 seats = 482
+Ayer2024,2,marks_exceed_ballots,FAIL,"Assessor: 515 marks > 482 ballots x 1 seats = 482 -- ballots derived, not printed: 5 of 7 contests agree on 482, and one of them reports 515"
 Ayer2024,2,contest_closes,PASS,Park Commissioner: 964 == 482 x 2
 Ayer2024,2,contest_closes,PASS,Planning Board: 964 == 482 x 2
 Ayer2024,2,contest_closes,PASS,Board of Health: 482 == 482 x 1
@@ -1717,7 +1717,7 @@ Belchertown2025,2,contest_closes,PASS,SCHOOL COMMITTEE: 4284 == 4284 x 1
 Belchertown2025,2,contest_closes,PASS,PLANNING BOARD: 4284 == 4284 x 1
 Belchertown2025,2,contest_closes,PASS,BOARD OF ASSESSORS: 4284 == 4284 x 1
 Belchertown2025,2,contest_closes,PASS,BOARD OF HEALTH: 8568 == 4284 x 2
-Belchertown2025,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY 5 YR TERM: 4289 marks > 4284 ballots x 1 seats = 4284
+Belchertown2025,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY 5 YR TERM: 4289 marks > 4284 ballots x 1 seats = 4284 -- ballots derived, not printed: 3 of 4 contests agree on 4284, and one of them reports 4289"
 Belchertown2025,2,contest_closes,PASS,HOUSING AUTHORITY 4 YR TERM: 8568 == 4284 x 2
 Belchertown2025,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Belchertown2026,0,document_self_identifies,PASS,"...BELCHERTOWN, MASSACHUSETTS ANNUAL TOWN EL..."
@@ -1746,7 +1746,7 @@ Bellingham2021,2,contest_closes,PASS,LIBRARY TRUSTEE - for 3 years: 471 == 471 x
 Bellingham2021,2,contest_closes,PASS,PLANNING BOARD MEMBER - for 3 years: 942 == 471 x 2
 Bellingham2021,2,contest_closes,PASS,SCHOOL COMMITTEE MEMBER - for 3 years: 942 == 471 x 2
 Bellingham2021,2,contest_closes,PASS,HOUSING AUTHORITY - for 5 years: 471 == 471 x 1
-Bellingham2021,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY - for 2 years: 473 marks > 471 ballots x 1 seats = 471
+Bellingham2021,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY - for 2 years: 473 marks > 471 ballots x 1 seats = 471 -- ballots derived, not printed: 4 of 5 contests agree on 471, and one of them reports 473"
 Bellingham2021,2,contest_closes,PASS,LIBRARY TRUSTEE - for 2 years: 471 == 471 x 1
 Bellingham2021,2,contest_closes,PASS,PLANNING BOARD MEMBER - for 1 year: 471 == 471 x 1
 Bellingham2021,3,office_count_consistent,PASS,8 contests; median 7 in other years
@@ -1857,9 +1857,9 @@ Belmont2023,2,contest_closes,PASS,MEMBER OF SELECT BOARD - 3 YEARS: 6459 == 6459
 Belmont2023,2,tally_incomplete,NOTE,TREASURER***: 6401 of 6459; 58 marks not tallied
 Belmont2023,2,contest_closes,PASS,BOARD OF ASSESSORS - 3 YEARS: 6459 == 6459 x 1
 Belmont2023,2,contest_closes,PASS,BOARD OF ASSESSORS - 1 YEAR: 6459 == 6459 x 1
-Belmont2023,2,marks_exceed_ballots,FAIL,"BD OF CEMETERY COMMISSIONERS, 3 YEARS: 6466 marks > 6459 ballots x 1 seats = 6459"
+Belmont2023,2,marks_exceed_ballots,FAIL,"BD OF CEMETERY COMMISSIONERS, 3 YEARS: 6466 marks > 6459 ballots x 1 seats = 6459 -- ballots derived, not printed: 6 of 9 contests agree on 6459, and one of them reports 6468"
 Belmont2023,2,contest_closes,PASS,BOARD OF HEALTH - 3 YEARS: 6459 == 6459 x 1
-Belmont2023,2,marks_exceed_ballots,FAIL,MEMBER OF HOUSING AUTHORITY - 5 YEARS: 6468 marks > 6459 ballots x 1 seats = 6459
+Belmont2023,2,marks_exceed_ballots,FAIL,"MEMBER OF HOUSING AUTHORITY - 5 YEARS: 6468 marks > 6459 ballots x 1 seats = 6459 -- ballots derived, not printed: 6 of 9 contests agree on 6459, and one of them reports 6468"
 Belmont2023,2,contest_closes,PASS,TRUSTEES OF THE PUBLIC LIBRARY- 3 YEARS: 12918 == 6459 x 2
 Belmont2023,2,contest_closes,PASS,MUNICIPAL LIGHT BOARD - 3 YEARS: 6459 == 6459 x 1
 Belmont2023,2,contest_closes,PASS,MEMBERS OF THE SCHOOL COMMITTEE - 3 YRS: 12918 == 6459 x 2
@@ -2152,10 +2152,10 @@ Beverly2025,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot der
 Beverly2025,3,office_count_consistent,PASS,16 contests; median 14 in other years
 Billerica2021,0,document_self_identifies,PASS,"...tes Cast ANNUAL TOWN ELECTION BILLERICA, MA SOVC For Jurisdiction Wid..."
 Billerica2021,0,carries_the_year,PASS,"...Wide, All Counters, All Races APRIL 10, 2021 Date:04/21/21 Time: 17:06:49 Page:! of..."
-Billerica2021,0,document_supports_record,PASS,88/88 names and 112/116 figures located in raw_ocr+markdown
+Billerica2021,0,document_supports_record,PASS,88/88 names and 113/117 figures located in raw_ocr+markdown
 Billerica2021,1,names_grounded,PASS,88/88 names located in raw_ocr+markdown
-Billerica2021,1,figures_grounded,FAIL,112/116 figures located in raw_ocr+markdown
-Billerica2021,2,ballots_derivable,UNKNOWN,"5 contests, no two agree: [2523, 2607, 2619, 2691, 3683]"
+Billerica2021,1,figures_grounded,FAIL,113/117 figures located in raw_ocr+markdown
+Billerica2021,2,ballots_derivable,UNKNOWN,"5 contests, no two agree: [2523, 2608, 2619, 2691, 3683]"
 Billerica2021,3,office_count_consistent,PASS,24 contests; median 25 in other years
 Billerica2022,0,document_self_identifies,PASS,"...Report ANNUALTOWNELECTION ## BILLERICA, MA ## Summary For Jurisdicti..."
 Billerica2022,0,carries_the_year,PASS,...% | | Write-inVotes | 38 | 1.43% | Date:04/02/22 Time:21:35:08 Page:1 of 6 ## Election S...
@@ -2480,7 +2480,7 @@ Bourne2026,2,contest_closes,PASS,"TRUSTEE, VETERANS MEMORIAL COMMUNITY BUILDIN: 
 Bourne2026,2,contest_closes,PASS,"TRUSTEE, VETERANS MEMORIAL COMMUNITY BUILDIN: 421 == 421 x 1"
 Bourne2026,2,tally_incomplete,NOTE,"MEMBER, SCHOOL COMMITTEE: 1261 of 1263; 2 marks not tallied"
 Bourne2026,2,contest_closes,PASS,"MEMBER, RECREATION AUTHORITY: 421 == 421 x 1"
-Bourne2026,2,marks_exceed_ballots,FAIL,"MEMBER, BOURNE HOUSING AUTHORITY: 422 marks > 421 ballots x 1 seats = 421"
+Bourne2026,2,marks_exceed_ballots,FAIL,"MEMBER, BOURNE HOUSING AUTHORITY: 422 marks > 421 ballots x 1 seats = 421 -- ballots derived, not printed: 6 of 8 contests agree on 421, and one of them reports 422"
 Bourne2026,3,office_count_consistent,PASS,13 contests; median 11 in other years
 Boxborough2021,0,document_self_identifies,PASS,"...ANNUAL TOWN ELECTION RESULTS BOXBOROUGH, MASSACHUSETTS MAY 22, 2021 O..."
 Boxborough2021,0,carries_the_year,PASS,"...SULTS BOXBOROUGH, MASSACHUSETTS MAY 22, 2021 Office Term (yrs) Name Votes Moderator..."
@@ -2550,7 +2550,7 @@ Boxborough2025,2,contest_closes,PASS,Select Board (2 yr): 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Planning Board: 1478 == 739 x 2
 Boxborough2025,2,contest_closes,PASS,Library Trustees: 1478 == 739 x 2
 Boxborough2025,2,contest_closes,PASS,School Committee: 739 == 739 x 1
-Boxborough2025,2,marks_exceed_ballots,FAIL,Board of Health: 776 marks > 739 ballots x 1 seats = 739
+Boxborough2025,2,marks_exceed_ballots,FAIL,"Board of Health: 776 marks > 739 ballots x 1 seats = 739 -- ballots derived, not printed: 6 of 7 contests agree on 739, and one of them reports 776"
 Boxborough2025,2,contest_closes,PASS,Town Clerk: 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Moderator: 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Constable: 739 == 739 x 1
@@ -2609,7 +2609,7 @@ Boxford2023,1,names_grounded,PASS,8/8 names located in raw_ocr+pdftext
 Boxford2023,1,figures_grounded,PASS,18/18 figures located in raw_ocr+pdftext
 Boxford2023,2,ballots_derivable,PASS,2 of 3 contests agree on 1135
 Boxford2023,2,contest_closes,PASS,SELECT BOARD: 1135 == 1135 x 1
-Boxford2023,2,marks_exceed_ballots,FAIL,BOARD OF ASSESSORS: 1162 marks > 1135 ballots x 1 seats = 1135
+Boxford2023,2,marks_exceed_ballots,FAIL,"BOARD OF ASSESSORS: 1162 marks > 1135 ballots x 1 seats = 1135 -- ballots derived, not printed: 2 of 3 contests agree on 1135, and one of them reports 1162"
 Boxford2023,2,contest_closes,PASS,BOARD OF HEALTH: 2270 == 1135 x 2
 Boxford2023,2,contest_closes,PASS,BOXFORD SCHOOL COMMITTEE: 2270 == 1135 x 2
 Boxford2023,2,contest_closes,PASS,BOARD OF COMMISSIONS OF TRUST FUNDS: 1135 == 1135 x 1
@@ -2716,7 +2716,7 @@ Boylston2023,2,tally_incomplete,NOTE,Municipal Light Board: 309 of 310; 1 marks 
 Boylston2023,2,contest_closes,PASS,Board of Selectmen: 310 == 310 x 1
 Boylston2023,2,contest_closes,PASS,Planning Board: 310 == 310 x 1
 Boylston2023,2,contest_closes,PASS,Parks & Recreation Commission: 620 == 310 x 2
-Boylston2023,2,marks_exceed_ballots,FAIL,Town Clerk: 316 marks > 310 ballots x 1 seats = 310
+Boylston2023,2,marks_exceed_ballots,FAIL,"Town Clerk: 316 marks > 310 ballots x 1 seats = 310 -- ballots derived, not printed: 6 of 8 contests agree on 310, and one of them reports 316"
 Boylston2023,3,office_count_consistent,PASS,11 contests; median 8 in other years
 Boylston2024,0,document_self_identifies,PASS,...Town of Boylston Annual Town Election — May 13...
 Boylston2024,0,carries_the_year,PASS,"...oylston Annual Town Election — May 13"", 2024 Notice to Town of Boylston Voters was g..."
@@ -3388,14 +3388,14 @@ Burlington2025,1,figures_grounded,PASS,107/107 figures located in markdown+pdfte
 Burlington2025,2,ballots_derivable,PASS,2 of 4 contests agree on 3355
 Burlington2025,2,contest_closes,PASS,Town Clerk: 3355 == 3355 x 1
 Burlington2025,2,contest_closes,PASS,Moderator: 3355 == 3355 x 1
-Burlington2025,2,marks_exceed_ballots,FAIL,Select Board: 6714 marks > 3355 ballots x 2 seats = 6710
+Burlington2025,2,marks_exceed_ballots,FAIL,"Select Board: 6714 marks > 3355 ballots x 2 seats = 6710 -- ballots derived, not printed: 2 of 4 contests agree on 3355, and one of them reports 3356"
 Burlington2025,2,tally_incomplete,NOTE,Assessor: 3353 of 3355; 2 marks not tallied
-Burlington2025,2,marks_exceed_ballots,FAIL,School Committee: 6712 marks > 3355 ballots x 2 seats = 6710
+Burlington2025,2,marks_exceed_ballots,FAIL,"School Committee: 6712 marks > 3355 ballots x 2 seats = 6710 -- ballots derived, not printed: 2 of 4 contests agree on 3355, and one of them reports 3356"
 Burlington2025,2,contest_closes,PASS,Library Trustees: 6710 == 3355 x 2
 Burlington2025,2,tally_incomplete,NOTE,Planning Board: 6690 of 6710; 20 marks not tallied
-Burlington2025,2,marks_exceed_ballots,FAIL,Board of Health: 6714 marks > 3355 ballots x 2 seats = 6710
-Burlington2025,2,marks_exceed_ballots,FAIL,Constable: 6714 marks > 3355 ballots x 2 seats = 6710
-Burlington2025,2,marks_exceed_ballots,FAIL,Recreation Commission: 3356 marks > 3355 ballots x 1 seats = 3355
+Burlington2025,2,marks_exceed_ballots,FAIL,"Board of Health: 6714 marks > 3355 ballots x 2 seats = 6710 -- ballots derived, not printed: 2 of 4 contests agree on 3355, and one of them reports 3356"
+Burlington2025,2,marks_exceed_ballots,FAIL,"Constable: 6714 marks > 3355 ballots x 2 seats = 6710 -- ballots derived, not printed: 2 of 4 contests agree on 3355, and one of them reports 3356"
+Burlington2025,2,marks_exceed_ballots,FAIL,"Recreation Commission: 3356 marks > 3355 ballots x 1 seats = 3355 -- ballots derived, not printed: 2 of 4 contests agree on 3355, and one of them reports 3356"
 Burlington2025,3,office_count_consistent,PASS,20 contests; median 23 in other years
 Burlington2026,0,document_self_identifies,PASS,"...Burlington Town Election April 11, 2026..."
 Burlington2026,0,carries_the_year,PASS,"...Burlington Town Election April 11, 2026 Prelim Results 19,647 Registered Voters..."
@@ -3693,8 +3693,8 @@ Charlemont2021,2,contest_closes,PASS,BOARD OF HEALTH: 78 == 78 x 1
 Charlemont2021,2,contest_closes,PASS,PARK & RECREATION COM: 78 == 78 x 1
 Charlemont2021,2,contest_closes,PASS,PARK & RECREATION COM: 78 == 78 x 1
 Charlemont2021,2,contest_closes,PASS,PARK & RECREATION COM: 78 == 78 x 1
-Charlemont2021,2,marks_exceed_ballots,FAIL,SELECT BOARD: 116 marks > 78 ballots x 1 seats = 78
-Charlemont2021,2,marks_exceed_ballots,FAIL,TREE WARDEN: 116 marks > 78 ballots x 1 seats = 78
+Charlemont2021,2,marks_exceed_ballots,FAIL,"SELECT BOARD: 116 marks > 78 ballots x 1 seats = 78 -- ballots derived, not printed: 14 of 16 contests agree on 78, and one of them reports 116"
+Charlemont2021,2,marks_exceed_ballots,FAIL,"TREE WARDEN: 116 marks > 78 ballots x 1 seats = 78 -- ballots derived, not printed: 14 of 16 contests agree on 78, and one of them reports 116"
 Charlemont2021,3,office_count_consistent,PASS,16 contests; median 13 in other years
 Charlemont2022,0,document_self_identifies,PASS,...y submitted Kathy A. Reynolds Charlemont Town Clerk ANNUAL TOWN ELECTI...
 Charlemont2022,0,carries_the_year,PASS,"...own Clerk ANNUAL TOWN ELECTIONS May 24, 2022 HAWLEMONT REGIONAL ELEMENTARY SCHOOL 12..."
@@ -3739,7 +3739,7 @@ Charlemont2024,2,contest_closes,PASS,Charlemont School Committee: 189 == 189 x 1
 Charlemont2024,2,contest_closes,PASS,Mohawk Trail School Committee: 189 == 189 x 1
 Charlemont2024,2,contest_closes,PASS,Local Education Council: 189 == 189 x 1
 Charlemont2024,2,contest_closes,PASS,Tyler Memorial Library Trustee: 189 == 189 x 1
-Charlemont2024,2,marks_exceed_ballots,FAIL,Parks and Recreation Commissioner: 200 marks > 189 ballots x 1 seats = 189
+Charlemont2024,2,marks_exceed_ballots,FAIL,"Parks and Recreation Commissioner: 200 marks > 189 ballots x 1 seats = 189 -- ballots derived, not printed: 13 of 14 contests agree on 189, and one of them reports 200"
 Charlemont2024,3,office_count_consistent,PASS,14 contests; median 13 in other years
 Charlemont2025,0,document_self_identifies,PASS,...#### [Massachusetts](\) # [Charlemont](\) - **Charlemont** - 157 Ma...
 Charlemont2025,0,carries_the_year,PASS,...tes **Write In Candidates for the 06/03/2025 Charlemont Town Election** Betty Barret...
@@ -3974,7 +3974,7 @@ Chelmsford2025,2,contest_closes,PASS,BOARD OF HEALTH - One for three years: 4471
 Chelmsford2025,2,contest_closes,PASS,TRUSTEES OF PUBLIC LIBRARY - Two for three y: 8942 == 4471 x 2
 Chelmsford2025,2,contest_closes,PASS,CEMETERY COMMISSION - One for three years: 4471 == 4471 x 1
 Chelmsford2025,2,contest_closes,PASS,HOUSING AUTHORITY - One for five years: 4471 == 4471 x 1
-Chelmsford2025,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY - One for two years: 4472 marks > 4471 ballots x 1 seats = 4471
+Chelmsford2025,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY - One for two years: 4472 marks > 4471 ballots x 1 seats = 4471 -- ballots derived, not printed: 6 of 7 contests agree on 4471, and one of them reports 4472"
 Chelmsford2025,3,office_count_consistent,PASS,32 contests; median 25 in other years
 Chelmsford2026,0,document_self_identifies,NOTE,document never prints 'Chelmsford'; identity rests on the citation alone
 Chelmsford2026,0,carries_the_year,PASS,"...APRIL 7, 2026 LOCAL ELECTION OFFICIAL RESULTS PCT 1 P..."
@@ -4048,7 +4048,7 @@ Cheshire2022,2,contest_closes,PASS,Planning Board 4 yr: 288 == 288 x 1
 Cheshire2022,2,contest_closes,PASS,Planning Board 1 yr: 288 == 288 x 1
 Cheshire2022,2,contest_closes,PASS,Constables: 864 == 288 x 3
 Cheshire2022,2,contest_closes,PASS,HVRSD School Committee Member from Cheshire: 288 == 288 x 1
-Cheshire2022,2,marks_exceed_ballots,FAIL,NBVRSD School Committee Member from Cheshire: 308 marks > 288 ballots x 1 seats = 288
+Cheshire2022,2,marks_exceed_ballots,FAIL,"NBVRSD School Committee Member from Cheshire: 308 marks > 288 ballots x 1 seats = 288 -- ballots derived, not printed: 8 of 10 contests agree on 288, and one of them reports 308"
 Cheshire2022,3,office_count_consistent,PASS,13 contests; median 8 in other years
 Cheshire2023,0,document_self_identifies,PASS,...# Cheshire Election 2023 03:55PM / Tuesd...
 Cheshire2023,0,carries_the_year,PASS,"...# Cheshire Election 2023 03:55PM / Tuesday, May 02, 2023 [**Prin..."
@@ -4277,8 +4277,8 @@ Chilmark2021,0,carries_the_year,PASS,"...f Chilmark ANNUAL TOWN ELECTION May 26,
 Chilmark2021,0,document_supports_record,PASS,40/40 names and 54/55 figures located in raw_ocr
 Chilmark2021,1,names_grounded,PASS,40/40 names located in raw_ocr
 Chilmark2021,1,figures_grounded,FAIL,54/55 figures located in raw_ocr
-Chilmark2021,2,ballots_derivable,PASS,9 of 10 contests agree on 301
-Chilmark2021,2,marks_exceed_ballots,FAIL,Board of Selectmen: 302 marks > 301 ballots x 1 seats = 301
+Chilmark2021,2,ballots_derivable,PASS,10 of 10 contests agree on 301
+Chilmark2021,2,contest_closes,PASS,Board of Selectmen: 301 == 301 x 1
 Chilmark2021,2,contest_closes,PASS,Board of Assessors: 301 == 301 x 1
 Chilmark2021,2,contest_closes,PASS,Board of Health: 301 == 301 x 1
 Chilmark2021,2,contest_closes,PASS,Finance Committee Vote for not more than Thr: 903 == 301 x 3
@@ -4324,7 +4324,7 @@ Chilmark2023,2,contest_closes,PASS,Planning Board: 456 == 456 x 1
 Chilmark2023,2,contest_closes,PASS,Cemetery Commissioner: 456 == 456 x 1
 Chilmark2023,2,contest_closes,PASS,Tree Warden: 456 == 456 x 1
 Chilmark2023,2,contest_closes,PASS,"Surveyor of Wood, Lumber & Bark: 456 == 456 x 1"
-Chilmark2023,2,marks_exceed_ballots,FAIL,Fence Viewer: 466 marks > 456 ballots x 1 seats = 456
+Chilmark2023,2,marks_exceed_ballots,FAIL,"Fence Viewer: 466 marks > 456 ballots x 1 seats = 456 -- ballots derived, not printed: 8 of 9 contests agree on 456, and one of them reports 466"
 Chilmark2023,3,office_count_consistent,PASS,10 contests; median 12 in other years
 Chilmark2024,0,document_self_identifies,PASS,...the Constable of the Town of Chilmark GREETINGS: In the name of the...
 Chilmark2024,0,carries_the_year,PASS,"...535 on TUESDAY, THE FIFTH DAY OF MARCH, 2024, from 7:00 A.M. to 8:00 P.M. for the fo..."
@@ -4902,7 +4902,7 @@ Dalton2021,2,contest_closes,PASS,PLANNING BOARD: 523 == 523 x 1
 Dalton2021,2,contest_closes,PASS,DALTON HOUSING AUTHORITY: 523 == 523 x 1
 Dalton2021,2,contest_closes,PASS,CEMETERY TRUSTEE: 523 == 523 x 1
 Dalton2021,2,contest_closes,PASS,LIBRARY TRUSTEE: 1046 == 523 x 2
-Dalton2021,2,tally_incomplete,NOTE,FINANCE COMMITTEE: 2084 of 2092; 8 marks not tallied
+Dalton2021,2,contest_closes,PASS,FINANCE COMMITTEE: 2092 == 523 x 4
 Dalton2021,3,office_count_consistent,PASS,8 contests; median 7 in other years
 Dalton2022,0,document_self_identifies,PASS,"...# Dalton, MA - Annual Town Election, M..."
 Dalton2022,0,carries_the_year,PASS,"...lton, MA - Annual Town Election, May 9, 2022 - COMPLETE, per-precinct Source: `2022-..."
@@ -4925,14 +4925,14 @@ Dalton2023,0,carries_the_year,PASS,"...N OF DALTON ANNUAL TOWN ELECTION MAY 8, 2
 Dalton2023,0,document_supports_record,PASS,10/10 names and 19/22 figures located in markdown
 Dalton2023,1,names_grounded,PASS,10/10 names located in markdown
 Dalton2023,1,figures_grounded,FAIL,19/22 figures located in markdown
-Dalton2023,2,ballots_derivable,PASS,3 of 5 contests agree on 244
-Dalton2023,2,tally_incomplete,NOTE,SELECT BOARD: 365 of 732; 367 marks not tallied
-Dalton2023,2,tally_incomplete,NOTE,MODERATOR: 122 of 244; 122 marks not tallied
-Dalton2023,2,contest_closes,PASS,PLANNING BOARD: 244 == 244 x 1
-Dalton2023,2,contest_closes,PASS,DALTON HOUSING AUTHORITY: 244 == 244 x 1
-Dalton2023,2,tally_incomplete,NOTE,CEMETERY TRUSTEE: 122 of 244; 122 marks not tallied
-Dalton2023,2,tally_incomplete,NOTE,LIBRARY TRUSTEE: 366 of 488; 122 marks not tallied
-Dalton2023,2,contest_closes,PASS,FINANCE COMMITTEE: 244 == 244 x 1
+Dalton2023,2,ballots_derivable,PASS,2 of 2 contests agree on 122
+Dalton2023,2,tally_incomplete,NOTE,SELECT BOARD: 365 of 366; 1 marks not tallied
+Dalton2023,2,contest_closes,PASS,MODERATOR: 122 == 122 x 1
+Dalton2023,2,contest_closes,PASS,PLANNING BOARD: 244 == 122 x 2
+Dalton2023,2,contest_closes,PASS,DALTON HOUSING AUTHORITY: 244 == 122 x 2
+Dalton2023,2,contest_closes,PASS,CEMETERY TRUSTEE: 122 == 122 x 1
+Dalton2023,2,contest_closes,PASS,LIBRARY TRUSTEE: 366 == 122 x 3
+Dalton2023,2,contest_closes,PASS,FINANCE COMMITTEE: 244 == 122 x 2
 Dalton2023,3,office_count_consistent,PASS,7 contests; median 8 in other years
 Dalton2024,0,document_self_identifies,PASS,...Dalton Elections See High Turn Out;...
 Dalton2024,0,carries_the_year,PASS,"...shires Staff 01:59PM / Tuesday, May 14, 2024 Print Story | Email Story DALTON, Mass...."
@@ -5076,7 +5076,7 @@ Dartmouth2023,0,document_supports_record,PASS,13/13 names and 29/29 figures loca
 Dartmouth2023,1,names_grounded,PASS,13/13 names located in markdown+pdftext
 Dartmouth2023,1,figures_grounded,PASS,29/29 figures located in markdown+pdftext
 Dartmouth2023,2,ballots_derivable,PASS,5 of 6 contests agree on 2976
-Dartmouth2023,2,marks_exceed_ballots,FAIL,SELECT BOARD LOT #4: 2979 marks > 2976 ballots x 1 seats = 2976
+Dartmouth2023,2,marks_exceed_ballots,FAIL,"SELECT BOARD LOT #4: 2979 marks > 2976 ballots x 1 seats = 2976 -- ballots derived, not printed: 5 of 6 contests agree on 2976, and one of them reports 2979"
 Dartmouth2023,2,contest_closes,PASS,ASSESSOR: 2976 == 2976 x 1
 Dartmouth2023,2,contest_closes,PASS,SCHOOL COMMITTEE MEMBER: 5952 == 2976 x 2
 Dartmouth2023,2,contest_closes,PASS,TRUSTEE OF FREE PUBLIC LIBRARIES: 5952 == 2976 x 2
@@ -5095,13 +5095,13 @@ Dartmouth2024,2,tally_incomplete,NOTE,TOWN CLERK: 3808 of 3810; 2 marks not tall
 Dartmouth2024,2,tally_incomplete,NOTE,SELECT BOARD LOT #1: 3787 of 3810; 23 marks not tallied
 Dartmouth2024,2,tally_incomplete,NOTE,SELECT BOARD LOT #3: 3804 of 3810; 6 marks not tallied
 Dartmouth2024,2,tally_incomplete,NOTE,ASSESSOR: 3805 of 3810; 5 marks not tallied
-Dartmouth2024,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE MEMBER: 3844 marks > 3810 ballots x 1 seats = 3810
+Dartmouth2024,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE MEMBER: 3844 marks > 3810 ballots x 1 seats = 3810 -- ballots derived, not printed: 2 of 9 contests agree on 3810, and one of them reports 3844"
 Dartmouth2024,2,tally_incomplete,NOTE,TRUSTEE OF FREE PUBLIC LIBRARIES - 3 YRS: 7610 of 7620; 10 marks not tallied
 Dartmouth2024,2,contest_closes,PASS,TRUSTEE OF FREE PUBLIC LIBRARIES - 1 YR: 3810 == 3810 x 1
 Dartmouth2024,2,contest_closes,PASS,MEMBER OF BOARD OF HEALTH: 3810 == 3810 x 1
-Dartmouth2024,2,marks_exceed_ballots,FAIL,MEMBER OF PLANNING BOARD: 3811 marks > 3810 ballots x 1 seats = 3810
+Dartmouth2024,2,marks_exceed_ballots,FAIL,"MEMBER OF PLANNING BOARD: 3811 marks > 3810 ballots x 1 seats = 3810 -- ballots derived, not printed: 2 of 9 contests agree on 3810, and one of them reports 3844"
 Dartmouth2024,2,tally_incomplete,NOTE,MEMBER OF PARKS AND RECREATION BOARD: 7600 of 7620; 20 marks not tallied
-Dartmouth2024,2,marks_exceed_ballots,FAIL,MEMBER OF HOUSING AUTHORITY: 3815 marks > 3810 ballots x 1 seats = 3810
+Dartmouth2024,2,marks_exceed_ballots,FAIL,"MEMBER OF HOUSING AUTHORITY: 3815 marks > 3810 ballots x 1 seats = 3810 -- ballots derived, not printed: 2 of 9 contests agree on 3810, and one of them reports 3844"
 Dartmouth2024,3,office_count_consistent,PASS,20 contests; median 10 in other years
 Dartmouth2025,0,document_self_identifies,NOTE,document never prints 'Dartmouth'; identity rests on the citation alone
 Dartmouth2025,0,carries_the_year,FAIL,"'2025' does not appear in raw_ocr+markdown+pdftext, in that spelling or as a date ending 25, and no corroboration is recorded"
@@ -5118,9 +5118,9 @@ Dartmouth2026,1,figures_grounded,PASS,34/34 figures located in raw_ocr+pdftext
 Dartmouth2026,2,ballots_derivable,PASS,5 of 7 contests agree on 2959
 Dartmouth2026,2,tally_incomplete,NOTE,SELECT BOARD LOT #4: 2954 of 2959; 5 marks not tallied
 Dartmouth2026,2,contest_closes,PASS,ASSESSOR: 2959 == 2959 x 1
-Dartmouth2026,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE MEMBER: 5926 marks > 2959 ballots x 2 seats = 5918
+Dartmouth2026,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE MEMBER: 5926 marks > 2959 ballots x 2 seats = 5918 -- ballots derived, not printed: 5 of 7 contests agree on 2959, and one of them reports 2964"
 Dartmouth2026,2,contest_closes,PASS,TRUSTEE OF FREE PUBLIC LIBRARIES: 5918 == 2959 x 2
-Dartmouth2026,2,marks_exceed_ballots,FAIL,MEMBER OF BOARD OF HEALTH 3 YEARS: 2964 marks > 2959 ballots x 1 seats = 2959
+Dartmouth2026,2,marks_exceed_ballots,FAIL,"MEMBER OF BOARD OF HEALTH 3 YEARS: 2964 marks > 2959 ballots x 1 seats = 2959 -- ballots derived, not printed: 5 of 7 contests agree on 2959, and one of them reports 2964"
 Dartmouth2026,2,contest_closes,PASS,MEMBER OF BOARD OF HEALTH 1 YEAR UNEX.: 2959 == 2959 x 1
 Dartmouth2026,2,contest_closes,PASS,MEMBER OF PLANNING BOARD: 2959 == 2959 x 1
 Dartmouth2026,2,contest_closes,PASS,MEMBER OF PARKS AND RECREATION BOARD: 2959 == 2959 x 1
@@ -5737,7 +5737,7 @@ Dracut2025,3,office_count_consistent,PASS,5 contests; median 4 in other years
 Dracut2026,0,document_held,FAIL,no document of any kind held
 Dracut2026,1,grounded,UNKNOWN,no document text held
 Dracut2026,2,ballots_derivable,PASS,2 of 3 contests agree on 1992
-Dracut2026,2,marks_exceed_ballots,FAIL,SELECTMEN: 3984 marks > 1992 ballots x 1 seats = 1992
+Dracut2026,2,marks_exceed_ballots,FAIL,"SELECTMEN: 3984 marks > 1992 ballots x 1 seats = 1992 -- ballots derived, not printed: 2 of 3 contests agree on 1992, and one of them reports 3984"
 Dracut2026,2,contest_closes,PASS,SCHOOL COMMITTEE: 1992 == 1992 x 1
 Dracut2026,2,contest_closes,PASS,TRUSTEE OF THE PUBLIC LIBRARY: 1992 == 1992 x 1
 Dracut2026,3,office_count_consistent,PASS,3 contests; median 4 in other years
@@ -5772,7 +5772,7 @@ Dudley2022,2,regional_exempt,NOTE,SWCRV School District 3-Year Term: spans sever
 Dudley2022,2,contest_closes,PASS,Board of Health 3-Year Term: 571 == 571 x 1
 Dudley2022,2,tally_incomplete,NOTE,Water/Sewer Commissioner 3-Year Term: 1141 of 1142; 1 marks not tallied
 Dudley2022,2,tally_incomplete,NOTE,Planning Board 3-Year Term: 1141 of 1142; 1 marks not tallied
-Dudley2022,2,marks_exceed_ballots,FAIL,Planning Board 2-Year Term: 573 marks > 571 ballots x 1 seats = 571
+Dudley2022,2,marks_exceed_ballots,FAIL,"Planning Board 2-Year Term: 573 marks > 571 ballots x 1 seats = 571 -- ballots derived, not printed: 6 of 7 contests agree on 571, and one of them reports 573"
 Dudley2022,2,tally_incomplete,NOTE,Library Trustee 3-Year Term: 1141 of 1142; 1 marks not tallied
 Dudley2022,2,contest_closes,PASS,Dudley Housing Authority 5-Year Term: 571 == 571 x 1
 Dudley2022,2,contest_closes,PASS,Dudley Housing Authority 3-Year Term: 571 == 571 x 1
@@ -5929,7 +5929,7 @@ Dunstable2024,2,contest_closes,PASS,PLANNING BOARD - 5 Years: 584 == 584 x 1
 Dunstable2024,2,contest_closes,PASS,ROAD COMMISSIONERS - 3 Years: 584 == 584 x 1
 Dunstable2024,2,regional_exempt,NOTE,GROTON-DUNSTABLE REGIONAL SCHOOL DISTRICT SC: spans several towns; ballot arithmetic does not apply
 Dunstable2024,2,contest_closes,PASS,WATER COMMISSIONERS - 3 Years: 584 == 584 x 1
-Dunstable2024,2,marks_exceed_ballots,FAIL,WATER COMMISSIONERS - 1 Year: 611 marks > 584 ballots x 1 seats = 584
+Dunstable2024,2,marks_exceed_ballots,FAIL,"WATER COMMISSIONERS - 1 Year: 611 marks > 584 ballots x 1 seats = 584 -- ballots derived, not printed: 12 of 13 contests agree on 584, and one of them reports 611"
 Dunstable2024,2,contest_closes,PASS,BOARD OF SELECTMEN - 3 Years: 584 == 584 x 1
 Dunstable2024,2,contest_closes,PASS,TOWN MODERATOR - 3 Years: 584 == 584 x 1
 Dunstable2024,3,office_count_consistent,PASS,16 contests; median 11 in other years
@@ -6054,7 +6054,7 @@ Duxbury2026,2,contest_closes,PASS,SELECTBOARD: 8284 == 4142 x 2
 Duxbury2026,2,contest_closes,PASS,ASSESSOR: 4142 == 4142 x 1
 Duxbury2026,2,contest_closes,PASS,SCHOOL COMMITTEE: 8284 == 4142 x 2
 Duxbury2026,2,contest_closes,PASS,PLANNING BOARD - 5 YR: 4142 == 4142 x 1
-Duxbury2026,2,marks_exceed_ballots,FAIL,PLANNING BOARD - 2 year unexpired term: 4204 marks > 4142 ballots x 1 seats = 4142
+Duxbury2026,2,marks_exceed_ballots,FAIL,"PLANNING BOARD - 2 year unexpired term: 4204 marks > 4142 ballots x 1 seats = 4142 -- ballots derived, not printed: 3 of 4 contests agree on 4142, and one of them reports 4204"
 Duxbury2026,2,contest_closes,PASS,LIBRARY TRUSTEE - 3 Year Term: 8284 == 4142 x 2
 Duxbury2026,2,contest_closes,PASS,DUXBURY HOUSING AUTH: 4142 == 4142 x 1
 Duxbury2026,3,office_count_consistent,PASS,7 contests; median 8 in other years
@@ -6410,7 +6410,7 @@ Edgartown2021,2,contest_closes,PASS,BOARD OF HEALTH (3 YR APPT.): 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,BOARD OF HEALTH (1 YR APPT.): 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,CONSTABLE: 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,FINANCIAL ADVISORY COMMITTEE: 1008 == 336 x 3
-Edgartown2021,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEES: 725 marks > 336 ballots x 2 seats = 672
+Edgartown2021,2,marks_exceed_ballots,FAIL,"LIBRARY TRUSTEES: 725 marks > 336 ballots x 2 seats = 672 -- ballots derived, not printed: 12 of 13 contests agree on 336, and one of them reports 406"
 Edgartown2021,2,contest_closes,PASS,MARTHA'S VINEYARD LAND BANK REPRESENTATIVE: 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,MODERATOR: 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,PARK COMMISSIONER: 336 == 336 x 1
@@ -6418,7 +6418,7 @@ Edgartown2021,2,contest_closes,PASS,PLANNING BOARD: 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,TOWN COLLECTOR: 336 == 336 x 1
 Edgartown2021,2,contest_closes,PASS,WASTEWATER TREATMENT COMMISSIONER: 336 == 336 x 1
-Edgartown2021,2,marks_exceed_ballots,FAIL,WATER COMMISSIONER: 406 marks > 336 ballots x 1 seats = 336
+Edgartown2021,2,marks_exceed_ballots,FAIL,"WATER COMMISSIONER: 406 marks > 336 ballots x 1 seats = 336 -- ballots derived, not printed: 12 of 13 contests agree on 336, and one of them reports 406"
 Edgartown2021,3,office_count_consistent,PASS,15 contests; median 12 in other years
 Edgartown2022,0,document_self_identifies,PASS,...w.mvtimes.com/oak-bluffs/) - [Edgartown](https://www.mvtimes.com/edga...
 Edgartown2022,0,carries_the_year,PASS,"....mvtimes.com/author/mvtimes/) April 14, 2022 1:36 pm Updated July 17, 2026 3:47 pm #..."
@@ -7012,7 +7012,7 @@ Florida2025,2,contest_closes,PASS,ASSESSOR 3yr: 41 == 41 x 1
 Florida2025,2,contest_closes,PASS,BOARD OF HEALTH 3yr: 41 == 41 x 1
 Florida2025,2,contest_closes,PASS,CONSTABLE 3yr: 41 == 41 x 1
 Florida2025,2,contest_closes,PASS,LIBRARY TRUSTEE 3yr: 41 == 41 x 1
-Florida2025,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE 3yr: 43 marks > 41 ballots x 1 seats = 41
+Florida2025,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE 3yr: 43 marks > 41 ballots x 1 seats = 41 -- ballots derived, not printed: 9 of 10 contests agree on 41, and one of them reports 43"
 Florida2025,2,contest_closes,PASS,SELECTMAN 3yr: 41 == 41 x 1
 Florida2025,2,regional_exempt,NOTE,NORTHERN BERKSHIRE VOCATIONAL REGIONAL SCHOO: spans several towns; ballot arithmetic does not apply
 Florida2025,2,contest_closes,PASS,TRUSTEE SOLDIERS MEMORIAL 3YR: 82 == 41 x 2
@@ -7382,7 +7382,7 @@ Georgetown2023,2,contest_closes,PASS,LIGHT COMMISSIONER: 1219 == 1219 x 1
 Georgetown2023,2,contest_closes,PASS,WATER COMMISSIONER: 1219 == 1219 x 1
 Georgetown2023,2,contest_closes,PASS,PLANNING BOARD: 1219 == 1219 x 1
 Georgetown2023,2,contest_closes,PASS,PEABODY LIBRARY TRUSTEES: 2438 == 1219 x 2
-Georgetown2023,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY: 1305 marks > 1219 ballots x 1 seats = 1219
+Georgetown2023,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY: 1305 marks > 1219 ballots x 1 seats = 1219 -- ballots derived, not printed: 5 of 6 contests agree on 1219, and one of them reports 1305"
 Georgetown2023,3,office_count_consistent,PASS,9 contests; median 8 in other years
 Georgetown2024,0,document_self_identifies,PASS,...OFFICIAL Georgetown RESULTS - TOWN ELECTION RESUL...
 Georgetown2024,0,carries_the_year,PASS,"...ESULTS - TOWN ELECTION RESULTS, May 13, 2024 Total Votes cast 2196 Registered voters..."
@@ -7767,7 +7767,7 @@ Granby2025,2,contest_closes,PASS,SCHOOL COMMITTEE (2 YEARS UNEXPIRED): 888 == 88
 Granby2025,2,contest_closes,PASS,SCHOOL COMMITTEE (1 YEAR UNEXPIRED): 888 == 888 x 1
 Granby2025,2,contest_closes,PASS,COMMISSIONER OF BURIAL GROUNDS (3 YEARS): 888 == 888 x 1
 Granby2025,2,contest_closes,PASS,LIBRARY TRUSTEE (3 YEARS): 2664 == 888 x 3
-Granby2025,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEE (1 YEAR UNEXPIRED): 890 marks > 888 ballots x 1 seats = 888
+Granby2025,2,marks_exceed_ballots,FAIL,"LIBRARY TRUSTEE (1 YEAR UNEXPIRED): 890 marks > 888 ballots x 1 seats = 888 -- ballots derived, not printed: 9 of 10 contests agree on 888, and one of them reports 890"
 Granby2025,3,office_count_consistent,PASS,11 contests; median 7 in other years
 Granby2026,0,document_self_identifies,PASS,"...GRANBY, Mass. (WWLP) – Voters in the..."
 Granby2026,0,carries_the_year,NOTE,the document prints no year at all; the date rests on corroboration (citation): Voters in the town of Granby went to the polls Monday for the town's annual election
@@ -7832,13 +7832,13 @@ Granville2024,2,ballots_derivable,PASS,6 of 9 contests agree on 348
 Granville2024,2,contest_closes,PASS,Moderator: 348 == 348 x 1
 Granville2024,2,contest_closes,PASS,Selectboard Representative: 348 == 348 x 1
 Granville2024,2,contest_closes,PASS,Town Clerk: 348 == 348 x 1
-Granville2024,2,marks_exceed_ballots,FAIL,Assessor: 371 marks > 348 ballots x 1 seats = 348
+Granville2024,2,marks_exceed_ballots,FAIL,"Assessor: 371 marks > 348 ballots x 1 seats = 348 -- ballots derived, not printed: 6 of 9 contests agree on 348, and one of them reports 371"
 Granville2024,2,tally_incomplete,NOTE,Planning Board: 347 of 348; 1 marks not tallied
 Granville2024,2,tally_incomplete,NOTE,Planning Board: 347 of 348; 1 marks not tallied
 Granville2024,2,contest_closes,PASS,Library Trustee: 348 == 348 x 1
 Granville2024,2,contest_closes,PASS,Constable: 348 == 348 x 1
 Granville2024,2,contest_closes,PASS,School Committee: 348 == 348 x 1
-Granville2024,2,marks_exceed_ballots,FAIL,Recreation Committee: 1393 marks > 348 ballots x 4 seats = 1392
+Granville2024,2,marks_exceed_ballots,FAIL,"Recreation Committee: 1393 marks > 348 ballots x 4 seats = 1392 -- ballots derived, not printed: 6 of 9 contests agree on 348, and one of them reports 371"
 Granville2024,3,office_count_consistent,PASS,10 contests; median 8 in other years
 Granville2025,0,document_self_identifies,PASS,...alth of Massachusetts TOWN OF GRANVILLE ANNUAL TOWN ELECTION BALLOT A...
 Granville2025,0,carries_the_year,PASS,"...LE ANNUAL TOWN ELECTION BALLOT April 7, 2025 To mark your ballot, place an X in the..."
@@ -8117,7 +8117,7 @@ Groveland2021,2,contest_closes,PASS,Cemetery Commissioner: 321 == 321 x 1
 Groveland2021,2,contest_closes,PASS,Housing Authority 5 YR: 321 == 321 x 1
 Groveland2021,2,contest_closes,PASS,Library Trustee 3 YR: 963 == 321 x 3
 Groveland2021,2,contest_closes,PASS,Library Trustee 1 YR: 321 == 321 x 1
-Groveland2021,2,marks_exceed_ballots,FAIL,Light Commission 3 YR: 323 marks > 321 ballots x 1 seats = 321
+Groveland2021,2,marks_exceed_ballots,FAIL,"Light Commission 3 YR: 323 marks > 321 ballots x 1 seats = 321 -- ballots derived, not printed: 15 of 16 contests agree on 321, and one of them reports 323"
 Groveland2021,2,contest_closes,PASS,Light Commission 1 Year: 321 == 321 x 1
 Groveland2021,2,contest_closes,PASS,Moderator: 321 == 321 x 1
 Groveland2021,2,contest_closes,PASS,Planning Board 5 YR: 321 == 321 x 1
@@ -8297,7 +8297,7 @@ Hadley2024,2,contest_closes,PASS,OLIVER SMITH WILL ELECTOR: 1265 == 1265 x 1
 Hadley2024,2,contest_closes,PASS,PARK COMMISSION: 1265 == 1265 x 1
 Hadley2024,2,contest_closes,PASS,LIBRARY TRUSTEE: 2530 == 1265 x 2
 Hadley2024,2,contest_closes,PASS,HOUSING AUTHORITY: 1265 == 1265 x 1
-Hadley2024,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEE: 1268 marks > 1265 ballots x 1 seats = 1265
+Hadley2024,2,marks_exceed_ballots,FAIL,"LIBRARY TRUSTEE: 1268 marks > 1265 ballots x 1 seats = 1265 -- ballots derived, not printed: 7 of 8 contests agree on 1265, and one of them reports 1268"
 Hadley2024,2,contest_closes,PASS,HOUSING AUTHORITY: 1265 == 1265 x 1
 Hadley2024,3,office_count_consistent,PASS,11 contests; median 10 in other years
 Hadley2025,0,document_self_identifies,PASS,"...Jessica Spanknebel Town Clerk Hadley, MA *Write in candidate **Pos..."
@@ -8655,7 +8655,7 @@ Hancock2025,2,contest_closes,PASS,Selectmen: 128 == 128 x 1
 Hancock2025,2,contest_closes,PASS,School Comm: 256 == 128 x 2
 Hancock2025,2,contest_closes,PASS,Tax Collector: 128 == 128 x 1
 Hancock2025,2,contest_closes,PASS,Board of Health: 256 == 128 x 2
-Hancock2025,2,marks_exceed_ballots,FAIL,Cemetery Comm: 247 marks > 128 ballots x 1 seats = 128
+Hancock2025,2,marks_exceed_ballots,FAIL,"Cemetery Comm: 247 marks > 128 ballots x 1 seats = 128 -- ballots derived, not printed: 8 of 9 contests agree on 128, and one of them reports 247"
 Hancock2025,2,contest_closes,PASS,Finance Committee: 128 == 128 x 1
 Hancock2025,2,contest_closes,PASS,Assessor: 256 == 128 x 2
 Hancock2025,2,contest_closes,PASS,Library Trustee: 128 == 128 x 1
@@ -9443,8 +9443,8 @@ Holbrook2022,2,tally_incomplete,NOTE,SCHOOL COMMITTEE 3 YRS (2): 1983 of 1990; 7
 Holbrook2022,2,contest_closes,PASS,TRUSTEE OF PUBLIC LIBRARY 3 YRS (1): 995 == 995 x 1
 Holbrook2022,2,contest_closes,PASS,BOARD OF HEALTH 3 YRS (2): 1990 == 995 x 2
 Holbrook2022,2,contest_closes,PASS,BOARD OF HEALTH 2 YRS (1): 995 == 995 x 1
-Holbrook2022,2,marks_exceed_ballots,FAIL,BOARD OF HEALTH 1 YR (1): 1029 marks > 995 ballots x 1 seats = 995
-Holbrook2022,2,marks_exceed_ballots,FAIL,PLANNING BOARD 5 YRS. (1): 997 marks > 995 ballots x 1 seats = 995
+Holbrook2022,2,marks_exceed_ballots,FAIL,"BOARD OF HEALTH 1 YR (1): 1029 marks > 995 ballots x 1 seats = 995 -- ballots derived, not printed: 4 of 6 contests agree on 995, and one of them reports 1029"
+Holbrook2022,2,marks_exceed_ballots,FAIL,"PLANNING BOARD 5 YRS. (1): 997 marks > 995 ballots x 1 seats = 995 -- ballots derived, not printed: 4 of 6 contests agree on 995, and one of them reports 1029"
 Holbrook2022,3,office_count_consistent,PASS,12 contests; median 16 in other years
 Holbrook2024,0,document_self_identifies,PASS,...‘TOWN OF HOLBROOK AN NUAL TOWN ELECTION 6-Apr-2...
 Holbrook2024,0,carries_the_year,PASS,...‘TOWN OF HOLBROOK AN NUAL TOWN ELECTION 6-Apr-24. Pr. 1 Pr. 2 Pr. 3 Pr. 4 TOTAL | BOARD...
@@ -10452,9 +10452,9 @@ Kingston2022,2,contest_closes,PASS,KINGSTON ELEMENTARY SCHOOL COMMITTEE: 1462 ==
 Kingston2022,2,contest_closes,PASS,WATER COMMISSIONER: 731 == 731 x 1
 Kingston2022,2,regional_exempt,NOTE,S.L. REGIONAL SCHOOL COMMITTEE: spans several towns; ballot arithmetic does not apply
 Kingston2022,2,contest_closes,PASS,BOARD OF HEALTH: 1462 == 731 x 2
-Kingston2022,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEES: 1522 marks > 731 ballots x 2 seats = 1462
+Kingston2022,2,marks_exceed_ballots,FAIL,"LIBRARY TRUSTEES: 1522 marks > 731 ballots x 2 seats = 1462 -- ballots derived, not printed: 8 of 9 contests agree on 731, and one of them reports 790"
 Kingston2022,2,contest_closes,PASS,RECREATION COMMISSION: 731 == 731 x 1
-Kingston2022,2,marks_exceed_ballots,FAIL,RECREATION COMMISSION: 790 marks > 731 ballots x 1 seats = 731
+Kingston2022,2,marks_exceed_ballots,FAIL,"RECREATION COMMISSION: 790 marks > 731 ballots x 1 seats = 731 -- ballots derived, not printed: 8 of 9 contests agree on 731, and one of them reports 790"
 Kingston2022,2,contest_closes,PASS,SEWER COMMISSIONER: 731 == 731 x 1
 Kingston2022,2,contest_closes,PASS,CONSTABLE: 1462 == 731 x 2
 Kingston2022,2,contest_closes,PASS,HOUSING AUTHORITY: 731 == 731 x 1
@@ -10959,9 +10959,9 @@ Leicester2026,2,contest_closes,PASS,ASSESSOR: 525 == 525 x 1
 Leicester2026,2,contest_closes,PASS,ASSESSOR: 525 == 525 x 1
 Leicester2026,2,contest_closes,PASS,BOARD OF HEALTH: 525 == 525 x 1
 Leicester2026,2,contest_closes,PASS,BOARD OF HEALTH: 525 == 525 x 1
-Leicester2026,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY: 660 marks > 525 ballots x 1 seats = 525
-Leicester2026,2,marks_exceed_ballots,FAIL,PLANNING BOARD: 1183 marks > 525 ballots x 2 seats = 1050
-Leicester2026,2,marks_exceed_ballots,FAIL,PLANNING BOARD: 560 marks > 525 ballots x 1 seats = 525
+Leicester2026,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY: 660 marks > 525 ballots x 1 seats = 525 -- ballots derived, not printed: 5 of 7 contests agree on 525, and one of them reports 660"
+Leicester2026,2,marks_exceed_ballots,FAIL,"PLANNING BOARD: 1183 marks > 525 ballots x 2 seats = 1050 -- ballots derived, not printed: 5 of 7 contests agree on 525, and one of them reports 660"
+Leicester2026,2,marks_exceed_ballots,FAIL,"PLANNING BOARD: 560 marks > 525 ballots x 1 seats = 525 -- ballots derived, not printed: 5 of 7 contests agree on 525, and one of them reports 660"
 Leicester2026,2,contest_closes,PASS,PUBLIC LIBRARY TRUSTEE: 1050 == 525 x 2
 Leicester2026,2,contest_closes,PASS,SCHOOL COMMITTEE: 1050 == 525 x 2
 Leicester2026,2,contest_closes,PASS,SCHOOL COMMITTEE: 525 == 525 x 1
@@ -11152,7 +11152,7 @@ Leyden2022,2,contest_closes,PASS,Board of Health 3 YR: 364 == 364 x 1
 Leyden2022,2,contest_closes,PASS,Selectboard 3 YR: 364 == 364 x 1
 Leyden2022,2,contest_closes,PASS,Selectboard 2 YR: 364 == 364 x 1
 Leyden2022,2,contest_closes,PASS,Library Trustee 3YR: 364 == 364 x 1
-Leyden2022,2,marks_exceed_ballots,FAIL,Moderator 1 YR: 365 marks > 364 ballots x 1 seats = 364
+Leyden2022,2,marks_exceed_ballots,FAIL,"Moderator 1 YR: 365 marks > 364 ballots x 1 seats = 364 -- ballots derived, not printed: 8 of 10 contests agree on 364, and one of them reports 365"
 Leyden2022,2,contest_closes,PASS,Constable 3 YR: 364 == 364 x 1
 Leyden2022,2,contest_closes,PASS,Board of Health 1 YR: 364 == 364 x 1
 Leyden2022,2,contest_closes,PASS,Tree Warden 1 YR: 364 == 364 x 1
@@ -11435,8 +11435,8 @@ Longmeadow2026,2,contest_closes,PASS,PLANNING BOARD: 1284 == 1284 x 1
 Longmeadow2026,3,office_count_consistent,PASS,3 contests; median 5 in other years
 Lowell2021,0,document_self_identifies,PASS,"...ary Report MUNICIPAL ELECTION LOWELL, MA Official Results November..."
 Lowell2021,0,carries_the_year,PASS,"...LOWELL, MA Official Results November 2, 2021 Date:1 1/12/21 Time:12:04:39 Page: of 3..."
-Lowell2021,0,document_supports_record,PASS,39/40 names and 56/57 figures located in raw_ocr+markdown+pdftext
-Lowell2021,1,names_grounded,FAIL,39/40 names located in raw_ocr+markdown+pdftext
+Lowell2021,0,document_supports_record,PASS,40/40 names and 56/57 figures located in raw_ocr+markdown+pdftext
+Lowell2021,1,names_grounded,PASS,40/40 names located in raw_ocr+markdown+pdftext
 Lowell2021,1,figures_grounded,FAIL,56/57 figures located in raw_ocr+markdown+pdftext
 Lowell2021,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Lowell2021,3,office_count_consistent,PASS,17 contests; median 14 in other years
@@ -12909,16 +12909,16 @@ Middleborough2023,0,document_supports_record,PASS,68/68 names and 76/78 figures 
 Middleborough2023,1,names_grounded,PASS,68/68 names located in raw_ocr+markdown
 Middleborough2023,1,figures_grounded,FAIL,76/78 figures located in raw_ocr+markdown
 Middleborough2023,2,ballots_derivable,PASS,3 of 6 contests agree on 1396
-Middleborough2023,2,marks_exceed_ballots,FAIL,SELECT BOARD FOR 3 YEARS: 2796 marks > 1396 ballots x 2 seats = 2792
+Middleborough2023,2,marks_exceed_ballots,FAIL,"SELECT BOARD FOR 3 YEARS: 2796 marks > 1396 ballots x 2 seats = 2792 -- ballots derived, not printed: 3 of 6 contests agree on 1396, and one of them reports 1398"
 Middleborough2023,2,contest_closes,PASS,GAS & ELECTRIC COMMISSIONERS FOR 3 YEARS: 1396 == 1396 x 1
-Middleborough2023,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE FOR 3 YEARS: 2793 marks > 1396 ballots x 2 seats = 2792
+Middleborough2023,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE FOR 3 YEARS: 2793 marks > 1396 ballots x 2 seats = 2792 -- ballots derived, not printed: 3 of 6 contests agree on 1396, and one of them reports 1398"
 Middleborough2023,2,contest_closes,PASS,SCHOOL COMMITTEE FOR UNEXPIRED TERM TO 2025: 1396 == 1396 x 1
-Middleborough2023,2,marks_exceed_ballots,FAIL,BOARD OF ASSESSORS FOR 3 YEARS: 1398 marks > 1396 ballots x 1 seats = 1396
-Middleborough2023,2,marks_exceed_ballots,FAIL,FINANCE COMMITTEE FOR 3 YEARS: 4192 marks > 1396 ballots x 3 seats = 4188
+Middleborough2023,2,marks_exceed_ballots,FAIL,"BOARD OF ASSESSORS FOR 3 YEARS: 1398 marks > 1396 ballots x 1 seats = 1396 -- ballots derived, not printed: 3 of 6 contests agree on 1396, and one of them reports 1398"
+Middleborough2023,2,marks_exceed_ballots,FAIL,"FINANCE COMMITTEE FOR 3 YEARS: 4192 marks > 1396 ballots x 3 seats = 4188 -- ballots derived, not printed: 3 of 6 contests agree on 1396, and one of them reports 1398"
 Middleborough2023,2,contest_closes,PASS,PLANNING BOARD FOR 5 YEARS: 1396 == 1396 x 1
-Middleborough2023,2,marks_exceed_ballots,FAIL,PARK COMMISSIONERS FOR 3 YEARS: 2795 marks > 1396 ballots x 2 seats = 2792
-Middleborough2023,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY FOR 5 YEARS: 1397 marks > 1396 ballots x 1 seats = 1396
-Middleborough2023,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY FOR UNEXPIRED TERM TO 2024: 1398 marks > 1396 ballots x 1 seats = 1396
+Middleborough2023,2,marks_exceed_ballots,FAIL,"PARK COMMISSIONERS FOR 3 YEARS: 2795 marks > 1396 ballots x 2 seats = 2792 -- ballots derived, not printed: 3 of 6 contests agree on 1396, and one of them reports 1398"
+Middleborough2023,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY FOR 5 YEARS: 1397 marks > 1396 ballots x 1 seats = 1396 -- ballots derived, not printed: 3 of 6 contests agree on 1396, and one of them reports 1398"
+Middleborough2023,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY FOR UNEXPIRED TERM TO 2024: 1398 marks > 1396 ballots x 1 seats = 1396 -- ballots derived, not printed: 3 of 6 contests agree on 1396, and one of them reports 1398"
 Middleborough2023,3,office_count_consistent,PASS,10 contests; median 10 in other years
 Middleborough2024,0,document_self_identifies,PASS,...TOWN OF MIDDLEBOROUGH RECORD OF Annual Town Electio...
 Middleborough2024,0,carries_the_year,PASS,"...ion OFFICIAL RESULTS Saturday, April 6, 2024 |Registered Voters: | 20,010 Votes Cast..."
@@ -13249,14 +13249,14 @@ Millbury2024,0,document_supports_record,PASS,107/107 names and 116/116 figures l
 Millbury2024,1,names_grounded,PASS,107/107 names located in markdown+pdftext
 Millbury2024,1,figures_grounded,PASS,116/116 figures located in markdown+pdftext
 Millbury2024,2,ballots_derivable,PASS,2 of 4 contests agree on 917
-Millbury2024,2,marks_exceed_ballots,FAIL,BOARD OF SELECTMEN 3 YRS: 1843 marks > 917 ballots x 2 seats = 1834
-Millbury2024,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE 3 YRS: 1835 marks > 917 ballots x 2 seats = 1834
+Millbury2024,2,marks_exceed_ballots,FAIL,"BOARD OF SELECTMEN 3 YRS: 1843 marks > 917 ballots x 2 seats = 1834 -- ballots derived, not printed: 2 of 4 contests agree on 917, and one of them reports 919"
+Millbury2024,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE 3 YRS: 1835 marks > 917 ballots x 2 seats = 1834 -- ballots derived, not printed: 2 of 4 contests agree on 917, and one of them reports 919"
 Millbury2024,2,contest_closes,PASS,SCHOOL COMMITTEE 1 YR: 917 == 917 x 1
 Millbury2024,2,contest_closes,PASS,BOARD OF ASSESSORS 3 YRS: 917 == 917 x 1
-Millbury2024,2,marks_exceed_ballots,FAIL,PLANNING BOARD 3 YRS: 1839 marks > 917 ballots x 2 seats = 1834
-Millbury2024,2,marks_exceed_ballots,FAIL,BOARD OF HEALTH 3 YRS: 919 marks > 917 ballots x 1 seats = 917
-Millbury2024,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEES 3 YRS: 1838 marks > 917 ballots x 2 seats = 1834
-Millbury2024,2,marks_exceed_ballots,FAIL,RE-DEVELOPMENT AUTHORITY 5 YRS: 1838 marks > 917 ballots x 2 seats = 1834
+Millbury2024,2,marks_exceed_ballots,FAIL,"PLANNING BOARD 3 YRS: 1839 marks > 917 ballots x 2 seats = 1834 -- ballots derived, not printed: 2 of 4 contests agree on 917, and one of them reports 919"
+Millbury2024,2,marks_exceed_ballots,FAIL,"BOARD OF HEALTH 3 YRS: 919 marks > 917 ballots x 1 seats = 917 -- ballots derived, not printed: 2 of 4 contests agree on 917, and one of them reports 919"
+Millbury2024,2,marks_exceed_ballots,FAIL,"LIBRARY TRUSTEES 3 YRS: 1838 marks > 917 ballots x 2 seats = 1834 -- ballots derived, not printed: 2 of 4 contests agree on 917, and one of them reports 919"
+Millbury2024,2,marks_exceed_ballots,FAIL,"RE-DEVELOPMENT AUTHORITY 5 YRS: 1838 marks > 917 ballots x 2 seats = 1834 -- ballots derived, not printed: 2 of 4 contests agree on 917, and one of them reports 919"
 Millbury2024,2,tally_incomplete,NOTE,MODERATOR 3 YRS: 902 of 917; 15 marks not tallied
 Millbury2024,3,office_count_consistent,PASS,9 contests; median 10 in other years
 Millbury2025,0,document_self_identifies,NOTE,document never prints 'Millbury'; identity rests on the citation alone
@@ -13568,12 +13568,12 @@ Milton2026,2,ballots_derivable,PASS,4 of 5 contests agree on 5711
 Milton2026,2,tally_incomplete,NOTE,Member of the Selectboard and Surveyor of th: 11316 of 11422; 106 marks not tallied
 Milton2026,2,contest_closes,PASS,Board of Assessors: 5711 == 5711 x 1
 Milton2026,2,tally_incomplete,NOTE,School Committee: 11420 of 11422; 2 marks not tallied
-Milton2026,2,marks_exceed_ballots,FAIL,School Committee: 5725 marks > 5711 ballots x 1 seats = 5711
+Milton2026,2,marks_exceed_ballots,FAIL,"School Committee: 5725 marks > 5711 ballots x 1 seats = 5711 -- ballots derived, not printed: 4 of 5 contests agree on 5711, and one of them reports 5725"
 Milton2026,2,contest_closes,PASS,Park Commissioner: 5711 == 5711 x 1
 Milton2026,2,contest_closes,PASS,Board of Health: 5711 == 5711 x 1
 Milton2026,2,tally_incomplete,NOTE,Trustees of the Public Library: 17121 of 17133; 12 marks not tallied
 Milton2026,2,contest_closes,PASS,Trustee of the Cemetery: 5711 == 5711 x 1
-Milton2026,2,marks_exceed_ballots,FAIL,Planning Board: 11423 marks > 5711 ballots x 2 seats = 11422
+Milton2026,2,marks_exceed_ballots,FAIL,"Planning Board: 11423 marks > 5711 ballots x 2 seats = 11422 -- ballots derived, not printed: 4 of 5 contests agree on 5711, and one of them reports 5725"
 Milton2026,3,office_count_consistent,PASS,24 contests; median 24 in other years
 Monroe2022,0,document_held,FAIL,no document of any kind held
 Monroe2022,1,grounded,UNKNOWN,no document text held
@@ -13677,7 +13677,7 @@ Monson2026,2,contest_closes,PASS,SELECT BOARD (3 YRS): 1552 == 1552 x 1
 Monson2026,2,contest_closes,PASS,TOWN CLERK (3 YRS): 1552 == 1552 x 1
 Monson2026,2,contest_closes,PASS,BOARD OF ASSESSORS (3 YRS): 1552 == 1552 x 1
 Monson2026,2,contest_closes,PASS,SCHOOL COMMITTEE (3 YRS): 1552 == 1552 x 1
-Monson2026,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE (2 YRS): 1555 marks > 1552 ballots x 1 seats = 1552
+Monson2026,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE (2 YRS): 1555 marks > 1552 ballots x 1 seats = 1552 -- ballots derived, not printed: 8 of 9 contests agree on 1552, and one of them reports 1555"
 Monson2026,2,contest_closes,PASS,WATER & SEWER COMMISSIONER (3 YRS): 1552 == 1552 x 1
 Monson2026,2,contest_closes,PASS,CEMETERY COMMISSIONER (3 YRS): 1552 == 1552 x 1
 Monson2026,2,contest_closes,PASS,PARKS & RECREATION COMMISSIONER (3 YRS): 1552 == 1552 x 1
@@ -13751,7 +13751,7 @@ Montague2024,2,contest_closes,PASS,Public Library Trustee: 718 == 718 x 1
 Montague2024,2,contest_closes,PASS,Montague Housing Authority: 718 == 718 x 1
 Montague2024,2,contest_closes,PASS,Parks & Recreation Commission: 718 == 718 x 1
 Montague2024,2,contest_closes,PASS,"Trustee, Soldiers Memorial (Non-Veteran): 718 == 718 x 1"
-Montague2024,2,marks_exceed_ballots,FAIL,"Trustee, Soldiers Memorial (Veteran): 721 marks > 718 ballots x 1 seats = 718"
+Montague2024,2,marks_exceed_ballots,FAIL,"Trustee, Soldiers Memorial (Veteran): 721 marks > 718 ballots x 1 seats = 718 -- ballots derived, not printed: 8 of 9 contests agree on 718, and one of them reports 721"
 Montague2024,2,regional_exempt,NOTE,Gill-Montague Regional School Committee: spans several towns; ballot arithmetic does not apply
 Montague2024,2,regional_exempt,NOTE,Gill-Montague Regional School Committee: spans several towns; ballot arithmetic does not apply
 Montague2024,3,office_count_consistent,PASS,26 contests; median 22 in other years
@@ -13796,15 +13796,15 @@ Monterey2021,2,ballots_derivable,PASS,3 of 10 contests agree on 269
 Monterey2021,2,contest_closes,PASS,MODERATOR—one year: 269 == 269 x 1
 Monterey2021,2,contest_closes,PASS,BOARD OF APPEALS—five years: 269 == 269 x 1
 Monterey2021,2,contest_closes,PASS,BOARD OF ASSESSORS—three years: 269 == 269 x 1
-Monterey2021,2,marks_exceed_ballots,FAIL,BOARD OF HEALTH—three years: 301 marks > 269 ballots x 1 seats = 269
-Monterey2021,2,marks_exceed_ballots,FAIL,FINANCE COMMITTEE—three years: 311 marks > 269 ballots x 1 seats = 269
+Monterey2021,2,marks_exceed_ballots,FAIL,"BOARD OF HEALTH—three years: 301 marks > 269 ballots x 1 seats = 269 -- ballots derived, not printed: 3 of 10 contests agree on 269, and one of them reports 322"
+Monterey2021,2,marks_exceed_ballots,FAIL,"FINANCE COMMITTEE—three years: 311 marks > 269 ballots x 1 seats = 269 -- ballots derived, not printed: 3 of 10 contests agree on 269, and one of them reports 322"
 Monterey2021,2,contest_closes,PASS,LIBRARY TRUSTEE—three years: 538 == 269 x 2
-Monterey2021,2,marks_exceed_ballots,FAIL,PARKS COMMISSION—three years: 571 marks > 269 ballots x 2 seats = 538
+Monterey2021,2,marks_exceed_ballots,FAIL,"PARKS COMMISSION—three years: 571 marks > 269 ballots x 2 seats = 538 -- ballots derived, not printed: 3 of 10 contests agree on 269, and one of them reports 322"
 Monterey2021,2,tally_incomplete,NOTE,PARKS COMMISSION—one year: 261 of 269; 8 marks not tallied
-Monterey2021,2,marks_exceed_ballots,FAIL,PLANNING BOARD—four years: 273 marks > 269 ballots x 1 seats = 269
+Monterey2021,2,marks_exceed_ballots,FAIL,"PLANNING BOARD—four years: 273 marks > 269 ballots x 1 seats = 269 -- ballots derived, not printed: 3 of 10 contests agree on 269, and one of them reports 322"
 Monterey2021,2,tally_incomplete,NOTE,PLANNING BOARD—five years: 263 of 269; 6 marks not tallied
-Monterey2021,2,marks_exceed_ballots,FAIL,SELECT BOARD—three years: 322 marks > 269 ballots x 1 seats = 269
-Monterey2021,2,marks_exceed_ballots,FAIL,TREE WARDEN—one year: 270 marks > 269 ballots x 1 seats = 269
+Monterey2021,2,marks_exceed_ballots,FAIL,"SELECT BOARD—three years: 322 marks > 269 ballots x 1 seats = 269 -- ballots derived, not printed: 3 of 10 contests agree on 269, and one of them reports 322"
+Monterey2021,2,marks_exceed_ballots,FAIL,"TREE WARDEN—one year: 270 marks > 269 ballots x 1 seats = 269 -- ballots derived, not printed: 3 of 10 contests agree on 269, and one of them reports 322"
 Monterey2021,3,office_count_consistent,PASS,12 contests; median 14 in other years
 Monterey2023,0,document_self_identifies,NOTE,document never prints 'Monterey'; identity rests on the citation alone
 Monterey2023,0,carries_the_year,NOTE,the document prints no year at all; the date rests on corroboration (filename): 2023-05-09
@@ -13864,9 +13864,9 @@ Monterey2026,2,contest_closes,PASS,Tree Warden: 313 == 313 x 1
 Monterey2026,3,office_count_consistent,PASS,16 contests; median 13 in other years
 Montgomery2021,0,document_self_identifies,PASS,...a June 2021 MONTGOMERY y Last masked issue! Printed...
 Montgomery2021,0,carries_the_year,PASS,...a June 2021 MONTGOMERY y Last masked issue! Printed...
-Montgomery2021,0,document_supports_record,PASS,17/21 names and 28/29 figures located in raw_ocr+pdftext
+Montgomery2021,0,document_supports_record,PASS,17/21 names and 29/29 figures located in raw_ocr+pdftext
 Montgomery2021,1,names_grounded,FAIL,17/21 names located in raw_ocr+pdftext
-Montgomery2021,1,figures_grounded,FAIL,28/29 figures located in raw_ocr+pdftext
+Montgomery2021,1,figures_grounded,PASS,29/29 figures located in raw_ocr+pdftext
 Montgomery2021,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 Montgomery2021,3,office_count_consistent,PASS,8 contests; median 8 in other years
 Montgomery2022,0,document_self_identifies,PASS,"...# Montgomery, MA - Annual Town Election, M..."
@@ -14274,7 +14274,7 @@ Needham2022,2,ballots_derivable,PASS,7 of 8 contests agree on 2874
 Needham2022,2,contest_closes,PASS,MODERATOR (for three years)(Vote for One): 2874 == 2874 x 1
 Needham2022,2,contest_closes,PASS,SELECT BOARD (for three years)(Vote for One): 2874 == 2874 x 1
 Needham2022,2,contest_closes,PASS,TOWN CLERK (for three years)(Vote for One): 2874 == 2874 x 1
-Needham2022,2,marks_exceed_ballots,FAIL,ASSESSOR (for three years)(Vote for One): 2875 marks > 2874 ballots x 1 seats = 2874
+Needham2022,2,marks_exceed_ballots,FAIL,"ASSESSOR (for three years)(Vote for One): 2875 marks > 2874 ballots x 1 seats = 2874 -- ballots derived, not printed: 7 of 8 contests agree on 2874, and one of them reports 2875"
 Needham2022,2,contest_closes,PASS,SCHOOL COMMITTEE (for three years)(Vote for : 8622 == 2874 x 3
 Needham2022,2,contest_closes,PASS,TRUSTEE OF MEMORIAL PARK (Trustee of Soldier: 2874 == 2874 x 1
 Needham2022,2,contest_closes,PASS,TRUSTEE OF MEMORIAL PARK (Trustee of Soldier: 2874 == 2874 x 1
@@ -14297,17 +14297,17 @@ Needham2024,0,document_supports_record,PASS,116/118 names and 120/164 figures lo
 Needham2024,1,names_grounded,FAIL,116/118 names located in markdown
 Needham2024,1,figures_grounded,FAIL,120/164 figures located in markdown
 Needham2024,2,ballots_derivable,PASS,6 of 7 contests agree on 4862
-Needham2024,2,marks_exceed_ballots,FAIL,SELECT BOARD (for three years) (Vote for Not: 9733 marks > 4862 ballots x 2 seats = 9724
+Needham2024,2,marks_exceed_ballots,FAIL,"SELECT BOARD (for three years) (Vote for Not: 9733 marks > 4862 ballots x 2 seats = 9724 -- ballots derived, not printed: 6 of 7 contests agree on 4862, and one of them reports 4863"
 Needham2024,2,contest_closes,PASS,TOWN CLERK (for one year) (Vote for One): 4862 == 4862 x 1
 Needham2024,2,contest_closes,PASS,ASSESSOR (for three years)(Vote for One): 4862 == 4862 x 1
-Needham2024,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE (for three years)(Vote for : 9736 marks > 4862 ballots x 2 seats = 9724
+Needham2024,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE (for three years)(Vote for : 9736 marks > 4862 ballots x 2 seats = 9724 -- ballots derived, not printed: 6 of 7 contests agree on 4862, and one of them reports 4863"
 Needham2024,2,contest_closes,PASS,TRUSTEE OF MEMORIAL PARK (Trustee of Soldier: 4862 == 4862 x 1
 Needham2024,2,contest_closes,PASS,TRUSTEE OF MEMORIAL PARK (Trustee of Soldier: 4862 == 4862 x 1
 Needham2024,2,contest_closes,PASS,TRUSTEE OF NEEDHAM PUBLIC LIBRARY (for three: 9724 == 4862 x 2
 Needham2024,2,tally_incomplete,NOTE,BOARD OF HEALTH (For three years)(Vote for N: 9721 of 9724; 3 marks not tallied
 Needham2024,2,contest_closes,PASS,PLANNING BOARD (For five years)(Vote for One: 4862 == 4862 x 1
 Needham2024,2,contest_closes,PASS,COMMISSIONER OF TRUST FUNDS (For three years: 4862 == 4862 x 1
-Needham2024,2,marks_exceed_ballots,FAIL,NEEDHAM HOUSING AUTHORITY (for five years) (: 4863 marks > 4862 ballots x 1 seats = 4862
+Needham2024,2,marks_exceed_ballots,FAIL,"NEEDHAM HOUSING AUTHORITY (for five years) (: 4863 marks > 4862 ballots x 1 seats = 4862 -- ballots derived, not printed: 6 of 7 contests agree on 4862, and one of them reports 4863"
 Needham2024,2,contest_closes,PASS,PARK & RECREATION COMMISSION (For three year: 9724 == 4862 x 2
 Needham2024,3,office_count_consistent,PASS,23 contests; median 22 in other years
 Needham2025,0,document_self_identifies,PASS,...ED | ED | Total | | TRUSTEEOFNEEDHAMPUBLICLIBRARY(for threeyears)(...
@@ -14336,17 +14336,17 @@ Needham2026,0,document_supports_record,PASS,142/142 names and 180/190 figures lo
 Needham2026,1,names_grounded,PASS,142/142 names located in raw_ocr+pdftext
 Needham2026,1,figures_grounded,FAIL,180/190 figures located in raw_ocr+pdftext
 Needham2026,2,ballots_derivable,PASS,4 of 7 contests agree on 6137
-Needham2026,2,marks_exceed_ballots,FAIL,SELECT BOARD (for three years) (Vote for NOT: 12276 marks > 6137 ballots x 2 seats = 12274
-Needham2026,2,marks_exceed_ballots,FAIL,CONSTABLE (for three years) (Vote for NOT MO: 12317 marks > 6137 ballots x 2 seats = 12274
+Needham2026,2,marks_exceed_ballots,FAIL,"SELECT BOARD (for three years) (Vote for NOT: 12276 marks > 6137 ballots x 2 seats = 12274 -- ballots derived, not printed: 4 of 7 contests agree on 6137, and one of them reports 6140"
+Needham2026,2,marks_exceed_ballots,FAIL,"CONSTABLE (for three years) (Vote for NOT MO: 12317 marks > 6137 ballots x 2 seats = 12274 -- ballots derived, not printed: 4 of 7 contests agree on 6137, and one of them reports 6140"
 Needham2026,2,contest_closes,PASS,ASSESSOR (for three years) (Vote for ONE): 6137 == 6137 x 1
-Needham2026,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE (for three years)(Vote for : 12276 marks > 6137 ballots x 2 seats = 12274
-Needham2026,2,marks_exceed_ballots,FAIL,TRUSTEE OF MEMORIAL PARK (Trustee of Soldier: 6138 marks > 6137 ballots x 1 seats = 6137
-Needham2026,2,marks_exceed_ballots,FAIL,TRUSTEE OF NEEDHAM PUBLIC LIBRARY (for three: 18413 marks > 6137 ballots x 3 seats = 18411
+Needham2026,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE (for three years)(Vote for : 12276 marks > 6137 ballots x 2 seats = 12274 -- ballots derived, not printed: 4 of 7 contests agree on 6137, and one of them reports 6140"
+Needham2026,2,marks_exceed_ballots,FAIL,"TRUSTEE OF MEMORIAL PARK (Trustee of Soldier: 6138 marks > 6137 ballots x 1 seats = 6137 -- ballots derived, not printed: 4 of 7 contests agree on 6137, and one of them reports 6140"
+Needham2026,2,marks_exceed_ballots,FAIL,"TRUSTEE OF NEEDHAM PUBLIC LIBRARY (for three: 18413 marks > 6137 ballots x 3 seats = 18411 -- ballots derived, not printed: 4 of 7 contests agree on 6137, and one of them reports 6140"
 Needham2026,2,contest_closes,PASS,BOARD OF HEALTH (for three years) (Vote for : 6137 == 6137 x 1
 Needham2026,2,contest_closes,PASS,PLANNING BOARD (For five years)(Vote for ONE: 6137 == 6137 x 1
 Needham2026,2,tally_incomplete,NOTE,COMMISSIONER OF TRUST FUNDS (For three years: 6081 of 6137; 56 marks not tallied
 Needham2026,2,contest_closes,PASS,NEEDHAM HOUSING AUTHORITY (for two years) (V: 6137 == 6137 x 1
-Needham2026,2,marks_exceed_ballots,FAIL,PARK & RECREATION COMMISSION (For three year: 6140 marks > 6137 ballots x 1 seats = 6137
+Needham2026,2,marks_exceed_ballots,FAIL,"PARK & RECREATION COMMISSION (For three year: 6140 marks > 6137 ballots x 1 seats = 6137 -- ballots derived, not printed: 4 of 7 contests agree on 6137, and one of them reports 6140"
 Needham2026,3,office_count_consistent,PASS,25 contests; median 22 in other years
 NewAshford2021,0,document_self_identifies,PASS,"...L BALLOT ANNUAL TOWN ELECTION NEW ASHFORD, MASSACHUSETTS MAY 25, 2021 2..."
 NewAshford2021,0,carries_the_year,PASS,"...TION NEW ASHFORD, MASSACHUSETTS MAY 25, 2021 2:00P.M. - 4:00P.M. & 6:00P.M. - 8:00P...."
@@ -14783,7 +14783,7 @@ NorthAndover2021,2,contest_closes,PASS,MODERATOR: 4038 == 4038 x 1
 NorthAndover2021,2,contest_closes,PASS,HOUSING AUTHORITY: 4038 == 4038 x 1
 NorthAndover2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 8076 == 4038 x 2
 NorthAndover2021,3,office_count_consistent,PASS,4 contests; median 3 in other years
-NorthAndover2022,0,document_self_identifies,PASS,...p; Government](\massachusetts\northandover\politics) # North Andover 202...
+NorthAndover2022,0,document_self_identifies,PASS,...etts\northandover\politics) # North Andover 2022 Election Results: Hicks...
 NorthAndover2022,0,carries_the_year,PASS,...\northandover\politics) # North Andover 2022 Election Results: Hicks Wins School Boa...
 NorthAndover2022,0,document_supports_record,PASS,4/4 names and 4/4 figures located in news_text
 NorthAndover2022,1,names_grounded,PASS,4/4 names located in news_text
@@ -14929,14 +14929,14 @@ NorthBrookfield2025,1,figures_grounded,PASS,48/48 figures located in raw_ocr+pdf
 NorthBrookfield2025,2,ballots_derivable,PASS,5 of 9 contests agree on 759
 NorthBrookfield2025,2,regional_exempt,NOTE,Southern Worcester County Regional Vocationa: spans several towns; ballot arithmetic does not apply
 NorthBrookfield2025,2,contest_closes,PASS,Selectman for 3 years: 759 == 759 x 1
-NorthBrookfield2025,2,marks_exceed_ballots,FAIL,Selectman for 2 years to fill a term: 760 marks > 759 ballots x 1 seats = 759
+NorthBrookfield2025,2,marks_exceed_ballots,FAIL,"Selectman for 2 years to fill a term: 760 marks > 759 ballots x 1 seats = 759 -- ballots derived, not printed: 5 of 9 contests agree on 759, and one of them reports 760"
 NorthBrookfield2025,2,contest_closes,PASS,Moderator for 3 years: 759 == 759 x 1
 NorthBrookfield2025,2,contest_closes,PASS,Town Clerk for 3 years: 759 == 759 x 1
 NorthBrookfield2025,2,tally_incomplete,NOTE,School Committee for 3 years: 755 of 759; 4 marks not tallied
 NorthBrookfield2025,2,contest_closes,PASS,School Committee for 2 years to fill a term: 759 == 759 x 1
 NorthBrookfield2025,2,contest_closes,PASS,Water Commissioner for 3 years: 759 == 759 x 1
-NorthBrookfield2025,2,marks_exceed_ballots,FAIL,Board of Assessors for 3 years: 760 marks > 759 ballots x 1 seats = 759
-NorthBrookfield2025,2,marks_exceed_ballots,FAIL,Board of Assessors for 2 years to fill a ter: 760 marks > 759 ballots x 1 seats = 759
+NorthBrookfield2025,2,marks_exceed_ballots,FAIL,"Board of Assessors for 3 years: 760 marks > 759 ballots x 1 seats = 759 -- ballots derived, not printed: 5 of 9 contests agree on 759, and one of them reports 760"
+NorthBrookfield2025,2,marks_exceed_ballots,FAIL,"Board of Assessors for 2 years to fill a ter: 760 marks > 759 ballots x 1 seats = 759 -- ballots derived, not printed: 5 of 9 contests agree on 759, and one of them reports 760"
 NorthBrookfield2025,3,office_count_consistent,PASS,13 contests; median 12 in other years
 NorthBrookfield2026,0,document_self_identifies,PASS,"...# North Brookfield, Massachusetts -- Annual Town..."
 NorthBrookfield2026,0,carries_the_year,PASS,"...husetts -- Annual Town Election, May 4, 2026 Transcribed from the Spencer New Leader..."
@@ -15370,8 +15370,8 @@ Norton2025,2,ballots_derivable,UNKNOWN,"2 contests, no two agree: [1277, 1278]"
 Norton2025,3,office_count_consistent,PASS,6 contests; median 6 in other years
 Norton2026,0,document_self_identifies,PASS,...Town of Norton Town Clerks Office 72 East Ma...
 Norton2026,0,carries_the_year,PASS,"...s of the Annual Town Election April 11, 2026 The Annual Town Election was held on Sa..."
-Norton2026,0,document_supports_record,PASS,9/9 names and 19/21 figures located in raw_ocr
-Norton2026,1,names_grounded,PASS,9/9 names located in raw_ocr
+Norton2026,0,document_supports_record,PASS,8/9 names and 19/21 figures located in raw_ocr
+Norton2026,1,names_grounded,FAIL,8/9 names located in raw_ocr
 Norton2026,1,figures_grounded,FAIL,19/21 figures located in raw_ocr
 Norton2026,2,ballots_derivable,PASS,5 of 5 contests agree on 1232
 Norton2026,2,contest_closes,PASS,BOARD OF ASSESSORS (1 seat-3YR TERM): 1232 == 1232 x 1
@@ -15403,13 +15403,13 @@ Norwell2022,0,document_supports_record,PASS,14/14 names and 34/34 figures locate
 Norwell2022,1,names_grounded,PASS,14/14 names located in markdown
 Norwell2022,1,figures_grounded,PASS,34/34 figures located in markdown
 Norwell2022,2,ballots_derivable,PASS,5 of 6 contests agree on 363
-Norwell2022,2,marks_exceed_ballots,FAIL,BOARD OF ASSESSORS-Three Years-Vote for One: 434 marks > 363 ballots x 1 seats = 363
+Norwell2022,2,marks_exceed_ballots,FAIL,"BOARD OF ASSESSORS-Three Years-Vote for One: 434 marks > 363 ballots x 1 seats = 363 -- ballots derived, not printed: 5 of 6 contests agree on 363, and one of them reports 434"
 Norwell2022,2,contest_closes,PASS,BOARD OF HEALTH-Three Years-Vote for One: 363 == 363 x 1
 Norwell2022,2,tally_incomplete,NOTE,BOARD OF SELECTMEN-Three Years-Vote for One: 724 of 726; 2 marks not tallied
 Norwell2022,2,contest_closes,PASS,BOARD OF WATER COMMISSIONERS-Three Year term: 363 == 363 x 1
 Norwell2022,2,contest_closes,PASS,HIGHWAY SURVEYOR/DIRECTOR-Three Year-Vote fo: 363 == 363 x 1
 Norwell2022,2,contest_closes,PASS,MODERATOR-One Year Term-Vote for One: 363 == 363 x 1
-Norwell2022,2,marks_exceed_ballots,FAIL,NORWELL PUBLIC LIBRARY TRUSTEES-Three Year-V: 736 marks > 363 ballots x 2 seats = 726
+Norwell2022,2,marks_exceed_ballots,FAIL,"NORWELL PUBLIC LIBRARY TRUSTEES-Three Year-V: 736 marks > 363 ballots x 2 seats = 726 -- ballots derived, not printed: 5 of 6 contests agree on 363, and one of them reports 434"
 Norwell2022,2,contest_closes,PASS,NORWELL HOUSING AUTHORITY-Three Year Term-Vo: 363 == 363 x 1
 Norwell2022,2,contest_closes,PASS,PLANNING BOARD-Three Year Term-Vote for Two: 726 == 363 x 2
 Norwell2022,2,contest_closes,PASS,SCHOOL COMMITTEE-Three Year term-Vote for On: 726 == 363 x 2
@@ -15674,7 +15674,7 @@ Oakham2024,0,document_supports_record,PASS,9/9 names and 25/25 figures located i
 Oakham2024,1,names_grounded,PASS,9/9 names located in raw_ocr+pdftext
 Oakham2024,1,figures_grounded,PASS,25/25 figures located in raw_ocr+pdftext
 Oakham2024,2,ballots_derivable,PASS,6 of 7 contests agree on 579
-Oakham2024,2,marks_exceed_ballots,FAIL,"Selectmen, 3 Years: 580 marks > 579 ballots x 1 seats = 579"
+Oakham2024,2,marks_exceed_ballots,FAIL,"Selectmen, 3 Years: 580 marks > 579 ballots x 1 seats = 579 -- ballots derived, not printed: 6 of 7 contests agree on 579, and one of them reports 580"
 Oakham2024,2,contest_closes,PASS,"Town Clerk, 3 Years: 579 == 579 x 1"
 Oakham2024,2,contest_closes,PASS,"Assessor, 3 Years: 579 == 579 x 1"
 Oakham2024,2,contest_closes,PASS,"Board of Health, 3 Years: 579 == 579 x 1"
@@ -15847,7 +15847,7 @@ Orleans2023,2,contest_closes,PASS,SELECT BOARD: 3052 == 1526 x 2
 Orleans2023,2,contest_closes,PASS,BOARD OF HEALTH: 3052 == 1526 x 2
 Orleans2023,2,contest_closes,PASS,NAUSET REG SCHOOL COMMITTEE: 1526 == 1526 x 1
 Orleans2023,2,contest_closes,PASS,ELEMENTARY SCHOOL COMMITTEE: 3052 == 1526 x 2
-Orleans2023,2,tally_incomplete,NOTE,TRUSTEE FOR SNOW LIBRARY: 3051 of 3052; 1 marks not tallied
+Orleans2023,2,contest_closes,PASS,TRUSTEE FOR SNOW LIBRARY: 3052 == 1526 x 2
 Orleans2023,2,contest_closes,PASS,HOUSING AUTHORITY: 1526 == 1526 x 1
 Orleans2023,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Orleans2024,0,document_self_identifies,PASS,...ots Tallied - 26% (5756 Total Orleans Voters) SELECT BOARD (1) Prec...
@@ -16177,7 +16177,7 @@ Paxton2023,2,contest_closes,PASS,MUNICIPAL LIGHT BOARD: 383 == 383 x 1
 Paxton2023,2,contest_closes,PASS,PLANNING BOARD: 383 == 383 x 1
 Paxton2023,2,contest_closes,PASS,RECREATION COMMISSION: 766 == 383 x 2
 Paxton2023,2,contest_closes,PASS,SWCRVSD COMMITTEE: 383 == 383 x 1
-Paxton2023,2,marks_exceed_ballots,FAIL,TREE WARDEN: 423 marks > 383 ballots x 1 seats = 383
+Paxton2023,2,marks_exceed_ballots,FAIL,"TREE WARDEN: 423 marks > 383 ballots x 1 seats = 383 -- ballots derived, not printed: 10 of 11 contests agree on 383, and one of them reports 423"
 Paxton2023,2,contest_closes,PASS,WRSD COMMITTEE: 383 == 383 x 1
 Paxton2023,2,contest_closes,PASS,WATER BOARD: 383 == 383 x 1
 Paxton2023,3,office_count_consistent,PASS,14 contests; median 13 in other years
@@ -16278,7 +16278,7 @@ Pelham2021,1,names_grounded,PASS,14/14 names located in raw_ocr+pdftext
 Pelham2021,1,figures_grounded,PASS,31/31 figures located in raw_ocr+pdftext
 Pelham2021,2,ballots_derivable,PASS,7 of 9 contests agree on 93
 Pelham2021,2,contest_closes,PASS,SELECT BOARD: 93 == 93 x 1
-Pelham2021,2,marks_exceed_ballots,OVERRIDDEN,BOARD OF ASSESSORS: 104 marks > 93 ballots x 1 seats = 93  [OVERRIDDEN: The record transcribes the sheet faithfully; the sheet does not add up. In each of the thr]
+Pelham2021,2,marks_exceed_ballots,OVERRIDDEN,"BOARD OF ASSESSORS: 104 marks > 93 ballots x 1 seats = 93 -- ballots derived, not printed: 7 of 9 contests agree on 93, and one of them reports 124  [OVERRIDDEN: The record transcribes the sheet faithfully; the sheet does not add up. In each of the thr]"
 Pelham2021,2,contest_closes,PASS,BOARD OF HEALTH: 93 == 93 x 1
 Pelham2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 186 == 93 x 2
 Pelham2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 93 == 93 x 1
@@ -16286,7 +16286,7 @@ Pelham2021,2,contest_closes,PASS,PLANNING BOARD: 93 == 93 x 1
 Pelham2021,2,contest_closes,PASS,LIBRARY TRUSTEES: 186 == 93 x 2
 Pelham2021,2,contest_closes,PASS,AUDITOR: 93 == 93 x 1
 Pelham2021,2,contest_closes,PASS,CEMETERY COMMISSION: 93 == 93 x 1
-Pelham2021,2,marks_exceed_ballots,OVERRIDDEN,MODERATOR: 124 marks > 93 ballots x 1 seats = 93  [OVERRIDDEN: The record transcribes the sheet faithfully; the sheet does not add up. In each of the thr]
+Pelham2021,2,marks_exceed_ballots,OVERRIDDEN,"MODERATOR: 124 marks > 93 ballots x 1 seats = 93 -- ballots derived, not printed: 7 of 9 contests agree on 93, and one of them reports 124  [OVERRIDDEN: The record transcribes the sheet faithfully; the sheet does not add up. In each of the thr]"
 Pelham2021,2,contest_closes,PASS,TREE WARDEN: 93 == 93 x 1
 Pelham2021,3,office_count_consistent,PASS,11 contests; median 11 in other years
 Pelham2022,0,document_self_identifies,NOTE,document never prints 'Pelham'; identity rests on the citation alone
@@ -16346,7 +16346,7 @@ Pelham2025,2,contest_closes,PASS,COMMUNITY PRESERVATION COMMITTEE: 124 == 124 x 
 Pelham2025,2,contest_closes,PASS,AUDITOR: 124 == 124 x 1
 Pelham2025,2,contest_closes,PASS,BOARD OF ASSESSORS: 124 == 124 x 1
 Pelham2025,2,contest_closes,PASS,PLANNING BOARD: 124 == 124 x 1
-Pelham2025,2,marks_exceed_ballots,FAIL,CEMETERY COMMISSION (3 Years): 126 marks > 124 ballots x 1 seats = 124
+Pelham2025,2,marks_exceed_ballots,FAIL,"CEMETERY COMMISSION (3 Years): 126 marks > 124 ballots x 1 seats = 124 -- ballots derived, not printed: 11 of 12 contests agree on 124, and one of them reports 126"
 Pelham2025,2,contest_closes,PASS,BOARD OF HEALTH (3 year): 124 == 124 x 1
 Pelham2025,2,contest_closes,PASS,SCHOOL COMMITTEE (Two Year) Vote for Two: 248 == 124 x 2
 Pelham2025,2,contest_closes,PASS,MODERATOR: 124 == 124 x 1
@@ -16368,12 +16368,12 @@ Pembroke2021,2,contest_closes,PASS,BOARD OF ASSESSORS: 2076 == 2076 x 1
 Pembroke2021,2,contest_closes,PASS,BOARD OF HEALTH: 2076 == 2076 x 1
 Pembroke2021,2,contest_closes,PASS,LIBRARY TRUSTEE: 4152 == 2076 x 2
 Pembroke2021,2,contest_closes,PASS,PLANNING BOARD: 4152 == 2076 x 2
-Pembroke2021,2,marks_exceed_ballots,FAIL,PLANNING BOARD: 2090 marks > 2076 ballots x 1 seats = 2076
-Pembroke2021,2,marks_exceed_ballots,FAIL,PLANNING BOARD: 2104 marks > 2076 ballots x 1 seats = 2076
-Pembroke2021,2,marks_exceed_ballots,FAIL,CONSTABLE: 2104 marks > 2076 ballots x 1 seats = 2076
-Pembroke2021,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE: 4208 marks > 2076 ballots x 2 seats = 4152
-Pembroke2021,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE: 2114 marks > 2076 ballots x 1 seats = 2076
-Pembroke2021,2,marks_exceed_ballots,FAIL,D.P.W.: 2114 marks > 2076 ballots x 1 seats = 2076
+Pembroke2021,2,marks_exceed_ballots,FAIL,"PLANNING BOARD: 2090 marks > 2076 ballots x 1 seats = 2076 -- ballots derived, not printed: 3 of 8 contests agree on 2076, and one of them reports 2114"
+Pembroke2021,2,marks_exceed_ballots,FAIL,"PLANNING BOARD: 2104 marks > 2076 ballots x 1 seats = 2076 -- ballots derived, not printed: 3 of 8 contests agree on 2076, and one of them reports 2114"
+Pembroke2021,2,marks_exceed_ballots,FAIL,"CONSTABLE: 2104 marks > 2076 ballots x 1 seats = 2076 -- ballots derived, not printed: 3 of 8 contests agree on 2076, and one of them reports 2114"
+Pembroke2021,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE: 4208 marks > 2076 ballots x 2 seats = 4152 -- ballots derived, not printed: 3 of 8 contests agree on 2076, and one of them reports 2114"
+Pembroke2021,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE: 2114 marks > 2076 ballots x 1 seats = 2076 -- ballots derived, not printed: 3 of 8 contests agree on 2076, and one of them reports 2114"
+Pembroke2021,2,marks_exceed_ballots,FAIL,"D.P.W.: 2114 marks > 2076 ballots x 1 seats = 2076 -- ballots derived, not printed: 3 of 8 contests agree on 2076, and one of them reports 2114"
 Pembroke2021,3,office_count_consistent,PASS,12 contests; median 10 in other years
 Pembroke2022,0,document_self_identifies,PASS,"...OTAL 419 384 496 463 410 2172 PEMBROKE TOWN ELECTION MAY 14, 2022 3..."
 Pembroke2022,0,carries_the_year,PASS,"...410 2172 PEMBROKE TOWN ELECTION MAY 14, 2022 3 YEAR TERM 1 SEAT 3 YEAR TERM 1 SEAT 3..."
@@ -16472,14 +16472,14 @@ Pepperell2021,2,contest_closes,PASS,Select Board: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Board of Assessors: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Board of Health: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Board of Health: 437 == 437 x 1
-Pepperell2021,2,marks_exceed_ballots,FAIL,Housing Authority: 473 marks > 437 ballots x 1 seats = 437
+Pepperell2021,2,marks_exceed_ballots,FAIL,"Housing Authority: 473 marks > 437 ballots x 1 seats = 437 -- ballots derived, not printed: 6 of 10 contests agree on 437, and one of them reports 510"
 Pepperell2021,2,contest_closes,PASS,Planning Board: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Planning Board: 437 == 437 x 1
 Pepperell2021,2,regional_exempt,NOTE,North Middlesex Regional School District Sch: spans several towns; ballot arithmetic does not apply
 Pepperell2021,2,contest_closes,PASS,Lawrence Library Board of Trustees: 874 == 437 x 2
-Pepperell2021,2,marks_exceed_ballots,FAIL,Board of Public Works: 466 marks > 437 ballots x 1 seats = 437
-Pepperell2021,2,marks_exceed_ballots,FAIL,Recreation Commission: 510 marks > 437 ballots x 1 seats = 437
-Pepperell2021,2,marks_exceed_ballots,FAIL,Recreation Commission: 489 marks > 437 ballots x 1 seats = 437
+Pepperell2021,2,marks_exceed_ballots,FAIL,"Board of Public Works: 466 marks > 437 ballots x 1 seats = 437 -- ballots derived, not printed: 6 of 10 contests agree on 437, and one of them reports 510"
+Pepperell2021,2,marks_exceed_ballots,FAIL,"Recreation Commission: 510 marks > 437 ballots x 1 seats = 437 -- ballots derived, not printed: 6 of 10 contests agree on 437, and one of them reports 510"
+Pepperell2021,2,marks_exceed_ballots,FAIL,"Recreation Commission: 489 marks > 437 ballots x 1 seats = 437 -- ballots derived, not printed: 6 of 10 contests agree on 437, and one of them reports 510"
 Pepperell2021,3,office_count_consistent,PASS,12 contests; median 11 in other years
 Pepperell2022,0,document_self_identifies,PASS,"...onday, April 25, 2022 Town of Pepperell, Massachusetts OFFICIAL RESUL..."
 Pepperell2022,0,carries_the_year,PASS,"...Annual Town Election Monday, April 25, 2022 Town of Pepperell, Massachusetts OFFICI..."
@@ -16841,7 +16841,7 @@ Plainfield2025,2,contest_closes,PASS,BOARD OF HEALTH: 79 == 79 x 1
 Plainfield2025,2,contest_closes,PASS,BOARD OF SELECTMAN: 79 == 79 x 1
 Plainfield2025,2,contest_closes,PASS,TOWN CLERK: 79 == 79 x 1
 Plainfield2025,2,contest_closes,PASS,LIBRARY TRUSTEE: 79 == 79 x 1
-Plainfield2025,2,marks_exceed_ballots,FAIL,MODERATOR: 80 marks > 79 ballots x 1 seats = 79
+Plainfield2025,2,marks_exceed_ballots,FAIL,"MODERATOR: 80 marks > 79 ballots x 1 seats = 79 -- ballots derived, not printed: 9 of 10 contests agree on 79, and one of them reports 80"
 Plainfield2025,2,contest_closes,PASS,1st CONSTABLE: 79 == 79 x 1
 Plainfield2025,2,contest_closes,PASS,2nd CONSTABLE: 79 == 79 x 1
 Plainfield2025,2,contest_closes,PASS,SCHOOL COMMITTEE: 79 == 79 x 1
@@ -17029,7 +17029,7 @@ Plympton2021,0,carries_the_year,PASS,"...| ‘ i ” TOWN ELECTION SATURDAY, MAY
 Plympton2021,0,document_supports_record,PASS,12/16 names and 22/40 figures located in raw_ocr
 Plympton2021,1,names_grounded,FAIL,12/16 names located in raw_ocr
 Plympton2021,1,figures_grounded,FAIL,22/40 figures located in raw_ocr
-Plympton2021,2,ballots_derivable,PASS,7 of 8 contests agree on 417
+Plympton2021,2,ballots_derivable,PASS,8 of 8 contests agree on 417
 Plympton2021,2,contest_closes,PASS,SELECTMEN (Vote One): 417 == 417 x 1
 Plympton2021,2,contest_closes,PASS,ASSESSOR - 3 Years (Vote one): 417 == 417 x 1
 Plympton2021,2,contest_closes,PASS,ASSESSORS - 1 Year (Vote one): 417 == 417 x 1
@@ -17037,7 +17037,7 @@ Plympton2021,2,contest_closes,PASS,BOH - 3 Years (Vote One): 417 == 417 x 1
 Plympton2021,2,contest_closes,PASS,FINANCE - 3 Years (Vote One): 417 == 417 x 1
 Plympton2021,2,contest_closes,PASS,LIBRARY TRUSTEE - 2 Years (Vote 2): 834 == 417 x 2
 Plympton2021,2,contest_closes,PASS,LIBRARY TRUSTEE - 4 Year (Vote 1): 417 == 417 x 1
-Plympton2021,2,marks_exceed_ballots,FAIL,PLANNING BOARD - 5 Year (Vote 1): 419 marks > 417 ballots x 1 seats = 417
+Plympton2021,2,contest_closes,PASS,PLANNING BOARD - 5 Year (Vote 1): 417 == 417 x 1
 Plympton2021,2,contest_closes,PASS,PLANNING BOARD - 4 Year (Vote 1): 417 == 417 x 1
 Plympton2021,2,contest_closes,PASS,SCHOOL COMM. - 3 Years (Vote 2): 834 == 417 x 2
 Plympton2021,2,contest_closes,PASS,SILVER LAKE SCHOOL - 3 Years (Vote 1): 417 == 417 x 1
@@ -17056,7 +17056,7 @@ Plympton2022,2,contest_closes,PASS,Selectman: 327 == 327 x 1
 Plympton2022,2,tally_incomplete,NOTE,Assessor: 227 of 327; 100 marks not tallied
 Plympton2022,2,tally_incomplete,NOTE,Finance Committee: 278 of 654; 376 marks not tallied
 Plympton2022,2,contest_closes,PASS,Library Trustee: 654 == 327 x 2
-Plympton2022,2,marks_exceed_ballots,FAIL,Library Trustee: 329 marks > 327 ballots x 1 seats = 327
+Plympton2022,2,marks_exceed_ballots,FAIL,"Library Trustee: 329 marks > 327 ballots x 1 seats = 327 -- ballots derived, not printed: 3 of 7 contests agree on 327, and one of them reports 329"
 Plympton2022,2,contest_closes,PASS,Town Moderator: 327 == 327 x 1
 Plympton2022,2,contest_closes,PASS,Town Clerk: 327 == 327 x 1
 Plympton2022,2,tally_incomplete,NOTE,Dennett School Committee: 318 of 654; 336 marks not tallied
@@ -17133,7 +17133,7 @@ Princeton2021,2,contest_closes,PASS,Assessor: 185 == 185 x 1
 Princeton2021,2,contest_closes,PASS,Electric Light Commissioner: 185 == 185 x 1
 Princeton2021,2,contest_closes,PASS,Trustee of Trust Funds: 185 == 185 x 1
 Princeton2021,2,contest_closes,PASS,Planning Board: 370 == 185 x 2
-Princeton2021,2,marks_exceed_ballots,FAIL,WRSD School Comm - 3 year: 190 marks > 185 ballots x 1 seats = 185
+Princeton2021,2,marks_exceed_ballots,FAIL,"WRSD School Comm - 3 year: 190 marks > 185 ballots x 1 seats = 185 -- ballots derived, not printed: 6 of 7 contests agree on 185, and one of them reports 190"
 Princeton2021,2,contest_closes,PASS,WRSD School Comm - 1 year: 185 == 185 x 1
 Princeton2021,3,office_count_consistent,PASS,8 contests; median 7 in other years
 Princeton2022,0,document_self_identifies,PASS,...TOWN OF PRINCETON A TRUE COPY ATTEST: ANNUAL TO...
@@ -17252,8 +17252,8 @@ Provincetown2024,2,contest_closes,PASS,Moderator: 937 == 937 x 1
 Provincetown2024,2,contest_closes,PASS,Charter Compliance: 937 == 937 x 1
 Provincetown2024,2,contest_closes,PASS,Housing Authority - 5 Year: 937 == 937 x 1
 Provincetown2024,2,contest_closes,PASS,School Committee: 1874 == 937 x 2
-Provincetown2024,2,marks_exceed_ballots,FAIL,Housing Authority - 3 Year: 954 marks > 937 ballots x 1 seats = 937
-Provincetown2024,2,marks_exceed_ballots,FAIL,Board of Library Trustee: 1891 marks > 937 ballots x 2 seats = 1874
+Provincetown2024,2,marks_exceed_ballots,FAIL,"Housing Authority - 3 Year: 954 marks > 937 ballots x 1 seats = 937 -- ballots derived, not printed: 4 of 5 contests agree on 937, and one of them reports 954"
+Provincetown2024,2,marks_exceed_ballots,FAIL,"Board of Library Trustee: 1891 marks > 937 ballots x 2 seats = 1874 -- ballots derived, not printed: 4 of 5 contests agree on 937, and one of them reports 954"
 Provincetown2024,3,office_count_consistent,PASS,7 contests; median 5 in other years
 Provincetown2025,0,document_self_identifies,NOTE,document never prints 'Provincetown'; identity rests on the citation alone
 Provincetown2025,0,carries_the_year,PASS,"...May 13, 2025 Offical Election Results Total Register..."
@@ -17692,7 +17692,7 @@ Rockland2022,2,contest_closes,PASS,MODERATOR for Three Years: 1418 == 1418 x 1
 Rockland2022,2,contest_closes,PASS,BOARD OF SELECTMEN for Three Years: 2836 == 1418 x 2
 Rockland2022,2,tally_incomplete,NOTE,BOARD OF HEALTH for Three Years: 1415 of 1418; 3 marks not tallied
 Rockland2022,2,contest_closes,PASS,TREASURER for Two Years: 1418 == 1418 x 1
-Rockland2022,2,marks_exceed_ballots,FAIL,ASSESSOR for Three Years: 1419 marks > 1418 ballots x 1 seats = 1418
+Rockland2022,2,marks_exceed_ballots,FAIL,"ASSESSOR for Three Years: 1419 marks > 1418 ballots x 1 seats = 1418 -- ballots derived, not printed: 7 of 10 contests agree on 1418, and one of them reports 1419"
 Rockland2022,2,contest_closes,PASS,HOUSING AUTHORITY for Five Years: 1418 == 1418 x 1
 Rockland2022,2,contest_closes,PASS,LIBRARY TRUSTEES for Three Years: 2836 == 1418 x 2
 Rockland2022,2,contest_closes,PASS,BOARD OF PARK COMMISSIONERS for Three Years: 1418 == 1418 x 1
@@ -18038,10 +18038,10 @@ Rowley2026,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot deri
 Rowley2026,3,office_count_consistent,PASS,8 contests; median 14 in other years
 Royalston2021,0,document_self_identifies,PASS,"...LECTION APRIL 5, 2021 TOWN OF ROYALSTON Out of 1004 registered voters..."
 Royalston2021,0,carries_the_year,PASS,"...ANNUAL TOWN ELECTION APRIL 5, 2021 TOWN OF ROYALSTON Out of 1004 registere..."
-Royalston2021,0,document_supports_record,PASS,21/21 names and 44/44 figures located in raw_ocr+pdftext
-Royalston2021,1,names_grounded,PASS,21/21 names located in raw_ocr+pdftext
-Royalston2021,1,figures_grounded,PASS,44/44 figures located in raw_ocr+pdftext
-Royalston2021,2,ballots_derivable,PASS,11 of 12 contests agree on 121
+Royalston2021,0,document_supports_record,PASS,20/20 names and 43/43 figures located in raw_ocr+pdftext
+Royalston2021,1,names_grounded,PASS,20/20 names located in raw_ocr+pdftext
+Royalston2021,1,figures_grounded,PASS,43/43 figures located in raw_ocr+pdftext
+Royalston2021,2,ballots_derivable,PASS,12 of 12 contests agree on 121
 Royalston2021,2,contest_closes,PASS,SELECTMAN - 3 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,ARRSC - ROYALSTON - 3 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,ARRSC - ATHOL - 3 YEAR: 242 == 121 x 2
@@ -18052,7 +18052,7 @@ Royalston2021,2,contest_closes,PASS,LIBRARY TRUSTEE - 3 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,MODERATOR - 3 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,PLANNING BOARD - 5 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,ASSESSORS TWO YEARS: 121 == 121 x 1
-Royalston2021,2,marks_exceed_ballots,FAIL,ASSESSOR - 3 YEARS: 224 marks > 121 ballots x 1 seats = 121
+Royalston2021,2,contest_closes,PASS,ASSESSOR - 3 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,BOARD OF HEALTH - 3 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,TREE WARDEN - 3 YEARS: 121 == 121 x 1
 Royalston2021,2,contest_closes,PASS,TRUSTEES OF THE J.N. BARTLETT FUND - 1 YEAR: 484 == 121 x 4
@@ -18256,7 +18256,7 @@ Rutland2023,0,document_supports_record,PASS,11/11 names and 23/23 figures locate
 Rutland2023,1,names_grounded,PASS,11/11 names located in raw_ocr+pdftext
 Rutland2023,1,figures_grounded,PASS,23/23 figures located in raw_ocr+pdftext
 Rutland2023,2,ballots_derivable,PASS,4 of 5 contests agree on 1513
-Rutland2023,2,marks_exceed_ballots,FAIL,MODERATOR: 1714 marks > 1513 ballots x 1 seats = 1513
+Rutland2023,2,marks_exceed_ballots,FAIL,"MODERATOR: 1714 marks > 1513 ballots x 1 seats = 1513 -- ballots derived, not printed: 4 of 5 contests agree on 1513, and one of them reports 1714"
 Rutland2023,2,contest_closes,PASS,SELECT BOARD- 3yr / 2seats: 3026 == 1513 x 2
 Rutland2023,2,contest_closes,PASS,SELECT BOARD - 1 yr: 1513 == 1513 x 1
 Rutland2023,2,contest_closes,PASS,ASSESSOR: 1513 == 1513 x 1
@@ -18310,8 +18310,8 @@ Rutland2026,2,contest_closes,PASS,LIBRARY TRUSTEE/2 for 3 yrs: 3764 == 1882 x 2
 Rutland2026,3,office_count_consistent,PASS,6 contests; median 8 in other years
 Salem2021,0,document_self_identifies,PASS,...REGISTERED VOTE IN SALEM AS OF 7/1/2021 PARTY OR DESIG...
 Salem2021,0,carries_the_year,PASS,...REGISTERED VOTE IN SALEM AS OF 7/1/2021 PARTY OR DESIGNATION 1-1 1-2 2-4 2-2. 3...
-Salem2021,0,document_supports_record,PASS,38/39 names and 48/48 figures located in raw_ocr+markdown
-Salem2021,1,names_grounded,FAIL,38/39 names located in raw_ocr+markdown
+Salem2021,0,document_supports_record,PASS,39/39 names and 48/48 figures located in raw_ocr+markdown
+Salem2021,1,names_grounded,PASS,39/39 names located in raw_ocr+markdown
 Salem2021,1,figures_grounded,PASS,48/48 figures located in raw_ocr+markdown
 Salem2021,2,ballots_derivable,UNKNOWN,only 1 qualifying contest(s); cannot derive
 Salem2021,3,office_count_consistent,PASS,10 contests; median 10 in other years
@@ -18591,7 +18591,7 @@ Savoy2024,2,contest_closes,PASS,Park Commission exp 2027: 67 == 67 x 1
 Savoy2024,2,tally_incomplete,NOTE,Planning Board exp 2025: 62 of 67; 5 marks not tallied
 Savoy2024,2,contest_closes,PASS,Planning Board exp 2026: 67 == 67 x 1
 Savoy2024,2,contest_closes,PASS,Planning Board exp 2027: 67 == 67 x 1
-Savoy2024,2,marks_exceed_ballots,FAIL,Planning Board exp 2028: 68 marks > 67 ballots x 1 seats = 67
+Savoy2024,2,marks_exceed_ballots,FAIL,"Planning Board exp 2028: 68 marks > 67 ballots x 1 seats = 67 -- ballots derived, not printed: 12 of 14 contests agree on 67, and one of them reports 68"
 Savoy2024,2,contest_closes,PASS,Planning Board exp 2029: 67 == 67 x 1
 Savoy2024,2,contest_closes,PASS,School Committee exp 2027: 67 == 67 x 1
 Savoy2024,2,contest_closes,PASS,Select Board exp 2027: 67 == 67 x 1
@@ -19028,7 +19028,7 @@ Sherborn2024,0,document_supports_record,PASS,20/20 names and 45/45 figures locat
 Sherborn2024,1,names_grounded,PASS,20/20 names located in markdown+pdftext
 Sherborn2024,1,figures_grounded,PASS,45/45 figures located in markdown+pdftext
 Sherborn2024,2,ballots_derivable,PASS,7 of 9 contests agree on 808
-Sherborn2024,2,marks_exceed_ballots,FAIL,Moderator: 810 marks > 808 ballots x 1 seats = 808
+Sherborn2024,2,marks_exceed_ballots,FAIL,"Moderator: 810 marks > 808 ballots x 1 seats = 808 -- ballots derived, not printed: 7 of 9 contests agree on 808, and one of them reports 810"
 Sherborn2024,2,contest_closes,PASS,Selectman: 808 == 808 x 1
 Sherborn2024,2,tally_incomplete,NOTE,Assessors: 715 of 808; 93 marks not tallied
 Sherborn2024,2,contest_closes,PASS,Sherborn School Committee: 1616 == 808 x 2
@@ -19129,14 +19129,14 @@ Shirley2023,1,figures_grounded,PASS,35/35 figures located in raw_ocr
 Shirley2023,2,ballots_derivable,PASS,6 of 9 contests agree on 688
 Shirley2023,2,contest_closes,PASS,BOARD OF ASSESSORS (3 YRS): 688 == 688 x 1
 Shirley2023,2,contest_closes,PASS,BOARD OF HEALTH (3 YRS): 688 == 688 x 1
-Shirley2023,2,marks_exceed_ballots,FAIL,CONSTABLE (3 YRS): 709 marks > 688 ballots x 1 seats = 688
-Shirley2023,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEE - 3 YEARS (2 POSITIONS): 1394 marks > 688 ballots x 2 seats = 1376
+Shirley2023,2,marks_exceed_ballots,FAIL,"CONSTABLE (3 YRS): 709 marks > 688 ballots x 1 seats = 688 -- ballots derived, not printed: 6 of 9 contests agree on 688, and one of them reports 727"
+Shirley2023,2,marks_exceed_ballots,FAIL,"LIBRARY TRUSTEE - 3 YEARS (2 POSITIONS): 1394 marks > 688 ballots x 2 seats = 1376 -- ballots derived, not printed: 6 of 9 contests agree on 688, and one of them reports 727"
 Shirley2023,2,contest_closes,PASS,PLANNING BOARD (5 YRS): 688 == 688 x 1
-Shirley2023,2,marks_exceed_ballots,FAIL,RECREATION COMM (3 YRS)(2 POSITIONS): 1407 marks > 688 ballots x 2 seats = 1376
+Shirley2023,2,marks_exceed_ballots,FAIL,"RECREATION COMM (3 YRS)(2 POSITIONS): 1407 marks > 688 ballots x 2 seats = 1376 -- ballots derived, not printed: 6 of 9 contests agree on 688, and one of them reports 727"
 Shirley2023,2,contest_closes,PASS,REG SCH DISTRICT COM (3 YRS): 688 == 688 x 1
 Shirley2023,2,contest_closes,PASS,SELECT BOARD (3 YRS): 688 == 688 x 1
-Shirley2023,2,marks_exceed_ballots,FAIL,SEWER COMMISSION: 727 marks > 688 ballots x 1 seats = 688
-Shirley2023,2,marks_exceed_ballots,FAIL,WAR MEM TRUSTEE (VET)(3 YR): 695 marks > 688 ballots x 1 seats = 688
+Shirley2023,2,marks_exceed_ballots,FAIL,"SEWER COMMISSION: 727 marks > 688 ballots x 1 seats = 688 -- ballots derived, not printed: 6 of 9 contests agree on 688, and one of them reports 727"
+Shirley2023,2,marks_exceed_ballots,FAIL,"WAR MEM TRUSTEE (VET)(3 YR): 695 marks > 688 ballots x 1 seats = 688 -- ballots derived, not printed: 6 of 9 contests agree on 688, and one of them reports 727"
 Shirley2023,2,contest_closes,PASS,WAR MEM TRUSTEE (NON VET)(3 YR): 688 == 688 x 1
 Shirley2023,3,office_count_consistent,PASS,11 contests; median 13 in other years
 Shirley2024,0,document_self_identifies,NOTE,document never prints 'Shirley'; identity rests on the citation alone
@@ -20263,8 +20263,8 @@ Stoughton2023,2,contest_closes,PASS,Moderator: 1305 == 1305 x 1
 Stoughton2023,3,office_count_consistent,PASS,13 contests; median 12 in other years
 Stoughton2024,0,document_self_identifies,PASS,...: | 22393 | | | | | | | | | | StoughtonVoterTurnout: | 9.5% | | | | |...
 Stoughton2024,0,carries_the_year,PASS,...## LOCALELECTIONRESULTSFINAL ## 2-Apr-24 Pursuant totheWarrant andtheConstable's...
-Stoughton2024,0,document_supports_record,PASS,176/178 names and 195/197 figures located in raw_ocr
-Stoughton2024,1,names_grounded,FAIL,176/178 names located in raw_ocr
+Stoughton2024,0,document_supports_record,PASS,178/178 names and 195/197 figures located in raw_ocr
+Stoughton2024,1,names_grounded,PASS,178/178 names located in raw_ocr
 Stoughton2024,1,figures_grounded,FAIL,195/197 figures located in raw_ocr
 Stoughton2024,2,ballots_derivable,PASS,3 of 5 contests agree on 2129
 Stoughton2024,2,contest_closes,PASS,SELECT BOARD: 4258 == 2129 x 2
@@ -20287,11 +20287,11 @@ Stoughton2025,2,contest_closes,PASS,REDEVELOPMENT: 5242 == 5242 x 1
 Stoughton2025,3,office_count_consistent,PASS,12 contests; median 12 in other years
 Stoughton2026,0,document_self_identifies,PASS,"...., with the following TOWN OF STOUGHTON - April 7, 2026 - RESULTS res..."
 Stoughton2026,0,carries_the_year,PASS,"...following TOWN OF STOUGHTON - April 7, 2026 - RESULTS results: Pet 1 Pet 2 Pet 3 Pe..."
-Stoughton2026,0,document_supports_record,PASS,83/83 names and 103/105 figures located in raw_ocr
+Stoughton2026,0,document_supports_record,PASS,83/83 names and 104/105 figures located in raw_ocr
 Stoughton2026,1,names_grounded,PASS,83/83 names located in raw_ocr
-Stoughton2026,1,figures_grounded,FAIL,103/105 figures located in raw_ocr
+Stoughton2026,1,figures_grounded,FAIL,104/105 figures located in raw_ocr
 Stoughton2026,2,ballots_derivable,PASS,2 of 2 contests agree on 2268
-Stoughton2026,2,tally_incomplete,NOTE,SELECT BOARD: 5364 of 6804; 1440 marks not tallied
+Stoughton2026,2,contest_closes,PASS,SELECT BOARD: 4536 == 2268 x 2
 Stoughton2026,2,contest_closes,PASS,SCHOOL COMMITTEE: 4536 == 2268 x 2
 Stoughton2026,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY: 2268 == 2268 x 1
 Stoughton2026,2,contest_closes,PASS,HOUSING AUTHORITY: 2268 == 2268 x 1
@@ -20384,13 +20384,13 @@ Sturbridge2021,1,names_grounded,PASS,22/22 names located in pdftext
 Sturbridge2021,1,figures_grounded,PASS,33/33 figures located in pdftext
 Sturbridge2021,2,ballots_derivable,PASS,2 of 7 contests agree on 1095
 Sturbridge2021,2,tally_incomplete,NOTE,BOARD OF SELECTMEN: 2188 of 2190; 2 marks not tallied
-Sturbridge2021,2,marks_exceed_ballots,FAIL,ASSESSOR - 3 Year Term: 1097 marks > 1095 ballots x 1 seats = 1095
+Sturbridge2021,2,marks_exceed_ballots,FAIL,"ASSESSOR - 3 Year Term: 1097 marks > 1095 ballots x 1 seats = 1095 -- ballots derived, not printed: 2 of 7 contests agree on 1095, and one of them reports 1098"
 Sturbridge2021,2,contest_closes,PASS,ASSESSOR - 2 Year Term: 1095 == 1095 x 1
 Sturbridge2021,2,tally_incomplete,NOTE,MODERATOR: 1089 of 1095; 6 marks not tallied
-Sturbridge2021,2,marks_exceed_ballots,FAIL,STURBRIDGE SCHOOL COMMITTEE: 1098 marks > 1095 ballots x 1 seats = 1095
+Sturbridge2021,2,marks_exceed_ballots,FAIL,"STURBRIDGE SCHOOL COMMITTEE: 1098 marks > 1095 ballots x 1 seats = 1095 -- ballots derived, not printed: 2 of 7 contests agree on 1095, and one of them reports 1098"
 Sturbridge2021,2,contest_closes,PASS,Board of Health: 1095 == 1095 x 1
 Sturbridge2021,2,tally_incomplete,NOTE,TANTASQUA SCHOOL COMMITTEE: 2185 of 2190; 5 marks not tallied
-Sturbridge2021,2,marks_exceed_ballots,FAIL,CONSTABLE: 1096 marks > 1095 ballots x 1 seats = 1095
+Sturbridge2021,2,marks_exceed_ballots,FAIL,"CONSTABLE: 1096 marks > 1095 ballots x 1 seats = 1095 -- ballots derived, not printed: 2 of 7 contests agree on 1095, and one of them reports 1098"
 Sturbridge2021,2,tally_incomplete,NOTE,RECREATION COMMITTEE: 1094 of 1095; 1 marks not tallied
 Sturbridge2021,2,tally_incomplete,NOTE,ZONING BOARD OF APPEALS: 2164 of 2190; 26 marks not tallied
 Sturbridge2021,2,tally_incomplete,NOTE,LIBRARY TRUSTEES: 3254 of 3285; 31 marks not tallied
@@ -20401,12 +20401,12 @@ Sturbridge2022,0,document_supports_record,PASS,12/12 names and 25/25 figures loc
 Sturbridge2022,1,names_grounded,PASS,12/12 names located in raw_ocr+pdftext
 Sturbridge2022,1,figures_grounded,PASS,25/25 figures located in raw_ocr+pdftext
 Sturbridge2022,2,ballots_derivable,PASS,3 of 5 contests agree on 993
-Sturbridge2022,2,marks_exceed_ballots,FAIL,Board of Selectmen: 997 marks > 993 ballots x 1 seats = 993
+Sturbridge2022,2,marks_exceed_ballots,FAIL,"Board of Selectmen: 997 marks > 993 ballots x 1 seats = 993 -- ballots derived, not printed: 3 of 5 contests agree on 993, and one of them reports 997"
 Sturbridge2022,2,contest_closes,PASS,Town Clerk: 993 == 993 x 1
 Sturbridge2022,2,contest_closes,PASS,Assessor: 993 == 993 x 1
 Sturbridge2022,2,contest_closes,PASS,Board of Health: 993 == 993 x 1
-Sturbridge2022,2,marks_exceed_ballots,FAIL,Sturbridge School Committee: 2025 marks > 993 ballots x 2 seats = 1986
-Sturbridge2022,2,marks_exceed_ballots,FAIL,Sturbridge School Committee: 995 marks > 993 ballots x 1 seats = 993
+Sturbridge2022,2,marks_exceed_ballots,FAIL,"Sturbridge School Committee: 2025 marks > 993 ballots x 2 seats = 1986 -- ballots derived, not printed: 3 of 5 contests agree on 993, and one of them reports 997"
+Sturbridge2022,2,marks_exceed_ballots,FAIL,"Sturbridge School Committee: 995 marks > 993 ballots x 1 seats = 993 -- ballots derived, not printed: 3 of 5 contests agree on 993, and one of them reports 997"
 Sturbridge2022,2,tally_incomplete,NOTE,Tantasqua School Committee: 1985 of 1986; 1 marks not tallied
 Sturbridge2022,3,office_count_consistent,PASS,7 contests; median 10 in other years
 Sturbridge2023,0,document_self_identifies,PASS,...1 | 148 | | 0 | 0 | 0 | 0 | | STURBRIDGE SCHOOL COMMITTEE | |---------...
@@ -20415,14 +20415,14 @@ Sturbridge2023,0,document_supports_record,PASS,20/20 names and 36/36 figures loc
 Sturbridge2023,1,names_grounded,PASS,20/20 names located in markdown
 Sturbridge2023,1,figures_grounded,PASS,36/36 figures located in markdown
 Sturbridge2023,2,ballots_derivable,PASS,2 of 4 contests agree on 538
-Sturbridge2023,2,marks_exceed_ballots,FAIL,Board of Selectmen: 1077 marks > 538 ballots x 2 seats = 1076
-Sturbridge2023,2,marks_exceed_ballots,FAIL,Assessor: 561 marks > 538 ballots x 1 seats = 538
+Sturbridge2023,2,marks_exceed_ballots,FAIL,"Board of Selectmen: 1077 marks > 538 ballots x 2 seats = 1076 -- ballots derived, not printed: 2 of 4 contests agree on 538, and one of them reports 561"
+Sturbridge2023,2,marks_exceed_ballots,FAIL,"Assessor: 561 marks > 538 ballots x 1 seats = 538 -- ballots derived, not printed: 2 of 4 contests agree on 538, and one of them reports 561"
 Sturbridge2023,2,tally_incomplete,NOTE,Board of Health: 537 of 538; 1 marks not tallied
 Sturbridge2023,2,contest_closes,PASS,Constable: 538 == 538 x 1
-Sturbridge2023,2,marks_exceed_ballots,FAIL,Library Trustees: 1615 marks > 538 ballots x 3 seats = 1614
-Sturbridge2023,2,marks_exceed_ballots,FAIL,Library Trustees: 1078 marks > 538 ballots x 2 seats = 1076
-Sturbridge2023,2,marks_exceed_ballots,FAIL,Recreation Committee: 1077 marks > 538 ballots x 2 seats = 1076
-Sturbridge2023,2,marks_exceed_ballots,FAIL,Sturbridge School Committee: 1077 marks > 538 ballots x 2 seats = 1076
+Sturbridge2023,2,marks_exceed_ballots,FAIL,"Library Trustees: 1615 marks > 538 ballots x 3 seats = 1614 -- ballots derived, not printed: 2 of 4 contests agree on 538, and one of them reports 561"
+Sturbridge2023,2,marks_exceed_ballots,FAIL,"Library Trustees: 1078 marks > 538 ballots x 2 seats = 1076 -- ballots derived, not printed: 2 of 4 contests agree on 538, and one of them reports 561"
+Sturbridge2023,2,marks_exceed_ballots,FAIL,"Recreation Committee: 1077 marks > 538 ballots x 2 seats = 1076 -- ballots derived, not printed: 2 of 4 contests agree on 538, and one of them reports 561"
+Sturbridge2023,2,marks_exceed_ballots,FAIL,"Sturbridge School Committee: 1077 marks > 538 ballots x 2 seats = 1076 -- ballots derived, not printed: 2 of 4 contests agree on 538, and one of them reports 561"
 Sturbridge2023,2,tally_incomplete,NOTE,Tantasqua School Committee: 1074 of 1076; 2 marks not tallied
 Sturbridge2023,2,contest_closes,PASS,Zoning Board of Appeals: 538 == 538 x 1
 Sturbridge2023,3,office_count_consistent,PASS,10 contests; median 10 in other years
@@ -20432,17 +20432,17 @@ Sturbridge2024,0,document_supports_record,PASS,36/36 names and 48/48 figures loc
 Sturbridge2024,1,names_grounded,PASS,36/36 names located in raw_ocr+pdftext
 Sturbridge2024,1,figures_grounded,PASS,48/48 figures located in raw_ocr+pdftext
 Sturbridge2024,2,ballots_derivable,PASS,4 of 8 contests agree on 331
-Sturbridge2024,2,marks_exceed_ballots,FAIL,BOARD OF SELECTMEN: 664 marks > 331 ballots x 2 seats = 662
+Sturbridge2024,2,marks_exceed_ballots,FAIL,"BOARD OF SELECTMEN: 664 marks > 331 ballots x 2 seats = 662 -- ballots derived, not printed: 4 of 8 contests agree on 331, and one of them reports 333"
 Sturbridge2024,2,contest_closes,PASS,ASSESSOR: 331 == 331 x 1
 Sturbridge2024,2,contest_closes,PASS,Board of Health: 331 == 331 x 1
 Sturbridge2024,2,tally_incomplete,NOTE,Constable: 330 of 331; 1 marks not tallied
-Sturbridge2024,2,marks_exceed_ballots,FAIL,Library Trustees: 994 marks > 331 ballots x 3 seats = 993
+Sturbridge2024,2,marks_exceed_ballots,FAIL,"Library Trustees: 994 marks > 331 ballots x 3 seats = 993 -- ballots derived, not printed: 4 of 8 contests agree on 331, and one of them reports 333"
 Sturbridge2024,2,contest_closes,PASS,Library Trustees: 331 == 331 x 1
-Sturbridge2024,2,marks_exceed_ballots,FAIL,Moderator: 333 marks > 331 ballots x 1 seats = 331
-Sturbridge2024,2,marks_exceed_ballots,FAIL,RECREATION COMMITTEE: 332 marks > 331 ballots x 1 seats = 331
+Sturbridge2024,2,marks_exceed_ballots,FAIL,"Moderator: 333 marks > 331 ballots x 1 seats = 331 -- ballots derived, not printed: 4 of 8 contests agree on 331, and one of them reports 333"
+Sturbridge2024,2,marks_exceed_ballots,FAIL,"RECREATION COMMITTEE: 332 marks > 331 ballots x 1 seats = 331 -- ballots derived, not printed: 4 of 8 contests agree on 331, and one of them reports 333"
 Sturbridge2024,2,contest_closes,PASS,RECREATION COMMITTEE: 331 == 331 x 1
 Sturbridge2024,2,tally_incomplete,NOTE,STURBRIDGE SCHOOL COMMITTEE: 326 of 331; 5 marks not tallied
-Sturbridge2024,2,marks_exceed_ballots,FAIL,TANTASQUA SCHOOL COMMITTEE: 994 marks > 331 ballots x 3 seats = 993
+Sturbridge2024,2,marks_exceed_ballots,FAIL,"TANTASQUA SCHOOL COMMITTEE: 994 marks > 331 ballots x 3 seats = 993 -- ballots derived, not printed: 4 of 8 contests agree on 331, and one of them reports 333"
 Sturbridge2024,2,tally_incomplete,NOTE,ZONING BOARD OF APPEALS: 661 of 662; 1 marks not tallied
 Sturbridge2024,3,office_count_consistent,PASS,12 contests; median 10 in other years
 Sturbridge2025,0,document_self_identifies,PASS,...d upon Mootilda > The Town of Sturbridge made a submission into the Co...
@@ -21569,7 +21569,7 @@ Tyngsborough2024,0,document_supports_record,PASS,21/21 names and 47/47 figures l
 Tyngsborough2024,1,names_grounded,PASS,21/21 names located in markdown+pdftext
 Tyngsborough2024,1,figures_grounded,PASS,47/47 figures located in markdown+pdftext
 Tyngsborough2024,2,ballots_derivable,PASS,6 of 7 contests agree on 408
-Tyngsborough2024,2,marks_exceed_ballots,FAIL,Board of Selectmen: 846 marks > 408 ballots x 2 seats = 816
+Tyngsborough2024,2,marks_exceed_ballots,FAIL,"Board of Selectmen: 846 marks > 408 ballots x 2 seats = 816 -- ballots derived, not printed: 6 of 7 contests agree on 408, and one of them reports 409"
 Tyngsborough2024,2,contest_closes,PASS,Board of Assessors: 408 == 408 x 1
 Tyngsborough2024,2,contest_closes,PASS,Board of Health: 816 == 408 x 2
 Tyngsborough2024,2,contest_closes,PASS,Cemetery Commissioner: 408 == 408 x 1
@@ -21578,7 +21578,7 @@ Tyngsborough2024,2,contest_closes,PASS,Finance Committee: 816 == 408 x 2
 Tyngsborough2024,2,contest_closes,PASS,Library Trustee: 816 == 408 x 2
 Tyngsborough2024,2,contest_closes,PASS,Housing Authority: 408 == 408 x 1
 Tyngsborough2024,2,contest_closes,PASS,Housing Authority: 408 == 408 x 1
-Tyngsborough2024,2,marks_exceed_ballots,FAIL,Planning Board: 409 marks > 408 ballots x 1 seats = 408
+Tyngsborough2024,2,marks_exceed_ballots,FAIL,"Planning Board: 409 marks > 408 ballots x 1 seats = 408 -- ballots derived, not printed: 6 of 7 contests agree on 408, and one of them reports 409"
 Tyngsborough2024,2,contest_closes,PASS,School Committee: 1224 == 408 x 3
 Tyngsborough2024,2,contest_closes,PASS,Sewer Commissioner: 408 == 408 x 1
 Tyngsborough2024,2,contest_closes,PASS,Town Clerk: 408 == 408 x 1
@@ -21912,7 +21912,7 @@ Wakefield2021,0,document_supports_record,PASS,25/25 names and 53/53 figures loca
 Wakefield2021,1,names_grounded,PASS,25/25 names located in markdown+pdftext
 Wakefield2021,1,figures_grounded,PASS,53/53 figures located in markdown+pdftext
 Wakefield2021,2,ballots_derivable,PASS,6 of 10 contests agree on 5507
-Wakefield2021,2,marks_exceed_ballots,FAIL,TOWN COUNCIL: 11051 marks > 5507 ballots x 2 seats = 11014
+Wakefield2021,2,marks_exceed_ballots,FAIL,"TOWN COUNCIL: 11051 marks > 5507 ballots x 2 seats = 11014 -- ballots derived, not printed: 6 of 10 contests agree on 5507, and one of them reports 5515"
 Wakefield2021,2,contest_closes,PASS,TAX COLLECTOR: 5507 == 5507 x 1
 Wakefield2021,2,tally_incomplete,NOTE,SCHOOL COMMITTEE 3 YEARS: 10750 of 11014; 264 marks not tallied
 Wakefield2021,2,tally_incomplete,NOTE,SCHOOL COMMITTEE 2 YEARS: 5375 of 5507; 132 marks not tallied
@@ -21920,7 +21920,7 @@ Wakefield2021,2,tally_incomplete,NOTE,SCHOOL COMMITTEE 1 YEAR: 5375 of 5507; 132
 Wakefield2021,2,tally_incomplete,NOTE,MUNICIPAL GAS & LIGHT COMMISSIONER: 10750 of 11014; 264 marks not tallied
 Wakefield2021,2,contest_closes,PASS,BOARD OF ASSESSORS: 5507 == 5507 x 1
 Wakefield2021,2,tally_incomplete,NOTE,LIBRARY TRUSTEES: 16125 of 22028; 5903 marks not tallied
-Wakefield2021,2,marks_exceed_ballots,FAIL,PLANNING BOARD 5 YEARS: 5515 marks > 5507 ballots x 1 seats = 5507
+Wakefield2021,2,marks_exceed_ballots,FAIL,"PLANNING BOARD 5 YEARS: 5515 marks > 5507 ballots x 1 seats = 5507 -- ballots derived, not printed: 6 of 10 contests agree on 5507, and one of them reports 5515"
 Wakefield2021,2,contest_closes,PASS,PLANNING BOARD 2 YEARS: 5507 == 5507 x 1
 Wakefield2021,2,contest_closes,PASS,BOARD OF HEALTH: 5507 == 5507 x 1
 Wakefield2021,2,contest_closes,PASS,CONSTABLE: 5507 == 5507 x 1
@@ -22685,13 +22685,13 @@ Webster2021,2,contest_closes,PASS,BOARD OF SELECTMEN: 1089 == 1089 x 1
 Webster2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 2178 == 1089 x 2
 Webster2021,2,regional_exempt,NOTE,REGIONAL VOCATIONAL SCHOOL COMMITTEE: spans several towns; ballot arithmetic does not apply
 Webster2021,2,contest_closes,PASS,BOARD OF HEALTH: 1089 == 1089 x 1
-Webster2021,2,marks_exceed_ballots,FAIL,FINANCE COMMITTEE: 1116 marks > 1089 ballots x 1 seats = 1089
+Webster2021,2,marks_exceed_ballots,FAIL,"FINANCE COMMITTEE: 1116 marks > 1089 ballots x 1 seats = 1089 -- ballots derived, not printed: 7 of 9 contests agree on 1089, and one of them reports 1116"
 Webster2021,2,contest_closes,PASS,TRUSTEES OF THE PUBLIC LIBRARY: 2178 == 1089 x 2
 Webster2021,2,contest_closes,PASS,TRUSTEES OF THE PUBLIC LIBRARY: 1089 == 1089 x 1
 Webster2021,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY: 1089 == 1089 x 1
 Webster2021,2,contest_closes,PASS,HOUSING AUTHORITY: 1089 == 1089 x 1
 Webster2021,2,contest_closes,PASS,HOUSING AUTHORITY: 1089 == 1089 x 1
-Webster2021,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY: 1104 marks > 1089 ballots x 1 seats = 1089
+Webster2021,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY: 1104 marks > 1089 ballots x 1 seats = 1089 -- ballots derived, not printed: 7 of 9 contests agree on 1089, and one of them reports 1116"
 Webster2021,2,contest_closes,PASS,TOWN CLERK: 1089 == 1089 x 1
 Webster2021,3,office_count_consistent,PASS,12 contests; median 8 in other years
 Webster2022,0,document_self_identifies,PASS,...Total Registered Webster TOTALS ANNUAL TOWN ELECTION 0...
@@ -22704,8 +22704,8 @@ Webster2022,2,contest_closes,PASS,BOARD OF SELECTMEN: 1408 == 704 x 2
 Webster2022,2,contest_closes,PASS,BOARD OF SELECTMEN: 704 == 704 x 1
 Webster2022,2,contest_closes,PASS,SCHOOL COMMITTEE: 704 == 704 x 1
 Webster2022,2,regional_exempt,NOTE,REGIONAL VOCATIONAL SCHOOL COMMITTEE: spans several towns; ballot arithmetic does not apply
-Webster2022,2,marks_exceed_ballots,FAIL,BOARD OF HEALTH: 722 marks > 704 ballots x 1 seats = 704
-Webster2022,2,marks_exceed_ballots,FAIL,FINANCE COMMITTEE: 718 marks > 704 ballots x 1 seats = 704
+Webster2022,2,marks_exceed_ballots,FAIL,"BOARD OF HEALTH: 722 marks > 704 ballots x 1 seats = 704 -- ballots derived, not printed: 4 of 6 contests agree on 704, and one of them reports 722"
+Webster2022,2,marks_exceed_ballots,FAIL,"FINANCE COMMITTEE: 718 marks > 704 ballots x 1 seats = 704 -- ballots derived, not printed: 4 of 6 contests agree on 704, and one of them reports 722"
 Webster2022,2,contest_closes,PASS,TRUSTEES OF THE PUBLIC LIBRARY: 1408 == 704 x 2
 Webster2022,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY: 704 == 704 x 1
 Webster2022,2,contest_closes,PASS,MODERATOR: 704 == 704 x 1
@@ -22862,18 +22862,18 @@ Wellesley2026,1,names_grounded,PASS,119/119 names located in raw_ocr+pdftext
 Wellesley2026,1,figures_grounded,PASS,157/157 figures located in raw_ocr+pdftext
 Wellesley2026,2,ballots_derivable,PASS,5 of 9 contests agree on 3655
 Wellesley2026,2,contest_closes,PASS,MODERATOR - Vote for ONE: 3655 == 3655 x 1
-Wellesley2026,2,marks_exceed_ballots,FAIL,SELECT BOARD - Vote for TWO: 7317 marks > 3655 ballots x 2 seats = 7310
+Wellesley2026,2,marks_exceed_ballots,FAIL,"SELECT BOARD - Vote for TWO: 7317 marks > 3655 ballots x 2 seats = 7310 -- ballots derived, not printed: 5 of 9 contests agree on 3655, and one of them reports 3658"
 Wellesley2026,2,contest_closes,PASS,BOARD OF ASSESSORS - Vote for ONE: 3655 == 3655 x 1
 Wellesley2026,2,contest_closes,PASS,BOARD OF HEALTH - Vote for ONE: 3655 == 3655 x 1
 Wellesley2026,2,tally_incomplete,NOTE,WELLESLEY HOUSING AUTHORITY 4 YEARS - Vote f: 3647 of 3655; 8 marks not tallied
 Wellesley2026,2,contest_closes,PASS,WELLESLEY HOUSING AUTHORITY 2 YEARS - Vote f: 3655 == 3655 x 1
-Wellesley2026,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEES - Vote for TWO: 7313 marks > 3655 ballots x 2 seats = 7310
-Wellesley2026,2,marks_exceed_ballots,FAIL,NATURAL RESOURCES COMMISSION - Vote for TWO: 7315 marks > 3655 ballots x 2 seats = 7310
-Wellesley2026,2,marks_exceed_ballots,FAIL,PLANNING BOARD - Vote for ONE: 3657 marks > 3655 ballots x 1 seats = 3655
+Wellesley2026,2,marks_exceed_ballots,FAIL,"LIBRARY TRUSTEES - Vote for TWO: 7313 marks > 3655 ballots x 2 seats = 7310 -- ballots derived, not printed: 5 of 9 contests agree on 3655, and one of them reports 3658"
+Wellesley2026,2,marks_exceed_ballots,FAIL,"NATURAL RESOURCES COMMISSION - Vote for TWO: 7315 marks > 3655 ballots x 2 seats = 7310 -- ballots derived, not printed: 5 of 9 contests agree on 3655, and one of them reports 3658"
+Wellesley2026,2,marks_exceed_ballots,FAIL,"PLANNING BOARD - Vote for ONE: 3657 marks > 3655 ballots x 1 seats = 3655 -- ballots derived, not printed: 5 of 9 contests agree on 3655, and one of them reports 3658"
 Wellesley2026,2,contest_closes,PASS,BOARD OF PUBLIC WORKS 3 YEARS - Vote for ONE: 3655 == 3655 x 1
-Wellesley2026,2,marks_exceed_ballots,FAIL,BOARD OF PUBLIC WORKS 2 YEARS - Vote for ONE: 3656 marks > 3655 ballots x 1 seats = 3655
-Wellesley2026,2,marks_exceed_ballots,FAIL,RECREATION COMMISSION: 3658 marks > 3655 ballots x 1 seats = 3655
-Wellesley2026,2,marks_exceed_ballots,FAIL,SCHOOL COMMITTEE - Vote for TWO: 7318 marks > 3655 ballots x 2 seats = 7310
+Wellesley2026,2,marks_exceed_ballots,FAIL,"BOARD OF PUBLIC WORKS 2 YEARS - Vote for ONE: 3656 marks > 3655 ballots x 1 seats = 3655 -- ballots derived, not printed: 5 of 9 contests agree on 3655, and one of them reports 3658"
+Wellesley2026,2,marks_exceed_ballots,FAIL,"RECREATION COMMISSION: 3658 marks > 3655 ballots x 1 seats = 3655 -- ballots derived, not printed: 5 of 9 contests agree on 3655, and one of them reports 3658"
+Wellesley2026,2,marks_exceed_ballots,FAIL,"SCHOOL COMMITTEE - Vote for TWO: 7318 marks > 3655 ballots x 2 seats = 7310 -- ballots derived, not printed: 5 of 9 contests agree on 3655, and one of them reports 3658"
 Wellesley2026,3,office_count_consistent,PASS,21 contests; median 19 in other years
 Wellfleet2021,0,document_self_identifies,PASS,"...for a motion to dissolve the Wellfleet June 26th, 2021 Annual Town M..."
 Wellfleet2021,0,carries_the_year,PASS,"...on to dissolve the Wellfleet June 26th, 2021 Annual Town Meeting. The motion was mov..."
@@ -23665,7 +23665,7 @@ WestTisbury2026,1,figures_grounded,PASS,32/32 figures located in pdftext
 WestTisbury2026,2,ballots_derivable,PASS,6 of 8 contests agree on 698
 WestTisbury2026,2,contest_closes,PASS,Moderator: 698 == 698 x 1
 WestTisbury2026,2,contest_closes,PASS,Select Board: 698 == 698 x 1
-WestTisbury2026,2,marks_exceed_ballots,FAIL,Board of Health: 705 marks > 698 ballots x 1 seats = 698
+WestTisbury2026,2,marks_exceed_ballots,FAIL,"Board of Health: 705 marks > 698 ballots x 1 seats = 698 -- ballots derived, not printed: 6 of 8 contests agree on 698, and one of them reports 705"
 WestTisbury2026,2,tally_incomplete,NOTE,Board of Assessors: 697 of 698; 1 marks not tallied
 WestTisbury2026,2,contest_closes,PASS,Town Clerk: 698 == 698 x 1
 WestTisbury2026,2,contest_closes,PASS,Tree Warden: 698 == 698 x 1
@@ -24124,7 +24124,7 @@ Weston2025,0,document_supports_record,PASS,15/15 names and 31/33 figures located
 Weston2025,1,names_grounded,PASS,15/15 names located in raw_ocr+markdown+pdftext
 Weston2025,1,figures_grounded,FAIL,31/33 figures located in raw_ocr+markdown+pdftext
 Weston2025,2,ballots_derivable,PASS,5 of 6 contests agree on 238
-Weston2025,2,marks_exceed_ballots,FAIL,Moderator (for 1 year): 240 marks > 238 ballots x 1 seats = 238
+Weston2025,2,marks_exceed_ballots,FAIL,"Moderator (for 1 year): 240 marks > 238 ballots x 1 seats = 238 -- ballots derived, not printed: 5 of 6 contests agree on 238, and one of them reports 240"
 Weston2025,2,contest_closes,PASS,Select Board (for 3 years): 238 == 238 x 1
 Weston2025,2,contest_closes,PASS,Assessor (for 3 years): 238 == 238 x 1
 Weston2025,2,contest_closes,PASS,School Comm (for 3 years): 476 == 238 x 2
@@ -24306,7 +24306,7 @@ Westwood2024,0,document_supports_record,PASS,14/14 names and 32/32 figures locat
 Westwood2024,1,names_grounded,PASS,14/14 names located in markdown+pdftext
 Westwood2024,1,figures_grounded,PASS,32/32 figures located in markdown+pdftext
 Westwood2024,2,ballots_derivable,PASS,6 of 7 contests agree on 1769
-Westwood2024,2,marks_exceed_ballots,FAIL,ASSESSOR (1): 1770 marks > 1769 ballots x 1 seats = 1769
+Westwood2024,2,marks_exceed_ballots,FAIL,"ASSESSOR (1): 1770 marks > 1769 ballots x 1 seats = 1769 -- ballots derived, not printed: 6 of 7 contests agree on 1769, and one of them reports 1770"
 Westwood2024,2,contest_closes,PASS,HOUSING AUTHORITY (1): 1769 == 1769 x 1
 Westwood2024,2,contest_closes,PASS,LIBRARY TRUSTEE (2): 3538 == 1769 x 2
 Westwood2024,2,contest_closes,PASS,MODERATOR (1): 1769 == 1769 x 1
@@ -24338,7 +24338,7 @@ Westwood2026,1,names_grounded,PASS,21/21 names located in raw_ocr+pdftext
 Westwood2026,1,figures_grounded,PASS,43/43 figures located in raw_ocr+pdftext
 Westwood2026,2,ballots_derivable,PASS,8 of 9 contests agree on 2786
 Westwood2026,2,contest_closes,PASS,ASSESSOR - For Three Years: 2786 == 2786 x 1
-Westwood2026,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY - For Five Years: 2792 marks > 2786 ballots x 1 seats = 2786
+Westwood2026,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY - For Five Years: 2792 marks > 2786 ballots x 1 seats = 2786 -- ballots derived, not printed: 8 of 9 contests agree on 2786, and one of them reports 2792"
 Westwood2026,2,contest_closes,PASS,LIBRARY TRUSTEE - For Three Years: 5572 == 2786 x 2
 Westwood2026,2,contest_closes,PASS,MODERATOR - For One Year: 2786 == 2786 x 1
 Westwood2026,2,contest_closes,PASS,PLANNING BOARD - For Three Years: 2786 == 2786 x 1
@@ -24641,12 +24641,12 @@ Williamsburg2022,2,contest_closes,PASS,Elector Oliver Smith Will – 1 year – 
 Williamsburg2022,2,contest_closes,PASS,Finance Committee – 3 years – vote for 3: 939 == 313 x 3
 Williamsburg2022,2,tally_incomplete,NOTE,Local School Committee - 3 years – vote for : 624 of 626; 2 marks not tallied
 Williamsburg2022,2,contest_closes,PASS,Moderator - 1 year – vote for 1: 313 == 313 x 1
-Williamsburg2022,2,marks_exceed_ballots,FAIL,Recreation Commission – 3 years – vote for 2: 824 marks > 313 ballots x 2 seats = 626
+Williamsburg2022,2,marks_exceed_ballots,FAIL,"Recreation Commission – 3 years – vote for 2: 824 marks > 313 ballots x 2 seats = 626 -- ballots derived, not printed: 6 of 7 contests agree on 313, and one of them reports 367"
 Williamsburg2022,2,regional_exempt,NOTE,Regional School Committee – 3 years – vote f: spans several towns; ballot arithmetic does not apply
 Williamsburg2022,2,regional_exempt,NOTE,Regional School Committee - 1 year – vote fo: spans several towns; ballot arithmetic does not apply
 Williamsburg2022,2,contest_closes,PASS,Board of Selectmen – 3 years – vote for 1: 313 == 313 x 1
 Williamsburg2022,2,contest_closes,PASS,Town Clerk – 3 years – vote for 1: 313 == 313 x 1
-Williamsburg2022,2,marks_exceed_ballots,FAIL,Trust Fund/Cemetery Commission - 3 years - v: 367 marks > 313 ballots x 1 seats = 313
+Williamsburg2022,2,marks_exceed_ballots,FAIL,"Trust Fund/Cemetery Commission - 3 years - v: 367 marks > 313 ballots x 1 seats = 313 -- ballots derived, not printed: 6 of 7 contests agree on 313, and one of them reports 367"
 Williamsburg2022,2,contest_closes,PASS,Water & Sewer Commission - 3 years - vote fo: 626 == 313 x 2
 Williamsburg2022,3,office_count_consistent,PASS,14 contests; median 13 in other years
 Williamsburg2023,0,document_self_identifies,PASS,...TOWN OF WILLIAMSBURG Minutes of Annual Town Electi...
@@ -24708,7 +24708,7 @@ Williamsburg2025,2,contest_closes,PASS,Local School Comm.-2 yr: 134 == 134 x 1
 Williamsburg2025,2,contest_closes,PASS,Moderator-1 yr: 134 == 134 x 1
 Williamsburg2025,2,contest_closes,PASS,Recreation Comm.-3 yr: 268 == 134 x 2
 Williamsburg2025,2,regional_exempt,NOTE,Regional School Comm.-3 yr.: spans several towns; ballot arithmetic does not apply
-Williamsburg2025,2,marks_exceed_ballots,FAIL,Selectman-3 yr: 135 marks > 134 ballots x 1 seats = 134
+Williamsburg2025,2,marks_exceed_ballots,FAIL,"Selectman-3 yr: 135 marks > 134 ballots x 1 seats = 134 -- ballots derived, not printed: 6 of 7 contests agree on 134, and one of them reports 135"
 Williamsburg2025,2,contest_closes,PASS,Town Clerk-3 yr: 134 == 134 x 1
 Williamsburg2025,2,tally_incomplete,NOTE,Trust Fund/Cemetery Comm-3 yr.: 28 of 134; 106 marks not tallied
 Williamsburg2025,2,contest_closes,PASS,Water/Sewer Comm-3 yr.: 268 == 134 x 2
@@ -24972,10 +24972,10 @@ Winchester2024,2,contest_closes,PASS,TOWN MODERATOR: 3109 == 3109 x 1
 Winchester2024,2,contest_closes,PASS,SELECT BOARD: 6218 == 3109 x 2
 Winchester2024,2,contest_closes,PASS,BOARD OF ASSESSORS: 3109 == 3109 x 1
 Winchester2024,2,contest_closes,PASS,BOARD OF HEALTH: 3109 == 3109 x 1
-Winchester2024,2,marks_exceed_ballots,FAIL,PLANNING BOARD: 6804 marks > 3109 ballots x 2 seats = 6218
+Winchester2024,2,marks_exceed_ballots,FAIL,"PLANNING BOARD: 6804 marks > 3109 ballots x 2 seats = 6218 -- ballots derived, not printed: 4 of 5 contests agree on 3109, and one of them reports 3309"
 Winchester2024,2,contest_closes,PASS,SCHOOL COMMITTEE: 6218 == 3109 x 2
 Winchester2024,2,contest_closes,PASS,LIBRARY BOARD OF TRUSTEE: 3109 == 3109 x 1
-Winchester2024,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY: 3309 marks > 3109 ballots x 1 seats = 3109
+Winchester2024,2,marks_exceed_ballots,FAIL,"HOUSING AUTHORITY: 3309 marks > 3109 ballots x 1 seats = 3109 -- ballots derived, not printed: 4 of 5 contests agree on 3109, and one of them reports 3309"
 Winchester2024,3,office_count_consistent,PASS,20 contests; median 19 in other years
 Winchester2025,0,document_self_identifies,PASS,...Partly Cloudy 52 TOWN OF WINCHESTER Annual Town Election Official...
 Winchester2025,0,carries_the_year,PASS,"...own Election Official Results MARCH 22, 2025 17.3% Voter Turnout 5.7% Early Voting i..."

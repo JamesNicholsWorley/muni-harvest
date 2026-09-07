@@ -524,3 +524,77 @@ def test_an_undated_document_with_no_corroboration_still_fails():
         "TOWN OF ANYTOWN ANNUAL ELECTION OFFICIAL RESULTS SELECT BOARD", "test")
     v = next(r[3] for r in rows if r[2] == "carries_the_year")
     assert v == "FAIL"
+
+
+# ---------------------------------------------------------------- layer 2
+#
+# The figures below are Attleboro 2023's, read off page 1 of
+# Attleboro2023_d0.pdf at 250dpi: "Voters Cast: 4,712 of 34,213 (13.77%)",
+# then "MAYOR (Vote for 1) / Times Cast 4,712 / Blanks 1,050 / CATHLEEN
+# DESIMONE 3,662 / Total Votes 3,662", and below a rule of its own,
+# "Unresolved Write-In  232". Every block on the sheet closes at 4,712 without
+# that last row; the four town-wide contests differ only by their write-in
+# aggregates, which is why the derivation's mode is not the town's count.
+
+
+def _attleboro():
+    """Four town-wide single-seat contests, as the record holds them."""
+    def contest(office, name, votes, blanks, others):
+        return {"office_original": office, "num_winners": 1, "scope": "at_large",
+                "candidates": [{"name_original": name, "votes": votes},
+                               {"name_original": "Blanks", "votes": blanks},
+                               {"name_original": "Others", "votes": others}]}
+    return {"elections": [
+        contest("MAYOR", "CATHLEEN DESIMONE", 3662, 1050, 232),
+        contest("CITY CLERK", "KATE M. JACKSON", 3753, 959, 52),
+        contest("CITY COLLECTOR", "ZAIDA KEEFER", 3604, 1108, 37),
+        contest("CITY TREASURER", "LAURA L. GIGNAC", 3700, 1012, 37),
+    ]}
+
+
+def _evidence(rows, check, office):
+    return next(r[4] for r in rows
+                if r[2] == check and r[4].startswith(office + ":"))
+
+
+def test_the_derivation_takes_the_mode_and_the_mode_is_not_the_maximum():
+    ballots, why, contributors = layers.derive_ballots(_attleboro())
+    assert ballots == 4749
+    assert why == "2 of 4 contests agree on 4749"
+    assert max(v for v, _ in contributors) == 4944
+
+
+def test_an_excess_over_a_derived_count_still_fails():
+    # The verdict does not move. Something is wrong with this record and the
+    # check is right to say so; only the evidence changes.
+    rows = layers.layer2_arithmetic("Attleboro2023", _attleboro())
+    assert [r[3] for r in rows if r[2] == "marks_exceed_ballots"] == ["FAIL", "FAIL"]
+
+
+def test_an_excess_over_a_derived_count_says_the_count_was_derived():
+    rows = layers.layer2_arithmetic("Attleboro2023", _attleboro())
+    ev = _evidence(rows, "marks_exceed_ballots", "MAYOR")
+    assert "4944 marks > 4749 ballots x 1 seats = 4749" in ev
+    assert "ballots derived, not printed" in ev
+    assert "2 of 4 contests agree on 4749" in ev
+    assert "one of them reports 4944" in ev
+
+
+def test_a_mode_that_is_also_the_maximum_is_not_qualified():
+    # Where every contributing contest agrees, the derived figure is not in
+    # doubt and the finding must not be softened. Attleboro's four contests
+    # with their write-in rows removed all close at 4,712.
+    rec = _attleboro()
+    for e in rec["elections"]:
+        e["candidates"] = [c for c in e["candidates"]
+                           if c["name_original"] != "Others"]
+    rec["elections"].append(
+        {"office_original": "SCHOOL COMMITTEE", "num_winners": 2,
+         "scope": "at_large",
+         "candidates": [{"name_original": "A. Candidate", "votes": 9000},
+                        {"name_original": "Blanks", "votes": 425}]})
+    ballots, why, _ = layers.derive_ballots(rec)
+    assert ballots == 4712 and why == "4 of 4 contests agree on 4712"
+    rows = layers.layer2_arithmetic("Attleboro2023", rec)
+    ev = _evidence(rows, "marks_exceed_ballots", "SCHOOL COMMITTEE")
+    assert ev == "SCHOOL COMMITTEE: 9425 marks > 4712 ballots x 2 seats = 9424"
