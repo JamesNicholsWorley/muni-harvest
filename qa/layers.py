@@ -46,6 +46,13 @@ PASS, FAIL, UNKNOWN, NOTE = "PASS", "FAIL", "UNKNOWN", "NOTE"
 # would hide how much of the corpus rests on somebody's judgement call.
 OVERRIDDEN = "OVERRIDDEN"
 
+# How a figure is spelled when a sentence rather than a table carries it.  Only
+# as far as a reporter actually writes numbers out; past that they use digits.
+WORD_FIGURE = {n: w for n, w in enumerate(
+    ("zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+     "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+     "sixteen", "seventeen", "eighteen", "nineteen", "twenty"))}
+
 # A tally row is a line in the return that counts marks, not a person.
 TALLY_ROWS = {"blanks", "blank", "others", "other", "write-ins", "write-in",
               "write ins", "writein", "total", "totals", "scattering",
@@ -134,10 +141,29 @@ def figure_found(value, text):
     digit -- so this can only un-flag as well.  It admits a letter beside the
     digits, which is the whole point and is why `43590` still does not ground
     4359.
+
+    A third spelling belongs to prose rather than to a tally sheet: a small
+    figure written as a WORD.  For 197 town-years the only reading is a news
+    article, and a reporter writes a handful of write-in votes out --
+    Bernardston 2026 "Write-in candidate Kayla Lapine received five write-in
+    votes", Conway 2025 "William Moebius, six write-in votes", New Salem 2026
+    "Felicia Curtis, four votes (write-in)", Orange 2023 "Tim Sakach earned six
+    write-in votes".  Every one of those figures is in the document, correctly
+    transcribed, and none of them grounded.
+
+    The word alone would be far looser than a digit -- "one" and "two" are in
+    every article ever written -- so it counts only where the page is plainly
+    counting with it: the word, then `vote`/`votes` within a few words and no
+    sentence break.  That is what makes this narrower than the digit form
+    rather than wider, and like the two branches above it can only un-flag.
     """
     if value is None:
         return False
     if re.search(r"(?<!\d)" + str(int(value)) + r"(?!\d)", text):
+        return True
+    word = WORD_FIGURE.get(int(value))
+    if word and re.search(r"\b" + word + r"\b[^.;:!?]{0,25}?\bvotes?\b",
+                          text, re.I):
         return True
     if abs(int(value)) < 1000:
         return False

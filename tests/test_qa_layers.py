@@ -377,6 +377,32 @@ def test_a_grouped_form_is_no_looser_than_the_plain_one():
     assert not layers.figure_found(275, "Bernard J. Stock 2750")
 
 
+def test_a_figure_spelled_as_a_word_is_the_same_figure():
+    # data/news_text, verbatim.  For 197 town-years a news article is the only
+    # reading there is, and a reporter writes a handful of write-in votes out.
+    assert layers.figure_found(
+        5, "Write-in candidate Kayla Lapine received five write-in votes.")
+    assert layers.figure_found(
+        6, "Planning Board, three-year term - William Moebius, six write-in votes.")
+    assert layers.figure_found(
+        4, "Planning Board, five-year term - Felicia Curtis, four votes (write-in).")
+    assert layers.figure_found(
+        2, "The race also had two write-in votes, and 12 voters left it blank.")
+
+
+def test_a_spelled_figure_counts_only_where_the_page_is_counting():
+    # The word on its own is far looser than a digit -- every article contains
+    # "one" and "two" -- so it grounds nothing without the counting beside it.
+    assert not layers.figure_found(1, "one of the town's longest-serving clerks")
+    assert not layers.figure_found(2, "two candidates stood, and the seat is open")
+    # A sentence boundary is not "beside": the vote count in the next sentence
+    # belongs to the next sentence.
+    assert not layers.figure_found(
+        6, "There were six. Turnout was low and 41 votes were cast in all.")
+    # and the digit spelling is untouched by any of it
+    assert layers.figure_found(6, "William Zale 6")
+
+
 def test_a_grouped_figure_grounds_the_record():
     # figures_grounded and document_supports_record read the page the same way,
     # so the comma must not decide which of them fires.
