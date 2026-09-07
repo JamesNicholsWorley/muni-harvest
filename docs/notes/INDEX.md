@@ -70,3 +70,4 @@ to know why something is the way it is.
 - [`mine-before-scrape`](civicatlas-mine-before-scrape.md) — 95 of 225 held town-years were already answered offline
 - [`clerks-publish-to-google-drive`](civicatlas-clerks-publish-to-google-drive.md) — "no document" may be a sharing setting
 - [`archive-recovery-levers`](civicatlas-archive-recovery-levers.md) — what actually recovers a vanished return
+- [`what-a-dead-end-costs`](civicatlas-what-a-dead-end-costs.md) — 28 records cited a document nobody held; 8 were recoverable
