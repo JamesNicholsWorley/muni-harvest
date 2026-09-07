@@ -64,12 +64,16 @@ def test_a_correction_the_document_does_not_support_is_not_applied(tmp_path, mon
     assert verdict == "skip"
 
 
-def test_num_winners_is_never_a_string_test(tmp_path, monkeypatch):
-    # Seats up decides who won. It is one digit and it is not settled by
-    # whether the digit appears on the page.
-    _tree(tmp_path, monkeypatch, record=RECORD, reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS vote for TWO 345")
-    verdict, note, _ = A.consider(_row(field="elections[0].num_winners",
-                                       was="1", should_be="2"))
+def test_a_scope_change_is_never_a_string_test(tmp_path, monkeypatch):
+    # Scope moves a contest between the ballot arithmetic and the exemption from
+    # it. Nothing on the page settles that, so it stays the owner's.
+    # (num_winners USED to be here. A printed "vote for no more than N" is the
+    # seat count and outranks the arithmetic, which makes it a string test after
+    # all -- see the seat tests below.)
+    _tree(tmp_path, monkeypatch, record=RECORD,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS PRECINCT 1 345")
+    verdict, note, _ = A.consider(_row(field="elections[0].scope",
+                                       was="at_large", should_be="sub_town"))
     assert verdict == "needs-owner"
     assert "judgement" in note
 
@@ -123,3 +127,56 @@ def test_a_record_that_does_not_hold_the_old_value_is_skipped(tmp_path, monkeypa
     _tree(tmp_path, monkeypatch, record=RECORD, reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS SOMEONE ELSE 345")
     verdict, _, _ = A.consider(_row(was="Not In The Record", should_be="SOMEONE ELSE"))
     assert verdict == "skip"
+
+
+SEATS = {"elections": [{"office_original": "SELECT BOARD", "num_winners": 1,
+                        "candidates": [{"name_original": "A. Smith", "votes": 10}]}]}
+
+
+def test_a_printed_seat_count_settles_num_winners(tmp_path, monkeypatch):
+    # The project's own rule: a printed "vote for no more than N" outranks the
+    # arithmetic. That is a string test, so the document decides.
+    _tree(tmp_path, monkeypatch, record=SEATS,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS SELECT BOARD "
+                  "(Vote for not more than TWO) A. Smith 10")
+    verdict, note, payload = A.consider(
+        _row(field="elections[0].num_winners", was="1", should_be="2"))
+    assert verdict == "apply", note
+    jpath, record, target, value = payload
+    A.write_value(record, target, value)
+    assert record["elections"][0]["num_winners"] == 2
+
+
+def test_a_seat_count_in_digits_counts_too(tmp_path, monkeypatch):
+    _tree(tmp_path, monkeypatch, record=SEATS,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS SELECT BOARD "
+                  "Vote for 2 -- A. Smith 10")
+    verdict, _, _ = A.consider(
+        _row(field="elections[0].num_winners", was="1", should_be="2"))
+    assert verdict == "apply"
+
+
+def test_an_unprinted_seat_count_needs_a_session_to_have_read_the_page(tmp_path, monkeypatch):
+    # Attleboro 2025: nothing on the page states the number and the claim rests
+    # on the block closing on ballots x 5. Real evidence, weaker than print.
+    _tree(tmp_path, monkeypatch, record=SEATS,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS SELECT BOARD A. Smith 10")
+    verdict, note, _ = A.consider(
+        _row(field="elections[0].num_winners", was="1", should_be="5"))
+    assert verdict == "needs-owner"
+    assert "prints no seat count" in note
+
+    verdict, note, _ = A.consider(
+        _row(field="elections[0].num_winners", was="1", should_be="5",
+             status="verified"))
+    assert verdict == "apply", note
+
+
+def test_the_page_printing_a_different_number_does_not_apply(tmp_path, monkeypatch):
+    _tree(tmp_path, monkeypatch, record=SEATS,
+          reading="ANNUAL TOWN ELECTION OFFICIAL RESULTS SELECT BOARD "
+                  "(Vote for ONE) A. Smith 10")
+    verdict, note, _ = A.consider(
+        _row(field="elections[0].num_winners", was="1", should_be="3"))
+    assert verdict == "needs-owner"
+    assert "prints 1" in note or "[1]" in note
