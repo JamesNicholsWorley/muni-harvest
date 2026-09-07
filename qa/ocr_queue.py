@@ -20,6 +20,23 @@ looks for a name or a figure in the text.
 is deliberately a separate command: OCR of a long scan takes minutes, and a run
 working a bucket should queue the work and move on rather than stop to do it.
 
+## Where the text goes
+
+`data/raw_ocr/<Stem>.txt`, which `qa.bootstrap` points at `civicatlasma/raw_ocr`.
+So an OCR written here lands in the published repository, and the session that
+wrote it must commit and push that repository too.
+
+That is not a violation of "never edit `civicatlasma` by hand". That rule exists
+so the published copy cannot disagree with the corpus it claims to represent. An
+OCR generated from a PDF already published there is the repository doing its job
+-- it is derived output beside the document it derives from, exactly like the
+markdown. What the rule forbids is a person editing a figure in `json/` so that
+the site says something the corpus does not.
+
+The alternative -- a session-local store -- was considered and is worse: the
+reading would die with the session, and the next run would render the same pages
+and read them again, which is the specific waste this file exists to stop.
+
 The queue is a file in the repository because that is the only durable thing a
 cloud session has. It is also the audit trail: a stem sitting here with a date
 and a reason is a documented gap, which is the difference between "we have not
@@ -36,7 +53,13 @@ import sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEUE = os.path.join(BASE, "qa", "ocr_queue.csv")
-FIELDS = ["stem", "why", "queued_on", "status", "chars", "done_on"]
+# `engine` and `dpi` are provenance. An OCR is not a fact about the document,
+# it is one machine's reading of it, and tesseract 5 does not produce what
+# tesseract 4 produced. Without them a later run cannot tell a document that
+# reads badly from a reading made by worse software, and re-OCRing to compare
+# is guesswork.
+FIELDS = ["stem", "why", "queued_on", "status", "chars", "done_on",
+          "engine", "dpi"]
 
 
 def load():
@@ -63,9 +86,20 @@ def add(stem, why):
         "stem": stem, "why": why,
         "queued_on": datetime.date.today().isoformat(),
         "status": "waiting", "chars": "", "done_on": "",
+        "engine": "", "dpi": "",
     })
     save(rows)
     print(f"queued {stem}")
+
+
+def engine():
+    """Which tesseract read these pages."""
+    try:
+        out = subprocess.run(["tesseract", "--version"],
+                             capture_output=True, text=True).stdout
+        return out.splitlines()[0].strip() if out else "tesseract (version unknown)"
+    except Exception:
+        return "tesseract (version unknown)"
 
 
 def run(limit):
@@ -124,6 +158,8 @@ def run(limit):
         r["status"] = "done"
         r["chars"] = str(len(body))
         r["done_on"] = datetime.date.today().isoformat()
+        r["engine"] = engine()
+        r["dpi"] = "300"
         print(f"  {stem}: {len(body)} chars -> data/raw_ocr/{stem}.txt")
     save(rows)
 
