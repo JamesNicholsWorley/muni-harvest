@@ -125,13 +125,21 @@ def classify(row):
     for word in NEVER:
         if word in blob:
             return "needs-owner", f"{word} is a judgement, not a string test"
-    if APPLIABLE_NAME in blob:
-        return "name", ""
-    if APPLIABLE_SEATS in blob:
-        return "seats", ""
-    for word in APPLIABLE_FIGURE:
-        if re.search(r"\b" + word + r"\b", blob):
-            return "figure", ""
+    # Which field does this row CHANGE? A `field` cell is prose, and it often
+    # names one field to LOCATE the row and another to CHANGE:
+    #
+    #     candidates[name_original == "Marie Cain"].votes
+    #
+    # Matching `name_original` first routed that as a name correction and
+    # refused it with "record holds no name equal to '189'" -- a refusal about
+    # the row's wording rather than about the document. The field being changed
+    # is the RIGHTMOST one, because that is how an accessor path reads.
+    kinds = {APPLIABLE_NAME: "name", APPLIABLE_SEATS: "seats"}
+    kinds.update({word: "figure" for word in APPLIABLE_FIGURE})
+    seen = [(blob.rfind(word), kind) for word, kind in kinds.items()
+            if re.search(r"\b" + re.escape(word) + r"\b", blob)]
+    if seen:
+        return max(seen)[1], ""
     return "needs-owner", "unrecognised field; enumerate what it IS before applying"
 
 

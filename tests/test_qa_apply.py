@@ -236,3 +236,25 @@ def test_a_reading_that_does_not_quote_the_correction_is_still_refused(tmp_path,
     verdict, _, _ = A.consider(_row(was="A. Smith", should_be="A. Smythe",
                                     read="I rendered the page and it looked fine"))
     assert verdict == "skip"
+
+
+def test_a_row_that_locates_by_name_and_changes_a_vote_is_a_figure():
+    # `candidates[name_original == "X"].votes` names one field to find the row
+    # and another to change. Matching name_original first refused it with
+    # "record holds no name equal to '189'" -- about the row's wording, not the
+    # document. The field being changed is the rightmost.
+    kind, _ = A.classify({"field": 'candidates[name_original == "Marie Cain"].votes',
+                          "why": ""})
+    assert kind == "figure"
+
+
+def test_a_plain_name_row_is_still_a_name():
+    kind, _ = A.classify({"field": 'candidates[].name_original == "Jospeh"',
+                          "why": ""})
+    assert kind == "name"
+
+
+def test_a_seat_row_that_mentions_a_candidate_is_still_seats():
+    kind, _ = A.classify({"field": 'elections[SELECT BOARD].num_winners',
+                          "why": "the block closes on ballots x 2"})
+    assert kind == "seats"
