@@ -18,7 +18,11 @@ The gate is not "an agent was confident". It is a property of the document:
     AND the value we currently hold does NOT
 
 If both appear, the document says both things and a string test cannot choose --
-that is a reading, and it goes to the owner. If neither appears, the quote in the
+that is a reading, and it goes to the owner unless a session has already made
+one (`status: verified`). Montgomery 2021's newsletter prints "MADELYN AUSTIN
+862-4004" in its officers directory and "WRITE-IN Madilyn Austin 11" in the
+results block; both are in the text and only one is what `name_original`
+transcribes. A reader can tell those apart and `in` cannot. If neither appears, the quote in the
 ledger is not something this document supports, and the row is suspect rather
 than ready. Either way the answer is to stop, not to guess.
 
@@ -321,7 +325,13 @@ def consider(row):
         # read the page, the reading is the evidence and the string test is not
         # the authority.
         pass
-    elif (norm(was) and norm(was) in text
+    elif ((row.get("status") or "").strip() != "verified"
+          # A session that read the page can tell two contexts apart and a
+          # string test cannot. Montgomery 2021's newsletter prints "MADELYN
+          # AUSTIN 862-4004" in the officers directory and "WRITE-IN Madilyn
+          # Austin 11" in the results block; only one of those is what
+          # name_original transcribes. Where somebody looked, the look decides.
+          and norm(was) and norm(was) in text
           # "Both spellings are present" is vacuous when one spelling CONTAINS
           # the other. Tisbury 2026 holds "Hillary Conklin" and the page prints
           # "J. Hillary Conklin"; Wellesley 2021 holds "Robertfragasso" and the
