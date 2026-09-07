@@ -1,0 +1,80 @@
+name: atr-text
+
+# Decide, for every cut ATR section, whether it can be sent to a parser as TEXT
+# or must be sent as an IMAGE -- and produce the text where it can.
+#
+# The decision is made by two readers that fail in different ways. `zones` cuts
+# the page at full-height gutters and is exact when it works and silent when it
+# does not; `docling` runs a layout model that recovers structure geometry
+# cannot see and fuses adjacent cells when a table is dense. A row goes as text
+# only where both produce it. Neither reader is trusted alone, because the
+# error that matters here -- two races merged into one -- is invisible to the
+# ballot arithmetic that would otherwise catch a bad read.
+#
+# Input is the published release rather than a re-fetch. The sections were cut
+# once, they are 390MB, and re-fetching 2,900 town reports to read them again
+# would be a day of runner time for nothing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Parallel runners"
+        default: "20"
+      release_tag:
+        description: "Release holding the cut sections"
+        default: "atr-sections-2000-2020"
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.gen.outputs.matrix }}
+    steps:
+      - id: gen
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          print("matrix=" + json.dumps({"shard": list(range(int("${{ inputs.shards }}")))}))
+          PY
+
+  text:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pymupdf docling
+
+      - name: Fetch the cut sections
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p sections
+          gh release download "${{ inputs.release_tag }}" \
+            --repo "${{ github.repository }}" --pattern '*.tar.gz' --dir dl
+          for f in dl/*.tar.gz; do tar -xzf "$f" -C sections; done
+          echo "sections: $(ls sections | wc -l)"
+
+      - name: Read each section twice and keep what both readers agree on
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARDS: ${{ inputs.shards }}
+        run: python tools/make_text.py sections section_text
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atr-text-${{ matrix.shard }}
+          path: section_text/
+          retention-days: 30
+          if-no-files-found: warn
