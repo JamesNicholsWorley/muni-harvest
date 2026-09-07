@@ -31,16 +31,57 @@ from qa import escalate                                   # noqa: E402
 
 # Per 1M tokens. Kept here so the estimate and the run cannot drift apart.
 PRICES = {"cheap": (1.0, 5.0), "strong": (3.0, 15.0)}
-IMAGE_TOKENS_PER_PAGE = 1600
-PROMPT_TOKENS = 900
+
+# Image tokens are not a guess. Anthropic resizes an image so its longest side
+# is at most 1568px and then charges (width x height) / 750, so the count
+# follows from the page's own geometry and the resolution we choose to send.
+#
+# Measured over the 4,823 image pages in this corpus: 2,471 tokens a page at
+# 1568px, 1,261 at 1120px, 618 at 784px. An earlier flat estimate of 1,600 was
+# 35% low at full resolution -- a page of election results is nearly all letter
+# size, and letter size at 1568px is 1211 x 1568.
+#
+# Checked against count_tokens on twelve real pages: 2,467 measured against
+# 2,471 predicted, 0.2% apart. The formula can be trusted for the rest.
+MAX_DIM = 1568
+IMAGE_TOKENS_PER_PAGE = {1568: 2471, 1120: 1261, 784: 618}
+
+# The system prompt is specs/transcription.md and is byte-identical on every
+# call, so it is written to the cache once and read at a tenth of the price
+# thereafter. Charging it in full 1,088 times was the second error in the old
+# estimate.
+#
+# MEASURED with count_tokens, not assumed: 5,675 including the user turn.
+SPEC_TOKENS = 5675
+TEXT_TOKENS_PER_SECTION = 748
+CACHE_WRITE = 1.25
+CACHE_READ = 0.10
+
+# The one number still unmeasured, and therefore the largest uncertainty left.
+# Nothing counts tokens a model has not generated, so this stays an estimate
+# while every input above is now measured. It is 38% of the batched Sonnet
+# figure, so an error here moves the quote more than anything else does.
 OUTPUT_TOKENS = 1400
 
+# The Batch API is half price and returns within 24 hours. Nothing about this
+# job is interactive -- it is 1,088 independent documents parsed once -- so
+# batching is the default and paying twice for turnaround nobody needs would
+# be the odd choice.
+BATCH_DISCOUNT = 0.5
 
-def cost(n_sections, n_pages, tier):
+
+def cost(n_sections, n_pages, tier, max_dim=MAX_DIM, batch=True, cached=True):
     tin, tout = PRICES[tier]
-    inp = n_pages * IMAGE_TOKENS_PER_PAGE + n_sections * PROMPT_TOKENS
+    img = n_pages * IMAGE_TOKENS_PER_PAGE[max_dim]
+    if cached:
+        prompt = SPEC_TOKENS * CACHE_WRITE + n_sections * SPEC_TOKENS * CACHE_READ
+    else:
+        prompt = n_sections * SPEC_TOKENS
     out = n_sections * OUTPUT_TOKENS
-    return (inp / 1e6 * tin + out / 1e6 * tout) * 1.15
+    c = (img + prompt) / 1e6 * tin + out / 1e6 * tout
+    if batch:
+        c *= BATCH_DISCOUNT
+    return c * 1.15
 
 
 def plan(sections, text_index):
@@ -64,6 +105,8 @@ def summarise(rows, escalation_rate):
     txt = [r for r in rows if r["send"] == "text"]
     # Text costs a fraction of an image page and is counted at a tenth here;
     # it is an estimate and is labelled as one wherever it is printed.
+    # A text section sends no page images at all; its rows cost about a
+    # tenth of a page each and are folded in here rather than modelled apart.
     pages_cheap = sum(r["pages"] for r in img) + sum(r["pages"] for r in txt) / 10
     c_cheap = cost(len(rows), pages_cheap, "cheap")
     c_strong = cost(len(rows), pages_cheap, "strong")
