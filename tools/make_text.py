@@ -99,16 +99,36 @@ def docling_rows(path):
 
 
 def zone_rows(path):
+    """Zoning's rows, and whether the document has a text layer to zone at all.
+
+    A scan has none. Zoning returns nothing, docling OCRs the page and returns
+    plenty, and the agreement score reads 0% -- which is true and misleading:
+    the readers did not disagree, one of them was never able to look. Saying so
+    matters because "two readers disagreed" and "only one reader could read
+    this" call for different work, and a scan reading 0% forever would look
+    like a gate that is failing rather than a gate correctly declining to
+    guess.
+    """
     doc = pymupdf.open(path)
     out = []
+    has_text = False
     for page in doc:
+        if page.get_text().strip():
+            has_text = True
         text, _, _ = zones.best_text(page)
         out.extend(l for l in text.splitlines() if l.strip())
-    return out
+    return out, has_text
 
 
 def reconcile(path):
-    z = zone_rows(path)
+    z, has_text = zone_rows(path)
+    if not has_text:
+        # Only one reader can see this document, so nothing can corroborate it.
+        # It goes to the model as an image, which for a scan is the right
+        # answer anyway: the image IS the document.
+        return {"verdict": "image", "reason": "scanned -- no text layer, so "
+                "only one reader is available and nothing can corroborate it",
+                "agreed": [], "n_zone": 0, "n_docling": 0}
     d = docling_rows(path)
     zmap = {}
     for line in z:
