@@ -15,8 +15,11 @@ Emit `_original` fields and nothing else:
   expanded. `WM. J. O'BRIEN, JR` stays `WM. J. O'BRIEN, JR`.
 - `office_original` — the office heading exactly as printed. Where the heading
   spans two printed rows — `Town Meeting Members` above
-  `Precinct 1 - Vote for 6 for 3 Years` — join them with ` | ` and keep both.
-  Dropping either half loses the office or loses the seat count.
+  `Precinct 1 - Vote for 6 for 3 Years` — join them with a **single space** and
+  keep both. Dropping either half loses the office or loses the seat count.
+  A single space and not a separator, because grounding collapses runs of
+  whitespace before matching, so a space is what the document's own text
+  becomes and any other joiner fails to match it.
 - Trim leading and trailing whitespace; never alter whitespace inside a value.
 - `district_original` — whatever the document prints for precinct, ward,
   district or region. Empty if it prints nothing.
@@ -53,6 +56,11 @@ Record where you got it in `num_winners_source`, which has exactly four values:
   elsewhere in the report is not the return; that is `derived`.
 - `marked` — the return marks winners (asterisks, bold, `ELECTED`) and you
   counted the marks. Say what the mark was in `num_winners_basis`.
+`seats_quote` is the printed line that carries the seat count, not the whole
+heading — and it counts as `printed` wherever it sits in the contest's own
+block, including a subheading above the office name. `Recount Tabulator Final
+for 1 seat` is a seat count printed by the return.
+
 - `derived` — neither of the above, and you worked it out from the arithmetic:
   a contest's figures sum to about the ballot count times the seats, so a race
   totalling roughly twice another race's total is a two-seat race. Put the
@@ -195,7 +203,12 @@ candidate for re-election; a dagger marks a write-in who qualified. These are
 printed information and they need somewhere to go, so:
 
 - `elected_marked` — `true` when the row carries a winner mark, `false` when it
-  does not, `null` when the document marks nobody.
+  does not, and `null` for any row that is not a candidate (`Blanks`,
+  `Write-Ins`, `Totals`), which can never be marked.
+  Whether the document marks winners **at all** is a property of the document,
+  not of a row, so it goes in `winner_marks_used` at the top level. Without it,
+  a page that marks nobody and a row that merely lost are both `null` and
+  nothing downstream can tell them apart.
 - `annotation_original` — any other mark beside the name, verbatim: `"CFR"`.
 
 `elected_marked` is **not** `num_winners`. It records who the document says
@@ -235,6 +248,7 @@ One JSON **object** per document — not a bare array:
     }
   ],
   "questions": [],
+  "winner_marks_used": true,
   "saw_special": false,
   "other_dates_seen": [],
   "document_problems": ["no municipality named in this section"]
@@ -249,8 +263,17 @@ Rules that follow from the shape:
 - `printed_total` is the `TOTALS` line the document prints for the contest, or
   `null`. It is transcription, not a sum you performed.
 - `votes_by_precinct` is `null` where the return prints no precinct columns.
-- Omit no key. A key you leave out is indistinguishable from a document that
-  said nothing, and those are different facts.
+- Omit no key **of those listed above**. A key you leave out is
+  indistinguishable from a document that said nothing, and those are different
+  facts.
+- Three keys are conditional and are simply absent where they do not apply:
+  `recount_date` (only when `is_recount`), `regional_note` (only when
+  `scope` is `regional_district`), and `votes_by_precinct` (only where the
+  return prints precinct columns — `null`, not absent, when it does not).
+- `municipality_original` is copied exactly as the page prints it. If it says
+  `TOWN OF STERLING`, that is the value. The canonical name is derived later,
+  and the whole purpose of this field is to be able to disagree with the
+  filename.
 - `is_recount` is `false` on an ordinary contest; `true` adds `recount_date`.
 - `num_winners_basis` is `null` when `num_winners_source` is `printed`, and a
   sentence otherwise.
@@ -282,6 +305,10 @@ but the record must show that nothing was checked against an image, because
   inside the office heading, leave `district_original` empty. Copying it across
   invents a field the document did not print, and `office_original` already
   holds it.
+- **A qualifier printed inside a name.** `Lance E. Harris (Write-In)` keeps the
+  parenthetical in `name_original`, because it is printed as part of the name.
+  `annotation_original` is for a mark set *beside* the name, in its own column
+  or margin.
 - **A contest with no candidates.** A block with only `Blanks` and `Write-Ins`
   is transcribed as it stands. It usually means nobody stood, which is a real
   and reportable outcome, not a parse failure.
