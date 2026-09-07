@@ -4891,11 +4891,11 @@ Cummington2026,2,contest_closes,PASS,Commissioner of Trust Funds: 60 == 60 x 1
 Cummington2026,3,office_count_consistent,PASS,17 contests; median 14 in other years
 Dalton2021,0,document_self_identifies,PASS,"...TOWN OF DALTON ANNUAL TOWN ELECTION MAY 10,..."
 Dalton2021,0,carries_the_year,PASS,"...OF DALTON ANNUAL TOWN ELECTION MAY 10, 2021 The Election was held from 11:00 a.m. t..."
-Dalton2021,0,document_supports_record,PASS,11/11 names and 22/27 figures located in markdown
+Dalton2021,0,document_supports_record,PASS,11/11 names and 24/27 figures located in markdown
 Dalton2021,1,names_grounded,PASS,11/11 names located in markdown
-Dalton2021,1,figures_grounded,FAIL,22/27 figures located in markdown
-Dalton2021,2,ballots_derivable,PASS,4 of 5 contests agree on 523
-Dalton2021,2,marks_exceed_ballots,FAIL,SELECT BOARD: 760 marks > 523 ballots x 1 seats = 523
+Dalton2021,1,figures_grounded,FAIL,24/27 figures located in markdown
+Dalton2021,2,ballots_derivable,PASS,5 of 5 contests agree on 523
+Dalton2021,2,contest_closes,PASS,SELECT BOARD: 523 == 523 x 1
 Dalton2021,2,contest_closes,PASS,TOWN CLERK: 523 == 523 x 1
 Dalton2021,2,contest_closes,PASS,MODERATOR: 523 == 523 x 1
 Dalton2021,2,contest_closes,PASS,PLANNING BOARD: 523 == 523 x 1
@@ -9919,9 +9919,9 @@ Hopkinton2025,2,contest_closes,PASS,SCHOOL COMMITTEE: 1288 == 1288 x 1
 Hopkinton2025,3,office_count_consistent,PASS,14 contests; median 13 in other years
 Hopkinton2026,0,document_self_identifies,PASS,"...ANNUAL TOWN ELECTIONHOPKINTON, MASSACHUSETTSMAY 18, 2026 Pa..."
 Hopkinton2026,0,carries_the_year,PASS,"...ELECTIONHOPKINTON, MASSACHUSETTSMAY 18, 2026 Page 1 Final OFFICE NAME TOTAL TOTAL TO..."
-Hopkinton2026,0,document_supports_record,PASS,18/18 names and 39/39 figures located in pdftext
+Hopkinton2026,0,document_supports_record,PASS,18/18 names and 38/39 figures located in pdftext
 Hopkinton2026,1,names_grounded,PASS,18/18 names located in pdftext
-Hopkinton2026,1,figures_grounded,PASS,39/39 figures located in pdftext
+Hopkinton2026,1,figures_grounded,FAIL,38/39 figures located in pdftext
 Hopkinton2026,2,ballots_derivable,PASS,5 of 7 contests agree on 966
 Hopkinton2026,2,contest_closes,PASS,SELECT BOARD: 966 == 966 x 1
 Hopkinton2026,2,tally_incomplete,NOTE,BOARD OF ASSESSORS: 947 of 966; 19 marks not tallied
@@ -9930,7 +9930,7 @@ Hopkinton2026,2,contest_closes,PASS,BOARD OF LIBRARY TRUSTEES: 1932 == 966 x 2
 Hopkinton2026,2,contest_closes,PASS,CEMETERY COMMISSIONER: 966 == 966 x 1
 Hopkinton2026,2,contest_closes,PASS,COMMISSIONERS OF PARKS AND RECREATION: 1932 == 966 x 2
 Hopkinton2026,2,contest_closes,PASS,COMMISSIONERS OF TRUST FUNDS: 966 == 966 x 1
-Hopkinton2026,2,marks_exceed_ballots,FAIL,CONSTABLE: 1336 marks > 966 ballots x 1 seats = 966
+Hopkinton2026,2,tally_incomplete,NOTE,CONSTABLE: 957 of 966; 9 marks not tallied
 Hopkinton2026,2,contest_closes,PASS,HOUSING AUTHORITY: 966 == 966 x 1
 Hopkinton2026,2,contest_closes,PASS,PLANNING BOARD: 1932 == 966 x 2
 Hopkinton2026,2,contest_closes,PASS,SCHOOL COMMITTEE: 1932 == 966 x 2
@@ -12235,14 +12235,14 @@ Mashpee2021,2,contest_closes,PASS,Board of Selectmen: 3418 == 1709 x 2
 Mashpee2021,3,office_count_consistent,PASS,6 contests; median 8 in other years
 Mashpee2022,0,document_self_identifies,NOTE,document never prints 'Mashpee'; identity rests on the citation alone
 Mashpee2022,0,carries_the_year,PASS,"...Annual Town Election Saturday, May 7, 2022 Official Results Precinct 1 Precinct2 P..."
-Mashpee2022,0,document_supports_record,PASS,14/14 names and 29/29 figures located in pdftext
+Mashpee2022,0,document_supports_record,PASS,14/14 names and 28/29 figures located in pdftext
 Mashpee2022,1,names_grounded,PASS,14/14 names located in pdftext
-Mashpee2022,1,figures_grounded,PASS,29/29 figures located in pdftext
-Mashpee2022,2,ballots_derivable,PASS,5 of 6 contests agree on 1469
+Mashpee2022,1,figures_grounded,FAIL,28/29 figures located in pdftext
+Mashpee2022,2,ballots_derivable,PASS,6 of 6 contests agree on 1469
 Mashpee2022,2,contest_closes,PASS,Housing Authority: 1469 == 1469 x 1
 Mashpee2022,2,contest_closes,PASS,Library Trustees: 2938 == 1469 x 2
 Mashpee2022,2,contest_closes,PASS,Library Trustees: 1469 == 1469 x 1
-Mashpee2022,2,marks_exceed_ballots,FAIL,Moderator: 2184 marks > 1469 ballots x 1 seats = 1469
+Mashpee2022,2,contest_closes,PASS,Moderator: 1469 == 1469 x 1
 Mashpee2022,2,contest_closes,PASS,Planning Board: 2938 == 1469 x 2
 Mashpee2022,2,contest_closes,PASS,School Committee: 1469 == 1469 x 1
 Mashpee2022,2,contest_closes,PASS,Selectmen: 1469 == 1469 x 1
@@ -14520,7 +14520,7 @@ NewSalem2025,1,names_grounded,PASS,10/10 names located in news_text
 NewSalem2025,1,figures_grounded,PASS,10/10 figures located in news_text
 NewSalem2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewSalem2025,3,office_count_consistent,PASS,9 contests; median 8 in other years
-NewSalem2026,0,document_self_identifies,PASS,...# NewSalem2026 - Recovered from: http://...
+NewSalem2026,0,document_self_identifies,PASS,...it does not reproduce it. --- New Salem rejects Proposition 2½ overri...
 NewSalem2026,0,carries_the_year,PASS,...# NewSalem2026 - Recovered from: http://web.archive.or...
 NewSalem2026,0,document_supports_record,PASS,9/9 names and 7/9 figures located in news_text
 NewSalem2026,1,names_grounded,PASS,9/9 names located in news_text
@@ -14783,7 +14783,7 @@ NorthAndover2021,2,contest_closes,PASS,MODERATOR: 4038 == 4038 x 1
 NorthAndover2021,2,contest_closes,PASS,HOUSING AUTHORITY: 4038 == 4038 x 1
 NorthAndover2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 8076 == 4038 x 2
 NorthAndover2021,3,office_count_consistent,PASS,4 contests; median 3 in other years
-NorthAndover2022,0,document_self_identifies,PASS,...etts\northandover\politics) # North Andover 2022 Election Results: Hicks...
+NorthAndover2022,0,document_self_identifies,PASS,...p; Government](\massachusetts\northandover\politics) # North Andover 202...
 NorthAndover2022,0,carries_the_year,PASS,...\northandover\politics) # North Andover 2022 Election Results: Hicks Wins School Boa...
 NorthAndover2022,0,document_supports_record,PASS,4/4 names and 4/4 figures located in news_text
 NorthAndover2022,1,names_grounded,PASS,4/4 names located in news_text
@@ -15515,7 +15515,7 @@ Norwood2024,0,carries_the_year,PASS,"...ANNUAL TOWN ELECTION MONDAY APRIL 1, 202
 Norwood2024,0,document_supports_record,PASS,12/12 names and 30/30 figures located in markdown+pdftext
 Norwood2024,1,names_grounded,FAIL,11/12 names located in markdown+pdftext
 Norwood2024,1,figures_grounded,PASS,30/30 figures located in markdown+pdftext
-Norwood2024,2,ballots_derivable,PASS,6 of 7 contests agree on 2208
+Norwood2024,2,ballots_derivable,PASS,7 of 7 contests agree on 2208
 Norwood2024,2,contest_closes,PASS,SELECTMEN: 2208 == 2208 x 1
 Norwood2024,2,contest_closes,PASS,MODERATOR: 2208 == 2208 x 1
 Norwood2024,2,contest_closes,PASS,MEM. OF BD OF HEALTH: 2208 == 2208 x 1
@@ -15524,7 +15524,7 @@ Norwood2024,2,contest_closes,PASS,MEM OF FIN COM: 4416 == 2208 x 2
 Norwood2024,2,contest_closes,PASS,LIBRARY TRUSTEES: 4416 == 2208 x 2
 Norwood2024,2,contest_closes,PASS,MEM. TOWN PLANNING BD.: 2208 == 2208 x 1
 Norwood2024,2,contest_closes,PASS,HOUSING AUTHORITY: 2208 == 2208 x 1
-Norwood2024,2,marks_exceed_ballots,FAIL,CONSTABLE: 2349 marks > 2208 ballots x 1 seats = 2208
+Norwood2024,2,contest_closes,PASS,CONSTABLE: 2208 == 2208 x 1
 Norwood2024,3,office_count_consistent,FAIL,9 contests; this town's other years median 23
 Norwood2025,0,document_self_identifies,PASS,"...ON MONDAY,APRIL7,2025 TOWN OF NORWOOD OFFICIALRESULTS | | DIST1 | D..."
 Norwood2025,0,carries_the_year,PASS,"...## ANNUALTOWNELECTION MONDAY,APRIL7,2025 TOWN OF NORWOOD OFFICIALRESULTS | | DIS..."
@@ -19705,7 +19705,7 @@ Southbridge2023,1,names_grounded,PASS,12/12 names located in markdown
 Southbridge2023,1,figures_grounded,PASS,22/22 figures located in markdown
 Southbridge2023,2,ballots_derivable,PASS,2 of 2 contests agree on 1098
 Southbridge2023,2,tally_incomplete,NOTE,Councilor-At-Large: 3293 of 3294; 1 marks not tallied
-Southbridge2023,2,marks_exceed_ballots,FAIL,School Committee: 3292 marks > 1098 ballots x 2 seats = 2196
+Southbridge2023,2,tally_incomplete,NOTE,School Committee: 3292 of 3294; 2 marks not tallied
 Southbridge2023,2,contest_closes,PASS,Board of Assessors: 1098 == 1098 x 1
 Southbridge2023,2,contest_closes,PASS,Southbridge Redevelopment Authority: 1098 == 1098 x 1
 Southbridge2023,2,contest_closes,PASS,Southbridge Housing Authority: 1098 == 1098 x 1
