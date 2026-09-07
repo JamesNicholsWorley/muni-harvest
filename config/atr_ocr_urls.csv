@@ -1,0 +1,516 @@
+municipality,year,url,kind,pool,prior_pages
+Blandford,2012,https://townofblandford.gov/wp-content/uploads/2016/04/report2011-2012.pdf,atr,ocr,50
+Bolton,2017,https://web.archive.org/web/20220301233522id_/https://www.townofbolton.com/sites/g/files/vyhlif2836/f/uploads/2017_annual_report_1_of_2.pdf,atr,ocr,83
+Carlisle,2014,https://web.archive.org/web/20161215093728id_/http://www.carlislema.gov/Pages/CarlisleMA_Clerk/ZBAExhibits/BREM%20013%2007-28-2014%20Lifetime%20Green%20Homes%20Annual%20Report.pdf,atr,ocr,2
+Dracut,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/d93230fe-ebde-400f-817a-008bada763fe/content,atr,ocr,240
+Essex,2018,https://essexma.org/ImageRepository/Document?documentID=217,atr,ocr,2
+Fitchburg,2014,https://web.archive.org/web/20150912023834id_/http://www.fitchburgma.gov/government/city_clerk/elections-voting/ElectionResults/2014-09-09-primary-official-09122014145055.pdf,atr,ocr,2
+Georgetown,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/0788a38a-5361-4290-94b8-7ed663657219/content,atr,ocr,146
+Gloucester,2013,http://www.gloucester-ma.gov/DocumentCenter/View/4080/Official-Results-11-5-2013-municipal-election?bidId=,atr,ocr,12
+Grafton,2020,https://web.archive.org/web/20211229042631id_/https://www.grafton-ma.gov/sites/g/files/vyhlif4461/f/pages/amended_local_election_results_6-23-2020.pdf,atr,ocr,4
+Groveland,2009,https://web.archive.org/web/20220319210453id_/https://www.grovelandma.com/sites/g/files/vyhlif3191/f/uploads/2009_annual_town_report.pdf,atr,ocr,107
+Hinsdale,2001,https://hinsdalemass.com/DocumentCenter/View/286/2001-Annual-Report,atr,ocr,78
+Hull,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/539988fb-b1ac-4d76-be52-e3efa4793bf0/content,atr,ocr,201
+Lee,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/87a54546-140e-4f9e-912f-591c6eac365b/content,atr,ocr,113
+Millbury,2008,https://millburyma.gov/DocumentCenter/View/242/Annual-Town-Report---FY-2008,atr,ocr,134
+Mount Washington,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/eaa1f924-0bc8-4834-a78b-51a1326837f2/content,atr,ocr,24
+Newbury,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/b05b4c4d-c215-4149-8e3d-d66a85c69356/content,atr,ocr,94
+North Brookfield,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/161394f2-d7d9-4252-bf93-2413d04fab82/content,atr,ocr,164
+Norwell,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/663d2e65-3dab-485f-b469-7185ee887f3b/content,atr,ocr,182
+Petersham,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/dbe8fb6b-9a48-4196-87a9-c6b415ba3242/content,atr,ocr,110
+Quincy,2017,https://cms7files1.revize.com/bedfordtownshipmi/2017%20BTFD%20Annual%20Report.pdf,atr,ocr,34
+Royalston,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/6761839f-946a-4e5d-8db3-2409a048b7c7/content,atr,ocr,104
+Sandisfield,2016,https://web.archive.org/web/20170131053916id_/http://www.sandisfieldma.gov/sites/sandisfieldma/files/uploads/2016-election-results.pdf,atr,ocr,1
+Saugus,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/b51370d7-e627-4ecd-b7b1-3fe45080100a/content,atr,ocr,228
+Seekonk,2018,https://web.archive.org/web/20220301201031id_/https://www.seekonk-ma.gov/sites/g/files/vyhlif1191/f/pages/seekonk_public_schools-annual_report_2018.pdf,atr,ocr,28
+Sutton,2017,https://web.archive.org/web/20220301230835id_/https://www.suttonma.org/sites/g/files/vyhlif3901/f/uploads/2017_annual_report.pdf,atr,ocr,140
+Wales,2012,https://townofwales.net/DocumentCenter/View/3529/05-29-2012-Election-Results,atr,ocr,1
+Bolton,2018,https://web.archive.org/web/20220302184213id_/https://www.townofbolton.com/system/files/uploads/2018_annual_report_part_1_of_2.pdf,atr,ocr,97
+Carver,2018,https://web.archive.org/web/20260117161249id_/https://www.carverma.gov/sites/g/files/vyhlif4221/f/uploads/fincom_annual_report_2018.pdf,atr,ocr,3
+Dracut,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/9a7c0b29-f373-4bd5-81fc-cfb7f7bf709f/content,atr,ocr,258
+Florida,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/d8549df7-5732-41f3-9570-e02b9fde0c6e/content,atr,ocr,18
+Georgetown,2011,https://web.archive.org/web/20161228071104id_/http://georgetownma.gov/public_documents/georgetownma_bcomm/townreports/Town%20Report%20FY2011.pdf,atr,ocr,113
+Gloucester,2015,http://gloucester-ma.gov/DocumentCenter/View/4076/official-results-Nov-3-2015-Munucipal-Election,atr,ocr,12
+Granby,2006,https://web.archive.org/web/20161228082319id_/http://www.granby-ma.gov/Pages/GranbyMA_Selectmen/2006-Annual%20Report.pdf,atr,ocr,82
+Granville,2018,https://townofgranville.net/DocumentCenter/View/1032/2018-Municipal-Election-Results,atr,ocr,25
+Groveland,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/900f14ff-b91b-4de9-b9e5-2fec5bc2800d/content,atr,ocr,62
+Hinsdale,2002,https://hinsdalemass.com/DocumentCenter/View/287/2002-Annual-Report,atr,ocr,112
+Holbrook,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/8bbe318f-6629-4632-a590-fcbf1ffe343e/content,atr,ocr,89
+Lee,2004,https://web.archive.org/web/20250405211744id_/http://www.lee.ma.us/sites/g/files/vyhlif771/f/uploads/town_report_fy_2004.pdf,atr,ocr,114
+Millville,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/d0436451-dddd-41a9-b42d-2d6e72d4af73/content,atr,ocr,168
+Newbury,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/1004e3ee-99e3-40a5-9fe5-5b09cad243b8/content,atr,ocr,122
+North Brookfield,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/740c3df5-2aad-4a37-85d9-d2c0b1f5ef4b/content,atr,ocr,159
+Petersham,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/a23ad77a-1aed-4622-8a02-df6f29b13d9c/content,atr,ocr,98
+Rockland,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/4e296758-5b2d-46de-91ec-df8130cf5bd0/content,atr,ocr,220
+Royalston,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/777166ab-24e8-4d2c-80dd-c041a6938034/content,atr,ocr,138
+Saugus,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/329be1d9-7e74-4012-a168-3f57159b76b4/content,atr,ocr,258
+Sheffield,2013,https://www.sheffieldma.gov/sites/g/files/vyhlif3806/f/uploads/2013annualelectionresults.pdf,atr,ocr,1
+Stoughton,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/05979510-daa4-46b0-86eb-a4f5b7c855ea/content,atr,ocr,312
+Sutton,2018,https://web.archive.org/web/20220301203638id_/https://www.suttonma.org/sites/g/files/vyhlif3901/f/uploads/2018_annual_town_report.pdf,atr,ocr,122
+Tyngsborough,2011,https://web.archive.org/web/20150917222043id_/http://www.tyngsboroughma.gov/download/documents/2011/2009%20Annual%20Town%20Reports.pdf,atr,ocr,96
+Wales,2013,https://townofwales.net/DocumentCenter/View/3531/06-25-2013-Election-Results,atr,ocr,1
+Attleboro,2017,https://cityofattleboro.us/DocumentCenter/View/12899/Results-Citywide,atr,ocr,6
+Belchertown,2016,https://www.belchertown.org/DocumentCenter/View/7959/2016-Annual-Town-Report-Belchertown,atr,ocr,137
+Brimfield,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/a347f106-7032-4d4c-a23b-21549f1cbf37/content,atr,ocr,172
+Cambridge,2008,https://www.cambridgema.gov/-/media/Files/electioncommission/electionresults/2008wardcommitteedem.pdf,atr,ocr,11
+Chelmsford,2011,https://www.townofchelmsford.us/DocumentCenter/View/537,atr,ocr,4
+Cohasset,2020,https://www.cohassetma.org/DocumentCenter/View/3094,atr,ocr,1
+Dover,2014,https://doverma.gov/DocumentCenter/View/208/05-19-2014-Annual-Town-Election-Results,atr,ocr,1
+East Bridgewater,2015,https://eastbridgewaterma.gov/DocumentCenter/View/594/2015-Annual-Town-Report-PDF,atr,ocr,188
+Grafton,2010,https://web.archive.org/web/20211229042636id_/https://www.grafton-ma.gov/sites/g/files/vyhlif4461/f/pages/local_election_results_5-3-2010.pdf,atr,ocr,3
+Hinsdale,2011,https://hinsdalemass.com/DocumentCenter/View/242/2011-Annual-Report,atr,ocr,75
+Lawrence,2014,https://cityoflawrence.com/ImageRepository/Document?documentID=76,atr,ocr,1
+Leominster,2007,https://web.archive.org/web/20100927083556id_/http://leominster-ma.gov/images/images_comptroller_dept/pdfs/annual-report-2007.pdf,atr,ocr,50
+Middlefield,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/50a80f22-c184-4cb1-aa02-2b1c033c43f2/content,atr,ocr,92
+Monson,2020,https://web.archive.org/web/20211117035414id_/https://www.monson-ma.gov/sites/g/files/vyhlif926/f/uploads/collectors_2020_annual_town_report_0.pdf,atr,ocr,6
+Mount Washington,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/f1d98a81-c222-4317-a299-aa8f872ff4c7/content,atr,ocr,15
+New Ashford,2018,https://www.newashford-ma.us/wp-content/uploads/2018/05/TownReport2018Final.pdf,atr,ocr,38
+Petersham,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/629332cf-2dcc-4fd6-9446-08aff11e327c/content,atr,ocr,128
+Quincy,2005,https://web.archive.org/web/20110104195106id_/http://www.quincyma.gov/CityOfQuincy_Content/documents/AnnualReport2005.pdf,atr,ocr,51
+Randolph,2006,https://randolph-ma.gov/ImageRepository/Document?documentID=138,atr,ocr,6
+Rowe,2002,https://rowe-ma.gov/files/2002_Annual_Town_Report.pdf,atr,ocr,70
+Seekonk,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/d09e4574-8522-4568-a2ad-587082cfe5be/content,atr,ocr,230
+Springfield,2012,https://www.springfield-ma.gov/cos/fileadmin/clerk/2012/CPHB_Annual_report_with_Appendix_3_20_14.pdf,atr,ocr,36
+Taunton,2015,https://web.archive.org/web/20170125163608id_/http://www.taunton-ma.gov/sites/tauntonma/files/uploads/official_city_election_results_by_ward_11-3-2015_0.pdf,atr,ocr,16
+Wales,2002,https://townofwales.net/DocumentCenter/View/3518/05-28-2002-Election-Results,atr,ocr,1
+West Newbury,2015,https://www.wnewbury.org/DocumentCenter/View/1653/2015-Election-Results,atr,ocr,3
+Ashfield,2020,https://ashfield.org/DocumentCenter/View/8529,atr,ocr,2
+Attleboro,2018,https://www.cityofattleboro.us/DocumentCenter/View/2972,atr,ocr,7
+Belchertown,2017,https://www.belchertown.org/DocumentCenter/View/7960/2017-Annual-Town-Report-Belchertown,atr,ocr,137
+Brimfield,2017,https://web.archive.org/web/20171017205009id_/http://www.brimfieldma.org/Pages/2017electionresults.pdf,atr,ocr,1
+Charlton,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/cf17993f-aff8-4c20-b227-84fe48b1d984/content,atr,ocr,53
+Dover,2015,https://www.doverma.gov/DocumentCenter/View/212/05-18-2015-Annual-Town-Election-Results-PDF,atr,ocr,1
+East Bridgewater,2016,https://eastbridgewaterma.gov/DocumentCenter/View/595/2016-Annual-Town-Report-PDF,atr,ocr,184
+Granville,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/357b66b0-045c-4173-b521-4c0d30954568/content,atr,ocr,113
+Hinsdale,2012,https://hinsdalemass.com/DocumentCenter/View/243/2012-Annual-Report,atr,ocr,75
+Lawrence,2015,https://www.cityoflawrence.com/DocumentCenter/View/453,atr,ocr,33
+Leominster,2008,https://web.archive.org/web/20100927090211id_/http://leominster-ma.gov/images/images_comptroller_dept/pdfs/annual-report-2008.pdf,atr,ocr,57
+Lowell,2005,https://web.archive.org/web/20060719221631id_/http://www.lowellma.gov:80/depts/electioncensus/2005-results.pdf,atr,ocr,7
+Middlefield,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/d5168d0e-af28-4afb-b36f-f4df77a834d0/content,atr,ocr,98
+Mount Washington,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/bde2d6ba-9fed-44ab-b378-988b8e7f1840/content,atr,ocr,14
+New Ashford,2019,https://www.newashford-ma.us/wp-content/uploads/2019/05/ElectionResultMay2019-2.pdf,atr,ocr,1
+Petersham,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/9b4b82bc-acbb-46a5-836f-8e6f8e31ebba/content,atr,ocr,166
+Quincy,2006,https://web.archive.org/web/20110104195401id_/http://www.quincyma.gov/CityOfQuincy_Content/documents/AnnualReport2006.pdf,atr,ocr,51
+Randolph,2008,https://randolph-ma.gov/ImageRepository/Document?documentID=137,atr,ocr,30
+Rowe,2003,https://rowe-ma.gov/files/2003_Annual_Town_Report.pdf,atr,ocr,96
+Seekonk,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/0cd8abc5-e8d0-4de2-952a-7945561bdf5c/content,atr,ocr,213
+Springfield,2013,https://www.springfield-ma.gov/cos/fileadmin/law/CPHB/CPHB_Annual_Reports_2012_and_2013.pdf,atr,ocr,36
+Taunton,2017,https://taunton-ma.gov/DocumentCenter/View/5665/2017-City-Election-Results,atr,ocr,2
+Wales,2003,https://townofwales.net/DocumentCenter/View/3517/05-27-2003-Election-Results,atr,ocr,1
+Wareham,2017,https://web.archive.org/web/20170724181337id_/http://www.wareham.ma.us:80/system/files/uploads/2017_spring_town_election_results_0.pdf,atr,ocr,2
+West Boylston,2020,https://www.westboylston-ma.gov/sites/g/files/vyhlif1421/f/pages/west_boylston_ma_-_year_3_ms4_annual_report_-_2020-2021.pdf,atr,ocr,16
+Westborough,2019,https://ma-westborough.civicplus.com/DocumentCenter/View/512/2019-Annual-Town-Election-Results-PDF,atr,ocr,1
+Worcester,2000,https://web.archive.org/web/20100531194904id_/http://www.worcesterma.gov/election-results/2000-2009/20040302.pdf,atr,ocr,55
+Attleboro,2019,https://cityofattleboro.us/DocumentCenter/View/12893/Results---Citywide,atr,ocr,18
+Belchertown,2018,https://www.belchertown.org/DocumentCenter/View/7961/2018-Annual-Town-Report-Belchertown,atr,ocr,144
+Blandford,2002,https://townofblandford.gov/wp-content/uploads/2016/04/report2001-2002.pdf,atr,ocr,61
+Brimfield,2018,https://www.brimfieldma.org/sites/g/files/vyhlif4181/f/uploads/brimfield_ma_11.6.2018_election_results.pdf,atr,ocr,8
+Chilmark,2007,https://web.archive.org/web/20161227115438id_/http://www.chilmarkma.gov/Pages/ChilmarkMA_Annual/2006%20annual%20reports/2007_03_21_10_50_39.pdf,atr,ocr,4
+Dover,2016,https://www.doverma.gov/DocumentCenter/View/219/05-16-2016-Annual-Town-Election-Results,atr,ocr,1
+East Bridgewater,2017,https://eastbridgewaterma.gov/DocumentCenter/View/596/2017-Annual-Town-Report-PDF,atr,ocr,172
+Grafton,2012,https://web.archive.org/web/20151022190919id_/http://www.grafton-ma.gov:80/sites/graftonma/files/uploads/together_we_can_annual_report_2012.pdf,atr,ocr,1
+Granville,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/a9ecaf6a-de4d-43f8-ba21-e4a3d09d8b90/content,atr,ocr,91
+Hampden,2000,https://web.archive.org/web/20230624040911id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2000_annual_town_reportpartb.pdf,atr,ocr,30
+Hancock,2020,http://town.hancock.ma.us/files/2020/11/NOVEMBER-3rd-ELECTION-RESULTS.pdf,atr,ocr,1
+Hinsdale,2013,https://hinsdalemass.com/DocumentCenter/View/244/2013-Annual-Report,atr,ocr,74
+Leominster,2009,https://web.archive.org/web/20100927092200id_/http://leominster-ma.gov/images/images_comptroller_dept/pdfs/annual_report_2009.pdf,atr,ocr,56
+Lowell,2015,http://www.lowellma.gov/DocumentCenter/View/500/2015-11-03-Offical-Municipal-Election-Results-PDF,atr,ocr,1
+Marshfield,2019,https://cms3.revize.com/revize/bellcountytx/elections/11.5.2019_Summary_Results.pdf,atr,ocr,6
+Middleton,2010,https://middletonma.gov/DocumentCenter/View/1566/May-17-2010-Annual-Town-Election-Official-Results,atr,ocr,2
+Mount Washington,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/ec3b58b7-c583-4f2f-a71a-23046ced9b58/content,atr,ocr,15
+New Ashford,2020,https://www.newashford-ma.us/wp-content/uploads/2020/04/AnnualTownReport2019.pdf,atr,ocr,40
+Petersham,2017,https://townofpetersham.gov/wp-content/uploads/2025/12/FY17-Town-report-2016-2017.pdf,atr,ocr,166
+Quincy,2007,https://web.archive.org/web/20110104195737id_/http://www.quincyma.gov/CityOfQuincy_Content/documents/AnnualReport2007.pdf,atr,ocr,50
+Randolph,2009,https://randolph-ma.gov/ImageRepository/Document?documentID=136,atr,ocr,49
+Rockland,2015,https://web.archive.org/web/20161227011415id_/http://www.rockland-ma.gov/sites/rocklandma/files/uploads/sra_2015_annual_report.pdf,atr,ocr,6
+Rowe,2004,https://rowe-ma.gov/files/2004_Annual_Town_Report.pdf,atr,ocr,98
+Salem,2000,https://web.archive.org/web/20251013131001id_/https://www.salemma.gov/DocumentCenter/View/1670/2000-to-2009-Election-Results-PDF,atr,ocr,111
+Seekonk,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/91364c96-e25f-434b-9457-a269b48715fe/content,atr,ocr,204
+Taunton,2019,https://taunton-ma.gov/DocumentCenter/View/5664/2019-City-Election-Results-,atr,ocr,1
+Wales,2004,https://townofwales.net/DocumentCenter/View/3519/05-25-2004-Election-Results,atr,ocr,1
+Ware,2014,https://cms1files.revize.com/cityofalbion/document_center/AgendasMinutes/2014%20Annual%20Report.pdf,atr,ocr,5
+Wareham,2018,https://web.archive.org/web/20180412105812id_/http://www.wareham.ma.us:80/sites/warehamma/files/uploads/electionresults2018.pdf,atr,ocr,2
+West Bridgewater,2015,https://web.archive.org/web/20170307185245id_/http://www.westbridgewaterma.org/document_center/Water/Annual%20Reports/2015%20CCR.pdf,atr,ocr,6
+Bedford,2005,https://web.archive.org/web/20060627054256id_/http://www.bedfordnh.org:80/dept/townmanager/townreport2005.pdf,atr,ocr,146
+Belchertown,2019,https://www.belchertown.org/DocumentCenter/View/7962/2019-Annual-Town-Report-Belchertown,atr,ocr,139
+Blandford,2004,https://townofblandford.gov/wp-content/uploads/2016/04/report2003-2004.pdf,atr,ocr,72
+Chilmark,2008,"https://web.archive.org/web/20170125021554id_/http://www.chilmarkma.gov/Pages/ChilmarkMA_BBoard/Archived%20News/February5,2008ElectionResults.pdf",atr,ocr,4
+Dover,2017,https://www.doverma.gov/DocumentCenter/View/220/05-15-2017-Annual-Town-Election-Results-PDF,atr,ocr,1
+Dunstable,2020,https://www.dunstable-ma.gov/sites/g/files/vyhlif4361/f/uploads/ms4_annual_report_2020.pdf,atr,ocr,15
+East Bridgewater,2018,https://eastbridgewaterma.gov/DocumentCenter/View/597/2018-Annual-Town-Report-PDF,atr,ocr,161
+Essex,2011,https://essexma.org/ImageRepository/Document?documentID=238,atr,ocr,3
+Granville,2010,https://www.granville-ma.gov/DocumentCenter/View/362/Annual-Town-Report-2010,atr,ocr,107
+Greenfield,2015,https://web.archive.org/web/20200612173631id_/https://greenfield-ma.gov/files/2015_Local_Election_2015-NOV-3_Final_Results.pdf,atr,ocr,20
+Hampden,2001,https://web.archive.org/web/20230624031940id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/annual_town_report_2001_-_small.pdf,atr,ocr,136
+Hanson,2014,https://web.archive.org/web/20161229172343id_/http://www.hanson-ma.gov/sites/hansonma/files/uploads/election_results_may_17_2014.pdf,atr,ocr,3
+Haverhill,2004,https://www.haverhillma.gov/media/3x2a5sjo/cso_annual_report_2004.pdf,atr,ocr,11
+Hopedale,2016,https://hopedale-ma.gov/DocumentCenter/View/961/FY16-Annual-Town-Report,atr,ocr,113
+Lawrence,2017,https://www.cityoflawrence.com/DocumentCenter/View/469,atr,ocr,16
+Lee,2020,https://leema.gov/DocumentCenter/View/4137/Late-Tabulation-of-Ballots-Nov-9-2020,atr,ocr,1
+Leominster,2010,https://web.archive.org/web/20100927091424id_/http://leominster-ma.gov/images/images_comptroller_dept/pdfs/annual_report_2010.pdf,atr,ocr,58
+Mashpee,2020,https://web.archive.org/web/20201117075952id_/https://www.mashpeema.gov/sites/g/files/vyhlif3426/f/uploads/11-3-2020_presedential_election_results.pdf,atr,ocr,2
+Middleton,2011,https://middletonma.gov/DocumentCenter/View/1575/May-16-2011-Annual-Town-Election-Official-Results,atr,ocr,2
+Montague,2012,https://montague-ma.gov/files/2012-05-21_Annual_Town_Election_Results.pdf,atr,ocr,8
+Mount Washington,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/57e1c5c3-cae2-4220-b9f3-5c1d3634d8a6/content,atr,ocr,14
+Pembroke,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/5c69b6c4-36f4-49d9-ba42-9069e51ab9c9/content,atr,ocr,195
+Petersham,2018,https://townofpetersham.gov/wp-content/uploads/2025/12/FY18-Town-report-2017-2018.pdf,atr,ocr,130
+Rowe,2005,https://rowe-ma.gov/files/2005_Annual_Town_Report.pdf,atr,ocr,108
+Salem,2010,https://web.archive.org/web/20251013131018id_/https://www.salemma.gov/DocumentCenter/View/1671/2010-to-September-2019-Election-Results-PDF,atr,ocr,79
+Seekonk,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/2af666a4-585a-4f8b-a7d1-537462ea20ff/content,atr,ocr,197
+Springfield,2017,https://www.springfield-ma.gov/cos/fileadmin/law/CPHB/CPHB_Annual_Report_2017.pdf,atr,ocr,57
+Templeton,2012,https://www.templetonma.gov/DocumentCenter/View/2416/Annual-Report-for-Fiscal-Year-2012-PDF,atr,ocr,198
+Wales,2005,https://townofwales.net/DocumentCenter/View/3522/05-31-2005-Election-Results,atr,ocr,1
+Ware,2015,https://web.archive.org/web/20220610080722id_/https://cms1files.revize.com/benzie/2015%20Annual%20Report.pdf,atr,ocr,34
+Westfield,2015,https://www.cityofwestfield.org/DocumentCenter/View/2947,atr,ocr,10
+Belchertown,2020,https://www.belchertown.org/DocumentCenter/View/7964/2020-Annual-Town-Report-Belchertown-Part-2,atr,ocr,31
+Beverly,2014,https://web.archive.org/web/20161222225516id_/http://www.beverlyma.gov/wp-content/uploads/2014/11/Unofficial-Results-November-4-2014-Election.pdf,atr,ocr,4
+Blandford,2005,https://townofblandford.gov/wp-content/uploads/2016/04/report2004-2005.pdf,atr,ocr,53
+Buckland,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/bd84e700-26d7-484b-8889-f9d605e94335/content,atr,ocr,71
+Chilmark,2009,https://web.archive.org/web/20161230061453id_/http://chilmarkma.gov/Pages/ChilmarkMA_TownMeeting/April2009ElectionResults.pdf,atr,ocr,3
+Dartmouth,2005,https://www.town.dartmouth.ma.us/DocumentCenter/View/334,atr,ocr,9
+Dover,2018,https://doverma.gov/DocumentCenter/View/221/05-21-2018-Annual-Town-Election-Results,atr,ocr,1
+East Bridgewater,2019,https://eastbridgewaterma.gov/DocumentCenter/View/598/2019-Annual-Town-Report-PDF,atr,ocr,209
+Essex,2012,https://essexma.org/ImageRepository/Document?documentID=237,atr,ocr,3
+Fall River,2009,https://cms2.revize.com/revize/brookfield/Document%20Center/Department/Police/Annual%20Reports/2009Report.pdf,atr,ocr,16
+Franklin,2015,https://franklinma.gov/ImageRepository/Document?documentID=166,atr,ocr,1
+Granville,2011,https://www.granville-ma.gov/DocumentCenter/View/361/Annual-Town-Report-2011,atr,ocr,142
+Hampden,2002,https://web.archive.org/web/20230624040741id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2002_annual_town_report.pdf,atr,ocr,133
+Haverhill,2006,https://www.haverhillma.gov/media/efwh3yik/cso_annual_report_2006.pdf,atr,ocr,14
+Hopedale,2017,https://hopedale-ma.gov/DocumentCenter/View/958/FY17-Annual-Town-Report,atr,ocr,114
+Lawrence,2018,https://cityoflawrence.com/ImageRepository/Document?documentID=389,atr,ocr,17
+Middleton,2012,https://middletonma.gov/DocumentCenter/View/1572/May-14-2012-Annual-Town-Election-Official-Results,atr,ocr,2
+Montague,2013,https://montague-ma.gov/files/2013-05-20_Annual_Town_Election_Results.pdf,atr,ocr,5
+Mount Washington,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/cd4657b9-eb16-4848-99ab-a6477205effc/content,atr,ocr,22
+New Bedford,2015,https://newbedford-ma.s3.amazonaws.com/wp-content/uploads/sites/36/20191219201517/June_23_2015_Election_results.pdf,atr,ocr,1
+Pembroke,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/6f759880-e0c4-48b5-abff-9aa510758b3a/content,atr,ocr,194
+Petersham,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/10604341-27ec-49f0-ba26-64630dac3dbd/content,atr,ocr,110
+Rowe,2006,https://rowe-ma.gov/files/2006_Annual_Town_Report.pdf,atr,ocr,108
+Salem,2019,https://web.archive.org/web/20251013131032id_/https://www.salemma.gov/DocumentCenter/View/1673/November-2019-to-November-2020-Election-Results-PDF,atr,ocr,25
+Seekonk,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/e1d41c42-313d-49be-99da-4234f86bda20/content,atr,ocr,208
+Springfield,2018,https://www.springfield-ma.gov/cos/fileadmin/law/CPHB/CPHB_Annual_Report_2018.pdf,atr,ocr,50
+Sutton,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/da726b46-70a6-408f-ba6a-ed0fe90cd9af/content,atr,ocr,129
+Wales,2006,https://townofwales.net/DocumentCenter/View/3521/05-30-2006-Election-Results,atr,ocr,1
+Ware,2016,https://web.archive.org/web/20220610080656id_/https://cms1files.revize.com/benzie/2016%20Annual%20Report.pdf,atr,ocr,36
+Warren,2014,https://www.warrenct.gov/sites/g/files/vyhlif3991/f/uploads/annual_report_2014.pdf,atr,ocr,60
+Westfield,2017,https://www.cityofwestfield.org/DocumentCenter/View/5588,atr,ocr,12
+Beverly,2018,https://beverlyma.gov/DocumentCenter/View/123/November-6-2018-Election-Official-Results-PDF,atr,ocr,15
+Blandford,2006,https://townofblandford.gov/wp-content/uploads/2016/04/report2005-2006.pdf,atr,ocr,56
+Buckland,2019,https://www.town.buckland.ma.us/sites/g/files/vyhlif356/f/uploads/2019_annual_report.pdf,atr,ocr,74
+Cambridge,2013,https://www.cambridgema.gov/-/media/Files/electioncommission/2013municipalelectionrecount/2013municipalelectionrecountresults.pdf,atr,ocr,2
+Chatham,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/8231a7c7-79ac-40ea-8657-fe5255c4bbc9/content,atr,ocr,274
+Essex,2013,https://essexma.org/ImageRepository/Document?documentID=236,atr,ocr,3
+Georgetown,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/f154e5e8-b479-4d2f-becc-c23a91dfbb16/content,atr,ocr,652
+Hampden,2004,https://web.archive.org/web/20230624042729id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2004_annual_town_report.pdf,atr,ocr,154
+Haverhill,2007,https://www.haverhillma.gov/media/smwpiufl/cso_annual_report_2007.pdf,atr,ocr,25
+Hopedale,2018,https://web.archive.org/web/20190420135544id_/https://www.hopedale-ma.gov/sites/hopedalema/files/uploads/2017_annual_report_march_28_2018.pdf,atr,ocr,114
+Lancaster,2000,https://archives.lib.state.ma.us/server/api/core/bitstreams/4721f852-3068-47af-b339-3a931586d095/content,atr,ocr,244
+Montague,2014,https://montague-ma.gov/files/2014-05-19_Annual_Town_Election_Results.pdf,atr,ocr,6
+Mount Washington,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/ceb0a199-f504-4a10-80ae-9431ef246708/content,atr,ocr,20
+Pembroke,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/06e6386a-43c1-4b57-8e14-fb69a247d373/content,atr,ocr,188
+Randolph,2013,https://randolph-ma.gov/ImageRepository/Document?documentID=133,atr,ocr,2
+Rehoboth,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/aea73280-6eda-49f7-96ec-044ec569efb8/content,atr,ocr,233
+Rowe,2007,https://rowe-ma.gov/files/2007_Annual_Town_Report.pdf,atr,ocr,92
+Seekonk,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/8180b0b1-5dc0-49d7-92f0-aea5a451ab80/content,atr,ocr,178
+Sutton,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/aabfe08d-216b-49bb-81f7-b0627fa8dc0c/content,atr,ocr,109
+Wales,2007,https://townofwales.net/DocumentCenter/View/3520/05-29-2007-Election-Results,atr,ocr,1
+Ware,2017,https://web.archive.org/web/20211228224101id_/https://cms1files.revize.com/arlingtontn/Full%20Annual%20Report%20Scanned%202016-2017.pdf,atr,ocr,49
+Westfield,2019,https://www.cityofwestfield.org/DocumentCenter/View/8633,atr,ocr,13
+Westhampton,2000,https://web.archive.org/web/20220419172814id_/https://www.westhampton-ma.com/sites/g/files/vyhlif5191/f/pages/2000-2007_town_election_results_westhampton.pdf,atr,ocr,9
+Worcester,2010,https://web.archive.org/web/20201016174036id_/http://www.worcesterma.gov/election-results/2010-2019/20181106.pdf,atr,ocr,52
+Avon,2011,https://web.archive.org/web/20220812205939id_/https://www.avon-ma.gov/sites/g/files/vyhlif271/f/uploads/annual_town_report_2011.pdf,atr,ocr,200
+Belmont,2004,https://web.archive.org/web/20140501022756id_/http://www.belmont-ma.gov:80/Public_Documents/BelmontMA_WebDocs/townreports/2004/selectmen.pdf,atr,ocr,2
+Blandford,2007,https://townofblandford.gov/wp-content/uploads/2016/04/report2006-2007.pdf,atr,ocr,44
+Buckland,2020,https://www.town.buckland.ma.us/sites/g/files/vyhlif356/f/pages/2020_annual_report.pdf,atr,ocr,38
+Chatham,2008,https://chatham-ma.gov/DocumentCenter/View/1728/2008-Annual-Town-Report-PDF,atr,ocr,304
+East Longmeadow,2013,https://eastlongmeadowma.gov/DocumentCenter/View/3504,atr,ocr,1
+Essex,2014,https://essexma.org/ImageRepository/Document?documentID=233,atr,ocr,2
+Fall River,2011,https://cms2.revize.com/revize/brookfield/Document%20Center/Department/Police/Annual%20Reports/2011Report.pdf,atr,ocr,19
+Franklin,2017,https://www.franklinma.gov/DocumentCenter/View/1076/2017-Biennial-Town-Election-Results-PDF,atr,ocr,1
+Gloucester,2005,http://gloucester-ma.gov/DocumentCenter/View/7279/Election-Municipal-results-2005?bidId=,atr,ocr,12
+Grafton,2016,https://web.archive.org/web/20211229042630id_/https://www.grafton-ma.gov/sites/g/files/vyhlif4461/f/pages/local_election_results_5-17-2016.pdf,atr,ocr,4
+Hampden,2005,https://web.archive.org/web/20230715081001id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2005_annual_town_report.pdf,atr,ocr,140
+Haverhill,2008,https://www.haverhillma.gov/media/phddsdtl/infiltration_inflow_annual_report_2008.pdf,atr,ocr,23
+Hopedale,2019,https://hopedale-ma.gov/DocumentCenter/View/960/FY19-Annual-Town-Report,atr,ocr,115
+Middleton,2014,https://middletonma.gov/DocumentCenter/View/1577/May-19-2014-Annual-Town-Election-Official-Results,atr,ocr,2
+Norwell,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/361dd4ae-af18-4bfa-93d1-284d5906d4a9/content,atr,ocr,188
+Rowe,2008,https://rowe-ma.gov/files/2008_Annual_Town_Report.pdf,atr,ocr,110
+Seekonk,2014,https://web.archive.org/web/20161219174742id_/http://www.seekonk-ma.gov/pages/SeekonkMA_Administration/Annual%20Reports/2014.pdf,atr,ocr,178
+Stow,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/931930e0-ee45-4b8f-9d9b-86367273d781/content,atr,ocr,148
+Sutton,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/b2196213-a3f6-403d-9020-2de0b56a9109/content,atr,ocr,55
+Truro,2013,https://web.archive.org/web/20161228022324id_/http://www.truro-ma.gov/sites/truroma/files/mma_award_town_report_2013.pdf,atr,ocr,1
+Wales,2008,https://townofwales.net/DocumentCenter/View/3525/05-27-2008-Election-Results,atr,ocr,1
+Ware,2018,https://web.archive.org/web/20220610083009id_/https://cms1files.revize.com/benzie/2018%20Annual%20Report%20FINAL.pdf,atr,ocr,16
+Warren,2016,https://www.warrenct.gov/sites/g/files/vyhlif3991/f/uploads/fy_2015_2016_annual_report.pdf,atr,ocr,61
+West Stockbridge,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/76abd716-e606-4494-86c3-aca298e4a32a/content,atr,ocr,88
+Blandford,2009,https://townofblandford.gov/wp-content/uploads/2016/04/report2008-2009.pdf,atr,ocr,56
+Carlisle,2008,https://www.carlislema.gov/DocumentCenter/View/1266,atr,ocr,2
+Essex,2015,https://essexma.org/ImageRepository/Document?documentID=231,atr,ocr,2
+Gloucester,2007,http://gloucester-ma.gov/DocumentCenter/View/7280/election-results-Nov-6-2007?bidId=,atr,ocr,11
+Granville,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/2f6457b4-2d12-42b9-8dff-1252a2b8b578/content,atr,ocr,65
+Hampden,2006,https://web.archive.org/web/20230624062413id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2006_annual_town_report.pdf,atr,ocr,179
+Hanson,2018,https://web.archive.org/web/20220319192650id_/https://www.hanson-ma.gov/sites/g/files/vyhlif3231/f/uploads/annual_town_election_5-19-2018_results.pdf,atr,ocr,3
+Lee,2000,https://web.archive.org/web/20250312131056id_/http://www.lee.ma.us/sites/g/files/vyhlif771/f/uploads/town_report_cy_2000.pdf,atr,ocr,118
+Lunenburg,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/1d32f856-b803-4b2d-a5c6-2c3a65886f52/content,atr,ocr,102
+Middleton,2015,https://middletonma.gov/DocumentCenter/View/1576/May-18-2015-Annual-Town-Election-Official-Results,atr,ocr,2
+North Attleborough,2018,https://web.archive.org/web/20191215073700id_/https://www.nattleboro.com/sites/northattleboroughma/files/uploads/2018_annual_town_report.pdf,atr,ocr,388
+Petersham,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/dbd7ef18-5684-434b-9649-a35ce9977e9a/content,atr,ocr,96
+Rowe,2009,https://rowe-ma.gov/files/2009_Annual_Town_Report.pdf,atr,ocr,142
+Sutton,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/4a99a5b6-d9be-470b-aaf9-2a34790af6f1/content,atr,ocr,106
+Wales,2009,https://townofwales.net/DocumentCenter/View/3524/05-26-2009-Election-Results,atr,ocr,1
+Warren,2020,https://web.archive.org/web/20220217094857id_/https://www.warren-ma.gov/sites/g/files/vyhlif3996/f/uploads/annual_report_for_2020_published.pdf,atr,ocr,120
+Blandford,2010,https://townofblandford.gov/wp-content/uploads/2016/04/report2009-2010.pdf,atr,ocr,64
+Chatham,2010,https://web.archive.org/web/20161220065730id_/http://chatham-ma.gov/Public_Documents/ChathamMA_Selectmen/2010%20Annual%20Town%20Report2.pdf,atr,ocr,280
+Chilmark,2014,https://web.archive.org/web/20170126102532id_/http://www.chilmarkma.gov/Pages/ChilmarkMA_Annual/2013%20Annual%20Reports/2014-04-25%20Town%20Line%20proposal.pdf,atr,ocr,1
+Clinton,2020,https://clintonma.gov/DocumentCenter/View/1791,atr,ocr,1
+Essex,2016,https://essexma.org/ImageRepository/Document?documentID=227,atr,ocr,2
+Fall River,2013,"https://web.archive.org/web/20230109034913id_/https://cms2.revize.com/revize/algercounty/document_center/Departments/Clerk_RoD/Elections/2013/May%207,%202013%20Election%20Results.pdf.PDF",atr,ocr,4
+Georgetown,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/1fa0b72f-ebee-4478-807e-9019c2686400/content,atr,ocr,148
+Gloucester,2009,http://www.gloucester-ma.gov/DocumentCenter/View/4413/election-results-Nov-3-2009?bidId=,atr,ocr,12
+Granville,2015,https://townofgranville.net/DocumentCenter/View/1031/2015-Municipal-Election-Results,atr,ocr,1
+Harvard,2008,https://web.archive.org/web/20240610195452id_/https://www.harvard-ma.gov/sites/g/files/vyhlif676/f/uploads/2008_town_report.pdf,atr,ocr,172
+Holland,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/6af5df39-ff64-4553-adb5-8a57dad40c6a/content,atr,ocr,114
+Lunenburg,2012,https://lunenburgma.gov/DocumentCenter/View/4118/FY-2012-Annual-Town-Report,atr,ocr,116
+Mount Washington,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/a37e383c-3f70-43f8-81ed-dd5200bdda3d/content,atr,ocr,37
+Norwell,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/28e99435-2961-44dc-aeba-6f60bb9c3e35/content,atr,ocr,202
+Petersham,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/3ffa5680-9a0f-408f-9146-967639e0d836/content,atr,ocr,86
+Randolph,2017,https://www.randolph-ma.gov/DocumentCenter/View/899/Election-Results-for-2017-PDF,atr,ocr,1
+Rowe,2010,https://rowe-ma.gov/files/2010_Annual_Town_Report.pdf,atr,ocr,122
+Royalston,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/b22d2f29-60b6-44fa-9a94-36a84e8f79bc/content,atr,ocr,121
+Saugus,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/0fc8d7cc-01ef-47dd-a6f9-8f896a7bfc8c/content,atr,ocr,180
+Sutton,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/420bab16-2f5b-4bdf-9efd-37627579e61c/content,atr,ocr,117
+Wales,2010,https://townofwales.net/DocumentCenter/View/3523/05-25-2010-Election-Results,atr,ocr,1
+Ware,2020,https://web.archive.org/web/20211230041756id_/https://cms1files.revize.com/arlingtontn/STW%20Annual%20Report%202019-2020.pdf,atr,ocr,16
+Wellfleet,2008,https://web.archive.org/web/20250420030529id_/https://www.wellfleet-ma.gov/sites/g/files/vyhlif16026/f/pages/2008_shellfish_advisory_committee_annual_report.pdf,atr,ocr,2
+Belmont,2007,https://web.archive.org/web/20170126225135id_/http://www.belmont-ma.gov/sites/belmontma/files/file/file/epa_annual_report_2007_0.pdf,atr,ocr,22
+Billerica,2019,https://ma-billerica.civicplus.com/DocumentCenter/View/9512,atr,ocr,6
+Bolton,2016,https://web.archive.org/web/20220301234346id_/https://www.townofbolton.com/sites/g/files/vyhlif2836/f/uploads/annual_report_2016_part_4.pdf,atr,ocr,44
+Carlisle,2013,https://www.carlislema.gov/DocumentCenter/View/1229,atr,ocr,1
+Dracut,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/cb83e9b7-25c2-4ba7-966b-7420999b3ddd/content,atr,ocr,150
+Essex,2017,https://essexma.org/ImageRepository/Document?documentID=224,atr,ocr,2
+Georgetown,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/f3de6fcd-5878-4c87-a90f-e720e6c5846e/content,atr,ocr,166
+Gloucester,2011,http://www.gloucester-ma.gov/DocumentCenter/View/4655/Official-Election-Results-Nov-8-2011?bidId=,atr,ocr,12
+Grafton,2019,https://web.archive.org/web/20211229042650id_/https://www.grafton-ma.gov/sites/g/files/vyhlif4461/f/pages/offical_special_local_election_results_10-29-2019_0.pdf,atr,ocr,1
+Groveland,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/e8ae70ea-56bd-4575-b326-b2731e1c896a/content,atr,ocr,18
+Hampden,2009,https://web.archive.org/web/20230624034551id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2009_annual_town_report_part_b.pdf,atr,ocr,52
+Harvard,2009,https://web.archive.org/web/20240615065410id_/https://www.harvard-ma.gov/sites/g/files/vyhlif676/f/uploads/2009_town_report.pdf,atr,ocr,195
+Haverhill,2011,https://www.haverhillma.gov/media/1qzcdvjl/cso_annual_report_2011.pdf,atr,ocr,40
+Hinsdale,2000,https://hinsdalemass.com/DocumentCenter/View/285/2000-Annual-Report,atr,ocr,70
+Lee,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/b0fef358-084f-4cf9-9e74-e772836ef2a5/content,atr,ocr,116
+Lunenburg,2013,https://lunenburgma.gov/DocumentCenter/View/4119/FY-2013-Annual-Town-Report,atr,ocr,97
+Montague,2018,https://montague-ma.gov/files/2018-05-21_Annual_Town_Election_Results.pdf,atr,ocr,8
+Mount Washington,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/ad4cd98b-cd83-4442-8195-8b384ebf8598/content,atr,ocr,22
+North Brookfield,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/7f41cb93-a496-49e0-b407-e731505eae3e/content,atr,ocr,147
+Northampton,2008,https://web.archive.org/web/20100527131424id_/http://www.northamptonma.gov/cityclerk/uploads/listWidget/8599/November%202008%20election%20results.pdf,atr,ocr,20
+Petersham,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/a17b819c-d2c3-4b7d-823b-3dc9228f3113/content,atr,ocr,100
+Rowe,2011,https://rowe-ma.gov/files/2011_Annual_Town_Report.pdf,atr,ocr,126
+Royalston,2014,https://www.royalston-ma.gov/DocumentCenter/View/447/FY-2014-Annual-Report,atr,ocr,121
+Salisbury,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/c1f15b11-0c3f-421e-a45a-e40be550407b/content,atr,ocr,84
+Saugus,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/da4c65e8-e778-423e-8376-ccd60af2fa1e/content,atr,ocr,180
+Sutton,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/4498145b-b75c-43e2-88a1-1e6ca2e14be1/content,atr,ocr,147
+Wales,2011,https://townofwales.net/DocumentCenter/View/3526/05-31-2011-Election-Results,atr,ocr,1
+Ashburnham,2020,https://www.ashburnham-ma.gov/DocumentCenter/View/639,atr,ocr,1
+Attleboro,2001,https://cityofattleboro.us/DocumentCenter/View/13032/Results---Citywide,atr,ocr,1
+Dartmouth,2015,https://dartmouthma.gov/DocumentCenter/View/354/2015-April-07-Annual-Town-Election-Official-Results-PDF,atr,ocr,4
+Essex,2020,https://www.essexma.org/DocumentCenter/View/844,atr,ocr,4
+Florida,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/96934bd7-90cd-48c1-9a83-266f5bcb833b/content,atr,ocr,43
+Georgetown,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/c6951c80-02be-4e9f-a7b8-dc3a2d83dbc6/content,atr,ocr,114
+Gloucester,2016,http://www.gloucester-ma.gov/DocumentCenter/View/4063/Official-Results-ward-precinct-Sept-8-2016?bidId=,atr,ocr,30
+Granby,2007,https://web.archive.org/web/20161226231155id_/http://www.granby-ma.gov/Pages/GranbyMA_Selectmen/2007-Annual%20Report.pdf,atr,ocr,73
+Groveland,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/a4b8a9c2-83a0-4707-b2a7-7441700b3af2/content,atr,ocr,146
+Hampden,2012,https://web.archive.org/web/20230712233251id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2012_annual_town_report_part_b.pdf,atr,ocr,34
+Hinsdale,2003,https://hinsdalemass.com/DocumentCenter/View/288/2003-Annual-Report,atr,ocr,74
+Holbrook,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/985c7d4f-d652-4059-8335-2411de2a478f/content,atr,ocr,32
+Holliston,2009,https://web.archive.org/web/20220308074230id_/https://www.townofholliston.us/sites/g/files/vyhlif706/f/file/file/finance_committee_annual_report_2009.pdf,atr,ocr,52
+Hull,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/e63a46f7-5fd2-4ff8-9e4b-87556643ef03/content,atr,ocr,194
+Mattapoisett,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/997e9fb1-9230-43f0-891b-16eee8027bf9/content,atr,ocr,122
+Millville,2019,https://www.millvillema.org/sites/g/files/vyhlif906/f/news/2019_annual_town_report_part_2_of_2.pdf,atr,ocr,90
+Monterey,2013,https://web.archive.org/web/20161213192647id_/http://montereyma.gov/Public_Documents/MontereyMA_TownClerk/2013townelectionresults.pdf,atr,ocr,2
+Newbury,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/6869dde9-25f2-4386-8fd1-f1faa127710a/content,atr,ocr,112
+North Brookfield,2010,https://archives.lib.state.ma.us/server/api/core/bitstreams/f9f274c8-734b-4f2d-849f-c68d9e7ed50f/content,atr,ocr,160
+Norwell,2019,https://web.archive.org/web/20211229182931id_/https://www.townofnorwell.net/sites/g/files/vyhlif1011/f/pages/2019_town_report-final.pdf,atr,ocr,176
+Petersham,2007,https://archives.lib.state.ma.us/server/api/core/bitstreams/45621bf2-8184-41b2-ba12-7fc81a4a6138/content,atr,ocr,102
+Rockland,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/3848691d-eeb4-434d-a1ff-a69b000d51f8/content,atr,ocr,209
+Royalston,2017,https://www.royalston-ma.gov/DocumentCenter/View/445/FY-2017-Annual-Report,atr,ocr,138
+Sandisfield,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/d42ddd77-70fd-46d3-9593-217516fdc143/content,atr,ocr,84
+Savoy,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/88bc40c6-2bb3-4dda-83ea-a55404ff7b38/content,atr,ocr,52
+Stoughton,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/4ea0945a-d7e1-4cf2-af2d-07b3f9369860/content,atr,ocr,283
+Sutton,2019,https://web.archive.org/web/20220302045838id_/https://www.suttonma.org/sites/g/files/vyhlif3901/f/uploads/2019_annual_town_report.pdf,atr,ocr,142
+Topsfield,2020,https://www.topsfield-ma.gov/DocumentCenter/View/1562/2020-Annual-Report-pdf-file,atr,ocr,162
+Uxbridge,2010,https://web.archive.org/web/20111002182851id_/http://www.uxbridge-ma.gov/Documents/TownManager/2010%20Annual%20Report.pdf,atr,ocr,96
+Wales,2014,https://townofwales.net/DocumentCenter/View/3528/05-27-2014-Election-Results,atr,ocr,1
+Worthington,2015,https://web.archive.org/web/20160412122030id_/http://worthington-ma.us/Pages/WorthingtonMA_Clerk/2015ElectionResults.pdf,atr,ocr,1
+Attleboro,2005,https://cityofattleboro.us/DocumentCenter/View/12987/Results---Citywide-and-by-precinct,atr,ocr,13
+Canton,2005,https://web.archive.org/web/20060615105654id_/http://www.town.canton.ma.us:80/PDF_files/Annual_Report-2005.pdf,atr,ocr,366
+Carver,2020,https://web.archive.org/web/20260206031242id_/https://www.carverma.gov/sites/g/files/vyhlif4221/f/pages/2020_town_report.pdf,atr,ocr,121
+Everett,2019,https://cityofeverett.com/wp-content/uploads/2023/05/2019-Municipal-Election-Results.pdf,atr,ocr,4
+Florida,2019,https://archives.lib.state.ma.us/server/api/core/bitstreams/47963be2-2c4e-4813-84eb-4d0883e50a48/content,atr,ocr,36
+Georgetown,2013,https://web.archive.org/web/20170125014131id_/http://georgetownma.gov/public_documents/georgetownma_bcomm/townreports/Town%20Report%20FY2013.pdf,atr,ocr,132
+Gloucester,2017,http://gloucester-ma.gov/DocumentCenter/View/4653/Official-Results-Nov-7--2017-Municipal-Election,atr,ocr,11
+Granby,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/070b61b4-c70a-41d7-9649-2167591f233a/content,atr,ocr,85
+Granville,2020,https://townofgranville.net/DocumentCenter/View/1024/2020-Municipal-Election-Results,atr,ocr,1
+Groveland,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/82dd765b-6a8a-47bd-9c9d-f359c272479c/content,atr,ocr,103
+Hampden,2013,https://web.archive.org/web/20230624073714id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2013_annual_town_report_part_b.pdf,atr,ocr,36
+Hinsdale,2004,https://hinsdalemass.com/DocumentCenter/View/289/2004-Annual-Report,atr,ocr,74
+Holliston,2012,https://web.archive.org/web/20170108013108id_/http://www.townofholliston.us/sites/hollistonma/files/file/file/finance_committee_2012_annual_report.pdf,atr,ocr,49
+Hull,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/314ad76a-b926-4e19-a972-1fb3fbb451ce/content,atr,ocr,189
+Lawrence,2007,https://www.cityoflawrence.com/DocumentCenter/View/378,atr,ocr,19
+Milford,2000,https://web.archive.org/web/20220302180121id_/https://www.milfordma.gov/sites/g/files/vyhlif3466/f/uploads/tom_2000_annual_report.pdf,atr,ocr,256
+Millville,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/bc2ccbef-a9f9-4ddc-99e6-b1c006dd03ed/content,atr,ocr,86
+Newbury,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/35932283-ad25-48a3-8044-b73476239453/content,atr,ocr,104
+North Brookfield,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/861dedea-ed96-408f-889b-3ef5d61a7af1/content,atr,ocr,153
+Norwell,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/a566bdd4-a877-439d-bc9e-9af82025c3d7/content,atr,ocr,230
+Petersham,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/4a7e0e27-9e4a-4e8f-b906-d4f513675ebd/content,atr,ocr,110
+Springfield,2003,https://www.springfield-ma.gov/elections/fileadmin/2003_2005_Local_Results/2005_City_Election_11-08_SUM.pdf,atr,ocr,1
+Stoughton,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/e10472e3-01bd-44a9-892d-3fb9463aa538/content,atr,ocr,298
+Sutton,2020,https://web.archive.org/web/20220301203712id_/https://www.suttonma.org/sites/g/files/vyhlif3901/f/uploads/annual_report_2020.pdf,atr,ocr,132
+Taunton,2001,https://taunton-ma.gov/DocumentCenter/View/5673/2001-City-Election-Results,atr,ocr,3
+Uxbridge,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/16fb1ae4-c985-407f-9ea2-513dc798648e/content,atr,ocr,143
+Wales,2015,https://townofwales.net/DocumentCenter/View/3527/05-26-2015-Election-Results,atr,ocr,1
+Warwick,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/328ff468-3c58-4052-96e5-c724a5b39d8b/content,atr,ocr,112
+West Brookfield,2017,https://storage.googleapis.com/juniper-media-library/43/2023/10/2017%20Annual%20Town%20Report.pdf,atr,ocr,106
+Attleboro,2007,https://cityofattleboro.us/DocumentCenter/View/12983/Results---Citywide,atr,ocr,3
+Florida,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/0121d06e-1f17-4a75-b4ae-fb539774e517/content,atr,ocr,50
+Georgetown,2014,https://web.archive.org/web/20161228024244id_/http://www.georgetownma.gov/Public_Documents/GeorgetownMA_Clerk/Election%20Results/Election%20results%20May%2012%202014.pdf,atr,ocr,1
+Gloucester,2019,https://gloucester-ma.gov/DocumentCenter/View/7188,atr,ocr,11
+Great Barrington,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/5d99298c-899f-4700-bcb4-dfcbc27fc0d3/content,atr,ocr,88
+Groveland,2013,https://web.archive.org/web/20220319180408id_/https://www.grovelandma.com/sites/g/files/vyhlif3191/f/uploads/2013_town_election_results.pdf,atr,ocr,2
+Hampden,2014,https://web.archive.org/web/20230624064818id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2014_annual_town_report_part_c.pdf,atr,ocr,37
+Hinsdale,2005,https://hinsdalemass.com/DocumentCenter/View/290/2005-Annual-Report,atr,ocr,82
+Holliston,2013,https://web.archive.org/web/20170108012931id_/http://www.townofholliston.us/sites/hollistonma/files/file/file/finance_committee_annual_report_2013.pdf,atr,ocr,46
+Mount Washington,2000,https://archives.lib.state.ma.us/server/api/core/bitstreams/65a83092-b746-4d25-a9c5-54c7abe927f0/content,atr,ocr,15
+Newbury,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/32c5ba06-6c42-490f-ad3e-2be6b11fd0b7/content,atr,ocr,89
+North Brookfield,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/e3e78157-7575-4f3f-96a5-a5f7d2df8a62/content,atr,ocr,173
+Petersham,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/8437e617-505f-400a-ac00-27cb87eca107/content,atr,ocr,92
+Randolph,2000,https://randolph-ma.gov/ImageRepository/Document?documentID=144,atr,ocr,6
+Springfield,2004,http://www.springfield-ma.gov/elections/fileadmin/Past_Election_Results/Past_Election_Results_2004/2004_pres_prim_pct_3_4.pdf,atr,ocr,48
+Taunton,2003,https://taunton-ma.gov/DocumentCenter/View/5672/2003-City-Election-Results,atr,ocr,2
+Uxbridge,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/9df62c13-91e8-4137-8f7f-0d9f76ea459d/content,atr,ocr,148
+Wales,2016,https://townofwales.net/DocumentCenter/View/3530/05-31-2016-Election-Results,atr,ocr,1
+Wareham,2010,https://wareham.ma.us/DocumentCenter/View/2824/2010-Nov-Election-Results-PDF,atr,ocr,5
+Warwick,2015,https://old.warwickma.org/documents/atm2015/2014annualreport.pdf,atr,ocr,112
+Wellesley,2006,https://web.archive.org/web/20060911012710id_/http://www.wellesleyma.gov:80/Pages/WellesleyMA_Clerk/2006%20Town%20Election%20Results.pdf,atr,ocr,5
+Westborough,2012,https://web.archive.org/web/20171111013024id_/https://www.town.westborough.ma.us/sites/westboroughma/files/uploads/2012_youth_annual_report.pdf,atr,ocr,4
+Westwood,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/ded0b5d3-9739-445b-bb64-0bf449ea364c/content,atr,ocr,99
+Attleboro,2009,https://cityofattleboro.us/DocumentCenter/View/12978/Results---All-Wards,atr,ocr,3
+Cambridge,2003,https://www.cambridgema.gov/-/media/Files/electioncommission/electionresults/2003citycouncil.pdf,atr,ocr,2
+Charlemont,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/521ba4c9-3cf6-4d03-b0ae-c947faef1676/content,atr,ocr,104
+Clarksburg,2017,https://clarksburgma.gov/specMedia/2017-Annual-Report.pdf,atr,ocr,27
+Dartmouth,2018,https://dartmouthma.gov/DocumentCenter/View/347/2018-April-03-Annual-Town-Election-Official-Results-PDF,atr,ocr,13
+Georgetown,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/e9e23e9c-93b1-4a23-aa9f-2cea4004b153/content,atr,ocr,117
+Groveland,2014,https://web.archive.org/web/20220319200652id_/https://www.grovelandma.com/sites/g/files/vyhlif3191/f/uploads/2014_annual_town_report.pdf,atr,ocr,91
+Hampden,2015,https://web.archive.org/web/20230624050508id_/https://www.hampdenma.gov/sites/g/files/vyhlif656/f/uploads/2015_annual_town_report_part_c.pdf,atr,ocr,45
+Hinsdale,2006,https://hinsdalemass.com/DocumentCenter/View/291/2006-Annual-Report,atr,ocr,61
+Lawrence,2009,https://www.cityoflawrence.com/DocumentCenter/View/391,atr,ocr,38
+Lunenburg,2019,https://lunenburgma.gov/DocumentCenter/View/4126/FY-2019-Annual-Town-Report,atr,ocr,206
+Milford,2002,https://web.archive.org/web/20220302180037id_/https://www.milfordma.gov/sites/g/files/vyhlif3466/f/uploads/tom_2002_annual_report.pdf,atr,ocr,265
+Mount Washington,2001,https://archives.lib.state.ma.us/server/api/core/bitstreams/8184875a-cc4e-4260-9377-dc8cbd6d8143/content,atr,ocr,16
+Newbury,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/24282e2e-903d-430b-95aa-d5fd5917d48b/content,atr,ocr,96
+Petersham,2010,https://townofpetersham.gov/wp-content/uploads/2025/12/FY10-Town-report-2009-2010.pdf,atr,ocr,92
+Randolph,2001,https://randolph-ma.gov/ImageRepository/Document?documentID=143,atr,ocr,4
+Rutland,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/ed7e48a9-9743-4b10-9f55-b5dc512f61f1/content,atr,ocr,98
+Springfield,2006,http://www.springfield-ma.gov/elections/fileadmin/Past_Election_Results/Past_Election_Results_2006-2008/September_2006_Wd_5_or_6.pdf,atr,ocr,49
+Taunton,2005,https://taunton-ma.gov/DocumentCenter/View/5671/2005-City-Election-Results,atr,ocr,7
+Wales,2017,https://townofwales.net/DocumentCenter/View/3534/05-24-2017-Election-Results,atr,ocr,1
+Wareham,2011,https://wareham.ma.us/DocumentCenter/View/2830/2011-April-Election-Results-PDF,atr,ocr,2
+Agawam,2014,https://web.archive.org/web/20151020210845id_/http://www.agawam.ma.us/filestorage/2862/2882/2979/2014_NPDES_Annual_Report.pdf,atr,ocr,89
+Attleboro,2010,https://cityofattleboro.us/DocumentCenter/View/12973/Results,atr,ocr,3
+Charlemont,2018,https://www.charlemont-ma.us/files/CharlemontTownReportForYearEnding2018.pdf,atr,ocr,114
+Chesterfield,2018,https://web.archive.org/web/20180729004531id_/http://www.townofchesterfieldma.com:80/attachments/article/129/2018%20Annual%20Election%20Results.pdf,atr,ocr,1
+Foxborough,2012,https://web.archive.org/web/20170207165702id_/http://www.foxboroughma.gov/Pages/FoxboroughMA_Clerk/elections/S019C7E6C.0/11-6-2012%20unofficial%20elec%20results.pdf,atr,ocr,5
+Georgetown,2017,https://web.archive.org/web/20230615173928id_/https://www.georgetownma.gov/sites/g/files/vyhlif616/f/uploads/annual_town_report_fy_ending_6.30.2017.pdf,atr,ocr,90
+Hampden,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/42b76caf-a044-458a-adda-1e14fd57dfd8/content,atr,ocr,144
+Hinsdale,2007,https://hinsdalemass.com/DocumentCenter/View/292/2007-Annual-Report,atr,ocr,70
+Methuen,2017,https://cityofmethuen.net/DocumentCenter/View/629/2017-Certified-Municipal-Election-Results-PDF,atr,ocr,2
+Milford,2003,https://web.archive.org/web/20220308072711id_/https://www.milfordma.gov/sites/g/files/vyhlif3466/f/uploads/tom_2003_annual_report.pdf,atr,ocr,198
+Mount Washington,2002,https://archives.lib.state.ma.us/server/api/core/bitstreams/f777c719-38b1-47c0-89b0-eebc20b70388/content,atr,ocr,12
+Nahant,2007,https://web.archive.org/web/20170126152608id_/http://www.nahant.org/documents/annual_town_reports/Town%20of%20Nahant_Annual%20Report_2007.pdf,atr,ocr,2
+Newbury,2018,https://archives.lib.state.ma.us/server/api/core/bitstreams/cb0630c8-d57d-463e-a590-26f0a9124dcc/content,atr,ocr,101
+North Brookfield,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/8b417f79-cfaf-40b1-a0ab-07b308609a41/content,atr,ocr,153
+Norton,2008,https://archives.lib.state.ma.us/server/api/core/bitstreams/62b06e9b-23c6-44d1-a656-1fcdad9c849b/content,atr,ocr,237
+Orange,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/ea04b1c5-0be7-47ac-8810-40e150facd02/content,atr,ocr,119
+Petersham,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/bf198efd-7302-42c4-a488-955bde2f45ab/content,atr,ocr,103
+Randolph,2002,https://randolph-ma.gov/ImageRepository/Document?documentID=142,atr,ocr,9
+Springfield,2007,http://www.springfield-ma.gov/elections/fileadmin/elections-2007_2014/Sept_2014_Election_Summary_Certified.pdf,atr,ocr,6
+Taunton,2007,https://taunton-ma.gov/DocumentCenter/View/5670/2007-City-Election-Results,atr,ocr,5
+Wales,2018,https://townofwales.net/DocumentCenter/View/3533/05-23-2018-Election-Results,atr,ocr,1
+Wareham,2012,https://wareham.ma.us/DocumentCenter/View/2826/2012-September-Election-Results-PDF,atr,ocr,4
+West Newbury,2011,https://www.wnewbury.org/DocumentCenter/View/1649/2011-Election-Results,atr,ocr,3
+Wrentham,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/49b69ca9-618c-4713-9774-486ead69efaa/content,atr,ocr,112
+Attleboro,2011,https://cityofattleboro.us/DocumentCenter/View/12968/Results---Citywide,atr,ocr,3
+Blandford,2019,https://townofblandford.gov/wp-content/uploads/2019/04/gateway-agreement.pdf,atr,ocr,22
+Charlemont,2020,https://www.charlemont-ma.us/files/CharlemontTownReportForYearEnding2020.pdf,atr,ocr,104
+Chelsea,2017,https://cms5.revize.com/revize/bennington/Document%20Center/Government/Annual%20Reports/2017-Annual-Report.pdf,atr,ocr,45
+Danvers,2014,https://web.archive.org/web/20161203152815id_/http://www.danversma.gov/vertical/sites/%7BCFC0250F-19AB-46E7-B599-146187CB1799%7D/uploads/Town_Report_2014.pdf,atr,ocr,34
+Dover,2011,https://www.doverma.gov/DocumentCenter/View/194/2011-Town-Election-Results-PDF,atr,ocr,1
+East Bridgewater,2012,https://eastbridgewaterma.gov/DocumentCenter/View/603/2012-Annual-Town-Report-PDF,atr,ocr,187
+Granby,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/9fe92fdc-74e6-456d-96b0-c94cc6f36500/content,atr,ocr,92
+Hamilton,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/4233ac72-21e7-4384-9d9f-09ac541af040/content,atr,ocr,66
+Hampden,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/2b985b72-055c-44d5-99e5-4e45206b16d3/content,atr,ocr,130
+Hinsdale,2008,https://hinsdalemass.com/DocumentCenter/View/239/2008-Annual-Report,atr,ocr,78
+Hull,2015,https://www.town.hull.ma.us/DocumentCenter/View/1044,atr,ocr,2
+Lynn,2017,https://web.archive.org/web/20200207175109id_/http://lynnma.gov/cityhall_documents/clerk_elections/election_results/primary_results_september_12_2017.pdf,atr,ocr,2
+Milford,2004,https://web.archive.org/web/20220302180311id_/https://www.milfordma.gov/sites/g/files/vyhlif3466/f/uploads/tom_2004_annual_report.pdf,atr,ocr,224
+Mount Washington,2003,https://archives.lib.state.ma.us/server/api/core/bitstreams/5d6e044d-ede2-4fb1-89e1-828d95b3a380/content,atr,ocr,19
+New Ashford,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/591bb36a-cd7e-4599-9941-94d47cee0ce1/content,atr,ocr,38
+Petersham,2012,https://archives.lib.state.ma.us/server/api/core/bitstreams/3081d20f-2514-4554-a4a9-dff3b7b2bd1e/content,atr,ocr,102
+Plainville,2016,https://archives.lib.state.ma.us/server/api/core/bitstreams/4a4e6bf3-29e1-422e-824f-5f03c201542c/content,atr,ocr,171
+Randolph,2003,https://randolph-ma.gov/ImageRepository/Document?documentID=141,atr,ocr,13
+Springfield,2009,https://www.springfield-ma.gov/elections/fileadmin/Past_Election_Results/Election_Results_2009/CITY_PRELIMINARY_SEPT15_2009.pdf,atr,ocr,49
+Taunton,2009,https://taunton-ma.gov/DocumentCenter/View/5669/2009-City-Election-Results,atr,ocr,2
+Wakefield,2018,https://web.archive.org/web/20220404211840id_/https://www.wakefield.ma.us/sites/g/files/vyhlif3986/f/uploads/official-election-results-2018-11-06.pdf,atr,ocr,11
+Wales,2019,https://townofwales.net/DocumentCenter/View/3532/05-22-2019-Election-Results,atr,ocr,1
+West Newbury,2012,https://www.wnewbury.org/DocumentCenter/View/1650/2012-Election-Results,atr,ocr,12
+Attleboro,2013,https://cityofattleboro.us/DocumentCenter/View/12960/Results---Citywide,atr,ocr,3
+Belchertown,2011,https://web.archive.org/web/20120805191836id_/http://www.belchertown.org/belchertown/home/docs/Town_Report_2011.pdf,atr,ocr,151
+Charlton,2009,https://archives.lib.state.ma.us/server/api/core/bitstreams/8cd6614c-f769-4490-b399-c1bb926b6768/content,atr,ocr,253
+Danvers,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/0132e143-1949-4a13-9e8e-23e916047cf4/content,atr,ocr,38
+Dover,2012,https://doverma.gov/DocumentCenter/View/196/05-21-2012-Town-Election-Results,atr,ocr,1
+East Bridgewater,2013,https://web.archive.org/web/20240713033625id_/https://www.eastbridgewaterma.gov/sites/g/files/vyhlif516/f/uploads/2013_annual_town_report.pdf,atr,ocr,182
+Hinsdale,2009,https://hinsdalemass.com/DocumentCenter/View/240/2009-Annual-Report,atr,ocr,77
+Holden,2012,https://holdenma.gov/ImageRepository/Document?documentID=195,atr,ocr,4
+Leominster,2005,https://web.archive.org/web/20100927082840id_/http://leominster-ma.gov/images/images_comptroller_dept/pdfs/annual-report-2005.pdf,atr,ocr,52
+Marshfield,2015,https://cms3.revize.com/revize/bellcountytx/departments/elections/docs/11_03_2015_Precinct_by_Precinct_Results_OFFICAL.pdf,atr,ocr,50
+Milford,2005,https://web.archive.org/web/20220308072751id_/https://www.milfordma.gov/sites/g/files/vyhlif3466/f/uploads/tom_2005_annual_report.pdf,atr,ocr,206
+Mount Washington,2004,https://archives.lib.state.ma.us/server/api/core/bitstreams/57fcdcea-4d76-486a-a502-e3cc6bce5d3a/content,atr,ocr,12
+New Ashford,2015,https://www.newashford-ma.us/wp-content/uploads/2015/01/TownReport-May2013.pdf,atr,ocr,38
+Northbridge,2018,https://web.archive.org/web/20211228220003id_/https://www.northbridgemass.org/sites/g/files/vyhlif981/f/u67/results_annual_town_election_5.15.2018_0.pdf,atr,ocr,4
+Petersham,2013,https://archives.lib.state.ma.us/server/api/core/bitstreams/d1dbee9d-69bc-4999-8f22-ad793c83c221/content,atr,ocr,102
+Plainville,2017,https://web.archive.org/web/20211228215401id_/https://www.plainville.ma.us/sites/g/files/vyhlif4871/f/pages/townofplainvilleannualreport2017.pdf,atr,ocr,171
+Randolph,2004,https://randolph-ma.gov/ImageRepository/Document?documentID=140,atr,ocr,47
+Rowe,2000,https://rowe-ma.gov/files/2000_Annual_Town_Report.pdf,atr,ocr,76
+Springfield,2010,https://www.springfield-ma.gov/elections/fileadmin/Past_Election_Results/Election_Results_2010/RESULTS_WARD_2_11022010.pdf,atr,ocr,16
+Sunderland,2015,https://archives.lib.state.ma.us/server/api/core/bitstreams/6db040d6-ec40-4919-a606-327b716aef1b/content,atr,ocr,87
+Taunton,2011,https://taunton-ma.gov/DocumentCenter/View/5668/2011-City-Election-Results,atr,ocr,2
+Wales,2020,https://townofwales.net/DocumentCenter/View/3537/05-27-2020-Election-Results,atr,ocr,1
+Wareham,2014,https://wareham.ma.us/DocumentCenter/View/2833/2014-September-Election-Results-PDF,atr,ocr,6
+West Newbury,2013,https://www.wnewbury.org/DocumentCenter/View/1651/2013-Election-Results,atr,ocr,4
+Attleboro,2015,https://cityofattleboro.us/DocumentCenter/View/12905/Results---Citywide,atr,ocr,3
+Belchertown,2015,https://www.belchertown.org/DocumentCenter/View/7958/2015-Annual-Town-Report-Belchertown,atr,ocr,118
+Cambridge,2007,https://www.cambridgema.gov/-/media/Files/electioncommission/electionresults/2007officialmunicipalelectionresults.pdf,atr,ocr,4
+Danvers,2016,https://web.archive.org/web/20161229005254id_/http://www.danversma.gov/vertical/sites/%7BCFC0250F-19AB-46E7-B599-146187CB1799%7D/uploads/2016_Annual_Town_Election_Final_Results.pdf,atr,ocr,3
+Dover,2013,https://doverma.gov/DocumentCenter/View/203/05-20-2013-Town-Election-Results,atr,ocr,1
+East Bridgewater,2014,https://web.archive.org/web/20240713033533id_/https://www.eastbridgewaterma.gov/sites/g/files/vyhlif516/f/uploads/2014_annual_town_report.pdf,atr,ocr,189
+Georgetown,2020,https://archives.lib.state.ma.us/server/api/core/bitstreams/b1f86c9a-c591-4981-86d7-b3f03f4f430e/content,atr,ocr,112
+Granby,2018,https://web.archive.org/web/20230309065405id_/https://www.granby-ma.gov/sites/g/files/vyhlif4466/f/uploads/2018_annual_town_report.pdf,atr,ocr,86
+Hinsdale,2010,https://hinsdalemass.com/DocumentCenter/View/241/2010-Annual-Report,atr,ocr,80
+Holyoke,2015,https://storage.googleapis.com/5paisa-prod-storage/files/investor_relations/2021-05/postal-ballot-result-as-per-sebi-%28lodr%29-regulation-2015.pdf,atr,ocr,16
+Leominster,2006,https://web.archive.org/web/20100927084926id_/http://leominster-ma.gov/images/images_comptroller_dept/pdfs/annual-report-2006.pdf,atr,ocr,53
+Lynn,2019,https://web.archive.org/web/20190920201312id_/http://lynnma.gov/cityhall_documents/clerk_elections/election_results/city_of_lynn_election_results_sep_03_2019_unofficial.pdf,atr,ocr,9
+Milford,2006,https://web.archive.org/web/20220308071804id_/https://www.milfordma.gov/sites/g/files/vyhlif3466/f/uploads/tom_2006_annual_report.pdf,atr,ocr,249
+Mount Washington,2005,https://archives.lib.state.ma.us/server/api/core/bitstreams/4e3f5d9a-afc6-4582-93f8-18391c6d10ca/content,atr,ocr,13
+New Ashford,2017,https://www.newashford-ma.us/wp-content/uploads/2017/05/Elections2017-Results.pdf,atr,ocr,1
+North Attleborough,2006,https://archives.lib.state.ma.us/server/api/core/bitstreams/2170fb64-d27a-4798-b9cd-d5f11a380b36/content,atr,ocr,266
+Norton,2014,https://web.archive.org/web/20151017163748id_/http://www.nortonma.org/Pages/NortonMA_Clerk/EL%20RESULTS/2014.09.09%20PrimVoterInfo.pdf,atr,ocr,1
+Palmer,2011,https://archives.lib.state.ma.us/server/api/core/bitstreams/283b6f89-763e-4ff7-88ea-27e07da594d6/content,atr,ocr,81
+Pepperell,2017,https://archives.lib.state.ma.us/server/api/core/bitstreams/bfe561ee-e6a3-445f-a431-0e056b749e91/content,atr,ocr,138
+Petersham,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/275b92ee-2766-4ef5-8c9c-e771ee232888/content,atr,ocr,113
+Princeton,2010,https://storage.googleapis.com/proudcity/princetonma/2025/09/2010_report.pdf,atr,ocr,118
+Quincy,2004,https://web.archive.org/web/20110104195259id_/http://www.quincyma.gov/CityOfQuincy_Content/documents/AnnualReport2004.pdf,atr,ocr,48
+Randolph,2005,https://randolph-ma.gov/ImageRepository/Document?documentID=139,atr,ocr,18
+Rowe,2001,https://rowe-ma.gov/files/2001_Annual_Town_Report.pdf,atr,ocr,72
+Scituate,2020,https://scituatema.gov/DocumentCenter/View/890/2020_annual_town_election_unofficial_resultspdf,atr,ocr,1
+Taunton,2013,https://taunton-ma.gov/DocumentCenter/View/5667/2013-City-Election-Results,atr,ocr,1
+Wareham,2015,https://wareham.ma.us/DocumentCenter/View/2835/2015-April-Election-Results-PDF,atr,ocr,3
+Wellesley,2012,https://wellesleyma.gov/DocumentCenter/View/7902/Morses-Pond-2012-Annual-Report-PDF,atr,ocr,28
+West Newbury,2014,https://www.wnewbury.org/DocumentCenter/View/1652/2014-Election-Results,atr,ocr,10
+Wrentham,2014,https://archives.lib.state.ma.us/server/api/core/bitstreams/ab1f9155-e8ed-4192-94fd-be7e54355ee3/content,atr,ocr,130

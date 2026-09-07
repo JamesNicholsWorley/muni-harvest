@@ -36,6 +36,7 @@ import io
 import json
 import os
 import re
+import subprocess
 import time
 
 import statistics
@@ -83,16 +84,51 @@ SHARDS = int(os.environ.get("SHARDS", "1"))
 URL_CSV = os.environ.get("URL_CSV", "config/atr_section_urls.csv")
 PER_MINUTE = max(1, int(os.environ.get("PER_MINUTE", "20")))
 LIMIT = int(os.environ.get("LIMIT", "0"))
+OCR = os.environ.get("OCR", "") == "1"
 OUT = "sections_out"
 
 os.makedirs(os.path.join(OUT, "pdf"), exist_ok=True)
 
 
-def score_pages(doc):
-    """(score, page index, headings, ballot words, offices) best first."""
+def page_texts(doc):
+    """Text for every page, read or OCR'd.
+
+    515 of the reports carry no text layer at all -- they are scans, and the
+    locator was blind to them. Reading them costs an OCR pass over every page,
+    because the election section can be on page 7 or page 261 and nothing but
+    the words says which.
+
+    150 dpi rather than 300: the question here is only "which page is this",
+    which survives a coarse read. The page that gets cut is the ORIGINAL, at
+    full resolution, so nothing downstream inherits this OCR.
+    """
+    if not OCR:
+        return [p.get_text() for p in doc]
     out = []
     for i, page in enumerate(doc):
         t = page.get_text()
+        if t.strip():
+            out.append(t)
+            continue
+        pix = page.get_pixmap(matrix=pymupdf.Matrix(150 / 72, 150 / 72))
+        png = os.path.join(OUT, f"_p{i}.png")
+        pix.save(png)
+        try:
+            r = subprocess.run(["tesseract", png, "stdout", "-l", "eng", "--psm", "6"],
+                               capture_output=True, text=True, timeout=120)
+            out.append(r.stdout or "")
+        except Exception:
+            out.append("")
+        finally:
+            if os.path.exists(png):
+                os.remove(png)
+    return out
+
+
+def score_pages(doc, texts=None):
+    """(score, page index, headings, ballot words, offices) best first."""
+    out = []
+    for i, t in enumerate(texts if texts is not None else [p.get_text() for p in doc]):
         h, b, o = (len(HEAD.findall(t)), len(BALLOT.findall(t)),
                    len(OFFICE.findall(t)))
         if h and (b >= 3 or o >= 3):
@@ -127,11 +163,12 @@ def main():
             else:
                 doc = pymupdf.open(stream=body, filetype="pdf")
                 rec["pages"] = doc.page_count
-                scored = score_pages(doc)
+                texts = page_texts(doc)
+                scored = score_pages(doc, texts)
                 if not scored:
                     # No text layer at all is a different answer from "the text
                     # is there and says nothing about an election".
-                    has_text = any(p.get_text().strip() for p in doc)
+                    has_text = any(t.strip() for t in texts)
                     rec["status"] = "NO_SECTION" if has_text else "NEEDS_OCR"
                 else:
                     best = scored[0]
@@ -143,7 +180,7 @@ def main():
                     cut.insert_pdf(doc, from_page=lo, to_page=hi)
                     path = os.path.join(OUT, "pdf", f"{stem}_atr.pdf")
                     cut.save(path, garbage=4, deflate=True)
-                    page_text = doc[best[1]].get_text()
+                    page_text = texts[best[1]]
                     rec["mean_line"] = round(prose_score(page_text))
                     rec["ballot_paper"] = "yes" if BALLOT_PAPER.search(page_text) else ""
                     rec["picked"] = f"{lo+1}-{hi+1}"
