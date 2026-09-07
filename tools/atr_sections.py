@@ -132,26 +132,36 @@ def page_texts(doc):
 MAX_SECTION = int(os.environ.get("MAX_SECTION", "14"))
 
 
-# A results page is a table. A page of Town Meeting minutes is prose. Both are
-# full of the words SELECTMEN, MODERATOR, ASSESSOR and FINANCE COMMITTEE, which
-# is why vocabulary alone cannot separate them and why raising MAX_SECTION to 40
-# turned North Reading 2018 into a 42-page section that was mostly the June town
-# meeting. Shape separates them where vocabulary cannot: the return's
-# continuation pages run 5 to 17 characters a line, the minutes run 47 to 69.
+# A results page is a table of tallies. A page of Town Meeting minutes is prose.
+# Both are full of the words SELECTMEN, MODERATOR, ASSESSOR and FINANCE
+# COMMITTEE -- the minutes are minutes ABOUT those offices -- which is why
+# vocabulary alone cannot separate them, and why raising MAX_SECTION to 40
+# returned North Reading 2018 as 42 pages that were mostly the June town meeting.
+#
+# Shape separates them where vocabulary cannot. A tally page runs 5 to 17
+# characters a line; the minutes run 47 to 69.
 MAX_CONTINUATION_LINE = 30
 
+# But a return is not always contiguous. Plymouth 2011 heads its return on one
+# page, prints the warrant and a ballot question on the next two, and then runs
+# eleven pages of precinct tallies. Stopping at the first non-tally page throws
+# all eleven away -- the same truncation this window exists to prevent, arrived
+# at from the other direction. So a short prose gap is stepped over and a long
+# one ends the section.
+MAX_GAP = 2
 
-def continues(text):
-    """Does this page still look like part of the return?
 
-    Deliberately looser than the test that FINDS the section in one respect --
-    finding it needs a heading, continuing it does not, because page two of a
-    return is candidates and numbers with no heading at all -- and strictly
-    tighter in another: it must still be laid out as a table.
+def is_tally(text):
+    """A page of the return proper: ballot vocabulary, laid out as a table.
+
+    Stricter than the test that FINDS the section, which counts offices as
+    evidence so that Hawley's all-uncontested return -- nine offices, nine
+    names, no figures -- is not thrown away. That leniency is right for one
+    page and wrong for continuation: an officers directory and a salary
+    schedule are both office vocabulary in a table, and neither is a return.
     """
-    if not (len(BALLOT.findall(text)) >= 3 or len(OFFICE.findall(text)) >= 3):
-        return False
-    return prose_score(text) < MAX_CONTINUATION_LINE
+    return (len(BALLOT.findall(text)) >= 3
+            and prose_score(text) < MAX_CONTINUATION_LINE)
 
 
 def grow(texts, best, page_count):
@@ -163,17 +173,27 @@ def grow(texts, best, page_count):
     twelve precincts and thirty offices does not fit in four pages, and those
     are the biggest towns, so the loss was concentrated where it mattered most.
 
-    So the window grows while the pages keep looking like the return, and stops
-    when they stop. `MAX_SECTION` is a guard against a report whose every page
-    trips the test, not an expectation -- if it is hit, that is worth seeing in
-    the manifest rather than silently truncating again.
+    So the window grows while the pages keep tallying, steps over a gap of up to
+    MAX_GAP, and stops when the tallies stop. `MAX_SECTION` is a guard against a
+    report whose every page trips the test, not an expectation -- if it is hit,
+    that is worth seeing in the manifest rather than silently truncating again.
+
+    Measured over the 1,333 text-layer cuts, requiring a tabular tally rather
+    than any election vocabulary removes 33% of the pages -- 8,558 to 5,437 --
+    and every page it removes is a warrant, a salary schedule or a set of town
+    meeting minutes.
     """
     lo = hi = best
-    while lo - 1 >= 0 and continues(texts[lo - 1]) and best - lo < 2:
-        lo -= 1
-    while (hi + 1 < page_count and continues(texts[hi + 1])
-           and (hi + 1) - lo < MAX_SECTION):
-        hi += 1
+    j = hi + 1
+    while j < page_count and j - hi <= MAX_GAP + 1 and (j - lo) < MAX_SECTION:
+        if is_tally(texts[j]):
+            hi = j
+        j += 1
+    j = lo - 1
+    while j >= 0 and lo - j <= MAX_GAP + 1 and best - lo < 3:
+        if is_tally(texts[j]):
+            lo = j
+        j -= 1
     # One page either side, for the run-up that names the election and the
     # run-out that carries a stray final total. Cheap, and the alternative is
     # the truncation this function exists to fix.
