@@ -125,6 +125,45 @@ def page_texts(doc):
     return out
 
 
+MAX_SECTION = 14
+
+
+def continues(text):
+    """Does this page still look like part of the return?
+
+    Deliberately looser than the test that FINDS the section. Finding it needs a
+    heading; continuing it does not -- page two of a return is candidates and
+    numbers with no heading at all.
+    """
+    return len(BALLOT.findall(text)) >= 3 or len(OFFICE.findall(text)) >= 3
+
+
+def grow(texts, best, page_count):
+    """Widen the window until the return stops, rather than assuming its length.
+
+    A fixed four-page cut truncated 708 of 1,336 sections -- 52%. Chatham 2020
+    was cut at pages 130-133 of 138 and its last cut page still carried 61
+    ballot words; the return simply ran longer than the window. A town with
+    twelve precincts and thirty offices does not fit in four pages, and those
+    are the biggest towns, so the loss was concentrated where it mattered most.
+
+    So the window grows while the pages keep looking like the return, and stops
+    when they stop. `MAX_SECTION` is a guard against a report whose every page
+    trips the test, not an expectation -- if it is hit, that is worth seeing in
+    the manifest rather than silently truncating again.
+    """
+    lo = hi = best
+    while lo - 1 >= 0 and continues(texts[lo - 1]) and best - lo < 2:
+        lo -= 1
+    while (hi + 1 < page_count and continues(texts[hi + 1])
+           and (hi + 1) - lo < MAX_SECTION):
+        hi += 1
+    # One page either side, for the run-up that names the election and the
+    # run-out that carries a stray final total. Cheap, and the alternative is
+    # the truncation this function exists to fix.
+    return max(0, lo - 1), min(page_count - 1, hi + 1)
+
+
 def score_pages(doc, texts=None):
     """(score, page index, headings, ballot words, offices) best first."""
     out = []
@@ -174,8 +213,7 @@ def main():
                     best = scored[0]
                     rec["score"] = best[0]
                     rec["runner_up"] = scored[1][0] if len(scored) > 1 else 0
-                    lo = max(0, best[1] - 1)
-                    hi = min(doc.page_count - 1, best[1] + 2)
+                    lo, hi = grow(texts, best[1], doc.page_count)
                     cut = pymupdf.open()
                     cut.insert_pdf(doc, from_page=lo, to_page=hi)
                     path = os.path.join(OUT, "pdf", f"{stem}_atr.pdf")
