@@ -68,3 +68,38 @@ def find(page_texts, threshold=6):
     """Indices of pages that read as an election warrant, best first."""
     scored = [(score_page(t), i) for i, t in enumerate(page_texts)]
     return [(i, s) for s, i in sorted(scored, reverse=True) if s >= threshold]
+
+
+# A return does not have to be a table. Aquinnah 2016 prints its whole election
+# in running prose inside the town meeting section, on page 149 of the report:
+#
+#     One Selectman for Three Years  Gary Haley 128, Macey Dunbar 29,
+#     One Moderator for Three Years Michael Hebert 132, Blanks 24, Others 7
+#
+# Offices, candidates, figures and a contested race -- everything a tabular
+# return has, and invisible to a locator that requires a table. It is invisible
+# to the warrant score too, which subtracts for figure density precisely to
+# avoid matching returns.
+#
+# These sit outside the section cut around the results page, because there is no
+# results page, which is why they can only be found by reading the whole report.
+PROSE_OFFICE = re.compile(
+    r"\b(One|Two|Three|Four|Five|Six|\d)\s+"
+    r"[A-Z][A-Za-z'/ ]{3,40}?\s+for\s+"
+    r"(One|Two|Three|Four|Five|Seven|\d)\s+Years?\b", re.I)
+NAME_VOTE = re.compile(r"[A-Z][a-z]+\s+[A-Z][A-Za-z'\-]+,?\s+\d{1,5}\b")
+
+
+def prose_return_score(text):
+    """How much this page reads as an election return written as sentences.
+
+    The opposite balance to `score_page`: a warrant names offices and prints no
+    figures, while this names offices AND attaches a figure to a person. The
+    two are scored separately rather than merged, because a page can be both --
+    Aquinnah's is a town meeting warrant whose Article One carries the results.
+    """
+    offices = len(PROSE_OFFICE.findall(text))
+    pairs = len(NAME_VOTE.findall(text))
+    if offices < 2 or pairs < 4:
+        return 0
+    return min(offices, 8) + min(pairs // 2, 8)
