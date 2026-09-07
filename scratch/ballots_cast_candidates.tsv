@@ -1,0 +1,67 @@
+# Records holding ballots_cast: null whose document prints a count.
+#
+# Found 2026-09-07 by scanning every null-ballots record for a printed
+# ballot/turnout figure and keeping only those where no non-regional contest
+# exceeds the figure times its seats. NOT filed as adjudications: the filter
+# is not sufficient. East Brookfield 2022 reads '- 99 ballots cast - 1,647
+# registered voters' and the arithmetic picks 1,647; Lexington 2023's 'TOTAL
+# VOTERS 2387 2565 2203 ...' is a per-precinct row. Each has to be read.
+#
+# stem<TAB>figure<TAB>readings searched<TAB>window
+Acushnet2025	996	raw_ocr+markdown+pdftext	ending April 28, 2026) | 1 | Lucas Paul Correia | 207 | 30 | 242 | 205 | 684 | Ballots cast: 996. That figure is the newspaper's; the registered-voter and t
+Barnstable2021	2487	raw_ocr+markdown	ecincts Reported: 13 of 13 (100.00%) Registered Voters: 2,487 of 35,716 (6.96%) Ballots Cast: 2,487 MEMBER OF THE SCHOOL COMMITTEE (Vote for 2) Precincts Repor
+Bernardston2021	205	news_text	ates that "All incumbents were re-elected" and lists "The elected positions". **Ballots cast: 205 of 1,741 registered = roughly 11.8% turnout**, 18 of them a
+Bolton2024	460	markdown+pdftext	ANNUAL TOWN ELECTION OFFICIAL RESULTS MAY 13, 2024 Total Number of Votes Cast: 460 Registered Voters in Bolton: 4,444 % Voter Turnout: 10.35%
+Braintree2021	5309	markdown+pdftext	27,709 2,342 2,261 2,369 2,268 2,052 2,190 2,167 2,290 2,282 2,563 2,543 2,382 Voter Turnout 5,309 591 537 663 502 350 341 321 264 383 394 441 522 Percent Vot
+Braintree2025	5347	markdown+pdftext	29,218 2,550 2,474 2,424 2,379 2,200 2,408 2,357 2,289 2,420 2,561 2,678 2,478 Voter Turnout 5,347 548 481 519 394 302 351 390 300 499 533 479 551 Percent Vot
+Brimfield2022	671	raw_ocr+pdftext+news_text	"Adams, Soto beat out Brimfield Board of Selectmen incumbents", 27 June 2022. **Ballots cast: 671 of 2,873 registered.** Town Clerk Debra Fagerstrom says thi
+Cambridge2021	21841	markdown+pdftext	7 0 20017 0 20017 0 20017 0 20017 Quota = 2860 Invalid ballots 1824 gap gap gap Total ballots 21841 160 443 222 defeated Write-In Lim Johnson Dec 1, 2022 Akrit
+Carver2021	1037	news_text	nofficial Annual Town Election: April 24, 2021 Prec.1 385/ Prec.2 368/ Prec.284 Total Ballots Cast: 1037 Select Board 2 Seats Hewins/ Townsend/ Dormer P1 275 228 11
+Charlemont2026	131	news_text	e in Charlemont", 4 June 2026. Counts attributed to Town Clerk Thorne Palmer. **Ballots cast: 131 of 961 registered = 13.6%.** ## Board of Assessors — 3 year
+Chesterfield2021	54	news_text	y from noon to 7 p.m. at the Community Center. There are no contested races." **Ballots cast: 54 of 972 registered = 5.6%** — the lowest in decades. Wicklan
+Clarksburg2021	106	news_text	# **2021 Annual Town Election Results** **Total voter turnout 106 of 1203 registered voters.** **Selectman** **Ron Boucher -
+Clarksburg2022	235	markdown	# 2022 Annual Town Election Results **Total voter turnout 235 of 1218 registered voters. ** Selectman (3 years) Robert No
+Clarksburg2023	112	markdown	# 2023 Annual Town Election Results **May 30, 2023** **Total voter turnout 112 of 1288 registered voters.** **Selectman (3 years)** Daniel
+Clarksburg2026	60	markdown	of Clarksburg MA Skip Navigation 2026 Town Election Results May 12, 2026 Total voter turnout 60 of 1124 registered voters. Selectboard (3 years) Daniel Has
+Colrain2023	237	markdown+pdftext	Town Election – May 2, 2023 Colrain MA Registered Voters: 1301 Total Ballots: 237 Office Candidates Votes Assessors Dwight Harrison 214 Other
+Colrain2024	351	markdown+pdftext	Town Election – May 7, 2024 Colrain MA Registered Voters: 1337 Total Ballots: 351 Office Candidates Votes Assessor Jim Slowinski 294 Other/Bl
+Colrain2025	183	markdown+pdftext	Town Election – May 13, 2025 Colrain MA Registered Voters: 1415 Total Ballots: 183 Office Candidates Votes Assessor Nicholas Anzuoni 163 Other
+Conway2023	271	news_text	rcier claims Board of Assessors seat in Conway", 9 June 2023 (Chris Larabee). **Ballots cast: 271 of 1,451 registered = 18.7%.** ## Board of Assessors — 3 ye
+EastBrookfield2022	1647	markdown	or them. ## Turnout The Town Clerk's figures, written on the ballot image: - 99 ballots cast - 1,647 registered voters - 6 percent turnout
+Egremont2021	245	news_text	s-pending-town-meeting-vote/article_325ccf4e-b2b8-11eb-a038-af4c8d4aa14c.html **Ballots cast: 245 of 1,082 registered = 22.6% turnout.** Polls open 10 a.m. t
+Everett2023	4382	pdftext+news_text	Election Unofficial Results - November 7, 2023 Total Registered Voters: 22,602 Ballots Cast: 4,382 Pecentage Voting: 19.39% Ward & Precinct 1-1 1-2 1-3 1-3A 2
+Everett2025	7682	markdown+pdftext	Official Results - November 4, 2025 Total Registered Voters: 24,955 Ballots Cast: 7,682 Pecentage Voting: 30.78% Ward & Precinct 1-1 1-2 1-3 1-3A 2
+Harvard2025	1659	markdown+pdftext	T MAY 6TH, 2025 ANNUAL TOWN ELECTION OFFICIAL TABULATION OF RESULTS FOR HARVARD TOTAL BALLOTS CAST 1659 REGISTERED VOTERS 4777 TURNOUT 34.73% Select Board- Vote TW
+Heath2021	240	news_text	. Counts attributed to Town Coordinator and outgoing Town Clerk Hilma Sumner. **Ballots cast: 240**, at the former elementary school. Registered-voter total
+Lakeville2024	1371	raw_ocr+markdown	Copy: wa i April 1, 2024 # Eligible Voters 9,404 rw Ds ine Annual Town Election Total Votes Cast 1,371 % of Voted 14.6% PRECINCT 1 2 3 GRAND TOTAL OFFICES/CANDIDA
+Lexington2023	2387	markdown+pdftext	ified March 7, 2023 PCT 1 PCT 2 PCT 3 PCT 4 PCT 5 PCT 6 PCT 7 PCT 8 PCT 9 TOTAL TOTAL VOTERS 2387 2565 2203 2577 2570 2663 2571 2550 2650 22736 Total Votes 1
+Mansfield2022	2843	markdown+pdftext	9.87% 565 89 89 107 80 50 48 102 TOTAL 100.00% 2843 422 447 588 359 275 271 481 Total Votes Cast 2843 Number of Eligible Voters 18,365 Percentage of Votes Cast 1
+Millbury2026	501	raw_ocr+pdftext	er Precinct Precinct | 102 Precinct 2 134 Precinct 3 110 Precinct 4 155 Total # Votes Cast 501 Voter Turnout % 5% *As of April 17, 2026: Deadline to Regis
+Monterey2026	313	pdftext	rite-ins​ ​2​ T​ otal Registered Voters at time of Election: 873​ ​Blank​ ​70​ ​Total Votes: 313​ ​35.85% of voters participated in the Election​
+NorthAttleborough2024	2383	raw_ocr+markdown	April 2, 2024 ANNUAL TOWN ELECTION RESULTS 1 2 3 4 5 6 if 8 9 TOTAL Total Voters 2383| 26881 2660| 2678|" 2553| 2629| 2839| 2534] 2522) 23486 # w
+Northborough2021	2106	markdown+pdftext	3 = 604 Andrew T. Dowd, Total Votes Cast in Precinct 4 =551 Town Clerk Total # Votes Cast 2,106 Voter Turnout %: ###### *As of April 9, 2021: Deadline to r
+Northborough2023	1217	raw_ocr+pdftext	tal Votes Cast in Precinct 3 = 285 Total Votes Cast in Precinct 4 = 363 Total # Votes Cast 1,217 Andrew T. Dowd, Town Clerk Voter Turnout %: 10.56%
+Paxton2021	160	markdown+pdftext	rite-ins 0 # of Voters to Vote by Mail: 10 Blanks 19 # of In Person Voters: 150 Total Ballots Cast: 160 Total # of Registered Voters: 3460 % Turnout 4.6% Town of P
+Peru2025	693	raw_ocr	6-14-2025 Annual Town Election Results 80 Ballots Cast 693 Registered Voters SELECT BOARD VOTE FOR ONE PLANNING BOARD
+Petersham2023	1013	raw_ocr+pdftext	didate for Re-Election TRUSTEES OF PUBLIC LIBRARY — 3 YEARS Kent Byron - 114 123Voter Turnout 1013 Registered Voters 11% Turnout 51 SEPTEMBER 6, 2022 STATE PR
+Petersham2024	1069	raw_ocr+pdftext	PUBLIC LIBRARY — 3 YEARS Fifi Scoufopoulos - 164 Candidate for Re-Election 176 Voter Turnout 1069 Registered Voters 16% Turnout 72 fa" *D TOWN OF PETERSHAM o
+Petersham2025	1085	raw_ocr+pdftext	pproved at the Special Town Meeting of December 6, 2021)? YES — 104 NO - 13 118 Voter Turnout 1085 Registered Voters 11% Turnout 67 June 2, 2025 Annual Town M
+Petersham2026	116	news_text	s at the end of a three-town roundup covering Athol, Royalston and Petersham. **Ballots cast: 116 of 1,092 registered = about 11%.** Polls were open 10 a.m.
+Richmond2023	51	news_text	aturday's annual town election" and lists those "elected without opposition". **Ballots cast: 51 of 1,296 registered = 4% turnout.** The Town of Richmond An
+Royalston2026	121	news_text	the "Royalston and Petersham town elections" section of a three-town roundup. **Ballots cast: 121 of 1,116 registered = nearly 11%.** ## The only contest on
+Saugus2025	7776	markdown+pdftext	TOTAL Total Reg Voters 2281 2136 2185 2402 2423 2223 2320 2275 2414 2070 22729 Total Votes 7776 6064 7056 4560 8144 6720 7020 7552 5600 6959 67451 Percent
+Seekonk2021	1236	raw_ocr+markdown	Eligible Voters = 11,334 Total Votes Cast = 1236 % = 10.91% PRECINCT ST] TOTAL Total Votes Cast 1236 OFFICE / CANDIDATES OARD OF\/ SORS. PAUL BUCKLEY Write-In's
+Seekonk2023	2104	markdown+pdftext	to the Seekonk residents we had a huge voter turnout. Eligible voters: 11,534. Total votes cast: 2,104 (18%) Precinct 1 - 459 votes. Precinct 2 – 709 votes. Preci
+Sheffield2021	279	news_text	es Sheffield Planning Board seat by six votes", 10 May 2021 (Heather Bellow). **Ballots cast: 279 of 2,540 registered = 10.9%** — attributed to Town Clerk Fe
+Shelburne2021	144	news_text	victorious" and then gives "The results of the remaining uncontested races". **Ballots cast: 144 of roughly 1,400 registered.** Polls open 10 a.m.-8 p.m. at
+Taunton2021	7002	raw_ocr+markdown	4 |609 [628 |581 {533 |7002 Registered Voters Total 37,048 Precincts Counted 16 Total Ballots Cast 7002 Total Blank Ballots 2 Total Voter Turnout 18.87 CITY OF TAU
+Uxbridge2022	948	markdown+pdftext	TOWN OF UXBRIDGE TOTAL TALLY SHEET 5/24/2022 # Eligible Voters 10,944 Election Total Votes Cast 948 Percent 8.7% PRECINCT 1 2 3 4 TOTAL TOTAL VOTES CAST 264 23
+Uxbridge2024	1644	markdown+pdftext	s 11,573 Election Total Votes Cast 1,051 Election Total Votes Cast 593 Election Total Votes Cast 1,644 Percent 9.1% Percent 5.1% Percent 14.2% PRECINCT 1 01A 2 3
+Wareham2021	17460	markdown+pdftext	Town Election 4-May-21 Total Voters 17460 voted 1187 Selectman % turnout 7% Alan Slavin 472 * Glenn L
+Wendell2021	96	news_text	ates won in uncontested races... The results of the election are as follows". **Ballots cast: 96.** The article gives the number of voters who came to the p
+Wendell2022	91	news_text	thol Daily News the same day. Figures attributed to Town Clerk Anna Wetherby. **Ballots cast: 91 of 729 registered = 8%.** **Every race was uncontested** —
+Williamsburg2026	160	news_text	iamsburg town election", 6 May 2026. Turnout attributed to Warden Kathy Luce. **Ballots cast: 160 of 2,218 registered = 7%.** ## Recreation Commission — 2 se
+Wilmington2023	2990	markdown+pdftext	WRITE INS BLANKS 22 33 19 26 15 23 138 BLANKS Total 150 158 102 176 163 164 913 Total Voters 2990 2916 2773 3012 2879 2953 17523 Total Voters TOTAL VOTES 150
+Worthington2022	266	news_text	esults%202022&Body=https:\worthington-ma.us\2022\05\town-election-results-2022) Ballots Cast - 266 Registered Voters - 997 ## Contested Races ### Finance Comm
+Worthington2024	371	raw_ocr+pdftext	esults/ Election & Town Meeting Results Election Results Registered Voters -993 Votes Cast - 371 (a 44% increase over the 258 Ballots Cast in the 2023 Town
+Yarmouth2022	1642	raw_ocr+markdown+pdftext	3 Total 328 181 148 195 145 155 331 159 1,642 Total Registered Voters 21,296.00 Ballots Cast 1,642.00 7.71% 60 TOWN ELECTION TOWN OF YARMOUTH OFFICIAL RESULTS
