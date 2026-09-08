@@ -34,8 +34,55 @@ The aggregate. The named write-ins are people who received votes and the
 subtotal is a restatement of them; keeping the names and dropping the total
 loses nothing and keeps who-was-written-in, which is the part a reader wants.
 
-    python -m src.migrate_write_in_subtotal           # report, change nothing
+## The same habit, seen from the other side
+
+Some clerks print the aggregate FIRST and itemise underneath it, and then the
+aggregate is not a restatement of the names -- it CONTAINS them. Pepperell
+2021's Recreation Commission prints `Write-ins 95 / Alan Leao 59 / Dana Hanson
+14 / Blanks 342` over a printed `Totals 437`, and 95 + 342 is 437 exactly:
+Leao and Hanson are two of the ninety-five. Boxborough 2025 prints `WRITE INS
+66 / Bryan Lynch, 436 Littlefield Rd 37 / Blanks 673 / Total 739`. Shirley
+2023 goes further and prints the winner as a sentence -- `Write Ins 84 /
+Blanks 604 / WINNER - WILLIAM MCGUINNESS 21 VOTES / TOTAL 688`.
+
+Dropping the aggregate is wrong here: it would throw away the write-ins nobody
+named. What the project's own rule says is to keep the name and give the
+aggregate the remainder, so `Write-ins 95` becomes 22 and the block closes on
+437. The arithmetic that decides it is the mirror of the first rule:
+
+    marks - (every named row) == ballots x seats,  and aggregate >= that sum
+
+Thirteen contests in eight town-years fit it, and every one was read against
+its document before this ran: Boxborough 2025, Georgetown 2023, Kingston 2022,
+Pepperell 2021 (four), Shirley 2023 (three), Webster 2021, Webster 2022 (two).
+In each the printed total equals aggregate + blanks, which is the document
+saying the same thing the arithmetic does.
+
+Where both rules would fire the first one wins, because dropping a row the
+clerk restated is the established treatment and leaves no zero behind.
+
+The second rule costs something and it is worth stating: the remainder it
+writes is a figure the page does not print, so `figures_grounded` starts
+failing on five of the eight records it touches. That is the check being
+right -- the number IS derived -- and it is the same trade the corpus already
+makes for a blanks row computed from a printed total. Thirteen arithmetically
+impossible contests for five ungrounded remainders.
+
+## Why the rules can be run separately
+
+The first rule cannot tell a restated subtotal from a write-in row a machine
+prints OUTSIDE its own total. Attleboro 2021's return is the second: every
+contest reads `Times Cast 6,920 / Blanks 1,754 / ZAIDA KEEFER 5,166 100.00% /
+Total Votes 5,166 / Unresolved Write-In`, so blanks plus votes already make
+the ballot count and the write-in line sits beside them. Dropping those six
+rows would close six contests and throw away the only record that anyone wrote
+anything in. That is a convention decision about a whole document, it is in
+`adjudications.csv` as the owner's, and `--rule` exists so the other rule can
+run without waiting on it.
+
+    python -m src.migrate_write_in_subtotal                    # report only
     python -m src.migrate_write_in_subtotal --write
+    python -m src.migrate_write_in_subtotal --rule overstated --write
 """
 import argparse
 import collections
@@ -88,12 +135,53 @@ def duplicated_aggregates(record):
     return drop, ambiguous
 
 
+def overstated_aggregates(record, already):
+    """(contest, candidate, new value) for every aggregate that CONTAINS the names.
+
+    The mirror of `duplicated_aggregates`: there the aggregate restates the
+    itemised write-ins and is removed, here it includes them and keeps the
+    remainder.  `already` is the set of contest indices the first rule has
+    claimed, which wins.
+    """
+    ballots = record.get("ballots_cast")
+    if not isinstance(ballots, int) or ballots <= 0:
+        return []
+    out = []
+    for i, e in enumerate(record.get("elections") or []):
+        if i in already or layers.scope_of(e) == "regional_district":
+            continue
+        seats = e.get("num_winners") or 1
+        cands = e.get("candidates") or []
+        marks = sum(c.get("votes") or 0
+                    for c in cands if isinstance(c.get("votes"), int))
+        room = ballots * seats
+        if marks <= room:
+            continue
+        aggs = [ci for ci, c in enumerate(cands)
+                if isinstance(c.get("votes"), int)
+                and AGGREGATE.match(str(c.get("name_original") or ""))]
+        named = [c.get("votes") for c in cands
+                 if isinstance(c.get("votes"), int) and not layers.is_tally_row(c)]
+        total_named = sum(named)
+        if len(aggs) != 1 or not total_named or marks - total_named != room:
+            continue
+        # The aggregate has to be big enough to have contained them.
+        if cands[aggs[0]]["votes"] < total_named:
+            continue
+        out.append((i, aggs[0], cands[aggs[0]]["votes"] - total_named))
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--rule", choices=("both", "duplicate", "overstated"),
+                    default="both",
+                    help="which of the two shapes to act on (see the docstring)")
     args = ap.parse_args()
 
     removed = 0
+    reduced = 0
     touched, unsettled = [], []
     for path in sorted(glob.glob(os.path.join(BASE, "data", "json", "*.json"))):
         stem = os.path.basename(path)[:-5]
@@ -102,8 +190,21 @@ def main():
         drop, ambiguous = duplicated_aggregates(record)
         for i, names in ambiguous:
             unsettled.append((stem, i, names))
-        if not drop:
+        keep = overstated_aggregates(record, {i for i, _ in drop})
+        if args.rule == "duplicate":
+            keep = []
+        elif args.rule == "overstated":
+            drop = []
+        if not drop and not keep:
             continue
+        for i, ci, value in keep:
+            e = record["elections"][i]
+            c = e["candidates"][ci]
+            print(f"  {stem:<18} {str(e.get('office_original'))[:34]:<34} "
+                  f"{c.get('name_original')!r} {c.get('votes')} -> {value} "
+                  f"(the named write-ins were inside it)")
+            c["votes"] = value
+            reduced += 1
         # Remove from the end so earlier indices stay valid.
         for i, ci in sorted(drop, reverse=True):
             e = record["elections"][i]
@@ -117,15 +218,20 @@ def main():
             with io.open(path, "w", encoding="utf-8") as fh:
                 json.dump(record, fh, ensure_ascii=False, indent=1)
 
-    print(f"\n{removed} duplicated aggregates in {len(touched)} town-years")
+    print(f"\n{removed} duplicated aggregates dropped and {reduced} overstated "
+          f"ones reduced, in {len(touched)} town-years")
     if unsettled:
         print(f"\n{len(unsettled)} contests where two rows would each close it, "
               f"left alone:")
         for stem, i, names in unsettled:
             print(f"   {stem} elections[{i}] {names}")
     if args.write:
-        with io.open(os.path.join(BASE, "src", "_write_in_subtotal.txt"),
-                     "w", encoding="utf-8") as fh:
+        # One record of the run per rule, so running the second rule does not
+        # overwrite the list the first one left.
+        name = {"both": "_write_in_subtotal.txt",
+                "duplicate": "_write_in_subtotal.txt",
+                "overstated": "_write_in_inside_aggregate.txt"}[args.rule]
+        with io.open(os.path.join(BASE, "src", name), "w", encoding="utf-8") as fh:
             fh.write("\n".join(touched))
     else:
         print("\nnothing written. Re-run with --write.")

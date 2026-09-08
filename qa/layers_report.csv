@@ -2541,16 +2541,16 @@ Boxborough2024,2,contest_closes,PASS,Constable: 679 == 679 x 1
 Boxborough2024,3,office_count_consistent,PASS,7 contests; median 7 in other years
 Boxborough2025,0,document_self_identifies,PASS,...TE INS 3 Blanks 135 Total 739 BOXBOROUGH TOWN ELECTION 5/20/2025 resul...
 Boxborough2025,0,carries_the_year,PASS,...Total 739 BOXBOROUGH TOWN ELECTION 5/20/2025 results BOXBOROUGH TOWN ELECTION Regist...
-Boxborough2025,0,document_supports_record,PASS,15/15 names and 32/32 figures located in markdown+pdftext
+Boxborough2025,0,document_supports_record,PASS,15/15 names and 31/32 figures located in markdown+pdftext
 Boxborough2025,1,names_grounded,PASS,15/15 names located in markdown+pdftext
-Boxborough2025,1,figures_grounded,PASS,32/32 figures located in markdown+pdftext
-Boxborough2025,2,ballots_derivable,PASS,6 of 7 contests agree on 739
+Boxborough2025,1,figures_grounded,FAIL,31/32 figures located in markdown+pdftext
+Boxborough2025,2,ballots_derivable,PASS,7 of 7 contests agree on 739
 Boxborough2025,2,contest_closes,PASS,Select Board (3 yr): 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Select Board (2 yr): 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Planning Board: 1478 == 739 x 2
 Boxborough2025,2,contest_closes,PASS,Library Trustees: 1478 == 739 x 2
 Boxborough2025,2,contest_closes,PASS,School Committee: 739 == 739 x 1
-Boxborough2025,2,marks_exceed_ballots,FAIL,Board of Health: 776 marks > 739 ballots x 1 seats = 739
+Boxborough2025,2,contest_closes,PASS,Board of Health: 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Town Clerk: 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Moderator: 739 == 739 x 1
 Boxborough2025,2,contest_closes,PASS,Constable: 739 == 739 x 1
@@ -7370,10 +7370,10 @@ Georgetown2022,2,contest_closes,PASS,PLANNING BOARD: 616 == 616 x 1
 Georgetown2022,3,office_count_consistent,PASS,10 contests; median 8 in other years
 Georgetown2023,0,document_self_identifies,NOTE,document never prints 'Georgetown'; identity rests on the citation alone
 Georgetown2023,0,carries_the_year,PASS,"...UNOFFICIAL RESULTS May 8, 2023 Annual Town Election Out of 6,643 REGIS..."
-Georgetown2023,0,document_supports_record,PASS,15/15 names and 33/33 figures located in markdown+pdftext
+Georgetown2023,0,document_supports_record,PASS,15/15 names and 32/33 figures located in markdown+pdftext
 Georgetown2023,1,names_grounded,PASS,15/15 names located in markdown+pdftext
-Georgetown2023,1,figures_grounded,PASS,33/33 figures located in markdown+pdftext
-Georgetown2023,2,ballots_derivable,PASS,5 of 6 contests agree on 1219
+Georgetown2023,1,figures_grounded,FAIL,32/33 figures located in markdown+pdftext
+Georgetown2023,2,ballots_derivable,PASS,6 of 6 contests agree on 1219
 Georgetown2023,2,contest_closes,PASS,SELECTMAN: 2438 == 1219 x 2
 Georgetown2023,2,contest_closes,PASS,SCHOOL COMMITTEE: 2438 == 1219 x 2
 Georgetown2023,2,contest_closes,PASS,ASSESSOR: 1219 == 1219 x 1
@@ -7382,7 +7382,7 @@ Georgetown2023,2,contest_closes,PASS,LIGHT COMMISSIONER: 1219 == 1219 x 1
 Georgetown2023,2,contest_closes,PASS,WATER COMMISSIONER: 1219 == 1219 x 1
 Georgetown2023,2,contest_closes,PASS,PLANNING BOARD: 1219 == 1219 x 1
 Georgetown2023,2,contest_closes,PASS,PEABODY LIBRARY TRUSTEES: 2438 == 1219 x 2
-Georgetown2023,2,marks_exceed_ballots,FAIL,HOUSING AUTHORITY: 1305 marks > 1219 ballots x 1 seats = 1219
+Georgetown2023,2,contest_closes,PASS,HOUSING AUTHORITY: 1219 == 1219 x 1
 Georgetown2023,3,office_count_consistent,PASS,9 contests; median 8 in other years
 Georgetown2024,0,document_self_identifies,PASS,...OFFICIAL Georgetown RESULTS - TOWN ELECTION RESUL...
 Georgetown2024,0,carries_the_year,PASS,"...ESULTS - TOWN ELECTION RESULTS, May 13, 2024 Total Votes cast 2196 Registered voters..."
@@ -10442,7 +10442,7 @@ Kingston2022,0,carries_the_year,PASS,...ATE 2022 Preliminary 4/23/2022 OFFICE TO
 Kingston2022,0,document_supports_record,PASS,24/24 names and 56/56 figures located in markdown+pdftext
 Kingston2022,1,names_grounded,PASS,24/24 names located in markdown+pdftext
 Kingston2022,1,figures_grounded,PASS,56/56 figures located in markdown+pdftext
-Kingston2022,2,ballots_derivable,PASS,8 of 9 contests agree on 731
+Kingston2022,2,ballots_derivable,PASS,9 of 9 contests agree on 731
 Kingston2022,2,contest_closes,PASS,SELECTMAN: 731 == 731 x 1
 Kingston2022,2,contest_closes,PASS,ASSESSOR: 731 == 731 x 1
 Kingston2022,2,contest_closes,PASS,COLLECTOR OF TAXES: 731 == 731 x 1
@@ -10454,7 +10454,7 @@ Kingston2022,2,regional_exempt,NOTE,S.L. REGIONAL SCHOOL COMMITTEE: spans severa
 Kingston2022,2,contest_closes,PASS,BOARD OF HEALTH: 1462 == 731 x 2
 Kingston2022,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEES: 1522 marks > 731 ballots x 2 seats = 1462
 Kingston2022,2,contest_closes,PASS,RECREATION COMMISSION: 731 == 731 x 1
-Kingston2022,2,marks_exceed_ballots,FAIL,RECREATION COMMISSION: 790 marks > 731 ballots x 1 seats = 731
+Kingston2022,2,contest_closes,PASS,RECREATION COMMISSION: 731 == 731 x 1
 Kingston2022,2,contest_closes,PASS,SEWER COMMISSIONER: 731 == 731 x 1
 Kingston2022,2,contest_closes,PASS,CONSTABLE: 1462 == 731 x 2
 Kingston2022,2,contest_closes,PASS,HOUSING AUTHORITY: 731 == 731 x 1
@@ -14362,7 +14362,7 @@ NewAshford2022,1,names_grounded,PASS,3/3 names located in raw_ocr
 NewAshford2022,1,figures_grounded,PASS,3/3 figures located in raw_ocr
 NewAshford2022,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewAshford2022,3,office_count_consistent,PASS,3 contests; median 4 in other years
-NewAshford2023,0,document_self_identifies,PASS,...her\?weather_zip=01201) Close NewAshfordTownHall (copy) <!-- image -->...
+NewAshford2023,0,document_self_identifies,PASS,"...Hall (copy) <!-- image --> At New Ashford's election Tuesday, 29 percen..."
 NewAshford2023,0,carries_the_year,PASS,"...mmittee - The Berkshire Eagle - May 24, 2023 - May 24, 2023 - 1 min to read - [Faceb..."
 NewAshford2023,0,document_supports_record,PASS,6/6 names and 4/6 figures located in news_text
 NewAshford2023,1,names_grounded,PASS,6/6 names located in news_text
@@ -14520,7 +14520,7 @@ NewSalem2025,1,names_grounded,PASS,10/10 names located in news_text
 NewSalem2025,1,figures_grounded,PASS,10/10 figures located in news_text
 NewSalem2025,2,ballots_derivable,UNKNOWN,only 0 qualifying contest(s); cannot derive
 NewSalem2025,3,office_count_consistent,PASS,9 contests; median 8 in other years
-NewSalem2026,0,document_self_identifies,PASS,...it does not reproduce it. --- New Salem rejects Proposition 2½ overri...
+NewSalem2026,0,document_self_identifies,PASS,...# NewSalem2026 - Recovered from: http://...
 NewSalem2026,0,carries_the_year,PASS,...# NewSalem2026 - Recovered from: http://web.archive.or...
 NewSalem2026,0,document_supports_record,PASS,9/9 names and 9/9 figures located in news_text
 NewSalem2026,1,names_grounded,PASS,9/9 names located in news_text
@@ -16467,19 +16467,19 @@ Pepperell2021,0,carries_the_year,PASS,"...Annual Town Election Monday, April 26,
 Pepperell2021,0,document_supports_record,PASS,16/16 names and 40/40 figures located in markdown+pdftext
 Pepperell2021,1,names_grounded,PASS,16/16 names located in markdown+pdftext
 Pepperell2021,1,figures_grounded,PASS,40/40 figures located in markdown+pdftext
-Pepperell2021,2,ballots_derivable,PASS,6 of 10 contests agree on 437
+Pepperell2021,2,ballots_derivable,PASS,10 of 10 contests agree on 437
 Pepperell2021,2,contest_closes,PASS,Select Board: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Board of Assessors: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Board of Health: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Board of Health: 437 == 437 x 1
-Pepperell2021,2,marks_exceed_ballots,FAIL,Housing Authority: 473 marks > 437 ballots x 1 seats = 437
+Pepperell2021,2,contest_closes,PASS,Housing Authority: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Planning Board: 437 == 437 x 1
 Pepperell2021,2,contest_closes,PASS,Planning Board: 437 == 437 x 1
 Pepperell2021,2,regional_exempt,NOTE,North Middlesex Regional School District Sch: spans several towns; ballot arithmetic does not apply
 Pepperell2021,2,contest_closes,PASS,Lawrence Library Board of Trustees: 874 == 437 x 2
-Pepperell2021,2,marks_exceed_ballots,FAIL,Board of Public Works: 466 marks > 437 ballots x 1 seats = 437
-Pepperell2021,2,marks_exceed_ballots,FAIL,Recreation Commission: 510 marks > 437 ballots x 1 seats = 437
-Pepperell2021,2,marks_exceed_ballots,FAIL,Recreation Commission: 489 marks > 437 ballots x 1 seats = 437
+Pepperell2021,2,contest_closes,PASS,Board of Public Works: 437 == 437 x 1
+Pepperell2021,2,contest_closes,PASS,Recreation Commission: 437 == 437 x 1
+Pepperell2021,2,contest_closes,PASS,Recreation Commission: 437 == 437 x 1
 Pepperell2021,3,office_count_consistent,PASS,12 contests; median 11 in other years
 Pepperell2022,0,document_self_identifies,PASS,"...onday, April 25, 2022 Town of Pepperell, Massachusetts OFFICIAL RESUL..."
 Pepperell2022,0,carries_the_year,PASS,"...Annual Town Election Monday, April 25, 2022 Town of Pepperell, Massachusetts OFFICI..."
@@ -19123,20 +19123,20 @@ Shirley2022,2,contest_closes,PASS,WAR MEMORIAL TRUSTEE (NON-VETERAN) – 3 YEARS
 Shirley2022,3,office_count_consistent,PASS,12 contests; median 13 in other years
 Shirley2023,0,document_self_identifies,NOTE,document never prints 'Shirley'; identity rests on the citation alone
 Shirley2023,0,carries_the_year,PASS,"...May 2, 2023 Annual Town Election TOTAL Number Votes..."
-Shirley2023,0,document_supports_record,PASS,13/13 names and 35/35 figures located in raw_ocr
+Shirley2023,0,document_supports_record,PASS,13/13 names and 32/35 figures located in raw_ocr
 Shirley2023,1,names_grounded,PASS,13/13 names located in raw_ocr
-Shirley2023,1,figures_grounded,PASS,35/35 figures located in raw_ocr
-Shirley2023,2,ballots_derivable,PASS,6 of 9 contests agree on 688
+Shirley2023,1,figures_grounded,FAIL,32/35 figures located in raw_ocr
+Shirley2023,2,ballots_derivable,PASS,9 of 9 contests agree on 688
 Shirley2023,2,contest_closes,PASS,BOARD OF ASSESSORS (3 YRS): 688 == 688 x 1
 Shirley2023,2,contest_closes,PASS,BOARD OF HEALTH (3 YRS): 688 == 688 x 1
-Shirley2023,2,marks_exceed_ballots,FAIL,CONSTABLE (3 YRS): 709 marks > 688 ballots x 1 seats = 688
+Shirley2023,2,contest_closes,PASS,CONSTABLE (3 YRS): 688 == 688 x 1
 Shirley2023,2,marks_exceed_ballots,FAIL,LIBRARY TRUSTEE - 3 YEARS (2 POSITIONS): 1394 marks > 688 ballots x 2 seats = 1376
 Shirley2023,2,contest_closes,PASS,PLANNING BOARD (5 YRS): 688 == 688 x 1
 Shirley2023,2,marks_exceed_ballots,FAIL,RECREATION COMM (3 YRS)(2 POSITIONS): 1407 marks > 688 ballots x 2 seats = 1376
 Shirley2023,2,contest_closes,PASS,REG SCH DISTRICT COM (3 YRS): 688 == 688 x 1
 Shirley2023,2,contest_closes,PASS,SELECT BOARD (3 YRS): 688 == 688 x 1
-Shirley2023,2,marks_exceed_ballots,FAIL,SEWER COMMISSION: 727 marks > 688 ballots x 1 seats = 688
-Shirley2023,2,marks_exceed_ballots,FAIL,WAR MEM TRUSTEE (VET)(3 YR): 695 marks > 688 ballots x 1 seats = 688
+Shirley2023,2,contest_closes,PASS,SEWER COMMISSION: 688 == 688 x 1
+Shirley2023,2,contest_closes,PASS,WAR MEM TRUSTEE (VET)(3 YR): 688 == 688 x 1
 Shirley2023,2,contest_closes,PASS,WAR MEM TRUSTEE (NON VET)(3 YR): 688 == 688 x 1
 Shirley2023,3,office_count_consistent,PASS,11 contests; median 13 in other years
 Shirley2024,0,document_self_identifies,NOTE,document never prints 'Shirley'; identity rests on the citation alone
@@ -22677,15 +22677,15 @@ Wayland2026,2,contest_closes,PASS,COMMISSIONER OF TRUST FUNDS: 795 == 795 x 1
 Wayland2026,3,office_count_consistent,PASS,11 contests; median 12 in other years
 Webster2021,0,document_self_identifies,PASS,...Webster TOTALS ANNUAL TOWN ELECTION 0...
 Webster2021,0,carries_the_year,PASS,...bster TOTALS ANNUAL TOWN ELECTION 05/03/2021 Precinct Total Votes per Precinct BOARD...
-Webster2021,0,document_supports_record,PASS,17/17 names and 41/41 figures located in raw_ocr+markdown
+Webster2021,0,document_supports_record,PASS,17/17 names and 40/41 figures located in raw_ocr+markdown
 Webster2021,1,names_grounded,PASS,17/17 names located in raw_ocr+markdown
-Webster2021,1,figures_grounded,PASS,41/41 figures located in raw_ocr+markdown
-Webster2021,2,ballots_derivable,PASS,7 of 9 contests agree on 1089
+Webster2021,1,figures_grounded,FAIL,40/41 figures located in raw_ocr+markdown
+Webster2021,2,ballots_derivable,PASS,8 of 9 contests agree on 1089
 Webster2021,2,contest_closes,PASS,BOARD OF SELECTMEN: 1089 == 1089 x 1
 Webster2021,2,contest_closes,PASS,SCHOOL COMMITTEE: 2178 == 1089 x 2
 Webster2021,2,regional_exempt,NOTE,REGIONAL VOCATIONAL SCHOOL COMMITTEE: spans several towns; ballot arithmetic does not apply
 Webster2021,2,contest_closes,PASS,BOARD OF HEALTH: 1089 == 1089 x 1
-Webster2021,2,marks_exceed_ballots,FAIL,FINANCE COMMITTEE: 1116 marks > 1089 ballots x 1 seats = 1089
+Webster2021,2,contest_closes,PASS,FINANCE COMMITTEE: 1089 == 1089 x 1
 Webster2021,2,contest_closes,PASS,TRUSTEES OF THE PUBLIC LIBRARY: 2178 == 1089 x 2
 Webster2021,2,contest_closes,PASS,TRUSTEES OF THE PUBLIC LIBRARY: 1089 == 1089 x 1
 Webster2021,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY: 1089 == 1089 x 1
@@ -22696,16 +22696,16 @@ Webster2021,2,contest_closes,PASS,TOWN CLERK: 1089 == 1089 x 1
 Webster2021,3,office_count_consistent,PASS,12 contests; median 8 in other years
 Webster2022,0,document_self_identifies,PASS,...Total Registered Webster TOTALS ANNUAL TOWN ELECTION 0...
 Webster2022,0,carries_the_year,PASS,"...bster TOTALS ANNUAL TOWN ELECTION 05/02/2022 Voters: 12,325 Precinct #1 #2 #3 #4 #5..."
-Webster2022,0,document_supports_record,PASS,11/11 names and 29/29 figures located in raw_ocr
+Webster2022,0,document_supports_record,PASS,11/11 names and 27/29 figures located in raw_ocr
 Webster2022,1,names_grounded,PASS,11/11 names located in raw_ocr
-Webster2022,1,figures_grounded,PASS,29/29 figures located in raw_ocr
-Webster2022,2,ballots_derivable,PASS,4 of 6 contests agree on 704
+Webster2022,1,figures_grounded,FAIL,27/29 figures located in raw_ocr
+Webster2022,2,ballots_derivable,PASS,6 of 6 contests agree on 704
 Webster2022,2,contest_closes,PASS,BOARD OF SELECTMEN: 1408 == 704 x 2
 Webster2022,2,contest_closes,PASS,BOARD OF SELECTMEN: 704 == 704 x 1
 Webster2022,2,contest_closes,PASS,SCHOOL COMMITTEE: 704 == 704 x 1
 Webster2022,2,regional_exempt,NOTE,REGIONAL VOCATIONAL SCHOOL COMMITTEE: spans several towns; ballot arithmetic does not apply
-Webster2022,2,marks_exceed_ballots,FAIL,BOARD OF HEALTH: 722 marks > 704 ballots x 1 seats = 704
-Webster2022,2,marks_exceed_ballots,FAIL,FINANCE COMMITTEE: 718 marks > 704 ballots x 1 seats = 704
+Webster2022,2,contest_closes,PASS,BOARD OF HEALTH: 704 == 704 x 1
+Webster2022,2,contest_closes,PASS,FINANCE COMMITTEE: 704 == 704 x 1
 Webster2022,2,contest_closes,PASS,TRUSTEES OF THE PUBLIC LIBRARY: 1408 == 704 x 2
 Webster2022,2,contest_closes,PASS,REDEVELOPMENT AUTHORITY: 704 == 704 x 1
 Webster2022,2,contest_closes,PASS,MODERATOR: 704 == 704 x 1
