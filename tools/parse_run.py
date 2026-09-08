@@ -69,8 +69,28 @@ OUTPUT_TOKENS = 1400
 # be the odd choice.
 BATCH_DISCOUNT = 0.5
 
+# Caching and batching do not combine, so `cached` defaults to False whenever
+# `batch` is on. A cache entry written during batch processing "would likely
+# expire before the follow-up request runs" -- the default TTL is five minutes
+# and a batch spreads over up to twenty-four hours.
+#
+# Batching wins alone anyway: $45 against $70 for the Sonnet pass over this
+# corpus. An earlier estimate of $30 assumed both applied at once and was
+# optimistic about a mechanism that will mostly not fire.
+#
+# It also means the spec prompt is paid in full on every call -- 6.17M tokens,
+# 34% of all input -- which makes its LENGTH a real cost and not just a
+# question of style. Trimming it from 5,675 to 3,000 tokens saves about $5 at
+# Sonnet. Do not trim below 4,096: Haiku 4.5 refuses to cache a shorter prompt
+# at all, silently and without error, which would foreclose caching if this
+# ever runs unbatched.
+CACHE_MINIMUM = {"haiku": 4096, "sonnet": 1024}
 
-def cost(n_sections, n_pages, tier, max_dim=MAX_DIM, batch=True, cached=True):
+
+def cost(n_sections, n_pages, tier, max_dim=MAX_DIM, batch=True, cached=None):
+    """Cost for one pass. `cached` defaults to False under batch, see above."""
+    if cached is None:
+        cached = not batch
     tin, tout = PRICES[tier]
     img = n_pages * IMAGE_TOKENS_PER_PAGE[max_dim]
     if cached:
