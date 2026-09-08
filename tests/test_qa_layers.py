@@ -524,3 +524,79 @@ def test_an_undated_document_with_no_corroboration_still_fails():
         "TOWN OF ANYTOWN ANNUAL ELECTION OFFICIAL RESULTS SELECT BOARD", "test")
     v = next(r[3] for r in rows if r[2] == "carries_the_year")
     assert v == "FAIL"
+
+
+# ---------------------------------------------------------------- layer 2
+#
+# Where the ballot count cannot be derived, the document may still print one.
+# Every case below is quoted from a record the corpus holds: Lenox 2023's source
+# prints "Total ballots Cast: 624" and its Selectman contest sums to 865 marks,
+# and layer 2 said nothing at all about it because no contest in the record
+# prints its blanks.
+
+LENOX = {
+    "ballots_cast": 624,
+    "elections": [
+        {"office_original": "Selectman, three-year term", "num_winners": 1,
+         "candidates": [{"name_original": "Marybeth Mitts", "votes": 470},
+                        {"name_original": "Others", "votes": 395}]},
+        {"office_original": "Moderator, one-year term", "num_winners": 1,
+         "candidates": [{"name_original": "John Hicks", "votes": 566},
+                        {"name_original": "Others", "votes": 42}]},
+    ],
+}
+LENOX_TEXT = ("recorded by Town Clerk Kerry Sullivan: Total number of voters: "
+              "3,431 Total ballots Cast: 624 Moderator, one-year term")
+
+
+def _rows(record, text):
+    return layers.layer2_arithmetic("Anytown2023", record, text)
+
+
+def test_a_count_the_derivation_cannot_reach_still_tests_the_impossible():
+    rows = _rows(LENOX, LENOX_TEXT)
+    assert next(r[3] for r in rows if r[2] == "ballots_derivable") == "UNKNOWN"
+    fired = [r for r in rows if r[2] == "marks_exceed_ballots"]
+    assert len(fired) == 1
+    assert "Selectman" in fired[0][4] and "865 marks > 624" in fired[0][4]
+
+
+def test_the_shortfall_direction_stays_silent_without_a_blanks_row():
+    # Moderator is 608 marks against 624 ballots. With no blanks row every
+    # contest is under the ceiling, so "under" carries no information -- and
+    # reporting it would put a thousand vacuous notes in the report.
+    rows = _rows(LENOX, LENOX_TEXT)
+    assert not [r for r in rows if r[2] in ("contest_closes", "tally_incomplete")]
+
+
+def test_a_count_the_document_does_not_print_is_not_used():
+    # The grounding test is what stops a stale or invented ballot count deciding
+    # that a correctly-read contest is impossible.
+    rows = _rows(LENOX, "no figure here at all")
+    assert not [r for r in rows if r[2] == "marks_exceed_ballots"]
+
+
+def test_a_derivable_record_is_unchanged_by_the_fallback():
+    # Where the derivation works it is the authority, and the fallback must not
+    # get a vote: this record derives 100 and closes on it.
+    record = {"ballots_cast": 50, "elections": [
+        {"office_original": "A", "num_winners": 1,
+         "candidates": [{"name_original": "P", "votes": 60},
+                        {"name_original": "Blanks", "votes": 40}]},
+        {"office_original": "B", "num_winners": 1,
+         "candidates": [{"name_original": "Q", "votes": 70},
+                        {"name_original": "Blanks", "votes": 30}]}]}
+    rows = _rows(record, "50 100")
+    assert next(r[3] for r in rows if r[2] == "ballots_derivable") == "PASS"
+    assert not [r for r in rows if r[2] == "marks_exceed_ballots"]
+    assert len([r for r in rows if r[2] == "contest_closes"]) == 2
+
+
+def test_a_regional_contest_is_still_exempt_from_the_stated_count():
+    # A regional district spans several towns, so its figures routinely exceed
+    # the host town's ballots and always did.
+    record = {"ballots_cast": 100, "elections": [
+        {"office_original": "Regional School District Committee", "num_winners": 1,
+         "candidates": [{"name_original": "R", "votes": 900}]}]}
+    assert not [r for r in _rows(record, "100 ballots cast")
+                if r[2] == "marks_exceed_ballots"]

@@ -638,7 +638,32 @@ def derive_ballots(record):
     return top, f"{n} of {len(est)} contests agree on {top}", est
 
 
-def layer2_arithmetic(stem, record):
+def stated_ballots(record, text):
+    """The ballot count the RECORD states, where the DOCUMENT prints it too.
+
+    `derive_ballots` needs a contest that prints its blanks, and 607 records hold
+    no such contest.  Layer 2 gave up on all of them: `layer2_arithmetic`
+    returned as soon as the derivation failed, so not one contest in a third of
+    the corpus was ever tested against anything.  Lenox 2023's source prints
+    "Total ballots Cast: 624" and the record's own Selectman contest sums to 865
+    marks, and nothing said so.
+
+    Falling back to the record's `ballots_cast` is not circular here, precisely
+    because the derivation failed: where it succeeds the two agree on all 1,271
+    records that hold both, so there would be nothing to learn.  Where it fails,
+    the figure came from the document rather than from the contests.
+
+    The figure has to be printed in the document to be used.  That is the same
+    grounding test every other figure in the record gets, and it is what stops a
+    stale or invented count deciding that a correctly-read contest is impossible.
+    """
+    b = record.get("ballots_cast")
+    if not isinstance(b, int) or b <= 0 or not text:
+        return None
+    return b if figure_found(b, text) else None
+
+
+def layer2_arithmetic(stem, record, text=None):
     """Does the arithmetic hold?
 
     In nearly every election a voter may mark a contest once per seat.  The
@@ -663,12 +688,36 @@ def layer2_arithmetic(stem, record):
 
     A closing contest means "the digits are probably right", never "the record
     is right".  A flag is only ever cleared after review and documentation.
+
+    Where the ballot count cannot be DERIVED, `stated_ballots` supplies the one
+    the document prints and only the impossible direction is tested.  Without a
+    blanks row every contest sits under the ceiling, so the equality and the
+    shortfall say nothing there and are not reported.
     """
     out = []
     ballots, why, contributors = derive_ballots(record)
     out.append((stem, 2, "ballots_derivable",
                 PASS if ballots else UNKNOWN, why))
     if not ballots:
+        # The derivation failed, which is not the same as there being no ballot
+        # count.  Where the document prints one, the impossible direction can
+        # still be tested -- and only that direction.  Without a blanks row a
+        # contest is ALWAYS under the ceiling, so "under" says nothing here and
+        # reporting it would bury the report in a thousand vacuous notes.
+        ballots = stated_ballots(record, text)
+        if not ballots:
+            return out
+        for e in record.get("elections") or []:
+            if scope_of(e) != "at_large":
+                continue
+            seats = e.get("num_winners") or 1
+            m = marks_in(e)
+            if m and m > ballots * seats:
+                office = str(e.get("office_original") or e.get("office") or "")[:44]
+                out.append((stem, 2, "marks_exceed_ballots", FAIL,
+                            f"{office}: {m} marks > {ballots} ballots x {seats} "
+                            f"seats = {ballots * seats}; the count is the "
+                            f"record's own and the document prints it"))
         return out
 
     for e in record.get("elections") or []:
@@ -791,7 +840,7 @@ def main():
         text, source = document_text(stem)
         rows += layer0_right_document(stem, rec, text, source)
         rows += layer1_grounded(stem, rec, text, source)
-        rows += layer2_arithmetic(stem, rec)
+        rows += layer2_arithmetic(stem, rec, text)
         rows += layer3_scope(stem, rec, counts)
     rows += cross_year_duplicates(records)
 
