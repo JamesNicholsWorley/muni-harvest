@@ -107,7 +107,17 @@ def resolution(stem, record, text, findings):
         parts.append("Nothing in the article states a turnout or ballot "
                      "figure; searched for ballots cast, turnout, went to the "
                      "polls, turned out and participated.")
-    other = [f for f in findings if f[1] != "ballots_derivable"]
+    thin = [f for f in findings if f[1] == "office_count_consistent"]
+    if thin:
+        parts.append("office_count_consistent also fails, and for the same "
+                     "reason rather than a second one: %s. An article covers "
+                     "the races worth writing about, so a record parsed from "
+                     "one is a partial return by construction. That is a "
+                     "coverage gap to fill with the town's own return, not a "
+                     "defect in the reading -- the contests that ARE here are "
+                     "the ones the article reports." % thin[0][3])
+    other = [f for f in findings
+             if f[1] not in ("ballots_derivable", "office_count_consistent")]
     if other:
         parts.append("Other findings on this record are untouched by this "
                      "resolution: " + "; ".join(f"{f[1]} {f[2]}" for f in other)
@@ -124,7 +134,8 @@ def main():
                                                  "layers_report.csv"),
                                     encoding="utf-8")):
         if r["verdict"] in ("FAIL", "UNKNOWN"):
-            findings[r["stem"]].append((r["layer"], r["check"], r["verdict"]))
+            findings[r["stem"]].append((r["layer"], r["check"], r["verdict"],
+                                        r["evidence"]))
 
     done = 0
     for r in rows:
@@ -135,10 +146,12 @@ def main():
         if source != "news_text" or not text:
             continue
         fs = findings[stem]
-        # Only the records whose ONLY open finding is the derivation. Anything
-        # else -- an ungrounded figure, a thin year, an impossible contest --
-        # is a different question and is not answered by this.
-        if any(f[1] != "ballots_derivable" for f in fs):
+        # Only the records whose open findings are the derivation and the
+        # office count.  Both have the same answer for a news-sourced record and
+        # this says so.  Anything else -- an ungrounded figure, an impossible
+        # contest -- is a different question and is not answered here.
+        if any(f[1] not in ("ballots_derivable", "office_count_consistent")
+               for f in fs):
             continue
         record = json.load(io.open(os.path.join(BASE, "data", "json",
                                                 stem + ".json"),
