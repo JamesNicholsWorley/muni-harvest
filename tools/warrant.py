@@ -87,7 +87,16 @@ PROSE_OFFICE = re.compile(
     r"\b(One|Two|Three|Four|Five|Six|\d)\s+"
     r"[A-Z][A-Za-z'/ ]{3,40}?\s+for\s+"
     r"(One|Two|Three|Four|Five|Seven|\d)\s+Years?\b", re.I)
-NAME_VOTE = re.compile(r"[A-Z][a-z]+\s+[A-Z][A-Za-z'\-]+,?\s+\d{1,5}\b")
+# A figure after a name is a vote count only if it is not a house number. Town
+# meeting minutes list attendees as "Larry Roache, 26 Acorn Drive", which
+# matches name-then-number perfectly and is an address -- the same
+# address-shaped-name trap this corpus already knows, reached from the other
+# side. So a match is rejected when a street word follows the figure.
+STREET = (r"(?:St|Street|Rd|Road|Ave|Avenue|Ln|Lane|Dr|Drive|Way|Ct|Court|"
+          r"Pl|Place|Ter|Terrace|Blvd|Cir|Circle|Hwy|Highway|Sq|Square|Park|"
+          r"Path|Row|Run|Trail|Turnpike|Extension)\b")
+NAME_VOTE = re.compile(
+    r"[A-Z][a-z]+\s+[A-Z][A-Za-z'\-]+,?\s+\d{1,5}\b(?!\s*" + STREET + r")")
 
 
 def prose_return_score(text):
@@ -100,6 +109,16 @@ def prose_return_score(text):
     """
     offices = len(PROSE_OFFICE.findall(text))
     pairs = len(NAME_VOTE.findall(text))
-    if offices < 2 or pairs < 4:
+    # A warrant lists these same offices and names nobody, so office count
+    # alone can never carry this score: Littleton 2009's warrant enumerated
+    # eight offices and printed not one vote figure. The figures decide.
+    if offices < 2 or pairs < 6:
         return 0
-    return min(offices, 8) + min(pairs // 2, 8)
+    # Blanks and write-ins appear in a return and never in a warrant or in a
+    # set of minutes, so they are the cheapest confirmation that these numbers
+    # are results rather than street numbers or article counts.
+    tally_words = len(re.findall(r"\b(Blanks?|Write[- ]?ins?|Others)\b",
+                                 text, re.I))
+    if tally_words < 2:
+        return 0
+    return min(offices, 6) + min(pairs // 2, 6) + min(tally_words, 4)

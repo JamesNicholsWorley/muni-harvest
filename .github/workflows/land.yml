@@ -63,7 +63,11 @@ jobs:
         # skip them and every reason not to.
         if: steps.merge.outputs.landed == 'yes'
         run: |
-          pip install -q pytest
+          # pymupdf because test_atr_parse builds a real PDF to check that two
+          # races side by side are read as two. Adding that test without adding
+          # its dependency broke collection, so every landing failed for a day
+          # while the tests it was protecting never ran at all.
+          pip install -q pytest pymupdf
           python -m pytest tests/test_qa_layers.py tests/test_qa_apply.py tests/test_atr_parse.py -q
 
       - name: Push main
