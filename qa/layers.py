@@ -635,7 +635,20 @@ def derive_ballots(record):
     # not a derivation -- picking one is how stale data becomes confident data.
     if n < 2:
         return None, f"{len(est)} contests, no two agree: {sorted(counts)}", est
-    return top, f"{n} of {len(est)} contests agree on {top}", est
+    # A quorum is not unanimity, and the difference is the whole story behind
+    # 144 of the 197 "impossible" findings.  Middleborough 2023 prints "Total
+    # Votes Cast: 1,398" and every TOTAL row on the sheet reads 1398 or 2796;
+    # three of our six qualifying contests read 1396, because the OCR lost a
+    # write-in mark.  The mode is 1396, so the two contests that DID read 1398
+    # are then reported as marks exceeding the ballots -- a contest condemned by
+    # a ceiling its own siblings' misreadings set.  Naming the dissent here is
+    # what makes that legible; the figure itself is unchanged.
+    dissent = sorted(v for v, _ in est if v != top)
+    if dissent:
+        return top, (f"{n} of {len(est)} contests agree on {top}; "
+                     f"{len(dissent)} disagree ({', '.join(str(v) for v in dissent)}), "
+                     f"a spread of {max(v for v, _ in est) - min(v for v, _ in est)}"), est
+    return top, f"all {len(est)} contests agree on {top}", est
 
 
 def layer2_arithmetic(stem, record):
@@ -670,6 +683,15 @@ def layer2_arithmetic(stem, record):
                 PASS if ballots else UNKNOWN, why))
     if not ballots:
         return out
+    # The largest figure any qualifying contest states.  Every mark sits on a
+    # ballot, so this is a lower bound on the ballots cast and the mode may be
+    # below it.  It is NOT used as the ceiling: Shirley 2023 prints "TOTAL
+    # Number Votes Cast 688" where the mode is 688 and three contests read as
+    # high as 727, so the mode is right there and the maximum is right in
+    # Middleborough.  Only the document's own printed count separates the two,
+    # and the corpus does not hold it -- so this qualifies the evidence and
+    # decides nothing.
+    ceiling = max((v for v, _ in contributors), default=0)
 
     for e in record.get("elections") or []:
         scope = scope_of(e)
@@ -688,8 +710,21 @@ def layer2_arithmetic(stem, record):
             continue
         expect = ballots * seats
         if m > expect:
+            # The ceiling is derived, so say how firm it is.  Where the town's
+            # own single-seat contests disagree, an excess inside that spread is
+            # indistinguishable from one of them having been read short, and a
+            # session should reach for the document's printed count rather than
+            # for this contest's figures.  This does not change the verdict --
+            # only the reading of it settles that -- but a session that has to
+            # re-derive the spread before it can start is paying for it twice.
+            hedge = ""
+            if ceiling and ceiling > ballots:
+                hedge = (f"; but the single-seat contests disagree (up to "
+                         f"{ceiling}), and at {ceiling} this contest is within "
+                         f"{ceiling * seats}")
             out.append((stem, 2, "marks_exceed_ballots", FAIL,
-                        f"{office}: {m} marks > {ballots} ballots x {seats} seats = {expect}"))
+                        f"{office}: {m} marks > {ballots} ballots x {seats} "
+                        f"seats = {expect}{hedge}"))
         elif m == expect:
             out.append((stem, 2, "contest_closes", PASS,
                         f"{office}: {m} == {ballots} x {seats}"))

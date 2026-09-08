@@ -524,3 +524,70 @@ def test_an_undated_document_with_no_corroboration_still_fails():
         "TOWN OF ANYTOWN ANNUAL ELECTION OFFICIAL RESULTS SELECT BOARD", "test")
     v = next(r[3] for r in rows if r[2] == "carries_the_year")
     assert v == "FAIL"
+
+
+# ---- the derived ceiling, and how firm it is -------------------------------
+#
+# Middleborough 2023 prints "OFFICIAL RESULTS  #of Eligible Voters: 19,131
+# Total Votes Cast: 1,398" and every single-seat TOTAL row on the sheet reads
+# 1398, every two-seat row 2796.  Three of our six qualifying contests read
+# 1396 because the OCR dropped a write-in mark, so the mode is 1396 and the two
+# contests that read the printed figure are reported as exceeding the ballots.
+# The verdict stays -- only the document settles which reading is short -- but
+# the evidence has to say that the ceiling is a mode over contests that
+# disagree, or every session re-derives it before it can start.
+
+def _mkcontest(office, total, seats=1):
+    """A contest whose marks sum to `total`, with blanks printed."""
+    return {"office_original": office, "num_winners": seats, "scope": "at_large",
+            "candidates": [{"name_original": "A Candidate", "votes": total - 10},
+                           {"name_original": "Blanks", "votes": 10}]}
+
+
+MIDDLEBORO = {"elections": [
+    _mkcontest("GAS & ELECTRIC COMMISSIONERS FOR 3 YEARS", 1396),
+    _mkcontest("PLANNING BOARD FOR 5 YEARS", 1396),
+    _mkcontest("SCHOOL COMMITTEE FOR UNEXPIRED TERM", 1396),
+    _mkcontest("HOUSING AUTHORITY FOR 5 YEARS", 1397),
+    _mkcontest("BOARD OF ASSESSORS FOR 3 YEARS", 1398),
+    _mkcontest("HOUSING AUTHORITY FOR UNEXPIRED TERM", 1398),
+]}
+
+
+def test_a_quorum_is_not_unanimity_and_the_evidence_says_so():
+    ballots, why, est = layers.derive_ballots(MIDDLEBORO)
+    assert ballots == 1396          # the figure itself is unchanged
+    assert "3 disagree (1397, 1398, 1398)" in why
+    assert "spread of 2" in why
+
+
+def test_unanimous_contests_are_reported_as_unanimous():
+    rec = {"elections": [_mkcontest("MODERATOR", 500),
+                         _mkcontest("TOWN CLERK", 500)]}
+    ballots, why, est = layers.derive_ballots(rec)
+    assert ballots == 500
+    assert why == "all 2 contests agree on 500"
+
+
+def test_an_excess_inside_the_spread_still_fails_but_carries_the_spread():
+    rows = layers.layer2_arithmetic("Middleborough2023", MIDDLEBORO)
+    bad = [r for r in rows if r[2] == "marks_exceed_ballots"]
+    # Three contests read above the mode of 1396 -- 1397, 1398, 1398.  Still
+    # FAIL: only the document says which reading is short.
+    assert len(bad) == 3
+    assert all(r[3] == "FAIL" for r in bad)
+    assert "up to 1398" in bad[0][4]
+    assert "within 1398" in bad[0][4]
+
+
+def test_an_excess_outside_the_spread_is_not_hedged():
+    # Wayland 2023: SELECT BOARD holds 5050 marks against 2475 x 2 = 4950, and
+    # every qualifying contest agrees on 2475.  Nothing to hedge with.
+    rec = {"elections": [_mkcontest("MODERATOR", 2475),
+                         _mkcontest("TOWN CLERK", 2475),
+                         _mkcontest("SELECT BOARD", 5050, seats=2)]}
+    rows = layers.layer2_arithmetic("Wayland2023", rec)
+    bad = [r for r in rows if r[2] == "marks_exceed_ballots"]
+    assert len(bad) == 1
+    assert bad[0][3] == "FAIL"
+    assert "but the single-seat contests disagree" not in bad[0][4]

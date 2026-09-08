@@ -43,6 +43,7 @@ to know why something is the way it is.
 - [`arithmetic-cannot-see-a-lost-name`](civicatlas-arithmetic-cannot-see-a-lost-name.md) — a perfect sum with a candidate missing
 - [`seats-up-not-winners`](civicatlas-seats-up-not-winners.md) — num_winners is SEATS UP; the printed count outranks the arithmetic
 - [`num-winners-is-the-weak-field`](civicatlas-num-winners-is-the-weak-field.md) — one digit, decides who won, invisible to size-based diffs
+- [`the-ceiling-is-a-mode`](civicatlas-the-ceiling-is-a-mode.md) — ballots is a mode over contests that disagree; 144 of 197 "impossible" findings sit inside the disagreement
 
 ## Layer 3 — scope, completeness, reporting
 
