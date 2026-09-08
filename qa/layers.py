@@ -617,18 +617,34 @@ def derive_ballots(record):
     had a candidate on the ballot.  Returns (ballots, evidence, contributors).
     """
     est = []
+    lost = collections.Counter()
     for e in record.get("elections") or []:
         if scope_of(e) != "at_large":
+            lost["not at-large"] += 1
             continue
         if (e.get("num_winners") or 1) != 1:
+            lost["multi-seat"] += 1
             continue
-        if not blanks_printed(e) or not has_ballot_candidate(e):
+        if not blanks_printed(e):
+            lost["no blanks printed"] += 1
+            continue
+        if not has_ballot_candidate(e):
+            lost["no candidate on the ballot"] += 1
             continue
         m = marks_in(e)
         if m:
             est.append((m, str(e.get("office_original") or e.get("office") or "")[:40]))
     if len(est) < 2:
-        return None, f"only {len(est)} qualifying contest(s); cannot derive", est
+        # Which condition emptied the set.  "only 0 qualifying contest(s)" is
+        # true of 607 records and tells a session nothing, so each one was
+        # re-derived by hand to find out; 370 of them turn out to fail on the
+        # same clause, and 189 are parsed from a news article, which reports
+        # candidate votes and never blanks.  That is a fact about the SOURCE and
+        # not a defect in the record, and the evidence should say so once
+        # instead of being discovered 607 times.
+        why = "; ".join(f"{n} {reason}" for reason, n in lost.most_common())
+        return None, (f"only {len(est)} qualifying contest(s); cannot derive"
+                      + (f" -- {why}" if why else "")), est
     counts = collections.Counter(v for v, _ in est)
     top, n = counts.most_common(1)[0]
     # Consensus needs a quorum.  Two contests that disagree are a disagreement,

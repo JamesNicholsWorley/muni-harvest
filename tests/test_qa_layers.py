@@ -591,3 +591,23 @@ def test_an_excess_outside_the_spread_is_not_hedged():
     assert len(bad) == 1
     assert bad[0][3] == "FAIL"
     assert "but the single-seat contests disagree" not in bad[0][4]
+
+
+def test_a_derivation_that_fails_says_which_clause_emptied_it():
+    # 607 records cannot derive a ballot count and the evidence said only
+    # "0 qualifying contest(s)" for every one of them.  370 fail on the same
+    # clause -- the document prints no blanks -- which is a fact about the
+    # source, not a defect in the record.
+    rec = {"elections": [
+        {"office_original": "MAYOR", "num_winners": 1, "scope": "at_large",
+         "candidates": [{"name_original": "A Candidate", "votes": 900}]},
+        {"office_original": "COUNCIL", "num_winners": 3, "scope": "at_large",
+         "candidates": [{"name_original": "B Candidate", "votes": 700}]},
+        {"office_original": "WARD ONE", "num_winners": 1, "scope": "sub_town",
+         "candidates": [{"name_original": "C Candidate", "votes": 200}]},
+    ]}
+    ballots, why, est = layers.derive_ballots(rec)
+    assert ballots is None
+    assert "no blanks printed" in why
+    assert "multi-seat" in why
+    assert "not at-large" in why
