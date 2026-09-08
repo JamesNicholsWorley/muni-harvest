@@ -96,6 +96,36 @@ def votes_of(cand):
     return v if isinstance(v, int) else None
 
 
+WORD_ONES = ("zero one two three four five six seven eight nine ten eleven "
+              "twelve thirteen fourteen fifteen sixteen seventeen eighteen "
+              "nineteen").split()
+WORD_TENS = {20: "twenty", 30: "thirty", 40: "forty", 50: "fifty",
+             60: "sixty", 70: "seventy", 80: "eighty", 90: "ninety"}
+
+
+def word_spellings(value):
+    """How a sentence writes this figure, as patterns, where a table would
+    print digits.
+
+    Bounded at 99 on purpose. Above that the forms multiply -- "nine hundred
+    thirty-nine", "one thousand two hundred" -- and the documents that write
+    them out are rare enough to name individually, while every extra form is
+    another string that can ground a figure by coincidence.
+
+    A round ten carries a guard: "forty" is inside "forty-nine", so without it
+    a record holding 40 grounds on a page that prints 49 and nothing else.
+    """
+    if not 0 <= value <= 99:
+        return []
+    if value < 20:
+        return [WORD_ONES[value]]
+    tens, ones = divmod(value, 10)
+    tens *= 10
+    if ones == 0:
+        return [WORD_TENS[tens] + r"(?![- ](?:" + "|".join(WORD_ONES[1:10]) + r")\b)"]
+    return [f"{WORD_TENS[tens]}[- ]{WORD_ONES[ones]}"]
+
+
 def figure_found(value, text):
     """Is this vote count printed in `text`, in either spelling a clerk uses?
 
@@ -134,11 +164,32 @@ def figure_found(value, text):
     digit -- so this can only un-flag as well.  It admits a letter beside the
     digits, which is the whole point and is why `43590` still does not ground
     4359.
+
+    The third spelling is the word.  A clerk's return prints digits, but for
+    197 town-years the only reading is a newspaper, and a sentence writes a
+    small number out: Conway 2025 reads "William Moebius, six write-in votes",
+    Tisbury 2023 "Forty-nine votes went to candidate MacAleer Schilcher",
+    Warren 2023 "Four further write-in votes for this office were undisclosed".
+    Those are figures, printed, and the record holds them correctly; reading
+    them as ungrounded says the parse invented a number the page states.  It
+    was already known -- an adjudication row for New Salem 2026 says
+    "figures_grounded is reading a spelled-out numeral" -- and qa/apply.py has
+    read seat counts in words since it was written.  Thirty-six figures across
+    twenty-one records ground on the word and on nothing else.
+
+    This one loosens the test in a way the others do not, so it is bounded: 0
+    to 99, whole words only, and no effect on any figure that already grounds.
+    The looseness it adds is small because it is where the check was weakest
+    anyway -- a digit "6" appears somewhere in almost any prose, so a figure of
+    six was grounding by coincidence long before "six" was tried.
     """
     if value is None:
         return False
     if re.search(r"(?<!\d)" + str(int(value)) + r"(?!\d)", text):
         return True
+    for word in word_spellings(int(value)):
+        if re.search(r"(?<![a-z])" + word + r"(?![a-z])", text, re.I):
+            return True
     if abs(int(value)) < 1000:
         return False
     return bool(re.search(r"(?<![\d,])" + f"{int(value):,}" + r"(?!\d)(?!,\d)", text))

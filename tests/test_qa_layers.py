@@ -377,6 +377,34 @@ def test_a_grouped_form_is_no_looser_than_the_plain_one():
     assert not layers.figure_found(275, "Bernard J. Stock 2750")
 
 
+def test_a_figure_written_out_in_words_is_still_printed():
+    # data/news_text/Conway2025.md, data/news_text/Tisbury2023.md and
+    # data/news_text/Warren2023.md, verbatim. For 197 town-years the only
+    # reading is prose, and prose writes small numbers out.
+    assert layers.figure_found(
+        6, "Planning Board, three-year term - William Moebius, six write-in votes.")
+    assert layers.figure_found(
+        49, "Forty-nine votes went to candidate MacAleer Schilcher; the rest were write-ins")
+    assert layers.figure_found(
+        4, "Four further write-in votes for this office were undisclosed.")
+    # "sixty-four" and "sixty four" are the same figure written two ways.
+    assert layers.figure_found(64, "Sixty-four (or 7%) of the town's 906 registered voters")
+    assert layers.figure_found(61, "Sixty one voters cast their ballots.")
+
+
+def test_a_word_form_is_a_whole_word_and_stops_at_ninety_nine():
+    # It must not ground on a word that merely contains the number's name.
+    assert not layers.figure_found(9, "Nineteen ballots were cast")
+    assert not layers.figure_found(6, "Sixteen ballots were cast")
+    assert not layers.figure_found(40, "Forty-nine votes went to the write-in")
+    # 100 and up have no word form here: the forms multiply and the documents
+    # that use them are rare enough to name one at a time.
+    assert not layers.figure_found(
+        939, "Nine hundred thirty-nine ballots were cast out of 4,363 registered voters")
+    # and a figure that already grounds on its digits is untouched.
+    assert layers.figure_found(275, "Bernard J. Stock 275")
+
+
 def test_a_grouped_figure_grounds_the_record():
     # figures_grounded and document_supports_record read the page the same way,
     # so the comma must not decide which of them fires.
