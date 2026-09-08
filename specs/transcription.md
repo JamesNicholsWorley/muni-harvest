@@ -56,11 +56,6 @@ Record where you got it in `num_winners_source`, which has exactly four values:
   elsewhere in the report is not the return; that is `derived`.
 - `marked` — the return marks winners (asterisks, bold, `ELECTED`) and you
   counted the marks. Say what the mark was in `num_winners_basis`.
-`seats_quote` is the printed line that carries the seat count, not the whole
-heading — and it counts as `printed` wherever it sits in the contest's own
-block, including a subheading above the office name. `Recount Tabulator Final
-for 1 seat` is a seat count printed by the return.
-
 - `derived` — neither of the above, and you worked it out from the arithmetic:
   a contest's figures sum to about the ballot count times the seats, so a race
   totalling roughly twice another race's total is a two-seat race. Put the
@@ -68,6 +63,11 @@ for 1 seat` is a seat count printed by the return.
 - `null` — you could not tell. **This is a permitted answer and often the right
   one.** `num_winners: null` with a note beats a confident guess, because a
   null is visible to every later pass and a wrong number is not.
+
+`seats_quote` is the printed line that carries the seat count, not the whole
+heading — and it counts as `printed` wherever it sits in the contest's own
+block, including a subheading above the office name. `Recount Tabulator Final
+for 1 seat` is a seat count printed by the return.
 
 `printed` outranks everything downstream, including arithmetic. The other three
 are re-checked. Saying which you did is worth more than being right, because a
