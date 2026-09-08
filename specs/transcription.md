@@ -276,6 +276,17 @@ Rules that follow from the shape:
   a name that was printed and was blank. The
   municipality field exists to disagree with the filename, so an invented value
   silences the only wrong-town detector there is. Say you did not see it.
+- `date_original` is the election date **the page prints**, copied as printed,
+  and it outranks the year in the filename exactly as `municipality_original`
+  outranks the town in the filename. If the two disagree, transcribe what the
+  page says and put the disagreement in `document_problems`. Never adjust the
+  date towards the filename.
+
+  This is not a hypothetical. A town report is named for its fiscal year, and a
+  fiscal year does not contain the election a calendar year does: Barnstable's
+  2010, 2016 and 2020 reports each carry the previous May's election, and 8% of
+  this corpus prints a year that is not the one in its filename. The filename is
+  a hypothesis about which election a document holds. The page is the evidence.
 - `printed_total` is the `TOTALS` line the document prints for the contest, or
   `null`. It is transcription, not a sum you performed.
 - `votes_by_precinct` is `null` where the return prints no precinct columns.
