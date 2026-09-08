@@ -638,7 +638,7 @@ def derive_ballots(record):
     return top, f"{n} of {len(est)} contests agree on {top}", est
 
 
-def layer2_arithmetic(stem, record):
+def layer2_arithmetic(stem, record, text=None, source=None):
     """Does the arithmetic hold?
 
     In nearly every election a voter may mark a contest once per seat.  The
@@ -663,13 +663,32 @@ def layer2_arithmetic(stem, record):
 
     A closing contest means "the digits are probably right", never "the record
     is right".  A flag is only ever cleared after review and documentation.
+
+    Deriving is not the only way to hold a ballot count, and where the
+    derivation declines the arithmetic below used to be skipped entirely: 168
+    records held a ballot count read off the document and were tested on
+    nothing at all, which is a whole layer silently not running.  A newspaper
+    prints no blanks and a one-contest return has no quorum, so the derivation
+    can never reach them.  So where the record holds a count and that figure is
+    findable in the document, it stands in -- grounded the same way every other
+    figure is, and named in the evidence, because a comparison resting on one
+    printed number is weaker than one resting on two contests that agree.
     """
     out = []
     ballots, why, contributors = derive_ballots(record)
     out.append((stem, 2, "ballots_derivable",
                 PASS if ballots else UNKNOWN, why))
+    basis = "derived"
     if not ballots:
-        return out
+        stated = record.get("ballots_cast")
+        if (isinstance(stated, int) and stated > 0
+                and text and figure_found(stated, text)):
+            ballots, basis = stated, f"stated, grounded in {source}"
+            out.append((stem, 2, "ballots_stated", PASS,
+                        f"{stated} held in the record and found in {source}; "
+                        f"used for the arithmetic because {why}"))
+        else:
+            return out
 
     for e in record.get("elections") or []:
         scope = scope_of(e)
@@ -687,15 +706,19 @@ def layer2_arithmetic(stem, record):
         if not m:
             continue
         expect = ballots * seats
+        # Where the ballot figure was read off the document rather than derived
+        # from two contests that agree, the finding says so: the claim is the
+        # same, the evidence under it is not.
+        how = "" if basis == "derived" else f"  [ballots {basis}]"
         if m > expect:
             out.append((stem, 2, "marks_exceed_ballots", FAIL,
-                        f"{office}: {m} marks > {ballots} ballots x {seats} seats = {expect}"))
+                        f"{office}: {m} marks > {ballots} ballots x {seats} seats = {expect}{how}"))
         elif m == expect:
             out.append((stem, 2, "contest_closes", PASS,
-                        f"{office}: {m} == {ballots} x {seats}"))
+                        f"{office}: {m} == {ballots} x {seats}{how}"))
         else:
             out.append((stem, 2, "tally_incomplete", NOTE,
-                        f"{office}: {m} of {expect}; {expect - m} marks not tallied"))
+                        f"{office}: {m} of {expect}; {expect - m} marks not tallied{how}"))
     return out
 
 
@@ -791,7 +814,7 @@ def main():
         text, source = document_text(stem)
         rows += layer0_right_document(stem, rec, text, source)
         rows += layer1_grounded(stem, rec, text, source)
-        rows += layer2_arithmetic(stem, rec)
+        rows += layer2_arithmetic(stem, rec, text, source)
         rows += layer3_scope(stem, rec, counts)
     rows += cross_year_duplicates(records)
 

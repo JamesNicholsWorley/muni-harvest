@@ -524,3 +524,60 @@ def test_an_undated_document_with_no_corroboration_still_fails():
         "TOWN OF ANYTOWN ANNUAL ELECTION OFFICIAL RESULTS SELECT BOARD", "test")
     v = next(r[3] for r in rows if r[2] == "carries_the_year")
     assert v == "FAIL"
+
+
+# ---- the arithmetic used to stop where the derivation stopped -------------
+
+# One contest, so no quorum: derive_ballots declines and layer 2 used to return
+# having tested nothing. data/raw_ocr/Wilmington2022.txt prints "TOTAL VOTES ...
+# 638" and a Board of Selectmen block of 516 + 491 + 39 + 233 = 1279 against
+# 638 x 2 = 1276, which is three marks more than there are marks to give. The
+# figures are the page's own -- read off the scan at 220dpi, they are exactly
+# these -- so the excess is the clerk's arithmetic, and it is a finding either
+# way. Without the stated count it was invisible.
+_ONE_CONTEST = {
+    "ballots_cast": 638,
+    "elections": [{"office_original": "BOARD OF SELECTMEN", "num_winners": 2,
+                   "scope": "at_large",
+                   "candidates": [{"name_original": "GREGORY B. BENDEL", "votes": 516},
+                                  {"name_original": "KEVIN CAIRA", "votes": 491},
+                                  {"name_original": "Others", "votes": 39},
+                                  {"name_original": "Blanks", "votes": 233}]}],
+}
+
+
+def test_a_stated_ballot_count_carries_the_arithmetic_when_nothing_can_be_derived():
+    rows = layers.layer2_arithmetic("Wilmington2022", _ONE_CONTEST,
+                                    "TOTAL VOTES 638 BENDEL 516 CAIRA 491", "raw_ocr")
+    checks = {r[2]: (r[3], r[4]) for r in rows}
+    assert checks["ballots_derivable"][0] == "UNKNOWN"
+    assert checks["ballots_stated"][0] == "PASS"
+    assert checks["marks_exceed_ballots"][0] == "FAIL"
+    # and it says which footing it stands on, because one printed number is
+    # weaker evidence than two contests that agree
+    assert "stated" in checks["marks_exceed_ballots"][1]
+
+
+def test_an_ungrounded_ballot_count_carries_nothing():
+    # The figure has to be in the document, exactly as every other figure does.
+    # A count nobody can find on the page is not evidence for an impossibility.
+    rows = layers.layer2_arithmetic("Wilmington2022", _ONE_CONTEST,
+                                    "BENDEL 516 CAIRA 491", "raw_ocr")
+    assert [r[2] for r in rows] == ["ballots_derivable"]
+
+
+def test_a_derived_count_still_says_nothing_about_being_stated():
+    # Two single-seat contests that agree: the derivation stands on its own and
+    # the evidence carries no basis note.
+    record = {"ballots_cast": 999, "elections": [
+        {"office_original": "MODERATOR", "num_winners": 1, "scope": "at_large",
+         "candidates": [{"name_original": "A. Real", "votes": 90},
+                        {"name_original": "Blanks", "votes": 10}]},
+        {"office_original": "TREASURER", "num_winners": 1, "scope": "at_large",
+         "candidates": [{"name_original": "B. Real", "votes": 80},
+                        {"name_original": "Blanks", "votes": 20}]}]}
+    rows = layers.layer2_arithmetic("Anytown2024", record, "100", "test")
+    checks = {r[2]: (r[3], r[4]) for r in rows}
+    assert checks["ballots_derivable"][0] == "PASS"
+    assert "ballots_stated" not in checks
+    assert "[ballots" not in checks["contest_closes"][1]
