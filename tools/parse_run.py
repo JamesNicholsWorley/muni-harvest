@@ -57,11 +57,16 @@ TEXT_TOKENS_PER_SECTION = 748
 CACHE_WRITE = 1.25
 CACHE_READ = 0.10
 
-# The one number still unmeasured, and therefore the largest uncertainty left.
-# Nothing counts tokens a model has not generated, so this stays an estimate
-# while every input above is now measured. It is 38% of the batched Sonnet
-# figure, so an error here moves the quote more than anything else does.
-OUTPUT_TOKENS = 1400
+# MEASURED by a 13-section pilot across both models. The estimate of 1,400 was
+# three to four times low, and low in the way that matters: at max_tokens=8000
+# four of thirteen Haiku responses and three of thirteen Sonnet ones were
+# TRUNCATED, and a truncated tool call returns a well-formed record with its
+# contests missing. Danvers 2020 came back with zero of its fifteen.
+#
+# Re-run unbatched at 32,000 the same documents produced 7,584 to 17,377
+# output tokens. Set max_tokens to 32,000, never 8,000.
+OUTPUT_TOKENS = {"cheap": 4505, "strong": 5429}
+MAX_TOKENS = 32000
 
 # The Batch API is half price and returns within 24 hours. Nothing about this
 # job is interactive -- it is 1,088 independent documents parsed once -- so
@@ -97,7 +102,7 @@ def cost(n_sections, n_pages, tier, max_dim=MAX_DIM, batch=True, cached=None):
         prompt = SPEC_TOKENS * CACHE_WRITE + n_sections * SPEC_TOKENS * CACHE_READ
     else:
         prompt = n_sections * SPEC_TOKENS
-    out = n_sections * OUTPUT_TOKENS
+    out = n_sections * OUTPUT_TOKENS[tier]
     c = (img + prompt) / 1e6 * tin + out / 1e6 * tout
     if batch:
         c *= BATCH_DISCOUNT
