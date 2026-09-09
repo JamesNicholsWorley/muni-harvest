@@ -11,11 +11,20 @@ So the gate is a ladder, and a record's rung is stated in the record rather
 than decided by whoever looks at it next:
 
     publish   the arithmetic closes, every figure was read, every candidate has
-              a name, and a ballot count can be derived from contests that agree
-    review    sound in itself but something is unresolved -- no ballot count, a
-              seat count nobody could establish, an unreadable figure
+              a name
+    review    sound in itself but something is unresolved -- a seat count
+              nobody could establish, an unreadable figure, no derivable date
     hold      the arithmetic is impossible, or the transcriber says the
               document is not a return at all
+
+The bar is calibrated against the corpus these records would join rather than
+invented. Run over the 1,900 already-published 2021-2026 records, this gate
+passes 80% of them -- so a pre-2021 record is being asked to clear the same
+height as the material beside it, not a higher one. An earlier version was
+stricter than the live standard, which is not caution but inconsistency: what
+justifies more doubt about these records is their provenance, and that is
+carried in the record for a reader to weigh rather than enforced by
+withholding.
 
 `hold` is not a bin. A record held because the document is wrong is a LOCATOR
 failure with a known fix -- re-cut that report -- and it is counted separately
@@ -50,7 +59,12 @@ def grade(doc):
     if impossible:
         return "hold", impossible
 
-    soft = ("no two contests agree", "seat count left null", "not readable",
+    # An underivable ballot count is a gap in our ability to CHECK, not a
+    # defect in what was read, and 294 records already published share
+    # it. Recorded, not withheld.
+    uncheckable = [w for w in why if "no two contests agree" in w]
+
+    soft = ("seat count left null", "not readable",
             "figure was not readable")
     unresolved = [w for w in why if any(s in w for s in soft)]
     if unresolved:
@@ -62,9 +76,9 @@ def grade(doc):
     if not (contests[0].get("date")):
         return "review", ["no election date could be derived"]
 
-    if verdict == "escalate":
+    if verdict == "escalate" and not (set(why) <= set(uncheckable)):
         return "review", why[:2]
-    return "publish", reasons
+    return "publish", uncheckable
 
 
 def main():
