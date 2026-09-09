@@ -24,6 +24,25 @@ import collections
 import re
 
 ADDRESS = re.compile(r"^\s*[0-9]+\s+[A-Za-z]", re.M)     # "42 Elm Street"
+
+# A page that is not a return at all. Buying a second opinion on it is money
+# spent on a locator failure: no model can transcribe an election from town
+# meeting minutes. These need a different cut, not a better reader.
+WRONG_DOCUMENT = re.compile(
+    r"(town meeting minutes|not an election return|no (annual )?municipal "
+    r"election|is a warrant|ballot template|caucus|salary|officers directory|"
+    r"table of contents|no election (results|return) )", re.I)
+
+# The transcriber doing exactly what the spec asks. `municipality_printed:
+# false` exists so the record can disagree with the filename; a note saying the
+# town is not named is that mechanism working, not a defect. Escalating on it
+# taught the corpus to treat honesty as failure, which is the surest way to
+# stop getting it.
+HOUSEKEEPING = re.compile(
+    r"(no municipality name|municipality (name )?(is )?not print|town name "
+    r"(is )?not|no (election )?date (is )?print|date (is )?not print|"
+    r"filename (says|indicates)|seat count (is )?not print|no seat count|"
+    r"no 'vote for'|vote for.*not print)", re.I)
 ROLE = re.compile(r"^(BLANKS?|WRITE[- ]?INS?|OTHERS?|TOTALS?|SCATTER\w*)$", re.I)
 
 
@@ -100,8 +119,11 @@ def review(record):
     flagged = list(record.get("document_problems") or [])
     for c in contests:
         flagged += list(c.get("problems") or [])
-    if flagged:
-        reasons.append(f"transcriber flagged: {'; '.join(flagged)[:160]}")
+    for note in flagged:
+        if WRONG_DOCUMENT.search(note):
+            reasons.append(f"the document is not a return: {note[:140]}")
+        elif not HOUSEKEEPING.search(note):
+            reasons.append(f"transcriber flagged: {note[:140]}")
     # A recount is a second reading of one office, so it does not owe the
     # ballot arithmetic anything and must not drag the record into escalation.
     
