@@ -33,6 +33,68 @@ OUT = Path(os.environ.get("COVERAGE_OUT", ROOT / "reports" / "coverage.html"))
 PRIOR_YEARS = ["2021", "2022", "2023", "2024", "2025", "2026"]
 
 
+
+PRE2021_DIR = os.environ.get("COVERAGE_PRE2021", "")
+PRE2021_TOWNS = 292          # towns holding an annual election
+PRE2021_YEARS = 21           # 2000-2020
+
+
+def _pre2021():
+    """(town_years, municipalities, by_year) from the published folder, or None.
+
+    Reads what was actually published rather than what was parsed. A record
+    held back by the gate is not coverage, and counting it would put a number
+    on the page that no visitor can reach.
+    """
+    import glob
+    import json
+    if not PRE2021_DIR or not Path(PRE2021_DIR).is_dir():
+        return None
+    towns, by_year = set(), {}
+    n = 0
+    for f in glob.glob(str(Path(PRE2021_DIR) / "*.json")):
+        try:
+            d = json.load(io.open(f, encoding="utf-8"))
+        except Exception:
+            continue
+        el = d.get("elections") or []
+        if not el:
+            continue
+        n += 1
+        towns.add(el[0].get("municipality"))
+        y = (el[0].get("date") or "")[:4]
+        if y:
+            by_year[y] = by_year.get(y, 0) + 1
+    return n, len(towns), by_year
+
+
+def _pre2021_html():
+    got = _pre2021()
+    if not got:
+        return ""
+    n, ntowns, by_year = got
+    possible = PRE2021_TOWNS * PRE2021_YEARS
+    bars = "".join(
+        "<tr><td>%s</td><td class=n>%d</td></tr>" % (y, by_year[y])
+        for y in sorted(by_year))
+    return """
+<h2>2000-2020, from Annual Town Reports</h2>
+<p class=note>A separate corpus, published at
+<code>json_pre2021/</code> and marked <code>provenance: atr_section</code>.
+These were cut out of annual town reports by a locator rather than taken from a
+document the clerk published as the return, so they are weaker evidence and are
+kept apart to say so. Only records passing the publication gate are counted --
+what is held back is not coverage.</p>
+<p><b>%d</b> town-years across <b>%d</b> municipalities, of a possible
+%s (292 towns x 21 years) = <b>%.1f%%</b>.</p>
+<p class=note>The denominator is every annual town election held, not the
+documents we managed to find. Roughly half of those town-years have no located
+document at all, which is a discovery problem rather than a parsing one.</p>
+<table class=grid><thead><tr><th>year</th><th class=n>town-years</th></tr>
+</thead><tbody>%s</tbody></table>
+""" % (n, ntowns, "{:,}".format(possible), n * 100.0 / possible, bars)
+
+
 def _read_master() -> list[dict]:
     with MASTER.open(encoding="utf-8", newline="") as fh:
         return list(csv.DictReader(fh))
@@ -304,7 +366,7 @@ the most. "site" opens the town's official site; "search" is a Google query for 
 town-year's results. Recovering a doc here means hosting it and re-running the parse gate.
 2026 gaps appear here too now that 2026 is a normal year — collection for it is still ongoing.</p>
 </div>
-
+{_pre2021_html()}
 </div></body></html>"""
 
 
