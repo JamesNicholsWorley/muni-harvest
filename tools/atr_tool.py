@@ -67,11 +67,21 @@ CONTEST = {
             "description": "SEATS UP, not people who won. A race where nobody "
                            "was elected still had a seat up, so this is never "
                            "0. null when it genuinely cannot be determined."},
+        # The most falsely-claimed field in the schema: in a 1,331-document
+        # run, 282 arithmetically impossible contests asserted "printed" on
+        # pages stating no seat count. Since "printed" outranks the
+        # arithmetic, a false one disables the check that would catch it.
         "num_winners_source": {"type": "string",
                                "enum": ["printed", "marked", "derived", "null"]},
         "seats_quote": {"type": ["string", "null"],
-                        "description": "The printed line carrying the seat "
-                                       "count, when source is 'printed'."},
+                        "description": "REQUIRED when source is 'printed': the "
+                                       "exact words off the page that state the "
+                                       "seat count, e.g. 'Vote for not more "
+                                       "than TWO'. If you cannot copy such "
+                                       "words, the source is not 'printed'. A "
+                                       "count of candidates, an asterisk, a "
+                                       "plural office name and a term length "
+                                       "are none of them a printed seat count."},
         "num_winners_basis": {"type": ["string", "null"]},
         "printed_total": {"type": ["integer", "null"],
                           "description": "The TOTALS figure the document "

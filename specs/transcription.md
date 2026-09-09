@@ -51,9 +51,30 @@ candidate stood, even if nobody won, even if three were elected.**
 
 Record where you got it in `num_winners_source`, which has exactly four values:
 
-- `printed` — **the return itself** states the seat count. Quote it verbatim in
-  `seats_quote`. A warrant, an officers directory or a table of contents
-  elsewhere in the report is not the return; that is `derived`.
+- `printed` — **the return itself** states the seat count **in words you can
+  quote**. Put those exact words in `seats_quote`. If you cannot fill
+  `seats_quote` with text copied off the page, the source is not `printed`.
+
+  This is the field most often claimed falsely. In one run of 1,331 documents,
+  282 contests whose arithmetic was impossible asserted `printed` on pages that
+  state no seat count anywhere. That is worse than guessing, because `printed`
+  is defined below to outrank the arithmetic — so a false `printed` switches
+  off the one check that would have caught it.
+
+  **None of these is a printed seat count:**
+
+  - the number of candidates listed, or the number who appear to have won
+  - asterisks, bold, or `ELECTED` beside names — that is `marked`
+  - a warrant, officers directory or contents page elsewhere in the report
+  - the word plural in an office name: `Selectmen`, `Trustees`, `Commissioners`
+  - a term length. `3 Years` is how long the seat runs, not how many there are
+  - your own sense of how many seats a town usually fills
+
+  **These are:** `Vote for not more than TWO`, `Vote for THREE`, `2 for 3
+  Years`, `Elect two`, `(Elect 2)`, `Recount Tabulator Final for 1 seat`.
+
+  When the page says nothing, `derived` and `null` are the honest answers and
+  both are cheaper to correct later than a false `printed`.
 - `marked` — the return marks winners (asterisks, bold, `ELECTED`) and you
   counted the marks. Say what the mark was in `num_winners_basis`.
 - `derived` — neither of the above, and you worked it out from the arithmetic:
