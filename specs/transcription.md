@@ -215,9 +215,14 @@ Returns annotate. An asterisk beside a name marks a winner; `CFR` marks a
 candidate for re-election; a dagger marks a write-in who qualified. These are
 printed information and they need somewhere to go, so:
 
-- `elected_marked` — `true` when the row carries a winner mark, `false` when it
-  does not, and `null` for any row that is not a candidate (`Blanks`,
-  `Write-Ins`, `Totals`), which can never be marked.
+- `elected_marked` — **emit it only on rows that carry a mark**, where it is
+  `true`. Leave it out everywhere else.
+
+  This is the one place a key may be omitted, and it is safe here because
+  `winner_marks_used` already says whether the document marks winners at all,
+  so an absent `elected_marked` is unambiguous: not marked, on a page that
+  marks. Emitting `false` and `null` on every other row cost 21% of the output
+  on a multi-precinct return and said nothing on any of them.
   Whether the document marks winners **at all** is a property of the document,
   not of a row, so it goes in `winner_marks_used` at the top level. Without it,
   a page that marks nobody and a row that merely lost are both `null` and
@@ -290,7 +295,8 @@ Rules that follow from the shape:
 - `printed_total` is the `TOTALS` line the document prints for the contest, or
   `null`. It is transcription, not a sum you performed.
 - `votes_by_precinct` is `null` where the return prints no precinct columns.
-- Omit no key **of those listed above**. A key you leave out is
+- Omit no key **of those listed above**, with the single exception of
+  `elected_marked` described in rule 7. A key you leave out is otherwise
   indistinguishable from a document that said nothing, and those are different
   facts.
 - Three keys are conditional and are simply absent where they do not apply:

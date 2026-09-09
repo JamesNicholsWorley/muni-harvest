@@ -32,13 +32,18 @@ CANDIDATE = {
             "items": {"type": ["integer", "null"]},
             "description": "Per-precinct figures in printed order, or null "
                            "where the return prints no precinct columns."},
+        # Present ONLY on rows that carry a mark. Emitting false and null on
+        # every other row cost 21% of the output on a multi-precinct return
+        # and said nothing on any of them; `winner_marks_used` at the document
+        # level already distinguishes "not marked" from "nothing is marked".
         "elected_marked": {
-            "type": ["boolean", "null"],
-            "description": "true if the row carries a winner mark, false if "
-                           "not, null for any row that is not a candidate."},
+            "type": "boolean",
+            "description": "true, and present ONLY on rows carrying a winner "
+                           "mark. Omit entirely on every other row."},
         "annotation_original": {
-            "type": ["string", "null"],
-            "description": "A mark printed BESIDE the name, verbatim: 'CFR'."},
+            "type": "string",
+            "description": "A mark printed BESIDE the name, verbatim: 'CFR'. "
+                           "Omit entirely when there is none."},
     },
     "required": ["name_original", "votes"],
 }
