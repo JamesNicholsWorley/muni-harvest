@@ -43,7 +43,12 @@ import sys
 import time
 
 import pymupdf
-from curl_cffi import requests
+
+# `curl_cffi` is imported inside `main`. The test that runs every tool the way
+# CI runs it exists BECAUSE this file broke fifteen runners on a missing
+# import, and it was failing on exactly that again -- the runner installs
+# pytest and pymupdf and nothing else, so a module-level HTTP client makes the
+# check that guards the merge the thing that stops it.
 
 # Running `python tools/atr_warrant_sweep.py` puts tools/ on sys.path, not the
 # repository root, so the package import below needs the root added first.
@@ -103,6 +108,8 @@ def window(texts, best, page_count, kind):
 
 
 def main():
+    from curl_cffi import requests
+
     with io.open(URL_CSV, encoding="utf-8", newline="") as fh:
         rows = [r for n, r in enumerate(csv.DictReader(fh)) if n % SHARDS == SHARD]
     if LIMIT:

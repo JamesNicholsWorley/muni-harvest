@@ -42,7 +42,13 @@ import time
 import statistics
 
 import pymupdf
-from curl_cffi import requests
+
+# `curl_cffi` is imported inside `main`, not here. The locator is pure -- it
+# scores text and cuts pages -- and the tests that hold it exercise exactly
+# that, on strings. Importing the HTTP client to reach them made every landing
+# fail on collection with `No module named 'curl_cffi'`, which is the same way
+# `atr_warrant_sweep` broke the merge for a day: a test that cannot be
+# collected is a check that never runs.
 
 HEAD = re.compile(
     r"(ANNUAL\s+TOWN\s+ELECTION|TOWN\s+ELECTION|ANNUAL\s+ELECTION|"
@@ -235,6 +241,8 @@ def score_pages(doc, texts=None):
 
 
 def main():
+    from curl_cffi import requests
+
     with io.open(URL_CSV, encoding="utf-8", newline="") as fh:
         rows = [r for n, r in enumerate(csv.DictReader(fh)) if n % SHARDS == SHARD]
     if LIMIT:
