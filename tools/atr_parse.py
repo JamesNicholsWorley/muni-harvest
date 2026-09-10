@@ -93,7 +93,13 @@ def already_in_flight(client, stems, hours=48):
             continue
         try:
             for r in client.messages.batches.results(b.id):
-                if r.custom_id in want:
+                # Only a SUCCEEDED request is work we hold and have paid for.
+                # A cancelled or expired one produced nothing and was not
+                # billed, so blocking on it would refuse a legitimate submit
+                # -- which it did, on the three requests of a cancelled test
+                # batch. The question this guard asks is "are we about to buy
+                # this twice", not "has this id ever appeared".
+                if r.custom_id in want and r.result.type == "succeeded":
                     overlap.add(r.custom_id)
         except Exception:
             continue
