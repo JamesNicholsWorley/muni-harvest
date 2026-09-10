@@ -45,3 +45,6 @@ _turley_out/
 _turley_pdf/
 url-batch-*/
 cdx-shard-*/
+pd43/*.pdf
+pd43/*.png
+pd43/out-*.csv

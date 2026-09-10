@@ -55,7 +55,22 @@ pymupdf.TOOLS.mupdf_display_errors(False)
 
 HEAD = re.compile(r'REGISTERED\s+VOTERS\s+AND\s+PEOPLE\s+WHO\s+VOTED', re.I)
 # `Pct.` is printed `Pet.` about as often as not: the scan reads c as e.
-PCT = re.compile(r'^P[ce]t\.?\s*(\d+)|^(\d{1,2})\s*$|^Ward\s*(\d+)', re.I)
+# `Pct.` is printed `Pet.` about as often as not: the scan reads c as e. And a
+# precinct is not always a number -- Belchertown runs Pct. A, B, C -- so a bare
+# letter counts too, which is why the town test has to run first.
+PCT = re.compile(r'^P[ce]t\.?\s*([0-9]+|[A-Z])|^([0-9]{1,2})$|^([A-Z])$'
+                 r'|^Ward\s*([0-9]+)', re.I)
+# DOT LEADERS BELONG TO THE TYPESETTING, NOT THE NAME. The older volumes rule
+# every label to its column -- `Bedford ..............`, `Pct. 1.............`,
+# `TOTALS ............` -- and with the dots left on, no town name matches, no
+# precinct matches, and a volume yields a third of its towns.
+LEADER = re.compile(r'[.…]{2,}\s*$|\s*[.…]{2,}')
+# A town continued at the top of the next column repeats its name with a note.
+CONT = re.compile(r'\s*\((cont|continued)\.?\)\s*$', re.I)
+
+
+def delead(text):
+    return CONT.sub('', LEADER.sub(' ', text or '')).strip(' .')
 TOTALS = re.compile(r'TOTALS?|^[LS]{2}$|totals?[!;:.\s]*$', re.I)
 # Matched against the row with its spaces removed. The table detector splits a
 # cell mid-word, so `ODD YEARS ONLY` reaches us as `ODD YEA` + `RS ONLY`, and any
@@ -70,9 +85,18 @@ DATE = re.compile(r'\b(%s)\w*\.?\s*(\d{1,2})\s*,?\s*(\d{2,4})?' % '|'.join(
 NUM = re.compile(r'^\d[\d,]{0,8}$')
 TOWN = re.compile(r"^[A-Z][A-Za-z.'-]{2,}(?:[ -][A-Za-z.'-]+){0,4}$")
 
-# Where the label column ends, measured from the left edge of its block. The
-# date column starts about 95pt in on both blocks in every volume checked.
-LABEL_W = 95
+# THE VOLUMES ARE NOT ALL THE SAME SIZE. The 2008 scan is 529 points wide, the
+# 2000 scan 390 -- the series was rescanned at different times and at different
+# scales. Every offset here is therefore a FRACTION of the page, not a number of
+# points: with the 2008 figures hardcoded, the 2000 clip fell outside the table
+# entirely and the volume yielded no tables at all.
+LABEL_FRAC = 0.18          # label column width, as a share of page width
+TOP_FRAC = 0.11            # first row, as a share of page height
+BOT_FRAC = 0.97            # last row
+
+
+def label_w(page):
+    return page.rect.width * LABEL_FRAC
 
 
 def num(s):
@@ -115,7 +139,7 @@ def label_lines(page, lo, hi):
     out = []
     for k in sorted(lines):
         ws = sorted(lines[k], key=lambda w: w[0])
-        text = ' '.join(w[4] for w in ws).strip(' .')
+        text = delead(' '.join(w[4] for w in ws))
         if text:
             out.append((ws[0][1], text))
     return out
@@ -165,7 +189,7 @@ def town_at(labels, off, y0, y1):
     """The town name printed against this row band, if any."""
     for y, text in labels:
         if y0 - 3 <= y + off <= y1 + 3:
-            clean = re.sub(r'\s*P[ce]t\.?\s*\d*\s*$', '', text).strip(' .')
+            clean = re.sub(r'\s*P[ce]t\.?\s*[\dA-Z]*\s*$', '', delead(text))
             clean = re.sub(r'[^A-Za-z .\'-]', '', clean).strip(' .')
             if TOWN.match(clean) and not PCT.match(clean) \
                     and not TOTALS.search(clean):
@@ -176,7 +200,8 @@ def town_at(labels, off, y0, y1):
 
 def parse_block(page, lo, hi, year):
     """One column block -> a list of municipalities."""
-    clip = pymupdf.Rect(lo, 88, hi, page.rect.height - 24)
+    clip = pymupdf.Rect(lo, page.rect.height * TOP_FRAC,
+                        hi, page.rect.height * BOT_FRAC)
     try:
         found = page.find_tables(strategy='text', clip=clip)
     except Exception:
@@ -186,7 +211,7 @@ def parse_block(page, lo, hi, year):
     table = max(found.tables, key=lambda x: len(x.rows))
     cells = table.extract()
     bands = [r.bbox for r in table.rows]
-    labels = label_lines(page, lo, lo + LABEL_W)
+    labels = label_lines(page, lo, lo + label_w(page))
     off = skew_offset(labels, bands, cells)
 
     towns, cur = [], None
@@ -205,7 +230,7 @@ def parse_block(page, lo, hi, year):
                      joined, re.I) and not DATE.search(joined):
             continue
 
-        col0 = (row[0] or '').strip()
+        col0 = delead(row[0] or '')
         figs = [num(c) for c in row]
         figs = [f for f in figs if f is not None]
 
