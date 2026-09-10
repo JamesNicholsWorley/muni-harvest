@@ -1,0 +1,233 @@
+stem,status,pages,pick,score,runner_up,reaches_a_tally,ballot_words,mean_line,detail
+Avon2013,OK,294,50,17,0,,7,80,cut 49-51 of 294; tally pages none
+Ayer2013,OK,187,166,41,30,yes,32,9,"cut 165-171 of 187; tally pages [166, 167, 168, 169, 170]"
+Ayer2016,OK,193,160,29,24,yes,26,6,"cut 156-174 of 193; tally pages [156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174]"
+Ayer2017,OK,172,149,23,0,yes,16,9,"cut 148-154 of 172; tally pages [149, 150, 151, 152, 153]"
+Ayer2018,OK,200,111,15,0,,0,34,cut 110-112 of 200; tally pages none
+Ayer2019,OK,175,90,23,4,yes,16,9,"cut 89-94 of 175; tally pages [90, 91, 92, 93]"
+Ayer2020,OK,153,119,36,32,yes,33,8,"cut 118-124 of 153; tally pages [119, 120, 121, 122, 123]"
+Barnstable2008,OK,196,3,13,0,yes,0,28,cut 2-6 of 196; tally pages [5]
+Barnstable2012,OK,182,48,17,0,yes,14,4,"cut 47-59 of 182; tally pages [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58]"
+Barnstable2015,OK,206,56,28,1,yes,25,3,"cut 55-60 of 206; tally pages [56, 57, 58, 59]"
+Bedford2008,OK,118,66,18,5,yes,5,4,"cut 62-68 of 118; tally pages [62, 63, 64, 65, 66, 67]"
+Bedford2009,OK,134,76,12,7,yes,9,6,"cut 72-80 of 134; tally pages [72, 73, 74, 75, 76, 77, 78, 79]"
+Bedford2019,OK,226,170,19,0,,0,26,cut 169-171 of 226; tally pages none
+Belmont2004,NEEDS_OCR,2,,0,0,,0,0,
+Belmont2008,OK,189,5,35,0,,0,66,cut 4-6 of 189; tally pages none
+Berkley2017,OK,1,1,21,0,,0,12,cut 1-1 of 1; tally pages none
+Blackstone2012,OK,161,3,19,0,,0,147,cut 2-4 of 161; tally pages none
+Blackstone2020,OK,160,96,23,0,yes,0,99,"cut 95-103 of 160; tally pages [99, 100, 101, 102]"
+Boxborough2008,OK,197,187,21,0,yes,8,29,cut 186-188 of 197; tally pages [187]
+Boxborough2010,OK,184,177,13,0,yes,2,70,"cut 175-179 of 184; tally pages [176, 178]"
+Boxborough2014,OK,184,181,23,0,,0,23,cut 180-182 of 184; tally pages none
+Boxborough2015,OK,202,197,27,0,,0,23,cut 196-198 of 202; tally pages none
+Boxford2019,OK,265,7,19,0,,0,13,cut 6-8 of 265; tally pages none
+Boxford2020,OK,278,43,30,11,yes,13,6,"cut 39-52 of 278; tally pages [39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]"
+Brewster2020,OK,179,83,33,10,yes,18,6,"cut 82-85 of 179; tally pages [83, 84]"
+Brookfield2012,OK,1,1,14,0,yes,11,11,cut 1-1 of 1; tally pages [1]
+Buckland2019,NEEDS_OCR,74,,0,0,,0,0,
+Burlington2013,OK,203,184,40,3,,6,48,cut 183-185 of 203; tally pages none
+Burlington2014,OK,261,171,27,1,,4,31,cut 170-172 of 261; tally pages none
+Burlington2015,OK,299,290,38,4,,10,40,cut 289-291 of 299; tally pages none
+Burlington2016,OK,331,4,14,0,,0,36,cut 3-5 of 331; tally pages none
+Burlington2017,OK,339,322,14,0,,0,44,cut 321-323 of 339; tally pages none
+Burlington2018,OK,343,315,45,2,,2,26,cut 314-316 of 343; tally pages none
+Canton2005,NEEDS_OCR,366,,0,0,,0,0,
+Carlisle2015,OK,237,52,14,3,yes,4,34,cut 50-53 of 237; tally pages [51]
+Carver2002,OK,140,18,17,1,yes,7,15,"cut 17-23 of 140; tally pages [18, 20, 21, 22]"
+Carver2006,OK,158,14,16,0,yes,6,20,"cut 13-28 of 158; tally pages [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]"
+Carver2013,OK,154,21,17,0,yes,7,13,"cut 20-31 of 154; tally pages [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]"
+Carver2019,OK,133,5,11,0,,0,84,cut 4-6 of 133; tally pages none
+Charlemont2020,NEEDS_OCR,0,,0,0,,0,0,
+Charlton2009,NEEDS_OCR,253,,0,0,,0,0,
+Chatham2015,NEEDS_OCR,0,,0,0,,0,0,
+Chelmsford2019,OK,224,133,12,8,yes,9,4,"cut 129-136 of 224; tally pages [129, 130, 131, 132, 133, 134, 135]"
+Cohasset2006,OK,232,84,13,2,yes,4,11,"cut 83-92 of 232; tally pages [84, 85, 86, 89, 90, 91]"
+Cohasset2008,OK,234,107,17,0,yes,4,10,"cut 106-116 of 234; tally pages [107, 108, 109, 111, 112, 113, 114, 115]"
+Cohasset2010,OK,200,62,13,0,yes,4,11,"cut 61-65 of 200; tally pages [62, 63, 64]"
+Cohasset2011,OK,156,67,17,0,yes,6,10,"cut 66-70 of 156; tally pages [67, 68, 69]"
+Cohasset2013,OK,216,83,10,0,yes,3,10,"cut 81-86 of 216; tally pages [82, 83, 84, 85]"
+Concord2020,OK,252,72,31,0,,2,44,cut 71-73 of 252; tally pages none
+Cummington2011,OK,96,96,23,0,,0,106,cut 95-96 of 96; tally pages none
+Dalton2010,OK,82,23,22,0,,2,66,cut 22-24 of 82; tally pages none
+Dalton2013,OK,1,1,13,0,yes,10,4,cut 1-1 of 1; tally pages [1]
+Dalton2020,NEEDS_OCR,0,,0,0,,0,0,
+Dartmouth2009,OK,234,186,11,0,,0,17,cut 185-187 of 234; tally pages none
+Dartmouth2011,OK,414,404,11,0,yes,2,53,"cut 403-410 of 414; tally pages [406, 407, 408, 409]"
+Dartmouth2016,OK,350,226,24,0,,0,67,cut 225-227 of 350; tally pages none
+Dartmouth2017,OK,342,223,24,0,,0,84,cut 222-224 of 342; tally pages none
+Deerfield2014,OK,148,23,27,0,,0,26,cut 22-24 of 148; tally pages none
+Dracut2018,NEEDS_OCR,150,,0,0,,0,0,
+EastBridgewater2015,NEEDS_OCR,188,,0,0,,0,0,
+EastBridgewater2019,NEEDS_OCR,209,,0,0,,0,0,
+Erving2017,OK,131,86,24,11,yes,11,9,"cut 84-88 of 131; tally pages [85, 86, 87]"
+Grafton2013,OK,124,36,23,9,yes,10,5,"cut 35-38 of 124; tally pages [36, 37]"
+Grafton2014,OK,122,10,33,12,yes,14,6,"cut 9-15 of 122; tally pages [10, 11, 12, 13, 14]"
+Granby2006,NEEDS_OCR,82,,0,0,,0,0,
+Granby2018,NEEDS_OCR,86,,0,0,,0,0,
+GreatBarrington2018,OK,76,62,12,0,,1,33,cut 61-63 of 76; tally pages none
+Groton2011,OK,146,127,23,11,yes,14,7,"cut 126-129 of 146; tally pages [127, 128]"
+Groton2017,OK,235,214,31,12,yes,20,7,"cut 213-216 of 235; tally pages [214, 215]"
+Groton2020,OK,219,190,35,17,yes,22,8,"cut 186-200 of 219; tally pages [186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199]"
+Groveland2012,NEEDS_OCR,103,,0,0,,0,0,
+Hanover2011,OK,265,265,16,0,,0,43,cut 264-265 of 265; tally pages none
+Hanover2016,OK,5,5,19,0,yes,5,22,cut 4-5 of 5; tally pages [5]
+Hanson2015,OK,107,30,30,1,yes,15,5,"cut 29-34 of 107; tally pages [30, 31, 33]"
+Hanson2016,OK,112,29,26,1,yes,13,5,"cut 28-36 of 112; tally pages [29, 30, 31, 32, 33, 34, 35]"
+Harvard2008,NEEDS_OCR,172,,0,0,,0,0,
+Hawley2014,OK,106,15,27,0,,0,33,cut 14-16 of 106; tally pages none
+Hawley2015,OK,106,15,25,0,,0,28,cut 14-16 of 106; tally pages none
+Hawley2016,OK,108,14,25,0,,0,30,cut 13-15 of 108; tally pages none
+Hawley2020,OK,80,20,23,0,,0,42,cut 19-21 of 80; tally pages none
+Hingham2006,OK,206,87,15,4,yes,6,4,"cut 83-90 of 206; tally pages [83, 84, 85, 87, 88, 89]"
+Holliston2004,OK,4,1,9,0,,0,41,cut 1-2 of 4; tally pages none
+Holliston2009,NEEDS_OCR,52,,0,0,,0,0,
+Holliston2016,OK,154,60,13,2,yes,4,52,"cut 59-64 of 154; tally pages [61, 62, 63]"
+Hopedale2020,OK,109,2,29,0,,0,126,cut 1-3 of 109; tally pages none
+Hull2008,NEEDS_OCR,201,,0,0,,0,0,
+Lancaster2003,OK,87,36,17,0,,0,26,cut 35-37 of 87; tally pages none
+Lancaster2004,OK,94,37,38,0,,0,41,cut 36-38 of 94; tally pages none
+Lancaster2007,OK,176,126,23,0,yes,12,6,"cut 125-128 of 176; tally pages [126, 127]"
+Lancaster2009,OK,213,159,17,1,yes,8,10,"cut 158-161 of 213; tally pages [159, 160]"
+Lancaster2012,OK,193,162,18,3,yes,7,16,"cut 161-165 of 193; tally pages [162, 163, 164]"
+Lee2000,NEEDS_OCR,118,,0,0,,0,0,
+Lee2004,NEEDS_OCR,114,,0,0,,0,0,
+Littleton2003,OK,147,6,9,0,,0,30,cut 5-7 of 147; tally pages none
+Littleton2009,OK,132,1,27,0,,0,41,cut 1-2 of 132; tally pages none
+Littleton2017,OK,212,128,27,0,,0,39,cut 127-129 of 212; tally pages none
+Ludlow2005,OK,68,20,14,1,yes,7,24,cut 19-21 of 68; tally pages [20]
+Ludlow2006,OK,87,31,16,1,yes,7,26,cut 30-32 of 87; tally pages [31]
+Ludlow2007,OK,109,52,11,1,,6,85,cut 51-53 of 109; tally pages none
+Ludlow2009,OK,101,6,24,0,,1,12,cut 5-7 of 101; tally pages none
+Ludlow2010,OK,104,50,17,1,,6,88,cut 49-51 of 104; tally pages none
+Ludlow2011,OK,106,51,11,1,,6,40,cut 50-52 of 106; tally pages none
+Ludlow2012,OK,98,46,25,1,yes,14,24,cut 45-47 of 98; tally pages [46]
+Ludlow2016,OK,126,25,24,1,yes,15,12,cut 24-26 of 126; tally pages [25]
+Ludlow2018,OK,130,22,13,1,yes,6,77,cut 20-23 of 130; tally pages [21]
+Ludlow2020,OK,134,22,27,1,yes,24,20,"cut 20-23 of 134; tally pages [21, 22]"
+Lunenburg2011,NEEDS_OCR,102,,0,0,,0,0,
+Manchester2006,OK,88,22,19,0,,0,43,cut 21-23 of 88; tally pages none
+Mansfield2001,OK,149,6,21,0,,0,42,cut 5-7 of 149; tally pages none
+Marblehead2011,OK,248,54,16,9,yes,11,7,"cut 53-59 of 248; tally pages [54, 55, 56, 57, 58]"
+Marblehead2013,OK,274,72,14,0,yes,9,8,"cut 71-84 of 274; tally pages [72, 73, 74, 75, 76, 78, 79, 80, 83]"
+Marblehead2015,OK,242,47,19,8,yes,12,7,"cut 46-51 of 242; tally pages [47, 48, 49, 50]"
+Marblehead2019,OK,268,68,19,8,yes,12,7,"cut 67-77 of 268; tally pages [68, 69, 70, 71, 72, 75, 76]"
+Marblehead2020,OK,325,64,19,0,yes,12,8,"cut 63-78 of 325; tally pages [64, 65, 66, 67, 69, 70, 72, 73, 74, 75, 77, 78]"
+Mashpee2007,OK,164,37,9,0,yes,6,10,cut 36-38 of 164; tally pages [37]
+Mashpee2011,OK,170,41,13,0,yes,6,11,cut 40-42 of 170; tally pages [41]
+Mashpee2013,OK,157,4,20,0,,0,28,cut 3-5 of 157; tally pages none
+Mashpee2015,OK,168,83,22,0,,0,45,cut 82-84 of 168; tally pages none
+Mashpee2016,OK,172,65,23,0,,0,39,cut 64-66 of 172; tally pages none
+Maynard2020,OK,221,3,27,0,,1,12,cut 2-4 of 221; tally pages none
+Medway2016,OK,197,12,15,0,,0,24,cut 11-13 of 197; tally pages none
+Milford2002,NEEDS_OCR,265,,0,0,,0,0,
+Milford2007,OK,203,2,21,0,,0,13,cut 1-3 of 203; tally pages none
+Millis2018,OK,211,17,25,0,yes,10,6,"cut 16-24 of 211; tally pages [17, 18, 19, 20, 21, 22, 23]"
+Millis2020,OK,213,3,31,0,,0,84,cut 2-4 of 213; tally pages none
+Millville2018,NEEDS_OCR,168,,0,0,,0,0,
+MountWashington2001,NEEDS_OCR,16,,0,0,,0,0,
+MountWashington2009,NEEDS_OCR,14,,0,0,,0,0,
+Nahant2008,OK,175,42,26,0,yes,9,26,"cut 41-44 of 175; tally pages [42, 43]"
+Nahant2009,OK,122,5,15,0,,0,116,cut 4-6 of 122; tally pages none
+Nahant2019,OK,77,72,27,0,,0,42,cut 71-73 of 77; tally pages none
+NewMarlborough2014,OK,47,43,19,0,,0,34,cut 42-44 of 47; tally pages none
+Newbury2015,NEEDS_OCR,104,,0,0,,0,0,
+Newbury2018,NEEDS_OCR,101,,0,0,,0,0,
+NorthAttleborough2006,NEEDS_OCR,266,,0,0,,0,0,
+NorthReading2009,OK,237,187,26,5,yes,15,6,cut 186-188 of 237; tally pages [187]
+NorthReading2015,OK,244,157,33,5,yes,20,6,"cut 155-158 of 244; tally pages [156, 157]"
+Northborough2010,OK,64,49,18,1,,1,15,cut 48-50 of 64; tally pages none
+Northborough2012,OK,62,8,18,0,,1,16,cut 7-9 of 62; tally pages none
+Northborough2013,OK,64,23,30,1,,1,29,cut 22-24 of 64; tally pages none
+Northborough2014,OK,67,23,30,1,,1,26,cut 22-24 of 67; tally pages none
+Northborough2015,OK,60,23,30,1,,1,26,cut 22-24 of 60; tally pages none
+Northborough2017,OK,59,21,30,1,,1,27,cut 20-22 of 59; tally pages none
+Northborough2018,OK,63,21,30,1,,1,25,cut 20-22 of 63; tally pages none
+Northbridge2007,OK,152,62,18,0,yes,9,6,"cut 61-64 of 152; tally pages [62, 63]"
+Northbridge2016,OK,188,66,22,0,yes,15,6,"cut 62-75 of 188; tally pages [62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74]"
+Northbridge2017,OK,162,59,30,0,yes,21,6,"cut 58-62 of 162; tally pages [59, 60, 61]"
+Northbridge2019,OK,207,75,18,0,yes,9,7,"cut 74-80 of 207; tally pages [75, 76, 77, 78, 79]"
+Northbridge2020,OK,204,73,20,0,yes,11,5,"cut 69-82 of 204; tally pages [69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81]"
+Northfield2018,OK,85,42,23,0,,0,26,cut 41-43 of 85; tally pages none
+Norton2015,OK,1,1,12,0,yes,7,9,cut 1-1 of 1; tally pages [1]
+Norwell2017,NEEDS_OCR,182,,0,0,,0,0,
+Paxton2020,OK,1,1,23,0,,0,40,cut 1-1 of 1; tally pages none
+Pembroke2012,OK,183,4,11,0,,0,44,cut 3-5 of 183; tally pages none
+Petersham2006,NEEDS_OCR,98,,0,0,,0,0,
+Petersham2007,NEEDS_OCR,102,,0,0,,0,0,
+Petersham2012,NEEDS_OCR,102,,0,0,,0,0,
+Petersham2013,NEEDS_OCR,102,,0,0,,0,0,
+Petersham2016,NEEDS_OCR,166,,0,0,,0,0,
+Petersham2021,OK,103,3,19,0,,0,23,cut 2-4 of 103; tally pages none
+Plainville2018,OK,148,30,47,7,yes,12,32,cut 29-32 of 148; tally pages [31]
+Plympton2007,OK,113,41,20,3,yes,7,34,cut 40-45 of 113; tally pages [44]
+Princeton2004,OK,130,64,10,0,yes,3,11,"cut 62-66 of 130; tally pages [63, 64, 65]"
+Rehoboth2008,NEEDS_OCR,233,,0,0,,0,0,
+Richmond2012,OK,96,33,10,0,,1,41,cut 32-34 of 96; tally pages none
+Richmond2016,OK,97,74,12,0,,1,49,cut 73-75 of 97; tally pages none
+Royalston2015,NEEDS_OCR,104,,0,0,,0,0,
+Royalston2016,NEEDS_OCR,138,,0,0,,0,0,
+Rutland2014,NEEDS_OCR,98,,0,0,,0,0,
+Salem2000,NEEDS_OCR,111,,0,0,,0,0,
+Salem2019,NEEDS_OCR,25,,0,0,,0,0,
+Sandisfield2018,NEEDS_OCR,84,,0,0,,0,0,
+Saugus2013,NEEDS_OCR,180,,0,0,,0,0,
+Saugus2015,NEEDS_OCR,180,,0,0,,0,0,
+Seekonk2009,NEEDS_OCR,213,,0,0,,0,0,
+Seekonk2010,NEEDS_OCR,204,,0,0,,0,0,
+Seekonk2013,NEEDS_OCR,178,,0,0,,0,0,
+Seekonk2014,NEEDS_OCR,178,,0,0,,0,0,
+Seekonk2017,OK,134,41,12,0,,1,60,cut 40-42 of 134; tally pages none
+Sharon2009,OK,248,45,23,0,yes,12,24,"cut 44-48 of 248; tally pages [45, 46, 47]"
+Sharon2010,OK,243,42,25,10,yes,12,21,"cut 41-56 of 243; tally pages [42, 43, 44, 47, 48, 49, 50, 51, 52, 54, 55, 56]"
+Sharon2011,OK,240,55,16,0,yes,9,42,"cut 54-58 of 240; tally pages [56, 57]"
+Sharon2012,OK,288,87,10,0,yes,3,30,"cut 86-101 of 288; tally pages [87, 88, 89, 90, 91, 92, 93, 94, 95, 97, 98, 99, 100, 101]"
+Sheffield2011,OK,84,21,17,0,,0,45,cut 20-22 of 84; tally pages none
+Shirley2008,OK,1,1,17,0,,8,41,cut 1-1 of 1; tally pages none
+Shirley2009,OK,3,3,6,0,yes,3,25,cut 2-3 of 3; tally pages [3]
+Shirley2011,OK,2,1,12,0,yes,1,63,cut 1-2 of 2; tally pages [2]
+Southborough2018,OK,124,4,17,0,,0,14,cut 3-5 of 124; tally pages none
+Southborough2019,OK,114,4,22,0,,0,14,cut 3-5 of 114; tally pages none
+Stockbridge2020,OK,88,12,18,0,,0,45,cut 11-13 of 88; tally pages none
+Stoneham2015,OK,118,101,45,0,,5,64,cut 100-102 of 118; tally pages none
+Stoughton2014,NEEDS_OCR,312,,0,0,,0,0,
+Stoughton2015,NEEDS_OCR,283,,0,0,,0,0,
+Stoughton2016,NEEDS_OCR,298,,0,0,,0,0,
+Stow2008,OK,144,3,27,0,,0,50,cut 2-4 of 144; tally pages none
+Stow2009,OK,156,5,26,0,,0,15,cut 4-6 of 156; tally pages none
+Stow2011,OK,144,3,21,0,,0,13,cut 2-4 of 144; tally pages none
+Stow2012,NEEDS_OCR,148,,0,0,,0,0,
+Sunderland2013,OK,89,5,40,0,,0,40,cut 4-6 of 89; tally pages none
+Sunderland2015,NEEDS_OCR,87,,0,0,,0,0,
+Sutton2007,NEEDS_OCR,129,,0,0,,0,0,
+Sutton2010,NEEDS_OCR,109,,0,0,,0,0,
+Sutton2012,NEEDS_OCR,55,,0,0,,0,0,
+Sutton2013,NEEDS_OCR,106,,0,0,,0,0,
+Sutton2014,NEEDS_OCR,117,,0,0,,0,0,
+Sutton2017,NEEDS_OCR,140,,0,0,,0,0,
+Sutton2018,NEEDS_OCR,122,,0,0,,0,0,
+Sutton2019,NEEDS_OCR,142,,0,0,,0,0,
+Sutton2020,NEEDS_OCR,132,,0,0,,0,0,
+Truro2017,OK,232,221,16,1,yes,2,50,cut 218-222 of 232; tally pages [219]
+Truro2019,OK,181,7,25,0,,0,38,cut 6-8 of 181; tally pages none
+Tyngsborough2015,OK,118,60,31,10,yes,16,5,"cut 59-62 of 118; tally pages [60, 61]"
+Uxbridge2006,OK,82,73,22,4,yes,11,5,cut 72-74 of 82; tally pages [73]
+Uxbridge2010,NEEDS_OCR,96,,0,0,,0,0,
+Uxbridge2013,NEEDS_OCR,143,,0,0,,0,0,
+Uxbridge2014,NEEDS_OCR,148,,0,0,,0,0,
+Walpole2019,OK,202,169,25,7,yes,14,4,"cut 168-173 of 202; tally pages [169, 170, 171, 172]"
+Wayland2005,OK,176,84,19,4,yes,7,6,"cut 80-87 of 176; tally pages [80, 81, 82, 83, 84, 85, 86]"
+Wayland2007,OK,120,83,28,4,yes,13,6,"cut 79-86 of 120; tally pages [79, 80, 81, 82, 83, 84, 85]"
+Wayland2009,OK,146,76,24,5,yes,11,6,"cut 72-78 of 146; tally pages [72, 73, 74, 75, 76, 77]"
+Wayland2010,OK,146,73,23,9,yes,12,6,"cut 70-76 of 146; tally pages [71, 72, 73, 74, 75]"
+Wayland2013,OK,180,91,28,4,yes,13,6,"cut 87-94 of 180; tally pages [87, 88, 89, 90, 91, 92, 93]"
+Wayland2014,OK,164,94,28,4,yes,13,6,"cut 92-97 of 164; tally pages [93, 94, 95, 96]"
+Wayland2015,OK,178,105,14,4,yes,9,5,"cut 101-108 of 178; tally pages [101, 102, 103, 104, 105, 106, 107]"
+Wayland2017,OK,179,114,22,7,yes,11,5,"cut 110-117 of 179; tally pages [110, 111, 112, 113, 114, 115, 116]"
+Wayland2019,OK,194,131,28,13,yes,13,4,"cut 127-134 of 194; tally pages [127, 128, 129, 130, 131, 132, 133]"
+Wellfleet2014,OK,272,99,17,4,yes,14,16,"cut 98-108 of 272; tally pages [99, 100, 101, 103, 104, 105, 106, 107]"
+Westport2013,OK,233,33,16,5,yes,7,28,"cut 32-37 of 233; tally pages [33, 34, 35, 36]"
+Westport2020,OK,256,33,17,0,yes,8,27,"cut 32-36 of 256; tally pages [33, 34, 35]"
+Westwood2008,NEEDS_OCR,99,,0,0,,0,0,
+Worcester2010,NEEDS_OCR,52,,0,0,,0,0,
+Wrentham2014,NEEDS_OCR,130,,0,0,,0,0,
