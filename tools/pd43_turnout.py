@@ -68,9 +68,16 @@ pymupdf.TOOLS.mupdf_display_errors(False)
 # The 1970s volumes invert it -- `Number of persons registered and people who
 # voted at Elections` -- and set it in title case, so both the wording test and
 # the capitals test missed every one of them.
+# A THIRD SHAPE: THE HEADING IS THE COLUMN HEADERS, NOT A SENTENCE. The 1973-79
+# volumes title the table `City Elections in 1973` and then rule the columns
+# `Cities, Wards and Voting Precincts | Date of Election | Registered Voters |
+# Persons who voted`. There is no phrase `registered voters and persons who
+# voted` anywhere on the page, so both earlier patterns miss it entirely.
 HEAD = re.compile(
     r'(?:REGISTERED\s+VOTERS\s+AND\s+PE(?:OPLE|RSONS)'
-    r'|PERSONS?\s+REGISTERED\s+AND\s+PE(?:OPLE|RSONS))\s+WHO\s+VOTED', re.I)
+    r'|PERSONS?\s+REGISTERED\s+AND\s+PE(?:OPLE|RSONS))\s+WHO\s+VOTED'
+    r'|(?:CITY|TOWN)\s+ELECTIONS?\s+IN\s+(?:19|20)\d{2}'
+    r'|REGISTERED\s+VOTERS[\s\S]{0,80}?PERSONS?\s+WHO\s+VOTED', re.I)
 HEAD_CAPS = HEAD
 # EVERY TABLE IN THE VOLUME CARRIES THAT HEADING, including the state election
 # and the primaries, which are not municipal and must not be read as if they
@@ -208,30 +215,42 @@ def num(s):
     return int(s) if s.isdigit() else None
 
 
-def block_split(page):
-    """The x of the gutter between the two column blocks.
+def block_split(page, words=None):
+    """The x of the gutter between the two column blocks, or None for one block.
 
-    Found as the widest vertical gap in the middle third rather than fixed at
-    half the page: the volumes are scans and the gutter wanders, by a few points
-    within a volume and a good deal more across decades.
+    Measured as the widest gap between consecutive word starts in a narrow band
+    round the centre. Two better-sounding measures were tried and are worse:
+
+      * The widest gap in the middle THIRD finds a gap INSIDE the right-hand
+        block -- between its precinct numbers and its date column -- and splits
+        the page there, which puts the right block's town column into the left
+        block and files every figure against the wrong town.
+      * A profile of how many rows cross each column, which is what a gutter
+        really is, lands at 218 on the 2008 table where the gutter sits near
+        260. Over sixty rows of dot leaders there is no column the rows leave
+        alone, and the quietest one is not the right one.
+
+    So this stays, and the noise in it is handled where it is used: a page whose
+    reading is far from its table's median is overruled by the median.
     """
     W = page.rect.width
-    xs = sorted(w[0] for w in page.get_text('words'))
+    if words is None:
+        words = page.get_text('words')
+    xs = sorted(w[0] for w in words)
     if len(xs) < 2:
-        return W / 2
-    # SEARCH A NARROW BAND ROUND THE CENTRE, NOT THE MIDDLE THIRD. Inside a
-    # block the gap between the precinct numbers and the date column is wider
-    # than the gutter between the blocks, so "the widest gap in the middle
-    # third" finds a gap inside the right-hand block and splits the page there
-    # -- which puts the right block's town column into the left block, and every
-    # figure after it against the wrong town.
+        return None
     gaps = [(xs[i + 1] - xs[i], (xs[i] + xs[i + 1]) / 2)
             for i in range(len(xs) - 1)
             if W * 0.44 < (xs[i] + xs[i + 1]) / 2 < W * 0.56]
     if not gaps:
-        return W / 2
+        return None
     g, at = max(gaps)
-    return at if g > 8 else W / 2
+    # NO GUTTER MEANS ONE COLUMN, NOT A GUESS AT WHERE THE GUTTER WOULD BE. The
+    # 1970s volumes set the table as a single block across the page, and falling
+    # back to half the width cut every row in two -- the town name and date on
+    # one side, its figures on the other. The figures were being read correctly
+    # the whole time; they were simply cut off from the names.
+    return at if g > 8 else None
 
 
 def label_lines(page, lo, hi):
@@ -790,18 +809,118 @@ def main():
 
     names = load_municipalities(ROOT)
     print('%d municipalities in the reference list' % len(names))
+    # ONE LAYOUT PER TABLE, SO ONE GUTTER PER TABLE.
+    #
+    # Measured page by page, the gutter wanders: on the 2008 table it comes out
+    # at 258 on most pages and 289 or 293 on three of them, and on those three
+    # the left block swallows the right block's label column and every town on
+    # it is lost. 59 of the volume's 310 towns went that way.
+    #
+    # The pages of one table are the same layout, so the per-page reading is a
+    # measurement of one quantity with noise on it. The median is that quantity.
+    # PER PAGE WHERE THE PAGE AGREES, THE TABLE'S MEDIAN WHERE IT DOES NOT.
+    #
+    # The gutter is a property of the page and a scanned book does shift, so the
+    # page's own reading should win -- but only when it IS a reading. Measured
+    # across the 2008 table these come out anywhere from 212 to 315 for a gutter
+    # that really sits near 260, and a reading 50 points out does not shift a
+    # column, it swallows one: the left block takes the right block's names and
+    # every town on that page is lost.
+    #
+    # The pages of one table share a layout, so the median is the best estimate
+    # of the quantity and each page's own reading is that quantity plus noise.
+    # A reading close to the median is trusted as a real shift; one far from it
+    # is noise and is replaced. Which is not a fudge -- it is what you do with
+    # repeated measurements of something that moves slowly.
+    splits = [x for x in (block_split(doc[i]) for i in pages) if x]
+    median = sorted(splits)[len(splits) // 2] if splits else None
+    if median:
+        near = sum(1 for x in splits if abs(x - median) <= 6)
+        print('   column gutter %.0f; %d of %d pages agree within 6pt'
+              % (median, near, len(splits)))
+
+    year = a.year
+
+    def read_page(page, split, kind, force_ocr):
+        """Read one page at one candidate split. -> (towns, used_ocr)"""
+        blocks = ([(0, page.rect.width)] if split is None
+                  else [(0, split), (split, page.rect.width)])
+        out, used = [], False
+        for lo, hi in blocks:
+            got, ocr = parse_block(page, lo, hi, year, force_ocr=force_ocr,
+                                   names=names)
+            for t in got:
+                t['by_ocr'] = ocr
+                t['kind'] = kind
+            out += got
+            used = used or ocr
+        return out, used
+
+    def score(towns):
+        """How well a reading of a page holds together.
+
+        The arithmetic check is already the thing that decides whether a town
+        was read correctly, so it decides this too: a split that carves the page
+        in the wrong place produces towns whose precincts do not sum, and one
+        that carves it in the right place produces towns that do. Ties go to the
+        reading that found more towns, so a split that finds two perfect towns
+        does not beat one that finds twenty good ones.
+        """
+        good = 0
+        for t in towns:
+            settle_head_row(t)
+            recover_total(t)
+            st, _ = check(t)
+            if st in ('checked', 'single', 'no_election'):
+                good += 1
+        return (good, len(towns))
+
     rows, ocr_pages = [], set()
     for i in pages:
         page = doc[i]
-        split = block_split(page)
-        for lo, hi in ((0, split), (split, page.rect.width)):
-            got, ocr = parse_block(page, lo, hi, a.year,
-                                   force_ocr=a.ocr, names=names)
-            for t in got:
-                t['by_ocr'] = ocr
-                t['kind'] = kind_of.get(i, 'town')
-            rows += got
-            if ocr:
+        kind = kind_of.get(i, 'town')
+
+        # TRY THE CANDIDATES AND KEEP WHAT READS, rather than tuning one guess.
+        #
+        # Every rule for placing the gutter from the page alone was wrong
+        # somewhere: the widest gap in the middle third splits inside the right
+        # block, the quietest column lands at 218 where the gutter is at 260,
+        # the page's own reading swings 245-293 across one table, and the
+        # table's median throws away the pages that really did shift.
+        #
+        # But the reading does not have to be decided in advance. The page can
+        # be read several ways and scored, and there is an honest scorer to hand
+        # -- the same arithmetic that decides whether any town was read
+        # correctly. A wrong split produces towns whose precincts do not sum.
+        own = block_split(page)
+        cands = []
+        for c in (own, median, None):
+            if c not in cands:
+                cands.append(c)
+        if median is not None:
+            for d in (-10, 10):
+                if median + d not in cands:
+                    cands.append(median + d)
+        # OCR is seconds a block, so a page without a text layer is read once,
+        # at the table's best guess, rather than five times.
+        # OCR costs seconds a block, so a page without a text layer tries two
+        # candidates rather than five -- enough to rescue a page whose own
+        # reading is wrong, without reading the volume five times over.
+        if len(page.get_text('words')) < 60 or a.ocr:
+            cands = cands[:2] if cands else [None]
+
+        best, best_score = None, (-1, -1)
+        for c in cands:
+            try:
+                got, ocr = read_page(page, c, kind, a.ocr)
+            except Exception:
+                continue
+            sc = score(got)
+            if sc > best_score:
+                best, best_score, best_ocr = got, sc, ocr
+        if best:
+            rows += best
+            if best_ocr:
                 ocr_pages.add(i)
 
     # One town can straddle a column or page break; merge fragments by name.
