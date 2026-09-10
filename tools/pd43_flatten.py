@@ -63,9 +63,30 @@ def main():
     ap.add_argument('--rotate', type=int, default=None,
                     help='force a rotation instead of detecting one')
     ap.add_argument('--halves', type=int, default=2)
+    ap.add_argument('--auto', action='store_true',
+                    help='decide whether this volume needs flattening at all, '
+                         'and do nothing if it does not')
     a = ap.parse_args()
 
     src = pymupdf.open(a.pdf)
+
+    if a.auto:
+        # ONLY THE SIDEWAYS TWO-UP BOOKLETS NEED THIS. A spread holding two
+        # printed pages on its side is markedly wider for its height than a
+        # single page: the 1971 booklet is 592x789 where 1973, which is already
+        # upright and single, is 282x476. Flattening a volume that does not need
+        # it halves every page and destroys it, which is what happened to 1973,
+        # 1975, 1977 and 1979 before this test existed.
+        r = src[len(src) // 3].rect
+        ratio = r.width / r.height
+        if not (ratio > 0.70 and len(src) < 200):
+            print('[skip] %s is %.0fx%.0f (ratio %.2f, %d pages): upright '
+                  'single pages, nothing to flatten'
+                  % (os.path.basename(a.pdf), r.width, r.height, ratio,
+                     len(src)))
+            return
+        print('[auto] %s looks like a sideways two-up scan (ratio %.2f)'
+              % (os.path.basename(a.pdf), ratio))
 
     rot = a.rotate
     if rot is None:

@@ -1,0 +1,132 @@
+name: Read the PD43 volumes
+
+# WHY THIS RUNS HERE AND NOT ON A LAPTOP.
+#
+# Reading one volume means OCR over about fifteen scanned pages, several times
+# each, and takes minutes. Thirty-two volumes in sequence is hours of a machine
+# somebody is trying to use -- and running them in background shells locally went
+# badly: sixteen orphaned loops accumulated, each still spawning tesseract, and
+# several wrote the same output at once.
+#
+# The work is embarrassingly parallel: no volume needs anything from another. So
+# it is one job per volume, thirty-two at a time, on somebody else's CPU.
+#
+# The volumes are fetched from the State Library's public archive by the same
+# tool used locally. Nothing here needs a secret.
+
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: 'Years to read, comma separated. Blank means all of them.'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pd43
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      years: ${{ steps.pick.outputs.years }}
+    steps:
+      - id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.years }}" ]; then
+            LIST="${{ github.event.inputs.years }}"
+          else
+            LIST="1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1986,1988,1990,1992,1994,1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018"
+          fi
+          echo "years=$(echo "$LIST" | python3 -c 'import json,sys; print(json.dumps([y.strip() for y in sys.stdin.read().split(",") if y.strip()]))')" >> "$GITHUB_OUTPUT"
+
+  read:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      # One volume per job. A volume that cannot be read must not stop the rest:
+      # the 1970s scans are the hardest and the least valuable, and they should
+      # not hold up the years that reach the site.
+      max-parallel: 12
+      matrix:
+        year: ${{ fromJson(needs.plan.outputs.years) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Tesseract, for the pages with no text layer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr
+          tesseract --version | head -1
+
+      - run: pip install --quiet pymupdf pytesseract pillow
+
+      - name: Fetch volume ${{ matrix.year }}
+        run: |
+          mkdir -p pd43
+          python tools/pd43_fetch.py --years ${{ matrix.year }} --dir pd43
+
+      - name: Straighten it, if it is a sideways two-up scan
+        run: |
+          Y=${{ matrix.year }}
+          # --auto does nothing unless the volume really is a spread on its
+          # side. Flattening one that is not halves every page and destroys it.
+          python tools/pd43_flatten.py "pd43/pd43-$Y.pdf"             --out "pd43/pd43-$Y-flat.pdf" --rotate 270 --auto
+
+      - name: Read it
+        run: |
+          Y=${{ matrix.year }}
+          SRC="pd43/pd43-$Y.pdf"
+          [ -f "pd43/pd43-$Y-flat.pdf" ] && SRC="pd43/pd43-$Y-flat.pdf"
+          python tools/pd43_turnout.py "$SRC" --year "$Y" --out "pd43/out-$Y.csv"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pd43-${{ matrix.year }}
+          path: pd43/out-${{ matrix.year }}.csv
+          if-no-files-found: warn
+
+  combine:
+    needs: read
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: incoming
+          pattern: pd43-*
+          merge-multiple: true
+
+      - name: Combine every volume that read
+        run: |
+          mkdir -p pd43
+          cp incoming/out-*.csv pd43/ 2>/dev/null || true
+          ls -la pd43/ | head -40
+          python tools/pd43_combine.py "pd43/out-*.csv" --out config/pd43_turnout.csv
+
+      - name: Commit the series
+        run: |
+          if git diff --quiet config/pd43_turnout.csv config/pd43_coverage_by_year.csv; then
+            echo "nothing changed"; exit 0
+          fi
+          git config user.name "civicatlas-pd43"
+          git config user.email "jamesnicholsworleyassistant@gmail.com"
+          git add config/pd43_turnout.csv config/pd43_coverage_by_year.csv
+          git commit -m "Read the PD43 series in CI" \
+            -m "One job per volume. Registration, turnout, election dates and precinct detail from the Secretary of the Commonwealth's printed statistics, checked against each volume's own arithmetic."
+          git push origin HEAD:${{ github.ref_name }}
