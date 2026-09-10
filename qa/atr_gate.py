@@ -157,6 +157,30 @@ def supports_almost_nothing(grounded):
     return None
 
 
+def located(grounded):
+    """How much of a record its own section holds, as a fraction 0..1.
+
+    -1 where nothing can be said -- a scan with no text, or no section held.
+    A record that cannot be checked must not win a tie-break against one that
+    can, and must not lose one either; -1 sorts it below and the contest count
+    still decides.
+    """
+    if not grounded:
+        return -1.0
+    hit = tot = 0
+    for v in grounded.values():
+        if "/" not in (v or ""):
+            return -1.0
+        a, b = [int(x) for x in v.split("/")]
+        hit, tot = hit + a, tot + b
+    return hit / tot if tot else -1.0
+
+
+def fraction(grounded):
+    g = located(grounded)
+    return "not checkable" if g < 0 else "%d%%" % round(g * 100)
+
+
 def grade(doc, grounded=None):
     """(rung, reasons) for one bridged record."""
     contests = doc.get("elections") or []
@@ -237,18 +261,24 @@ def main():
     # municipality and date is the fiscal-year offset -- a 2020 report carrying
     # May 2019 -- and both cannot stand.
     claims = {}
+    grounded = {}
     for path in sorted(glob.glob(os.path.join(a.bridged, "*.json"))):
         doc = json.load(io.open(path, encoding="utf-8"))
+        stem = doc.get("_source_stem") or os.path.basename(path)[:-5]
+        if a.sections:
+            grounded[stem] = grounding(stem, doc, a.sections)
         el = doc.get("elections") or []
         if not el:
             continue
         key = (el[0].get("municipality"), (el[0].get("date") or "")[:4])
         if not all(key):
             continue
-        claims.setdefault(key, []).append(
-            (len(el), doc.get("_source_stem") or os.path.basename(path)[:-5]))
-    # The record reading more contests read more of the page. A tie is not
-    # broken by filename, which is the thing already shown unreliable here.
+        claims.setdefault(key, []).append((len(el), located(grounded.get(stem)),
+                                           stem))
+    # The record reading more contests read more of the page, and where they
+    # read the same number the one MORE OF WHICH IS ON ITS OWN PAGE read it
+    # better. Neither test is the filename, which is the thing already shown
+    # unreliable here.
     loser = {}
     # `contenders`, not `rows` -- `rows` is the ledger being built below, and
     # shadowing it here wrote a leaked tuple into the CSV as a data row.
@@ -256,21 +286,25 @@ def main():
         if len(contenders) < 2:
             continue
         contenders.sort(reverse=True)
-        if contenders[0][0] == contenders[1][0]:
-            for _, stem in contenders:
-                loser[stem] = ("two records claim %s %s and hold the same "
-                               "number of contests; neither can be preferred"
-                               % key)
+        if contenders[0][:2] == contenders[1][:2]:
+            for _, _, stem in contenders:
+                loser[stem] = ("two records claim %s %s, hold the same number "
+                               "of contests and ground equally well; neither "
+                               "can be preferred" % key)
         else:
-            for _, stem in contenders[1:]:
-                loser[stem] = ("%s %s is already published from %s, which read "
-                               "more of the page"
-                               % (key[0], key[1], contenders[0][1]))
+            why = ("read more of the page"
+                   if contenders[0][0] != contenders[1][0]
+                   else "grounds better in its own section (%s against %s)"
+                   % (fraction(grounded.get(contenders[0][2])),
+                      fraction(grounded.get(contenders[1][2]))))
+            for _, _, stem in contenders[1:]:
+                loser[stem] = ("%s %s is already published from %s, which %s"
+                               % (key[0], key[1], contenders[0][2], why))
 
     for path in sorted(glob.glob(os.path.join(a.bridged, "*.json"))):
         doc = json.load(io.open(path, encoding="utf-8"))
         stem_now = doc.get("_source_stem") or os.path.basename(path)[:-5]
-        g = grounding(stem_now, doc, a.sections) if a.sections else None
+        g = grounded.get(stem_now)
         if stem_now in loser:
             rung, reasons = "review", [loser[stem_now]]
         else:

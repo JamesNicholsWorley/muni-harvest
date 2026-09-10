@@ -107,8 +107,8 @@ Blandford2010,review,17,Planning Board for Three Years Vote for One: a figure wa
 Blandford2011,review,12,no two contests agree on a ballot count
 Blandford2012,review,12,Board of Health for Three Years Vote for One: a figure was not readable
 Blandford2013,review,17,Assessor for Three Years Vote for One: a figure was not readable
-Blandford2014,review,12,two records claim Blandford 2013 and hold the same number of contests; neither can be preferred
-Blandford2016,review,12,two records claim Blandford 2013 and hold the same number of contests; neither can be preferred
+Blandford2014,review,12,"two records claim Blandford 2013, hold the same number of contests and ground equally well; neither can be preferred"
+Blandford2016,review,12,"two records claim Blandford 2013, hold the same number of contests and ground equally well; neither can be preferred"
 Blandford2017,review,12,Vote for one: a figure was not readable
 Blandford2018,review,14,Assessor for three years: a figure was not readable
 Bolton2007,review,1,only one contest -- a return usually elects several
@@ -389,10 +389,10 @@ Groton2017,hold,0,the parse found no contest in this section
 Groton2018,publish,14,
 Groton2019,publish,14,
 Groton2020,hold,0,the parse found no contest in this section
-Groveland2008,review,10,two records claim Groveland 2009 and hold the same number of contests; neither can be preferred
-Groveland2009,review,10,two records claim Groveland 2009 and hold the same number of contests; neither can be preferred
-Groveland2010,review,11,two records claim Groveland 2011 and hold the same number of contests; neither can be preferred
-Groveland2011,review,11,two records claim Groveland 2011 and hold the same number of contests; neither can be preferred
+Groveland2008,review,10,"two records claim Groveland 2009, hold the same number of contests and ground equally well; neither can be preferred"
+Groveland2009,review,10,"two records claim Groveland 2009, hold the same number of contests and ground equally well; neither can be preferred"
+Groveland2010,review,11,"two records claim Groveland 2011, hold the same number of contests and ground equally well; neither can be preferred"
+Groveland2011,review,11,"two records claim Groveland 2011, hold the same number of contests and ground equally well; neither can be preferred"
 Groveland2012,hold,0,the parse found no contest in this section
 Groveland2014,publish,12,
 Groveland2016,hold,16,Road Commissioner 3 yrs: 1128 marks exceeds 1126x1=1126 -- impossible
@@ -467,8 +467,8 @@ Holliston2013,review,1,"Holliston 2013 is already published from Holliston2014, 
 Holliston2014,publish,14,
 Holliston2016,hold,0,the parse found no contest in this section
 Hopedale2016,hold,0,the parse found no contest in this section
-Hopedale2017,review,10,two records claim Hopedale 2017 and hold the same number of contests; neither can be preferred
-Hopedale2018,review,10,two records claim Hopedale 2017 and hold the same number of contests; neither can be preferred
+Hopedale2017,review,10,"two records claim Hopedale 2017, hold the same number of contests and ground equally well; neither can be preferred"
+Hopedale2018,review,10,"two records claim Hopedale 2017, hold the same number of contests and ground equally well; neither can be preferred"
 Hopedale2019,publish,12,
 Hopedale2020,hold,0,the parse found no contest in this section
 Hopkinton2016,publish,13,
@@ -775,9 +775,9 @@ NorthReading2011,publish,4,
 NorthReading2015,hold,0,the parse found no contest in this section
 NorthReading2018,publish,5,
 Northborough2008,review,10,Total votes for NS/SB Regional School Committee: seat count left null by the transcriber
-Northborough2009,review,8,two records claim Northborough 2009 and hold the same number of contests; neither can be preferred
+Northborough2009,publish,8,
 Northborough2010,hold,0,the parse found no contest in this section
-Northborough2011,review,8,two records claim Northborough 2009 and hold the same number of contests; neither can be preferred
+Northborough2011,review,8,"Northborough 2009 is already published from Northborough2009, which grounds better in its own section (100% against 98%)"
 Northborough2012,hold,0,the parse found no contest in this section
 Northborough2013,hold,0,the parse found no contest in this section
 Northborough2014,hold,0,the parse found no contest in this section
@@ -865,8 +865,8 @@ Petersham2005,publish,11,no two contests agree on a ballot count
 Petersham2006,hold,0,the parse found no contest in this section
 Petersham2007,hold,0,the parse found no contest in this section
 Petersham2008,hold,10,BOARD OF SELECTMEN - 3 YEARS: 170 marks exceeds 124x1=124 -- impossible
-Petersham2009,review,7,two records claim Petersham 2010 and hold the same number of contests; neither can be preferred
-Petersham2010,review,7,two records claim Petersham 2010 and hold the same number of contests; neither can be preferred
+Petersham2009,review,7,"two records claim Petersham 2010, hold the same number of contests and ground equally well; neither can be preferred"
+Petersham2010,review,7,"two records claim Petersham 2010, hold the same number of contests and ground equally well; neither can be preferred"
 Petersham2011,publish,12,
 Petersham2012,hold,0,the parse found no contest in this section
 Petersham2013,hold,0,the parse found no contest in this section
@@ -882,8 +882,8 @@ Plainfield2013,hold,11,Board of Assessors: (1 Year): 90 marks exceeds 89x1=89 --
 Plainfield2016,hold,15,Board of Selectman: 111 marks exceeds 95x1=95 -- impossible
 Plainfield2017,publish,8,
 Plainville2015,publish,12,
-Plainville2016,review,13,two records claim Plainville 2016 and hold the same number of contests; neither can be preferred
-Plainville2017,review,13,two records claim Plainville 2016 and hold the same number of contests; neither can be preferred
+Plainville2016,review,13,"two records claim Plainville 2016, hold the same number of contests and ground equally well; neither can be preferred"
+Plainville2017,review,13,"two records claim Plainville 2016, hold the same number of contests and ground equally well; neither can be preferred"
 Plainville2018,hold,0,the parse found no contest in this section
 Plainville2020,publish,11,
 Plymouth2010,publish,2,no two contests agree on a ballot count
@@ -963,8 +963,8 @@ Rowley2010,hold,0,the parse found no contest in this section
 Rowley2015,hold,0,the parse found no contest in this section
 Rowley2016,review,1,Board of Selectman: a figure was not readable
 Rowley2020,hold,0,the parse found no contest in this section
-Royalston2013,review,4,two records claim Royalston 2014 and hold the same number of contests; neither can be preferred
-Royalston2014,review,4,two records claim Royalston 2014 and hold the same number of contests; neither can be preferred
+Royalston2013,review,4,"two records claim Royalston 2014, hold the same number of contests and ground equally well; neither can be preferred"
+Royalston2014,review,4,"two records claim Royalston 2014, hold the same number of contests and ground equally well; neither can be preferred"
 Royalston2015,hold,0,the parse found no contest in this section
 Royalston2016,hold,0,the parse found no contest in this section
 Royalston2017,hold,0,the parse found no contest in this section
@@ -1193,8 +1193,8 @@ Wareham2017,review,7,SELECTMEN: seat count left null by the transcriber
 Wareham2018,publish,9,
 Warwick2008,publish,10,
 Warwick2012,publish,10,
-Warwick2014,review,10,two records claim Warwick 2014 and hold the same number of contests; neither can be preferred
-Warwick2015,review,10,two records claim Warwick 2014 and hold the same number of contests; neither can be preferred
+Warwick2014,review,10,"two records claim Warwick 2014, hold the same number of contests and ground equally well; neither can be preferred"
+Warwick2015,review,10,"two records claim Warwick 2014, hold the same number of contests and ground equally well; neither can be preferred"
 Washington2020,publish,5,
 Wayland2005,hold,0,the parse found no contest in this section
 Wayland2006,publish,11,
