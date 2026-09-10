@@ -51,6 +51,15 @@ import sys
 
 import pymupdf
 
+# Tesseract is not on PATH for the python process on this machine.
+_TESS = os.path.join(r'C:\Program Files', 'Tesseract-OCR', 'tesseract.exe')
+if os.path.exists(_TESS):
+    try:
+        import pytesseract
+        pytesseract.pytesseract.tesseract_cmd = _TESS
+    except ImportError:
+        pass
+
 pymupdf.TOOLS.mupdf_display_errors(False)
 
 HEAD = re.compile(r'REGISTERED\s+VOTERS\s+AND\s+PEOPLE\s+WHO\s+VOTED', re.I)
@@ -90,13 +99,71 @@ TOWN = re.compile(r"^[A-Z][A-Za-z.'-]{2,}(?:[ -][A-Za-z.'-]+){0,4}$")
 # scales. Every offset here is therefore a FRACTION of the page, not a number of
 # points: with the 2008 figures hardcoded, the 2000 clip fell outside the table
 # entirely and the volume yielded no tables at all.
+OCR_ZOOM = 3.0             # render scale for pages with no text
 LABEL_FRAC = 0.18          # label column width, as a share of page width
 TOP_FRAC = 0.11            # first row, as a share of page height
 BOT_FRAC = 0.97            # last row
 
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 def label_w(page):
     return page.rect.width * LABEL_FRAC
+
+
+def load_municipalities(root):
+    """The 351 names, for snapping an OCR reading to a real town.
+
+    OCR gets these names very nearly right and almost never exactly right:
+    `Ambherst`, `Andovet`, `Bernardson`, `Raynhan`, `Shutesbuty`, `Warehan`,
+    `West Boyloston`. Left alone, 154 of 174 towns in an OCR'd volume fail to
+    join to anything. The list of Massachusetts municipalities is closed and
+    known, so the reading is snapped to it and anything that will not snap is
+    reported rather than guessed at.
+    """
+    path = os.path.join(root, 'pages', 'inventory', 'municipalities.csv')
+    names = []
+    try:
+        with io.open(path, encoding='utf-8', newline='') as fh:
+            for row in csv.DictReader(fh):
+                n = (row.get('Municipality') or '').strip()
+                if n:
+                    names.append(n)
+    except (OSError, ValueError, csv.Error):
+        pass
+    return names
+
+
+# The date follows the town on the same printed line, and OCR keeps some of it.
+TRAIL = re.compile(
+    r'\s*[-\s.]*(%s|ODD|EVEN)\w*\.?\s*$' % '|'.join(
+        m[:3] for m in ('January February March April May June July August '
+                        'September October November December').split()), re.I)
+# Dot leaders read as a run of letters when the scan is soft: `csceeeeeeeee`.
+NOISE = re.compile(r'\b[a-z]*(?:eee|sss|ccc|ooo)[a-z]*\b|\s[-.,]+\s*$', re.I)
+
+
+def snap(name, names):
+    """An OCR town name, matched to the closed list. -> (name, how)"""
+    import difflib
+    raw = NOISE.sub(' ', TRAIL.sub('', name or ''))
+    raw = re.sub(r'\s+', ' ', raw).strip(' .-')
+    if not raw:
+        return None, 'empty'
+    for n in names:
+        if n.lower() == raw.lower():
+            return n, 'exact'
+    hit = difflib.get_close_matches(raw, names, n=1, cutoff=0.82)
+    if hit:
+        return hit[0], 'snapped'
+    # A tail of the name survives more often than the head, because the head is
+    # what the dot leaders run into: `By-The-Sea` is Manchester-by-the-Sea.
+    low = raw.lower()
+    tail = [n for n in names if n.lower().endswith(low) or low.endswith(n.lower())]
+    if len(tail) == 1:
+        return tail[0], 'by tail'
+    return raw, 'unmatched'
 
 
 def num(s):
@@ -198,21 +265,136 @@ def town_at(labels, off, y0, y1):
 
 
 
-def parse_block(page, lo, hi, year):
-    """One column block -> a list of municipalities."""
+def split_row(tokens):
+    """A row of text -> (label, figures, joined).
+
+    The label is what stands before the first figure; the figures are every
+    number on the row, in printed order. Both row sources agree on this shape,
+    which is the only thing the parser below needs to know about either.
+    """
+    toks = [t for t in tokens if (t or '').strip()]
+    joined = ' '.join(toks).strip()
+    figs, lead, seen = [], [], False
+    for t in toks:
+        v = num(t)
+        if v is None:
+            if not seen:
+                lead.append(t)
+        else:
+            figs.append(v)
+            seen = True
+    return delead(' '.join(lead)), figs, joined
+
+
+def rows_from_cells(page, lo, hi):
+    """Rows from the PDF's own text, via the table detector."""
     clip = pymupdf.Rect(lo, page.rect.height * TOP_FRAC,
                         hi, page.rect.height * BOT_FRAC)
     try:
         found = page.find_tables(strategy='text', clip=clip)
     except Exception:
-        return []
+        return [], [], 0.0
     if not found.tables:
-        return []
+        return [], [], 0.0
     table = max(found.tables, key=lambda x: len(x.rows))
     cells = table.extract()
     bands = [r.bbox for r in table.rows]
     labels = label_lines(page, lo, lo + label_w(page))
     off = skew_offset(labels, bands, cells)
+    # The table detector clips the leftmost column, so a row's own first cell is
+    # not always the whole label; keep the band so the label column can supply it.
+    out = []
+    for i, row in enumerate(cells):
+        label, figs, joined = split_row(row)
+        col0 = delead(row[0] or '')
+        band = bands[i] if i < len(bands) else (0, 0, 0, 0)
+        out.append({'label': col0 or label, 'figs': figs, 'joined': joined,
+                    'band': band})
+    return out, labels, off
+
+
+def rows_from_ocr(page, lo, hi):
+    """Rows from Tesseract, for a page with no usable text layer.
+
+    The block is cropped BEFORE being read, so a line cannot run across the
+    gutter and join two towns into one row -- which is what happens when the
+    whole page is given to Tesseract at once.
+    """
+    import pytesseract
+    from PIL import Image
+    clip = pymupdf.Rect(lo, page.rect.height * TOP_FRAC,
+                        hi, page.rect.height * BOT_FRAC)
+    pix = page.get_pixmap(matrix=pymupdf.Matrix(OCR_ZOOM, OCR_ZOOM), clip=clip)
+    img = Image.open(io.BytesIO(pix.tobytes('png')))
+    # PSM 6 -- "a single uniform block of text" -- because the block has already
+    # been cropped out and is exactly that. Tesseract's automatic segmentation
+    # (PSM 3, the default) decides the ruled label column is furniture and
+    # discards nearly all of it: on the 2008 crop it returns ONE token from that
+    # column against 103 under PSM 6, so every town lost its name and the volume
+    # returned 75 municipalities instead of 253.
+    d = pytesseract.image_to_data(img, config='--psm 6',
+                                  output_type=pytesseract.Output.DICT)
+
+    # THE LABEL COLUMN IS READ SEPARATELY, exactly as it is on the text path.
+    # Tesseract groups words into lines by proximity, and the gap between a town
+    # name and its date is wide enough that it starts a new line -- so a row
+    # assembled from Tesseract's own grouping arrives with its figures intact and
+    # its name missing. Forcing OCR on the 2008 volume that way returned 36
+    # municipalities where the text layer returns 253.
+    # In CROP pixels, not page-relative ones: the image is one block, rendered at
+    # OCR_ZOOM, so a point is OCR_ZOOM pixels and the block's own left edge is
+    # zero. Scaling by the whole page width put the cut at 145px instead of 286
+    # and left every label on the wrong side of it.
+    cut = label_w(page) * OCR_ZOOM
+    lines, labels = {}, {}
+    for i, text in enumerate(d['text']):
+        text = (text or '').strip()
+        if not text:
+            continue
+        x, y, h = d['left'][i], d['top'][i], d['height'][i]
+        key = (d['block_num'][i], d['par_num'][i], d['line_num'][i])
+        if x < cut:
+            labels.setdefault(key, []).append((x, y + h / 2.0, text))
+        else:
+            lines.setdefault(key, []).append((x, y + h / 2.0, text))
+
+    lab = []
+    for key in labels:
+        ws = sorted(labels[key], key=lambda w: w[0])
+        lab.append((sum(w[1] for w in ws) / len(ws),
+                    delead(' '.join(w[2] for w in ws))))
+    lab.sort()
+
+    out = []
+    for key in sorted(lines, key=lambda k: min(w[1] for w in lines[k])):
+        ws = sorted(lines[key], key=lambda w: w[0])
+        mid = sum(w[1] for w in ws) / len(ws)
+        _, figs, joined = split_row([w[2] for w in ws])
+        # The label whose centre is nearest this row's, within a row height.
+        near = [(abs(y - mid), t) for y, t in lab if abs(y - mid) < 14 * OCR_ZOOM]
+        label = min(near)[1] if near else ''
+        out.append({'label': label, 'figs': figs,
+                    'joined': (label + ' ' + joined).strip(),
+                    'band': (0, mid, 0, mid)})
+    return out, [], 0.0
+
+
+def parse_block(page, lo, hi, year, force_ocr=False, names=None):
+    """One column block -> a list of municipalities."""
+    rows, labels, off = ([], [], 0.0) if force_ocr else \
+        rows_from_cells(page, lo, hi)
+    used_ocr = False
+    # A page with almost no text is a scan nobody ran OCR over. It is not a hard
+    # page to parse; there is simply nothing on it to parse, and half the 2000
+    # volume is like that.
+    if force_ocr or len(rows) < 6:
+        try:
+            rows, labels, off = rows_from_ocr(page, lo, hi)
+            used_ocr = True
+        except Exception as exc:
+            print('   [ocr failed] %s' % exc)
+            if not rows:
+                return [], False
 
     towns, cur = [], None
 
@@ -221,36 +403,52 @@ def parse_block(page, lo, hi, year):
                     or cur['no_election']):
             towns.append(cur)
 
-    for ri, row in enumerate(cells):
-        band = bands[ri] if ri < len(bands) else (0, 0, 0, 0)
-        joined = ' '.join(c for c in row if c).strip()
+    for row in rows:
+        joined, figs, col0 = row['joined'], row['figs'], row['label']
         if not joined:
             continue
         if re.search(r'Registered|People\s+Who|Date\s+of|^Town\b|Election\s*$',
                      joined, re.I) and not DATE.search(joined):
             continue
 
-        col0 = delead(row[0] or '')
-        figs = [num(c) for c in row]
-        figs = [f for f in figs if f is not None]
-
-        # A town heading is the row carrying the election date. The second block
-        # prints the town's full name in its own first column; the first block
-        # has it clipped, so the counted sequence supplies it.
         m = DATE.search(joined)
-        if m or no_election(joined):
+        # A ROW WHOSE LABEL IS A MASSACHUSETTS TOWN STARTS THAT TOWN, date or no
+        # date. The heading was recognised only by its date, so when OCR lost the
+        # date -- which it does, the month sitting right where the dot leaders
+        # end -- the town never opened and its precincts were appended to the
+        # town above. Acton came back with sixteen precincts and Adams's total.
+        # A precinct label and a TOTALS label never snap to a town, so this
+        # cannot swallow an ordinary row.
+        heads = False
+        if names and col0 and not PCT.match(col0) and not TOTALS.search(col0):
+            cand, how_c = snap(col0, names)
+            heads = how_c in ('exact', 'snapped')
+
+        if m or no_election(joined) or heads:
             close()
-            # The second block prints the town's full name in its own first
-            # cell; the first block has it clipped by the table detector, so the
-            # label column supplies it, matched through the measured skew.
-            named = town_at(labels, off, band[1], band[3])
-            name = col0 if TOWN.match(col0) and not PCT.match(col0) else None
+            # Where the row's own label is clipped, the label column supplies the
+            # name, matched through the measured skew. The OCR path has no such
+            # column and does not need one: it never clips.
+            named = town_at(labels, off, row['band'][1], row['band'][3]) \
+                if labels else None
+            name = col0 if TOWN.match(col0 or '') and not PCT.match(col0 or '') \
+                else None
             if named and (not name or named.startswith(name[:3])
                           or name.endswith(named[-3:])):
                 name = named
+            how = ''
+            if names:
+                snapped, how = snap(name or col0 or '', names)
+                if how in ('exact', 'snapped', 'by tail'):
+                    name = snapped
+                elif heads:
+                    name = cand
             cur = new_town(name or 'UNKNOWN')
+            cur['name_how'] = how
             if no_election(joined):
                 cur['no_election'] = True
+                continue
+            if not m:
                 continue
             mon = next((x for x in MONTHS
                         if x.lower().startswith(m.group(1).lower()[:3])), None)
@@ -260,7 +458,6 @@ def parse_block(page, lo, hi, year):
                         year, MONTHS.index(mon) + 1, int(m.group(2)))
                 except ValueError:
                     pass
-            # The heading row sometimes carries the first precinct's figures.
             if len(figs) >= 2 and not re.search(r'\d{4}', joined[m.start():]):
                 cur['precincts'].append({'precinct': None, 'reg': figs[-2],
                                          'voted': figs[-1]})
@@ -269,7 +466,7 @@ def parse_block(page, lo, hi, year):
         if cur is None:
             continue
 
-        if TOTALS.search(col0) or (not col0 and TOTALS.search(joined)):
+        if TOTALS.search(col0 or '') or (not col0 and TOTALS.search(joined)):
             if len(figs) >= 2:
                 cur['reg'], cur['voted'] = figs[-2], figs[-1]
             elif figs:
@@ -278,13 +475,13 @@ def parse_block(page, lo, hi, year):
 
         if figs:
             mp = PCT.match(col0) if col0 else None
-            pnum = (mp.group(1) or mp.group(2) or mp.group(3)) if mp else None
+            pnum = next((g for g in (mp.groups() if mp else ()) if g), None)
             body = figs[-2:] if len(figs) >= 2 else figs
             cur['precincts'].append(
                 {'precinct': pnum, 'reg': body[0],
                  'voted': body[1] if len(body) > 1 else None})
     close()
-    return towns
+    return towns, used_ocr
 
 
 def new_town(name):
@@ -371,6 +568,8 @@ def main():
     ap.add_argument('--year', type=int, required=True)
     ap.add_argument('--out', required=True)
     ap.add_argument('--verbose', action='store_true')
+    ap.add_argument('--ocr', action='store_true',
+                    help='OCR every table page, not only the ones with no text')
     a = ap.parse_args()
 
     doc = pymupdf.open(a.pdf)
@@ -380,12 +579,20 @@ def main():
         return 1
     print('table pages: %d-%d' % (pages[0] + 1, pages[-1] + 1))
 
-    rows = []
+    names = load_municipalities(ROOT)
+    print('%d municipalities in the reference list' % len(names))
+    rows, ocr_pages = [], set()
     for i in pages:
         page = doc[i]
         split = block_split(page)
-        rows += parse_block(page, 0, split, a.year)
-        rows += parse_block(page, split, page.rect.width, a.year)
+        for lo, hi in ((0, split), (split, page.rect.width)):
+            got, ocr = parse_block(page, lo, hi, a.year,
+                                   force_ocr=a.ocr, names=names)
+            for t in got:
+                t['by_ocr'] = ocr
+            rows += got
+            if ocr:
+                ocr_pages.add(i)
 
     # One town can straddle a column or page break; merge fragments by name.
     merged = {}
@@ -404,26 +611,49 @@ def main():
     counts = {}
     with io.open(a.out, 'w', encoding='utf-8', newline='') as fh:
         w = csv.writer(fh)
-        w.writerow(['municipality', 'year', 'date', 'registered', 'voted',
-                    'precincts', 'status', 'note'])
+        # EVERYTHING THE PAGE PRINTS, not a summary of it. One row per precinct
+        # and one for the town, so the precinct detail survives -- it is the only
+        # sub-municipal registration figure this project has any source for, and
+        # discarding it to print a total would throw away the more granular half
+        # of what was already read. `level` says which kind of row it is; the
+        # status is the town's, and repeats on its precincts so either grain can
+        # be filtered on its own.
+        w.writerow(['municipality', 'year', 'date', 'level', 'precinct',
+                    'registered', 'voted', 'status', 'note', 'read_by'])
+        n_pct = 0
         for t in sorted(merged.values(), key=lambda x: x['municipality']):
             recover_total(t)
             st, note = check(t)
             if t.get('recovered') and st == 'checked':
-                note += '; the TOTALS label was unreadable and was '                         'identified by the sum'
+                note += ('; the TOTALS label was unreadable and was '
+                         'identified by the sum')
             counts[st] = counts.get(st, 0) + 1
             if a.verbose and st in ('mismatch', 'no_total'):
                 print('   ? %-24s %s' % (t['municipality'], note))
-            w.writerow([t['municipality'], a.year, t['date'] or '',
+            how = 'ocr' if t.get('by_ocr') else 'text'
+            w.writerow([t['municipality'], a.year, t['date'] or '', 'total', '',
                         t['reg'] if t['reg'] is not None else '',
                         t['voted'] if t['voted'] is not None else '',
-                        len(t['precincts']), st, note])
+                        st, note, how])
+            for i, p in enumerate(t['precincts'], 1):
+                n_pct += 1
+                w.writerow([t['municipality'], a.year, t['date'] or '',
+                            'precinct', p.get('precinct') or i,
+                            p['reg'] if p['reg'] is not None else '',
+                            p['voted'] if p['voted'] is not None else '',
+                            st, '', how])
 
+    dated = sum(1 for t in merged.values() if t['date'])
     good = counts.get('checked', 0) + counts.get('no_election', 0)
     print('%d municipalities, %d fully checked (%.0f%%)'
           % (len(merged), good, 100.0 * good / max(1, len(merged))))
     for k in sorted(counts, key=lambda x: -counts[x]):
         print('   %-12s %4d' % (k, counts[k]))
+    if ocr_pages:
+        print('   %d of %d pages had no text layer and were read by OCR'
+              % (len(ocr_pages), len(pages)))
+    print('   %d precinct rows, %d town-years with an election date'
+          % (n_pct, dated))
     print('wrote %s' % a.out)
     return 0
 
