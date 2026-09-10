@@ -4,7 +4,7 @@ Abington2015,publish,11,
 Abington2017,review,12,Board of Selectmen: seats inferred as 3 but the totals imply 2
 Abington2019,review,8,Board of Selectmen: seats inferred as 2 but the totals imply 1
 Acushnet2018,review,13,QUESTION I: seat count left null by the transcriber
-Amherst2005,review,16,SELECTMEN: no candidates
+Amherst2005,review,16,no two contests agree on a ballot count
 Amherst2008,publish,8,
 Amherst2016,review,8,CHARTER COMMISSION: seat count left null by the transcriber
 Amherst2017,publish,9,
@@ -38,7 +38,7 @@ Avon2011,review,9,HOUSING AUTHORITY:: a figure was not readable
 Avon2013,hold,0,the parse found no contest in this section
 Avon2014,publish,8,
 Avon2015,publish,8,
-Ayer2010,publish,11,
+Ayer2010,hold,11,"Governor and Lieutenant Governor is a state or county office, so this section is not one annual municipal election (8 such offices here)"
 Ayer2011,review,17,Selectman: seat count left null by the transcriber
 Ayer2012,publish,10,
 Ayer2013,hold,0,the parse found no contest in this section
@@ -58,9 +58,9 @@ Barnstable2012,hold,0,the parse found no contest in this section
 Barnstable2014,review,15,no election date could be derived
 Barnstable2015,hold,0,the parse found no contest in this section
 Barnstable2016,review,10,no election date could be derived
-Barnstable2017,review,10,QUESTION 1: seat count left null by the transcriber
+Barnstable2017,hold,10,"ELECTOR OF PRESIDENT AND VICE PRESIDENT is a state or county office, so this section is not one annual municipal election (4 such offices here)"
 Barnstable2018,review,5,no election date could be derived
-Barnstable2019,review,18,TOWN OF BARNSTABLE PRECINCT 1S REPRESENTATIVES: seat count left null by the transcriber
+Barnstable2019,hold,18,"REPRESENTATIVE IN GENERAL COURT is a state or county office, so this section is not one annual municipal election (5 such offices here)"
 Barnstable2020,publish,9,no two contests agree on a ballot count
 Becket2017,publish,8,
 Becket2020,publish,7,
@@ -91,7 +91,7 @@ Belmont2020,review,10,TOWN COMMITTEE: seat count left null by the transcriber
 Berkley2017,hold,0,the parse found no contest in this section
 Berlin2001,publish,11,
 Billerica2019,review,11,PCT 5 MTG MBRS: seat count left null by the transcriber
-Billerica2020,publish,4,no two contests agree on a ballot count
+Billerica2020,hold,4,"PRESIDENT -Vote for One is a state or county office, so this section is not one annual municipal election (3 such offices here)"
 Blackstone2011,hold,0,the parse found no contest in this section
 Blackstone2012,hold,0,the parse found no contest in this section
 Blackstone2016,hold,0,the parse found no contest in this section
@@ -170,14 +170,14 @@ Carlisle2016,review,11,BALLOT QUESTION 1: seat count left null by the transcribe
 Carlisle2017,hold,9,PLANNING BOARD 2 FOR 3 YEARS: 1243 marks exceeds 617x2=1234 -- impossible
 Carlisle2018,publish,9,
 Carlisle2020,publish,11,
-Carver2000,hold,27,Moderator - 1 year ( Vote for 1): 457 marks exceeds 326x1=326 -- impossible
-Carver2001,hold,36,Moderator - 1 year (Vote for 1): 789 marks exceeds 777x1=777 -- impossible
+Carver2000,publish,27,no two contests agree on a ballot count
+Carver2001,publish,36,no two contests agree on a ballot count
 Carver2002,hold,0,the parse found no contest in this section
 Carver2003,publish,12,
-Carver2004,hold,33,Selectman - 3 Years: 373 marks exceeds 338x1=338 -- impossible
-Carver2005,hold,27,Selectmen - 3 Years: 1562 marks exceeds 544x2=1088 -- impossible
+Carver2004,publish,33,no two contests agree on a ballot count
+Carver2005,publish,27,no two contests agree on a ballot count
 Carver2006,hold,0,the parse found no contest in this section
-Carver2007,hold,42,Selectmen - 3 Years: 647 marks exceeds 633x1=633 -- impossible
+Carver2007,review,42,no election date could be derived
 Carver2008,publish,8,
 Carver2009,review,13,Library Trustees - 1 Year: seat count left null by the transcriber
 Carver2010,publish,15,
@@ -202,7 +202,7 @@ Chatham2018,review,6,Selectman for one (1) year unexpired term: no candidates
 Chatham2019,publish,3,
 Chatham2020,publish,3,
 Chelmsford2008,review,10,QUESTION 1: seat count left null by the transcriber
-Chelmsford2011,hold,15,TOWN MTG REPRES (3 YEARS) (6) PCT #7: 3948 marks exceeds 564x6=3384 -- impossible
+Chelmsford2011,review,15,no two contests agree on a ballot count
 Chelmsford2012,publish,17,
 Chelmsford2013,publish,21,
 Chelmsford2014,publish,19,
@@ -256,7 +256,7 @@ Dartmouth2011,hold,0,the parse found no contest in this section
 Dartmouth2013,review,5,PUBLIC LIBRARIES TRUSTEE: seat count left null by the transcriber
 Dartmouth2016,hold,0,the parse found no contest in this section
 Dartmouth2017,hold,0,the parse found no contest in this section
-Dartmouth2020,review,16,Town Meeting Members Precinct 5 3 Year: seats inferred as 10 but the totals imply 1
+Dartmouth2020,publish,16,
 Deerfield2014,hold,0,the parse found no contest in this section
 Dennis2009,publish,6,
 Dighton2020,publish,9,
@@ -318,7 +318,7 @@ Falmouth2008,hold,17,Planning Board: 25593 marks exceeds 8531x2=17062 -- impossi
 Falmouth2010,publish,24,
 Falmouth2011,hold,18,Selectman Elect two for three year term: 13644 marks exceeds 6819x2=13638 -- impossible
 Falmouth2012,review,16,"PRECINCT 1 Town Meeting Member Elect Nine for three year term, Nine for two year, Nine for one year: seat count left null by the transcriber"
-Falmouth2013,hold,11,Town Meeting Member Elect Nine for three year term: 10566 marks exceeds 946x9=8514 -- impossible
+Falmouth2013,publish,11,no two contests agree on a ballot count
 Falmouth2015,publish,21,
 Falmouth2016,publish,24,
 Falmouth2017,review,9,"Question One: Shall the Town of Falmouth be allowed to exempt from the provisions of Proposition Two and One Half, so-called, the amounts required to pay for the bond issued for the design, permitting and construction of a new senior center?: seat count left null by the transcriber"
@@ -328,7 +328,7 @@ Falmouth2020,hold,0,the parse found no contest in this section
 Foxborough2015,review,11,QUESTION# 1: seat count left null by the transcriber
 Foxborough2016,review,12,no election date could be derived
 Foxborough2018,review,7,no election date could be derived
-Framingham2015,hold,29,Town Meeting Members Precinct 7: 804 marks exceeds 91x4=364 -- impossible
+Framingham2015,review,29,Town Meeting Members Precinct 6: seat count left null by the transcriber
 Franklin2018,review,6,BOARD OF ASSESSORS: seat count left null by the transcriber
 Franklin2020,review,7,no election date could be derived
 Freetown2008,review,11,Library Trustees (vote for 2): a figure was not readable
@@ -397,7 +397,7 @@ Groveland2012,hold,0,the parse found no contest in this section
 Groveland2014,publish,12,
 Groveland2016,hold,16,Road Commissioner 3 yrs: 1128 marks exceeds 1126x1=1126 -- impossible
 Groveland2017,hold,17,Light Commissioner: 827 marks exceeds 826x1=826 -- impossible
-Groveland2018,hold,26,CEMETERY COMMISSION: 680 marks exceeds 592x1=592 -- impossible
+Groveland2018,review,26,ASSESSOR: seat count left null by the transcriber
 Groveland2019,publish,14,
 Hadley2011,publish,12,
 Hadley2012,publish,12,
@@ -616,14 +616,14 @@ Marblehead2017,publish,13,
 Marblehead2018,hold,13,Selectmen 1 Year Term: 11482 marks exceeds 2296x5=11480 -- impossible
 Marblehead2019,hold,0,the parse found no contest in this section
 Marblehead2020,hold,0,the parse found no contest in this section
-Marlborough2001,hold,11,MAYOR: 6144 marks exceeds 830x1=830 -- impossible
+Marlborough2001,review,11,COUNCILOR-AT-LARGE: seat count left null by the transcriber
 Marlborough2003,publish,10,no two contests agree on a ballot count
 Marlborough2005,review,11,COUNCILOR-AT-LARGE: seat count left null by the transcriber
 Marlborough2007,review,11,COUNCILOR-AT-LARGE: seat count left null by the transcriber
 Marlborough2008,hold,0,the parse found no contest in this section
-Marlborough2011,hold,11,MAYOR: 6002 marks exceeds 847x1=847 -- impossible
+Marlborough2011,publish,11,no two contests agree on a ballot count
 Marlborough2013,review,10,SCHOOL COMMITTEE: seats inferred as 5 but the totals imply 3
-Marlborough2015,hold,11,MAYOR: 4388 marks exceeds 626x1=626 -- impossible
+Marlborough2015,review,11,COUNCILOR-AT-LARGE: seat count left null by the transcriber
 Marlborough2019,review,11,COUNCILOR-AT-LARGE: seat count left null by the transcriber
 Marshfield2008,review,12,BOARD OF ASSESSOR THREE YEARS: seat count left null by the transcriber
 Marshfield2011,publish,11,
@@ -653,7 +653,7 @@ Maynard2020,hold,0,the parse found no contest in this section
 Medfield2001,review,12,Trustees of Public Library (vote for not more than two): a figure was not readable
 Medfield2002,review,9,Housing Authority (vote for one): a figure was not readable
 Medfield2003,review,10,no election date could be derived
-Medfield2004,review,4,REPRESENTATIVE IN GENERAL COURT: a figure was not readable
+Medfield2004,hold,4,"REPRESENTATIVE IN GENERAL COURT is a state or county office, so this section is not one annual municipal election (4 such offices here)"
 Medway2014,review,10,QUESTION1: seat count left null by the transcriber
 Medway2015,review,9,BOARD OF SELECTMEN: seat count left null by the transcriber
 Medway2016,hold,0,the parse found no contest in this section
@@ -706,7 +706,7 @@ Montague2010,publish,21,
 Montague2011,publish,19,
 Montague2014,publish,19,
 Montague2015,review,21,"PUBLIC LIBRARY TRUSTEE, for THREE years: a figure was not readable"
-Montague2016,review,27,"TOWN MEETING MEMBERS, For three years Precinct 1: seats inferred as 7 but the totals imply 2"
+Montague2016,publish,27,
 Montague2017,review,22,QUESTION: seat count left null by the transcriber
 Montague2018,review,17,"TOWN MEETING MEMBERS, for THREE years PRECINCT 2: a figure was not readable"
 Montague2019,publish,25,
@@ -831,7 +831,7 @@ Otis2018,publish,10,
 Otis2020,hold,0,the parse found no contest in this section
 Otis2021,publish,10,
 Oxford2020,review,6,BALLOT QUESTION 1: seat count left null by the transcriber
-Palmer2004,publish,17,no two contests agree on a ballot count
+Palmer2004,hold,17,"President & Vice President is a state or county office, so this section is not one annual municipal election (5 such offices here)"
 Paxton2001,review,13,Selectboard: a figure was not readable
 Paxton2002,review,22,Moderator: a figure was not readable
 Paxton2007,review,12,Selectboard: a figure was not readable
@@ -973,7 +973,7 @@ Rutland2017,hold,0,the parse found no contest in this section
 Rutland2018,hold,0,the parse found no contest in this section
 Rutland2019,review,10,Capital Expenditure Exclusion Q # 1: seat count left null by the transcriber
 Salem2000,hold,0,the parse found no contest in this section
-Salem2010,publish,4,no two contests agree on a ballot count
+Salem2010,hold,4,"SENATOR IN CONGRESS is a state or county office, so this section is not one annual municipal election (4 such offices here)"
 Salem2019,hold,0,the parse found no contest in this section
 Salisbury2010,publish,6,
 Salisbury2011,publish,4,no two contests agree on a ballot count
@@ -1030,7 +1030,7 @@ Shutesbury2012,hold,0,the parse found no contest in this section
 Shutesbury2020,review,7,Board of Health: a figure was not readable
 SouthHadley2007,hold,0,the parse found no contest in this section
 SouthHadley2008,review,18,"South Hadley 2009 is already published from SouthHadley2009, which read more of the page"
-SouthHadley2009,review,19,TOWN MEETING MEMBER PRECINCT A FOR THREE YEARS: seats inferred as 6 but the totals imply 1
+SouthHadley2009,review,19,QUESTION 1 CHARTER: no candidates
 SouthHadley2010,review,18,LIBRARY TRUSTEES FOR THREE YEARS: a figure was not readable
 SouthHadley2011,hold,22,BOARD OF HEALTH FOR THREE YEARS: 2066 marks exceeds 2060x1=2060 -- impossible
 SouthHadley2012,publish,21,
@@ -1039,7 +1039,7 @@ SouthHadley2014,review,16,LIBRARY TRUSTEES FOR THREE YEARS: seat count left null
 SouthHadley2015,hold,20,PLANNING BOARD FOR FIVE YEARS: 1652 marks exceeds 1556x1=1556 -- impossible
 SouthHadley2016,hold,0,the parse found no contest in this section
 SouthHadley2018,hold,0,the parse found no contest in this section
-SouthHadley2019,review,21,Precinct A Town Meeting Members (3 yr): seats inferred as 4 but the totals imply 1
+SouthHadley2019,publish,21,
 SouthHadley2020,hold,0,the parse found no contest in this section
 Southborough2005,review,10,Library Trustees: seat count left null by the transcriber
 Southborough2009,publish,11,

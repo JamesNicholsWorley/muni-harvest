@@ -44,6 +44,15 @@ contest is flagged, not rewritten.
 import collections
 import re
 
+# The two scopes that are not the town. A regional district spans several
+# towns, so its marks exceed the town's ballots legitimately; a ward or
+# precinct divides one town, so its marks are that precinct's ballots and the
+# town's count says nothing about them. Everything else is town-wide,
+# INCLUDING a record that does not state a scope: a check that quietly stops
+# checking when a field is missing is worse than one that is occasionally
+# wrong out loud.
+NOT_TOWN_WIDE = ("sub_town", "regional_district")
+
 # The rows that are ballot POSITIONS rather than people. Only these complete
 # the identity: a write-in or a scattering row may be present and still leave
 # marks short, because an uncounted write-in is exactly what a clerk omits.
@@ -90,11 +99,21 @@ def quotes_a_seat_count(contest):
 
 
 def derive_ballots(contests):
-    """Ballots, from contests that agree. Two agreeing is the minimum."""
+    """Ballots, from MUNICIPALITY-WIDE contests that agree. Two is the minimum.
+
+    Scope decides eligibility in both directions, and both were not covered.
+    A regional district spans several towns so its marks exceed the town's
+    ballots; a ward or precinct divides one town, so its marks are that
+    precinct's ballots and not the town's. Marlborough 2011 derived 847 from
+    Councilor Ward Six and Ward Seven agreeing with each other, and then
+    reported the city's Mayor -- 6002 marks, which IS the city's ballot count
+    -- as arithmetically impossible against it. Only `at_large` answers the
+    question being asked.
+    """
     q = collections.Counter()
     for c in contests:
         seats = c.get("num_winners")
-        if not seats or c.get("scope") == "regional_district":
+        if not seats or c.get("scope") in NOT_TOWN_WIDE:
             continue
         marks = _marks(c)
         if marks is None or marks % seats:
@@ -131,6 +150,11 @@ def fix_seat_count(contest, ballots):
     """
     seats, marks = contest.get("num_winners"), _marks(contest)
     if not ballots or not seats or marks is None:
+        return None
+    # A ward or precinct contest is bounded by ITS ballots, and the town's
+    # count says nothing about how many those were. A regional district
+    # exceeds the town's legitimately. Neither can be read against `ballots`.
+    if contest.get("scope") in NOT_TOWN_WIDE:
         return None
     if marks % ballots:
         return None

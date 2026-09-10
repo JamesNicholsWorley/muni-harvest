@@ -38,6 +38,7 @@ import glob
 import io
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -82,12 +83,59 @@ def grounding(stem, doc, sections):
     return out or None
 
 
+# Offices no municipal ballot in Massachusetts carries. The office vocabulary
+# is the state fingerprint -- a name test cannot separate a state election from
+# a town one, because both are headed with the town's name and printed in the
+# town's own report.
+#
+# The leading guard is what keeps it honest. A city councillor is a municipal
+# office and a Governor's Councillor is not, so any office qualified by a ward,
+# precinct, district, at-large or the word Town or City is the town's own,
+# whatever else it says. And the length cap keeps a ballot question out: the
+# nuclear-fuel question Falmouth put to its voters in 2017 names the Governor
+# of the Commonwealth in its third line.
+STATE_OFFICE = re.compile(
+    r"^(?!.*\b(WARD|PRECINCT|AT[- ]?LARGE|TOWN|CITY)\b).{0,70}?"
+    r"\b(ELECTORS?\s+OF\s+PRESIDENT|PRESIDENTIAL\s+ELECTOR|PRESIDENT\b|"
+    r"(LIEUTENANT\s+|LT\.?\s*)?GOVERNOR\b|ATTORNEY\s+GENERAL|"
+    r"SECRETARY\s+OF\s+(STATE|THE\s+COMMONWEALTH)|RECEIVER\s+GENERAL|"
+    r"SENATOR\s+IN\s+CONGRESS|REP\w*\s+IN\s+CONGRESS|"
+    r"SENATOR\s+IN\s+GENERAL\s+COURT|REPRESENTATIVE\s+IN\s+GENERAL\s+COURT|"
+    r"DISTRICT\s+ATTORNEY|REGISTER\s+OF\s+(PROBATE|DEEDS)|CLERK\s+OF\s+COURTS|"
+    r"\bSHERIFF\b|COUNTY\s+COMMISSIONER|STATE\s+COMMITTEE)", re.I | re.S)
+
+
+def state_offices(contests):
+    """The offices in this record that only a state or federal ballot prints."""
+    out = []
+    for c in contests:
+        office = (c.get("office_original") or "").strip()
+        if len(office) < 80 and STATE_OFFICE.match(office):
+            out.append(office)
+    return out
+
+
 def grade(doc):
     """(rung, reasons) for one bridged record."""
     contests = doc.get("elections") or []
     reasons = []
     if not contests:
         return "hold", ["the parse found no contest in this section"]
+
+    # Scope is asked before the reading is judged, for the same reason Layer 0
+    # runs before Layer 1: no arithmetic recovers from the wrong election. Ayer
+    # 2010 published eleven contests headed "Governor and Lieutenant Governor",
+    # "Attorney General", "Secretary of State"; the section is the September
+    # state primary, and its own first line says so. One such office is enough,
+    # because it cannot appear on an annual municipal ballot at all -- where
+    # the rest of the record IS the town's, the cut caught two elections and
+    # the record claims to be one.
+    state = state_offices(contests)
+    if state:
+        return "hold", ["%s is a state or county office, so this section is "
+                        "not one annual municipal election%s"
+                        % (state[0], "" if len(state) == 1 else
+                           " (%d such offices here)" % len(state))]
 
     verdict, why = escalate.review(doc)
     wrong_doc = [w for w in why if w.startswith("the document is not a return")]

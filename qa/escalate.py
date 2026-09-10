@@ -23,6 +23,15 @@ rather than arithmetic ones.
 import collections
 import re
 
+# The two scopes that are not the town. A regional district spans several
+# towns, so its marks exceed the town's ballots legitimately; a ward or
+# precinct divides one town, so its marks are that precinct's ballots and the
+# town's count says nothing about them. Everything else is town-wide,
+# INCLUDING a record that does not state a scope: a check that quietly stops
+# checking when a field is missing is worse than one that is occasionally
+# wrong out loud.
+NOT_TOWN_WIDE = ("sub_town", "regional_district")
+
 ADDRESS = re.compile(r"^\s*[0-9]+\s+[A-Za-z]", re.M)     # "42 Elm Street"
 
 # A page that is not a return at all. Buying a second opinion on it is money
@@ -52,11 +61,21 @@ def _marks(contest):
 
 
 def derive_ballots(contests):
-    """The ballot count, from contests that agree. None is a real answer."""
+    """The ballot count, from MUNICIPALITY-WIDE contests that agree.
+
+    None is a real answer. So is refusing a contest that never had the town's
+    ballots behind it: a regional district spans several towns and a ward or
+    precinct divides one, so neither answers "how many ballots did this town
+    cast". Excluding only the first left the second, and Marlborough 2011
+    derived 847 ballots from Councilor Ward Six agreeing with Ward Seven and
+    then called the city's Mayor impossible -- 6002 marks in a one-seat race,
+    which is the city's ballot count itself. Framingham 2015 prints nothing
+    but Town Meeting Members by precinct and derived 91.
+    """
     q = collections.Counter()
     for c in contests:
         m, s = _marks(c), c.get("num_winners")
-        if m is None or not s or c.get("scope") == "regional_district":
+        if m is None or not s or c.get("scope") in NOT_TOWN_WIDE:
             continue
         if m % s == 0:
             q[m // s] += 1
@@ -101,7 +120,7 @@ def review(record):
             reasons.append(f"{office}: seat count left null by the transcriber")
         elif not seats:
             reasons.append(f"{office}: seat count is zero")
-        elif c.get("scope") != "regional_district" and ballots and marks is not None:
+        elif c.get("scope") not in NOT_TOWN_WIDE and ballots and marks is not None:
             if marks > ballots * seats:
                 reasons.append(
                     f"{office}: {marks} marks exceeds {ballots}x{seats}"
