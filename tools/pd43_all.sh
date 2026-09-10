@@ -12,8 +12,14 @@ for y in $ORDER; do
     out="pd43/out-$y.csv"
     [ -s "$out" ] && [ "$out" -nt tools/pd43_turnout.py ] && continue
     printf '%s ' "$y"
+    # Report whatever summary the parser prints, rather than one exact wording.
+    # A grep for a fixed phrase printed `no table` the moment that phrase
+    # changed, for volumes that had in fact parsed perfectly well -- a reporting
+    # bug that reads exactly like a data problem.
     python tools/pd43_turnout.py "$src" --year "$y" --out "$out" 2>&1 \
-        | grep -oE "[0-9]+ x \([0-9]+%\)" \
-        || echo "no table"
+        | grep -vE "pymupdf_layout|reference list" \
+        | grep -E "municipalities|no local-election" \
+        | head -1
+    [ -s "$out" ] || echo "   (nothing written for $y)"
 done
 echo "ALL VOLUMES DONE"
