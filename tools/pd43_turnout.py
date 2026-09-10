@@ -336,13 +336,27 @@ def block_split(page, words=None):
 
 def label_lines(page, lo, hi):
     """(y, text) for each printed line of the label column, in order."""
-    words = [w for w in page.get_text('words') if lo <= w[0] < hi]
-    lines = {}
+    words = sorted((w for w in page.get_text('words') if lo <= w[0] < hi),
+                   key=lambda w: w[1])
+    # GROUP BY GAP, NOT BY BUCKET. Rounding y into three-point buckets splits a
+    # name whose two words sit three points apart across a bucket boundary --
+    # `New` at 468 and `Braintree` at 471 became separate lines, so New
+    # Braintree and New Marlborough collapsed into a row called `New` holding
+    # the sum of three towns. The rows themselves are twenty-eight points apart
+    # here, so grouping words within six points of each other cannot merge two
+    # of them.
+    lines, cur = [], []
     for w in words:
-        lines.setdefault(round(w[1] / 3.0), []).append(w)
+        if cur and w[1] - cur[-1][1] > 3.5:
+            lines.append(cur)
+            cur = []
+        cur.append(w)
+    if cur:
+        lines.append(cur)
+
     out = []
-    for k in sorted(lines):
-        ws = sorted(lines[k], key=lambda w: w[0])
+    for ws in lines:
+        ws = sorted(ws, key=lambda w: w[0])
         text = delead(' '.join(w[4] for w in ws))
         if text:
             out.append((ws[0][1], text))
@@ -731,16 +745,27 @@ def reconstruct(t):
     if not p:
         return None
 
-    # The total is the sum of the precincts.
+    # The total is the sum of the precincts. THE TWO COLUMNS ARE REBUILT
+    # INDEPENDENTLY: the registered total and the people-who-voted total are
+    # separate figures on the page and the scan damages them separately. Seven
+    # towns in the 2008 volume have every precinct intact in both columns, a
+    # sound registered total and no voted total at all -- rebuilding only when
+    # BOTH were missing left all seven of them with half their data.
+    did = []
     if t['reg'] is None:
         sreg = sum(x['reg'] for x in p if x['reg'] is not None)
         if sreg and all(x['reg'] is not None for x in p):
             t['reg'] = sreg
-            svote = sum(x['voted'] for x in p if x['voted'] is not None)
-            if all(x['voted'] is not None for x in p):
-                t['voted'] = svote
-            t['derived'] = 'total is the sum of its %d precincts' % len(p)
-            return 'total'
+            did.append('registered')
+    if t['voted'] is None:
+        svote = sum(x['voted'] for x in p if x['voted'] is not None)
+        if svote and all(x['voted'] is not None for x in p):
+            t['voted'] = svote
+            did.append('people who voted')
+    if did:
+        t['derived'] = ('%s total is the sum of its %d precincts'
+                        % (' and '.join(did), len(p)))
+        return 'total'
 
     # One precinct missing under a total that survived.
     if t['reg'] is not None:
