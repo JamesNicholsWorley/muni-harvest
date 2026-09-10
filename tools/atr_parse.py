@@ -69,6 +69,43 @@ def request_for(stem, path, spec, model):
                        "messages": [{"role": "user", "content": blocks}]}}
 
 
+
+def already_in_flight(client, stems, hours=48):
+    """(blocking_reason, overlapping_stems) -- ask the ACCOUNT, not our state.
+
+    Our state file records what THIS run submitted. It cannot record what a run
+    whose state file was lost, or written elsewhere, submitted -- and that is
+    exactly the case that duplicated a whole corpus. The account is what gets
+    billed, so the account is what gets asked.
+    """
+    import datetime
+    cutoff = (datetime.datetime.now(datetime.timezone.utc)
+              - datetime.timedelta(hours=hours))
+    want = set(stems)
+    overlap, live = set(), []
+    for b in client.messages.batches.list(limit=100):
+        if b.created_at < cutoff:
+            continue
+        if b.processing_status != "ended":
+            # An in-flight batch will not enumerate its requests, so nothing
+            # can prove it is not ours. Treat it as a stop.
+            live.append(b.id)
+            continue
+        try:
+            for r in client.messages.batches.results(b.id):
+                if r.custom_id in want:
+                    overlap.add(r.custom_id)
+        except Exception:
+            continue
+    if overlap:
+        return ("%d of these sections were already submitted in the last %dh"
+                % (len(overlap), hours)), sorted(overlap)
+    if live:
+        return ("%d batch(es) are still in flight and cannot be enumerated: %s"
+                % (len(live), ", ".join(live[:3]))), []
+    return None, []
+
+
 def load_state(path):
     if os.path.exists(path):
         return json.load(io.open(path, encoding="utf-8"))
@@ -113,6 +150,17 @@ def cmd_submit(args):
     todo = [(s, p) for s, p in manifest(args.manifest) if s not in seen]
     print("%d sections to submit (%d already batched or collected)"
           % (len(todo), len(seen)))
+    if todo and not args.dry_run:
+        reason, overlap = already_in_flight(client, [s for s, _ in todo])
+        if reason:
+            print("REFUSING TO SUBMIT: " + reason)
+            if overlap:
+                print("  e.g. " + ", ".join(overlap[:8]))
+            print("  Collect the existing work, or pass --force if you are "
+                  "certain it is unrelated.")
+            if not args.force:
+                return
+            print("  --force given; submitting anyway.")
     if args.limit:
         todo = todo[:args.limit]
 
@@ -203,6 +251,9 @@ def main():
         q.add_argument("--model", default="haiku", choices=sorted(MODELS))
         q.add_argument("--limit", type=int, default=0)
         q.add_argument("--dry-run", action="store_true")
+        q.add_argument("--force", action="store_true",
+                       help="submit even though the account shows "
+                            "overlapping or in-flight work")
     args = ap.parse_args()
     (cmd_submit if args.cmd == "submit" else cmd_collect)(args)
 

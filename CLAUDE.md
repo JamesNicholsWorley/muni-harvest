@@ -285,6 +285,35 @@ to a clean run.
 - **Anything carrying residents' personal details.** One town's survey appendix
   carries names, street addresses, phone numbers and emails.
 
+## Before spending, ask what the account has already paid for
+
+**Never submit paid work without checking the ACCOUNT for it first — not your
+own state file.**
+
+A submit run once believed nothing had been sent, because the state file it
+consulted was empty, and sent the whole corpus a second time. Both runs
+completed, both were billed, one was collected. $14.95 bought a second copy of
+work already held: 37% of that session's spend, for nothing.
+
+The idempotence guard was real and asked the wrong question. It compared
+against its own bookkeeping, so a run whose state was written elsewhere or lost
+was invisible to it. The thing that gets billed is the account, so the account
+is the thing to ask.
+
+`tools/atr_parse.py` now refuses to submit when the account shows overlapping
+or in-flight work. Two checks, because the API answers two questions: an ended
+batch enumerates its `custom_id`s, so an overlap is a fact and it refuses by
+name; a live batch will not enumerate, so nothing can prove it is not ours and
+a recent one is a stop rather than a warning. Pausing costs minutes. Being
+wrong costs the whole bill again.
+
+This applies to a person as much as to a script. **A background job whose log
+you cannot see is not a job that failed.** That was the actual error: `nohup`
+was known not to survive here, its log never appeared, and the absence of
+output was read as absence of work. Check the far side — the account, the API,
+the repository — before concluding nothing happened, and never re-run a paid
+job on the strength of a missing log.
+
 ## Working notes
 
 - Long jobs run in the background. Do not idle-poll waiting on a shell when
