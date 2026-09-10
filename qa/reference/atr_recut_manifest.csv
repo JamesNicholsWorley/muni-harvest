@@ -84,6 +84,7 @@ Holliston2004,OK,4,1,9,0,,0,41,cut 1-2 of 4; tally pages none
 Holliston2009,NEEDS_OCR,52,,0,0,,0,0,
 Holliston2016,OK,154,60,13,2,yes,4,52,"cut 59-64 of 154; tally pages [61, 62, 63]"
 Hopedale2020,OK,109,2,29,0,,0,126,cut 1-3 of 109; tally pages none
+Hopkinton2017,NEEDS_OCR,0,,0,0,,0,0,
 Hull2008,NEEDS_OCR,201,,0,0,,0,0,
 Lancaster2003,OK,87,36,17,0,,0,26,cut 35-37 of 87; tally pages none
 Lancaster2004,OK,94,37,38,0,,0,41,cut 36-38 of 94; tally pages none
@@ -102,8 +103,13 @@ Ludlow2009,OK,101,6,24,0,,1,12,cut 5-7 of 101; tally pages none
 Ludlow2010,OK,104,50,17,1,,6,88,cut 49-51 of 104; tally pages none
 Ludlow2011,OK,106,51,11,1,,6,40,cut 50-52 of 106; tally pages none
 Ludlow2012,OK,98,46,25,1,yes,14,24,cut 45-47 of 98; tally pages [46]
+Ludlow2013,OK,130,64,21,1,yes,14,14,cut 63-65 of 130; tally pages [64]
+Ludlow2014,OK,126,24,19,1,yes,8,12,cut 23-25 of 126; tally pages [24]
+Ludlow2015,OK,134,29,15,1,yes,8,10,cut 28-30 of 134; tally pages [29]
 Ludlow2016,OK,126,25,24,1,yes,15,12,cut 24-26 of 126; tally pages [25]
+Ludlow2017,OK,132,28,15,1,yes,8,10,cut 27-29 of 132; tally pages [28]
 Ludlow2018,OK,130,22,13,1,yes,6,77,cut 20-23 of 130; tally pages [21]
+Ludlow2019,OK,126,21,20,1,yes,9,14,cut 20-22 of 126; tally pages [21]
 Ludlow2020,OK,134,22,27,1,yes,24,20,"cut 20-23 of 134; tally pages [21, 22]"
 Lunenburg2011,NEEDS_OCR,102,,0,0,,0,0,
 Manchester2006,OK,88,22,19,0,,0,43,cut 21-23 of 88; tally pages none
@@ -130,6 +136,9 @@ MountWashington2009,NEEDS_OCR,14,,0,0,,0,0,
 Nahant2008,OK,175,42,26,0,yes,9,26,"cut 41-44 of 175; tally pages [42, 43]"
 Nahant2009,OK,122,5,15,0,,0,116,cut 4-6 of 122; tally pages none
 Nahant2019,OK,77,72,27,0,,0,42,cut 71-73 of 77; tally pages none
+Needham2011,OK,150,9,32,0,yes,0,60,cut 8-13 of 150; tally pages [12]
+Needham2013,OK,198,15,36,0,,10,44,cut 14-16 of 198; tally pages none
+NewAshford2020,NEEDS_OCR,40,,0,0,,0,0,
 NewMarlborough2014,OK,47,43,19,0,,0,34,cut 42-44 of 47; tally pages none
 Newbury2015,NEEDS_OCR,104,,0,0,,0,0,
 Newbury2018,NEEDS_OCR,101,,0,0,,0,0,
@@ -151,6 +160,7 @@ Northbridge2020,OK,204,73,20,0,yes,11,5,"cut 69-82 of 204; tally pages [69, 70, 
 Northfield2018,OK,85,42,23,0,,0,26,cut 41-43 of 85; tally pages none
 Norton2015,OK,1,1,12,0,yes,7,9,cut 1-1 of 1; tally pages [1]
 Norwell2017,NEEDS_OCR,182,,0,0,,0,0,
+Otis2020,OK,87,87,20,0,,0,14,cut 86-87 of 87; tally pages none
 Paxton2020,OK,1,1,23,0,,0,40,cut 1-1 of 1; tally pages none
 Pembroke2012,OK,183,4,11,0,,0,44,cut 3-5 of 183; tally pages none
 Petersham2006,NEEDS_OCR,98,,0,0,,0,0,
@@ -163,14 +173,21 @@ Plainville2018,OK,148,30,47,7,yes,12,32,cut 29-32 of 148; tally pages [31]
 Plympton2007,OK,113,41,20,3,yes,7,34,cut 40-45 of 113; tally pages [44]
 Princeton2004,OK,130,64,10,0,yes,3,11,"cut 62-66 of 130; tally pages [63, 64, 65]"
 Rehoboth2008,NEEDS_OCR,233,,0,0,,0,0,
+Rehoboth2012,OK,223,221,16,0,,0,88,cut 220-222 of 223; tally pages none
 Richmond2012,OK,96,33,10,0,,1,41,cut 32-34 of 96; tally pages none
 Richmond2016,OK,97,74,12,0,,1,49,cut 73-75 of 97; tally pages none
+Rowe2012,ERROR,144,,0,0,,0,0,RuntimeError: code=4: source object number out of range
+Rowley2006,OK,60,15,19,0,yes,0,134,cut 14-17 of 60; tally pages [16]
+Rowley2015,OK,101,60,10,0,,1,65,cut 59-61 of 101; tally pages none
+Rowley2020,OK,138,90,11,0,,5,46,cut 89-91 of 138; tally pages none
 Royalston2015,NEEDS_OCR,104,,0,0,,0,0,
 Royalston2016,NEEDS_OCR,138,,0,0,,0,0,
 Rutland2014,NEEDS_OCR,98,,0,0,,0,0,
 Salem2000,NEEDS_OCR,111,,0,0,,0,0,
 Salem2019,NEEDS_OCR,25,,0,0,,0,0,
 Sandisfield2018,NEEDS_OCR,84,,0,0,,0,0,
+Sandwich2018,OK,217,90,19,9,yes,12,11,"cut 87-98 of 217; tally pages [88, 89, 90, 91, 92, 93, 94, 95, 96, 97]"
+Sandwich2019,OK,168,66,21,9,yes,10,7,"cut 65-69 of 168; tally pages [66, 67, 68]"
 Saugus2013,NEEDS_OCR,180,,0,0,,0,0,
 Saugus2015,NEEDS_OCR,180,,0,0,,0,0,
 Seekonk2009,NEEDS_OCR,213,,0,0,,0,0,
@@ -186,8 +203,11 @@ Sheffield2011,OK,84,21,17,0,,0,45,cut 20-22 of 84; tally pages none
 Shirley2008,OK,1,1,17,0,,8,41,cut 1-1 of 1; tally pages none
 Shirley2009,OK,3,3,6,0,yes,3,25,cut 2-3 of 3; tally pages [3]
 Shirley2011,OK,2,1,12,0,yes,1,63,cut 1-2 of 2; tally pages [2]
+Shutesbury2012,OK,1,1,9,0,,0,25,cut 1-1 of 1; tally pages none
+SouthHadley2007,NEEDS_OCR,0,,0,0,,0,0,
 Southborough2018,OK,124,4,17,0,,0,14,cut 3-5 of 124; tally pages none
 Southborough2019,OK,114,4,22,0,,0,14,cut 3-5 of 114; tally pages none
+Springfield2007,NEEDS_OCR,6,,0,0,,0,0,
 Stockbridge2020,OK,88,12,18,0,,0,45,cut 11-13 of 88; tally pages none
 Stoneham2015,OK,118,101,45,0,,5,64,cut 100-102 of 118; tally pages none
 Stoughton2014,NEEDS_OCR,312,,0,0,,0,0,
@@ -197,6 +217,9 @@ Stow2008,OK,144,3,27,0,,0,50,cut 2-4 of 144; tally pages none
 Stow2009,OK,156,5,26,0,,0,15,cut 4-6 of 156; tally pages none
 Stow2011,OK,144,3,21,0,,0,13,cut 2-4 of 144; tally pages none
 Stow2012,NEEDS_OCR,148,,0,0,,0,0,
+Sudbury2017,OK,180,45,27,20,yes,21,13,"cut 41-58 of 180; tally pages [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 55, 56, 57]"
+Sudbury2018,OK,156,11,20,0,,0,34,cut 10-12 of 156; tally pages none
+Sudbury2019,OK,209,43,16,5,yes,6,10,"cut 42-47 of 209; tally pages [43, 44, 45, 46]"
 Sunderland2013,OK,89,5,40,0,,0,40,cut 4-6 of 89; tally pages none
 Sunderland2015,NEEDS_OCR,87,,0,0,,0,0,
 Sutton2007,NEEDS_OCR,129,,0,0,,0,0,
@@ -229,5 +252,10 @@ Wellfleet2014,OK,272,99,17,4,yes,14,16,"cut 98-108 of 272; tally pages [99, 100,
 Westport2013,OK,233,33,16,5,yes,7,28,"cut 32-37 of 233; tally pages [33, 34, 35, 36]"
 Westport2020,OK,256,33,17,0,yes,8,27,"cut 32-36 of 256; tally pages [33, 34, 35]"
 Westwood2008,NEEDS_OCR,99,,0,0,,0,0,
+Wilbraham2013,OK,83,18,45,0,yes,11,12,"cut 17-20 of 83; tally pages [18, 19]"
+Wilbraham2014,OK,88,19,27,0,yes,4,15,"cut 18-22 of 88; tally pages [19, 20, 21]"
+Wilbraham2019,OK,91,22,37,0,,0,33,cut 21-23 of 91; tally pages none
 Worcester2010,NEEDS_OCR,52,,0,0,,0,0,
 Wrentham2014,NEEDS_OCR,130,,0,0,,0,0,
+Yarmouth2011,NEEDS_OCR,0,,0,0,,0,0,
+Yarmouth2020,NEEDS_OCR,0,,0,0,,0,0,

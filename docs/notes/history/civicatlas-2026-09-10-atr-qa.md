@@ -72,9 +72,10 @@ its election four times: the warrant lists the offices to be filled, the
 officers directory lists who holds them, the contents page indexes the result,
 the minutes reference the date. All four carry headings and office words in
 quantity and the return has no more of either; what it has and they do not is
-Blanks, Write-ins, Total Votes, Precinct, Vote For. Measured over 159 reports
-refetched from Wayback and the State Library, the old order put a page of
-tallies inside its window 26 times and the new one 86.
+Blanks, Write-ins, Total Votes, Precinct, Vote For. Measured over the 189 reports
+refetched from Wayback and the State Library whose old cut held no contest,
+the old order put a page of tallies inside its window 31 times and the new
+one 103.
 
 ## What was withdrawn, and the line each was read on
 
@@ -119,9 +120,13 @@ arithmetic can never catch.
 
 ## What is still open
 
-- **317 sections hold no contest.** 251 of their reports were refetched and
-  re-cut with the new ranking; the cuts still have to be parsed, which needs
-  the API key this session does not hold.
+- **317 sections hold no contest.** 260 of their reports were refetched --
+  216 were archive-hosted already and 47 of the 101 municipal URLs resolved to
+  a Wayback capture of the same URL; the other 54 have no capture. 188 re-cut
+  without OCR and 103 of those now reach a page of tallies. 71 are scans and
+  need the OCR pass, which does not finish inside a session here. The cuts
+  still have to be parsed, and that needs the API key this session does not
+  hold.
 - **42 contests quote a printed seat count the arithmetic contradicts.**
   Bourne 2017's "Brd of Health / 3 years vote for 1" runs three candidates and
   blanks summing to exactly 2 x 1103 ballots. The page and the figures cannot
