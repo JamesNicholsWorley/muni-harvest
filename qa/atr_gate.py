@@ -96,9 +96,47 @@ def main():
         for rung in ("publish", "review", "hold"):
             os.makedirs(os.path.join(a.out, rung), exist_ok=True)
 
+    # A town-year may be published once. Two stems reaching the same
+    # municipality and date is the fiscal-year offset -- a 2020 report carrying
+    # May 2019 -- and both cannot stand.
+    claims = {}
     for path in sorted(glob.glob(os.path.join(a.bridged, "*.json"))):
         doc = json.load(io.open(path, encoding="utf-8"))
-        rung, reasons = grade(doc)
+        el = doc.get("elections") or []
+        if not el:
+            continue
+        key = (el[0].get("municipality"), (el[0].get("date") or "")[:4])
+        if not all(key):
+            continue
+        claims.setdefault(key, []).append(
+            (len(el), doc.get("_source_stem") or os.path.basename(path)[:-5]))
+    # The record reading more contests read more of the page. A tie is not
+    # broken by filename, which is the thing already shown unreliable here.
+    loser = {}
+    # `contenders`, not `rows` -- `rows` is the ledger being built below, and
+    # shadowing it here wrote a leaked tuple into the CSV as a data row.
+    for key, contenders in claims.items():
+        if len(contenders) < 2:
+            continue
+        contenders.sort(reverse=True)
+        if contenders[0][0] == contenders[1][0]:
+            for _, stem in contenders:
+                loser[stem] = ("two records claim %s %s and hold the same "
+                               "number of contests; neither can be preferred"
+                               % key)
+        else:
+            for _, stem in contenders[1:]:
+                loser[stem] = ("%s %s is already published from %s, which read "
+                               "more of the page"
+                               % (key[0], key[1], contenders[0][1]))
+
+    for path in sorted(glob.glob(os.path.join(a.bridged, "*.json"))):
+        doc = json.load(io.open(path, encoding="utf-8"))
+        stem_now = doc.get("_source_stem") or os.path.basename(path)[:-5]
+        if stem_now in loser:
+            rung, reasons = "review", [loser[stem_now]]
+        else:
+            rung, reasons = grade(doc)
         counts[rung] += 1
         stem = doc.get("_source_stem") or os.path.basename(path)[:-5]
         if reasons:

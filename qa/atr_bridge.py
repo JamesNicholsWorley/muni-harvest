@@ -60,7 +60,7 @@ def canonical_municipality(printed, stem_town, known):
         # remain still have to match a known municipality exactly, and a page
         # naming somewhere we do not recognise still fails.
         s = re.sub(r"^(the\s+)?(town|city)\s+of\s+", "", s, flags=re.I)
-        s = re.sub(r"[,\s]+(massachusetts|mass\.?|ma)\s*$", "", s, flags=re.I)
+        s = re.sub(r"[,\s]+(massachusetts|mass\.?|ma)\s*"r"(\d{5}(-\d{4})?)?\s*$", "", s, flags=re.I)
         s = re.sub(r"\s+(annual|town|election).*$", "", s, flags=re.I)
         return re.sub(r"[^a-z]", "", s.lower())
 
@@ -70,6 +70,18 @@ def canonical_municipality(printed, stem_town, known):
             note = ("" if norm(printed) == norm(stem_town)
                     else "page says %r, filename says %r" % (printed, stem_town))
             return hit, "printed", note
+    # Text introduced by TOWN OF or CITY OF is CLAIMING to name a
+    # municipality. If it claims to and the name is one we do not know, that is
+    # evidence about the document -- Chelsea 2013's page reads TOWN OF
+    # BENNINGTON, which is a real town in another state, and the record was
+    # published as Chelsea. A heading that never claims to name a town says
+    # nothing either way and the filename may stand.
+    claims_a_town = bool(re.match(r"\s*(the\s+)?(town|city)\s+of\s+\S",
+                                  printed or "", flags=re.I))
+    if printed and claims_a_town:
+        return None, None, ("the page names %r, which is not a Massachusetts "
+                            "municipality -- this is probably another town's "
+                            "document" % printed.strip())
     hit = known.get(norm(stem_town))
     if hit:
         return hit, "filename", ("the page did not name the town"
