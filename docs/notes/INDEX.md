@@ -1,6 +1,6 @@
 # Notes the corpus wrote about itself
 
-Forty notes, one idea each, kept verbatim. Every one exists because
+Forty-two notes, one idea each, kept verbatim. Every one exists because
 something went wrong in a way that was not obvious beforehand, and the specifics
 are what make them stick: a summary saying "closure has limits" would not have
 stopped anyone, and Provincetown's exact figures did.
@@ -21,6 +21,7 @@ to know why something is the way it is.
 - [`parse-identity-checks`](civicatlas-parse-identity-checks.md) — ask whose election it is before comparing parses
 - [`multi-document-town-years`](civicatlas-multi-document-town-years.md) — a pair of documents is one election, registered by sha256
 - [`landing-page-is-a-lead`](civicatlas-landing-page-is-a-lead.md) — a clerk's index page is a lead, not a return
+- [`index-page-outscores-the-return`](civicatlas-index-page-outscores-the-return.md) — a table of contents is a heading and a list of offices, and it kept winning
 - [`date-corroboration`](civicatlas-date-corroboration.md) — read the ARCHIVED capture; a live page names the next election
 - [`proximity-not-aboutness`](civicatlas-proximity-not-aboutness.md) — a signed return outranks a forecast calendar
 - [`undated-returns-publishable`](civicatlas-undated-returns-publishable.md) — the owner's rule for an undated return
@@ -38,6 +39,8 @@ to know why something is the way it is.
 - [`rotate-before-ocr`](civicatlas-rotate-before-ocr.md) — 85 held PDFs carry a /Rotate the reading step ignores; 68 of them fail grounding
 
 ## Layer 2 — does the arithmetic hold?
+
+- [`a-quorum-can-be-outvoted`](civicatlas-a-quorum-can-be-outvoted.md) — a ballot count its own record contradicts is a disagreement, not 192 impossible contests
 
 - [`arithmetic-is-merge-blind`](civicatlas-arithmetic-is-merge-blind.md) — a fused race passes every ballots-times-seats check
 - [`arithmetic-cannot-see-a-lost-name`](civicatlas-arithmetic-cannot-see-a-lost-name.md) — a perfect sum with a candidate missing
