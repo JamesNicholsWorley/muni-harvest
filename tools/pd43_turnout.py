@@ -489,6 +489,43 @@ def town_at(labels, off, y0, y1):
 
 
 
+def page_blocks(page):
+    """How many column blocks the page has, and where they start. -> [(lo, hi)]
+
+    THE HEADING SAYS HOW MANY COLUMNS THERE ARE. A block is a printed table with
+    its own `Registered Voters` heading over it, so counting those headings
+    counts the blocks -- two on the modern pages, one on the 1970s ones.
+
+    The gutter heuristic this replaces guessed from whitespace and was wrong in
+    both directions: it read 218 on a 2008 page whose gutter is at 260, and it
+    read 147 on a 1973 page that has no gutter at all, cutting a single-column
+    table in half so that neither half could see both of its columns. Whitespace
+    is evidence about the gutter. The heading is a statement about it.
+    """
+    W = page.rect.width
+    heads = sorted(w[0] for w in page.get_text('words')
+                   if w[4] in ('Registered', 'Voters')
+                   and w[1] < page.rect.height * 0.30)
+    if not heads:
+        return None
+    # Cluster the heading positions: two blocks put them in two groups a long
+    # way apart, one block puts them all together.
+    groups, cur = [], [heads[0]]
+    for x in heads[1:]:
+        if x - cur[-1] > W * 0.18:
+            groups.append(cur)
+            cur = []
+        cur.append(x)
+    groups.append(cur)
+    if len(groups) < 2:
+        return [(0, W)]
+    edges = [0.0]
+    for i in range(len(groups) - 1):
+        edges.append((max(groups[i]) + min(groups[i + 1])) / 2.0)
+    edges.append(W)
+    return [(edges[i], edges[i + 1]) for i in range(len(edges) - 1)]
+
+
 def column_anchors(page, lo, hi):
     """Where the two figure columns are, in x. -> (reg_span, voted_span) or None
 
@@ -596,112 +633,126 @@ def rows_from_cells(page, lo, hi):
     return out, labels, off
 
 
+def _ocr_tokens(img, digits=False, psm=6, minconf=0):
+    """(x, y-centre, text) for what Tesseract reads in this image."""
+    import pytesseract
+    cfg = '--psm %d' % psm
+    if digits:
+        # Everything in a figure column is a digit or a comma. Saying so is the
+        # difference between `16,535 11,387` and `5006060010000000`.
+        cfg += ' -c tessedit_char_whitelist=0123456789,'
+    d = pytesseract.image_to_data(img, config=cfg,
+                                  output_type=pytesseract.Output.DICT)
+    out = []
+    for i, t in enumerate(d['text']):
+        t = (t or '').strip()
+        if not t:
+            continue
+        try:
+            if int(d['conf'][i]) < minconf:
+                continue
+        except (KeyError, ValueError, TypeError):
+            pass
+        out.append((d['left'][i], d['top'][i] + d['height'][i] / 2.0, t))
+    return out
+
+
+def ocr_column_bands(img):
+    """Where the figure columns are, read off the heading. -> (reg, voted)"""
+    from PIL import Image                                        # noqa: F401
+    top = img.crop((0, 0, img.width, int(img.height * 0.16)))
+    toks = _ocr_tokens(top)
+
+    def span(*names):
+        hit = [x for x, _y, t in toks
+               if any(t.lower().startswith(n.lower()) for n in names)]
+        return (min(hit), max(hit)) if hit else None
+
+    reg, vot = span('Registered', 'Voters'), span('Voted', 'who')
+    if not (reg and vot) or reg[0] >= vot[0]:
+        return None
+    return reg, vot
+
+
 def rows_from_ocr(page, lo, hi):
     """Rows from Tesseract, for a page with no usable text layer.
 
-    The block is cropped BEFORE being read, so a line cannot run across the
-    gutter and join two towns into one row -- which is what happens when the
-    whole page is given to Tesseract at once.
+    EACH COLUMN IS CROPPED AND READ ON ITS OWN.
+
+    Reading the whole block and then deciding which column each token fell in
+    leaves every token free to land in the wrong one, and on a soft scan they
+    do. Cropping the registered column and reading only that means a figure
+    CANNOT arrive as a turnout: there is nothing else in the picture.
+
+    It also lets each column be read on its own terms. The label column holds
+    words and wants the whole alphabet; the figure columns hold nothing but
+    digits and commas and want to be told so. One pass cannot do both, and the
+    single pass is why a 1973 page returned `5006060010000000` for a count.
+    Read this way the same page returns 16,535 / 11,387, 1,695 / 1,167,
+    1,299 / 856 -- every figure exactly as printed, in a volume that had been
+    yielding nothing at all.
+
+    The columns are found from the heading, which is read once at the top of the
+    block, so nothing here assumes where they are.
     """
-    import pytesseract
     from PIL import Image
     clip = pymupdf.Rect(lo, page.rect.height * TOP_FRAC,
                         hi, page.rect.height * BOT_FRAC)
     pix = page.get_pixmap(matrix=pymupdf.Matrix(OCR_ZOOM, OCR_ZOOM), clip=clip)
     img = Image.open(io.BytesIO(pix.tobytes('png')))
-    # PSM 6 -- "a single uniform block of text" -- because the block has already
-    # been cropped out and is exactly that. Tesseract's automatic segmentation
-    # (PSM 3, the default) decides the ruled label column is furniture and
-    # discards nearly all of it: on the 2008 crop it returns ONE token from that
-    # column against 103 under PSM 6, so every town lost its name and the volume
-    # returned 75 municipalities instead of 253.
-    d = pytesseract.image_to_data(img, config='--psm 6',
-                                  output_type=pytesseract.Output.DICT)
 
-    # TELL TESSERACT THE FIGURE COLUMNS ARE FIGURES.
-    #
-    # Everything to the right of the label column on this page is a number.
-    # Reading it with the full alphabet available invites the letters in, and on
-    # a soft scan they come: a 1973 page returned `5006060010000000` for a
-    # registered count. Restricted to digits and commas the same page returns
-    # `16,535 11,387`, `1,695 1,167`, `1,299 856` -- exactly what is printed.
-    #
-    # The pass is only worth its seconds where the general one struggled, so it
-    # runs when the figures look damaged: a figure column should be nearly all
-    # numeric, and when less than four fifths of it is, it is worth re-reading.
-    figs = [(d['left'][i], d['text'][i]) for i in range(len(d['text']))
-            if (d['text'][i] or '').strip()
-            and d['left'][i] >= label_w(page) * OCR_ZOOM]
-    numeric = sum(1 for _x, t in figs if re.fullmatch(r'[\d,]+', t))
-    if figs and numeric < len(figs) * 0.8:
-        cutpx = int(label_w(page) * OCR_ZOOM)
-        try:
-            right = img.crop((cutpx, 0, img.width, img.height))
-            dn = pytesseract.image_to_data(
-                right, output_type=pytesseract.Output.DICT,
-                config='--psm 6 -c tessedit_char_whitelist=0123456789,')
-            # Splice the digit reading back in, shifted to page coordinates, and
-            # keep the label column from the general pass.
-            merged = {k: list(v) for k, v in
-                      (('text', []), ('left', []), ('top', []), ('height', []),
-                       ('block_num', []), ('par_num', []), ('line_num', []))}
-            for i, t in enumerate(d['text']):
-                if (t or '').strip() and d['left'][i] < cutpx:
-                    for k in merged:
-                        merged[k].append(d[k][i])
-            for i, t in enumerate(dn['text']):
-                if not (t or '').strip():
-                    continue
-                merged['text'].append(t)
-                merged['left'].append(dn['left'][i] + cutpx)
-                for k in ('top', 'height', 'block_num', 'par_num', 'line_num'):
-                    merged[k].append(dn[k][i])
-            if merged['text']:
-                d = merged
-        except Exception:
-            pass
+    bands = ocr_column_bands(img)
+    if not bands:
+        return [], [], 0.0
+    (reg0, reg1), (vot0, vot1) = bands
+    label_end = max(0, min(reg0, vot0) - 10)
 
-    # THE LABEL COLUMN IS READ SEPARATELY, exactly as it is on the text path.
-    # Tesseract groups words into lines by proximity, and the gap between a town
-    # name and its date is wide enough that it starts a new line -- so a row
-    # assembled from Tesseract's own grouping arrives with its figures intact and
-    # its name missing. Forcing OCR on the 2008 volume that way returned 36
-    # municipalities where the text layer returns 253.
-    # In CROP pixels, not page-relative ones: the image is one block, rendered at
-    # OCR_ZOOM, so a point is OCR_ZOOM pixels and the block's own left edge is
-    # zero. Scaling by the whole page width put the cut at 145px instead of 286
-    # and left every label on the wrong side of it.
-    cut = label_w(page) * OCR_ZOOM
-    lines, labels = {}, {}
-    for i, text in enumerate(d['text']):
-        text = (text or '').strip()
-        if not text:
+    labels = _ocr_tokens(img.crop((0, 0, int(label_end), img.height)),
+                         minconf=25)
+    regs = _ocr_tokens(img.crop((max(0, int(reg0) - 20), 0,
+                                 min(img.width, int(vot0) - 10), img.height)),
+                       digits=True, minconf=25)
+    vots = _ocr_tokens(img.crop((max(0, int(vot0) - 10), 0,
+                                 img.width, img.height)),
+                       digits=True, minconf=25)
+
+    regs = [(x, y, t) for x, y, t in regs if num(t) is not None]
+    vots = [(x, y, t) for x, y, t in vots if num(t) is not None]
+
+    # A printed row is a registered figure and whatever sits level with it.
+    def nearest(items, y, tol):
+        best = None
+        for it in items:
+            d = abs(it[1] - y)
+            if d <= tol and (best is None or d < best[0]):
+                best = (d, it)
+        return best[1] if best else None
+
+    tol = 9 * OCR_ZOOM
+    out, used = [], set()
+    for x, y, t in sorted(regs, key=lambda r: r[1]):
+        v = nearest(vots, y, tol)
+        lab = nearest([l for l in labels if id(l) not in used], y, tol)
+        if lab:
+            used.add(id(lab))
+        joined = ' '.join(p for p in (lab[2] if lab else '', t,
+                                      v[2] if v else '') if p)
+        out.append({'label': delead(lab[2]) if lab else '',
+                    'figs': [x for x in (num(t), num(v[2]) if v else None)
+                             if x is not None],
+                    'joined': joined,
+                    'band': (0, y, 0, y),
+                    'cols': {'reg': num(t), 'voted': num(v[2]) if v else None}})
+
+    # The label column also carries the town names and dates, which have no
+    # figure beside them and would otherwise never be seen.
+    for lx, ly, lt in labels:
+        if id((lx, ly, lt)) in used:
             continue
-        x, y, h = d['left'][i], d['top'][i], d['height'][i]
-        key = (d['block_num'][i], d['par_num'][i], d['line_num'][i])
-        if x < cut:
-            labels.setdefault(key, []).append((x, y + h / 2.0, text))
-        else:
-            lines.setdefault(key, []).append((x, y + h / 2.0, text))
-
-    lab = []
-    for key in labels:
-        ws = sorted(labels[key], key=lambda w: w[0])
-        lab.append((sum(w[1] for w in ws) / len(ws),
-                    delead(' '.join(w[2] for w in ws))))
-    lab.sort()
-
-    out = []
-    for key in sorted(lines, key=lambda k: min(w[1] for w in lines[k])):
-        ws = sorted(lines[key], key=lambda w: w[0])
-        mid = sum(w[1] for w in ws) / len(ws)
-        _, figs, joined = split_row([w[2] for w in ws])
-        # The label whose centre is nearest this row's, within a row height.
-        near = [(abs(y - mid), t) for y, t in lab if abs(y - mid) < 14 * OCR_ZOOM]
-        label = min(near)[1] if near else ''
-        out.append({'label': label, 'figs': figs,
-                    'joined': (label + ' ' + joined).strip(),
-                    'band': (0, mid, 0, mid)})
+        if DATE.search(lt) or TOWN.match(delead(lt) or ''):
+            out.append({'label': delead(lt), 'figs': [], 'joined': lt,
+                        'band': (0, ly, 0, ly), 'cols': None})
+    out.sort(key=lambda r: r['band'][1])
     return out, [], 0.0
 
 
@@ -1207,7 +1258,15 @@ def main():
     # A reading close to the median is trusted as a real shift; one far from it
     # is noise and is replaced. Which is not a fudge -- it is what you do with
     # repeated measurements of something that moves slowly.
-    splits = [x for x in (block_split(doc[i]) for i in pages) if x]
+    # Only pages that really have two blocks contribute a gutter reading.
+    splits = []
+    for i in pages:
+        hm = page_blocks(doc[i])
+        if hm is not None and len(hm) == 1:
+            continue
+        v = block_split(doc[i])
+        if v:
+            splits.append(v)
     median = sorted(splits)[len(splits) // 2] if splits else None
     if median:
         near = sum(1 for x in splits if abs(x - median) <= 6)
@@ -1277,7 +1336,20 @@ def main():
         # be read several ways and scored, and there is an honest scorer to hand
         # -- the same arithmetic that decides whether any town was read
         # correctly. A wrong split produces towns whose precincts do not sum.
+        # THE HEADINGS SAY HOW MANY BLOCKS; THE WHITESPACE SAYS WHERE THE GAP IS.
+        #
+        # Each signal is good at one of those and bad at the other. The heading
+        # count is exact -- a block is a table with its own `Registered Voters`
+        # printed over it -- but the midpoint between two heading groups sits
+        # well right of the real gutter: 302 on a 2008 page whose gutter is at
+        # 260, which would file the right block's town column under the left
+        # block. The whitespace gap lands on the gutter accurately and invents
+        # one where there is none, cutting the single-column 1973 table in half
+        # so that neither half could see both of its columns.
+        howmany = page_blocks(page)
         own = block_split(page)
+        if howmany is not None and len(howmany) == 1:
+            own = None                      # one column, whatever the gap says
         cands = []
         # READING A TWO-COLUMN PAGE AS ONE BLOCK IS NOT A CANDIDATE.
         #
