@@ -135,8 +135,26 @@ def named_in(doc, pages, names):
     measurement rather than an assumption, and it is made per volume.
     """
     text = ' '.join(doc[i].get_text() for i in pages)
-    return {n for n in names
-            if re.search(r'\b' + re.escape(n) + r'\b', text, re.I)}
+    hit = {}
+    for n in names:
+        c = len(re.findall(r'\b' + re.escape(n) + r'\b', text, re.I))
+        if c:
+            hit[n] = c
+    # A SHORTER NAME INSIDE A LONGER ONE IS NOT A SECOND TOWN. `Marlborough`
+    # matches inside `New Marlborough`, `Salem` inside `New Salem`,
+    # `Springfield` inside `West Springfield` -- and with word boundaries all
+    # three look like municipalities this table names, which is why three cities
+    # kept appearing as missing towns. Where every occurrence of the short name
+    # is accounted for by longer ones, it is not on the page at all.
+    out = set()
+    for n, c in hit.items():
+        inside = 0
+        for m, mc in hit.items():
+            if m != n and re.search(r'\b' + re.escape(n) + r'\b', m, re.I):
+                inside += mc
+        if c > inside:
+            out.add(n)
+    return out
 
 
 def page_kind(text):
@@ -356,6 +374,18 @@ TRAIL = re.compile(
 NOISE = re.compile(r'\b[a-z]*(?:eee|sss|ccc|ooo)[a-z]*\b|\s[-.,]+\s*$', re.I)
 
 
+# WHAT THE VOLUME PRINTS IS NOT ALWAYS WHAT THE LIST CALLS IT. These are the
+# printed forms whose canonical name shares too few characters for any string
+# rule to bridge: the volume sets `Manchester-by-the-Sea` and the label column
+# keeps only the tail, which has nothing in common with `Manchester`.
+PRINTED_AS = {
+    'by-the-sea': 'Manchester',
+    'bythesea': 'Manchester',
+    'manchester-by-the-sea': 'Manchester',
+    'manchester by the sea': 'Manchester',
+}
+
+
 def snap(name, names):
     """An OCR town name, matched to the closed list. -> (name, how)"""
     import difflib
@@ -363,6 +393,9 @@ def snap(name, names):
     raw = re.sub(r'\s+', ' ', raw).strip(' .-')
     if not raw:
         return None, 'empty'
+    alias = PRINTED_AS.get(re.sub(r'\s+', ' ', raw.lower()).strip())
+    if alias and alias in names:
+        return alias, 'exact'
     for n in names:
         if n.lower() == raw.lower():
             return n, 'exact'
@@ -1485,6 +1518,13 @@ def main():
         else:
             merged[k] = t
 
+    # What the table names, against what came out of it.
+    _named = named_in(doc, pages, names) if names else set()
+    _have = {t['municipality'] for t in merged.values()}
+    missing_names = sorted(n for n in _named if n not in _have)
+    unnamed_rows = [t for t in merged.values()
+                    if names and t['municipality'] not in set(names)]
+
     counts = {}
     with io.open(a.out, 'w', encoding='utf-8', newline='') as fh:
         w = csv.writer(fh)
@@ -1516,6 +1556,27 @@ def main():
             # lost; both carried real figures and both were being counted as
             # towns. Emitting them as data puts a figure under a name that does
             # not exist, and nothing downstream can tell that from a real one.
+            if names and t['municipality'] not in nameset:
+                # THE VOLUME NAMES IT EVEN WHERE THE LABEL COLUMN LOST IT.
+                # `named` is every municipality printed anywhere in this table.
+                # If exactly one of them has no row and exactly one row has no
+                # name, they are each other -- Marblehead, whose 15,002
+                # registered voters were sitting under `UNKNOWN`.
+                fits = list(missing_names)
+                if len(fits) > 1 and t.get('reg'):
+                    # A TOWN OF TWO HUNDRED PEOPLE DOES NOT HAVE FIFTEEN
+                    # THOUSAND REGISTERED VOTERS. Where more than one name is
+                    # missing, size says which of them this row is: New Ashford,
+                    # which the volume records as failing to respond, cannot be
+                    # a row carrying 15,002 registered voters. Marblehead can.
+                    fits = [n for n in fits
+                            if pop.get(n.lower(), 0) >= t['reg'] * 0.7]
+                if len(unnamed_rows) == 1 and len(fits) == 1:
+                    t['municipality'] = fits[0]
+                    t['name_how'] = 'by elimination'
+                    st, note = check(t)
+                    note += ('; the label column lost this name, and it is the '
+                             'only municipality the table names without a row')
             if names and t['municipality'] not in nameset:
                 st = 'unnamed'
                 note = ('the label column did not yield a municipality name; '
