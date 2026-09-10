@@ -66,7 +66,12 @@ DATE_IN_URL = re.compile(r"/(20\d{2})/(\d{2})/(\d{2})/")
 ANCHOR = re.compile(
     r"""<a\b[^>]*?href=(?:"([^"]+)"|'([^']+)'|([^\s>]+))[^>]*>(.*?)</a>""",
     re.I | re.S)
-LOC = re.compile(r"<loc>\s*([^<]+?)\s*</loc>", re.I)
+# All in One SEO wraps every URL as <loc><![CDATA[url]]></loc>. A pattern that
+# stops at the first "<" matches nothing there and returns an EMPTY LIST --
+# a clean "sitemap n=0" that reads exactly like a site with no sitemap.
+# Measured: 3 of 60 probed hosts serve CDATA, all scoring 0 under the old
+# pattern and 10-13 under this one.
+LOC = re.compile(r"<loc>\s*(?:<!\[CDATA\[)?\s*([^<\s\]]+)", re.I)
 LASTMOD = re.compile(r"<lastmod>\s*([0-9]{4}-[0-9]{2}-[0-9]{2})", re.I)
 SLUG_ELECTION = re.compile(
     r"(?i)elect|ballot|candidat|vote|race|select-?board|town-meeting|"
