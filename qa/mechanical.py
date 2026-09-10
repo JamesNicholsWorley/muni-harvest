@@ -17,16 +17,70 @@ records what it changed and why.
 
 The asymmetry that makes both safe is the one the QA layers rest on. Marks
 ABOVE ballots x seats are impossible at any magnitude, so something is
-definitely wrong; marks below are ordinary. These only ever fire above the
-line, where doing nothing is not the safe option either.
+definitely wrong; marks below are ordinary.
 
-What they deliberately do NOT do is touch a figure. A seat count is metadata
+Below the line the seat repair fires only where the contest TALLIES ITS BLANKS,
+and that condition is doing all the work. A blank is a ballot position left
+unmarked, so once blanks are counted the rows account for every position a
+voter had, and the sum owes the identity exactly: candidates + blanks =
+ballots x seats. Landing on ballots x N for an integer N other than the
+recorded seats is then not an under-count, it is the seat count being wrong.
+Without a blanks row the same sum says nothing -- marks short of ballots x
+seats is the ordinary shape of a return that did not print its blanks, and
+reading a seat count out of it would be the tuned threshold this project
+refuses.
+
+Amherst 2018 is the shape. Its return prints a TOTAL line under every office:
+SELECT BOARD "TOTAL ... 6043" against 6043 ballots, SCHOOL COMMITTEE
+"TOTAL ... 12086". The parse recorded three seats and four; the page says one
+and two, and its own blanks rows (1531 and 4119) close both sums exactly.
+
+What these deliberately do NOT do is touch a figure. A seat count is metadata
 about the contest and can be re-derived from the same evidence tomorrow; a vote
 is a transcription, and editing one destroys the only record of what the page
 said. Where the doubling cannot be attributed to a specific duplicate row, the
 contest is flagged, not rewritten.
 """
 import collections
+import re
+
+# The rows that are ballot POSITIONS rather than people. Only these complete
+# the identity: a write-in or a scattering row may be present and still leave
+# marks short, because an uncounted write-in is exactly what a clerk omits.
+# Bedford heads the column "Unused Votes" and Amherst "Blank"; both are the
+# same quantity under the town's own word for it.
+BLANKS_ROW = re.compile(r"^\s*(blanks?|unused\s+votes?|under\s*votes?|"
+                        r"no\s+vote|not\s+voted)\b", re.I)
+
+# A term length wearing a seat count's clothes. Hamilton 2014 heads its races
+# "Selectman 3 years", "Town Clerk 3 years", "Housing AuthoritY 5 years", and
+# every one of the three closes at exactly 1016 ballots x ONE. The parse
+# recorded three seats, three seats and five, sourced "printed", and quoted the
+# office line as its evidence -- so the quote is the thing that settles it.
+TERM = re.compile(r"\b(\w+|\d+)[\s-]*(year|yr)s?\b", re.I)
+# What a page says when it really is stating a seat count.
+SEATS_SAID = re.compile(
+    r"(vote\s+for|elect\s+|choose|not\s+more\s+than|\(\s*\d+\s*\)|"
+    r"\b(one|two|three|four|five|six|seven|eight|nine|ten)\b|\b\d+\b)", re.I)
+
+
+def tallies_blanks(contest):
+    """True when a row of this contest counts unmarked ballot positions."""
+    return any(BLANKS_ROW.match(c.get("name_original") or "")
+               for c in contest.get("candidates") or [])
+
+
+def quotes_a_seat_count(contest):
+    """Does the quote behind `num_winners_source: printed` state a seat count?
+
+    A printed count outranks the arithmetic, so the claim is worth a REPORT
+    rather than a repair -- but only where the page really printed one. Strip
+    the term of office out of the quote first: what is left has to still say
+    how many. "Selectman 3 years" says nothing once "3 years" is gone;
+    "Planning Board TWO for 5 years" and "Vote for NOT more than Two" both do.
+    """
+    q = contest.get("seats_quote") or ""
+    return bool(SEATS_SAID.search(TERM.sub(" ", q)))
 
 
 def derive_ballots(contests):
@@ -54,28 +108,47 @@ def _marks(contest):
 def fix_seat_count(contest, ballots):
     """Set seats to N where marks are exactly N x ballots and N != seats.
 
-    Refuses when the contest says its seat count was PRINTED, because a printed
-    count outranks the arithmetic and a disagreement there is a finding rather
-    than a repair -- the page and the figures cannot both be right, and only
-    the page can say which. Those are reported for a human.
+    Above the line -- marks over ballots x seats -- the exact multiple is taken
+    on its own, because something is definitely wrong there and doing nothing
+    is not the safe option either.
+
+    Below the line the contest must tally its blanks first. That is not a
+    softer version of the same test, it is what makes the sum mean anything:
+    marks short of ballots x seats is the ordinary shape of a return whose
+    blanks were never printed, and only a blanks row turns the sum into a
+    closed identity that ballots x N can be read out of.
+
+    Refuses either way when the contest says its seat count was PRINTED,
+    because a printed count outranks the arithmetic and a disagreement there is
+    a finding rather than a repair -- the page and the figures cannot both be
+    right, and only the page can say which. Those are reported for a human.
     """
     seats, marks = contest.get("num_winners"), _marks(contest)
     if not ballots or not seats or marks is None:
         return None
-    if marks <= ballots * seats or marks % ballots:
+    if marks % ballots:
+        return None
+    below = marks < ballots * seats
+    if below and not tallies_blanks(contest):
         return None
     implied = marks // ballots
     if implied == seats or not 1 <= implied <= 20:
         return None
-    if contest.get("num_winners_source") == "printed":
+    where = ("under ballots x seats with blanks tallied" if below
+             else "over ballots x seats")
+    printed = contest.get("num_winners_source") == "printed"
+    if printed and quotes_a_seat_count(contest):
         return ("REPORT", implied,
                 "marks are exactly %dx ballots but the page is quoted as "
                 "printing %d seats: %r" % (implied, seats,
                                            contest.get("seats_quote")))
+    why = ("source %s" % contest.get("num_winners_source") if not printed else
+           "sourced printed, but the quote %r states a term and not a seat "
+           "count" % (contest.get("seats_quote") or ""))
     return ("FIX", implied,
-            "marks %d are exactly %dx the ballot count %d; seats recorded as "
-            "%d, source %s" % (marks, implied, ballots, seats,
-                               contest.get("num_winners_source")))
+            "marks %d are exactly %dx the ballot count %d (%s); seats "
+            "recorded as %d, %s"
+            % (marks, implied, ballots, where, seats, why))
 
 
 def find_doubled_row(contest):

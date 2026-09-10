@@ -6,7 +6,7 @@ un-learning it fails loudly rather than quietly changing a number.
 import pymupdf
 import pytest
 
-from qa import escalate
+from qa import escalate, mechanical
 from tools import text_arith, warrant, zones
 
 
@@ -128,6 +128,85 @@ def test_a_recount_does_not_drag_the_record_into_escalation():
         _contest("B", 1, [("Y", 600), ("BLANKS", 400)]),
         _contest("A recount", 1, [("X", 501)], is_recount=True)]}
     assert escalate.review(rec)[0] == "accept"
+
+
+# ------------------------------------------------------------ seat count repair
+
+def test_a_seat_count_under_the_line_is_only_read_where_blanks_are_tallied():
+    """Amherst 2018, page 1 of its section, verbatim.
+
+        SELECT BOARD
+        Robert E. Greeney ... 1572
+        Ivan B. Babian ... 469
+        Douglas Wesley Slaughter ... 2449
+        All Others ... 22
+        Blank ... 1531
+        TOTAL ... 6043
+
+    6043 is the ballot count -- MODERATOR and HOUSING AUTHORITY both close on
+    it. The parse recorded three seats for a race the page totals at exactly
+    one times ballots, and its own blanks row closes the sum, so the sum is a
+    closed identity and the seat count is the thing that is wrong.
+
+    Strip the blanks row and the same figures say nothing: marks short of
+    ballots x seats is the ordinary shape of a return whose blanks were never
+    printed, and nothing may be repaired off it.
+    """
+    rows = [("Robert E. Greeney", 1572), ("Ivan B. Babian", 469),
+            ("Douglas Wesley Slaughter", 2449), ("All Others", 22)]
+    with_blanks = _contest("SELECT BOARD", 3, rows + [("Blank", 1531)],
+                           source="derived")
+    assert mechanical.fix_seat_count(with_blanks, 6043)[:2] == ("FIX", 1)
+    assert mechanical.fix_seat_count(
+        _contest("SELECT BOARD", 3, rows, source="derived"), 4512) is None
+
+
+def test_bedford_calls_its_blanks_unused_votes():
+    """Bedford 2007: "Times counted 1236", "Unused Votes 172", four candidates
+    and 412 ballots. The row is a blanks row under the town's own word."""
+    c = _contest("LIBRARY TRUSTEE", 4,
+                 [("SARAH S. GETTY", 293), ("ABIGAIL A. HAFER", 334),
+                  ("RACHEL FIELD", 206), ("HOWARD D. COHEN", 229),
+                  ("Unused Votes", 172), ("Write-in votes", 2)],
+                 source="derived")
+    assert mechanical.fix_seat_count(c, 412)[:2] == ("FIX", 3)
+
+
+def test_a_term_of_office_quoted_as_a_seat_count_is_not_one():
+    """Hamilton 2014 heads three races "Selectman 3 years", "Town Clerk 3
+    years" and "Housing AuthoritY 5 years", and every one of them closes at
+    exactly 1016 ballots x ONE. The parse called all three `printed` and
+    quoted the office line as the evidence, so the quote is what settles it:
+    with "3 years" removed it states no count at all.
+
+    "Planning Board TWO for 5 years" is the same page saying it properly, and
+    stays a REPORT for a human rather than being repaired.
+    """
+    term = _contest("Selectman 3 years", 3,
+                    [("Jeffrey Miles Hubbard", 513), ("Shawn M. Farrell", 494),
+                     ("Write-ins", 2), ("Blanks", 7)],
+                    source="printed", seats_quote="Selectman 3 years")
+    assert mechanical.fix_seat_count(term, 1016)[:2] == ("FIX", 1)
+
+    said = _contest("Planning Board TWO for 5 years", 3,
+                    [("Edwin M. Howard, Jr.", 666),
+                     ("Claudia Allison Woods", 664), ("Write-ins", 6),
+                     ("Blanks", 696)],
+                    source="printed",
+                    seats_quote="Planning Board TWO for 5 years")
+    assert mechanical.fix_seat_count(said, 1016)[:2] == ("REPORT", 2)
+
+
+def test_a_printed_vote_for_still_outranks_the_arithmetic():
+    """Brookline 2016: "SELECTMEN - For Three Years / Vote for NOT more than
+    Two", one candidate, and a printed TOTAL of 2287 against 2287 ballots. The
+    page and the figures cannot both be right and only the page can say which,
+    so this is reported and never rewritten."""
+    c = _contest("SELECTMEN - For Three Years", 2,
+                 [("NEIL A. WISHINSKY", 1751), ("Write-in votes", 23),
+                  ("Blanks", 513)],
+                 source="printed", seats_quote="Vote for NOT more than Two")
+    assert mechanical.fix_seat_count(c, 2287)[0] == "REPORT"
 
 
 # ---------------------------------------------------------------------- warrant
