@@ -276,6 +276,54 @@ def implausible(town, pop):
     return None
 
 
+NAMED_OK = ('exact', 'snapped', 'by head', 'by tail', 'by position')
+
+
+def resolve_by_order(towns, names):
+    """Settle a stub name by where it sits in an alphabetical table.
+
+    THE TABLE IS IN ALPHABETICAL ORDER, so a row's neighbours say what it is.
+    A stub reading `New` between Nahant and New Salem can only be New Ashford,
+    New Braintree or New Marlborough; one whose name was lost entirely, sitting
+    between Manchester and Marion, can only be Marblehead.
+
+    This is the last resort and it is deliberately strict: it settles a name
+    only when exactly ONE municipality fits between the neighbours. `New` with
+    two candidates still between them stays a stub and is reported, because a
+    confident wrong name is worse than a visible gap -- that is how five towns
+    ended up merged into a row called North.
+    """
+    ordered = sorted(names, key=str.lower)
+    for i, t in enumerate(towns):
+        if t.get('name_how') in NAMED_OK:
+            continue
+        prev = nxt = None
+        for j in range(i - 1, -1, -1):
+            if towns[j].get('name_how') in NAMED_OK:
+                prev = towns[j]['municipality']
+                break
+        for j in range(i + 1, len(towns)):
+            if towns[j].get('name_how') in NAMED_OK:
+                nxt = towns[j]['municipality']
+                break
+        if not (prev or nxt):
+            continue
+        used = {x['municipality'].lower() for x in towns
+                if x.get('name_how') in NAMED_OK}
+        band = [n for n in ordered
+                if (prev is None or n.lower() > prev.lower())
+                and (nxt is None or n.lower() < nxt.lower())
+                and n.lower() not in used]
+        stub = re.sub(r'[^A-Za-z]', '', t['municipality'] or '').lower()
+        narrowed = [n for n in band
+                    if stub and (n.lower().startswith(stub[:3])
+                                 or stub in re.sub(r'[^a-z]', '', n.lower()))]
+        pick = narrowed or band
+        if len(pick) == 1:
+            t['municipality'] = pick[0]
+            t['name_how'] = 'by position'
+
+
 def load_municipalities(root):
     """The 351 names, for snapping an OCR reading to a real town.
 
@@ -341,6 +389,14 @@ def snap(name, names):
         pre = [n for n in names if n.lower().startswith(low)]
         if len(pre) == 1:
             return pre[0], 'by head'
+
+    # THE PRINTED NAME CAN BE LONGER THAN THE CANONICAL ONE. The volume prints
+    # `Manchester-by-the-Sea`; the list of municipalities calls it `Manchester`.
+    # So a reading that STARTS WITH a known name is that town, which is the
+    # mirror of the clipped case above.
+    longer = [n for n in names if low.startswith(n.lower()) and len(n) >= 4]
+    if len(longer) == 1:
+        return longer[0], 'by head'
     return raw, 'unmatched'
 
 
@@ -474,6 +530,11 @@ def town_at(labels, off, y0, y1):
     mid = (y0 + y1) / 2.0
     span = max(12.0, (y1 - y0) * 1.5)
     best = None
+    # JOINING ADJACENT LABEL LINES WAS TRIED AND IS NOT WORTH IT. It rescues
+    # `Manchester-by-the-Sea`, which is set over two lines, and costs seven
+    # municipalities: a joined pair beats the correct single line often enough
+    # that `North Attleborough` collapses back to `North`. One town is not worth
+    # seven, and the wrapped name is caught by the prefix rule in snap() instead.
     for y, text in labels:
         d = abs(y + off - mid)
         if d > span:
@@ -824,7 +885,7 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
                 elif heads:
                     name = cand
             cur = new_town(name or 'UNKNOWN')
-            cur['name_how'] = how
+            cur['name_how'] = how if name else 'unresolved'
             if no_election(joined):
                 cur['no_election'] = True
                 continue
@@ -1241,6 +1302,7 @@ def main():
 
     names = load_municipalities(ROOT)
     pop = load_population(ROOT)
+    nameset = set(names)
     print('%d municipalities in the reference list' % len(names))
     # ONE LAYOUT PER TABLE, SO ONE GUTTER PER TABLE.
     #
@@ -1405,6 +1467,10 @@ def main():
             if best_ocr:
                 ocr_pages.add(i)
 
+    # THE ALPHABET SETTLES WHAT THE LABEL COLUMN LOST. Done before merging,
+    # because merging is by name and a stub merges with the wrong town.
+    resolve_by_order(rows, names)
+
     # One town can straddle a column or page break; merge fragments by name.
     merged = {}
     for t in rows:
@@ -1444,6 +1510,16 @@ def main():
             bad = implausible(dict(t, municipality=t['municipality']), pop)
             if bad:
                 st, note = 'implausible', bad
+            # A ROW WHOSE NAME IS NOT A MASSACHUSETTS MUNICIPALITY IS NOT A
+            # TOWN, whatever its arithmetic says. `By-The-Sea` is the tail of
+            # Manchester-by-the-Sea and `UNKNOWN` is a name the label column
+            # lost; both carried real figures and both were being counted as
+            # towns. Emitting them as data puts a figure under a name that does
+            # not exist, and nothing downstream can tell that from a real one.
+            if names and t['municipality'] not in nameset:
+                st = 'unnamed'
+                note = ('the label column did not yield a municipality name; '
+                        'read as %r' % t['municipality'])
             if t.get('derived') and st in ('checked', 'single'):
                 st = 'derived'
                 note = t['derived']
