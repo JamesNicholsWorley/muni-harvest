@@ -63,9 +63,43 @@ if os.path.exists(_TESS):
 pymupdf.TOOLS.mupdf_display_errors(False)
 
 # `PEOPLE WHO VOTED` on the town table, `PERSONS WHO VOTED` on the city one.
-HEAD = re.compile(r'REGISTERED\s+VOTERS\s+AND\s+PE(?:OPLE|RSONS)\s+WHO\s+VOTED',
-                  re.I)
-HEAD_CAPS = re.compile(r'REGISTERED\s+VOTERS\s+AND\s+PE(?:OPLE|RSONS)\s+WHO\s+VOTED')
+# TWO WORDINGS, AND THE OLDER ONE IS NOT IN CAPITALS. From 1981 on the table is
+# headed `REGISTERED VOTERS AND PEOPLE WHO VOTED` (`PERSONS` on the city table).
+# The 1970s volumes invert it -- `Number of persons registered and people who
+# voted at Elections` -- and set it in title case, so both the wording test and
+# the capitals test missed every one of them.
+HEAD = re.compile(
+    r'(?:REGISTERED\s+VOTERS\s+AND\s+PE(?:OPLE|RSONS)'
+    r'|PERSONS?\s+REGISTERED\s+AND\s+PE(?:OPLE|RSONS))\s+WHO\s+VOTED', re.I)
+HEAD_CAPS = HEAD
+# EVERY TABLE IN THE VOLUME CARRIES THAT HEADING, including the state election
+# and the primaries, which are not municipal and must not be read as if they
+# were. What separates them is the line under it naming the election.
+KIND_STATE = re.compile(r'STATE\s+ELECTION|PRIMAR|PRESIDENTIAL|SPECIAL\s+STATE',
+                        re.I)
+KIND_CITY = re.compile(r'CIT(?:Y|IES)', re.I)
+KIND_TOWN = re.compile(r'TOWN', re.I)
+CONTENTS = re.compile(r'TABLE\s+OF\s+CONTENTS', re.I)
+
+
+def page_kind(text):
+    """'town', 'city' or None for a page carrying the heading.
+
+    A combined `STATE, CITY AND TOWN ELECTIONS` table -- the 1970 and 1972 shape
+    -- holds municipal rows and is kept. A page that names only a state contest
+    is skipped: it is a different election with the same column headings, and
+    reading it would file the state's turnout under the town's name.
+    """
+    if CONTENTS.search(text):
+        return None
+    town, city = KIND_TOWN.search(text), KIND_CITY.search(text)
+    if KIND_STATE.search(text) and not (town or city):
+        return None
+    if city and not town:
+        return 'city'
+    if town:
+        return 'town'
+    return None
 # `Pct.` is printed `Pet.` about as often as not: the scan reads c as e.
 # `Pct.` is printed `Pet.` about as often as not: the scan reads c as e. And a
 # precinct is not always a number -- Belchertown runs Pct. A, B, C -- so a bare
@@ -508,6 +542,17 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
                 cur['reg'] = figs[-1]
             continue
 
+        # A WARD IS A SUBTOTAL, NOT A PRECINCT. The city tables run three deep
+        # -- city, ward, precinct -- and the ward line carries the sum of the
+        # precincts beneath it. Counted as a precinct it doubles the city, so
+        # nothing ever adds up; kept separately it becomes a second arithmetic
+        # check rather than a source of noise.
+        if figs and re.match(r'^Ward\s*[0-9A-Z]+\s*$', col0 or '', re.I):
+            cur.setdefault('wards', []).append(
+                {'ward': col0, 'reg': figs[-2] if len(figs) >= 2 else figs[-1],
+                 'voted': figs[-1] if len(figs) >= 2 else None})
+            continue
+
         if figs:
             mp = PCT.match(col0) if col0 else None
             pnum = next((g for g in (mp.groups() if mp else ()) if g), None)
@@ -578,6 +623,21 @@ def check(t):
     """
     if t['no_election']:
         return 'no_election', 'the volume states no election was held this year'
+    wards = t.get('wards') or []
+    if wards:
+        # precincts -> wards -> city. Either link closing is worth reporting;
+        # both closing is as good as the flat case.
+        sp = sum(x['reg'] for x in t['precincts'] if x['reg'] is not None)
+        sw = sum(x['reg'] for x in wards if x['reg'] is not None)
+        if sp and sp == sw and (t['reg'] is None or t['reg'] == sw):
+            return 'checked', ('precincts sum to their wards, and the wards to '
+                               'the municipality')
+        if t['reg'] is not None and t['reg'] == sw:
+            return 'ward_only', 'wards sum to the municipality; precincts do not'
+        return 'hierarchy', ('a city table three levels deep; %d precincts sum '
+                             'to %s against %s in %d wards'
+                             % (len(t['precincts']), sp, sw, len(wards)))
+
     p = t['precincts']
     if not p:
         return ('single' if t['reg'] is not None else 'empty',
@@ -632,9 +692,46 @@ def table_pages(doc):
     heads = []
     for i, p in enumerate(doc):
         t = p.get_text()
-        if HEAD_CAPS.search(t):
-            heads.append(
-                (i, 'city' if re.search(r'CIT(?:Y|IES)', t, re.I) else 'town'))
+        if HEAD.search(t):
+            k = page_kind(t)
+            if k:
+                heads.append((i, k))
+
+    # A VOLUME CAN HAVE NO TEXT AT ALL, not even a heading to find.
+    #
+    # The odd-year booklets -- 1971, 1973, 1975, 1977, 1979 -- were scanned
+    # without OCR, so every page reports about twenty words of running head or
+    # nothing. The table cannot be located before OCR and then read, which is the
+    # order everything else here assumes; it has to be located BY OCR.
+    #
+    # Only the top of each page is read for this, which is where a heading is,
+    # and at a lower zoom than the table itself needs. A 60-page booklet costs
+    # about twenty seconds to index this way, against several minutes to OCR
+    # whole. These five booklets are the only volumes in the series that cover
+    # city elections and odd-year town elections at all, so they are worth it.
+    if not heads and len(doc) < 200:
+        try:
+            import pytesseract
+            from PIL import Image
+        except ImportError:
+            return []
+        for i, p in enumerate(doc):
+            if len(p.get_text('words')) > 60:
+                continue
+            strip = pymupdf.Rect(0, 0, p.rect.width, p.rect.height * 0.30)
+            try:
+                pix = p.get_pixmap(matrix=pymupdf.Matrix(2.0, 2.0), clip=strip)
+                txt = pytesseract.image_to_string(
+                    Image.open(io.BytesIO(pix.tobytes('png'))), config='--psm 6')
+            except Exception:
+                continue
+            if HEAD.search(txt):
+                k = page_kind(txt)
+                if k:
+                    heads.append((i, k))
+        if heads:
+            print('   found %d heading(s) by OCR: the volume has no text layer'
+                  % len(heads))
     if not heads:
         return []
 
@@ -664,7 +761,7 @@ def table_pages(doc):
         pages = list(range(r[0], max(r[-1] + 1, stop)))
         figures = sum(len(re.findall(r'\b\d[\d,]{2,}\b', doc[i].get_text()))
                       for i in pages)
-        blank = sum(1 for i in pages if len(doc[i].get_text('words')) < 40)
+        blank = sum(1 for i in pages if len(doc[i].get_text('words')) < 60)
         # Either it has figures, or its pages are scans that OCR will supply.
         if len(pages) >= 2 and (figures >= 20 or blank >= 2):
             out.append((k, pages))

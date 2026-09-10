@@ -56,45 +56,59 @@ The 1978-1984 volumes are annual and may carry the odd years. Unchecked.
 
 ## Where the series stands
 
-22 of the 32 volumes are read. `config/pd43_turnout.csv` holds 4,322 town-year
-rows and 18,486 precinct rows, with 3,927 election dates and 114 towns stated as
-holding no election that year.
+29 of the 32 volumes yield something; `config/pd43_turnout.csv` holds 4,471
+town-year rows and 21,692 precinct rows, with 3,969 election dates and 114 towns
+stated as holding no election that year.
 
-TEN VOLUMES ARE NOT READ, and each for a nameable reason rather than a general
-difficulty:
+BUT THE YIELD IS NOT EVEN, and the honest split is by era rather than by volume:
 
-    1971 1973 1975 1977 1979   the odd-year booklets have NO TEXT LAYER AT ALL --
-                               not even a heading to find, so the table cannot be
-                               located before OCR rather than after it
-    1978 1980 1984             the heading is worded differently: `Number of
-                               Persons Registered and People Who Voted At
-                               Elections`, not `Registered Voters and People Who
-                               Voted`, and in title case
-    1972 1976                  a heading is found but the table extent is
-                               rejected; undiagnosed
+    1981-2018   the working half. 2,478 usable registered-voter figures,
+                1,307 verified by their own arithmetic, 1,171 single-precinct
+                towns. This is what should be joined to anything.
+    1970-1979   read, but almost nothing survives validation. The data is
+                extracted -- 1971 alone gives 2,070 precinct rows -- and it is
+                marked `hierarchy`, `no_total` or `mismatch`, not `checked`.
+                Treat it as located, not as read.
 
-The five odd-year booklets are the ones that matter most, because they are the
-only volumes in the series covering CITY elections and odd-year town elections.
-Reading them means OCRing a page to decide whether it is part of a table, which
-is the reverse of the current order and wants a cheap first pass -- the top strip
-of each page is enough to find a heading.
+WHAT THE 1970s VOLUMES NEED, specifically:
+
+  * THE SCANS ARE SIDEWAYS AND TWO-UP. Each PDF page of an odd-year booklet
+    holds two printed pages rotated ninety degrees, with no text layer, so OCR
+    of the page returns consonant salad -- not because the scan is poor, it is
+    perfectly legible, but because it is the wrong way up and two pages wide.
+    `tools/pd43_flatten.py` straightens them and that part is solved: the
+    flattened 1971 page reads cleanly and the city table is found.
+  * THE CITY TABLES RUN THREE LEVELS DEEP -- city, ward, precinct -- where every
+    other table in the series runs two. Ward subtotals are now collected
+    separately rather than counted as precincts, which stops them doubling the
+    city, but the arithmetic still does not close on these volumes and until it
+    does none of it should be trusted.
+  * 1980 and 1984 find no table at all and are undiagnosed.
+
+So: the modern half is finished and checkable; the 1970s half is straightened,
+located and extracted, and is not yet worth publishing.
+
+## Older still
+
+The archive holds election statistics volumes back to 1901 -- the search that
+found 32 volumes for 1970-2018 returned 184 items overall, with odd years right
+through the 1900s to 1940s and beyond. Those are outside what has been fetched
+and are a separate piece of work, but they are there, and the 1940s volumes are
+the same publication in the same shape as the 1970s ones.
 
 ## What it agrees with
 
 Checked against our own pre-2021 records, on 236 overlapping town-years:
 
     189 (80%)  ours lands EXACTLY on the PD43 figure
-     23 (10%)  ours lands below it, which is expected where Blanks were not
-               printed and the undervote is therefore missing from the tally
-     24 (10%)  ours lands ABOVE it, which is impossible and means one of the two
-               readings is wrong
+     23 (10%)  ours lands below it -- expected where Blanks were not printed
+     24 (10%)  ours lands ABOVE it, which is impossible
 
 Two independent sources agreeing exactly on four fifths of the overlap is worth
-more than either of them alone. The 24 impossible rows are in
-`pd43/crosscheck.csv`; the worst are Salisbury 2008 (6.5x), Kingston 2016 (6.0x)
-and Boylston 2008 (3.2x), and several of those also disagree on the date, which
-suggests the two sources are describing different elections rather than
-disagreeing about one.
+more than either alone. The 24 impossible rows are in `pd43/crosscheck.csv`,
+worst first: Salisbury 2008 at 6.5x, Kingston 2016 at 6.0x, Boylston 2008 at
+3.2x. Several also disagree on the date, which suggests the two sources are
+describing different elections rather than disagreeing about one.
 
 15 town-years are dated differently by the two sources. That is a free check
 nothing else in this project could perform.
