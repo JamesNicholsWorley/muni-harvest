@@ -53,9 +53,15 @@ def _pre2021():
     towns, by_year = set(), {}
     n = 0
     for f in glob.glob(str(Path(PRE2021_DIR) / "*.json")):
+        # Only a malformed file is skipped. An earlier `except Exception` here
+        # swallowed a NameError -- this module does not import `io` -- and
+        # every one of 547 readable records was skipped in silence, leaving a
+        # section that reported zero coverage with complete confidence. A bare
+        # except around a read will eventually hide the bug that matters.
         try:
-            d = json.load(io.open(f, encoding="utf-8"))
-        except Exception:
+            with open(f, encoding="utf-8") as fh:
+                d = json.load(fh)
+        except (OSError, ValueError):
             continue
         el = d.get("elections") or []
         if not el:
@@ -73,6 +79,15 @@ def _pre2021_html():
     if not got:
         return ""
     n, ntowns, by_year = got
+    # A section reporting zero is worse than no section: it states a number,
+    # and the number is wrong whenever the cause is a path that did not
+    # resolve rather than a corpus that is empty. The population table failed
+    # exactly this way and would have published 0.0% people-year coverage.
+    if n == 0:
+        return ("\n<h2>2000-2020, from Annual Town Reports</h2>\n"
+                "<p class=note>Not rendered: the published pre-2021 folder was "
+                "configured but held no readable record. This says the wiring "
+                "is wrong, not that the coverage is zero.</p>\n")
     possible = PRE2021_TOWNS * PRE2021_YEARS
     bars = "".join(
         "<tr><td>%s</td><td class=n>%d</td></tr>" % (y, by_year[y])
