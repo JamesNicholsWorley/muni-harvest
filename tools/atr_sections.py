@@ -30,6 +30,23 @@ minutes reference the date. Those pages match a heading and some offices too.
 The results page is the one with the most of both, so every page is scored and
 the best wins -- and the runner-up is recorded, because when the top two are
 close the choice is worth a human's eye.
+
+## What a heading and some offices are not enough to distinguish
+
+A table of CONTENTS is a heading and a list of offices, and it beat the return
+on 89 of the 317 cuts that came back with no election in them at all. Avon
+2013's cut is its contents page; the return is on page 50, printed with dot
+leaders. Carver 2014's is the index, and nine contests with named candidates
+and vote totals were read off it and published.
+
+What separates a return from an index, a warrant and an officers directory is
+that a return carries FIGURES against names. So a page that already shows
+ballot vocabulary is scored on how many of its lines put a label against a
+number, and on whether it heads itself the ANNUAL election rather than the
+state one printed a few pages later. Both terms are gated on the ballot
+vocabulary being there: ungated, the figures promoted a police department's
+statistics table and the word ANNUAL promoted the contents line "Annual Town
+Election Results .... 10".
 """
 import csv
 import io
@@ -42,7 +59,40 @@ import time
 import statistics
 
 import pymupdf
-from curl_cffi import requests
+
+try:
+    from curl_cffi import requests
+except ImportError:                                          # pragma: no cover
+    requests = None
+
+
+class _Response(object):
+    def __init__(self, status_code, content):
+        self.status_code, self.content = status_code, content
+
+
+def fetch(url, timeout=90):
+    """The report's bytes, by whichever client can reach the host.
+
+    `curl_cffi` impersonates a browser's TLS fingerprint, which is what gets
+    past a municipal WAF and is why it is tried first. It cannot be the only
+    client: behind a TLS-terminating proxy the impersonated handshake is the
+    thing that fails, and every fetch dies with an SSLError while plain `curl`
+    on the same machine returns 200. Archive hosts do not need the
+    impersonation, so falling back costs nothing where it is not needed.
+    """
+    if requests is not None:
+        try:
+            r = requests.get(url, impersonate="chrome", timeout=timeout)
+            return _Response(r.status_code, r.content or b"")
+        except Exception:
+            pass
+    out = subprocess.run(
+        ["curl", "-sSL", "--max-time", str(timeout), "-w", "%{http_code}",
+         "-o", "/dev/stdout", url], capture_output=True, timeout=timeout + 30)
+    body = out.stdout or b""
+    code, body = (int(body[-3:] or 0), body[:-3]) if len(body) >= 3 else (0, b"")
+    return _Response(code, body)
 
 HEAD = re.compile(
     r"(ANNUAL\s+TOWN\s+ELECTION|TOWN\s+ELECTION|ANNUAL\s+ELECTION|"
@@ -201,14 +251,55 @@ def grow(texts, best, page_count):
     return max(0, lo - 1), min(page_count - 1, hi + 1), capped
 
 
+# A line that puts a label against a figure: the shape of a tally and of
+# nothing else in a town report. Two spellings, because a clerk has two.
+#
+#     Robert A. Ogilvie, 28 Butler Ave ............................302
+#     Blanks                                                        91
+#
+# The first is why this exists. Avon 2013 prints its whole return with dot
+# leaders, and the locator took the report's TABLE OF CONTENTS instead --
+# which is the same shape of failure that hid Topsfield's entire run for
+# twelve years, and the same one that put Carver 2014's index page into the
+# published corpus with nine invented contests read off it.
+TALLY = (
+    re.compile(r"^\s*[A-Za-z][^\n]{2,70}?[\.… ]{2,}(\d{1,3}(?:,\d{3})*|\d{1,5})\s*$", re.M),
+    re.compile(r"^[^\d\n]{4,60}?\s(\d{1,3}(?:,\d{3})*|\d{1,5})\s*$", re.M),
+)
+
+# A report prints its own election, the state election and a primary, and the
+# locator scores all three alike -- which is how four state elections came to
+# be published in annual town-year slots. The town's own return usually says
+# so in its heading.
+ANNUAL = re.compile(r"ANNUAL\s+(TOWN|MUNICIPAL|CITY)\s+ELECTION|ANNUAL\s+ELECTION|"
+                    r"RESULTS?\s+OF\s+THE\s+ANNUAL", re.I)
+
+
 def score_pages(doc, texts=None):
-    """(score, page index, headings, ballot words, offices) best first."""
+    """(score, page index, headings, ballot words, offices) best first.
+
+    Figures and the word ANNUAL only count where the page also carries ballot
+    vocabulary. Without that guard the tally term promoted a police
+    department's three-year statistics table over Boxborough 2015's return,
+    and the word ANNUAL promoted the contents line "Annual Town Election
+    Results .... 10" over the election itself.
+
+    The office term is deliberately NOT capped. Capping it looked like the way
+    to stop a contents page winning on office vocabulary alone, and it moved
+    Mashpee 2014 off its return, because a real return names more offices than
+    an index does. What separates them is that one carries figures.
+    """
     out = []
     for i, t in enumerate(texts if texts is not None else [p.get_text() for p in doc]):
         h, b, o = (len(HEAD.findall(t)), len(BALLOT.findall(t)),
                    len(OFFICE.findall(t)))
-        if h and (b >= 3 or o >= 3):
-            out.append((b + 2 * o + 3 * h, i, h, b, o))
+        if not (h and (b >= 3 or o >= 3)):
+            continue
+        bonus = 0
+        if b >= 3:
+            tally = sum(len(rx.findall(t)) for rx in TALLY)
+            bonus = 2 * min(tally, 20) + (8 if ANNUAL.search(t) else 0)
+        out.append((b + 2 * o + 3 * h + bonus, i, h, b, o))
     out.sort(reverse=True)
     return out
 
@@ -229,7 +320,7 @@ def main():
                "mean_line": 0, "ballot_paper": "", "capped": "", "detail": ""}
         t0 = time.time()
         try:
-            r = requests.get(row["url"], impersonate="chrome", timeout=90)
+            r = fetch(row["url"])
             body = r.content or b""
             rec["bytes"] = len(body)
             if r.status_code != 200:

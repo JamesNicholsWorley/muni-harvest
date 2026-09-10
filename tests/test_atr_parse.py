@@ -275,3 +275,61 @@ def test_a_year_the_fiscal_offset_cannot_explain_is_not_this_town_year():
     assert atr_gate.grade(one_off)[0] == "publish"
     far = dict(one_off, _source_stem="Salisbury2010")
     assert atr_gate.grade(far)[0] == "review"
+
+
+# ------------------------------------------------------------------- locator
+
+def _page(doc, lines):
+    page = doc.new_page(width=612, height=792)
+    y = 40
+    for text in lines:
+        page.insert_text((40, y), text, fontsize=9)
+        y += 12
+    return page
+
+
+def test_a_contents_page_does_not_outscore_a_return_printed_with_dot_leaders():
+    """Avon 2013 prints its whole return with dot leaders, and lost to the index.
+
+    The same shape hid Topsfield's run for twelve years and put Carver 2014's
+    index page into the published corpus with nine contests read off it.
+    """
+    from tools import atr_sections
+    doc = pymupdf.open()
+    _page(doc, ["Table of Contents", "Annual Town Election .......... 50",
+                "Board of Selectmen ............ 12", "Assessors ..................... 14",
+                "Town Clerk .................... 16", "Planning Board ................ 18",
+                "Board of Health ............... 20", "Finance Committee ............. 22",
+                "Library Trustee ............... 24"])
+    _page(doc, ["ANNUAL TOWN ELECTION RESULTS", "BOARD OF HEALTH: ......... 3 years",
+                "vote for one",
+                "Robert A. Ogilvie, 28 Butler Ave ...........302",
+                "Write In: .................................. 0",
+                "Blanks: ................................... 91",
+                "PLANNING BOARD: .......... 5 years", "vote for one",
+                "Steven P. Rose, 120 Central St ............308",
+                "Write In .................................... 0",
+                "Blanks: ................................... 85"])
+    best = atr_sections.score_pages(doc)
+    assert best and best[0][1] == 1
+
+
+def test_figures_alone_do_not_promote_a_page_with_no_ballot_words():
+    """A police department's three-year statistics table is not a return."""
+    from tools import atr_sections
+    doc = pymupdf.open()
+    _page(doc, ["ANNUAL TOWN ELECTION", "Moderator", "Selectmen", "Assessors",
+                "Town Clerk", "Planning Board", "Board of Health"])
+    _page(doc, ["ANNUAL REPORT OF THE POLICE DEPARTMENT",
+                "Motor Vehicle Stops   2013 2014 2015",
+                "Total number ......... 1906 1662 1436",
+                "Verbal warnings ...... 72 74 77",
+                "Written warnings ..... 4 7 4",
+                "Citations issued ..... 15 5 9",
+                "Summoned to court .... 7 11 6",
+                "Arrested ............. 2 3 4",
+                "Selectmen appointed .. 1 1 1",
+                "Assessors notified ... 2 2 2",
+                "Moderator briefed .... 1 1 1"])
+    best = atr_sections.score_pages(doc)
+    assert best and best[0][1] == 0
