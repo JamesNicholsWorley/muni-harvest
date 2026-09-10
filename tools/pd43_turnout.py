@@ -89,6 +89,51 @@ KIND_TOWN = re.compile(r'TOWN', re.I)
 CONTENTS = re.compile(r'TABLE\s+OF\s+CONTENTS', re.I)
 
 
+def stated_counts(doc):
+    """What the volume says it contains. -> {'towns': n, 'cities': n}
+
+    THE VOLUME IS THE AUTHORITY ON ITS OWN YEAR. The number of cities changed
+    through the period as towns adopted city forms of government, so 351 split
+    into 312 towns and 39 cities in 2008 and differently in 1996. Each volume
+    prints its own split in the summary at the front -- `312 towns, 1,118
+    precincts`, `39 cities divided into 1,050 precincts` -- and that is the true
+    denominator for how much of that year we have.
+
+    Without it, coverage is measured against a guess: reading 284 of 311 looks
+    like a shortfall of 27 and reading 284 of 284 does not, and only the volume
+    can say which it is.
+    """
+    out = {}
+    for p in doc[:30]:
+        t = ' '.join(p.get_text().split())
+        alls = [int(x) for x in re.findall(r'(\d{2,3})\s+towns\b', t, re.I)]
+        if alls:
+            # The summary counts subsets too (`129 towns, one precinct each`),
+            # so the total is the largest figure on the page.
+            out['towns'] = max(alls)
+            break
+    return out
+
+
+def named_in(doc, pages, names):
+    """Which municipalities are named anywhere in the table. -> set
+
+    THE DENOMINATOR IS THE NAMES, NOT A COUNT. The volume does print its own
+    split in the summary, and the split really does move as towns adopt city
+    government -- but that sentence is not reliably machine-readable: the same
+    pattern returns 312 for 1982, 306 for 1990 and 311 for 1996, which is not a
+    trend, it is three different sentences being matched.
+
+    Municipality NAMES do not change. The list of 351 is fixed and known, so the
+    honest measure of how much of a volume was read is how many of those names
+    appear anywhere in its table, against how many came out of it. That is a
+    measurement rather than an assumption, and it is made per volume.
+    """
+    text = ' '.join(doc[i].get_text() for i in pages)
+    return {n for n in names
+            if re.search(r'\b' + re.escape(n) + r'\b', text, re.I)}
+
+
 def page_kind(text):
     """'town', 'city' or None for a page carrying the heading.
 
@@ -995,9 +1040,14 @@ def main():
     # whose precincts sum, and reporting only `checked` understated 2008 as 54%
     # when 86% of its municipalities are fit to use.
     usable = counts.get('checked', 0) + counts.get('single', 0)
-    print('%d municipalities, %d usable (%.0f%%), %d verified by arithmetic'
-          % (len(merged), usable, 100.0 * usable / max(1, len(merged)),
-             counts.get('checked', 0)))
+    # Measured against the names actually printed in this volume's table, not
+    # against 351 and not against a sentence in the summary. Names are the one
+    # thing about a Massachusetts municipality that never changes.
+    named = named_in(doc, pages, names)
+    of = (' of %d named in it' % len(named)) if named else ''
+    print('%d municipalities%s, %d usable (%.0f%%), %d verified by arithmetic'
+          % (len(merged), of, usable,
+             100.0 * usable / max(1, len(merged)), counts.get('checked', 0)))
     for k in sorted(counts, key=lambda x: -counts[x]):
         print('   %-12s %4d' % (k, counts[k]))
     if ocr_pages:
