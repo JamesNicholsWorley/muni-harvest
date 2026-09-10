@@ -59,7 +59,7 @@ Barnstable2014,publish,15,no two contests agree on a ballot count
 Barnstable2015,hold,0,the parse found no contest in this section
 Barnstable2016,review,10,no election date could be derived
 Barnstable2017,hold,10,"ELECTOR OF PRESIDENT AND VICE PRESIDENT is a state or county office, so this section is not one annual municipal election (4 such offices here)"
-Barnstable2018,publish,5,no two contests agree on a ballot count
+Barnstable2018,hold,5,the section supports almost none of this record -- 0/10 names and 1/20 figures located in it
 Barnstable2019,hold,18,"REPRESENTATIVE IN GENERAL COURT is a state or county office, so this section is not one annual municipal election (5 such offices here)"
 Barnstable2020,publish,9,no two contests agree on a ballot count
 Becket2017,publish,8,
@@ -184,7 +184,7 @@ Carver2010,publish,15,
 Carver2011,publish,11,
 Carver2012,publish,13,
 Carver2013,hold,0,the parse found no contest in this section
-Carver2014,publish,9,
+Carver2014,hold,9,the section supports almost none of this record -- 0/13 names and 0/22 figures located in it
 Carver2019,hold,0,the parse found no contest in this section
 Carver2020,publish,8,
 Charlemont2018,review,13,Mohawk School Comm years: seat count left null by the transcriber
@@ -995,7 +995,7 @@ Saugus2015,hold,0,the parse found no contest in this section
 Saugus2017,review,11,Town Meeting (two years) PCT 1: seat count left null by the transcriber
 Savoy2019,publish,8,
 Scituate2012,publish,7,
-Scituate2017,publish,9,
+Scituate2017,hold,9,the section supports almost none of this record -- 1/14 names and 2/31 figures located in it
 Seekonk2008,publish,6,
 Seekonk2009,hold,0,the parse found no contest in this section
 Seekonk2010,hold,0,the parse found no contest in this section
@@ -1302,7 +1302,7 @@ Wilbraham2014,hold,0,the parse found no contest in this section
 Wilbraham2015,hold,0,the parse found no contest in this section
 Wilbraham2016,hold,0,the parse found no contest in this section
 Wilbraham2017,hold,0,the parse found no contest in this section
-Wilbraham2018,publish,10,no two contests agree on a ballot count
+Wilbraham2018,hold,10,the section supports almost none of this record -- 4/18 names and 0/18 figures located in it
 Wilbraham2019,hold,0,the parse found no contest in this section
 Williamsburg2006,publish,15,
 Williamsburg2017,hold,13,Board of Health – 3 years – vote for 1: 350 marks exceeds 348x1=348 -- impossible

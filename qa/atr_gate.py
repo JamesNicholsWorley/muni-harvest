@@ -49,13 +49,14 @@ from qa import layers                                        # noqa: E402
 def grounding(stem, doc, sections):
     """Layer 1 over the section this record was cut from, as evidence.
 
-    It is stamped and not graded. Grounding is the corpus's own Layer 1 and it
-    belongs on the record, but the bar here is calibrated against the 1,900
-    published 2021-2026 records, which are not asked to clear it -- making
-    these clear a height the material beside them does not would publish
-    pre-2021 on a different standard, which is the inconsistency this gate was
-    rewritten to remove. So a reader sees how much of the record was located in
-    the page, and decides.
+    It is stamped rather than graded, except at the floor. Grounding is the
+    corpus's own Layer 1 and it belongs on the record, but the bar here is
+    calibrated against the 1,900 published 2021-2026 records, which are not
+    asked to clear it -- making these clear a height the material beside them
+    does not would publish pre-2021 on a different standard, which is the
+    inconsistency this gate was rewritten to remove. So a reader sees how much
+    of the record was located in the page and decides. The one exception is
+    `supports_almost_nothing`, which is Layer 0 and not a bar at all.
     """
     # A scan says so on the record rather than saying nothing. "No text held"
     # and "every figure located" are different answers, and a record carrying
@@ -115,7 +116,48 @@ def state_offices(contests):
     return out
 
 
-def grade(doc):
+def supports_almost_nothing(grounded):
+    """Does the section fail to hold nearly everything the record claims?
+
+    This is a FLOOR and not a bar, and the difference is the whole of it. A
+    record locating most but not all of its names is an ordinary reading with
+    a spelling in it, and 147 published records are exactly that; asking them
+    for perfection would hold pre-2021 to a standard the corpus beside it does
+    not meet. A record locating almost NOTHING is Layer 0: the section does not
+    support it at all, so nothing downstream can be recovered from it.
+
+    Four records met it, and all four were read:
+
+      Carver 2014     the section is the report's INDEX -- "Elections: Annual
+                      Town Election Results, 4/26/14" -- and a garbled
+                      statement of changes. The record holds thirteen contests
+                      with names, none of them on the page.
+      Barnstable 2018 the Town Clerk's vital statistics: "831 Births in
+                      Barnstable, 824 Deaths, 495 Marriages".
+      Wilbraham 2018  the town meeting warrant, "ARTICLE 56. Home Rule
+                      Petition, 6 Decorie Drive".
+      Scituate 2017   "OFFICIAL TALLY / SPECIAL TOWN ELECTION / TOWN OF
+                      SCITUATE / SEPTEMBER 16, 2017" -- a real return, of a
+                      different election than the record describes.
+
+    Requiring BOTH names and figures to fail is what separates these from a
+    record whose figures all ground and whose spellings do not. Westford 2010
+    locates 2 of 10 names and 20 of 20 figures: that is a name problem, not a
+    wrong document, and it is not held here.
+    """
+    def part(v):
+        return [int(x) for x in v.split("/")] if "/" in (v or "") else None
+    names, figures = part(grounded.get("names")), part(grounded.get("figures"))
+    if not names or not figures or names[1] < 4 or figures[1] < 4:
+        return None
+    if names[0] * 4 < names[1] and figures[0] * 4 < figures[1]:
+        return ("the section supports almost none of this record -- %s names "
+                "and %s figures located in it" % (grounded["names"],
+                                                  grounded["figures"]))
+    return None
+
+
+def grade(doc, grounded=None):
     """(rung, reasons) for one bridged record."""
     contests = doc.get("elections") or []
     reasons = []
@@ -130,6 +172,10 @@ def grade(doc):
     # because it cannot appear on an annual municipal ballot at all -- where
     # the rest of the record IS the town's, the cut caught two elections and
     # the record claims to be one.
+    unsupported = supports_almost_nothing(grounded) if grounded else None
+    if unsupported:
+        return "hold", [unsupported]
+
     state = state_offices(contests)
     if state:
         return "hold", ["%s is a state or county office, so this section is "
@@ -224,10 +270,11 @@ def main():
     for path in sorted(glob.glob(os.path.join(a.bridged, "*.json"))):
         doc = json.load(io.open(path, encoding="utf-8"))
         stem_now = doc.get("_source_stem") or os.path.basename(path)[:-5]
+        g = grounding(stem_now, doc, a.sections) if a.sections else None
         if stem_now in loser:
             rung, reasons = "review", [loser[stem_now]]
         else:
-            rung, reasons = grade(doc)
+            rung, reasons = grade(doc, g)
         counts[rung] += 1
         stem = doc.get("_source_stem") or os.path.basename(path)[:-5]
         if reasons:
@@ -237,7 +284,6 @@ def main():
         doc["_gate"] = rung
         doc["_gate_reasons"] = reasons
         if a.sections:
-            g = grounding(stem, doc, a.sections)
             if g:
                 doc["_grounded"] = g
                 ungrounded += any("/" in x and

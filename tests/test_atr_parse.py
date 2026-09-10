@@ -149,6 +149,39 @@ def test_a_state_office_says_the_section_is_the_wrong_election():
     assert rung == "hold" and "state or county office" in why[0]
 
 
+def test_a_section_supporting_almost_nothing_is_the_wrong_document():
+    """Carver 2014 published thirteen contests with names against them, cut
+    from the report's own INDEX page -- "Elections: Annual Town Election
+    Results, 4/26/14" -- where none of those names or figures appear. Layer 1
+    located 0 of 13 names and 0 of 22 figures.
+
+    Barnstable 2018's section is the Town Clerk's vital statistics ("831
+    Births in Barnstable"), Wilbraham 2018's the town meeting warrant, and
+    Scituate 2017's the SPECIAL TOWN ELECTION of September 16 -- a real
+    return, of a different election than the record describes.
+    """
+    doc = {"elections": [_contest("SELECTMEN", 1, [("A", 10), ("BLANKS", 5)])]}
+    rung, why = atr_gate.grade(doc, {"names": "0/13", "figures": "0/22"})
+    assert rung == "hold" and "supports almost none" in why[0]
+
+
+def test_a_record_whose_figures_all_ground_is_not_the_wrong_document():
+    """Westford 2010 locates 2 of 10 names and 20 of 20 figures. That is a
+    spelling problem, and holding it here would make the floor a bar."""
+    assert atr_gate.supports_almost_nothing(
+        {"names": "2/10", "figures": "20/20"}) is None
+    # 147 published records locate most but not all of their names.
+    assert atr_gate.supports_almost_nothing(
+        {"names": "16/18", "figures": "31/33"}) is None
+    # A scan carries no text to match against and says so, not zero.
+    assert atr_gate.supports_almost_nothing(
+        dict.fromkeys(("names", "figures"),
+                      "no text held for this section")) is None
+    # Too few of either to mean anything.
+    assert atr_gate.supports_almost_nothing(
+        {"names": "0/2", "figures": "0/3"}) is None
+
+
 def test_a_city_councillor_is_not_a_governors_councillor():
     """Marlborough elects Councilor Ward One and Methuen a West District
     Councillor, and Gardner a Ward 1 Councilor. All three are municipal, and
