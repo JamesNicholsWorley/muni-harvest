@@ -375,22 +375,91 @@ def build(json_dir, root):
     return bundle, dropped
 
 
+# --------------------------------------------------------------------------
+# THE MAP DOES NOT NEED THE BALLOTS -- the same split the 2021-2026 bundle got.
+#
+# `races` is 4.03 MB of a 4.53 MB bundle. The map reads four fields per
+# town-year; the candidate rows belong to whichever town the reader opened. Held
+# whole, the earlier years cost 4.5 MB before the map would draw a single colour,
+# and that download began the moment somebody wondered what years existed.
+#
+# Split, the index is 0.10 MB and the detail is one file per town under
+# `town_pre2021/`. `ty` in the index keeps a row for EVERY town-year that has
+# one, because for these years the presence of a row IS the coverage signal:
+# a town with no row has not been collected, and the map says so rather than
+# claiming it was searched and nothing was found.
+# --------------------------------------------------------------------------
+
+IDX_FIELDS = ('turnout', 'n', 'contested', 'kind', 'peak')
+
+
+def write_split(bundle, out, town_dir):
+    """Write the index to `out` and one detail file per town into `town_dir`."""
+    ty = bundle['ty']
+    index = {k: {f: v[f] for f in IDX_FIELDS if v.get(f) is not None}
+             for k, v in ty.items()}
+    small = dict(bundle)
+    small['ty'] = index
+    with io.open(out, 'w', encoding='utf-8') as fh:
+        fh.write('window.MVP_PRE = ')
+        json.dump(small, fh, separators=(',', ':'), ensure_ascii=False)
+        fh.write(';\n')
+
+    by_town = {}
+    for k, v in ty.items():
+        by_town.setdefault(k.split('|')[0], {})[k] = v
+
+    slug = lambda n: re.sub(r'[^A-Za-z0-9]', '', n)
+    if len(set(map(slug, by_town))) != len(by_town):
+        raise SystemExit('[FAIL] two municipalities reduce to the same file name')
+
+    if not os.path.isdir(town_dir):
+        os.makedirs(town_dir)
+    written = set()
+    for muni, recs in sorted(by_town.items()):
+        fn = slug(muni) + '.js'
+        written.add(fn)
+        with io.open(os.path.join(town_dir, fn), 'w', encoding='utf-8') as fh:
+            fh.write('MVP_PRE_TOWN(')
+            json.dump(muni, fh, ensure_ascii=False)
+            fh.write(',')
+            json.dump(recs, fh, separators=(',', ':'), ensure_ascii=False)
+            fh.write(');\n')
+
+    # A town that leaves the corpus leaves town_pre2021/ with it, or a stale file
+    # goes on being served and says something the index no longer does.
+    stale = 0
+    for fn in sorted(os.listdir(town_dir)):
+        if fn.endswith('.js') and fn not in written:
+            os.remove(os.path.join(town_dir, fn))
+            stale += 1
+    return written, stale
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--json-dir', required=True)
     ap.add_argument('--root', default=ROOT,
                     help='muni-harvest root, for config/atr_*urls*.csv')
     ap.add_argument('--out', required=True)
+    ap.add_argument('--town-dir', default=None,
+                    help='directory for the per-town detail files; '
+                         'defaults to town_pre2021/ beside --out')
     a = ap.parse_args()
 
     bundle, dropped = build(a.json_dir, a.root)
-    with io.open(a.out, 'w', encoding='utf-8') as fh:
-        fh.write('window.MVP_PRE = ')
-        json.dump(bundle, fh, separators=(',', ':'), ensure_ascii=False)
-        fh.write(';\n')
+    town_dir = a.town_dir or os.path.join(os.path.dirname(os.path.abspath(a.out)),
+                                          'town_pre2021')
+    written, stale = write_split(bundle, a.out, town_dir)
 
     s = bundle['stats']
-    print('[OK] wrote %s  %.2f MB' % (a.out, os.path.getsize(a.out) / 1e6))
+    print('[OK] wrote %s  %.2f MB  (the map and the search list, and nothing else)'
+          % (a.out, os.path.getsize(a.out) / 1e6))
+    sizes = sorted(os.path.getsize(os.path.join(town_dir, f)) for f in written)
+    print('     wrote %d files under %s  %.1f MB in all, median %.0f KB'
+          % (len(written), town_dir, sum(sizes) / 1e6, sizes[len(sizes) // 2] / 1e3))
+    if stale:
+        print('     removed %d stale town file(s)' % stale)
     print('     %d town-years, %d municipalities, %s-%s'
           % (s['town_years'], s['towns_with'], s['year_min'], s['year_max']))
     print('     %d contests, %d candidates, %s votes'
