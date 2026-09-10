@@ -763,9 +763,45 @@ def reconstruct(t):
             t['voted'] = svote
             did.append('people who voted')
     if did:
+        # NOT a return. Rebuilding one column does not mean the other is sound:
+        # Norton's voted total rebuilds cleanly and its registered total is still
+        # the voted figure sitting in the wrong column. Returning here left every
+        # such town half-repaired and reported as `voted_only`.
         t['derived'] = ('%s total is the sum of its %d precincts'
                         % (' and '.join(did), len(p)))
+
+    # THE TOTALS ROW LOST ITS REGISTERED FIGURE AND KEPT ITS VOTED ONE.
+    #
+    # Two shapes of the same accident, both found by adding up what is on the
+    # page and seeing what is left over.
+    #
+    # Norton reads 1,225 / 1,225 -- and 281+264+214+269+197 is 1,225, so that is
+    # the voted total sitting in both columns, with the registered total gone.
+    # Rutland and Sudbury do the same.
+    svote = sum(x['voted'] for x in p if x['voted'] is not None)
+    sreg = sum(x['reg'] for x in p if x['reg'] is not None)
+    if (t['reg'] is not None and t['reg'] == t['voted'] == svote
+            and svote and sreg and sreg != svote):
+        t['reg'] = sreg
+        t['derived'] = ('the totals row kept only its people-who-voted figure; '
+                        'registered rebuilt as the sum of %d precincts' % len(p))
         return 'total'
+
+    # Ashland reads four precincts and then a fifth of 4,324 with nothing beside
+    # it -- and 1,206+1,250+1,076+792 is 4,324. That is not a precinct, it is the
+    # voted total, read into the registered column of a row of its own.
+    if len(p) >= 2 and p[-1]['voted'] is None and p[-1]['reg'] is not None:
+        body = p[:-1]
+        bvote = sum(x['voted'] for x in body if x['voted'] is not None)
+        breg = sum(x['reg'] for x in body if x['reg'] is not None)
+        if bvote and p[-1]['reg'] == bvote and all(
+                x['voted'] is not None for x in body):
+            t['precincts'] = body
+            t['voted'] = bvote
+            t['reg'] = breg
+            t['derived'] = ('the voted total was read as a precinct of its own; '
+                            'both totals rebuilt from %d precincts' % len(body))
+            return 'total'
 
     # One precinct missing under a total that survived.
     if t['reg'] is not None:
