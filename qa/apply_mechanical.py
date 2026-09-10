@@ -51,16 +51,20 @@ def main():
 
             dup = mechanical.find_doubled_row(contest)
             if dup:
-                i, name = dup
+                idx, name = dup
+                note = ("%d row(s) named %r restated a column the printed "
+                        "total %s already contained"
+                        % (len(idx), name, contest.get("printed_total"))
+                        if len(idx) > 1 else
+                        "row %r duplicated the printed total %s"
+                        % (name, contest.get("printed_total")))
                 rows.append([doc["stem"], office, "duplicate row removed",
-                             contest.get("num_winners"), "",
-                             "row %r duplicated the printed total %s"
-                             % (name, contest.get("printed_total"))])
+                             contest.get("num_winners"), "", note])
                 if a.apply:
-                    contest["candidates"].pop(i)
+                    for i in sorted(idx, reverse=True):
+                        contest["candidates"].pop(i)
                     contest.setdefault("problems", []).append(
-                        "a duplicate row %r was removed: the contest summed to "
-                        "exactly twice its own printed total" % name)
+                        "removed as a duplicate: " + note)
                 counts["duplicate row removed"] += 1
                 touched = True
 

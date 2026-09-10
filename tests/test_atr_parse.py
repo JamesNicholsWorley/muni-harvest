@@ -197,6 +197,60 @@ def test_a_term_of_office_quoted_as_a_seat_count_is_not_one():
     assert mechanical.fix_seat_count(said, 1016)[:2] == ("REPORT", 2)
 
 
+def test_a_column_restated_against_every_candidate_is_removed_as_a_group():
+    """Fairhaven 2016 prints SUB TOT and TOTAL side by side with a Hand Counts
+    line between them, and the parse read the TOTAL column -- which already
+    contains the hand counts -- and each Hand Counts line as well.
+
+        Stacia A. Powers      909  Hand Counts 0
+        Tatiana N. Andrade    496  Hand Counts 1
+        Michael McNamara      890  Hand Counts 3
+        Write-In                3
+        Blanks               1048
+        TOTAL                3346
+
+    The sum is 3350. Removing the repeated label as a group closes it; no
+    single row holds the excess of 4, which is what the earlier rule looked
+    for.
+    """
+    c = _contest("School Committee - 3 years", 2,
+                 [("Stacia A. Powers", 909), ("Hand Counts", 0),
+                  ("Tatiana N. Andrade", 496), ("Hand Counts", 1),
+                  ("Michael McNamara", 890), ("Hand Counts", 3),
+                  ("Write-In", 3), ("Blanks", 1048)],
+                 printed_total=3346)
+    idx, label = mechanical.find_doubled_row(c)
+    assert [c["candidates"][i]["name_original"] for i in idx] == \
+        ["Hand Counts"] * 3
+
+
+def test_a_repeated_column_is_preferred_over_a_real_row_holding_the_excess():
+    """The same page's Selectman race is how the single-row rule went wrong.
+    Its excess is 2, no Hand Counts row holds 2, and the genuine Write-Ins row
+    does -- so the repair that fired deleted two real write-in votes and left
+    the duplication in place."""
+    c = _contest("Selectman - 3 years", 1,
+                 [("Geoffrey A. Haworth, II", 387), ("Hand Counts", 0),
+                  ("Daniel C. Freitas", 580), ("Hand Counts", 1),
+                  ("Patricia A. Pacella", 162), ("Hand Counts", 1),
+                  ("Bernard F. Rodericks", 526), ("Hand Counts", 0),
+                  ("Write-Ins", 2), ("Blanks", 16)],
+                 printed_total=1673)
+    idx, label = mechanical.find_doubled_row(c)
+    assert "Write-Ins" not in [c["candidates"][i]["name_original"] for i in idx]
+    assert label == "hand counts"
+
+
+def test_a_ballot_role_printed_per_precinct_is_never_removed():
+    """Blanks and Write-ins are quantities, and a page may print either once
+    per precinct. Repetition there says nothing about a restated column."""
+    c = _contest("MODERATOR", 1,
+                 [("JOHN SMITH", 300), ("Blanks", 20), ("Blanks", 30),
+                  ("Write-ins", 5)],
+                 printed_total=300)
+    assert mechanical.find_doubled_row(c) is None
+
+
 def test_a_printed_vote_for_still_outranks_the_arithmetic():
     """Brookline 2016: "SELECTMEN - For Three Years / Vote for NOT more than
     Two", one candidate, and a printed TOTAL of 2287 against 2287 ballots. The

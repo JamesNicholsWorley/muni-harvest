@@ -42,6 +42,44 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from qa import escalate                                      # noqa: E402
+from qa import layers                                        # noqa: E402
+
+
+def grounding(stem, doc, sections):
+    """Layer 1 over the section this record was cut from, as evidence.
+
+    It is stamped and not graded. Grounding is the corpus's own Layer 1 and it
+    belongs on the record, but the bar here is calibrated against the 1,900
+    published 2021-2026 records, which are not asked to clear it -- making
+    these clear a height the material beside them does not would publish
+    pre-2021 on a different standard, which is the inconsistency this gate was
+    rewritten to remove. So a reader sees how much of the record was located in
+    the page, and decides.
+    """
+    # A scan says so on the record rather than saying nothing. "No text held"
+    # and "every figure located" are different answers, and a record carrying
+    # neither is indistinguishable from one nobody looked at.
+    nothing = dict.fromkeys(("names", "figures"),
+                            "no text held for this section")
+    path = os.path.join(sections, stem + "_atr.pdf")
+    if not os.path.exists(path):
+        return None
+    try:
+        import pymupdf
+        pymupdf.TOOLS.mupdf_display_errors(False)
+        text = "".join(p.get_text() for p in pymupdf.open(path))
+    except Exception:
+        return nothing
+    side = os.path.join(sections, stem + ".txt")
+    if len(text.strip()) < 200 and os.path.exists(side):
+        text = io.open(side, encoding="utf-8", errors="replace").read()
+    if len(text.strip()) < 200:
+        return nothing
+    out = {}
+    for _, _, check, _, evidence in layers.layer1_grounded(
+            stem, doc, text, "the ATR section"):
+        out[check.replace("_grounded", "")] = evidence.split()[0]
+    return out or None
 
 
 def grade(doc):
@@ -86,10 +124,15 @@ def main():
     ap.add_argument("--bridged", required=True)
     ap.add_argument("--out", default="")
     ap.add_argument("--ledger", default="atr_gate.csv")
+    ap.add_argument("--sections", default="",
+                    help="directory of <Stem>_atr.pdf sections; when given, "
+                         "each record is stamped with how much of it Layer 1 "
+                         "can locate in its own page")
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
 
     counts = collections.Counter()
+    ungrounded = 0
     why_counts = collections.Counter()
     rows = []
     if a.apply and a.out:
@@ -145,6 +188,13 @@ def main():
                      reasons[0] if reasons else ""])
         doc["_gate"] = rung
         doc["_gate_reasons"] = reasons
+        if a.sections:
+            g = grounding(stem, doc, a.sections)
+            if g:
+                doc["_grounded"] = g
+                ungrounded += any("/" in x and
+                                  x.split("/")[0] != x.split("/")[1]
+                                  for x in g.values())
         if a.apply and a.out:
             io.open(os.path.join(a.out, rung, stem + ".json"), "w",
                     encoding="utf-8").write(
@@ -163,6 +213,8 @@ def main():
     print("\n  commonest reason for not publishing:")
     for why, n in why_counts.most_common(6):
         print("    %4d  %s" % (n, why))
+    if a.sections:
+        print("\n  %d records do not locate every name and figure in\n  their own section -- stamped on the record, not graded" % ungrounded)
     print("\n  ledger: %s" % a.ledger)
     if not a.apply:
         print("  DRY RUN. Nothing written. Pass --apply.")

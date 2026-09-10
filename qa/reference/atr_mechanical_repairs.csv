@@ -61,19 +61,26 @@ EastBridgewater2014,TRUSTEES OF PUBLIC LIBRARY,fix seat count,3,2,"marks 2254 ar
 EastBridgewater2018,BOARD OF HEALTH,fix seat count,2,1,"marks 1793 are exactly 1x the ballot count 1793 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 EastBridgewater2020,SELECTMEN,fix seat count,2,1,"marks 1479 are exactly 1x the ballot count 1479 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
 Fairhaven2016,Town Clerk - 3 tears,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 1673
-Fairhaven2016,Selectman - 3 years,duplicate row removed,1,,row 'Write-Ins' duplicated the printed total 1673
+Fairhaven2016,Selectman - 3 years,duplicate row removed,1,,4 row(s) named 'hand counts' restated a column the printed total 1673 already contained
+Fairhaven2016,School Committee - 3 years,duplicate row removed,2,,3 row(s) named 'hand counts' restated a column the printed total 3346 already contained
 Fairhaven2016,Board of Health - 3 years,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 1673
 Fairhaven2016,Board of Public Works - 3 years,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 1673
 Fairhaven2016,Commissioner of Trust Funds - 3 years,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 1673
-Fairhaven2016,Planning Board - 4 years,duplicate row removed,2,,row 'Hand Counts' duplicated the printed total 3346
+Fairhaven2016,Planning Board - 4 years,duplicate row removed,2,,2 row(s) named 'hand counts' restated a column the printed total 3346 already contained
 Fairhaven2016,Planning Board Vote for One for 1 year unexpired term,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 1673
+Fairhaven2016,Housing Authority Vote for One for 4 year unexpired term,duplicate row removed,1,,3 row(s) named 'hand counts' restated a column the printed total 1673 already contained
 Fairhaven2017,Selectman - 3 years Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 559
+Fairhaven2017,School Committee - 3 years Vote for Two,duplicate row removed,2,,2 row(s) named 'hand counts' restated a column the printed total 1118 already contained
 Fairhaven2017,Board of Health - 3 years Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 559
 Fairhaven2017,Board of Public Works - 3 years Vote for Two,duplicate row removed,2,,row 'Hand Counts' duplicated the printed total 1118
 Fairhaven2017,Board Public Works -1 year Unexpired Term Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 559
+Fairhaven2017,Planning Board - 4 years Vote for Two,duplicate row removed,2,,2 row(s) named 'hand counts' restated a column the printed total 1118 already contained
 Fairhaven2018,Selectman - 3 years Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713
+Fairhaven2018,School Committee - 3 years Vote for Two,duplicate row removed,2,,2 row(s) named 'hand counts' restated a column the printed total 1426 already contained
+Fairhaven2018,Board of Health - 3 years Vote for One,duplicate row removed,1,,2 row(s) named 'hand counts' restated a column the printed total 713 already contained
+Fairhaven2018,Board of Public Works - 3 years Vote for Two,duplicate row removed,2,,3 row(s) named 'hand counts' restated a column the printed total 1426 already contained
 Fairhaven2018,Commissioner of Trust Funds - 3 years Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713
-Fairhaven2018,Planning Board - 4 years Vote for Two,duplicate row removed,2,,row 'Hand Counts' duplicated the printed total 1426
+Fairhaven2018,Planning Board - 4 years Vote for Two,duplicate row removed,2,,2 row(s) named 'hand counts' restated a column the printed total 1426 already contained
 Fairhaven2018,Housing Authority - 5 years Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713
 Fairhaven2018,Housing Auth - 3 yrs unexpired term Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713
 Fairhaven2018,Moderator - 3 years Vote for one,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713

@@ -52,6 +52,12 @@ import re
 BLANKS_ROW = re.compile(r"^\s*(blanks?|unused\s+votes?|under\s*votes?|"
                         r"no\s+vote|not\s+voted)\b", re.I)
 
+# Rows that are quantities rather than people. A page may print any of them
+# once per precinct, so a repeated one is not a column restated.
+ROLE_ROW = re.compile(r"^\s*(blanks?|write[- ]?ins?|all\s+others?|others?|"
+                      r"scatter\w*|totals?|unused\s+votes?|under\s*votes?|"
+                      r"void|no\s+vote|not\s+voted)\b", re.I)
+
 # A term length wearing a seat count's clothes. Hamilton 2014 heads its races
 # "Selectman 3 years", "Town Clerk 3 years", "Housing AuthoritY 5 years", and
 # every one of the three closes at exactly 1016 ballots x ONE. The parse
@@ -152,11 +158,31 @@ def fix_seat_count(contest, ballots):
 
 
 def find_doubled_row(contest):
-    """The one row whose removal makes the contest sum to its printed total.
+    """The rows whose removal makes the contest sum to its printed total.
 
-    Uniqueness is the safeguard. If two different rows would each close it, the
-    arithmetic cannot say which was duplicated and neither can we, so nothing
-    is removed. A repair that had to choose would be a guess with a citation.
+    A NAME REPEATED inside one contest is looked for first, because a candidate
+    appears once and a column appears against every candidate. Fairhaven prints
+    "SUB TOT" and "TOTAL" side by side with a "Hand Counts" line between them,
+    and the parse read the TOTAL column -- which already contains the hand
+    counts -- and then read each Hand Counts line as a candidate as well. Its
+    School Committee sums to 3350 against a printed 3346, and the four are the
+    three Hand Counts rows.
+
+    Reading that as a single doubled row is how the repair went wrong: the
+    excess there was 2, no Hand Counts row held 2, and Selectman's genuine
+    Write-Ins row did -- so the one repair that fired deleted two real
+    write-in votes and left the duplication in place. Removing the repeated
+    label as a group closes both, and the sum closing exactly is what says the
+    printed total already contained them.
+
+    Ballot-role rows are never removable this way. A page may print Blanks or
+    Write-ins once per precinct, and those are quantities rather than a column
+    restated.
+
+    Uniqueness remains the safeguard for the single-row case. If two different
+    rows would each close it, the arithmetic cannot say which was duplicated
+    and neither can we, so nothing is removed. A repair that had to choose
+    would be a guess with a citation.
     """
     total = contest.get("printed_total")
     cands = contest.get("candidates") or []
@@ -164,7 +190,18 @@ def find_doubled_row(contest):
     if not total or marks is None or marks <= total:
         return None
     excess = marks - total
+
+    seen = collections.Counter(
+        (c.get("name_original") or "").strip().lower() for c in cands)
+    restated = {n for n, k in seen.items()
+                if k > 1 and n and not ROLE_ROW.match(n)}
+    if restated:
+        group = [i for i, c in enumerate(cands)
+                 if (c.get("name_original") or "").strip().lower() in restated]
+        if sum(cands[i].get("votes") or 0 for i in group) == excess:
+            return group, "/".join(sorted(restated))
+
     hits = [i for i, c in enumerate(cands) if c.get("votes") == excess]
     if len(hits) != 1:
         return None
-    return hits[0], cands[hits[0]].get("name_original")
+    return hits, cands[hits[0]].get("name_original")
