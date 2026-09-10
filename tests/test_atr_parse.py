@@ -7,7 +7,7 @@ import pymupdf
 import pytest
 
 from qa import atr_gate, escalate, mechanical
-from tools import text_arith, warrant, zones
+from tools import atr_sections, text_arith, warrant, zones
 
 
 # ------------------------------------------------------------------ arithmetic
@@ -340,6 +340,37 @@ def test_a_printed_vote_for_still_outranks_the_arithmetic():
                   ("Blanks", 513)],
                  source="printed", seats_quote="Vote for NOT more than Two")
     assert mechanical.fix_seat_count(c, 2287)[0] == "REPORT"
+
+
+# --------------------------------------------------------------------- locating
+
+def test_ballot_vocabulary_outranks_a_warrant_full_of_offices():
+    """The shape that put warrants, contents pages and officers directories
+    into 317 of the cuts. The warrant names more offices and heads itself an
+    election just as loudly; only the return prints Blanks and Write-ins."""
+    warrant_page = (
+        "ANNUAL TOWN ELECTION\nTo see if the Town will vote to choose the "
+        "following officers:\nMODERATOR\nSELECTMEN\nASSESSOR\nTOWN CLERK\n"
+        "SCHOOL COMMITTEE\nPLANNING BOARD\nBOARD OF HEALTH\nCONSTABLE\n"
+        "LIBRARY TRUSTEE\nCEMETERY COMMISSION\n")
+    return_page = (
+        "ANNUAL TOWN ELECTION\nSELECTMEN\nJOHN SMITH 900\nJANE DOE 800\n"
+        "Blanks 107\nWrite-ins 12\nTotal Votes 1819\nPrecinct 1 2 3\n")
+    scored = atr_sections.score_pages(None, [warrant_page, return_page])
+    assert scored[0][1] == 1, scored
+
+
+def test_a_page_with_no_ballot_words_still_falls_back_on_the_old_score():
+    """Hawley's return is nine offices, nine names and not one figure,
+    because every race was uncontested. Nothing about the ranking may reach
+    it: where no page holds ballot vocabulary the old order is unchanged."""
+    hawley = ("Annual Town Election Results: May 5, 2025\n"
+              "Selectmen/Board of Health - 3 years    Hussain Hamdan\n"
+              "Assessor - 3 years    Ed Brady\nTown Clerk - 3 years  A Nurse\n"
+              "Moderator - 1 year    P Perkins\nConstable - 3 years  R Sears\n")
+    thin = "TOWN ELECTION\nMODERATOR\nSELECTMEN\nASSESSOR\n"
+    scored = atr_sections.score_pages(None, [thin, hawley])
+    assert scored and scored[0][1] == 1, scored
 
 
 # ---------------------------------------------------------------------- warrant

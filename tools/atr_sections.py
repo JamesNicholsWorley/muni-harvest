@@ -202,14 +202,35 @@ def grow(texts, best, page_count):
 
 
 def score_pages(doc, texts=None):
-    """(score, page index, headings, ballot words, offices) best first."""
+    """(score, page index, headings, ballot words, offices) best first.
+
+    BALLOT VOCABULARY DECIDES, and the old score only breaks its ties. What
+    is eligible has not moved: that leniency is what Hawley's all-uncontested
+    return needs, and Petersham and Newbury were thrown away for requiring
+    more. What moved is the ORDER.
+
+    The old score summed headings, offices and ballot words, and a report
+    names its election four times -- the warrant lists the offices to be
+    filled, the officers directory lists who holds them, the contents page
+    indexes the result, and the minutes reference the date. All four carry
+    headings and office words in quantity, and the return has no more of
+    either; what it has, and they do not, is Blanks, Write-ins, Total Votes,
+    Precinct and Vote For.
+
+    Measured over the 155 reports whose old cut came back holding no contest
+    at all: the old order put a tally page inside its window 22 times, this
+    one 84. Weighting ballot words at 6x the old score reaches the same 84,
+    which is what says the ranking has saturated and the tie-break is doing
+    the rest of the work -- so it is written as a tie-break, where a page with
+    no ballot vocabulary anywhere still falls back on exactly the old score.
+    """
     out = []
     for i, t in enumerate(texts if texts is not None else [p.get_text() for p in doc]):
         h, b, o = (len(HEAD.findall(t)), len(BALLOT.findall(t)),
                    len(OFFICE.findall(t)))
         if h and (b >= 3 or o >= 3):
             out.append((b + 2 * o + 3 * h, i, h, b, o))
-    out.sort(reverse=True)
+    out.sort(key=lambda r: (r[3], r[0], r[1]), reverse=True)
     return out
 
 
@@ -261,8 +282,11 @@ def main():
                     rec["ballot_paper"] = "yes" if BALLOT_PAPER.search(page_text) else ""
                     rec["picked"] = f"{lo+1}-{hi+1}"
                     rec["status"] = "OK"
+                    runner = (f"; runner-up page {scored[1][1]+1} had "
+                              f"{scored[1][3]}" if len(scored) > 1 else "")
                     rec["detail"] = (f"page {best[1]+1}: {best[2]} headings, "
-                                     f"{best[3]} ballot words, {best[4]} offices")
+                                     f"{best[3]} ballot words, {best[4]} "
+                                     f"offices{runner}")
         except Exception as e:
             rec["status"] = "ERROR"
             rec["detail"] = f"{type(e).__name__}: {str(e)[:120]}"

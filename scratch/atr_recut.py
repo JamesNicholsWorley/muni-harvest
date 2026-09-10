@@ -45,33 +45,6 @@ def page_texts(doc, ocr, tmp):
     return out
 
 
-def old_scored(texts):
-    return S.score_pages(None, texts)
-
-
-def new_scored(texts):
-    """Same pages, re-ranked. Never narrows what is eligible.
-
-    Eligibility is left exactly where `atr_sections.score_pages` put it,
-    because that is the leniency Hawley's all-uncontested return needs and
-    Petersham and Newbury were thrown away for. What changes is the ORDER: a
-    report names its election on the warrant page, in the officers directory
-    and in the contents, and all three carry headings and office words, so the
-    old score could not tell them from the return. Ballot vocabulary, a table
-    of names against figures, and the absence of warrant articles can.
-    """
-    out = []
-    for score, i, h, b, o in S.score_pages(None, texts):
-        f = features(texts[i])
-        s = (score + 2 * f["b"] + min(f["ints"], 120) // 10
-             + min(f["names"], 40) // 5
-             - 3 * f["article"] - 4 * f["state"]
-             - (10 if f["prose"] >= 30 else 0))
-        out.append((s, i, h, b, o))
-    out.sort(reverse=True)
-    return out
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reports", default="/tmp/reports")
@@ -89,40 +62,43 @@ def main():
         stem = path[:-4]
         if want and stem not in want:
             continue
-        rec = {"stem": stem, "status": "", "pages": 0, "old_pick": "",
-               "new_pick": "", "old_score": 0, "new_score": 0, "moved": "",
+        rec = {"stem": stem, "status": "", "pages": 0, "pick": "",
+               "score": 0, "runner_up": 0, "reaches_a_tally": "",
                "ballot_words": 0, "mean_line": 0, "detail": ""}
         try:
             doc = pymupdf.open(os.path.join(a.reports, path))
             rec["pages"] = doc.page_count
             texts = page_texts(doc, a.ocr,
                                os.path.join(a.out, "_%s.png" % stem))
-            old, new = old_scored(texts), new_scored(texts)
-            if not new:
+            scored = S.score_pages(None, texts)
+            if not scored:
                 rec["status"] = ("NO_SECTION" if any(t.strip() for t in texts)
                                  else "NEEDS_OCR")
             else:
-                lo, hi, capped = S.grow(texts, new[0][1], doc.page_count)
+                page = scored[0][1]
+                lo, hi, capped = S.grow(texts, page, doc.page_count)
                 cut = pymupdf.open()
                 cut.insert_pdf(doc, from_page=lo, to_page=hi)
                 cut.save(os.path.join(a.out, "pdf", "%s_atr.pdf" % stem),
                          garbage=4, deflate=True)
-                f = features(texts[new[0][1]])
-                rec.update(status="OK", old_pick=old[0][1] + 1,
-                           new_pick=new[0][1] + 1, old_score=old[0][0],
-                           new_score=new[0][0],
-                           moved="yes" if old[0][1] != new[0][1] else "",
+                f = features(texts[page])
+                tally = [i + 1 for i in range(lo, hi + 1)
+                         if S.is_tally(texts[i])]
+                rec.update(status="OK", pick=page + 1, score=scored[0][0],
+                           runner_up=scored[1][3] if len(scored) > 1 else 0,
+                           reaches_a_tally="yes" if tally else "",
                            ballot_words=f["b"], mean_line=round(f["prose"]),
-                           detail="cut %d-%d of %d" % (lo + 1, hi + 1,
-                                                       doc.page_count))
+                           detail="cut %d-%d of %d; tally pages %s"
+                           % (lo + 1, hi + 1, doc.page_count,
+                              tally or "none"))
             doc.close()
         except Exception as e:
             rec["status"] = "ERROR"
             rec["detail"] = "%s: %s" % (type(e).__name__, str(e)[:100])
         rows.append(rec)
-        print("  %-11s %-22s old p%-5s new p%-5s b=%-3s %s"
-              % (rec["status"], stem, rec["old_pick"], rec["new_pick"],
-                 rec["ballot_words"], rec["detail"][:40]), flush=True)
+        print("  %-11s %-22s p%-5s b=%-3s %s"
+              % (rec["status"], stem, rec["pick"], rec["ballot_words"],
+                 rec["detail"][:52]), flush=True)
 
     with io.open(os.path.join(a.out, "manifest.csv"), "w", encoding="utf-8",
                  newline="") as fh:
@@ -130,10 +106,9 @@ def main():
         w.writeheader()
         w.writerows(rows)
     ok = [r for r in rows if r["status"] == "OK"]
-    moved = [r for r in ok if r["moved"]]
-    looks = [r for r in ok if r["ballot_words"] >= 3 and r["mean_line"] < 30]
-    print("\n  %d cut, %d moved off the old page, %d land on a tabular page "
-          "carrying ballot vocabulary" % (len(ok), len(moved), len(looks)))
+    reach = [r for r in ok if r["reaches_a_tally"]]
+    print("\n  %d cut, %d of them reaching a page of tallies" % (len(ok),
+                                                                 len(reach)))
 
 
 if __name__ == "__main__":

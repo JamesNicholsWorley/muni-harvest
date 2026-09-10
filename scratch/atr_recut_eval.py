@@ -25,10 +25,8 @@ from scratch.atr_pagefeat import features                      # noqa: E402
 def variants(f, base):
     tab = f["prose"] < 30
     fig = min(f["ints"], 120) // 10 + min(f["names"], 40) // 5
-    return {"old": base,
-            "b then old": (f["b"], base),
-            "b x6": (base + 6 * f["b"],),
-            "b then old, tabular first": (f["b"], tab, base)}
+    return {"old (as it was)": (base, -1),
+            "b then old (now live)": (f["b"], base)}
 
 
 def window_holds_a_tally(texts, page, n):
