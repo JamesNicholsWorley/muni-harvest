@@ -262,3 +262,16 @@ def test_a_town_auditor_is_a_municipal_office():
         _contest("Moderator-One Year", 1, [("PAUL R JONES", 41), ("BLANKS", 4)])]}
     assert not any(r.startswith("this is not an annual municipal election")
                    for r in escalate.review(rec)[1])
+
+
+def test_a_year_the_fiscal_offset_cannot_explain_is_not_this_town_year():
+    """Salisbury 2010 holds a return dated 2016-05-10, grounded 20 of 20."""
+    from qa import atr_gate
+    one_off = {"_source_stem": "Maynard2014", "elections": [
+        _contest("Moderator", 1, [("A", 500), ("BLANKS", 500)]),
+        _contest("Town Clerk", 1, [("B", 600), ("BLANKS", 400)])]}
+    for c in one_off["elections"]:
+        c["date"] = "2013-04-30"
+    assert atr_gate.grade(one_off)[0] == "publish"
+    far = dict(one_off, _source_stem="Salisbury2010")
+    assert atr_gate.grade(far)[0] == "review"

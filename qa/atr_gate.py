@@ -141,6 +141,19 @@ def grade(doc, text=None):
     if not (contests[0].get("date")):
         return "review", ["no election date could be derived"]
 
+    # A town report is named for its fiscal year, so a page dated one year off
+    # its filename is ordinary and 22 records here are. Six years off is not
+    # that. Salisbury 2010 holds a return dated 2016-05-10 which grounds 20 of
+    # 20 figures against its own section, and Petersham 2019 holds one dated
+    # 2002-03-04: right readings filed under the wrong town-year, and the fix
+    # is to refile them rather than to re-read them.
+    m = re.match(r"^(.*?)(\d{4})$", doc.get("_source_stem") or "")
+    if m and abs(int(contests[0]["date"][:4]) - int(m.group(2))) > 1:
+        return "review", [
+            "the page dates this %s and the filename says %s -- more than the "
+            "fiscal year accounts for, so this is another year's election"
+            % (contests[0]["date"], m.group(2))]
+
     if verdict == "escalate" and not (set(why) <= set(uncheckable)):
         return "review", why[:2]
     return "publish", uncheckable
