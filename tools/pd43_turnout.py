@@ -207,6 +207,20 @@ def snap(name, names):
     tail = [n for n in names if n.lower().endswith(low) or low.endswith(n.lower())]
     if len(tail) == 1:
         return tail[0], 'by tail'
+
+    # A TRUNCATED HEAD, WHERE ONLY ONE TOWN COULD FINISH IT. The table detector
+    # clips the label column, so names arrive cut: `Royals`, `Belche`, `Bernar`,
+    # `Blandf`, `Foxbor`, `Barnst`. Each of those is the start of exactly one
+    # Massachusetts municipality and is safe to complete.
+    #
+    # `North` is the start of five and `New` of several, so those stay as they
+    # are and are reported. Completing them by picking the first would silently
+    # file five towns' figures under one name, which is worse than a stub -- a
+    # stub is visibly wrong, a confident wrong answer is not.
+    if len(raw) >= 4:
+        pre = [n for n in names if n.lower().startswith(low)]
+        if len(pre) == 1:
+            return pre[0], 'by head'
     return raw, 'unmatched'
 
 
@@ -481,7 +495,7 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
         heads = False
         if names and col0 and not PCT.match(col0) and not TOTALS.search(col0):
             cand, how_c = snap(col0, names)
-            heads = how_c in ('exact', 'snapped')
+            heads = how_c in ('exact', 'snapped', 'by head')
 
         if m or no_election(joined) or heads:
             close()
@@ -498,7 +512,7 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
             how = ''
             if names:
                 snapped, how = snap(name or col0 or '', names)
-                if how in ('exact', 'snapped', 'by tail'):
+                if how in ('exact', 'snapped', 'by tail', 'by head'):
                     name = snapped
                 elif heads:
                     name = cand
@@ -976,9 +990,14 @@ def main():
                             st, '', how])
 
     dated = sum(1 for t in merged.values() if t['date'])
-    good = counts.get('checked', 0) + counts.get('no_election', 0)
-    print('%d municipalities, %d fully checked (%.0f%%)'
-          % (len(merged), good, 100.0 * good / max(1, len(merged))))
+    # USABLE, NOT `checked`. A `single` is an undivided town with one printed
+    # figure and nothing to cross-foot -- it is as good a denominator as a town
+    # whose precincts sum, and reporting only `checked` understated 2008 as 54%
+    # when 86% of its municipalities are fit to use.
+    usable = counts.get('checked', 0) + counts.get('single', 0)
+    print('%d municipalities, %d usable (%.0f%%), %d verified by arithmetic'
+          % (len(merged), usable, 100.0 * usable / max(1, len(merged)),
+             counts.get('checked', 0)))
     for k in sorted(counts, key=lambda x: -counts[x]):
         print('   %-12s %4d' % (k, counts[k]))
     if ocr_pages:
