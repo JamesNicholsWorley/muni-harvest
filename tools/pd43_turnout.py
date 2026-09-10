@@ -506,6 +506,49 @@ def rows_from_ocr(page, lo, hi):
     d = pytesseract.image_to_data(img, config='--psm 6',
                                   output_type=pytesseract.Output.DICT)
 
+    # TELL TESSERACT THE FIGURE COLUMNS ARE FIGURES.
+    #
+    # Everything to the right of the label column on this page is a number.
+    # Reading it with the full alphabet available invites the letters in, and on
+    # a soft scan they come: a 1973 page returned `5006060010000000` for a
+    # registered count. Restricted to digits and commas the same page returns
+    # `16,535 11,387`, `1,695 1,167`, `1,299 856` -- exactly what is printed.
+    #
+    # The pass is only worth its seconds where the general one struggled, so it
+    # runs when the figures look damaged: a figure column should be nearly all
+    # numeric, and when less than four fifths of it is, it is worth re-reading.
+    figs = [(d['left'][i], d['text'][i]) for i in range(len(d['text']))
+            if (d['text'][i] or '').strip()
+            and d['left'][i] >= label_w(page) * OCR_ZOOM]
+    numeric = sum(1 for _x, t in figs if re.fullmatch(r'[\d,]+', t))
+    if figs and numeric < len(figs) * 0.8:
+        cutpx = int(label_w(page) * OCR_ZOOM)
+        try:
+            right = img.crop((cutpx, 0, img.width, img.height))
+            dn = pytesseract.image_to_data(
+                right, output_type=pytesseract.Output.DICT,
+                config='--psm 6 -c tessedit_char_whitelist=0123456789,')
+            # Splice the digit reading back in, shifted to page coordinates, and
+            # keep the label column from the general pass.
+            merged = {k: list(v) for k, v in
+                      (('text', []), ('left', []), ('top', []), ('height', []),
+                       ('block_num', []), ('par_num', []), ('line_num', []))}
+            for i, t in enumerate(d['text']):
+                if (t or '').strip() and d['left'][i] < cutpx:
+                    for k in merged:
+                        merged[k].append(d[k][i])
+            for i, t in enumerate(dn['text']):
+                if not (t or '').strip():
+                    continue
+                merged['text'].append(t)
+                merged['left'].append(dn['left'][i] + cutpx)
+                for k in ('top', 'height', 'block_num', 'par_num', 'line_num'):
+                    merged[k].append(dn[k][i])
+            if merged['text']:
+                d = merged
+        except Exception:
+            pass
+
     # THE LABEL COLUMN IS READ SEPARATELY, exactly as it is on the text path.
     # Tesseract groups words into lines by proximity, and the gap between a town
     # name and its date is wide enough that it starts a new line -- so a row
@@ -1139,8 +1182,12 @@ def main():
         # OCR costs seconds a block, so a page without a text layer tries two
         # candidates rather than five -- enough to rescue a page whose own
         # reading is wrong, without reading the volume five times over.
+        # ONE CANDIDATE ON AN OCR PAGE. Reading such a page costs seconds, and
+        # it is now read twice over -- once for the labels and once with the
+        # figure columns restricted to digits. Trying several splits on top of
+        # that put a single 1970s volume past ten minutes.
         if len(page.get_text('words')) < 60 or a.ocr:
-            cands = cands[:2] if cands else [None]
+            cands = cands[:1] if cands else [None]
 
         best, best_score = None, (-1, -1)
         for c in cands:
