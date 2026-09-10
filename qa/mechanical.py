@@ -27,6 +27,31 @@ said. Where the doubling cannot be attributed to a specific duplicate row, the
 contest is flagged, not rewritten.
 """
 import collections
+import re
+
+# A ballot question elects nobody, so it has no seat count to print and no
+# winner to name. Asking it for one sent 42 records to review for a field that
+# does not exist on them. It is still owed the arithmetic -- a voter may mark
+# it once, exactly like a single-seat race -- so it is recognised rather than
+# exempted, and it can help derive the ballot count like any other contest.
+#
+# Recognised by its ROWS, not its heading. "QUESTION 1", "Shall the Town of
+# Belchertown cease assessing..." and an untitled override all appear as
+# headings; what they share is that every row is YES, NO or a role.
+_QUESTION_ROW = re.compile(r"^\s*(yes|no|blanks?|write[- ]?ins?|others?|total)\b", re.I)
+_YES_OR_NO = re.compile(r"^\s*(yes|no)\b", re.I)
+
+
+def is_ballot_question(contest):
+    names = [(c.get("name_original") or "").strip()
+             for c in (contest.get("candidates") or [])]
+    return bool(names) and all(_QUESTION_ROW.match(n) for n in names) \
+        and any(_YES_OR_NO.match(n) for n in names)
+
+
+def seats_of(contest):
+    """The number of times a voter may mark this contest. None if unknown."""
+    return 1 if is_ballot_question(contest) else contest.get("num_winners")
 
 
 def _countable(contests):
@@ -35,7 +60,7 @@ def _countable(contests):
     for c in contests:
         if not isinstance(c, dict):
             continue
-        if not c.get("num_winners") or c.get("scope") == "regional_district":
+        if not seats_of(c) or c.get("scope") == "regional_district":
             continue
         if _marks(c) is None:
             continue
@@ -66,14 +91,22 @@ def ballot_quorum(contests):
     cs = _countable(contests)
     q = collections.Counter()
     for c in cs:
-        marks, seats = _marks(c), c["num_winners"]
+        marks, seats = _marks(c), seats_of(c)
         if marks % seats == 0:
             q[marks // seats] += 1
     if not q:
         return None, 0, 0
     best, support = q.most_common(1)[0]
-    dissent = sum(1 for c in cs if _marks(c) > best * c["num_winners"])
-    if support < 2 or dissent >= support:
+    dissent = sum(1 for c in cs if _marks(c) > best * seats_of(c))
+    # A lone contest above the line is an outlier and the check exists to find
+    # it. A LARGER count that carries its own quorum is a second block of the
+    # record asserting a different ballot count, and calling the smaller one
+    # right condemns the whole of the larger block. Falmouth 2017 closes five
+    # office races exactly at 7,243 and all four of its ballot questions
+    # exactly at 7,244; the town's two tallies differ by one ballot, and
+    # neither the four nor the five is the impossible one.
+    rival = any(n >= 2 for cand, n in q.items() if cand > best)
+    if support < 2 or dissent >= support or rival:
         return None, support, dissent
     return best, support, dissent
 

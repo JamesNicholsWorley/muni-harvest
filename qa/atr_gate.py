@@ -38,23 +38,88 @@ import glob
 import io
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from qa import escalate                                      # noqa: E402
+from qa import layers                                        # noqa: E402
 
 
-def grade(doc):
+def section_text(sections, stem):
+    """The text of the section this record was cut from, or None.
+
+    None means there is nothing to ground against -- either the section is not
+    held, or it is a scan whose pages carry no text layer. That is a different
+    answer from "the figures are not on the page", and the difference is the
+    whole point: 91 of these sections are scans, and treating an unreadable
+    section as an ungrounded record would condemn every one of them.
+    """
+    if not sections:
+        return None
+    path = os.path.join(sections, stem + "_atr.pdf")
+    if not os.path.exists(path):
+        return None
+    try:
+        import pymupdf
+        doc = pymupdf.open(path)
+        text = "\n".join(p.get_text() for p in doc)
+    except Exception:
+        return None
+    return text if layers.readable_chars(text) >= 200 else None
+
+
+def grounding(doc, text):
+    """(figures_found, figures, names_found, names) against the page. Or None."""
+    if text is None:
+        return None
+    got = {}
+    for row in layers.layer1_grounded("", doc, text, "the section"):
+        m = re.search(r"(\d+)/(\d+)", row[4])
+        if m:
+            got[row[2]] = (int(m.group(1)), int(m.group(2)))
+    if not got:
+        return None
+    f = got.get("figures_grounded", (0, 0))
+    n = got.get("names_grounded", (0, 0))
+    return f + n
+
+
+def grade(doc, text=None):
     """(rung, reasons) for one bridged record."""
     contests = doc.get("elections") or []
     reasons = []
     if not contests:
         return "hold", ["the parse found no contest in this section"]
 
+    # Layer 0 asks whether this is the right document at all, and zero support
+    # is its answer that it is not. Carver 2014's cut is a financial statement,
+    # the report's INDEX -- "Annual Town Election Results, 4/26/14 .... 10" --
+    # and a blank page, and the record read from it holds nine contests with
+    # named candidates and vote totals, not one of which is printed anywhere on
+    # those three pages. It was graded publishable and published.
+    #
+    # Only ZERO is treated as a wrong document. A section that grounds
+    # partially is usually a cut that holds part of a longer return, and
+    # condemning those would cost far more than it saved.
+    ground = grounding(doc, text)
+    if ground and ground[1] and ground[0] == 0 and ground[2] == 0:
+        return "hold", ["not one of the %d figures in this record is printed "
+                        "on the page it was cut from, and none of its %d names"
+                        % (ground[1], ground[3])]
+
     verdict, why = escalate.review(doc)
     wrong_doc = [w for w in why if w.startswith("the document is not a return")]
     if wrong_doc:
         return "hold", wrong_doc
+    # A state election, a state primary or a county race is a right reading of
+    # the wrong election. It cannot be repaired by re-reading the page and it
+    # must never occupy an annual town-year slot, so it is held rather than
+    # reviewed -- the fix is a different cut of the same report.
+    out_of_scope = [w for w in why
+                    if w.startswith("this is not an annual municipal election")]
+    if out_of_scope:
+        return "hold", out_of_scope
     impossible = [w for w in why if "impossible" in w]
     if impossible:
         return "hold", impossible
@@ -86,6 +151,8 @@ def main():
     ap.add_argument("--bridged", required=True)
     ap.add_argument("--out", default="")
     ap.add_argument("--ledger", default="atr_gate.csv")
+    ap.add_argument("--sections", default="",
+                    help="directory of <Stem>_atr.pdf sections to ground against")
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
 
@@ -133,10 +200,11 @@ def main():
     for path in sorted(glob.glob(os.path.join(a.bridged, "*.json"))):
         doc = json.load(io.open(path, encoding="utf-8"))
         stem_now = doc.get("_source_stem") or os.path.basename(path)[:-5]
+        text = section_text(a.sections, stem_now)
         if stem_now in loser:
             rung, reasons = "review", [loser[stem_now]]
         else:
-            rung, reasons = grade(doc)
+            rung, reasons = grade(doc, text)
         counts[rung] += 1
         stem = doc.get("_source_stem") or os.path.basename(path)[:-5]
         if reasons:
@@ -145,6 +213,18 @@ def main():
                      reasons[0] if reasons else ""])
         doc["_gate"] = rung
         doc["_gate_reasons"] = reasons
+        # How much of the record the page itself corroborates travels with the
+        # record. A reader can then tell a checked record from an unchecked
+        # one, which is the distinction the coverage pages currently cannot
+        # make: "a record shown here without a flag has not necessarily been
+        # verified -- it may only be unchecked, and the two look identical".
+        ground = grounding(doc, text)
+        if ground:
+            doc["_grounded"] = {"figures": "%d/%d" % ground[:2],
+                                "names": "%d/%d" % ground[2:]}
+        elif a.sections:
+            doc["_grounded"] = {"figures": "no text held for this section",
+                                "names": "no text held for this section"}
         if a.apply and a.out:
             io.open(os.path.join(a.out, rung, stem + ".json"), "w",
                     encoding="utf-8").write(

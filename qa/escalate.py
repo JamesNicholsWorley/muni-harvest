@@ -49,6 +49,31 @@ HOUSEKEEPING = re.compile(
     r"no 'vote for'|vote for.*not print)", re.I)
 ROLE = re.compile(r"^(BLANKS?|WRITE[- ]?INS?|OTHERS?|TOTALS?|SCATTER\w*)$", re.I)
 
+# Offices no Massachusetts municipality elects. A town report prints the state
+# election and the state primary alongside its own return, and the locator
+# cannot tell them apart -- Ayer 2010's cut heads itself "Democratic Party
+# Primary Election Results for Tuesday, September 14, 2010", Barnstable 2017's
+# record is the November 2016 presidential, and Salem 2010's is the 2018 state
+# general. All three were graded publishable, because nothing on this path
+# asked what election it was.
+#
+# The list enumerates what is NOT municipal rather than what is, which is the
+# opposite of this corpus's usual rule, and it is the right way round here:
+# every one of these names a jurisdiction larger than a town, so the test is
+# about the office's own words and not about what somebody remembered to list.
+# `AUDITOR` alone is deliberately absent. Mount Washington, Sandisfield,
+# Westhampton, Hawley, Pelham and Washington all elect a Town Auditor, and a
+# bare AUDITOR test condemns six perfectly good returns to catch the State
+# Auditor, who is always named as such.
+NOT_MUNICIPAL = re.compile(
+    r"(ELECTORS?\s+OF\s+PRESIDENT|PRESIDENT\s+AND\s+VICE\s+PRESIDENT|"
+    r"SENATOR\s+IN\s+CONGRESS|REPRESENTATIVE\s+IN\s+CONGRESS|"
+    r"\bGOVERNOR\b|ATTORNEY\s+GENERAL|SECRETARY\s+OF\s+(THE\s+)?(COMMONWEALTH|STATE)|"
+    r"STATE\s+(TREASURER|AUDITOR|SENATOR|REPRESENTATIVE)|TREASURER\s+AND\s+RECEIVER|"
+    r"(REPRESENTATIVE|SENATOR)\s+IN\s+(THE\s+)?GENERAL\s+COURT|"
+    r"REGISTER\s+OF\s+(PROBATE|DEEDS)|COUNTY\s+COMMISSIONER|\bSHERIFF\b|"
+    r"DISTRICT\s+ATTORNEY|CLERK\s+OF\s+COURTS)", re.I)
+
 
 def _marks(contest):
     v = [c.get("votes") for c in contest.get("candidates", [])]
@@ -79,12 +104,21 @@ def review(record):
             continue
         office = c.get("office_original", "?")
         cands = c.get("candidates", [])
-        seats = c.get("num_winners")
+        # A ballot question is marked once like a single-seat race but elects
+        # nobody, so it has no seat count to have left null.
+        question = mechanical.is_ballot_question(c)
+        seats = mechanical.seats_of(c)
         marks = _marks(c)
 
         if not cands:
             reasons.append(f"{office}: no candidates")
             continue
+        # A ballot question's text is prose and will match almost anything, so
+        # it is never asked what jurisdiction it belongs to.
+        if not question and NOT_MUNICIPAL.search(office):
+            reasons.append(
+                "this is not an annual municipal election: it elects "
+                f"{office.strip()[:60]!r}, which no municipality elects")
         for cand in cands:
             nm = (cand.get("name_original") or "").strip()
             if not nm:
@@ -106,7 +140,7 @@ def review(record):
                 reasons.append(
                     f"{office}: {marks} marks exceeds {ballots}x{seats}"
                     f"={ballots*seats} -- impossible")
-            elif c.get("num_winners_source") in ("derived", "marked"):
+            elif not question and c.get("num_winners_source") in ("derived", "marked"):
                 implied = round(marks / ballots) if ballots else None
                 if implied and implied != seats:
                     reasons.append(

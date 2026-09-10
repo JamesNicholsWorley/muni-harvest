@@ -236,3 +236,29 @@ def test_every_tool_entrypoint_imports_as_a_script():
             capture_output=True, text=True, cwd=str(root), timeout=120)
         assert "ModuleNotFoundError" not in r.stderr, f"{name}: {r.stderr[-300:]}"
         assert "ImportError" not in r.stderr, f"{name}: {r.stderr[-300:]}"
+
+
+def test_a_state_election_is_not_an_annual_municipal_one():
+    """Ayer 2010: "Democratic Party Primary Election Results ... September 14".
+
+    A town report prints the state election beside its own return and the
+    locator cannot tell them apart, so four state elections were graded
+    publishable in annual town-year slots.
+    """
+    rec = {"elections": [
+        _contest("Governor and Lieutenant Governor", 1,
+                 [("DEVAL L PATRICK", 200), ("BLANKS", 177)]),
+        _contest("Attorney General", 1, [("MARTHA COAKLEY", 300), ("BLANKS", 77)])]}
+    verdict, reasons = escalate.review(rec)
+    assert verdict == "escalate"
+    assert any(r.startswith("this is not an annual municipal election")
+               for r in reasons)
+
+
+def test_a_town_auditor_is_a_municipal_office():
+    """Six hill towns elect one; a bare AUDITOR test condemns all six."""
+    rec = {"elections": [
+        _contest("Auditor-One Year", 1, [("EVA C SMITH", 40), ("BLANKS", 5)]),
+        _contest("Moderator-One Year", 1, [("PAUL R JONES", 41), ("BLANKS", 4)])]}
+    assert not any(r.startswith("this is not an annual municipal election")
+                   for r in escalate.review(rec)[1])
