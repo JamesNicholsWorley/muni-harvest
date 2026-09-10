@@ -11,6 +11,7 @@ Amherst2008,SELECT BOARD,fix seat count,3,2,"marks 7398 are exactly 2x the ballo
 Amherst2008,SCHOOL COMMITTEE,fix seat count,2,1,"marks 3699 are exactly 1x the ballot count 3699 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
 Amherst2008,JONES LIBRARY TRUSTEE (three years),fix seat count,1,2,"marks 7398 are exactly 2x the ballot count 3699 (over ballots x seats); seats recorded as 1, source marked"
 Amherst2016,SCHOOL COMMITTEE,fix seat count,3,2,"marks 6982 are exactly 2x the ballot count 3491 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
+Amherst2016,CHARTER COMMISSION,fix seat count,,9,"marks 31419 are exactly 9x the ballot count 3491 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Amherst2017,SELECT BOARD,fix seat count,3,2,"marks 9706 are exactly 2x the ballot count 4853 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
 Amherst2017,SCHOOL COMMITTEE,fix seat count,2,1,"marks 4853 are exactly 1x the ballot count 4853 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
 Amherst2018,SELECT BOARD,fix seat count,3,1,"marks 6043 are exactly 1x the ballot count 6043 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
@@ -18,11 +19,20 @@ Amherst2018,SCHOOL COMMITTEE,fix seat count,4,2,"marks 12086 are exactly 2x the 
 Amherst2018,JONES LIBRARY TRUSTEE,fix seat count,4,2,"marks 12086 are exactly 2x the ballot count 6043 (under ballots x seats with blanks tallied); seats recorded as 4, source derived"
 Ashburnham2017,BOARD OF HEALTH (2) - three year term,report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'BOARD OF HEALTH (2) - three year term'
 Ashfield2013,Board of Health,fix seat count,2,1,"marks 174 are exactly 1x the ballot count 174 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Ayer2011,Selectman,fix seat count,,2,"marks 1754 are exactly 2x the ballot count 877 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
+Ayer2011,Constable,fix seat count,,1,"marks 877 are exactly 1x the ballot count 877 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
 Becket2017,"For Member, Finance Committee (3-year term) Vote for Two",report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'Vote for Two'
 Becket2020,"1 MEMBERS, FINANCE COMMITTEE (3-year term)",report seat count,2,1,"marks are exactly 1x ballots but the page is quoted as printing 2 seats: '1 MEMBERS, FINANCE COMMITTEE (3-year term) Vote for Two'"
 Bedford2007,LIBRARY TRUSTEE,fix seat count,4,3,"marks 1236 are exactly 3x the ballot count 412 (under ballots x seats with blanks tallied); seats recorded as 4, source derived"
+Belchertown2011,Question: Shall the Town of Belchertown cease assessing the ,fix seat count,,1,"marks 2399 are exactly 1x the ballot count 2399 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Belchertown2011,RECALL VOTE * For the recall of Selectman James A. Barry. Ag,fix seat count,,1,"marks 2399 are exactly 1x the ballot count 2399 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Belchertown2011,For the recall of Selectman Kenneth E. Elstein. * Against th,fix seat count,,1,"marks 2399 are exactly 1x the ballot count 2399 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Belchertown2011,For the recall of Selectman George D. Archible. * Against th,fix seat count,,1,"marks 2399 are exactly 1x the ballot count 2399 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Belchertown2018,School Committee 1 years Vote for two,report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'Vote for two'
 Berlin2001,Board of Health – Three Years,fix seat count,2,1,"marks 243 are exactly 1x the ballot count 243 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Bourne2015,Non Veteran,fix seat count,,1,"marks 1958 are exactly 1x the ballot count 1958 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Bourne2015,Recreation Authority,fix seat count,,2,"marks 3916 are exactly 2x the ballot count 1958 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Bourne2015,Housing Authority 3 Years,fix seat count,,1,"marks 1958 are exactly 1x the ballot count 1958 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Bourne2017,Bird of Health 3 years vote for 1,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: '3 years vote for 1'
 Bourne2018,Brd of Health,report seat count,12,2,marks are exactly 2x ballots but the page is quoted as printing 12 seats: 'Vote for 12'
 Bourne2020,Jonathan Bourne Library Trustee 3 Years vote for 1,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: '3 Years vote for 1'
@@ -34,6 +44,9 @@ Carlisle2018,SCHOOL COMMITTEE,fix seat count,2,1,"marks 918 are exactly 1x the b
 Carver2008,Selectmen - 3 Years,fix seat count,3,2,"marks 3812 are exactly 2x the ballot count 1906 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Carver2008,Member of School Board,fix seat count,1,2,"marks 3812 are exactly 2x the ballot count 1906 (over ballots x seats); seats recorded as 1, source derived"
 Carver2009,Selectmen - 3 Years,fix seat count,3,2,"marks 3166 are exactly 2x the ballot count 1583 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
+Carver2009,Library Trustees - 1 Year,fix seat count,,1,"marks 1583 are exactly 1x the ballot count 1583 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Carver2009,Board of Public Works- 3 Years,fix seat count,,1,"marks 1583 are exactly 1x the ballot count 1583 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Carver2009,Carver Housing Authority - 5 Years,fix seat count,,1,"marks 1583 are exactly 1x the ballot count 1583 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Carver2010,Selectmen - 3 Years,fix seat count,3,1,"marks 2023 are exactly 1x the ballot count 2023 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'Selectmen - 3 Years' states a term and not a seat count"
 Carver2010,School Committee - 3 Years,fix seat count,3,2,"marks 4046 are exactly 2x the ballot count 2023 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'School Committee - 3 Years' states a term and not a seat count"
 Carver2010,Library Trustees - 3 Years,fix seat count,1,2,"marks 4046 are exactly 2x the ballot count 2023 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'Library Trustees - 3 Years' states a term and not a seat count"
@@ -82,9 +95,12 @@ Fairhaven2018,Moderator - 3 years Vote for one,duplicate row removed,1,,row 'Han
 Fairhaven2018,Tree Warden - 3 years Vote for one,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713
 Fairhaven2020,Board of Public Works - 3 years Vote for One,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Falmouth2008,Planning Board,report seat count,2,3,marks are exactly 3x ballots but the page is quoted as printing 2 seats: 'Elect two for three year term'
+Freetown2020,"SELECTMAN, BOARD OF HEALTH, & PERSONNEL BOARD MEMBER",fix seat count,,1,"marks 816 are exactly 1x the ballot count 816 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Georgetown2011,SELECTMAN,fix seat count,1,2,"marks 5094 are exactly 2x the ballot count 2547 (over ballots x seats); seats recorded as 1, source marked"
 Georgetown2017,SELECTMAN:,fix seat count,1,2,"marks 892 are exactly 2x the ballot count 446 (over ballots x seats); seats recorded as 1, source derived"
 Grafton2010,Planning Board (3 yrs.),fix seat count,1,2,"marks 1986 are exactly 2x the ballot count 993 (over ballots x seats); seats recorded as 1, source marked"
+Greenfield2017,SCHOOL COMMITTEE Two yr term,fix seat count,,1,"marks 3192 are exactly 1x the ballot count 3192 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Groveland2016,Library Trustee 2 yrs,fix seat count,,2,"marks 2252 are exactly 2x the ballot count 1126 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
 Halifax2020,Board of Library Trustees,fix seat count,1,2,"marks 1256 are exactly 2x the ballot count 628 (over ballots x seats); seats recorded as 1, source derived"
 Halifax2020,Planning Board (1 year term),fix seat count,2,1,"marks 628 are exactly 1x the ballot count 628 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Hamilton2014,Selectman 3 years,fix seat count,3,1,"marks 1016 are exactly 1x the ballot count 1016 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'Selectman 3 years' states a term and not a seat count"
@@ -106,11 +122,15 @@ Hingham2011,SCHOOL COMMITTEE (Three Years),fix seat count,3,2,"marks 4892 are ex
 Hingham2011,PLANNING BOARD (Five Years),fix seat count,2,1,"marks 2446 are exactly 1x the ballot count 2446 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Holliston2014,PLANNING BOARD - For Five Years,duplicate row removed,1,,row 'Miscellaneous Write-ins' duplicated the printed total 665
 Hull2011,"SELECTMAN, 3 years",report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Two Members of the Board of Selectmen to serve for the term of three years'
+Huntington2007,PETTIS FUND TRUSTEE,fix seat count,,1,"marks 86 are exactly 1x the ballot count 86 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
+Huntington2008,REGIONAL SCHOOL COMMITTEE,fix seat count,,1,"marks 64 are exactly 1x the ballot count 64 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Huntington2008,PETTIS FUND TRUSTEE – 3 YEARS,fix seat count,,1,"marks 64 are exactly 1x the ballot count 64 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Lakeville2010,FINANCE COMMITTEE for 3 years,fix seat count,3,2,"marks 828 are exactly 2x the ballot count 414 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'FINANCE COMMITTEE for 3 years' states a term and not a seat count"
 Lakeville2010,REGIONAL SCHOOL COMM. for 3 years,fix seat count,2,1,"marks 414 are exactly 1x the ballot count 414 (under ballots x seats with blanks tallied); seats recorded as 2, sourced printed, but the quote 'REGIONAL SCHOOL COMM. for 3 years' states a term and not a seat count"
 Lakeville2014,PARK COMMISSION for 3 yrs,fix seat count,3,2,"marks 1710 are exactly 2x the ballot count 855 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'PARK COMMISSION for 3 yrs' states a term and not a seat count"
 Lakeville2015,LIBRARY TRUSTEE for 3 yrs,fix seat count,3,1,"marks 579 are exactly 1x the ballot count 579 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Lakeville2015,PARK COMMISSION for 3 yrs,fix seat count,2,1,"marks 579 are exactly 1x the ballot count 579 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Lancaster2013,NRSD COMMITTEE,fix seat count,,1,"marks 619 are exactly 1x the ballot count 619 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Lanesborough2014,FINANCE COMMITTEE 3 YEARS,fix seat count,1,2,"marks 280 are exactly 2x the ballot count 140 (over ballots x seats); seats recorded as 1, source derived"
 Lanesborough2015,FINANCE COMMITTEE 3 YRS.,fix seat count,1,2,"marks 504 are exactly 2x the ballot count 252 (over ballots x seats); seats recorded as 1, source derived"
 Lee2018,Constable (3yrs),fix seat count,3,4,"marks 416 are exactly 4x the ballot count 104 (over ballots x seats); seats recorded as 3, source marked"
@@ -122,39 +142,52 @@ Littleton2016,BOARD OF ASSESSORS,fix seat count,1,2,"marks 3086 are exactly 2x t
 Littleton2016,PLANNING BOARD,fix seat count,2,1,"marks 1543 are exactly 1x the ballot count 1543 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Littleton2016,Electric Light Commissioners,fix seat count,3,2,"marks 3086 are exactly 2x the ballot count 1543 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Lynnfield2014,LIBRARY TRUSTEE - 2 YR,fix seat count,2,1,"marks 403 are exactly 1x the ballot count 403 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Lynnfield2014,HOUSING AUTHORITY 5 YR.,fix seat count,,1,"marks 403 are exactly 1x the ballot count 403 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
 Mansfield2005,BOARD OF SELECTMEN (For Three Years),fix seat count,1,2,"marks 3144 are exactly 2x the ballot count 1572 (over ballots x seats); seats recorded as 1, source derived"
 Mansfield2005,SCHOOL COMMITTEE (For Three Years),fix seat count,1,2,"marks 3144 are exactly 2x the ballot count 1572 (over ballots x seats); seats recorded as 1, source derived"
 Marblehead2007,Planning Board 3 Year Term,report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'Vote for Two'
 Marblehead2007,School Committee 3 Year Term,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Marblehead2007,Water & Sewer Commission 3 Year Term,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Marblehead2010,School Committee 3 Year Term,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
+Marshfield2008,BOARD OF ASSESSOR THREE YEARS,fix seat count,,1,"marks 886 are exactly 1x the ballot count 886 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Marshfield2008,PARKS & RECREATION COMMISSION THREE YEARS,fix seat count,,1,"marks 886 are exactly 1x the ballot count 886 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Marshfield2008,LIBRARY TRUSTEE THREE YEARS,fix seat count,,2,"marks 1772 are exactly 2x the ballot count 886 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Marshfield2008,PLANNING BOARD FIVE YEARS,fix seat count,,1,"marks 886 are exactly 1x the ballot count 886 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Marshfield2011,LIBRARY TRUSTEE THREE YEARS,fix seat count,1,2,"marks 660 are exactly 2x the ballot count 330 (over ballots x seats); seats recorded as 1, source derived"
 Marshfield2012,PARKS & RECREATION COMMISSION FIVE YEARS,fix seat count,2,1,"marks 488 are exactly 1x the ballot count 488 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Marshfield2012,PLANNING BOARD FIVE YEARS,fix seat count,2,1,"marks 488 are exactly 1x the ballot count 488 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Marshfield2013,SCHOOL COMMITTEE THREE YEARS,fix seat count,2,1,"marks 565 are exactly 1x the ballot count 565 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Mashpee2009,Question #1 Solid Waste Disposal Options,fix seat count,,1,"marks 1643 are exactly 1x the ballot count 1643 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Maynard2015,SELECTMAN,fix seat count,1,2,"marks 1150 are exactly 2x the ballot count 575 (over ballots x seats); seats recorded as 1, source marked"
+Maynard2015,REGIONAL VOCATIONAL SCHOOL COMMITTEE,fix seat count,,1,"marks 575 are exactly 1x the ballot count 575 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Maynard2015,HOUSING AUTHORITY,fix seat count,,1,"marks 575 are exactly 1x the ballot count 575 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Medfield2003,Selectmen (3 years),fix seat count,3,1,"marks 1578 are exactly 1x the ballot count 1578 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Medfield2003,School Committee (3 years),fix seat count,3,1,"marks 1578 are exactly 1x the ballot count 1578 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Medfield2003,Library Trustees (3 Years),fix seat count,4,2,"marks 3156 are exactly 2x the ballot count 1578 (under ballots x seats with blanks tallied); seats recorded as 4, source derived"
+Medway2015,BOARD OF SELECTMEN,fix seat count,,2,"marks 1554 are exactly 2x the ballot count 777 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Medway2015,SCHOOL COMMITTEE,fix seat count,2,1,"marks 777 are exactly 1x the ballot count 777 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Medway2015,PARK COMMISSION,fix seat count,2,1,"marks 777 are exactly 1x the ballot count 777 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Medway2018,SELECTMEN 3yr,fix seat count,1,2,"marks 1750 are exactly 2x the ballot count 875 (over ballots x seats); seats recorded as 1, source derived"
 Medway2018,SCHOOL COMMITTEE 1yr,fix seat count,2,1,"marks 875 are exactly 1x the ballot count 875 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Medway2018,PARK COMMISSION 3YR,fix seat count,2,1,"marks 875 are exactly 1x the ballot count 875 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Medway2020,LIBRARY TRUSTEES (3-year term),fix seat count,3,2,"marks 1286 are exactly 2x the ballot count 643 (under ballots x seats with blanks tallied); seats recorded as 3, source None"
+Medway2020,Question 1 non-binding,fix seat count,,1,"marks 643 are exactly 1x the ballot count 643 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Middleton2010,Selectman for 3 years,fix seat count,1,2,"marks 1186 are exactly 2x the ballot count 593 (over ballots x seats); seats recorded as 1, source derived"
 Middleton2013,Selectman,fix seat count,1,2,"marks 978 are exactly 2x the ballot count 489 (over ballots x seats); seats recorded as 1, source marked"
 Middleton2013,Elementary School Committee,fix seat count,3,2,"marks 978 are exactly 2x the ballot count 489 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
 Middleton2015,Elementary School Committee,fix seat count,1,2,"marks 2796 are exactly 2x the ballot count 1398 (over ballots x seats); seats recorded as 1, source derived"
 Middleton2016,Elementary School Committee,fix seat count,3,2,"marks 2398 are exactly 2x the ballot count 1199 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
+Milford2006,FOR MILFORD REDEVELOPMENT AUTHORITY – 5 YEARS,fix seat count,,1,"marks 2975 are exactly 1x the ballot count 2975 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
 Milford2020,FOR BOARD OF LIBRARY TRUSTEES,report seat count,3,2,marks are exactly 2x ballots but the page is quoted as printing 3 seats: 'Vote for not more than Two'
 Milford2020,FOR TRUSTEE OF VERNON GROVE CEMETERY,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for one'
 Millbury2015,LIBRARY TRUSTEES 1 YEAR,fix seat count,1,2,"marks 4416 are exactly 2x the ballot count 2208 (over ballots x seats); seats recorded as 1, source marked"
 Millbury2015,HOUSING AUTHORITY 4 YEARS,fix seat count,2,1,"marks 2208 are exactly 1x the ballot count 2208 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
+Millbury2015,QUESTION #1 PUBLIC SAFETY COMPLEX,fix seat count,,1,"marks 2208 are exactly 1x the ballot count 2208 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Millbury2016,BOARD OF SELECTMEN 3 YEARS,fix seat count,3,2,"marks 3138 are exactly 2x the ballot count 1569 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote '3 YEARS' states a term and not a seat count"
 Millbury2016,SCHOOL COMMITTEE 3 YEARS,fix seat count,1,2,"marks 3138 are exactly 2x the ballot count 1569 (over ballots x seats); seats recorded as 1, sourced printed, but the quote '3 YEARS' states a term and not a seat count"
 Millbury2016,LIBRARY TRUSTEE 3 YEARS,fix seat count,2,3,"marks 4707 are exactly 3x the ballot count 1569 (over ballots x seats); seats recorded as 2, source marked"
 Millbury2016,HOUSING AUTHORITY 5 YEARS,fix seat count,2,1,"marks 1569 are exactly 1x the ballot count 1569 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
+Millbury2017,QUESTION NO. 1 R.E. SHAW FEASIBILITY STUDY,fix seat count,,1,"marks 899 are exactly 1x the ballot count 899 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Millbury2018,PLANNING BOARD 3 YEARS,fix seat count,1,2,"marks 2220 are exactly 2x the ballot count 1110 (over ballots x seats); seats recorded as 1, source marked"
 Montague2020,"TOWN MEETING MEMBERS, For one year",duplicate row removed,2,,row 'Michael A. Ketcham' duplicated the printed total 340
 Nahant2016,"Planning Board, (for five years)",fix seat count,1,2,"marks 2154 are exactly 2x the ballot count 1077 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'for five years' states a term and not a seat count"
@@ -165,10 +198,21 @@ Norfolk2000,Norfolk School Committee Member for Three Years,fix seat count,1,2,"
 Norfolk2003,PLANNING BOARD TWO MEMBERS FOR THREE YEARS,report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'PLANNING BOARD TWO MEMBERS FOR THREE YEARS'
 Norfolk2003,RECREATION COMMISSION TWO MEMBERS FOR THREE YEARS,report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'RECREATION COMMISSION TWO MEMBERS FOR THREE YEARS'
 Norfolk2003,NORFOLK SCHOOL COMMITTEE MEMBER FOR THREE YEARS,fix seat count,1,2,"marks 2832 are exactly 2x the ballot count 1416 (over ballots x seats); seats recorded as 1, source marked"
+Norfolk2004,HOUSING AUTHORITY,fix seat count,,1,"marks 366 are exactly 1x the ballot count 366 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Norfolk2004,PLANNING BOARD,fix seat count,,2,"marks 732 are exactly 2x the ballot count 366 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Norfolk2004,RECREATION COMMISSION,fix seat count,,2,"marks 732 are exactly 2x the ballot count 366 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Norfolk2004,WATER COMMISSIONER,fix seat count,,1,"marks 366 are exactly 1x the ballot count 366 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Norfolk2004,CONSTABLE,fix seat count,,1,"marks 366 are exactly 1x the ballot count 366 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Norfolk2005,PLANNING BOARD,fix seat count,,2,"marks 1750 are exactly 2x the ballot count 875 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
+Norfolk2005,RECREATION COMMISSION,fix seat count,,2,"marks 1750 are exactly 2x the ballot count 875 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
+Norfolk2005,SCHOOL COMMITTEE,fix seat count,,2,"marks 1750 are exactly 2x the ballot count 875 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
+Norfolk2005,CONSTABLE,fix seat count,,2,"marks 1750 are exactly 2x the ballot count 875 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
 Norfolk2006,PLANNING BOARD,fix seat count,2,1,"marks 1265 are exactly 1x the ballot count 1265 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Norfolk2006,SCHOOL COMMITTEE,fix seat count,3,2,"marks 2530 are exactly 2x the ballot count 1265 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Norfolk2013,RECREATION COMMISSION FOR THREE YEARS,fix seat count,1,2,"marks 3144 are exactly 2x the ballot count 1572 (over ballots x seats); seats recorded as 1, source marked"
 Norfolk2016,Planning Board,fix seat count,2,1,"marks 691 are exactly 1x the ballot count 691 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Norfolk2020,Select Board,fix seat count,,1,"marks 1952 are exactly 1x the ballot count 1952 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Norfolk2020,Board of Health,fix seat count,,1,"marks 1952 are exactly 1x the ballot count 1952 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 NorthBrookfield2007,LIBRARY TRUSTEES FOR 3 YEARS(VOTE FOR 3),report seat count,3,2,marks are exactly 2x ballots but the page is quoted as printing 3 seats: 'LIBRARY TRUSTEES FOR 3 YEARS(VOTE FOR 3)'
 NorthBrookfield2008,SCHOOL COMMITTEE FOR 3 YEARS,fix seat count,1,2,"marks 1108 are exactly 2x the ballot count 554 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'SCHOOL COMMITTEE FOR 3 YEARS' states a term and not a seat count"
 NorthBrookfield2010,PLAYGROUND COMMITTEE FOR 3 YEARS,fix seat count,2,1,"marks 305 are exactly 1x the ballot count 305 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
@@ -178,8 +222,12 @@ Northbridge2005,PLANNING BOARD 3yr terms,report seat count,1,2,marks are exactly
 Northfield2016,Constables Three year term Vote for One,report seat count,1,4,marks are exactly 4x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Norwell2013,NORWELL HOUSING AUTHORITY – Three Years – Vote for Two,report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'Vote for Two'
 Norwell2018,BOARD OF SELECTMEN-Three Years-Vote for One,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
+Orleans2014,REG SCHOOL COMMITTEE,fix seat count,,1,"marks 1709 are exactly 1x the ballot count 1709 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Orleans2014,OES COMMITTEE,fix seat count,,2,"marks 3418 are exactly 2x the ballot count 1709 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+Orleans2014,SNOW LIBRARY TRUSTEE,fix seat count,,2,"marks 3418 are exactly 2x the ballot count 1709 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Otis2021,SELECTPERSON,fix seat count,2,1,"marks 278 are exactly 1x the ballot count 278 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
 Pembroke2011,MODERATOR,duplicate row removed,1,,row 'BLANKS' duplicated the printed total 887
+Petersham2009,Trustees of Public Library – 3 years,fix seat count,,1,"marks 393 are exactly 1x the ballot count 393 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Provincetown2011,Bd Library Trustees (3 yr),fix seat count,3,2,"marks 1726 are exactly 2x the ballot count 863 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
 Provincetown2015,School Committee (3 yr),fix seat count,3,2,"marks 1272 are exactly 2x the ballot count 636 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'School Committee (3 yr)' states a term and not a seat count"
 Provincetown2015,Bd Library Trustees (3 yr),fix seat count,3,2,"marks 1272 are exactly 2x the ballot count 636 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'Bd Library Trustees (3 yr)' states a term and not a seat count"
@@ -193,6 +241,7 @@ Provincetown2017,Charter Enforcement (3 yr),fix seat count,1,2,"marks 1580 are e
 Provincetown2017,Charter Enforcement (1 yr),fix seat count,1,2,"marks 1580 are exactly 2x the ballot count 790 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'Charter Enforcement (1 yr)' states a term and not a seat count"
 Provincetown2018,Charter Enforcement (3 yr),fix seat count,1,2,"marks 2094 are exactly 2x the ballot count 1047 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'Charter Enforcement (3 yr)' states a term and not a seat count"
 Provincetown2019,Selectmen,fix seat count,3,2,"marks 1798 are exactly 2x the ballot count 899 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
+Provincetown2019,Charter Compliance (3 yrs.),fix seat count,,1,"marks 899 are exactly 1x the ballot count 899 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Reading2016,Moderator - 1 Year - Vote for One,duplicate row removed,1,,row 'Blank Votes' duplicated the printed total 4738
 Reading2016,Board of Selectmen 3 Years - Vote for Two,duplicate row removed,2,,row 'Blank Votes' duplicated the printed total 8273
 Reading2016,Municipal Light Board - 3 Years - Vote for Two,duplicate row removed,2,,row 'Blank Votes' duplicated the printed total 8045
@@ -211,9 +260,12 @@ Reading2016,Precinct Seven - Town Meeting Members 3 Years - Vote for Eig,duplica
 Reading2016,Precinct Seven - Town Meeting Members - 2 Years - Vote for O,duplicate row removed,1,,row 'Blank Votes' duplicated the printed total 50
 Reading2016,Precinct Eight - Town Meeting Members - 3 Years - Vote for E,duplicate row removed,8,,row 'Blank Votes' duplicated the printed total 1636
 Rockland2004,SELECTMEN,fix seat count,3,2,"marks 5634 are exactly 2x the ballot count 2817 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
+Rowe2019,FINANCE COMMITTEE (2 YEARS),fix seat count,,1,"marks 122 are exactly 1x the ballot count 122 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Rowe2019,SCHOOL COMMITTEE (3 YEARS),fix seat count,2,1,"marks 122 are exactly 1x the ballot count 122 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Rowe2020,Question #1 (Gracy House),fix seat count,,1,"marks 136 are exactly 1x the ballot count 136 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Rutland2019,WRSD SCHOOL COMM,fix seat count,1,2,"marks 1490 are exactly 2x the ballot count 745 (over ballots x seats); seats recorded as 1, source derived"
 Salisbury2010,SELECTMAN,fix seat count,1,2,"marks 2528 are exactly 2x the ballot count 1264 (over ballots x seats); seats recorded as 1, source derived"
+Salisbury2013,SELECTMAN,fix seat count,,2,"marks 3888 are exactly 2x the ballot count 1944 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Scituate2012,SCHOOL COMMITTEE FOR THREE YEARS,fix seat count,2,1,"marks 1499 are exactly 1x the ballot count 1499 (under ballots x seats with blanks tallied); seats recorded as 2, sourced printed, but the quote 'SCHOOL COMMITTEE FOR THREE YEARS' states a term and not a seat count"
 Seekonk2011,SCHOOL COMMITTEE (Vote for ONE) 3 YR TERM,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for ONE'
 Sharon2013,SELECTMEN FOR 3 YEARS,fix seat count,3,1,"marks 1551 are exactly 1x the ballot count 1551 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
@@ -226,10 +278,12 @@ Shirley2013,Planning Board - 5 yrs,fix seat count,5,1,"marks 1196 are exactly 1x
 SouthHadley2009,SELECTBOARD FOR THREE YEARS,fix seat count,1,2,"marks 9756 are exactly 2x the ballot count 4878 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'FOR THREE YEARS' states a term and not a seat count"
 SouthHadley2010,SCHOOL COMMITTEE FOR THREE YEARS,fix seat count,3,2,"marks 3244 are exactly 2x the ballot count 1622 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'FOR THREE YEARS' states a term and not a seat count"
 SouthHadley2010,MUNICIPAL LIGHT BOARD FOR THREE YEARS,fix seat count,2,1,"marks 1622 are exactly 1x the ballot count 1622 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
+SouthHadley2011,SELECTBOARD FOR THREE YEARS,fix seat count,,2,"marks 4120 are exactly 2x the ballot count 2060 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
 SouthHadley2012,SCHOOL COMMITTEE FOR THREE YEARS,fix seat count,1,2,"marks 2102 are exactly 2x the ballot count 1051 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'FOR THREE YEARS' states a term and not a seat count"
 SouthHadley2012,HOUSING AUTHORITY FOR FIVE YEARS,fix seat count,2,1,"marks 1051 are exactly 1x the ballot count 1051 (under ballots x seats with blanks tallied); seats recorded as 2, sourced printed, but the quote 'FOR FIVE YEARS' states a term and not a seat count"
 SouthHadley2012,LIBRARY TRUSTEES FOR THREE YEARS,fix seat count,1,3,"marks 3153 are exactly 3x the ballot count 1051 (over ballots x seats); seats recorded as 1, sourced printed, but the quote 'FOR THREE YEARS' states a term and not a seat count"
 SouthHadley2014,MUNICIPAL LIGHT BOARD FOR THREE YEARS,fix seat count,2,1,"marks 1347 are exactly 1x the ballot count 1347 (under ballots x seats with blanks tallied); seats recorded as 2, source marked"
+SouthHadley2014,LIBRARY TRUSTEES FOR THREE YEARS,fix seat count,,3,"marks 4041 are exactly 3x the ballot count 1347 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 SouthHadley2015,LIBRARY TRUSTEES FOR THREE YEARS,fix seat count,4,3,"marks 4668 are exactly 3x the ballot count 1556 (under ballots x seats with blanks tallied); seats recorded as 4, source derived"
 Southwick2006,PARK AND REC COMMISSION ELECT ONE-3 YEARS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'ELECT ONE-3 YEARS'
 Southwick2006,PLANNING BOARD ELECT FIVE-5 YEARS,report seat count,5,1,marks are exactly 1x ballots but the page is quoted as printing 5 seats: 'ELECT FIVE-5 YEARS'
@@ -239,10 +293,16 @@ Southwick2006,BOARD OF HEALTH ELECT THREE-3 YEARS,report seat count,3,1,marks ar
 Spencer2013,Board of Selectmen,fix seat count,3,2,"marks 2884 are exactly 2x the ballot count 1442 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Spencer2013,Constable,fix seat count,4,3,"marks 4326 are exactly 3x the ballot count 1442 (under ballots x seats with blanks tallied); seats recorded as 4, source derived"
 Spencer2019,Constable,fix seat count,5,3,"marks 1002 are exactly 3x the ballot count 334 (under ballots x seats with blanks tallied); seats recorded as 5, source marked"
+Sterling2007,CONSTABLE,fix seat count,,2,"marks 1402 are exactly 2x the ballot count 701 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
+Sterling2007,MUNICIPAL LIGHT BOARD,fix seat count,,1,"marks 701 are exactly 1x the ballot count 701 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
+Sterling2007,HOUSING AUTHORITY - 5 year,fix seat count,,2,"marks 1402 are exactly 2x the ballot count 701 (with no seat count recorded and blanks tallied); seats recorded as None, source null"
+Sterling2008,LIBRARY TRUSTEES - 3 year,fix seat count,,2,"marks 1502 are exactly 2x the ballot count 751 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Sterling2009,MUNICIPAL LIGHT BOARD,fix seat count,2,1,"marks 823 are exactly 1x the ballot count 823 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Sterling2009,DPW BOARD,fix seat count,2,1,"marks 823 are exactly 1x the ballot count 823 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
+Sterling2011,BOARD OF SELECTMEN,fix seat count,,1,"marks 963 are exactly 1x the ballot count 963 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Sterling2015,BOARD OF SELECTMEN (3 yrs),fix seat count,3,1,"marks 899 are exactly 1x the ballot count 899 (under ballots x seats with blanks tallied); seats recorded as 3, sourced printed, but the quote 'BOARD OF SELECTMEN (3 yrs)' states a term and not a seat count"
 Sterling2020,BOARD OF LIBRARY TRUSTEES (3yrs),fix seat count,1,2,"marks 750 are exactly 2x the ballot count 375 (over ballots x seats); seats recorded as 1, source marked"
+Sterling2020,STERLING HOUSING AUTHORITY (5yrs),fix seat count,,1,"marks 375 are exactly 1x the ballot count 375 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 Sudbury2014,MODERATOR: For One Year,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1556
 Sudbury2014,SELECTMAN: For Three Years,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1450
 Sudbury2014,TAX COLLECTOR: For Three Years,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1626
@@ -256,12 +316,25 @@ Sudbury2014,SUDBURY HOUSING AUTHORITY: For Five Years,duplicate row removed,1,,r
 Templeton2018,Board of Selectmen (Vote for 2),report seat count,2,1,marks are exactly 1x ballots but the page is quoted as printing 2 seats: 'Board of Selectmen (Vote for 2)'
 Tisbury2020,SELECTMAN (1 for 3yrs),report seat count,1,3,marks are exactly 3x ballots but the page is quoted as printing 1 seats: '1 for 3yrs'
 Topsfield2009,Selectman (Three Years),fix seat count,1,2,"marks 1800 are exactly 2x the ballot count 900 (over ballots x seats); seats recorded as 1, source marked"
+Topsfield2009,School Committee (Three Years),fix seat count,,1,"marks 900 are exactly 1x the ballot count 900 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
+Topsfield2009,Regional District School Committee (Three Years),fix seat count,,1,"marks 900 are exactly 1x the ballot count 900 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
+Topsfield2009,Library Trustee (Three Years),fix seat count,,2,"marks 1800 are exactly 2x the ballot count 900 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
+Topsfield2009,Housing Authority (Three Years),fix seat count,,1,"marks 900 are exactly 1x the ballot count 900 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
+Topsfield2009,Water Commissioners (Three Years),fix seat count,,1,"marks 900 are exactly 1x the ballot count 900 (with no seat count recorded and blanks tallied); seats recorded as None, source derived"
 Truro2016,"SELECTMAN, Three Years",fix seat count,1,2,"marks 1004 are exactly 2x the ballot count 502 (over ballots x seats); seats recorded as 1, source marked"
 Wareham2018,ASSESSOR (3 YEARS),fix seat count,1,2,"marks 2956 are exactly 2x the ballot count 1478 (over ballots x seats); seats recorded as 1, source derived"
 Wareham2018,SCHOOL COMMITTEE,fix seat count,3,2,"marks 2956 are exactly 2x the ballot count 1478 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"
 Washington2020,SELECTBOARD (3 year term),fix seat count,3,1,"marks 69 are exactly 1x the ballot count 69 (under ballots x seats with blanks tallied); seats recorded as 3, source marked"
 WestBrookfield2009,LIBRARY TRUSTEE 3 YEARS VOTE FOR ONE,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'VOTE FOR ONE'
 WestBrookfield2014,LIBRARY TRUSTEE 3 YEARS VOTE FOR TWO,report seat count,2,3,marks are exactly 3x ballots but the page is quoted as printing 2 seats: '3 YEARS VOTE FOR TWO'
+WestNewbury2013,SELECTMAN,fix seat count,,1,"marks 927 are exactly 1x the ballot count 927 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+WestNewbury2013,BOARD OF HEALTH,fix seat count,,1,"marks 927 are exactly 1x the ballot count 927 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+WestNewbury2013,PLANNING BOARD,fix seat count,,1,"marks 927 are exactly 1x the ballot count 927 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+WestNewbury2013,ASSESSOR,fix seat count,,1,"marks 927 are exactly 1x the ballot count 927 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+WestNewbury2013,SCHOOL COMMITTEE,fix seat count,,1,"marks 927 are exactly 1x the ballot count 927 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+WestNewbury2013,WATER COMMISSIONER,fix seat count,,1,"marks 927 are exactly 1x the ballot count 927 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+WestNewbury2013,PARK AND RECREATION COMMISSIONER,fix seat count,,1,"marks 927 are exactly 1x the ballot count 927 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
+WestNewbury2015,CONSTABLE,fix seat count,,1,"marks 452 are exactly 1x the ballot count 452 (with no seat count recorded and blanks tallied); seats recorded as None, source None"
 WestNewbury2016,SCHOOL COMMITTEE (For Three Years),fix seat count,2,1,"marks 811 are exactly 1x the ballot count 811 (under ballots x seats with blanks tallied); seats recorded as 2, source derived"
 Westminster2010,Planning Board-3 years,fix seat count,1,2,"marks 398 are exactly 2x the ballot count 199 (over ballots x seats); seats recorded as 1, source derived"
 Westminster2013,Board of Selectman-3 years,fix seat count,3,1,"marks 1111 are exactly 1x the ballot count 1111 (under ballots x seats with blanks tallied); seats recorded as 3, source derived"

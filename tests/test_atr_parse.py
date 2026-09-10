@@ -330,6 +330,53 @@ def test_a_ballot_role_printed_per_precinct_is_never_removed():
     assert mechanical.find_doubled_row(c) is None
 
 
+def test_a_seat_count_nobody_could_establish_is_filled_from_the_page():
+    """Amherst 2016's Charter Commission runs nineteen candidates and prints
+    "Blank 7666 / TOTAL 31419" against 3491 ballots. 31419 is 3491 x 9
+    exactly, and a Massachusetts charter commission is nine members.
+
+    The transcriber left the seat count null, which is the honest answer and
+    was treated as a reason to buy the parse again. Filling it from the sum is
+    strictly weaker than the repair that already OVERWRITES a stated count on
+    the same evidence: a fill contradicts nothing.
+    """
+    c = _contest("CHARTER COMMISSION", None,
+                 [("Andrew M. Churchill", 1662), ("Nicholas P. Grabbe", 1519),
+                  ("Diana B. Stein", 1442), ("Irvin E. Rhodes", 1439),
+                  ("the other fifteen", 17659), ("All Others", 32),
+                  ("Blank", 7666)], source=None)
+    assert mechanical.fix_seat_count(c, 3491)[:2] == ("FIX", 9)
+
+
+def test_a_ballot_question_is_not_given_a_seat_count():
+    """Acushnet heads one "QUESTION I", Belchertown "Question: Shall the Town
+    of Belchertown...", Falmouth writes hers out in full. What they have in
+    common is on the rows and not the title: they are answered yes or no.
+
+    A question has no seats, so a null one is right. Demanding it held 59
+    correctly-read questions out of the corpus, and filling it would invent a
+    field the page never had.
+    """
+    q = _contest("QUESTION I", None,
+                 [("YES", 200), ("NO", 150), ("Blanks:", 45)], source=None)
+    assert mechanical.is_ballot_question(q)
+    assert mechanical.fix_seat_count(q, 395) is None
+    assert not [r for r in escalate.review({"elections": [
+        q,
+        _contest("MODERATOR", 1, [("A", 300), ("BLANKS", 95)]),
+        _contest("SELECTMEN", 1, [("B", 250), ("BLANKS", 145)]),
+    ]})[1] if "seat count" in r]
+
+
+def test_a_race_between_people_named_no_one_is_not_a_question():
+    """Only rows that say yes or no make a question. A contest with names on
+    it still owes a seat count."""
+    c = _contest("SELECTMEN", None,
+                 [("Noel P. Given", 300), ("Yesenia Cruz", 200),
+                  ("BLANKS", 95)], source=None)
+    assert not mechanical.is_ballot_question(c)
+
+
 def test_a_printed_vote_for_still_outranks_the_arithmetic():
     """Brookline 2016: "SELECTMEN - For Three Years / Vote for NOT more than
     Two", one candidate, and a printed TOTAL of 2287 against 2287 ballots. The

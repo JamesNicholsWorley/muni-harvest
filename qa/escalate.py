@@ -23,6 +23,8 @@ rather than arithmetic ones.
 import collections
 import re
 
+from qa.mechanical import is_ballot_question   # noqa: F401  (re-exported)
+
 # The two scopes that are not the town. A regional district spans several
 # towns, so its marks exceed the town's ballots legitimately; a ward or
 # precinct divides one town, so its marks are that precinct's ballots and the
@@ -52,7 +54,6 @@ HOUSEKEEPING = re.compile(
     r"(is )?not|no (election )?date (is )?print|date (is )?not print|"
     r"filename (says|indicates)|seat count (is )?not print|no seat count|"
     r"no 'vote for'|vote for.*not print)", re.I)
-ROLE = re.compile(r"^(BLANKS?|WRITE[- ]?INS?|OTHERS?|TOTALS?|SCATTER\w*)$", re.I)
 
 
 def _marks(contest):
@@ -117,7 +118,11 @@ def review(record):
             # A null seat count is the spec's honest answer, not a defect --
             # but it is also the field that decides who won, so it is bought
             # again rather than published on the cheap model's uncertainty.
-            reasons.append(f"{office}: seat count left null by the transcriber")
+            # A ballot question is the exception, and not a softening of the
+            # rule: it has no seats to count, so there is nothing to buy.
+            if not is_ballot_question(c):
+                reasons.append(
+                    f"{office}: seat count left null by the transcriber")
         elif not seats:
             reasons.append(f"{office}: seat count is zero")
         elif c.get("scope") not in NOT_TOWN_WIDE and ballots and marks is not None:

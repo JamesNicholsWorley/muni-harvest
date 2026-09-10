@@ -79,6 +79,26 @@ SEATS_SAID = re.compile(
     r"\b(one|two|three|four|five|six|seven|eight|nine|ten)\b|\b\d+\b)", re.I)
 
 
+YES_NO = re.compile(r"^\s*(yes|no)\b", re.I)
+
+
+def is_ballot_question(contest):
+    """A contest answered yes or no rather than with names.
+
+    Enumerated by what it IS, not by its heading: Falmouth writes its
+    questions out in full sentences, Acushnet heads one "QUESTION I", and
+    Belchertown "Question: Shall the Town of Belchertown...". What they have in
+    common is on the rows, not the title.
+
+    A question has no seats, so a null seat count on one is the right answer
+    and not something to buy a second opinion about.
+    """
+    real = [(c.get("name_original") or "").strip()
+            for c in contest.get("candidates") or []]
+    real = [n for n in real if n and not ROLE_ROW.match(n)]
+    return bool(real) and all(YES_NO.match(n) for n in real)
+
+
 def tallies_blanks(contest):
     """True when a row of this contest counts unmarked ballot positions."""
     return any(BLANKS_ROW.match(c.get("name_original") or "")
@@ -149,7 +169,7 @@ def fix_seat_count(contest, ballots):
     right, and only the page can say which. Those are reported for a human.
     """
     seats, marks = contest.get("num_winners"), _marks(contest)
-    if not ballots or not seats or marks is None:
+    if not ballots or marks is None or (seats is not None and not seats):
         return None
     # A ward or precinct contest is bounded by ITS ballots, and the town's
     # count says nothing about how many those were. A regional district
@@ -158,13 +178,24 @@ def fix_seat_count(contest, ballots):
         return None
     if marks % ballots:
         return None
-    below = marks < ballots * seats
+    # A seat count nobody could establish is filled on the same evidence that
+    # is trusted to OVERWRITE one, which is strictly weaker: a fill contradicts
+    # nothing, and where the blanks close the sum the multiple is the seats up.
+    # Buying a second opinion on an answer the page already gives is money
+    # spent to be told what we hold.
+    # A ballot question has no seats to fill in. Answering it "one seat" is
+    # inventing a field the page never had, which is the shape this module
+    # exists to avoid.
+    if seats is None and is_ballot_question(contest):
+        return None
+    below = seats is None or marks < ballots * seats
     if below and not tallies_blanks(contest):
         return None
     implied = marks // ballots
     if implied == seats or not 1 <= implied <= 20:
         return None
-    where = ("under ballots x seats with blanks tallied" if below
+    where = ("with no seat count recorded and blanks tallied" if seats is None
+             else "under ballots x seats with blanks tallied" if below
              else "over ballots x seats")
     printed = contest.get("num_winners_source") == "printed"
     if printed and quotes_a_seat_count(contest):
@@ -177,7 +208,7 @@ def fix_seat_count(contest, ballots):
            "count" % (contest.get("seats_quote") or ""))
     return ("FIX", implied,
             "marks %d are exactly %dx the ballot count %d (%s); seats "
-            "recorded as %d, %s"
+            "recorded as %s, %s"
             % (marks, implied, ballots, where, seats, why))
 
 
