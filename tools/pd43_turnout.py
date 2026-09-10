@@ -828,11 +828,18 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
             if no_election(joined):
                 cur['no_election'] = True
                 continue
-            if not m:
-                continue
+            # A HEADING ROW WITHOUT A READABLE DATE STILL CARRIES ITS FIGURES.
+            #
+            # This used to skip the row outright, which created the town and
+            # threw away its numbers -- and in the older layout the town's TOTAL
+            # is printed on that very row. Reading each column separately puts
+            # the date in the label band where it may not parse, so `Leominster
+            # Nov. 6 16,535 11,387` opened a town called Leominster holding
+            # nothing at all. Every city in the 1973 volume went that way.
             mon = next((x for x in MONTHS
-                        if x.lower().startswith(m.group(1).lower()[:3])), None)
-            if mon:
+                        if m and x.lower().startswith(m.group(1).lower()[:3])),
+                       None)
+            if mon and m:
                 try:
                     cur['date'] = '%d-%02d-%02d' % (
                         year, MONTHS.index(mon) + 1, int(m.group(2)))
