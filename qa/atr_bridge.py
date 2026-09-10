@@ -32,6 +32,46 @@ MONTHS = {m: i + 1 for i, m in enumerate(
      "august", "september", "october", "november", "december"])}
 
 
+_ONES = ["", "one", "two", "three", "four", "five", "six", "seven", "eight",
+         "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+         "sixteen", "seventeen", "eighteen", "nineteen"]
+_ORDINALS = {
+    "first": 1, "second": 2, "third": 3, "fifth": 5, "eighth": 8, "ninth": 9,
+    "twelfth": 12, "twentieth": 20, "thirtieth": 30,
+}
+
+
+MONTH_NAME = {v: k for k, v in MONTHS.items()}
+
+
+def _spelled(words):
+    """"the twenty ninth" -> "the 29", or None if it is not a written number."""
+    parts = [p for p in re.split(r"[\s\-]+", words.strip().lower()) if p]
+    total = 0
+    for p in parts:
+        if p in _ORDINALS:
+            total += _ORDINALS[p]
+        elif p.endswith("th") and p[:-2] in _ONES:
+            total += _ONES.index(p[:-2])
+        elif p == "twenty" or p == "twentieth":
+            total += 20
+        elif p == "thirty" or p == "thirtieth":
+            total += 30
+        elif p in _ONES:
+            total += _ONES.index(p)
+        else:
+            return None
+    return "the %d" % total if 1 <= total <= 31 else None
+
+
+def _month(word):
+    w = (word or "").strip().lower().rstrip(".")
+    for full in MONTHS:
+        if full == w or (len(w) >= 3 and full.startswith(w)):
+            return MONTHS[full]
+    return None
+
+
 def load_municipalities(path):
     """{normalised name -> canonical name} from the inventory."""
     out = {}
@@ -100,8 +140,24 @@ def iso_date(printed, stem_year):
     t = re.sub(r"(\d{1,2})(st|nd|rd|th)\b", lambda mm: mm.group(1), t, flags=re.I)
     # "the twenty-fifth day of April" and "the 25th day of April" both
     # reduce to the same month-day-year the branch below already reads.
+    # The comment said so and only the second was implemented, which left
+    # seven records undated whose page prints the date in words: "Monday, the
+    # Fourth Day of May, 2015", "TUESDAY, THE FIFTH DAY OF NOVEMBER, 2019",
+    # "TUESDAY, THE TWENTY NINTH DAY OF MARCH 2016".
+    t = re.sub(r"\bthe\s+([A-Za-z][A-Za-z\- ]{2,20}?)\s+day\s+of\b",
+               lambda mm: (_spelled(mm.group(1)) + " day of") if _spelled(mm.group(1))
+               else mm.group(0), t, flags=re.I)
     t = re.sub(r"\bthe\s+(\d{1,2})\s+day\s+of\s+([A-Za-z]+)",
                lambda mm: mm.group(2) + " " + mm.group(1), t, flags=re.I)
+    # 31-Mar-03, 4-Apr-07, 11May2015, 13 MAY 2019. The month is spelled, so
+    # there is nothing to disambiguate: the two numbers are the day and the
+    # year, in that order. Twelve records were reported as carrying no
+    # derivable date while their page printed one in this form.
+    m = re.search(r"\b(\d{1,2})\s*[-/ ]?\s*([A-Za-z]{3,9})\.?\s*[-/ ]?\s*(\d{2}|\d{4})\b", t)
+    if m and _month(m.group(2)):
+        y = int(m.group(3))
+        t = "%s %s, %d" % (MONTH_NAME[_month(m.group(2))], m.group(1),
+                           2000 + y if y < 100 else y)
     m = re.search(r"([A-Za-z]+)\s+(\d{1,2})\s*,?\s*(\d{4})", t)
     if m and m.group(1).lower() in MONTHS:
         y, mo, d = int(m.group(3)), MONTHS[m.group(1).lower()], int(m.group(2))

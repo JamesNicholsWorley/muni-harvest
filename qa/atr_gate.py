@@ -85,10 +85,45 @@ def grounding(doc, text):
     return f + n
 
 
-def grade(doc, text=None):
+LEDGER = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                      "reference", "atr_adjudications.csv")
+
+
+def withdrawals(path=LEDGER):
+    """{stem: why} for records a reading of the document has retired.
+
+    A withdrawal decided by reading a page has to survive the next run, or the
+    gate publishes the record again and the reading has to be done twice. The
+    ledger is where the reading is written down, so the ledger is what the gate
+    consults -- the row carries the section's sha256 and a verbatim quote, and
+    deleting the row is how somebody disagrees with it.
+
+    These are the records no check catches. Plymouth 2010's cut is a state
+    election warrant signed by the Secretary of the Commonwealth and a
+    directory of appointed officers; the record read from it says Plymouth
+    elected SCOTT BROWN as a Selectman with 3,427 votes. The office is spelled
+    "Selectmen", so the scope test sees nothing wrong, and one of its eight
+    figures is on the page, so the grounding test sees a partial cut.
+    """
+    out = {}
+    if not os.path.exists(path):
+        return out
+    import csv
+    with io.open(path, encoding="utf-8", newline="") as fh:
+        for row in csv.DictReader(fh):
+            if (row.get("status") or "").strip() == "withdrawn":
+                out[(row.get("stem") or "").strip()] = (
+                    row.get("should_be") or "withdrawn by adjudication").strip()
+    return out
+
+
+def grade(doc, text=None, retired=None):
     """(rung, reasons) for one bridged record."""
     contests = doc.get("elections") or []
     reasons = []
+    stem = doc.get("_source_stem") or ""
+    if retired and stem in retired:
+        return "hold", ["%s -- qa/reference/atr_adjudications.csv" % retired[stem]]
     if not contests:
         return "hold", ["the parse found no contest in this section"]
 
@@ -147,7 +182,7 @@ def grade(doc, text=None):
     # 20 figures against its own section, and Petersham 2019 holds one dated
     # 2002-03-04: right readings filed under the wrong town-year, and the fix
     # is to refile them rather than to re-read them.
-    m = re.match(r"^(.*?)(\d{4})$", doc.get("_source_stem") or "")
+    m = re.match(r"^(.*?)(\d{4})$", stem)
     if m and abs(int(contests[0]["date"][:4]) - int(m.group(2))) > 1:
         return "review", [
             "the page dates this %s and the filename says %s -- more than the "
@@ -169,6 +204,7 @@ def main():
     ap.add_argument("--apply", action="store_true")
     a = ap.parse_args()
 
+    retired = withdrawals()
     counts = collections.Counter()
     why_counts = collections.Counter()
     rows = []
@@ -217,7 +253,7 @@ def main():
         if stem_now in loser:
             rung, reasons = "review", [loser[stem_now]]
         else:
-            rung, reasons = grade(doc, text)
+            rung, reasons = grade(doc, text, retired)
         counts[rung] += 1
         stem = doc.get("_source_stem") or os.path.basename(path)[:-5]
         if reasons:

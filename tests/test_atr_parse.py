@@ -333,3 +333,33 @@ def test_figures_alone_do_not_promote_a_page_with_no_ballot_words():
                 "Moderator briefed .... 1 1 1"])
     best = atr_sections.score_pages(doc)
     assert best and best[0][1] == 0
+
+
+# ------------------------------------------------------------------- the date
+
+def test_a_date_the_page_printed_is_not_a_missing_date():
+    """Nineteen records were reported as undated with the date on the page.
+
+    Three spellings, all unambiguous: the month is named, so nothing has to be
+    guessed about which number is the day.
+    """
+    from qa.atr_bridge import iso_date
+    assert iso_date("31-Mar-03", 2003)[0] == "2003-03-31"
+    assert iso_date("4-Apr-07", 2007)[0] == "2007-04-04"
+    assert iso_date("11May2015", 2015)[0] == "2015-05-11"
+    assert iso_date("7 MAY 2019", 2019)[0] == "2019-05-07"
+    assert iso_date("Monday, the Fourth Day of May, 2015", 2015)[0] == "2015-05-04"
+    assert iso_date("TUESDAY, THE TWENTY NINTH DAY OF MARCH 2016", 2016)[0] == "2016-03-29"
+    assert iso_date("Saturday, the Eighth Day of May, 2010", 2010)[0] == "2010-05-08"
+
+
+def test_the_spellings_already_read_still_read_the_same():
+    from qa.atr_bridge import iso_date
+    assert iso_date("April 26, 2014", 2014)[0] == "2014-04-26"
+    assert iso_date("April 25th, 2015", 2015)[0] == "2015-04-25"
+    assert iso_date("Monday the 20th day of May, 2002", 2002)[0] == "2002-05-20"
+    assert iso_date("04/06/2002", 2002)[0] == "2002-04-06"
+    assert iso_date("2015-05-12", 2015)[0] == "2015-05-12"
+    # A four-digit misread still fails, and a year window still guards it.
+    assert iso_date("March 28, 2107", 2005)[0] is None
+    assert iso_date("March 25, 1974", 2014)[0] is None
