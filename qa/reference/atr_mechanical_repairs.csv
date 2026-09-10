@@ -7,7 +7,9 @@ Abington2014,Trustee of Veterans Memorial - For Three Years,fix seat count,1,2,"
 Abington2014,Trustee of Public Library - For Three Years,fix seat count,1,3,"marks 4605 are exactly 3x the ballot count 1535; seats recorded as 1, source derived"
 Abington2015,Selectman,fix seat count,1,2,"marks 2902 are exactly 2x the ballot count 1451; seats recorded as 1, source derived"
 Abington2015,Board of Public Health,fix seat count,1,2,"marks 2902 are exactly 2x the ballot count 1451; seats recorded as 1, source marked"
+Acushnet2018,QUESTION I,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blanks:' -- a question, not an office"
 Amherst2008,JONES LIBRARY TRUSTEE (three years),fix seat count,1,2,"marks 7398 are exactly 2x the ballot count 3699; seats recorded as 1, source marked"
+Amherst2018,QUESTION,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
 Arlington2002,TOWN TREASURER,duplicate row removed,1,,row 'Times counted' duplicated the printed total 5566
 Arlington2002,ASSESSOR,duplicate row removed,1,,row 'Times counted' duplicated the printed total 5566
 Arlington2002,PCT 1 TOWN MTG MEMBERS,duplicate row removed,,,row 'Times counted' duplicated the printed total 1644
@@ -66,9 +68,12 @@ Arlington2005,PCT 19 TOWN MTG MEMBERS,duplicate row removed,3,,row 'Times counte
 Arlington2005,PCT 20 TOWN MTG MEMBERS,duplicate row removed,3,,row 'Times counted' duplicated the printed total 1080
 Arlington2005,PCT 20 TOWN MTG MEMBER,duplicate row removed,1,,row 'Times counted' duplicated the printed total 270
 Arlington2005,PCT 21 TOWN MTG MEMBERS,duplicate row removed,4,,row 'Times counted' duplicated the printed total 1240
+Arlington2008,ASSESSOR FOR THREE YEARS (1),residual row closed against the printed total,,0,the printed total 6732 less the 6732 read on the other rows; the blank row is 'Others'
 Ashburnham2017,ASHBURNHAM-WESTMINSTER REGIONAL SCHOOL DISTRICT WESTMINSTER ,fix seat count,1,2,"marks 846 are exactly 2x the ballot count 423; seats recorded as 1, source derived"
 Ashburnham2017,ASHBURNHAM REGIONAL SCHOOL COMMITTEE - 3 YEARS,fix seat count,1,2,"marks 846 are exactly 2x the ballot count 423; seats recorded as 1, source derived"
 Ashburnham2020,WESTMINSTER SCHOOL COMMITTEE,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'WESTMINSTER SCHOOL COMMITTEE'
+Barnstable2001,QUESTION 1 Charter Change - Airport,ballot question moved to `questions`,,,"rows are 'Total', 'Blanks', 'Write-in votes', 'YES' -- a question, not an office"
+Barnstable2001,QUESTION 2 Charter Revision,ballot question moved to `questions`,,,"rows are 'Total', 'Blanks', 'Write-in votes', 'YES' -- a question, not an office"
 Barnstable2001,TOWN CLERK,duplicate row removed,1,,row 'Total' duplicated the printed total 7578
 Barnstable2001,HOUSING AUTHORITY (Elect 2),duplicate row removed,2,,row 'Total' duplicated the printed total 15156
 Barnstable2001,PRECINCT 2 TOWN COUNCIL,duplicate row removed,1,,row 'Total' duplicated the printed total 681
@@ -76,12 +81,50 @@ Barnstable2001,PRECINCT 4 TOWN COUNCIL,duplicate row removed,1,,row 'Total' dupl
 Barnstable2001,PRECINCT 6 TOWN COUNCIL,duplicate row removed,1,,row 'Total' duplicated the printed total 1003
 Barnstable2001,PRECINCT 8 TOWN COUNCIL,duplicate row removed,1,,row 'Total' duplicated the printed total 373
 Barnstable2001,PRECINCT 10 TOWN COUNCIL,duplicate row removed,1,,row 'Total' duplicated the printed total 651
-Barnstable2001,QUESTION 1 Charter Change - Airport,duplicate row removed,,,row 'Total' duplicated the printed total 7578
-Barnstable2001,QUESTION 2 Charter Revision,duplicate row removed,,,row 'Total' duplicated the printed total 7578
+Barnstable2003,QUESTION 1 Override - $7.2 M,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blanks' -- a question, not an office"
+Barnstable2003,QUESTION 2 Embarkation Fee $.50,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blanks' -- a question, not an office"
+Barnstable2017,QUESTION 1,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Barnstable2017,QUESTION 2,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Barnstable2017,QUESTION 3,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Barnstable2017,QUESTION 4,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Belchertown2011,Question: Shall the Town of Belchertown cease assessing the ,ballot question moved to `questions`,,,"rows are '* YES', 'NO', 'Blank' -- a question, not an office"
+Belmont2018,MODERATOR,residual row closed against the printed total,,0,the printed total 2122 less the 2122 read on the other rows; the blank row is 'WRITE-INS'
+Belmont2018,BOARD OF ASSESSORS,residual row closed against the printed total,,0,the printed total 2122 less the 2122 read on the other rows; the blank row is 'WRITE-INS'
+Belmont2018,BOARD OF CEMETERY COMMISSIONERS,residual row closed against the printed total,,0,the printed total 2122 less the 2122 read on the other rows; the blank row is 'WRITE-INS'
+Belmont2018,BOARD OF LIBRARY TRUSTEES,residual row closed against the printed total,,0,the printed total 2122 less the 2122 read on the other rows; the blank row is 'WRITE-INS'
+Bourne2007,MODERATOR 1 FOR 1 YEAR,residual row closed against the printed total,,0,the printed total 2357 less the 2357 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,SELECTMEN/SEWER COMMISSIONER 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 4714 less the 4714 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,BOARD OF HEALTH 1 FOR 3 YEARS,residual row closed against the printed total,,15,the printed total 2357 less the 2342 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,PLANNING BRD 3 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 7071 less the 7071 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,COMMUNITY BLDG VETERAN 1 FOR 3 YEARS,residual row closed against the printed total,,60,the printed total 2357 less the 2297 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,TRUSTEE JONATHAN BOURNE LIBRARY 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 4714 less the 4714 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,SCHOOL COMMITTEE 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 4714 less the 4714 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,CONSTABLE 1 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 2357 less the 2357 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,RECREATION AUTHORITY 1 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 2357 less the 2357 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2007,HOUSING AUTHORITY 1 FOR 5 YEARS,residual row closed against the printed total,,0,the printed total 2357 less the 2357 read on the other rows; the blank row is 'ALL OTHERS'
+Bourne2009,MODERATOR 1 FOR 1 YEAR,residual row closed against the printed total,,0,the printed total 1765 less the 1765 read on the other rows; the blank row is 'WRITE-INS'
+Bourne2009,SELECTMEN/ SEWER COMMISSIONER 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 3530 less the 3530 read on the other rows; the blank row is 'WRITE-INS'
+Bourne2009,TOWN CLERK 1 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 1765 less the 1765 read on the other rows; the blank row is 'WRITE INS'
+Bourne2009,BRD OF HEALTH 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 3530 less the 3530 read on the other rows; the blank row is 'WRITE INS'
+Bourne2009,PLANNING BRD 3 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 5295 less the 5295 read on the other rows; the blank row is 'WRITE INS'
+Bourne2009,PLANNING BRD 1 FOR 1 YEAR,residual row closed against the printed total,,0,the printed total 1765 less the 1765 read on the other rows; the blank row is 'WRITE IN'
+Bourne2009,COMMUNITY BLDG VETERAN 1 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 1765 less the 1765 read on the other rows; the blank row is 'WRITE INS'
+Bourne2009,LIBRARY 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 3530 less the 3530 read on the other rows; the blank row is 'WRITE INS'
+Bourne2009,SCHOOL COMM' 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 3530 less the 3530 read on the other rows; the blank row is 'WRITE INS'
+Bourne2009,RECREATION AUTHORITY 2 FOR 3 YEARS,residual row closed against the printed total,,0,the printed total 3530 less the 3530 read on the other rows; the blank row is 'WRITE INS'
+Bourne2015,Question MBTA,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Bourne2017,"Member, Recreation Authority 3 years for 1",residual row closed against the printed total,,3,the printed total 1103 less the 1100 read on the other rows; the blank row is 'ALL OTHERS'
 Bourne2017,Bird of Health 3 years vote for 1,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: '3 years vote for 1'
 Bridgewater2006,SELECTMAN,fix seat count,1,2,"marks 5610 are exactly 2x the ballot count 2805; seats recorded as 1, source derived"
 Bridgewater2006,BRIDGEWATER-RAYNHAM REGIONAL DISTRICT SCHOOL COMMITTEE (BRID,fix seat count,1,2,"marks 5610 are exactly 2x the ballot count 2805; seats recorded as 1, source derived"
 Bridgewater2006,BRIDGEWATER-RAYNHAM REGIONAL DISTRICT SCHOOL COMMITTEE (RAYN,fix seat count,1,2,"marks 5610 are exactly 2x the ballot count 2805; seats recorded as 1, source derived"
+Brookline2015,QUESTION #1: OPERATING BUDGET OVERRIDE,ballot question moved to `questions`,,,"rows are 'Blanks', 'YES', 'NO' -- a question, not an office"
+Brookline2015,QUESTION #2: DEBT EXCLUSION OVERRIDE,ballot question moved to `questions`,,,"rows are 'Blanks', 'YES', 'NO' -- a question, not an office"
+Brookline2019,QUESTION #1: Discoll and Baldwin Schools DEBT EXCLUSION OVER,ballot question moved to `questions`,,,"rows are 'Blanks', 'YES', 'NO' -- a question, not an office"
+Carlisle2016,BALLOT QUESTION 1,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANK' -- a question, not an office"
+Carver2001,Question 1. Non-binding,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Carver2001,Question 1. Non-binding,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Carver2001,Question 1. Non-binding,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
 Carver2004,Member of School Board - 3 Years,fix seat count,1,2,"marks 676 are exactly 2x the ballot count 338; seats recorded as 1, source derived"
 Carver2004,Library Trustee - 3 Years,fix seat count,1,2,"marks 676 are exactly 2x the ballot count 338; seats recorded as 1, source derived"
 Carver2005,Member of School Board - 3 Years,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Member of School Board - 3 Years'
@@ -89,10 +132,25 @@ Carver2007,Constable,fix seat count,1,3,"marks 1899 are exactly 3x the ballot co
 Carver2008,Member of School Board,fix seat count,1,2,"marks 3812 are exactly 2x the ballot count 1906; seats recorded as 1, source derived"
 Carver2010,Library Trustees - 3 Years,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Library Trustees - 3 Years'
 Chatham2020,MONOMOY REGIONAL SCHOOL COMMITTEE,fix seat count,1,2,"marks 1162 are exactly 2x the ballot count 581; seats recorded as 1, source marked"
+Chelmsford2008,QUESTION 1,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
 Chelmsford2011,TOWN MTG REPRES (3 YEARS) (6) PCT #7,report seat count,6,7,marks are exactly 7x ballots but the page is quoted as printing 6 seats: '(6)'
 Cheshire2019,Adams-Cheshire Regional School Committee Member from Cheshir,duplicate row removed,1,,row 'write-ins' duplicated the printed total 512
 Clinton2019,Library,fix seat count,1,2,"marks 3008 are exactly 2x the ballot count 1504; seats recorded as 1, source derived"
+Concord2014,CONCORD HOUSING AUTH for 5 Yrs,residual row closed against the printed total,,0,the printed total 2194 less the 2194 read on the other rows; the blank row is 'Write-Ins:'
 Danvers2016,Library Trustees - Vote for not more than 2 for 3 Years,report seat count,2,3,marks are exactly 3x ballots but the page is quoted as printing 2 seats: 'Vote for not more than 2 for 3 Years'
+Danvers2017,Precinct 1 - Vote for not more than 2 for 1 year,residual row closed against the printed total,,0,the printed total 408 less the 408 read on the other rows; the blank row is 'Write-Ins'
+Danvers2017,Precinct 2 - Vote for not more than 6 for 3 years,residual row closed against the printed total,,0,the printed total 1230 less the 1230 read on the other rows; the blank row is 'Write-Ins'
+Danvers2017,Precinct 7 - Vote for not more than 6 for 3 years,residual row closed against the printed total,,0,the printed total 1662 less the 1662 read on the other rows; the blank row is 'Write-Ins'
+Danvers2017,Precinct 7 - Vote for not more than 1 for 2 years,residual row closed against the printed total,,0,the printed total 277 less the 277 read on the other rows; the blank row is 'Write-Ins'
+Danvers2017,Precinct 8 - Vote for not more than 1 for 1 year,residual row closed against the printed total,,0,the printed total 160 less the 160 read on the other rows; the blank row is 'Write-Ins'
+Danvers2018,Library Trustees - Vote for not more than 3 for 3 Years,residual row closed against the printed total,,0,the printed total 6342 less the 6342 read on the other rows; the blank row is 'Write-Ins'
+Danvers2018,Precinct 7 - Vote for not more than 1 for 1 year,residual row closed against the printed total,,0,the printed total 309 less the 309 read on the other rows; the blank row is 'Write-Ins'
+Danvers2018,Precinct 8 - Vote for not more than 6 for 3 years,residual row closed against the printed total,,0,the printed total 1056 less the 1056 read on the other rows; the blank row is 'Write-Ins'
+Danvers2018,Precinct 8 - Vote for not more than 1 for 1 year,residual row closed against the printed total,,0,the printed total 176 less the 176 read on the other rows; the blank row is 'Write-Ins'
+Dover2011,FOR DOVER SCHOOL COMMITTEE,residual row closed against the printed total,,0,the printed total 582 less the 582 read on the other rows; the blank row is 'Write-In'
+Dover2011,FOR LIBRARY TRUSTEE,residual row closed against the printed total,,0,the printed total 582 less the 582 read on the other rows; the blank row is 'Write-In'
+Dover2011,FOR PLANNING BOARD,residual row closed against the printed total,,0,the printed total 291 less the 291 read on the other rows; the blank row is 'Write-In'
+Dover2011,FOR DOVER SCHOOL COMMITTEE,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'THREE Years       Vote for ONE'
 Fairhaven2014,Selectman - 3 yrs. Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 2075
 Fairhaven2014,Housing Authority - 5 Yrs. Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 2075
 Fairhaven2014,Unexpired Term Housing Authority - 4 Yrs. Vote for One,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 2075
@@ -120,8 +178,21 @@ Fairhaven2018,Housing Auth - 3 yrs unexpired term Vote for One,duplicate row rem
 Fairhaven2018,Moderator - 3 years Vote for one,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713
 Fairhaven2018,Tree Warden - 3 years Vote for one,duplicate row removed,1,,row 'Hand Counts' duplicated the printed total 713
 Fairhaven2020,Board of Public Works - 3 years Vote for One,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
+Falmouth2008,QUESTION 1: Shall the Town Of Falmouth be allowed to exempt ,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blank' -- a question, not an office"
+Falmouth2008,QUESTION 2: Shall the Town Of Falmouth be allowed to exempt ,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blank' -- a question, not an office"
+Falmouth2008,QUESTION 3: Shall the Town Of Falmouth be allowed to exempt ,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blank' -- a question, not an office"
 Falmouth2008,Planning Board Elect two for three year term,report seat count,2,3,marks are exactly 3x ballots but the page is quoted as printing 2 seats: 'Elect two for three year term'
+Falmouth2017,Question One: Shall the Town of Falmouth be allowed to exemp,ballot question moved to `questions`,,,"rows are 'YES', 'No', 'Blank' -- a question, not an office"
+Falmouth2017,Question Two: Shall the Town of Falmouth prohibit the operat,ballot question moved to `questions`,,,"rows are 'YES', 'No', 'Blank' -- a question, not an office"
+Falmouth2017,Question Three: SHALL THE TOWN OF FALMOUTH APPROVE CHARTER A,ballot question moved to `questions`,,,"rows are 'YES', 'No', 'Blank' -- a question, not an office"
+Falmouth2017,Question Four: Shall the Town of Falmouth vote to direct the,ballot question moved to `questions`,,,"rows are 'YES', 'No', 'Blank' -- a question, not an office"
+Falmouth2018,Town Meeting Member Precinct 7 Elect nine for three year ter,residual row closed against the printed total,,0,the printed total 6003 less the 6003 read on the other rows; the blank row is 'Write-ins'
+Falmouth2018,Town Meeting Member Precinct 8 Elect nine for three year ter,residual row closed against the printed total,,0,the printed total 6462 less the 6462 read on the other rows; the blank row is 'Write-ins'
+Foxborough2015,QUESTION# 1,ballot question moved to `questions`,,,"rows are 'Blanks', 'YES', 'NO' -- a question, not an office"
 Franklin2018,PLANNING BOARD,fix seat count,1,2,"marks 7832 are exactly 2x the ballot count 3916; seats recorded as 1, source marked"
+Freetown2008,Question 1,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
+Georgetown2011,QUESTION #1 (SCHOOL OVERRIDE),ballot question moved to `questions`,,,"rows are 'YES *', 'NO', 'BLANKS' -- a question, not an office"
+Georgetown2011,QUESTION #2 (TOWN/SCHOOL MAINTENANCE),ballot question moved to `questions`,,,"rows are 'YES', 'NO *', 'BLANKS' -- a question, not an office"
 Georgetown2011,SELECTMAN,fix seat count,1,2,"marks 5094 are exactly 2x the ballot count 2547; seats recorded as 1, source marked"
 Georgetown2012,SELECTMAN,fix seat count,1,2,"marks 898 are exactly 2x the ballot count 449; seats recorded as 1, source marked"
 Georgetown2012,SCHOOL COMMITTEE,fix seat count,1,2,"marks 898 are exactly 2x the ballot count 449; seats recorded as 1, source marked"
@@ -131,6 +202,12 @@ Georgetown2015,GEORGETOWN HOUSING AUTHORITY (Vote for 1),duplicate row removed,1
 Georgetown2017,SELECTMAN:,fix seat count,1,2,"marks 892 are exactly 2x the ballot count 446; seats recorded as 1, source derived"
 Grafton2009,Board of Library Trustees (3 yrs.),fix seat count,2,3,"marks 1047 are exactly 3x the ballot count 349; seats recorded as 2, source marked"
 Grafton2010,Planning Board (3 yrs.),fix seat count,1,2,"marks 1986 are exactly 2x the ballot count 993; seats recorded as 1, source marked"
+Groton2018,QUESTION 2: NON-BINDING REFERENDUM – Should marijuana cultiv,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
+Groton2018,QUESTION 3: NON-BINDING REFERENDUM – Should craft marijuana ,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
+Groton2018,QUESTION 4: NON-BINDING REFERENDUM – Should the manufacture ,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
+Groton2018,QUESTION 5: NON-BINDING REFERENDUM – Should the retail sale ,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
+Groton2018,QUESTION 6: NON-BINDING REFERENDUM – Should marijuana resear,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
+Groton2018,QUESTION 7: NON-BINDING REFERENDUM – Should independent test,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
 Groveland2016,Assessor,duplicate row removed,1,,row 'William H. Darke' duplicated the printed total 1071
 Groveland2016,Cemetery Commission 3 yrs,duplicate row removed,1,,row 'Blanks' duplicated the printed total 785
 Groveland2016,Library Trustee 2 yrs,fix seat count,1,2,"marks 2252 are exactly 2x the ballot count 1126; seats recorded as 1, source derived"
@@ -142,11 +219,28 @@ Groveland2016,School Committee 3 yrs,duplicate row removed,1,,row 'Blanks' dupli
 Groveland2016,Town Clerk 3 yrs,duplicate row removed,1,,row 'Blanks' duplicated the printed total 887
 Groveland2016,Tree Warden,duplicate row removed,1,,row 'Blanks' duplicated the printed total 825
 Groveland2016,Water/Sewer Commission 3 yrs,duplicate row removed,1,,row 'John Willett' duplicated the printed total 1079
+Groveland2018,QUESTION 1,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Groveland2018,QUESTION 2,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Groveland2018,QUESTION 1,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Groveland2018,QUESTION 2,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
 Halifax2020,Board of Library Trustees,fix seat count,1,2,"marks 1256 are exactly 2x the ballot count 628; seats recorded as 1, source derived"
+Hamilton2011,Question 1 Prop 2 ½ Debt Exclusion,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
+Hamilton2013,Question #1: Prop 2 1/2 Debt Exclusion,ballot question moved to `questions`,,,"rows are 'Blanks', 'YES', 'NO' -- a question, not an office"
 Hamilton2019,H-W Library Trustee at Large Vote for ONE 3 years,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for ONE 3 years'
+Hanover2002,BOARD OF PUBLIC WORKS,residual row closed against the printed total,,0,the printed total 2284 less the 2284 read on the other rows; the blank row is 'Write-Ins'
+Hanson2018,CEMETERY COMMISSIONER for three years,residual row closed against the printed total,,0,the printed total 1013 less the 1013 read on the other rows; the blank row is 'Write-ins'
+Hanson2018,PLANNING BOARD for five years,residual row closed against the printed total,,0,the printed total 1013 less the 1013 read on the other rows; the blank row is 'Write-ins'
 Hingham2012,PLANNING BOARD (Five Years),duplicate row removed,1,,row 'Blanks' duplicated the printed total 3660
 Holliston2014,PLANNING BOARD - For Five Years,duplicate row removed,1,,row 'Miscellaneous Write-ins' duplicated the printed total 665
+Hudson2007,MODERATOR (ONE for a One-Yr. Term),residual row closed against the printed total,,0,the printed total 1573 less the 1573 read on the other rows; the blank row is 'Scatterings'
+Hudson2007,PARK COMMISSION (ONE for a Three-Yr. Term),residual row closed against the printed total,,0,the printed total 1573 less the 1573 read on the other rows; the blank row is 'Scatterings'
+Hudson2007,LIBRARY TRUSTEE (ONE for a Three-Yr. Term),residual row closed against the printed total,,0,the printed total 1573 less the 1573 read on the other rows; the blank row is 'Scatterings'
+Hudson2007,CONSTABLE (ONE for Three-Yr. Term),residual row closed against the printed total,,0,the printed total 1573 less the 1573 read on the other rows; the blank row is 'Scatterings'
+Hudson2007,BOARD of ASSESSORS (ONE for Three-Yr. Term),residual row closed against the printed total,,0,the printed total 1573 less the 1573 read on the other rows; the blank row is 'Scatterings'
+Hull2010,QUESTION NO. 1,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
 Hull2011,"SELECTMAN, 3 years",report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Two Members of the Board of Selectmen to serve for the term of three years'
+Hull2012,HOUSING AUTHORITY,residual row closed against the printed total,,0,the printed total 1600 less the 1600 read on the other rows; the blank row is 'Blanks'
+Hull2012,REDEVELOPMENT AUTHORITY,residual row closed against the printed total,,0,the printed total 1600 less the 1600 read on the other rows; the blank row is 'Blanks'
 Hull2013,PLANNING BOARD,fix seat count,1,2,"marks 1462 are exactly 2x the ballot count 731; seats recorded as 1, source derived"
 Ipswich2020,SELECT BOARD,fix seat count,1,2,"marks 1744 are exactly 2x the ballot count 872; seats recorded as 1, source derived"
 Lakeville2014,REGIONAL SCHOOL DISTRICT COMMITTEE-FREETOWN for 3 yrs,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'REGIONAL SCHOOL DISTRICT COMMITTEE-FREETOWN for 3 yrs'
@@ -154,18 +248,42 @@ Lanesborough2014,FINANCE COMMITTEE 3 YEARS,fix seat count,1,2,"marks 280 are exa
 Lanesborough2015,FINANCE COMMITTEE 3 YRS.,fix seat count,1,2,"marks 504 are exactly 2x the ballot count 252; seats recorded as 1, source derived"
 Lee2018,Constable (3yrs),fix seat count,3,4,"marks 416 are exactly 4x the ballot count 104; seats recorded as 3, source marked"
 Littleton2016,BOARD OF ASSESSORS,fix seat count,1,2,"marks 3086 are exactly 2x the ballot count 1543; seats recorded as 1, source derived"
+Lunenburg2014,LIBRARY TRUSTEE – For 3 years / Vote for Two,residual row closed against the printed total,,0,the printed total 2496 less the 2496 read on the other rows; the blank row is 'Write-Ins'
+Lunenburg2015,HOUSING AUTHORITY MEMBER - For 5 years / Vote for One,residual row closed against the printed total,,0,the printed total 247 less the 247 read on the other rows; the blank row is 'All Others'
 Lunenburg2015,SELECTMEN - For 3 years / Vote for One,duplicate row removed,1,,row 'All Others' duplicated the printed total 247
+Lunenburg2016,DEBT EXCLUSION QUESTION 1 – Pavement Management Plan,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
 Lynnfield2012,LIBRARY TRUSTEE,fix seat count,1,2,"marks 3556 are exactly 2x the ballot count 1778; seats recorded as 1, source derived"
+Lynnfield2015,SELECTMEN,residual row closed against the printed total,,0,the printed total 2675 less the 2675 read on the other rows; the blank row is 'WRITE-INS'
+Lynnfield2015,ASSESSORS,residual row closed against the printed total,,0,the printed total 2675 less the 2675 read on the other rows; the blank row is 'WRITE-INS'
+Lynnfield2015,LIBRARY,residual row closed against the printed total,,0,the printed total 5350 less the 5350 read on the other rows; the blank row is 'WRITE-INS'
+Lynnfield2015,MODERATOR,residual row closed against the printed total,,0,the printed total 2675 less the 2675 read on the other rows; the blank row is 'WRITE-INS'
+Lynnfield2015,PLANNING,residual row closed against the printed total,,0,the printed total 2675 less the 2675 read on the other rows; the blank row is 'WRITE-INS'
+Lynnfield2015,SCHOOL,residual row closed against the printed total,,0,the printed total 5350 less the 5350 read on the other rows; the blank row is 'WRITE-INS'
+Lynnfield2015,HOUSING,residual row closed against the printed total,,0,the printed total 2675 less the 2675 read on the other rows; the blank row is 'WRITE-INS'
+Lynnfield2015,LIBRARY,fix seat count,1,2,"marks 5350 are exactly 2x the ballot count 2675; seats recorded as 1, source derived"
+Lynnfield2015,SCHOOL,fix seat count,1,2,"marks 5350 are exactly 2x the ballot count 2675; seats recorded as 1, source derived"
+Lynnfield2016,PLANNING BOARD (1 YR),residual row closed against the printed total,,0,the printed total 1670 less the 1670 read on the other rows; the blank row is 'WRITE-INS'
+Mansfield2003,QUESTION 1 (Taxing Certain Improved Real Property),ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
 Mansfield2005,BOARD OF SELECTMEN (For Three Years),fix seat count,1,2,"marks 3144 are exactly 2x the ballot count 1572; seats recorded as 1, source derived"
 Mansfield2005,SCHOOL COMMITTEE (For Three Years),fix seat count,1,2,"marks 3144 are exactly 2x the ballot count 1572; seats recorded as 1, source derived"
+Mansfield2007,QUESTION #1,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
+Mansfield2007,QUESTION #2,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
 Mansfield2013,SCHOOL COMMITTEE,fix seat count,1,2,"marks 650 are exactly 2x the ballot count 325; seats recorded as 1, source derived"
 Marblehead2007,School Committee 3 Year Term,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Marblehead2007,Water & Sewer Commission 3 Year Term,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Marblehead2010,School Committee 3 Year Term,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Marshfield2011,LIBRARY TRUSTEE THREE YEARS,fix seat count,1,2,"marks 660 are exactly 2x the ballot count 330; seats recorded as 1, source derived"
+Mashpee2009,Question #1 Solid Waste Disposal Options,ballot question moved to `questions`,,,"rows are 'Option #1', 'Option #2', 'Option #3', 'Blanks' -- a question, not an office"
 Maynard2015,SELECTMAN,fix seat count,1,2,"marks 1150 are exactly 2x the ballot count 575; seats recorded as 1, source marked"
+Medfield2001,Trustees of Public Library (vote for not more than two),residual row closed against the printed total,,0,the printed total 4000 less the 4000 read on the other rows; the blank row is 'Write In'
+Medfield2002,Housing Authority (vote for one),residual row closed against the printed total,,0,the printed total 3651 less the 3651 read on the other rows; the blank row is 'Write In'
+Medfield2004,REPRESENTATIVE IN GENERAL COURT,residual row closed against the printed total,,0,the printed total 1 less the 1 read on the other rows; the blank row is 'BLANKS'
+Medfield2004,REGISTER OF DEEDS,residual row closed against the printed total,,0,the printed total 1 less the 1 read on the other rows; the blank row is 'BLANKS'
+Medfield2004,SHERIFF,residual row closed against the printed total,,0,the printed total 1 less the 1 read on the other rows; the blank row is 'BLANKS'
+Medfield2004,COUNTY COMMISSIONER,residual row closed against the printed total,,0,the printed total 2 less the 2 read on the other rows; the blank row is 'BLANKS'
 Medway2017,Library Trustee,fix seat count,1,2,"marks 3150 are exactly 2x the ballot count 1575; seats recorded as 1, source derived"
 Medway2018,SELECTMEN 3yr,fix seat count,1,2,"marks 1750 are exactly 2x the ballot count 875; seats recorded as 1, source derived"
+Medway2020,Question 1 non-binding,ballot question moved to `questions`,,,"rows are 'Board of Selectmen (No change)', 'Select Board', 'Executive Board', 'Scattering' -- a question, not an office"
 Methuen2011,SCHOOL COMMITTEE,fix seat count,5,6,"marks 53880 are exactly 6x the ballot count 8980; seats recorded as 5, source derived"
 Middleton2010,Selectman for 3 years,fix seat count,1,2,"marks 1186 are exactly 2x the ballot count 593; seats recorded as 1, source derived"
 Middleton2011,Light Commissioner,fix seat count,1,2,"marks 470 are exactly 2x the ballot count 235; seats recorded as 1, source derived"
@@ -174,14 +292,22 @@ Middleton2015,Elementary School Committee,fix seat count,1,2,"marks 2796 are exa
 Milford2017,FOR BOARD OF ASSESSORS For Three Years,duplicate row removed,1,,row 'DAVID GAFFIN' duplicated the printed total 3136
 Milford2019,FOR TRUSTEE OF VERNON GROVE CEMETERY,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for not more than Two'
 Milford2020,FOR TRUSTEE OF VERNON GROVE CEMETERY,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for one'
+Millbury2013,QUESTION #1 MGL Section Six C Chap 40,ballot question moved to `questions`,,,"rows are 'Blanks', '*Yes', 'No' -- a question, not an office"
+Millbury2013,QUESTION #2 Brierly & Ramshorn Dams,ballot question moved to `questions`,,,"rows are 'Blanks', '*Yes', 'No' -- a question, not an office"
+Millbury2015,QUESTION #1 PUBLIC SAFETY COMPLEX,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', '*No' -- a question, not an office"
 Millbury2015,LIBRARY TRUSTEES 1 YEAR,fix seat count,1,2,"marks 4416 are exactly 2x the ballot count 2208; seats recorded as 1, source marked"
 Millbury2016,SCHOOL COMMITTEE 3 YEARS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: '3 YEARS'
 Millbury2016,LIBRARY TRUSTEE 3 YEARS,fix seat count,2,3,"marks 4707 are exactly 3x the ballot count 1569; seats recorded as 2, source marked"
+Millbury2017,QUESTION NO. 1 R.E. SHAW FEASIBILITY STUDY,ballot question moved to `questions`,,,"rows are 'BLANKS', '*YES', 'NO' -- a question, not an office"
 Millbury2018,PLANNING BOARD 3 YEARS,fix seat count,1,2,"marks 2220 are exactly 2x the ballot count 1110; seats recorded as 1, source marked"
+Montague2017,QUESTION,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
 Montague2020,"TOWN MEETING MEMBERS, For one year",duplicate row removed,2,,row 'Michael A. Ketcham' duplicated the printed total 340
 Nahant2016,"Planning Board, (for five years)",report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'for five years'
+Natick2020,Question 1,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Natick2020,Question 2,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
 Norfolk2000,Norfolk School Committee Member for Three Years,fix seat count,1,2,"marks 2634 are exactly 2x the ballot count 1317; seats recorded as 1, source derived"
 Norfolk2003,NORFOLK SCHOOL COMMITTEE MEMBER FOR THREE YEARS,fix seat count,1,2,"marks 2832 are exactly 2x the ballot count 1416; seats recorded as 1, source marked"
+Norfolk2008,Question 1 (Town Clerk Appointed),ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blanks' -- a question, not an office"
 Norfolk2008,Constable,fix seat count,1,2,"marks 3006 are exactly 2x the ballot count 1503; seats recorded as 1, source marked"
 Norfolk2013,RECREATION COMMISSION FOR THREE YEARS,fix seat count,1,2,"marks 3144 are exactly 2x the ballot count 1572; seats recorded as 1, source marked"
 Norfolk2016,Planning Board,fix seat count,1,2,"marks 1382 are exactly 2x the ballot count 691; seats recorded as 1, source derived"
@@ -189,12 +315,30 @@ Norfolk2019,Selectmen 3 Year,duplicate row removed,1,,row 'Write-In' duplicated 
 Norfolk2019,Selectmen 1 Year,duplicate row removed,1,,row 'Write-In' duplicated the printed total 1138
 Norfolk2019,Recreation Commission (2 positions),duplicate row removed,2,,row 'Write-In' duplicated the printed total 2276
 NorthBrookfield2008,SCHOOL COMMITTEE FOR 3 YEARS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'SCHOOL COMMITTEE FOR 3 YEARS'
+Northborough2008,"QUESTION 1 Add'l $316,047 Taxes Northborough K-8 Schools",ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Northborough2008,QUESTION 2 Exempt from 2 1/2 amounts to pay for bond issued ,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Northborough2008,Sboro votes for NB/SB Regional School - Northborough Candida,residual row closed against the printed total,,0,the printed total 1486 less the 1486 read on the other rows; the blank row is 'Write Ins'
 Northborough2008,Planning Board,fix seat count,2,3,"marks 4560 are exactly 3x the ballot count 1520; seats recorded as 2, source marked"
 Northbridge2005,PLANNING BOARD 3yr terms,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: '(vote for one)'
 Northfield2016,Constables Three year term Vote for One,report seat count,1,4,marks are exactly 4x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Norwell2018,BOARD OF SELECTMEN-Three Years-Vote for One,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for One'
 Norwell2020,NORWELL PUBLIC LIBRARY TRUSTEES-Three Years-Vote for Two,duplicate row removed,2,,row 'Sarah M. Cassidy won the second seat as a write-in Candidate' duplicated the printed total 1074
+Oxford2020,BALLOT QUESTION 1,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
 Pembroke2011,MODERATOR,duplicate row removed,1,,row 'BLANKS' duplicated the printed total 887
+Pembroke2015,HOUSING AUTHORITY 5 YEAR TERM,figure summed from its precincts,,2861,"row 'BLANKS' reads [637, 506, 458, 691, 569] across its precincts; 32 rows in this record close against their own breakdown, so the columns are precincts"
+Pembroke2015,HOUSING AUTHORITY 5 YEAR TERM,figure summed from its precincts,,218,"row 'WRITE INS' reads [43, 50, 42, 45, 38] across its precincts; 32 rows in this record close against their own breakdown, so the columns are precincts"
+Pembroke2018,QUESTION 1 POLICE - FIRE - DPW,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Pepperell2016,Board of Assessors,figure summed from its precincts,,6,"row 'Write-ins' reads [0, 1, 5] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,Board of Health,figure summed from its precincts,,8,"row 'Write-ins' reads [3, 1, 4] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,Housing Authority,figure summed from its precincts,,2,"row 'Write-ins' reads [1, 1, 0] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,Board of Library Trustees,figure summed from its precincts,,236,"row 'Write-ins' reads [64, 98, 74] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,Planning Board,figure summed from its precincts,,148,"row 'Write-ins' reads [44, 44, 60] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,Board of Public Works,figure summed from its precincts,,57,"row 'Write-ins' reads [16, 24, 17] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,Recreation Commission,figure summed from its precincts,,71,"row 'Write-ins' reads [22, 25, 24] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,Board of Selectmen,figure summed from its precincts,,4,"row 'Write-ins' reads [1, 3, 0] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Pepperell2016,North Middlesex School Committee,figure summed from its precincts,,13,"row 'Write-ins' reads [2, 9, 2] across its precincts; 22 rows in this record close against their own breakdown, so the columns are precincts"
+Petersham2019,QUESTION 1,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'BLANKS' -- a question, not an office"
+Plymouth2011,QUESTION 1,ballot question moved to `questions`,,,"rows are 'YES', 'NO' -- a question, not an office"
 Provincetown2015,Charter Enforcement (3 yr),fix seat count,1,2,"marks 1272 are exactly 2x the ballot count 636; seats recorded as 1, source derived"
 Provincetown2016,Bd Library Trustees (2 yr),report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Bd Library Trustees (2 yr)'
 Provincetown2017,Charter Enforcement (3 yr),report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Charter Enforcement (3 yr)'
@@ -224,26 +368,45 @@ Reading2017,Precinct Six - Town Meeting Members 2 Years - Vote for Two,duplicate
 Reading2017,Precinct Seven - Town Meeting Members 3 Years - Vote for Eig,duplicate row removed,8,,row 'Blank Votes' duplicated the printed total 2002
 Reading2017,Precinct Eight - Town Meeting Members - 3 Years - Vote for E,duplicate row removed,8,,row 'Blank Votes' duplicated the printed total 1741
 Reading2017,Precinct Eight - Town Meeting Members - 1 Year - Vote for On,duplicate row removed,1,,row 'Blank Votes' duplicated the printed total 298
+Rockland2004,QUESTION 1,ballot question moved to `questions`,,,"rows are 'Blanks', 'YES', 'NO' -- a question, not an office"
+Rowe2020,Question #1 (Gracy House),ballot question moved to `questions`,,,"rows are 'Demolish', 'Renovate', 'Blanks' -- a question, not an office"
 Rutland2019,WRSD SCHOOL COMM,fix seat count,1,2,"marks 1490 are exactly 2x the ballot count 745; seats recorded as 1, source derived"
 Salisbury2010,SELECTMAN,fix seat count,1,2,"marks 2528 are exactly 2x the ballot count 1264; seats recorded as 1, source derived"
+Salisbury2013,LIBRARY DEBT EXCLUSION,ballot question moved to `questions`,,,"rows are 'BLANK', 'YES', 'NO' -- a question, not an office"
 Sandwich2020,"School Public Library Trustee, Not More than Three - Three Y",duplicate row removed,3,,row 'Jeanie M. Vander Pyl' duplicated the printed total 7206
+Saugus2017,Town Meeting (two years) PCT 8,residual row closed against the printed total,,0,the printed total 2230 less the 2230 read on the other rows; the blank row is 'OTHERS'
+Saugus2017,Town Meeting (two years) PCT 10,residual row closed against the printed total,,0,the printed total 2297 less the 2297 read on the other rows; the blank row is 'OTHERS'
 Seekonk2011,SCHOOL COMMITTEE (Vote for ONE) 3 YR TERM,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Vote for ONE'
 Shirley2003,BOARD OF ASSESSORS - 3 YRS,duplicate row removed,1,,row 'Others' duplicated the printed total 929
 Shirley2003,BOARD OF ASSESSORS UNEXPIRED 2 YR.,duplicate row removed,1,,row 'Charles Church' duplicated the printed total 929
 Shirley2013,Planning Board - 5 yrs,duplicate row removed,5,,row 'Total # of Write-Ins' duplicated the printed total 1196
+SouthHadley2008,QUESTION 1 CHARTER,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No*' -- a question, not an office"
+SouthHadley2008,QUESTION 2 THIS QUESTION IS NON-BINDING (DISTRICT MERGER),ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No*' -- a question, not an office"
+SouthHadley2009,QUESTION 1 CHARTER,ballot question moved to `questions`,,,"rows are  -- a question, not an office"
+SouthHadley2009,QUESTION 2 THIS QUESTION IS NON-BINDING (DISTRICT MERGER),ballot question moved to `questions`,,,"rows are  -- a question, not an office"
 SouthHadley2009,SELECTBOARD FOR THREE YEARS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'FOR THREE YEARS'
 SouthHadley2011,SELECTBOARD FOR THREE YEARS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'FOR THREE YEARS'
 SouthHadley2012,SCHOOL COMMITTEE FOR THREE YEARS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'FOR THREE YEARS'
 SouthHadley2012,LIBRARY TRUSTEES FOR THREE YEARS,report seat count,1,3,marks are exactly 3x ballots but the page is quoted as printing 1 seats: 'FOR THREE YEARS'
 SouthHadley2012,HAMPSHIRE COUNCIL OF GOVERNMENTS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'FOR THREE YEARS'
+SouthHadley2015,BALLOT QUESTION 1,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blank' -- a question, not an office"
 SouthHadley2015,MUNICIPAL LIGHT BOARD FOR THREE YEARS,fix seat count,1,2,"marks 3112 are exactly 2x the ballot count 1556; seats recorded as 1, source marked"
 Southwick2006,PARK AND REC COMMISSION ELECT ONE-3 YEARS,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'ELECT ONE-3 YEARS'
+Southwick2018,QUESTION Shall the Town adopt the following zoning and gener,ballot question moved to `questions`,,,"rows are 'YES', 'NO', 'Blanks' -- a question, not an office"
 Spencer2013,Spencer-East Brookfield Regional School Committee - Spencer ,fix seat count,1,2,"marks 2884 are exactly 2x the ballot count 1442; seats recorded as 1, source derived"
 Spencer2019,Spencer-East Brookfield Regional School Committee - Spencer ,fix seat count,1,2,"marks 668 are exactly 2x the ballot count 334; seats recorded as 1, source derived"
 Sterling2007,HOUSING AUTHORITY - 5 year,fix seat count,1,2,"marks 1402 are exactly 2x the ballot count 701; seats recorded as 1, source derived"
 Sterling2007,WRSD - 3 years,fix seat count,1,2,"marks 1402 are exactly 2x the ballot count 701; seats recorded as 1, source derived"
 Sterling2008,WRSD - 3 years,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'WRSD - 3 years'
+Sterling2011,DEPT OF PUBLIC WORKS,figure summed from its precincts,,0,"row 'Write-in' reads [0, 0] across its precincts; 37 rows in this record close against their own breakdown, so the columns are precincts"
+Sterling2011,PLANNING BOARD,figure summed from its precincts,,0,"row 'Write-in' reads [0, 0] across its precincts; 37 rows in this record close against their own breakdown, so the columns are precincts"
 Sterling2011,WACHUSETT REGIONAL SCHOOL DISTRICT COMMITTEE,fix seat count,1,2,"marks 1926 are exactly 2x the ballot count 963; seats recorded as 1, source derived"
+Sterling2015,BOARD OF HEALTH (3yrs),figure summed from its precincts,,0,"row 'Total Write-ins' reads [0, 0] across its precincts; 34 rows in this record close against their own breakdown, so the columns are precincts"
+Sterling2019,CONSTABLE (3 yrs),figure summed from its precincts,,0,"row 'Total Write-ins' reads [0, 0] across its precincts; 35 rows in this record close against their own breakdown, so the columns are precincts"
+Sterling2019,DEPARTMENT OF PUBLIC WORKS BOARD (3yrs),figure summed from its precincts,,0,"row 'Total Write-ins' reads [0, 0] across its precincts; 35 rows in this record close against their own breakdown, so the columns are precincts"
+Sterling2019,2 seats for LIBRARY TRUSTEES (3yrs),figure summed from its precincts,,0,"row 'Total Write-ins' reads [0, 0] across its precincts; 35 rows in this record close against their own breakdown, so the columns are precincts"
+Sterling2020,PLANNING BOARD (3yrs),figure summed from its precincts,,0,"row 'Total Write-ins' reads [0, 0] across its precincts; 38 rows in this record close against their own breakdown, so the columns are precincts"
+Sterling2020,TOWN MODERATOR (1yr),figure summed from its precincts,,0,"row 'Total Write-ins' reads [0, 0] across its precincts; 38 rows in this record close against their own breakdown, so the columns are precincts"
 Sterling2020,BOARD OF LIBRARY TRUSTEES (3yrs),fix seat count,1,2,"marks 750 are exactly 2x the ballot count 375; seats recorded as 1, source marked"
 Sudbury2014,MODERATOR: For One Year,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1556
 Sudbury2014,SELECTMAN: For Three Years,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1450
@@ -255,6 +418,11 @@ Sudbury2014,PLANNING BOARD: For Five Years,duplicate row removed,1,,row 'Blanks'
 Sudbury2014,SUDBURY SCHOOL COMMITTEE: For Three Years,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1407
 Sudbury2014,HIGHWAY COMMISSION: For Three Years,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1345
 Sudbury2014,SUDBURY HOUSING AUTHORITY: For Five Years,duplicate row removed,1,,row 'Blanks' duplicated the printed total 1304
+Templeton2012,MODERATOR 1 Yr.,residual row closed against the printed total,,0,the printed total 1642 less the 1642 read on the other rows; the blank row is 'Write-ins'
+Templeton2012,COMMUNITY PRESERV. COMM. 3 Yrs.,residual row closed against the printed total,,0,the printed total 1642 less the 1642 read on the other rows; the blank row is 'Write-ins'
+Templeton2012,NRSD-TEMPLETON 3 Yrs. (vote for 2),residual row closed against the printed total,,0,the printed total 3284 less the 3284 read on the other rows; the blank row is 'Write-ins'
+Templeton2018,Question 1 Public Safety,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
+Templeton2018,Question 2 Police Station,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
 Tisbury2020,For SELECTMAN (1 for 3yrs),report seat count,1,3,marks are exactly 3x ballots but the page is quoted as printing 1 seats: '(1 for 3yrs)'
 Topsfield2007,Library Trustee (Three Years),report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Library Trustee (Three Years)'
 Topsfield2008,School Committee (Three Years),report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'School Committee (Three Years)'
@@ -271,15 +439,29 @@ Topsfield2013,LIBRARY TRUSTEE,fix seat count,1,2,"marks 2068 are exactly 2x the 
 Topsfield2013,PLANNING BOARD,fix seat count,1,2,"marks 2068 are exactly 2x the ballot count 1034; seats recorded as 1, source marked"
 Topsfield2013,SCHOOL COMMITTEE,fix seat count,1,2,"marks 2068 are exactly 2x the ballot count 1034; seats recorded as 1, source marked"
 Topsfield2014,LIBRARY TRUSTEE,fix seat count,1,2,"marks 2258 are exactly 2x the ballot count 1129; seats recorded as 1, source derived"
+Topsfield2016,"Selectman, Three Years",residual row closed against the printed total,,0,the printed total 1508 less the 1508 read on the other rows; the blank row is 'Write-ins'
 Truro2016,"SELECTMAN, Three Years",fix seat count,1,2,"marks 1004 are exactly 2x the ballot count 502; seats recorded as 1, source marked"
 Tyngsborough2011,Constable,fix seat count,1,2,"marks 2586 are exactly 2x the ballot count 1293; seats recorded as 1, source derived"
 Tyngsborough2018,Board of Health (2),duplicate row removed,2,,row 'Patricia Pitts' duplicated the printed total 2238
+Tyringham2018,Selectmen,residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Tyringham2018,Moderator,residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Tyringham2018,Assessor,residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Tyringham2018,Cemetery Commission,residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Tyringham2018,Library Trustee (3yr),residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Tyringham2018,Park Commission,residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Tyringham2018,Planning Board,residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Tyringham2018,School Committee,residual row closed against the printed total,,0,the printed total 61 less the 61 read on the other rows; the blank row is 'Write-In'
+Walpole2016,Question #1,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
 Wareham2018,ASSESSOR (3 YEARS),fix seat count,1,2,"marks 2956 are exactly 2x the ballot count 1478; seats recorded as 1, source derived"
+Wayland2018,QUESTION NO. 1,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
+Wayland2018,QUESTION NO. 2,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
+Wayland2018,QUESTION NO. 3,ballot question moved to `questions`,,,"rows are 'Blanks', 'Yes', 'No' -- a question, not an office"
 WestBrookfield2009,LIBRARY TRUSTEE 3 YEARS VOTE FOR ONE,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'VOTE FOR ONE'
 WestBrookfield2009,QUABOAG REGIONAL DISTRICT SCHOOL COMMITTEE SCHOOL COMMITTEE ,report seat count,2,4,marks are exactly 4x ballots but the page is quoted as printing 2 seats: 'The two candidates with the highest vote totals in each town will be elected'
 WestBrookfield2011,QUABOAG REGIONAL DISTRICT SCHOOL COMMITTEE SCHOOL COMMITTEE ,fix seat count,2,4,"marks 1200 are exactly 4x the ballot count 300; seats recorded as 2, source derived"
 WestBrookfield2014,LIBRARY TRUSTEE 3 YEARS VOTE FOR TWO,report seat count,2,3,marks are exactly 3x ballots but the page is quoted as printing 2 seats: '3 YEARS VOTE FOR TWO'
 WestBrookfield2016,QUABOAG REGIONAL DISTRICT SCHOOL COMMITTEE SCHOOL COMMITTEE ,report seat count,2,4,marks are exactly 4x ballots but the page is quoted as printing 2 seats: 'The two candidates with the highest vote totals in each town will be elected'
+WestTisbury2009,QUESTION 1 (Town Clerk Appointed),ballot question moved to `questions`,,,"rows are 'Blanks', 'YES', 'NO' -- a question, not an office"
 Westminster2010,Planning Board-3 years,fix seat count,1,2,"marks 398 are exactly 2x the ballot count 199; seats recorded as 1, source derived"
 Westminster2010,Regional School Committee-Westminster-3 years,fix seat count,1,2,"marks 398 are exactly 2x the ballot count 199; seats recorded as 1, source derived"
 Westminster2010,Regional School Committee-Ashburnham-3 years,fix seat count,1,2,"marks 398 are exactly 2x the ballot count 199; seats recorded as 1, source derived"
@@ -293,7 +475,14 @@ Westport2012,Selectman - Three Years,report seat count,1,2,marks are exactly 2x 
 Westport2012,Landing Commissioner - Three Years,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'One Landing Commissioner'
 Westport2015,Trustee Of Free Public Library - Three Years,fix seat count,1,2,"marks 6110 are exactly 2x the ballot count 3055; seats recorded as 1, source derived"
 Westport2015,Landing Commissioner - Three Years,fix seat count,1,2,"marks 6110 are exactly 2x the ballot count 3055; seats recorded as 1, source derived"
+Westport2018,Question 1 – Cease Animal Excise,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
 Westport2018,Trustee Of Free Public Library - Three Years,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Trustee Of Free Public Library - Three Years'
 Westport2018,Landing Commissioner - Three Years,report seat count,1,2,marks are exactly 2x ballots but the page is quoted as printing 1 seats: 'Landing Commissioner - Three Years'
 Westport2019,Trustee of Free Public Library – Three years,fix seat count,1,2,"marks 3574 are exactly 2x the ballot count 1787; seats recorded as 1, source derived"
+Whitman2011,"QUESTION #1 $500,000 OVERRIDE",ballot question moved to `questions`,,,"rows are 'BLANKS', 'YES', 'NO' -- a question, not an office"
+Winchester2011,QUESTION 1,ballot question moved to `questions`,,,"rows are 'Blanks', 'QUESTION 1 - YES', 'QUESTION 1 - NO' -- a question, not an office"
+Yarmouth2010,QUESTION 1 Exempt Debt for various project,ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Yarmouth2010,"QUESTION 2 Override for school $952,810.00",ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Yarmouth2010,"QUESTION 3 Override for school $1,552,810.00",ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
+Yarmouth2010,"QUESTION 4 Override $950,000.for various departments",ballot question moved to `questions`,,,"rows are 'Yes', 'No', 'Blanks' -- a question, not an office"
 Yarmouth2010,SELECTMAN 3 Years,fix seat count,1,2,"marks 9950 are exactly 2x the ballot count 4975; seats recorded as 1, source marked"

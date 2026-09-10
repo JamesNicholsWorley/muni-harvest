@@ -6,7 +6,7 @@ un-learning it fails loudly rather than quietly changing a number.
 import pymupdf
 import pytest
 
-from qa import escalate
+from qa import atr_bridge, escalate, mechanical
 from tools import text_arith, warrant, zones
 
 
@@ -214,3 +214,106 @@ def test_every_tool_entrypoint_imports_as_a_script():
             capture_output=True, text=True, cwd=str(root), timeout=120)
         assert "ModuleNotFoundError" not in r.stderr, f"{name}: {r.stderr[-300:]}"
         assert "ImportError" not in r.stderr, f"{name}: {r.stderr[-300:]}"
+
+
+# ------------------------------------------------------------------------ dates
+
+def test_a_clerk_writing_the_date_out_in_full_is_read():
+    r"""Plymouth 2010 prints nothing but the legal notice.
+
+    The word form was described in a comment and never implemented: the
+    pattern demanded \d, so five towns whose clerks spell the day out came
+    back undated while the code claimed to handle them.
+    """
+    assert atr_bridge.iso_date(
+        "Saturday, the Eighth Day of May, 2010", 2010)[0] == "2010-05-08"
+    assert atr_bridge.iso_date(
+        "TUESDAY, THE TWENTY NINTH DAY OF MARCH 2016", 2016)[0] == "2016-03-29"
+
+
+def test_a_spreadsheet_date_is_read_and_the_day_is_not_transposed():
+    """15-May-18 is the 15th. The month is named, so nothing can transpose."""
+    assert atr_bridge.iso_date("15-May-18", 2018)[0] == "2018-05-15"
+    assert atr_bridge.iso_date("31-Mar-03", 2003)[0] == "2003-03-31"
+    assert atr_bridge.iso_date("11 May 2017", 2017)[0] == "2017-05-11"
+
+
+def test_a_two_digit_year_is_this_century():
+    assert atr_bridge.iso_date("5/21/19", 2019)[0] == "2019-05-21"
+    assert atr_bridge.iso_date("5-18-09", 2009)[0] == "2009-05-18"
+
+
+def test_a_year_offset_by_one_is_the_fiscal_year_and_wins():
+    iso, note = atr_bridge.iso_date("11/5/13", 2014)
+    assert iso == "2013-11-05" and "the page wins" in note
+
+
+def test_a_year_two_off_is_not_a_fiscal_offset():
+    """Salem 2010 read 2018. One year is a town report's fiscal year; eight
+    is the wrong section, and publishing it fills a town-year with another
+    year's election."""
+    iso, note = atr_bridge.iso_date("November 6, 2018", 2010)
+    assert iso is None and "fiscal-year offset" in note
+
+
+def test_first_of_january_is_an_empty_cell_not_an_election():
+    """Barnstable 2018's table heads itself DATE 1/1/17 and the Clerk's own
+    report in the same section says the election was in November 2017."""
+    iso, note = atr_bridge.iso_date("1/1/17", 2018)
+    assert iso is None and "empty date cell" in note
+
+
+# ------------------------------------------------------------ mechanical repair
+
+def test_a_yes_no_question_is_not_an_office():
+    assert mechanical.ballot_question(
+        {"office_original": "QUESTION 1 Override - $7.2 M",
+         "num_winners": None})
+    assert not mechanical.ballot_question(
+        {"office_original": "BOARD OF SELECTMEN", "num_winners": None})
+
+
+def test_a_total_column_disguised_as_a_precinct_is_caught():
+    """Belmont 2018's eighth column is the town total. Summing it would have
+    doubled every figure the reader left blank."""
+    contests = [{"candidates": [
+        {"name_original": "A", "votes": 100, "votes_by_precinct": [40, 60, 100]},
+        {"name_original": "B", "votes": 50, "votes_by_precinct": [20, 30, 50]}]}]
+    assert mechanical.breakdown_is_precincts_only(contests)[0] is False
+    ok = [{"candidates": [
+        {"name_original": "A", "votes": 100, "votes_by_precinct": [40, 60]},
+        {"name_original": "B", "votes": 50, "votes_by_precinct": [20, 30]}]}]
+    assert mechanical.breakdown_is_precincts_only(ok)[0] is True
+
+
+def test_a_row_repeating_another_rows_precincts_is_a_column_not_a_candidate():
+    """Granby 2015 prints "Sworn" beside every winner carrying the winner's
+    own precinct figures. Summing it doubled the winner in every contest."""
+    contest = {"candidates": [
+        {"name_original": "MARK L. BAIL", "votes": 107,
+         "votes_by_precinct": [66, 41]},
+        {"name_original": "Sworn", "votes": None,
+         "votes_by_precinct": [66, 41]}]}
+    assert mechanical.sum_from_precincts(contest) == []
+
+
+def test_a_blank_write_in_row_is_closed_against_the_printed_total():
+    """Sterling 2011 prints a dash for a write-in row whose precincts read 0
+    and 0, and the contest closes on its own printed total."""
+    contest = {"printed_total": 963, "candidates": [
+        {"name_original": "Favreau", "votes": 665},
+        {"name_original": "Kloczkowski", "votes": 236},
+        {"name_original": "Write-in", "votes": None},
+        {"name_original": "Blanks", "votes": 62}]}
+    i, total, why = mechanical.close_residual_row(contest)
+    assert (i, total) == (2, 0) and "printed total 963" in why
+
+
+def test_a_named_candidates_blank_is_never_filled_from_the_residual():
+    """A person's missing figure is exactly how a dropped candidate looks --
+    Needham Precinct D summed exactly while a candidate had been lost."""
+    contest = {"printed_total": 963, "candidates": [
+        {"name_original": "Favreau", "votes": 665},
+        {"name_original": "Kloczkowski", "votes": None},
+        {"name_original": "Blanks", "votes": 62}]}
+    assert mechanical.close_residual_row(contest) is None

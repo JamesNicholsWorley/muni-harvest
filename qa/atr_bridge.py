@@ -79,6 +79,42 @@ def canonical_municipality(printed, stem_town, known):
         printed, stem_town)
 
 
+def _four_digit_year(digits):
+    """2018 from "18" or from "2018". The corpus runs 2000-2020 and no ATR in
+    it prints a nineteen-hundreds two-digit year, so there is nothing here to
+    choose between; a year that lands outside the corpus is refused below
+    rather than nudged into it."""
+    n = int(digits)
+    return n if n >= 100 else 2000 + n
+
+
+ORDINALS = {"first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
+            "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10,
+            "eleventh": 11, "twelfth": 12, "thirteenth": 13, "fourteenth": 14,
+            "fifteenth": 15, "sixteenth": 16, "seventeenth": 17,
+            "eighteenth": 18, "nineteenth": 19, "twentieth": 20,
+            "thirtieth": 30}
+UNITS = {k: v for k, v in ORDINALS.items() if v < 10}
+
+
+def _word_ordinal(words):
+    """25 from "twenty fifth", "twenty-fifth" or "TWENTY NINTH". None if not one.
+
+    A clerk writing the election date out in full is writing a legal notice,
+    and the notice is often the only place the day appears -- Plymouth 2010
+    prints nothing but "Saturday, the Eighth Day of May, 2010" and Natick 2016
+    nothing but "TUESDAY, THE TWENTY NINTH DAY OF MARCH 2016".
+    """
+    t = words.lower().replace("-", " ")
+    m = re.search(r"\b(twenty|thirty)\s+(%s)\b" % "|".join(UNITS), t)
+    if m:
+        return (20 if m.group(1) == "twenty" else 30) + UNITS[m.group(2)]
+    for word, n in ORDINALS.items():
+        if re.search(r"\b%s\b" % word, t):
+            return n
+    return None
+
+
 def iso_date(printed, stem_year):
     """(iso, note). None when the page prints nothing parseable."""
     if not printed:
@@ -87,9 +123,31 @@ def iso_date(printed, stem_year):
     # "April 25th, 2015" is the same date as "April 25, 2015".
     t = re.sub(r"(\d{1,2})(st|nd|rd|th)\b", lambda mm: mm.group(1), t, flags=re.I)
     # "the twenty-fifth day of April" and "the 25th day of April" both
-    # reduce to the same month-day-year the branch below already reads.
+    # reduce to the same month-day-year the branch below already reads. Only
+    # the digit form ever did: the comment claimed the word form and the
+    # pattern demanded \d, which is why five towns whose clerks write the date
+    # out in full came back undated.
     t = re.sub(r"\bthe\s+(\d{1,2})\s+day\s+of\s+([A-Za-z]+)",
                lambda mm: mm.group(2) + " " + mm.group(1), t, flags=re.I)
+    t = re.sub(r"\bthe\s+((?:twenty|thirty)[\s-]+[a-z]+|[a-z]+)\s+day\s+of\s+"
+               r"([A-Za-z]+)",
+               lambda mm: ("%s %s" % (mm.group(2), _word_ordinal(mm.group(1)))
+                           if _word_ordinal(mm.group(1)) else mm.group(0)),
+               t, flags=re.I)
+    # "11 May 2017" and "7 MAY 2019" are the same dates as "May 11, 2017" and
+    # "May 7, 2019"; only the order differs, and the month name is unambiguous
+    # in either position, so nothing is being guessed by reordering.
+    t = re.sub(r"\b(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4})\b",
+               lambda mm: ("%s %s %s" % (mm.group(2), mm.group(1), mm.group(3))
+                           if mm.group(2).lower() in MONTHS else mm.group(0)),
+               t)
+    # "15-May-18" and "31-Mar-03" are what a spreadsheet prints by default,
+    # and eight towns' returns were exported from one. The month is named, so
+    # the surrounding numbers cannot be transposed: the leading one is the day.
+    m = re.match(r"^\s*(\d{1,2})[-/]([A-Za-z]{3,9})[-/](\d{2}|\d{4})\s*$", t)
+    if m and m.group(2)[:3].lower() in [k[:3] for k in MONTHS]:
+        month = [k for k in MONTHS if k.startswith(m.group(2)[:3].lower())][0]
+        t = "%s %s %s" % (month, m.group(1), _four_digit_year(m.group(3)))
     m = re.search(r"([A-Za-z]+)\s+(\d{1,2})\s*,?\s*(\d{4})", t)
     if m and m.group(1).lower() in MONTHS:
         y, mo, d = int(m.group(3)), MONTHS[m.group(1).lower()], int(m.group(2))
@@ -98,15 +156,17 @@ def iso_date(printed, stem_year):
         if m:
             y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
         else:
-            # 04/06/2002. American order, which is what a
+            # 04/06/2002 and 5/21/19. American order, which is what a
             # Massachusetts clerk writes; a day over 12 in the first
             # position would be unreadable either way and is rejected
-            # by the plausibility check below rather than swapped.
-            m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", t)
+            # by the plausibility check below rather than swapped. A
+            # two-digit year is only ever this century here -- the corpus
+            # starts in 2000 -- so widening it invents no ambiguity.
+            m = re.search(r"(\d{1,2})[/-](\d{1,2})[/-](\d{2}|\d{4})\b", t)
             if not m:
                 return None, "could not read a date from %r" % printed[:60]
             mo, d, y = (int(m.group(1)), int(m.group(2)),
-                        int(m.group(3)))
+                        _four_digit_year(m.group(3)))
     if not (1 <= mo <= 12 and 1 <= d <= 31):
         return None, "implausible date in %r" % printed[:60]
     # A pre-2021 ATR covers 2000-2020; the fiscal-year offset moves that
@@ -116,6 +176,23 @@ def iso_date(printed, stem_year):
     if not (1999 <= y <= 2021):
         return None, ("year %d is outside the 2000-2020 corpus; "
                       "read from %r" % (y, printed[:50]))
+    # A town report is named for its fiscal year, so the page and the filename
+    # differ by a year in 8% of this corpus and the page wins. Two years is a
+    # different animal: it is a section cut out of the wrong report or a
+    # four-digit number misread, and calling it a fiscal offset publishes a
+    # town-year holding another year's election. Barnstable 2010 read 2009 and
+    # is right; Salem 2010 read 2018.
+    if stem_year and abs(y - stem_year) > 1:
+        return None, ("the page dates this %d and the filename says %d -- more "
+                      "than the fiscal-year offset accounts for; read from %r"
+                      % (y, stem_year, printed[:50]))
+    # 1 January is what an empty date cell prints, not a date a town voted on.
+    # Across 19,642 published 2021-2026 contests not one election falls in
+    # January at all, and every January date in this corpus is 1 January.
+    if (mo, d) == (1, 1):
+        return None, ("1 January is what an empty date cell prints; no "
+                      "election in either corpus falls in January. Read "
+                      "from %r" % printed[:50])
     note = ""
     if stem_year and y != stem_year:
         note = ("the page dates this %d, the filename says %d -- the page wins"

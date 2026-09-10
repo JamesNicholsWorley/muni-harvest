@@ -30,19 +30,76 @@ def main():
     a = ap.parse_args()
 
     rows = []
-    counts = {"seats fixed": 0, "seats reported": 0, "duplicate row removed": 0,
-              "still impossible": 0, "records touched": 0}
+    counts = {"questions moved": 0, "figures summed from precincts": 0,
+              "residual rows closed": 0, "seats fixed": 0, "seats reported": 0,
+              "duplicate row removed": 0, "records touched": 0}
 
     for path in sorted(glob.glob(os.path.join(a.parsed, "*.json"))):
         doc = json.load(io.open(path, encoding="utf-8"))
         rec = doc.get("record")
         if not (isinstance(rec, dict) and isinstance(rec.get("elections"), list)):
             continue
-        el = rec["elections"]
+        touched = False
+
+        # A question is in the wrong field of the right record, so it moves
+        # before anything reads the contests -- it has no seat count, so
+        # leaving it in place teaches the ballot arithmetic to see a race with
+        # no seats and the gate to withhold the whole return over it.
+        keep = []
+        for contest in rec["elections"]:
+            if isinstance(contest, dict) and mechanical.ballot_question(contest):
+                rows.append([doc["stem"],
+                             str(contest.get("office_original") or "")[:60],
+                             "ballot question moved to `questions`", "", "",
+                             "rows are %s -- a question, not an office"
+                             % ", ".join(repr(c.get("name_original"))
+                                         for c in (contest.get("candidates")
+                                                   or [])[:4])])
+                counts["questions moved"] += 1
+                touched = True
+                if a.apply:
+                    rec.setdefault("questions", []).append(
+                        contest.get("office_original"))
+                    continue
+            keep.append(contest)
+        if a.apply:
+            rec["elections"] = keep
+        el = [c for c in rec["elections"] if isinstance(c, dict)]
+
+        trustworthy, agreeing, _ = mechanical.breakdown_is_precincts_only(el)
+        for contest in el:
+            office = str(contest.get("office_original") or "")[:60]
+            if trustworthy:
+                for i, total, note in mechanical.sum_from_precincts(contest):
+                    rows.append([doc["stem"], office,
+                                 "figure summed from its precincts", "", total,
+                                 "%s; %d rows in this record close against "
+                                 "their own breakdown, so the columns are "
+                                 "precincts" % (note, agreeing)])
+                    counts["figures summed from precincts"] += 1
+                    touched = True
+                    if a.apply:
+                        contest["candidates"][i]["votes"] = total
+            closed = mechanical.close_residual_row(contest)
+            if closed:
+                i, total, note = closed
+                rows.append([doc["stem"], office,
+                             "residual row closed against the printed total",
+                             "", total, note])
+                counts["residual rows closed"] += 1
+                touched = True
+                if a.apply:
+                    contest["candidates"][i]["votes"] = total
+
         ballots = mechanical.derive_ballots(el)
         if not ballots:
+            if touched and a.apply:
+                counts["records touched"] += 1
+                doc["record"] = rec
+                doc["mechanically_repaired"] = True
+                io.open(path, "w", encoding="utf-8").write(
+                    json.dumps(doc, indent=1, ensure_ascii=False))
             continue
-        touched = False
 
         for contest in el:
             if not isinstance(contest, dict):
