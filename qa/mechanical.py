@@ -1,9 +1,7 @@
-"""Repair the two impossible-arithmetic classes that the record itself settles.
+"""Repairs a record settles by itself, and one the page has to confirm.
 
-Of 501 arithmetically impossible contests in the first ATR pass, roughly half
-carry their own correction. Neither repair reads the document, and neither is
-allowed to guess: each fires only where exactly one answer closes the sum, and
-records what it changed and why.
+Each fires only where exactly one answer closes the sum, and records the
+numbers that justify it so a reviewer can disagree with any single row.
 
     seat count      a contest whose marks are exactly N x the ballot count,
                     with N different from its recorded seats, has the wrong
@@ -15,16 +13,27 @@ records what it changed and why.
                     per-precinct figure added alongside the total it already
                     contains.
 
-The asymmetry that makes both safe is the one the QA layers rest on. Marks
-ABOVE ballots x seats are impossible at any magnitude, so something is
-definitely wrong; marks below are ordinary. These only ever fire above the
-line, where doing nothing is not the safe option either.
+    no seat count   where the page printed none at all, the same arithmetic is
+                    the only evidence there is, and it beats publishing a null
+                    that says the race was decided by nobody. Above one seat it
+                    has to be coherent with the rows.
 
-What they deliberately do NOT do is touch a figure. A seat count is metadata
-about the contest and can be re-derived from the same evidence tomorrow; a vote
-is a transcription, and editing one destroys the only record of what the page
-said. Where the doubling cannot be attributed to a specific duplicate row, the
-contest is flagged, not rewritten.
+    one blank cell  a contest with exactly one unreadable row and a printed
+                    total has that row determined.
+
+The asymmetry that makes the first three safe is the one the QA layers rest on.
+Marks ABOVE ballots x seats are impossible at any magnitude, so something is
+definitely wrong; marks below are ordinary.
+
+The fourth is different in kind and is the one that needs the document. A seat
+count is metadata and can be re-derived from the same evidence tomorrow; a vote
+is a transcription, and a value invented in a blank cell is the one error
+arithmetic can never catch. So a figure is only ever written where the page
+prints it too -- of 130 contests the arithmetic settles, the page agrees with
+93 and prints something else for 25, and those 25 stay unreadable.
+
+Where a doubling cannot be attributed to a specific duplicate row, the contest
+is flagged, not rewritten.
 """
 import collections
 import re
@@ -38,11 +47,19 @@ import re
 # Recognised by its ROWS, not its heading. "QUESTION 1", "Shall the Town of
 # Belchertown cease assessing..." and an untitled override all appear as
 # headings; what they share is that every row is YES, NO or a role.
-_QUESTION_ROW = re.compile(r"^\s*(yes|no|blanks?|write[- ]?ins?|others?|total)\b", re.I)
-_YES_OR_NO = re.compile(r"^\s*(yes|no)\b", re.I)
+# A row may be prefixed with a winner marker -- Belchertown 2011 prints
+# "* YES 1430" -- so the leading punctuation is stepped over rather than
+# anchored on. Without that the question read as a one-seat race and had a seat
+# count derived for it, which is a claim that somebody was elected.
+_QUESTION_ROW = re.compile(r"^[^A-Za-z]*(yes|no|blanks?|write[- ]?ins?|others?|total)\b", re.I)
+_YES_OR_NO = re.compile(r"^[^A-Za-z]*(yes|no)\b", re.I)
+_QUESTION_HEADING = re.compile(r"^\s*(ballot\s+)?question\b|^\s*shall\s+the\b|"
+                               r"^\s*proposition\b", re.I)
 
 
 def is_ballot_question(contest):
+    if _QUESTION_HEADING.match(contest.get("office_original") or ""):
+        return True
     names = [(c.get("name_original") or "").strip()
              for c in (contest.get("candidates") or [])]
     return bool(names) and all(_QUESTION_ROW.match(n) for n in names) \
@@ -146,6 +163,71 @@ def fix_seat_count(contest, ballots):
             "marks %d are exactly %dx the ballot count %d; seats recorded as "
             "%d, source %s" % (marks, implied, ballots, seats,
                                contest.get("num_winners_source")))
+
+
+ROLE_ROW = re.compile(r"^\s*(blanks?|write[- ]?ins?|all\s+others?|others?|totals?|"
+                      r"scatter\w*|vacancy)", re.I)
+
+
+def fill_unreadable_figure(contest, text):
+    """The one figure the printed total accounts for, if the page prints it too.
+
+    A contest with exactly one unreadable row and a printed total has that row
+    determined: total minus the rest, and nothing else closes it. That is
+    arithmetic, and arithmetic alone is not enough to write a VOTE -- a figure
+    is a transcription, and the one error arithmetic can never catch is a value
+    invented in a blank cell.
+
+    So the derived figure has to be printed on the page before it is written.
+    Measured over this corpus the difference is not academic: of 130 contests
+    the arithmetic settles, the page prints the derived figure for 93 and
+    prints something else for 25. Those 25 stay unreadable, which is the
+    answer the transcriber gave and a truer one than a number that closes a sum
+    the page disagrees with.
+    """
+    cands = contest.get("candidates") or []
+    total = contest.get("printed_total")
+    if total is None or text is None:
+        return None
+    missing = [i for i, c in enumerate(cands) if c.get("votes") is None]
+    if len(missing) != 1:
+        return None
+    rest = sum(c.get("votes") or 0 for c in cands if c.get("votes") is not None)
+    value = total - rest
+    if value < 0:
+        return None
+    from qa import layers
+    if not layers.figure_found(value, text):
+        return None
+    return missing[0], value
+
+
+def derive_seat_count(contest, ballots):
+    """Seats for a contest that never printed them, from where its marks land.
+
+    A voter marks a k-seat race up to k times, so total marks land on
+    ballots x k and nowhere else. Where a contest tallies exactly that and the
+    page printed no seat count at all, the arithmetic is the only evidence
+    there is -- and it is better evidence than a null, which publishes nothing
+    and says the race was decided by nobody.
+
+    It is still the field that decides who won, so k above one has to be
+    coherent with the rows: a two-seat race printing one candidate and tallying
+    exactly twice the ballots is a coincidence, not a derivation.
+    """
+    if contest.get("num_winners") is not None or is_ballot_question(contest):
+        return None
+    marks = _marks(contest)
+    if not ballots or not marks or marks % ballots:
+        return None
+    k = marks // ballots
+    if not 1 <= k <= 20:
+        return None
+    real = sum(1 for c in (contest.get("candidates") or [])
+               if not ROLE_ROW.match((c.get("name_original") or "").strip()))
+    if k > 1 and real < k:
+        return None
+    return k
 
 
 def find_doubled_row(contest):
