@@ -53,3 +53,48 @@ statement that no election was held, which is otherwise indistinguishable from
 never having looked.
 
 The 1978-1984 volumes are annual and may carry the odd years. Unchecked.
+
+## Where the series stands
+
+22 of the 32 volumes are read. `config/pd43_turnout.csv` holds 4,322 town-year
+rows and 18,486 precinct rows, with 3,927 election dates and 114 towns stated as
+holding no election that year.
+
+TEN VOLUMES ARE NOT READ, and each for a nameable reason rather than a general
+difficulty:
+
+    1971 1973 1975 1977 1979   the odd-year booklets have NO TEXT LAYER AT ALL --
+                               not even a heading to find, so the table cannot be
+                               located before OCR rather than after it
+    1978 1980 1984             the heading is worded differently: `Number of
+                               Persons Registered and People Who Voted At
+                               Elections`, not `Registered Voters and People Who
+                               Voted`, and in title case
+    1972 1976                  a heading is found but the table extent is
+                               rejected; undiagnosed
+
+The five odd-year booklets are the ones that matter most, because they are the
+only volumes in the series covering CITY elections and odd-year town elections.
+Reading them means OCRing a page to decide whether it is part of a table, which
+is the reverse of the current order and wants a cheap first pass -- the top strip
+of each page is enough to find a heading.
+
+## What it agrees with
+
+Checked against our own pre-2021 records, on 236 overlapping town-years:
+
+    189 (80%)  ours lands EXACTLY on the PD43 figure
+     23 (10%)  ours lands below it, which is expected where Blanks were not
+               printed and the undervote is therefore missing from the tally
+     24 (10%)  ours lands ABOVE it, which is impossible and means one of the two
+               readings is wrong
+
+Two independent sources agreeing exactly on four fifths of the overlap is worth
+more than either of them alone. The 24 impossible rows are in
+`pd43/crosscheck.csv`; the worst are Salisbury 2008 (6.5x), Kingston 2016 (6.0x)
+and Boylston 2008 (3.2x), and several of those also disagree on the date, which
+suggests the two sources are describing different elections rather than
+disagreeing about one.
+
+15 town-years are dated differently by the two sources. That is a free check
+nothing else in this project could perform.
