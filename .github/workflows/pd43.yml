@@ -121,12 +121,17 @@ jobs:
 
       - name: Commit the series
         run: |
-          if git diff --quiet config/pd43_turnout.csv config/pd43_coverage_by_year.csv; then
-            echo "nothing changed"; exit 0
-          fi
           git config user.name "civicatlas-pd43"
           git config user.email "jamesnicholsworleyassistant@gmail.com"
-          git add config/pd43_turnout.csv config/pd43_coverage_by_year.csv
+          # STAGE FIRST, THEN ASK WHAT CHANGED. `git diff --quiet <path>` on a
+          # file git has never seen is a fatal pathspec error, not a quiet
+          # "no change" -- and pd43_coverage_by_year.csv had never been
+          # committed, so this step failed on every run and the whole series was
+          # thrown away after thirty volumes had been read successfully.
+          git add -A config/pd43_turnout.csv config/pd43_coverage_by_year.csv
+          if git diff --cached --quiet; then
+            echo "nothing changed"; exit 0
+          fi
           git commit -m "Read the PD43 series in CI" \
             -m "One job per volume. Registration, turnout, election dates and precinct detail from the Secretary of the Commonwealth's printed statistics, checked against each volume's own arithmetic."
           git push origin HEAD:${{ github.ref_name }}
