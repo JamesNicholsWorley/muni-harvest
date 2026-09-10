@@ -30,6 +30,19 @@ import re
 MONTHS = {m: i + 1 for i, m in enumerate(
     ["january", "february", "march", "april", "may", "june", "july",
      "august", "september", "october", "november", "december"])}
+MONTH_ABBR = {m[:3]: n for m, n in MONTHS.items()}
+
+_ONES = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh",
+         "eighth", "ninth", "tenth", "eleventh", "twelfth", "thirteenth",
+         "fourteenth", "fifteenth", "sixteenth", "seventeenth", "eighteenth",
+         "nineteenth", "twentieth"]
+# A day of the month written out. Both hyphenated and spaced forms appear --
+# "the Twenty-Ninth day" and "THE TWENTY NINTH DAY" are the same day.
+DAY_WORDS = {w: i + 1 for i, w in enumerate(_ONES)}
+for _i, _w in enumerate(_ONES[:9]):
+    DAY_WORDS["twenty-" + _w] = DAY_WORDS["twenty " + _w] = 21 + _i
+DAY_WORDS["thirtieth"] = 30
+DAY_WORDS["thirty-first"] = DAY_WORDS["thirty first"] = 31
 
 
 def load_municipalities(path):
@@ -98,6 +111,12 @@ def iso_date(printed, stem_year):
     t = printed.strip()
     # "April 25th, 2015" is the same date as "April 25, 2015".
     t = re.sub(r"(\d{1,2})(st|nd|rd|th)\b", lambda mm: mm.group(1), t, flags=re.I)
+    # A day spelled out is still a day. Foxborough heads its return "Monday,
+    # the Second Day of May, 2016" and Natick "TUESDAY, THE TWENTY NINTH DAY
+    # OF MARCH 2016"; both were reported as printing no readable date while
+    # the date was on the page in words.
+    t = re.sub(r"\b(%s)\b" % "|".join(sorted(DAY_WORDS, key=len, reverse=True)),
+               lambda mm: str(DAY_WORDS[mm.group(1).lower()]), t, flags=re.I)
     # "the twenty-fifth day of April" and "the 25th day of April" both
     # reduce to the same month-day-year the branch below already reads.
     t = re.sub(r"\bthe\s+(\d{1,2})\s+day\s+of\s+([A-Za-z]+)",
@@ -110,15 +129,30 @@ def iso_date(printed, stem_year):
         if m:
             y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
         else:
-            # 04/06/2002. American order, which is what a
-            # Massachusetts clerk writes; a day over 12 in the first
-            # position would be unreadable either way and is rejected
-            # by the plausibility check below rather than swapped.
-            m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", t)
-            if not m:
-                return None, "could not read a date from %r" % printed[:60]
-            mo, d, y = (int(m.group(1)), int(m.group(2)),
-                        int(m.group(3)))
+            # A month NAME between the other two numbers fixes the order
+            # without any convention having to be assumed: "15-May-18" is
+            # Bourne's own heading, "31-Mar-03" is Medfield's, "7 MAY 2019"
+            # is Maynard's. Day first, because nothing else can be.
+            m = re.search(r"(\d{1,2})[-\s]([A-Za-z]{3,9})[-\s,]+(\d{2,4})", t)
+            if m and m.group(2).lower()[:3] in MONTH_ABBR:
+                d, mo, y = (int(m.group(1)),
+                            MONTH_ABBR[m.group(2).lower()[:3]],
+                            int(m.group(3)))
+            else:
+                # 04/06/2002. American order, which is what a
+                # Massachusetts clerk writes; a day over 12 in the first
+                # position would be unreadable either way and is rejected
+                # by the plausibility check below rather than swapped.
+                m = re.search(r"(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})", t)
+                if not m:
+                    return None, "could not read a date from %r" % printed[:60]
+                mo, d, y = (int(m.group(1)), int(m.group(2)),
+                            int(m.group(3)))
+    # A two-digit year is only ever this century here: the corpus is
+    # 2000-2020 and the range check below still has to pass, so "11/5/13" is
+    # 2013 and a "43" would be rejected rather than guessed at.
+    if y < 100:
+        y += 2000
     if not (1 <= mo <= 12 and 1 <= d <= 31):
         return None, "implausible date in %r" % printed[:60]
     # A pre-2021 ATR covers 2000-2020; the fiscal-year offset moves that

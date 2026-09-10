@@ -55,11 +55,11 @@ Barnstable2008,hold,0,the parse found no contest in this section
 Barnstable2010,publish,9,no two contests agree on a ballot count
 Barnstable2011,publish,10,no two contests agree on a ballot count
 Barnstable2012,hold,0,the parse found no contest in this section
-Barnstable2014,review,15,no election date could be derived
+Barnstable2014,publish,15,no two contests agree on a ballot count
 Barnstable2015,hold,0,the parse found no contest in this section
 Barnstable2016,review,10,no election date could be derived
 Barnstable2017,hold,10,"ELECTOR OF PRESIDENT AND VICE PRESIDENT is a state or county office, so this section is not one annual municipal election (4 such offices here)"
-Barnstable2018,review,5,no election date could be derived
+Barnstable2018,publish,5,no two contests agree on a ballot count
 Barnstable2019,hold,18,"REPRESENTATIVE IN GENERAL COURT is a state or county office, so this section is not one annual municipal election (5 such offices here)"
 Barnstable2020,publish,9,no two contests agree on a ballot count
 Becket2017,publish,8,
@@ -123,7 +123,7 @@ Bourne2008,publish,11,
 Bourne2009,review,12,MODERATOR 1 FOR 1 YEAR: a figure was not readable
 Bourne2015,review,15,Non Veteran: seat count left null by the transcriber
 Bourne2017,hold,10,Bird of Health 3 years vote for 1: 2206 marks exceeds 1103x1=1103 -- impossible
-Bourne2018,review,12,no election date could be derived
+Bourne2018,publish,12,
 Bourne2020,hold,11,Jonathan Bourne Library Trustee 3 Years vote for 1: 3196 marks exceeds 1598x1=1598 -- impossible
 Boxborough2002,hold,7,"Selectmen, Three Years: 1345 marks exceeds 672x2=1344 -- impossible"
 Boxborough2008,hold,0,the parse found no contest in this section
@@ -162,7 +162,7 @@ Burlington2017,hold,0,the parse found no contest in this section
 Burlington2018,hold,0,the parse found no contest in this section
 Canton2005,hold,0,the parse found no contest in this section
 Canton2010,publish,7,
-Canton2017,review,8,no election date could be derived
+Canton2017,publish,8,
 Carlisle2008,publish,8,
 Carlisle2013,publish,8,
 Carlisle2015,hold,0,the parse found no contest in this section
@@ -233,7 +233,7 @@ Concord2017,publish,4,
 Concord2018,publish,4,
 Concord2019,publish,5,
 Concord2020,hold,0,the parse found no contest in this section
-Conway2017,review,7,no election date could be derived
+Conway2017,publish,7,
 Cummington2011,hold,0,the parse found no contest in this section
 Cummington2012,review,14,Selectperson for three years: a figure was not readable
 Cummington2013,review,14,Selectperson for three years: a figure was not readable
@@ -326,11 +326,11 @@ Falmouth2018,review,18,Town Meeting Member Precinct 7 Elect nine for three year 
 Falmouth2019,publish,20,
 Falmouth2020,hold,0,the parse found no contest in this section
 Foxborough2015,review,11,QUESTION# 1: seat count left null by the transcriber
-Foxborough2016,review,12,no election date could be derived
-Foxborough2018,review,7,no election date could be derived
+Foxborough2016,publish,12,
+Foxborough2018,publish,7,
 Framingham2015,review,29,Town Meeting Members Precinct 6: seat count left null by the transcriber
 Franklin2018,review,6,BOARD OF ASSESSORS: seat count left null by the transcriber
-Franklin2020,review,7,no election date could be derived
+Franklin2020,publish,7,no two contests agree on a ballot count
 Freetown2008,review,11,Library Trustees (vote for 2): a figure was not readable
 Freetown2018,publish,16,
 Freetown2020,review,16,"SELECTMAN, BOARD OF HEALTH, & PERSONNEL BOARD MEMBER: seat count left null by the transcriber"
@@ -648,18 +648,18 @@ Mattapoisett2017,publish,14,
 Maynard2014,publish,5,
 Maynard2015,review,8,REGIONAL VOCATIONAL SCHOOL COMMITTEE: seat count left null by the transcriber
 Maynard2018,publish,3,
-Maynard2019,review,5,no election date could be derived
+Maynard2019,publish,5,no two contests agree on a ballot count
 Maynard2020,hold,0,the parse found no contest in this section
 Medfield2001,review,12,Trustees of Public Library (vote for not more than two): a figure was not readable
 Medfield2002,review,9,Housing Authority (vote for one): a figure was not readable
-Medfield2003,review,10,no election date could be derived
+Medfield2003,publish,10,
 Medfield2004,hold,4,"REPRESENTATIVE IN GENERAL COURT is a state or county office, so this section is not one annual municipal election (4 such offices here)"
 Medway2014,review,10,QUESTION1: seat count left null by the transcriber
 Medway2015,review,9,BOARD OF SELECTMEN: seat count left null by the transcriber
 Medway2016,hold,0,the parse found no contest in this section
-Medway2017,review,10,no election date could be derived
-Medway2018,publish,11,
-Medway2019,review,12,no election date could be derived
+Medway2017,publish,10,
+Medway2018,review,11,"Medway 2019 is already published from Medway2019, which read more of the page"
+Medway2019,publish,12,
 Medway2020,review,11,Question 1 non-binding: seat count left null by the transcriber
 Mendon2013,publish,12,
 Mendon2014,publish,11,
@@ -730,7 +730,7 @@ Nahant2019,hold,0,the parse found no contest in this section
 Natick2010,publish,21,
 Natick2011,publish,11,
 Natick2012,publish,9,
-Natick2016,review,21,no election date could be derived
+Natick2016,publish,21,
 Natick2020,review,20,Recreation and Parks (Three Years): a figure was not readable
 Needham2011,hold,0,the parse found no contest in this section
 Needham2013,hold,0,the parse found no contest in this section
@@ -886,7 +886,7 @@ Plainville2016,review,13,two records claim Plainville 2016 and hold the same num
 Plainville2017,review,13,two records claim Plainville 2016 and hold the same number of contests; neither can be preferred
 Plainville2018,hold,0,the parse found no contest in this section
 Plainville2020,publish,11,
-Plymouth2010,review,2,no election date could be derived
+Plymouth2010,publish,2,no two contests agree on a ballot count
 Plymouth2011,review,7,QUESTION 1: seat count left null by the transcriber
 Plymouth2013,review,5,Selectman: no candidates
 Plymouth2015,hold,25,PLANNING BOARD 5yrs: 4679 marks exceeds 4678x1=4678 -- impossible
@@ -1063,11 +1063,11 @@ Spencer2015,hold,0,the parse found no contest in this section
 Spencer2016,hold,0,the parse found no contest in this section
 Spencer2017,hold,0,the parse found no contest in this section
 Spencer2019,publish,14,
-Spencer2020,review,7,no election date could be derived
+Spencer2020,publish,7,
 Springfield2007,hold,0,the parse found no contest in this section
 Sterling2007,hold,12,LIBRARY TRUSTEES - (2) 3 year: 1425 marks exceeds 701x2=1402 -- impossible
 Sterling2008,review,11,LIBRARY TRUSTEES - 3 year: seat count left null by the transcriber
-Sterling2009,review,10,no election date could be derived
+Sterling2009,publish,10,
 Sterling2010,publish,11,
 Sterling2011,review,10,BOARD OF SELECTMEN: seat count left null by the transcriber
 Sterling2012,review,12,BOARD OF LIBRARY TRUSTEES (3 year term): a figure was not readable
@@ -1242,7 +1242,7 @@ WestTisbury2005,review,15,Land Bank Commissioner: seat count left null by the tr
 WestTisbury2006,publish,8,no two contests agree on a ballot count
 WestTisbury2007,publish,13,
 WestTisbury2008,review,14,MODERATOR: a figure was not readable
-WestTisbury2009,hold,13,PLANNING BOARD: 569 marks exceeds 566x1=566 -- impossible
+WestTisbury2009,review,13,"West Tisbury 2009 is already published from WestTisbury2008, which read more of the page"
 WestTisbury2016,publish,10,
 WestTisbury2019,hold,11,SELECTMAN: 267 marks exceeds 264x1=264 -- impossible
 Westborough2014,publish,10,

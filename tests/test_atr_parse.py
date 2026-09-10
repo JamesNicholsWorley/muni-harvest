@@ -6,7 +6,7 @@ un-learning it fails loudly rather than quietly changing a number.
 import pymupdf
 import pytest
 
-from qa import atr_gate, escalate, mechanical
+from qa import atr_bridge, atr_gate, escalate, mechanical
 from tools import atr_sections, text_arith, warrant, zones
 
 
@@ -340,6 +340,51 @@ def test_a_printed_vote_for_still_outranks_the_arithmetic():
                   ("Blanks", 513)],
                  source="printed", seats_quote="Vote for NOT more than Two")
     assert mechanical.fix_seat_count(c, 2287)[0] == "REPORT"
+
+
+# ------------------------------------------------------------------------- date
+
+def test_the_formats_a_clerk_actually_uses_are_dates():
+    """Every one of these was on a page and reported as unreadable, and the
+    record was withheld for it. The quote is the heading in each case.
+
+        Medfield 2003   "Town Of Medfield / Election Results / 31-Mar-03"
+        Bourne 2018     "Town Election / 15-May-18 / Town of Bourne"
+        Barnstable 2014 "TOWN OF BARNSTABLE ELECTION RESULTS / DATE / 11/5/13"
+        Maynard 2019    "MAYNARD TOWN ELECTION - 7 MAY 2019"
+        Conway 2017     "adjourned until Thursday, 11 May 2017"
+        Foxborough 2016 "ANNUAL TOWN ELECTION / Monday, the Second Day of
+                         May, 2016"
+        Natick 2016     "TUESDAY, THE TWENTY NINTH DAY OF MARCH 2016"
+    """
+    for printed, want in (("31-Mar-03", "2003-03-31"),
+                          ("15-May-18", "2018-05-15"),
+                          ("4-Apr-17", "2017-04-04"),
+                          ("11/5/13", "2013-11-05"),
+                          ("5-18-09", "2009-05-18"),
+                          ("7 MAY 2019", "2019-05-07"),
+                          ("11 May 2017", "2017-05-11"),
+                          ("Monday, the Second Day of May, 2016", "2016-05-02"),
+                          ("TUESDAY, THE TWENTY NINTH DAY OF MARCH 2016",
+                           "2016-03-29"),
+                          ("Saturday, the Eighth Day of May, 2010",
+                           "2010-05-08")):
+        assert atr_bridge.iso_date(printed, 2016)[0] == want, printed
+
+
+def test_a_page_that_prints_no_day_still_prints_no_day():
+    """The point of the field is to disagree with the filename, so a year on
+    its own is not a date and must not become one."""
+    for printed in ("April, 2007", "2019", "<UNKNOWN>", "APRIL 5TH",
+                    "2010 Local Election Results", "November of 2015"):
+        assert atr_bridge.iso_date(printed, 2016)[0] is None, printed
+
+
+def test_a_misread_year_is_still_refused():
+    """Sudbury read 1974 and Winchester 2107, and both would have published a
+    town-year with no election in it."""
+    assert atr_bridge.iso_date("March 25, 1974", 2014)[0] is None
+    assert atr_bridge.iso_date("March 28, 2107", 2005)[0] is None
 
 
 # --------------------------------------------------------------------- locating
