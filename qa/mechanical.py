@@ -29,21 +29,58 @@ contest is flagged, not rewritten.
 import collections
 
 
-def derive_ballots(contests):
-    """Ballots, from contests that agree. Two agreeing is the minimum."""
-    q = collections.Counter()
+def _countable(contests):
+    """The contests the ballot arithmetic may speak about at all."""
+    out = []
     for c in contests:
-        seats = c.get("num_winners")
-        if not seats or c.get("scope") == "regional_district":
+        if not isinstance(c, dict):
             continue
-        marks = _marks(c)
-        if marks is None or marks % seats:
+        if not c.get("num_winners") or c.get("scope") == "regional_district":
             continue
-        q[marks // seats] += 1
+        if _marks(c) is None:
+            continue
+        out.append(c)
+    return out
+
+
+def ballot_quorum(contests):
+    """(ballots, support, dissent). ballots is None when nothing carries.
+
+    Two things have to hold before a modal quotient is a ballot count.
+
+    Two contests must agree -- one is an assertion, not a derivation. And the
+    value must not be contradicted by more contests than assert it, because
+    `marks <= ballots x seats` holds for every contest in the record, so a
+    contest implying MORE ballots than the candidate value is evidence against
+    that value rather than a defect in itself.
+
+    Skipping the second test is how Ashburnham 2006 came to be condemned. Two
+    Planning Board races tallied 534 each, so 534 was taken as the ballot
+    count, and the Moderator (583), Selectmen (683) and Municipal Light Board
+    (542) were all reported as arithmetically impossible. The page prints
+    "Total Votes Cast = 683": every one of those three was read correctly and
+    the derivation was the thing that was wrong. Three contests contradicting
+    two is a disagreement about how many ballots were cast, and the honest
+    answer to it is that this record cannot say.
+    """
+    cs = _countable(contests)
+    q = collections.Counter()
+    for c in cs:
+        marks, seats = _marks(c), c["num_winners"]
+        if marks % seats == 0:
+            q[marks // seats] += 1
     if not q:
-        return None
-    best, n = q.most_common(1)[0]
-    return best if n >= 2 else None
+        return None, 0, 0
+    best, support = q.most_common(1)[0]
+    dissent = sum(1 for c in cs if _marks(c) > best * c["num_winners"])
+    if support < 2 or dissent >= support:
+        return None, support, dissent
+    return best, support, dissent
+
+
+def derive_ballots(contests):
+    """Ballots, from contests that agree and are not outvoted. None is real."""
+    return ballot_quorum(contests)[0]
 
 
 def _marks(contest):

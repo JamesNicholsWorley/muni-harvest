@@ -83,6 +83,28 @@ def test_marks_exceeding_ballots_times_seats_escalates():
     assert any("impossible" in r for r in reasons)
 
 
+def test_a_quorum_its_own_record_outvotes_is_not_a_ballot_count():
+    """Ashburnham 2006, whose page prints "Total Votes Cast = 683".
+
+    Two Planning Board races tallied 534 each, so 534 was taken as the ballot
+    count and three correctly-read contests -- Moderator 583, Selectmen 683,
+    Municipal Light Board 542 -- were reported as arithmetically impossible.
+    Three contradicting two is a disagreement about how many ballots were cast,
+    not three impossible contests.
+    """
+    rec = {"elections": [
+        _contest("One Planning Board - For five year term", 1, [("A", 534)]),
+        _contest("One Planning Board - For one year term", 1, [("B", 534)]),
+        _contest("Moderator - For one year term", 1, [("C", 583)]),
+        _contest("One Board of Selectmen - For three year term", 1,
+                 [("D", 492), ("E", 186), ("Others", 3), ("Blanks", 2)]),
+        _contest("One Municipal Light Board - For three year term", 1,
+                 [("F", 542)])]}
+    verdict, reasons = escalate.review(rec)
+    assert not any("impossible" in r for r in reasons)
+    assert any("disagree about how many ballots" in r for r in reasons)
+
+
 def test_marks_below_the_product_do_not_escalate():
     """Under is the legitimate direction -- blanks and uncounted write-ins."""
     rec = {"elections": [

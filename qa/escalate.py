@@ -20,8 +20,12 @@ name, because a dropped candidate's votes are usually captured under the name
 above. Those two need the document, so they escalate on structural grounds
 rather than arithmetic ones.
 """
-import collections
+import os
 import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from qa import mechanical                                   # noqa: E402
 
 ADDRESS = re.compile(r"^\s*[0-9]+\s+[A-Za-z]", re.M)     # "42 Elm Street"
 
@@ -51,28 +55,24 @@ def _marks(contest):
     return None if any(x is None for x in v) else sum(v)
 
 
-def derive_ballots(contests):
-    """The ballot count, from contests that agree. None is a real answer."""
-    q = collections.Counter()
-    for c in contests:
-        m, s = _marks(c), c.get("num_winners")
-        if m is None or not s or c.get("scope") == "regional_district":
-            continue
-        if m % s == 0:
-            q[m // s] += 1
-    if not q:
-        return None
-    best, n = q.most_common(1)[0]
-    return best if n >= 2 else None
-
-
 def review(record):
     """(verdict, reasons). verdict is 'accept' or 'escalate'."""
     contests = record.get("elections", record.get("contests", []))
     reasons = []
-    ballots = derive_ballots(contests)
+    ballots, support, dissent = mechanical.ballot_quorum(contests)
     if ballots is None and len(contests) >= 2:
-        reasons.append("no two contests agree on a ballot count")
+        # Two different silences. Nothing closing exactly is a gap in what we
+        # can CHECK and 294 published records already carry it. A quorum that
+        # other contests outvote is a disagreement INSIDE the record, and that
+        # is a finding -- somewhere in it, a figure or a seat count is wrong,
+        # and nothing here can say which.
+        if support >= 2 and dissent >= support:
+            reasons.append(
+                "the contests disagree about how many ballots were cast -- %d "
+                "close on one count and %d imply a larger one"
+                % (support, dissent))
+        else:
+            reasons.append("no two contests agree on a ballot count")
 
     for c in contests:
         if c.get("is_recount"):
