@@ -74,6 +74,22 @@ def main():
     for y in sorted(per):
         n, u, d = per[y]
         print('    %-6s %6d %8d %7d' % (y, n, u, d))
+    # A PER-YEAR COVERAGE FILE, because the gate on the site has to be per-year.
+    # This series is permanently partial by year -- even years only from 1986,
+    # cities and odd-year towns only before 1984 -- so a single "pre-2021 turnout
+    # is available" flag would switch on years with nothing behind them.
+    cov = os.path.join(os.path.dirname(a.out) or '.', 'pd43_coverage_by_year.csv')
+    with io.open(cov, 'w', encoding='utf-8', newline='') as fh:
+        w = csv.writer(fh)
+        w.writerow(['year', 'municipalities', 'usable_denominators',
+                    'with_date', 'no_election', 'kinds'])
+        for y in sorted(per):
+            rows_y = [r for r in totals if r['year'] == y]
+            kinds = sorted({r.get('kind', 'town') for r in rows_y})
+            w.writerow([y, per[y][0], per[y][1], per[y][2],
+                        sum(1 for r in rows_y if r['status'] == 'no_election'),
+                        '+'.join(kinds)])
+    print('wrote %s' % cov)
     return 0
 
 

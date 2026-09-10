@@ -1,114 +1,107 @@
 # pd43/
 
-Working directory for the Public Document 43 series. The volumes are large
-scans and are not committed; `tools/pd43_fetch.py` re-fetches any of them.
+Public Document 43 is the Secretary of the Commonwealth's printed election
+statistics. Its local-election tables give, per municipality and per precinct:
+the date of the election, the registered voters, and the number of people who
+voted. That is the denominator this project has never had for the years before
+2021, an independently published ballots figure to check our own against, a date
+to check our parse against, and -- from the towns printed `ODD YEARS ONLY` -- an
+authoritative statement that a municipality held no election that year.
+
+The volumes are large scans and are not committed.
 
     python tools/pd43_fetch.py --list
-    python tools/pd43_fetch.py --years 2000,2002,2008 --dir pd43
+    python tools/pd43_fetch.py --years 2000,2008 --dir pd43
     python tools/pd43_turnout.py pd43/pd43-2008.pdf --year 2008 --out pd43/out-2008.csv
+    sh tools/pd43_all.sh                       # every volume, strong ones first
+    python tools/pd43_combine.py "pd43/out-*.csv" --out config/pd43_turnout.csv
+    python tools/pd43_crosscheck.py --records <civicatlasma>/json_pre2021
 
-## What limits this series is the text layer, not the parser
+## What the series covers, and what it never will
 
-Measured over the table pages of three volumes:
+    1970-1983   annual. The odd-year volumes are given over to local elections
+                and tabulate CITY elections -- by ward and precinct, with
+                preliminaries -- as well as town ones.
+    1986-2018   biennial, even years only, TOWNS ONLY. Each volume covers its
+                own even year and no other. Cities elect in odd years and are
+                not tabulated at all: the 2008 volume counts 39 cities and 1,050
+                city precincts in its summary and prints none of them.
+    1985-2019   the odd years are not in the archive. The Secretary's position
+                now is that local election turnout is not reported to the
+                Elections Division at all.
 
-    2008   13 of 15 pages carry a text layer   ->  253 towns, 83% usable
-    2002   12 of 15                            ->  260 towns
-    2000    7 of 14                            ->  144 towns
+So odd-year town elections and every city election from 1985 on are not in this
+series and are not going to be. That is a permanent gap in this source, not a
+backlog.
 
-The pages that parse badly are, with few exceptions, pages with nothing to
-parse: an image-only page reports about twenty words, all of them the running
-head. Half the 2000 volume is like that. No amount of work on the parser reaches
-them.
-
-Tesseract is installed on this machine and reads those pages fine -- about three
-seconds a page at 3x, and the figures come back right (Belmont 17,243 / 3,483,
-Bellingham 8,811 / 2,195, both matching the printed page). At roughly 15 table
-pages a volume and 24 volumes, OCR for the whole series is around 350 pages and
-under half an hour, at no cost.
-
-So the shape of the work is: use the text layer where there is one, OCR the page
-where there is not, and let the arithmetic decide whether either worked.
+The archive holds election statistics back to 1901, in the same shape. Those are
+a separate piece of work and have not been fetched.
 
 ## Everything is checked by the page's own arithmetic
 
-The precinct rows sum to the TOTALS row, so no one has to read a page to know
-whether it was read correctly. `status` in the output CSV is the verdict:
+The precinct rows sum to the TOTALS row, so nobody has to read a page to know
+whether it was read correctly. `status` in the output is the verdict:
 
     checked      precincts sum to both printed totals
     single       an undivided town; one figure, nothing to cross-foot
     no_election  the volume states the town does not elect this year
     reg_only     registered voters sum, people who voted do not
+    voted_only   the reverse
     no_total     no TOTALS row could be read
     mismatch     the precincts do not sum to the printed total
+    hierarchy    a city table three levels deep whose sums do not close
 
-Only the last three want a person, and they want the page, not the CSV.
+**Only `checked` and `single` are fit to become denominators.** The rest are kept
+and marked, because a gap that is written down is not the same as one that is
+filled.
 
-## Cities are not in the biennial volumes
+## Reading the page: try, don't guess
 
-The even-year volumes tabulate town elections only. The 2008 volume's own
-summary counts 39 cities and 1,050 city precincts, and then tabulates none of
-them: cities elect in odd years. Towns that elect in odd years say so in the
-table, printed `ODD YEARS ONLY`, which is worth having -- it is an authoritative
-statement that no election was held, which is otherwise indistinguishable from
-never having looked.
+The hard part is not the figures, it is finding where the columns are. Every
+rule for placing the gutter from the page alone was wrong somewhere:
 
-The 1978-1984 volumes are annual and may carry the odd years. Unchecked.
+  * the widest gap in the middle third splits INSIDE the right-hand block;
+  * a profile of how many rows cross each column -- which is what a gutter
+    actually is -- lands at 218 where the gutter sits at 260, because over sixty
+    rows of dot leaders no column is left alone and the quietest is not the one;
+  * the page's own reading swings 245-293 across one table, and a reading fifty
+    points out does not shift a column, it swallows one;
+  * the table's median fixes that and discards the pages that really did shift.
 
-## Where the series stands
+So the page is read several ways and scored, and the scorer is the arithmetic
+that was already there: a split through the wrong place produces towns whose
+precincts do not sum. On 2008 that took 275 municipalities and 127 verified to
+308 and 166, against 310 municipalities named anywhere in the volume.
 
-29 of the 32 volumes yield something; `config/pd43_turnout.csv` holds 4,471
-town-year rows and 21,692 precinct rows, with 3,969 election dates and 114 towns
-stated as holding no election that year.
+Three other things had to be true before a volume would read at all:
 
-BUT THE YIELD IS NOT EVEN, and the honest split is by era rather than by volume:
+  * SOME PAGES ARE SINGLE-COLUMN. The 1970s volumes set the table as one block
+    across the page; halving it cut every row in two, name and date on one side,
+    figures on the other. The figures were being read correctly the whole time.
+  * SOME SCANS ARE SIDEWAYS AND TWO-UP. Each page of the 1971 booklet holds two
+    printed pages rotated ninety degrees with no text layer, so OCR returned
+    consonant salad -- a legible scan, the wrong way up and two pages wide.
+    `tools/pd43_flatten.py` straightens it.
+  * THERE ARE THREE HEADING SHAPES. `REGISTERED VOTERS AND PEOPLE WHO VOTED`
+    from 1981; `Number of persons registered and people who voted at Elections`
+    in the 1970s, in title case; and in 1973-79 no such phrase at all -- the
+    table is titled `City Elections in 1973` and the columns are ruled
+    `Registered Voters | Persons who voted`.
 
-    1981-2018   the working half. 2,478 usable registered-voter figures,
-                1,307 verified by their own arithmetic, 1,171 single-precinct
-                towns. This is what should be joined to anything.
-    1970-1979   read, but almost nothing survives validation. The data is
-                extracted -- 1971 alone gives 2,070 precinct rows -- and it is
-                marked `hierarchy`, `no_total` or `mismatch`, not `checked`.
-                Treat it as located, not as read.
-
-WHAT THE 1970s VOLUMES NEED, specifically:
-
-  * THE SCANS ARE SIDEWAYS AND TWO-UP. Each PDF page of an odd-year booklet
-    holds two printed pages rotated ninety degrees, with no text layer, so OCR
-    of the page returns consonant salad -- not because the scan is poor, it is
-    perfectly legible, but because it is the wrong way up and two pages wide.
-    `tools/pd43_flatten.py` straightens them and that part is solved: the
-    flattened 1971 page reads cleanly and the city table is found.
-  * THE CITY TABLES RUN THREE LEVELS DEEP -- city, ward, precinct -- where every
-    other table in the series runs two. Ward subtotals are now collected
-    separately rather than counted as precincts, which stops them doubling the
-    city, but the arithmetic still does not close on these volumes and until it
-    does none of it should be trusted.
-  * 1980 and 1984 find no table at all and are undiagnosed.
-
-So: the modern half is finished and checkable; the 1970s half is straightened,
-located and extracted, and is not yet worth publishing.
-
-## Older still
-
-The archive holds election statistics volumes back to 1901 -- the search that
-found 32 volumes for 1970-2018 returned 184 items overall, with odd years right
-through the 1900s to 1940s and beyond. Those are outside what has been fetched
-and are a separate piece of work, but they are there, and the 1940s volumes are
-the same publication in the same shape as the 1970s ones.
+Tesseract needs `--psm 6` for these pages. Under its automatic segmentation it
+decides the ruled label column is furniture and discards it: one token from that
+column against 103, so every town loses its name.
 
 ## What it agrees with
 
-Checked against our own pre-2021 records, on 236 overlapping town-years:
+Against our own pre-2021 records, on the invariant that our derived ballots
+figure can fall below the true one but can never exceed it:
 
     189 (80%)  ours lands EXACTLY on the PD43 figure
      23 (10%)  ours lands below it -- expected where Blanks were not printed
      24 (10%)  ours lands ABOVE it, which is impossible
 
-Two independent sources agreeing exactly on four fifths of the overlap is worth
-more than either alone. The 24 impossible rows are in `pd43/crosscheck.csv`,
-worst first: Salisbury 2008 at 6.5x, Kingston 2016 at 6.0x, Boylston 2008 at
-3.2x. Several also disagree on the date, which suggests the two sources are
-describing different elections rather than disagreeing about one.
-
-15 town-years are dated differently by the two sources. That is a free check
-nothing else in this project could perform.
+Four fifths exact between two sources sharing no code, no method and no author.
+The impossible rows are in `pd43/crosscheck.csv`, worst first. Several also
+disagree on the date, which suggests the two are describing different elections
+rather than disagreeing about one.
