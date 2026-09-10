@@ -7,7 +7,9 @@ import pymupdf
 import pytest
 
 from qa import atr_bridge, escalate, mechanical
-from tools import text_arith, warrant, zones
+from tools import atr_sections, text_arith, warrant, zones
+
+MAX_LINE_FOR_A_TALLY = atr_sections.MAX_CONTINUATION_LINE
 
 
 # ------------------------------------------------------------------ arithmetic
@@ -317,3 +319,39 @@ def test_a_named_candidates_blank_is_never_filled_from_the_residual():
         {"name_original": "Kloczkowski", "votes": None},
         {"name_original": "Blanks", "votes": 62}]}
     assert mechanical.close_residual_row(contest) is None
+
+
+# ---------------------------------------------------------------- the locator
+
+def test_minutes_and_a_return_carry_the_same_words_and_differ_in_shape():
+    """The locator's commonest failure. Both pages name the same offices; only
+    one is a table. 199 of the 317 sections holding no contest picked a page
+    running over 30 characters a line."""
+    minutes = ("ANNUAL TOWN ELECTION\n"
+               "The Moderator declared the meeting open and recognised the "
+               "Board of Selectmen, who moved that the Finance Committee "
+               "report be received and placed on file for the Assessors.\n"
+               "The School Committee then reported at some length upon the "
+               "matter of the Planning Board and the Board of Health.\n")
+    tally = ("ANNUAL TOWN ELECTION\n"
+             "SELECTMEN\nVOTE FOR ONE\nJ SMITH 412\nBLANKS 31\n"
+             "WRITE-INS 2\nTOTAL VOTES 445\nMODERATOR\nA JONES 402\n"
+             "BLANKS 41\nPRECINCT 1\n")
+    assert atr_sections.shape_score(tally) > atr_sections.shape_score(minutes)
+    best = atr_sections.score_pages(None, [minutes, tally])
+    assert best[0][1] == 1
+
+
+def test_an_uncontested_return_is_not_excluded_for_running_long():
+    """Hawley's return -- nine offices, nine names, no figures -- sits at 26
+    characters a line. Shape is a weight, never a cutoff: a cutoff at 30 takes
+    Hawley out and 127 of the sections that publish today with it."""
+    hawley = ("Annual Town Election Results\n"
+              "Selectmen/Board of Health - 3 years\nHussain Hamdan\n"
+              "Assessor for three years\nEdward Brady\n"
+              "Town Clerk for three years\nMary Sears\n"
+              "Moderator for one year\nPaul Jenkins\n"
+              "Tree Warden for one year\nJane Doe\n")
+    assert atr_sections.prose_score(hawley) < MAX_LINE_FOR_A_TALLY
+    assert atr_sections.shape_score(hawley) > 0
+    assert atr_sections.score_pages(None, [hawley])

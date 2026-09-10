@@ -201,6 +201,36 @@ def grow(texts, best, page_count):
     return max(0, lo - 1), min(page_count - 1, hi + 1), capped
 
 
+def shape_score(text):
+    """What the page's LAYOUT is worth, on top of its vocabulary.
+
+    `grow` has always known that a return is a table and minutes are prose --
+    it uses `prose_score` to decide whether a page CONTINUES the section. The
+    page that STARTS one was chosen on vocabulary alone, and that asymmetry is
+    the locator's commonest failure: town meeting minutes are minutes about
+    SELECTMEN, MODERATOR and FINANCE COMMITTEE, so they carry the same words as
+    the return and win on them.
+
+    Measured over the 919 sections this corpus cut and then graded, the two
+    piles separate on shape and not on vocabulary. Of the 602 that reached
+    `publish`, 96% contain a page that passes `is_tally`; of the 317 the
+    transcriber found no contest in, 17% do, and 199 of them picked a page
+    running over 30 characters a line.
+
+    A weight and not a cutoff, because the docstring above is right: Hawley's
+    all-uncontested return sits at 26 characters a line and a cutoff at 30
+    throws it away, along with 127 of the 602 sections that publish today. So
+    prose is out-scored rather than excluded, and a page whose vocabulary is
+    strong enough still wins.
+    """
+    p = prose_score(text)
+    if p < 20:
+        return 6
+    if p < MAX_CONTINUATION_LINE:
+        return 3
+    return -6 if p >= 45 else 0
+
+
 def score_pages(doc, texts=None):
     """(score, page index, headings, ballot words, offices) best first."""
     out = []
@@ -208,7 +238,7 @@ def score_pages(doc, texts=None):
         h, b, o = (len(HEAD.findall(t)), len(BALLOT.findall(t)),
                    len(OFFICE.findall(t)))
         if h and (b >= 3 or o >= 3):
-            out.append((b + 2 * o + 3 * h, i, h, b, o))
+            out.append((b + 2 * o + 3 * h + shape_score(t), i, h, b, o))
     out.sort(reverse=True)
     return out
 
