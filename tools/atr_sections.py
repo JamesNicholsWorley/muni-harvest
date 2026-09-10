@@ -75,6 +75,21 @@ BALLOT_PAPER = re.compile(
     r"(INSTRUCTIONS\s+TO\s+VOTERS|OFFICIAL\s+BALLOT|SPECIMEN\s+BALLOT|"
     r"fill\s+in\s+the\s+OVAL)", re.I)
 
+# A town report prints the September state primary and the November state
+# election beside its own annual return, and those pages carry more ballot
+# vocabulary than the town's, not less -- Bolton 2009's "SPECIAL STATE PRIMARY
+# ELECTION December 8, 2009" outranked its own May town election on ballot
+# words alone. The office vocabulary is the state fingerprint, and it is the
+# only thing that separates them: both are the town's report, headed with the
+# town's name, printing the town's precincts.
+STATE_ELECTION = re.compile(
+    r"(STATE\s+(PRIMARY|ELECTION)|PRESIDENTIAL\s+(PRIMARY|PREFERENCE)|"
+    r"SENATOR\s+IN\s+CONGRESS|REPRESENTATIVE\s+IN\s+CONGRESS|"
+    r"REPRESENTATIVE\s+IN\s+GENERAL\s+COURT|SENATOR\s+IN\s+GENERAL\s+COURT|"
+    r"ELECTORS?\s+OF\s+PRESIDENT|GOVERNOR\s+AND\s+LIEUTENANT|"
+    r"ATTORNEY\s+GENERAL|SECRETARY\s+OF\s+(STATE|THE\s+COMMONWEALTH)|"
+    r"REGISTER\s+OF\s+PROBATE|DISTRICT\s+ATTORNEY)", re.I)
+
 
 def prose_score(text):
     """Mean line length. A results page is a table -- 11 to 17 characters a line.
@@ -210,7 +225,8 @@ def grow(texts, best, page_count):
 def score_pages(doc, texts=None):
     """(score, page index, headings, ballot words, offices) best first.
 
-    BALLOT VOCABULARY DECIDES, and the old score only breaks its ties. What
+    A page naming a STATE contest ranks below every page that does not, and
+    then BALLOT VOCABULARY DECIDES, with the old score breaking its ties. What
     is eligible has not moved: that leniency is what Hawley's all-uncontested
     return needs, and Petersham and Newbury were thrown away for requiring
     more. What moved is the ORDER.
@@ -223,21 +239,38 @@ def score_pages(doc, texts=None):
     either; what it has, and they do not, is Blanks, Write-ins, Total Votes,
     Precinct and Vote For.
 
-    Measured over the 155 reports whose old cut came back holding no contest
-    at all: the old order put a tally page inside its window 22 times, this
-    one 84. Weighting ballot words at 6x the old score reaches the same 84,
-    which is what says the ranking has saturated and the tie-break is doing
-    the rest of the work -- so it is written as a tie-break, where a page with
-    no ballot vocabulary anywhere still falls back on exactly the old score.
+    Measured two ways, over reports refetched from Wayback and the State
+    Library, counting only a tally page of the town's OWN election -- a state
+    primary's tally is a page of tallies and is not the thing wanted.
+
+    On the 189 whose old cut came back holding no contest at all: the old
+    order reached one 20 times and this one 90.
+
+    On 82 whose old cut published, the old order reached one 77 times and this
+    one 76. Ranking on ballot words alone reached 74, and both it lost were a
+    state contest printed in the same report, which is what the state test is
+    for. The one this still loses is Wilmington 2011, and it is worth being
+    exact about: its return is on page 131 and carries fourteen ballot words
+    and NO heading, so it is not eligible for either ranking. The old order
+    picked page 130 -- a Board of Appeals page with three headings and one
+    ballot word -- and grew into 131 by luck. A page that does not head itself
+    is a real gap and it is in eligibility, not in the order.
+
+    Weighting ballot words at 6x the old score reaches the same answer as
+    ranking on them outright, which is what says the ranking has saturated and
+    the tie-break is doing the rest of the work -- so it is written as a
+    tie-break, where a page with no ballot vocabulary anywhere still falls
+    back on exactly the old score.
     """
     out = []
     for i, t in enumerate(texts if texts is not None else [p.get_text() for p in doc]):
         h, b, o = (len(HEAD.findall(t)), len(BALLOT.findall(t)),
                    len(OFFICE.findall(t)))
         if h and (b >= 3 or o >= 3):
-            out.append((b + 2 * o + 3 * h, i, h, b, o))
-    out.sort(key=lambda r: (r[3], r[0], r[1]), reverse=True)
-    return out
+            out.append((b + 2 * o + 3 * h, i, h, b, o,
+                        not STATE_ELECTION.search(t)))
+    out.sort(key=lambda r: (r[5], r[3], r[0], r[1]), reverse=True)
+    return [r[:5] for r in out]
 
 
 def main():

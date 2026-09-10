@@ -485,6 +485,19 @@ def test_ballot_vocabulary_outranks_a_warrant_full_of_offices():
     assert scored[0][1] == 1, scored
 
 
+def test_a_state_primary_page_ranks_below_the_towns_own_election():
+    """Bolton 2009's report prints "SPECIAL STATE PRIMARY ELECTION / December
+    8, 2009" and its own May town election. The state page carries MORE ballot
+    vocabulary, so ranking on that alone moved the cut onto it."""
+    state = ("SPECIAL STATE PRIMARY ELECTION\nDecember 8, 2009\n"
+             "SENATOR IN CONGRESS\nPrecinct 1 2\nBlanks 12\nWrite-ins 3\n"
+             "Total Votes 1450\nMARTHA COAKLEY 700\nSCOTT P BROWN 735\n")
+    town = ("ANNUAL TOWN ELECTION\nMay 11, 2009\nSELECTMAN\nBlanks 20\n"
+            "Write-ins 1\nTotal Votes 900\nJANE ROE 879\n")
+    scored = atr_sections.score_pages(None, [state, town])
+    assert scored[0][1] == 1, scored
+
+
 def test_a_page_with_no_ballot_words_still_falls_back_on_the_old_score():
     """Hawley's return is nine offices, nine names and not one figure,
     because every race was uncontested. Nothing about the ranking may reach

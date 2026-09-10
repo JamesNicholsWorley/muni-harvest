@@ -19,19 +19,30 @@ import pymupdf
 pymupdf.TOOLS.mupdf_display_errors(False)
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from tools import atr_sections as S                            # noqa: E402
-from scratch.atr_pagefeat import features                      # noqa: E402
+from scratch.atr_pagefeat import features, STATE               # noqa: E402
 
 
 def variants(f, base):
     tab = f["prose"] < 30
     fig = min(f["ints"], 120) // 10 + min(f["names"], 40) // 5
     return {"old (as it was)": (base, -1),
-            "b then old (now live)": (f["b"], base)}
+            "ballot words only, then old": (f["b"], base),
+            "municipal first (now live)": (f["state"] == 0, f["b"], base)}
 
 
 def window_holds_a_tally(texts, page, n):
+    """A tally page that is not some other election's.
+
+    "Reaches a page of tallies" counts a STATE primary's tally as a hit, and
+    the reports are full of them -- a town report prints the September state
+    primary and the November state election beside its own annual return. So
+    the test names the thing wanted: a tabular page of ballot vocabulary that
+    does not head itself a state or presidential contest.
+    """
     lo, hi, _ = S.grow(texts, page, n)
-    return any(S.is_tally(texts[i]) for i in range(lo, hi + 1)), (lo, hi)
+    hit = any(S.is_tally(texts[i]) and not STATE.search(texts[i])
+              for i in range(lo, hi + 1))
+    return hit, (lo, hi)
 
 
 def main():

@@ -72,10 +72,19 @@ its election four times: the warrant lists the offices to be filled, the
 officers directory lists who holds them, the contents page indexes the result,
 the minutes reference the date. All four carry headings and office words in
 quantity and the return has no more of either; what it has and they do not is
-Blanks, Write-ins, Total Votes, Precinct, Vote For. Measured over the 189 reports
-refetched from Wayback and the State Library whose old cut held no contest,
-the old order put a page of tallies inside its window 31 times and the new
-one 103.
+Blanks, Write-ins, Total Votes, Precinct, Vote For. A page naming a STATE contest ranks below every page that does
+not, because a town report prints the September state primary beside its own
+return and the state page carries more ballot vocabulary, not less.
+
+Measured over reports refetched from Wayback and the State Library, counting
+only a tally page of the town's OWN election: on the 189 whose old cut held
+no contest, the old order reached one 20 times and this one 90; on 82 whose
+old cut published, the old order reached one 77 times and this one 76. The
+one still lost is Wilmington 2011, whose return is on a page carrying
+fourteen ballot words and no heading -- it is not eligible for either
+ranking, and the old order reached it by growing into it from the Board of
+Appeals page before it. A page that does not head itself is a real gap and it
+is in eligibility, not in the order.
 
 ## What was withdrawn, and the line each was read on
 
@@ -123,7 +132,7 @@ arithmetic can never catch.
 - **317 sections hold no contest.** 260 of their reports were refetched --
   216 were archive-hosted already and 47 of the 101 municipal URLs resolved to
   a Wayback capture of the same URL; the other 54 have no capture. 188 re-cut
-  without OCR and 103 of those now reach a page of tallies. 71 are scans and
+  without OCR and 97 of those now reach a page of the town's own tallies. 71 are scans and
   need the OCR pass, which does not finish inside a session here. The cuts
   still have to be parsed, and that needs the API key this session does not
   hold.
