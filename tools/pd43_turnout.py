@@ -223,6 +223,59 @@ def label_w(page):
     return page.rect.width * LABEL_FRAC
 
 
+def load_population(root):
+    """Municipality -> population, as an upper bound on registered voters.
+
+    NOBODY IS REGISTERED WHO DOES NOT LIVE THERE. The arithmetic check asks only
+    whether a town's precincts sum to its total, and a garbled figure sums just
+    as well as a real one: the 2002 volume came back with Andover holding
+    190,941,718 registered voters and the 1977 volume with a town of
+    320,930,000, both marked usable, because their parts added up.
+
+    The population file is one snapshot rather than a figure per year, so the
+    bound is deliberately loose -- a town can have grown or shrunk a good deal
+    across fifty years of volumes. It is not there to catch a figure that is
+    slightly wrong. It is there to catch one that is impossible.
+    """
+    path = os.path.join(root, 'config', 'population.csv')
+    pop = {}
+    try:
+        with io.open(path, encoding='utf-8', newline='') as fh:
+            for row in csv.DictReader(fh):
+                name = (row.get('community') or '').strip()
+                n = (row.get('population') or '').strip()
+                if name and n.isdigit():
+                    pop[name.lower()] = int(n)
+    except (OSError, ValueError, csv.Error):
+        pass
+    return pop
+
+
+# A town's registered voters against its population. Registration runs at
+# perhaps two thirds of population, so twice it is already far outside anything
+# real, and leaves room for a town that has shrunk since the population figure.
+POP_FACTOR = 2.0
+
+
+def implausible(town, pop):
+    """Why this town's figures cannot be real, or None."""
+    reg, voted = town.get('reg'), town.get('voted')
+    if reg is not None and voted is not None and voted > reg:
+        return 'more people voted (%s) than were registered (%s)' % (voted, reg)
+    if reg is None:
+        return None
+    cap = pop.get((town.get('municipality') or '').lower())
+    if cap and reg > cap * POP_FACTOR:
+        return ('%s registered voters against a population of about %s'
+                % (format(reg, ','), format(cap, ',')))
+    # Even without a population figure, no Massachusetts municipality has ever
+    # had half a million registered voters -- Boston, the largest, has around
+    # four hundred thousand.
+    if reg > 500000:
+        return '%s registered voters, more than any municipality has' % format(reg, ',')
+    return None
+
+
 def load_municipalities(root):
     """The 351 names, for snapping an OCR reading to a real town.
 
@@ -436,6 +489,61 @@ def town_at(labels, off, y0, y1):
 
 
 
+def column_anchors(page, lo, hi):
+    """Where the two figure columns are, in x. -> (reg_span, voted_span) or None
+
+    THE PAGE SAYS WHICH COLUMN A NUMBER IS IN. Every word carries a bounding
+    box, the table is a grid, and the column headings are printed at the top of
+    it: `Registered Voters` over one column and `People Who Voted` over the
+    other. A figure under the first is a registered count and a figure under the
+    second is a turnout, and nothing else needs to be inferred.
+
+    Reading the row as an ordered list of numbers and taking the last two
+    instead is what produced Norton's 1,225 / 1,225 and Ashland's phantom
+    precinct: one stray token on a row and every value shifts a column. Order is
+    a guess about position. Position is not.
+    """
+    ws = [w for w in page.get_text('words') if lo <= w[0] < hi]
+    if not ws:
+        return None
+    # The column-heading row is the one carrying `Town`, below any running head.
+    head_y = None
+    for w in ws:
+        if w[4] == 'Town' and w[1] > page.rect.height * 0.08:
+            head_y = w[1]
+            break
+    if head_y is None:
+        return None
+    band = [w for w in ws if abs(w[1] - head_y) < 12]
+
+    def span(*names):
+        hit = [w for w in band if w[4] in names]
+        return (min(w[0] for w in hit), max(w[2] for w in hit)) if hit else None
+
+    reg = span('Registered', 'Voters')
+    vot = span('Voted', 'Who')
+    if not (reg and vot) or reg[0] >= vot[0]:
+        return None
+    return reg, vot
+
+
+def by_column(cells, boxes, reg, vot):
+    """Pull the registered and voted figures out by WHERE they sit."""
+    got = {'reg': None, 'voted': None}
+    for text, box in zip(cells, boxes):
+        v = num(text)
+        if v is None or box is None:
+            continue
+        mid = (box[0] + box[2]) / 2.0
+        # A cell belongs to the column its centre falls in, and a cell that
+        # spans both goes to whichever it overlaps more.
+        if reg[0] - 6 <= mid <= reg[1] + 6:
+            got['reg'] = v
+        elif vot[0] - 6 <= mid <= vot[1] + 10:
+            got['voted'] = v
+    return got
+
+
 def split_row(tokens):
     """A row of text -> (label, figures, joined).
 
@@ -472,6 +580,7 @@ def rows_from_cells(page, lo, hi):
     bands = [r.bbox for r in table.rows]
     labels = label_lines(page, lo, lo + label_w(page))
     off = skew_offset(labels, bands, cells)
+    anchors = column_anchors(page, lo, hi)
     # The table detector clips the leftmost column, so a row's own first cell is
     # not always the whole label; keep the band so the label column can supply it.
     out = []
@@ -479,8 +588,11 @@ def rows_from_cells(page, lo, hi):
         label, figs, joined = split_row(row)
         col0 = delead(row[0] or '')
         band = bands[i] if i < len(bands) else (0, 0, 0, 0)
+        boxes = table.rows[i].cells if i < len(table.rows) else []
+        cols = (by_column(row, boxes, anchors[0], anchors[1])
+                if anchors and boxes else None)
         out.append({'label': col0 or label, 'figs': figs, 'joined': joined,
-                    'band': band})
+                    'band': band, 'cols': cols})
     return out, labels, off
 
 
@@ -713,7 +825,11 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
             continue
 
         if TOTALS.search(col0 or '') or (not col0 and TOTALS.search(joined)):
-            if len(figs) >= 2:
+            # BY COLUMN WHERE THE PAGE SAYS SO, by order only where it does not.
+            cols = row.get('cols')
+            if cols and (cols['reg'] is not None or cols['voted'] is not None):
+                cur['reg'], cur['voted'] = cols['reg'], cols['voted']
+            elif len(figs) >= 2:
                 cur['reg'], cur['voted'] = figs[-2], figs[-1]
             elif figs:
                 cur['reg'] = figs[-1]
@@ -733,10 +849,16 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
         if figs:
             mp = PCT.match(col0) if col0 else None
             pnum = next((g for g in (mp.groups() if mp else ()) if g), None)
-            body = figs[-2:] if len(figs) >= 2 else figs
-            cur['precincts'].append(
-                {'precinct': pnum, 'reg': body[0],
-                 'voted': body[1] if len(body) > 1 else None})
+            cols = row.get('cols')
+            if cols and (cols['reg'] is not None or cols['voted'] is not None):
+                cur['precincts'].append(
+                    {'precinct': pnum, 'reg': cols['reg'],
+                     'voted': cols['voted']})
+            else:
+                body = figs[-2:] if len(figs) >= 2 else figs
+                cur['precincts'].append(
+                    {'precinct': pnum, 'reg': body[0],
+                     'voted': body[1] if len(body) > 1 else None})
     close()
     return towns, used_ocr
 
@@ -1060,6 +1182,7 @@ def main():
     kind_of = {i: k for k, pp in tables for i in pp}
 
     names = load_municipalities(ROOT)
+    pop = load_population(ROOT)
     print('%d municipalities in the reference list' % len(names))
     # ONE LAYOUT PER TABLE, SO ONE GUTTER PER TABLE.
     #
@@ -1236,6 +1359,12 @@ def main():
             recover_total(t)
             reconstruct(t)
             st, note = check(t)
+            # A FIGURE THAT CANNOT BE REAL IS NOT USABLE, however well it adds
+            # up. This runs last, after every repair, because a reconstruction
+            # can produce an impossible total just as a bad reading can.
+            bad = implausible(dict(t, municipality=t['municipality']), pop)
+            if bad:
+                st, note = 'implausible', bad
             if t.get('derived') and st in ('checked', 'single'):
                 st = 'derived'
                 note = t['derived']
