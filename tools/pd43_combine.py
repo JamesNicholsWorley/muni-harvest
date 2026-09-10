@@ -13,7 +13,11 @@ import os
 # `checked` closed its own arithmetic; `single` is an undivided town with one
 # printed figure and nothing to cross-foot. Everything else is kept in the file
 # and marked, so a gap is documented rather than silently filled.
-USABLE = ('checked', 'single')
+# `derived` BELONGS HERE. A derived total is one rebuilt from the town's own
+# precincts -- the sum the TOTALS row would have printed had the scan kept it --
+# and it passes the same arithmetic as a `checked` row. Leaving it out described
+# 2008 as 269 usable when it is 288, and understated the series by 520 rows.
+USABLE = ('checked', 'single', 'derived')
 
 
 def main():
