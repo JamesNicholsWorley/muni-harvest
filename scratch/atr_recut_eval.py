@@ -39,12 +39,12 @@ def main():
     names = None
     hits = {}
     detail = {}
-    for path in sorted(os.listdir("/tmp/reports")):
+    for path in sorted(os.listdir(os.environ.get("REPORTS", "/tmp/reports"))):
         if not path.endswith(".pdf"):
             continue
         stem = path[:-4]
         try:
-            doc = pymupdf.open(os.path.join("/tmp/reports", path))
+            doc = pymupdf.open(os.path.join(os.environ.get("REPORTS", "/tmp/reports"), path))
             texts = [p.get_text() for p in doc]
             n = doc.page_count
             doc.close()

@@ -23,16 +23,10 @@ rather than arithmetic ones.
 import collections
 import re
 
-from qa.mechanical import is_ballot_question   # noqa: F401  (re-exported)
-
-# The two scopes that are not the town. A regional district spans several
-# towns, so its marks exceed the town's ballots legitimately; a ward or
-# precinct divides one town, so its marks are that precinct's ballots and the
-# town's count says nothing about them. Everything else is town-wide,
-# INCLUDING a record that does not state a scope: a check that quietly stops
-# checking when a field is missing is worse than one that is occasionally
-# wrong out loud.
-NOT_TOWN_WIDE = ("sub_town", "regional_district")
+# One definition of each, in `mechanical`, because the repair and the check
+# have to agree about which contests the ballot arithmetic can be read
+# against. Two copies of that list is how they drift apart.
+from qa.mechanical import NOT_TOWN_WIDE, is_ballot_question   # noqa: F401
 
 ADDRESS = re.compile(r"^\s*[0-9]+\s+[A-Za-z]", re.M)     # "42 Elm Street"
 
