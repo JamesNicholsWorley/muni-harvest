@@ -62,7 +62,10 @@ if os.path.exists(_TESS):
 
 pymupdf.TOOLS.mupdf_display_errors(False)
 
-HEAD = re.compile(r'REGISTERED\s+VOTERS\s+AND\s+PEOPLE\s+WHO\s+VOTED', re.I)
+# `PEOPLE WHO VOTED` on the town table, `PERSONS WHO VOTED` on the city one.
+HEAD = re.compile(r'REGISTERED\s+VOTERS\s+AND\s+PE(?:OPLE|RSONS)\s+WHO\s+VOTED',
+                  re.I)
+HEAD_CAPS = re.compile(r'REGISTERED\s+VOTERS\s+AND\s+PE(?:OPLE|RSONS)\s+WHO\s+VOTED')
 # `Pct.` is printed `Pet.` about as often as not: the scan reads c as e.
 # `Pct.` is printed `Pet.` about as often as not: the scan reads c as e. And a
 # precinct is not always a number -- Belchertown runs Pct. A, B, C -- so a bare
@@ -399,8 +402,11 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
     towns, cur = [], None
 
     def close():
+        # `head_figs` counts as data: a single-precinct town in the older
+        # layout has nothing else -- its whole entry is the one heading row --
+        # and leaving it out of this test silently dropped half of them.
         if cur and (cur['precincts'] or cur['reg'] is not None
-                    or cur['no_election']):
+                    or cur.get('head_figs') or cur['no_election']):
             towns.append(cur)
 
     for row in rows:
@@ -458,9 +464,38 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
                         year, MONTHS.index(mon) + 1, int(m.group(2)))
                 except ValueError:
                     pass
-            if len(figs) >= 2 and not re.search(r'\d{4}', joined[m.start():]):
-                cur['precincts'].append({'precinct': None, 'reg': figs[-2],
-                                         'voted': figs[-1]})
+            # IN THE OLDER LAYOUT THE TOTAL SITS ON THE TOWN'S OWN ROW, and
+            # there is no TOTALS row at all:
+            #
+            #     Danvers      May 5    13,751   2,710
+            #       Precinct 1           1,924      337
+            #                 2          1,895      340
+            #
+            # 1,924 + 1,895 + ... = 13,751, so the arithmetic still closes -- but
+            # only if that first row is read as the total rather than as another
+            # precinct. Read as a precinct it both invents a precinct and leaves
+            # the town with no total, which is why the 1981 volume verified none
+            # of its 239 municipalities.
+            #
+            # The date is cut out of the row before the figures are counted, so
+            # `April 26, 2008` cannot contribute a 26 and a 2008. Whatever is
+            # left is data. A later TOTALS row, where one exists, overrides this.
+            # WHICH IT IS DEPENDS ON WHETHER A TOTALS ROW TURNS UP LATER, and
+            # that is not known yet, so the decision is deferred. Both layouts
+            # occur, and in 2008 some towns really do print their first precinct
+            # on the heading row: deciding either way here costs about ten
+            # verified towns a volume in one direction or the other.
+            rest = (joined[:m.start()] + ' ' + joined[m.end():]) if m else joined
+            own = [num(x) for x in re.findall(r'[\d,]+', rest)]
+            own = [x for x in own if x is not None]
+            # A PLAUSIBILITY GUARD, because the year can survive the date
+            # match in pieces. The 2008 table detector splits `2008` across two
+            # cells as `2` and `008`, so the leftovers read as 2 registered
+            # voters and 8 who voted -- a phantom precinct inserted at the head
+            # of 140 towns. No municipality has twenty registered voters, and
+            # nowhere can more people vote than are registered.
+            if len(own) >= 2 and own[-2] >= 20 and own[-2] >= own[-1]:
+                cur['head_figs'] = (own[-2], own[-1])
             continue
 
         if cur is None:
@@ -488,6 +523,25 @@ def new_town(name):
     return {'municipality': re.sub(r'\s+', ' ', name).strip(' .'),
             'date': None, 'reg': None, 'voted': None,
             'precincts': [], 'no_election': False}
+
+
+def settle_head_row(t):
+    """Decide what the figures on the town's own row were.
+
+    A TOTALS row later in the town means the heading row held its FIRST
+    PRECINCT; no TOTALS row means the heading row held the town's TOTAL, which
+    is how the volumes were set before the mid-eighties. Deferring the call
+    until the whole town has been read is the only way to tell, and it is worth
+    telling: guessing costs about ten verified towns a volume either way.
+    """
+    head = t.pop('head_figs', None)
+    if not head:
+        return
+    if t['reg'] is None:
+        t['reg'], t['voted'] = head
+    else:
+        t['precincts'].insert(0, {'precinct': None, 'reg': head[0],
+                                  'voted': head[1]})
 
 
 def recover_total(t):
@@ -545,21 +599,76 @@ def check(t):
 
 
 def table_pages(doc):
-    hits = [i for i, p in enumerate(doc) if HEAD.search(p.get_text())]
-    if not hits:
+    """-> [(kind, [page indexes])], kind being 'town' or 'city'.
+
+    A VOLUME CAN HOLD TWO OF THESE TABLES. Until 1984 the series was annual and
+    the odd-year booklets are given over to local elections, tabulating CITY
+    elections -- by ward and precinct, with preliminaries -- as well as town
+    ones. Cities are absent from every biennial volume, so those booklets are
+    the only source in the series for them, and returning just the longest run
+    of pages threw one of the two tables away.
+
+    The city heading also says PERSONS WHO VOTED where the town heading says
+    PEOPLE, which is why a pattern written against a 2008 volume finds nothing
+    in a 1981 one.
+    """
+    # A TABLE IS A RUN OF HEADINGS, EXTENDED TO THE NEXT SECTION.
+    #
+    # The modern volumes repeat the full heading on every page of the table, so
+    # the run alone is the table. The older ones print it once and then carry a
+    # running head that the scan mangles past recognition -- `Tcvvns and Vocisg
+    # ?TSC±CtS`, `Cir.es. "vards ana Dace ot` -- and several of those pages have
+    # no text layer at all. Requiring consecutive headings found ONE page of the
+    # 1981 town table and none of its city table.
+    #
+    # So the run is found as before and then extended forward until the next
+    # thing that is definitely a different section: another table's heading, or
+    # the candidate results that follow.
+    # THE CONTENTS PAGE SAYS THE SAME WORDS. It lists `Number of Registered
+    # Voters and People Who Voted` in title case; the table itself shouts it in
+    # capitals. Case is the only thing that separates them, and without it the
+    # 2008 contents and summary pages were picked up as a seven-page city table
+    # that does not exist in that volume.
+    heads = []
+    for i, p in enumerate(doc):
+        t = p.get_text()
+        if HEAD_CAPS.search(t):
+            heads.append(
+                (i, 'city' if re.search(r'CIT(?:Y|IES)', t, re.I) else 'town'))
+    if not heads:
         return []
-    # The heading also appears in the contents, and the same words turn up in
-    # later section titles. The TABLE is the longest unbroken run of pages
-    # carrying it; a contents entry is a run of one.
-    runs, run = [], [hits[0]]
-    for i in hits[1:]:
-        if i == run[-1] + 1:
+
+    runs, run, kind = [], [], None
+    for i, k in heads:
+        if run and k == kind and i == run[-1] + 1:
             run.append(i)
         else:
-            runs.append(run)
-            run = [i]
-    runs.append(run)
-    return max(runs, key=len)
+            if run:
+                runs.append((kind, run))
+            run, kind = [i], k
+    runs.append((kind, run))
+
+    # Contents entries are runs of one that sit among the front matter; a real
+    # table always has figures under it, so a run whose following pages carry no
+    # numbers at all is not one.
+    ENDS = re.compile(r'VOTES\s+RECE|CANDIDATE|PRESIDENTIAL\s+PRIMAR'
+                      r'|STATE\s+PRIMAR|TABLE\s+OF\s+CONTENTS', re.I)
+    out = []
+    for n, (k, r) in enumerate(runs):
+        stop = len(doc)
+        for j in range(r[-1] + 1, len(doc)):
+            t = doc[j].get_text()
+            if ENDS.search(t) or (HEAD_CAPS.search(t) and j not in r):
+                stop = j
+                break
+        pages = list(range(r[0], max(r[-1] + 1, stop)))
+        figures = sum(len(re.findall(r'\b\d[\d,]{2,}\b', doc[i].get_text()))
+                      for i in pages)
+        blank = sum(1 for i in pages if len(doc[i].get_text('words')) < 40)
+        # Either it has figures, or its pages are scans that OCR will supply.
+        if len(pages) >= 2 and (figures >= 20 or blank >= 2):
+            out.append((k, pages))
+    return out
 
 
 def main():
@@ -573,11 +682,14 @@ def main():
     a = ap.parse_args()
 
     doc = pymupdf.open(a.pdf)
-    pages = table_pages(doc)
-    if not pages:
-        print('no town-election table in %s' % os.path.basename(a.pdf))
+    tables = table_pages(doc)
+    if not tables:
+        print('no local-election table in %s' % os.path.basename(a.pdf))
         return 1
-    print('table pages: %d-%d' % (pages[0] + 1, pages[-1] + 1))
+    for kind, pp in tables:
+        print('%s table: pages %d-%d' % (kind, pp[0] + 1, pp[-1] + 1))
+    pages = [i for _k, pp in tables for i in pp]
+    kind_of = {i: k for k, pp in tables for i in pp}
 
     names = load_municipalities(ROOT)
     print('%d municipalities in the reference list' % len(names))
@@ -590,6 +702,7 @@ def main():
                                    force_ocr=a.ocr, names=names)
             for t in got:
                 t['by_ocr'] = ocr
+                t['kind'] = kind_of.get(i, 'town')
             rows += got
             if ocr:
                 ocr_pages.add(i)
@@ -597,12 +710,12 @@ def main():
     # One town can straddle a column or page break; merge fragments by name.
     merged = {}
     for t in rows:
-        k = t['municipality'].lower()
+        k = (t.get('kind', 'town'), t['municipality'].lower())
         if k in merged:
             m = merged[k]
             m['precincts'] += t['precincts']
-            for f in ('date', 'reg', 'voted'):
-                if m[f] is None:
+            for f in ('date', 'reg', 'voted', 'head_figs'):
+                if m.get(f) is None and t.get(f) is not None:
                     m[f] = t[f]
             m['no_election'] = m['no_election'] or t['no_election']
         else:
@@ -618,10 +731,12 @@ def main():
         # of what was already read. `level` says which kind of row it is; the
         # status is the town's, and repeats on its precincts so either grain can
         # be filtered on its own.
-        w.writerow(['municipality', 'year', 'date', 'level', 'precinct',
-                    'registered', 'voted', 'status', 'note', 'read_by'])
+        w.writerow(['municipality', 'kind', 'year', 'date', 'level',
+                    'precinct', 'registered', 'voted', 'status', 'note',
+                    'read_by'])
         n_pct = 0
         for t in sorted(merged.values(), key=lambda x: x['municipality']):
+            settle_head_row(t)
             recover_total(t)
             st, note = check(t)
             if t.get('recovered') and st == 'checked':
@@ -631,14 +746,15 @@ def main():
             if a.verbose and st in ('mismatch', 'no_total'):
                 print('   ? %-24s %s' % (t['municipality'], note))
             how = 'ocr' if t.get('by_ocr') else 'text'
-            w.writerow([t['municipality'], a.year, t['date'] or '', 'total', '',
+            w.writerow([t['municipality'], t.get('kind', 'town'), a.year,
+                        t['date'] or '', 'total', '',
                         t['reg'] if t['reg'] is not None else '',
                         t['voted'] if t['voted'] is not None else '',
                         st, note, how])
             for i, p in enumerate(t['precincts'], 1):
                 n_pct += 1
-                w.writerow([t['municipality'], a.year, t['date'] or '',
-                            'precinct', p.get('precinct') or i,
+                w.writerow([t['municipality'], t.get('kind', 'town'), a.year,
+                            t['date'] or '', 'precinct', p.get('precinct') or i,
                             p['reg'] if p['reg'] is not None else '',
                             p['voted'] if p['voted'] is not None else '',
                             st, '', how])

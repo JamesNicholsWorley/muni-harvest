@@ -40,27 +40,56 @@ def get(url, tries=3):
     return None
 
 
-def volumes():
-    """-> {year: (uuid, title)} for every issue of the series."""
+QUERIES = (
+    OCLC,
+    '"Massachusetts election statistics"',
+    '"Massachusetts Elections Statistics"',
+)
+
+
+def _search(query, pages=8):
     found, page = {}, 0
-    while page < 8:
+    while page < pages:
         u = (API + '/discover/search/objects?'
-             + urllib.parse.urlencode({'query': OCLC, 'size': '100',
+             + urllib.parse.urlencode({'query': query, 'size': '100',
                                        'page': str(page)}))
-        d = get(u)
+        try:
+            d = get(u)
+        except Exception:
+            break
         objs = d['_embedded']['searchResult']['_embedded'].get('objects', [])
         if not objs:
             break
         for o in objs:
             it = o['_embedded']['indexableObject']
             name = it.get('name') or ''
+            if not re.search(r'election', name, re.I) or not it.get('uuid'):
+                continue
             m = re.search(r'((?:19|20)\d{2})', name)
-            if m and it.get('uuid'):
+            if m:
                 found[m.group(1)] = (it['uuid'], name)
         total = d['_embedded']['searchResult']['page']['totalPages']
         page += 1
         if page >= total:
             break
+    return found
+
+
+def volumes(lo=1970, hi=2025):
+    """-> {year: (uuid, title)} for every issue of the series.
+
+    THE OCLC NUMBER DOES NOT FIND THEM ALL. `ocm05938794` matches 24 items,
+    1978-2018. The volumes for 1970-1977 are catalogued without it and were
+    invisible to this tool -- and they matter more than most, because the series
+    was ANNUAL until 1984 and the odd-year booklets are the only ones covering
+    city elections and odd-year town elections at all. So the title is searched
+    as well and the results merged.
+    """
+    found = {}
+    for q in QUERIES:
+        for year, val in _search(q).items():
+            if lo <= int(year) <= hi:
+                found.setdefault(year, val)
     return found
 
 
