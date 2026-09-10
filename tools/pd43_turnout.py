@@ -106,11 +106,16 @@ def stated_counts(doc):
     out = {}
     for p in doc[:30]:
         t = ' '.join(p.get_text().split())
+        # `129 towns, one precinct each` is specific and unambiguous. The bare
+        # `312 towns` is not -- it matched three different sentences in three
+        # different volumes -- so only the specific one is trusted.
+        m = re.search(r'(\d{1,3})\s+towns?,?\s+one\s+precinct\s+each', t, re.I)
+        if m:
+            out['single'] = int(m.group(1))
         alls = [int(x) for x in re.findall(r'(\d{2,3})\s+towns\b', t, re.I)]
         if alls:
-            # The summary counts subsets too (`129 towns, one precinct each`),
-            # so the total is the largest figure on the page.
             out['towns'] = max(alls)
+        if out:
             break
     return out
 
@@ -169,6 +174,23 @@ CONT = re.compile(r'\s*\((cont|continued)\.?\)\s*$', re.I)
 
 def delead(text):
     return CONT.sub('', LEADER.sub(' ', text or '')).strip(' .')
+# A CLIPPED `TOTALS` IS STILL A TOTALS ROW. The table detector cuts the label
+# column, and in the right-hand block it cuts from the LEFT, so the word arrives
+# as its own tail: `ALS`, and the town names beside it as `mont` for Egremont,
+# `ham` for Eastham, `rtown` for Edgartown. The names survive that because the
+# label column is read separately; the word TOTALS did not, so twenty towns --
+# every one of them a single-precinct town whose only figure is on that row --
+# came back as `no_total` with nothing at all.
+# A CLIPPED `TOTALS` -- the table detector cuts the right-hand block's label
+# column from the left, so the word arrives as `ALS` -- was tried here and is
+# NOT worth having. Recognising it converts a few `no_total` rows, and costs
+# eleven municipalities and four points of the volume's registered total,
+# because the same clipped forms collide with clipped town names and headings
+# stop being recognised. Measured both ways against the volume's own printed
+# total of 2,070,956: 95.8% without it, 91.6% with.
+#
+# The right fix for those rows is to stop the label column being clipped at all,
+# not to teach every consumer to recognise the debris.
 TOTALS = re.compile(r'TOTALS?|^[LS]{2}$|totals?[!;:.\s]*$', re.I)
 # Matched against the row with its spaces removed. The table detector splits a
 # cell mid-word, so `ODD YEARS ONLY` reaches us as `ODD YEA` + `RS ONLY`, and any
@@ -368,15 +390,35 @@ def skew_offset(labels, bands, cells):
 
 
 def town_at(labels, off, y0, y1):
-    """The town name printed against this row band, if any."""
+    """The town name printed against this row band, if any.
+
+    THE NEAREST LABEL, NOT THE FIRST ONE IN A TIGHT WINDOW. This used to take
+    whichever town-like label fell inside three points of the band and stop
+    there. With the skew that window is often empty, so the row kept the name
+    the table detector gave it -- and the table detector clips the label column,
+    so that name is a stub.
+
+    `North` was the result, five times over: the label column plainly reads
+    `North Attleborough`, `North Brookfield`, `North Reading`, `Northborough`,
+    `Northbridge`, and all five collapsed into one row called North holding the
+    sum of all of them. Searching a row height either way and taking the closest
+    match finds the name that is actually printed there.
+    """
+    mid = (y0 + y1) / 2.0
+    span = max(12.0, (y1 - y0) * 1.5)
+    best = None
     for y, text in labels:
-        if y0 - 3 <= y + off <= y1 + 3:
-            clean = re.sub(r'\s*P[ce]t\.?\s*[\dA-Z]*\s*$', '', delead(text))
-            clean = re.sub(r'[^A-Za-z .\'-]', '', clean).strip(' .')
-            if TOWN.match(clean) and not PCT.match(clean) \
-                    and not TOTALS.search(clean):
-                return clean
-    return None
+        d = abs(y + off - mid)
+        if d > span:
+            continue
+        clean = re.sub(r'\s*P[ce]t\.?\s*[\dA-Z]*\s*$', '', delead(text))
+        clean = TRAIL.sub('', clean)
+        clean = re.sub(r'[^A-Za-z .\'-]', '', clean).strip(' .')
+        if TOWN.match(clean) and not PCT.match(clean) \
+                and not TOTALS.search(clean):
+            if best is None or d < best[0]:
+                best = (d, clean)
+    return best[1] if best else None
 
 
 
@@ -667,6 +709,53 @@ def settle_head_row(t):
                                   'voted': head[1]})
 
 
+def reconstruct(t):
+    """Rebuild what the scan destroyed, from what survived it.
+
+    A page does not have to be re-read to be recovered. The TOTALS row of a town
+    IS the sum of its precincts -- that is what the word means -- so a town whose
+    precincts came through cleanly and whose totals row did not is not missing
+    data, it is missing an addition. Doing that addition is not inventing a
+    figure; refusing to do it and calling the town unreadable is throwing one
+    away.
+
+    The reverse holds too. Where the total survived and exactly ONE precinct did
+    not, that precinct is the total less the others, and there is only one number
+    it can be.
+
+    Both are marked `derived`, never `checked`. They are reconstructions, and a
+    reader should be able to tell them from a figure the volume printed and this
+    parser merely read.
+    """
+    p = t['precincts']
+    if not p:
+        return None
+
+    # The total is the sum of the precincts.
+    if t['reg'] is None:
+        sreg = sum(x['reg'] for x in p if x['reg'] is not None)
+        if sreg and all(x['reg'] is not None for x in p):
+            t['reg'] = sreg
+            svote = sum(x['voted'] for x in p if x['voted'] is not None)
+            if all(x['voted'] is not None for x in p):
+                t['voted'] = svote
+            t['derived'] = 'total is the sum of its %d precincts' % len(p)
+            return 'total'
+
+    # One precinct missing under a total that survived.
+    if t['reg'] is not None:
+        gaps = [x for x in p if x['reg'] is None]
+        if len(gaps) == 1:
+            known = sum(x['reg'] for x in p if x['reg'] is not None)
+            missing = t['reg'] - known
+            if 0 < missing < t['reg']:
+                gaps[0]['reg'] = missing
+                t['derived'] = ('one precinct rebuilt as the total less the '
+                                'other %d' % (len(p) - 1))
+                return 'precinct'
+    return None
+
+
 def recover_total(t):
     """A TOTALS row whose label the scan destroyed, recovered by arithmetic.
 
@@ -925,14 +1014,24 @@ def main():
         reading that found more towns, so a split that finds two perfect towns
         does not beat one that finds twenty good ones.
         """
-        good = 0
+        good, coherent = 0, 0
         for t in towns:
             settle_head_row(t)
             recover_total(t)
             st, _ = check(t)
             if st in ('checked', 'single', 'no_election'):
                 good += 1
-        return (good, len(towns))
+            # THE SECOND COLUMN HAS TO BE COHERENT TOO. The sum test only looks
+            # at registered voters, so a split that clips the `People Who Voted`
+            # column scores full marks while half its figures are wrong --
+            # Burlington 1996 read 2,119 registered against 26 voted where the
+            # page prints 269.
+            rows = [(t['reg'], t['voted'])] + [(p['reg'], p['voted'])
+                                               for p in t['precincts']]
+            for reg, voted in rows:
+                if reg and voted and voted <= reg and voted >= reg * 0.02:
+                    coherent += 1
+        return (good, coherent, len(towns))
 
     rows, ocr_pages = [], set()
     for i in pages:
@@ -953,13 +1052,27 @@ def main():
         # correctly. A wrong split produces towns whose precincts do not sum.
         own = block_split(page)
         cands = []
-        for c in (own, median, None):
-            if c not in cands:
-                cands.append(c)
-        if median is not None:
-            for d in (-10, 10):
-                if median + d not in cands:
-                    cands.append(median + d)
+        # READING A TWO-COLUMN PAGE AS ONE BLOCK IS NOT A CANDIDATE.
+        #
+        # It was, and it won often enough to matter: on a page read whole, the
+        # left column's town picks up the right column's figures, and enough of
+        # those accidents survive the arithmetic to beat the correct reading.
+        # Burlington 1996 came out as 1,616 / 1,372 -- Cohasset's numbers, from
+        # the other side of the page -- against a printed 13,290 / 1,703, and
+        # Canton's total was Concord's fourth precinct.
+        #
+        # So one block is offered only when no gutter was found at all, which is
+        # the genuine single-column case the 1970s volumes need.
+        if own is None and median is None:
+            cands = [None]
+        else:
+            for c in (own, median):
+                if c is not None and c not in cands:
+                    cands.append(c)
+            if median is not None:
+                for d in (-10, 10):
+                    if median + d not in cands:
+                        cands.append(median + d)
         # OCR is seconds a block, so a page without a text layer is read once,
         # at the table's best guess, rather than five times.
         # OCR costs seconds a block, so a page without a text layer tries two
@@ -1013,7 +1126,11 @@ def main():
         for t in sorted(merged.values(), key=lambda x: x['municipality']):
             settle_head_row(t)
             recover_total(t)
+            reconstruct(t)
             st, note = check(t)
+            if t.get('derived') and st in ('checked', 'single'):
+                st = 'derived'
+                note = t['derived']
             if t.get('recovered') and st == 'checked':
                 note += ('; the TOTALS label was unreadable and was '
                          'identified by the sum')
@@ -1048,6 +1165,18 @@ def main():
     print('%d municipalities%s, %d usable (%.0f%%), %d verified by arithmetic'
           % (len(merged), of, usable,
              100.0 * usable / max(1, len(merged)), counts.get('checked', 0)))
+    # A SINGLE-PRECINCT TOWN HAS NO ARITHMETIC TO CHECK, so the volume's own
+    # count of them is the only check there is. Agreement closes a hole; a
+    # shortfall says exactly how many undivided towns were missed, which is
+    # otherwise invisible -- they look like successes.
+    said_single = stated_counts(doc).get('single')
+    if said_single:
+        found = counts.get('single', 0)
+        verdict = ('matches the volume' if found == said_single
+                   else 'the volume states %d, so %d %s'
+                   % (said_single, abs(said_single - found),
+                      'are missing' if found < said_single else 'are extra'))
+        print('   single-precinct towns: %d found, %s' % (found, verdict))
     for k in sorted(counts, key=lambda x: -counts[x]):
         print('   %-12s %4d' % (k, counts[k]))
     if ocr_pages:
