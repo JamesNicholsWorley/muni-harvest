@@ -1,0 +1,167 @@
+year,municipality,status,registered,voted,check,evidence
+1972,Montague,derived,7803,6771,high_turnout,87% turnout (6771 of 7803)
+1972,Palmer,derived,11643,10218,high_turnout,88% turnout (10218 of 11643)
+1974,Dudley,derived,1,1,high_turnout,100% turnout (1 of 1)
+1975,Quincy,derived,101,88,high_turnout,87% turnout (88 of 101)
+1978,Salem,derived,16829,14415,high_turnout,86% turnout (14415 of 16829)
+1988,Acton,checked,9208,9192,high_turnout,100% turnout (9192 of 9208)
+1988,Rochester,single,2045,2045,high_turnout,100% turnout (2045 of 2045)
+1990,Monroe,single,87,79,high_turnout,91% turnout (79 of 87)
+1990,New Ashford,single,158,152,high_turnout,96% turnout (152 of 158)
+1990,Shelburne,single,1285,1280,high_turnout,100% turnout (1280 of 1285)
+1994,Sandwich,derived,3547,3081,high_turnout,87% turnout (3081 of 3547)
+1994,Stow,single,3287,3287,high_turnout,100% turnout (3287 of 3287)
+1994,Truro,single,1206,1206,high_turnout,100% turnout (1206 of 1206)
+1994,Tyringham,single,228,228,high_turnout,100% turnout (228 of 228)
+1994,Wales,single,943,943,high_turnout,100% turnout (943 of 943)
+1977,Maynard,derived,13846,1984,implausible_jump,13846 in 1977 against 3640 in 1975 (x3.8)
+1978,Waltham,checked,27070,17629,implausible_jump,27070 in 1978 against 90 in 1973 (x300.8)
+1982,Natick,derived,11456,3110,implausible_jump,11456 in 1982 against 45923 in 1972 (x0.2)
+1986,Amherst,checked,16345,2098,implausible_jump,16345 in 1986 against 3261 in 1977 (x5.0)
+1986,Easthampton,derived,865,397,implausible_jump,865 in 1986 against 7956 in 1982 (x0.1)
+1986,Edgartown,single,1993,812,implausible_jump,1993 in 1986 against 3 in 1981 (x664.3)
+1986,Hanover,checked,6177,623,implausible_jump,6177 in 1986 against 17740 in 1977 (x0.3)
+1986,Hingham,single,228,91,implausible_jump,228 in 1986 against 13125 in 1982 (x0.0)
+1986,Middleborough,single,7701,3464,implausible_jump,7701 in 1986 against 43291 in 1972 (x0.2)
+1986,Needham,checked,17394,5142,implausible_jump,17394 in 1986 against 51720 in 1972 (x0.3)
+1986,Stockbridge,single,2037,672,implausible_jump,2037 in 1986 against 832 in 1982 (x2.4)
+1986,Westport,checked,7518,3744,implausible_jump,7518 in 1986 against 15715 in 1975 (x0.5)
+1986,Winchendon,checked,3500,1652,implausible_jump,3500 in 1986 against 6840 in 1982 (x0.5)
+1988,Concord,derived,19292,4999,implausible_jump,19292 in 1988 against 10011 in 1986 (x1.9)
+1988,Dudley,derived,4072,1780,implausible_jump,4072 in 1988 against 1 in 1974 (x4072.0)
+1988,Easthampton,checked,7526,3157,implausible_jump,7526 in 1988 against 865 in 1986 (x8.7)
+1988,Harvard,single,2848,914,implausible_jump,2848 in 1988 against 12565 in 1982 (x0.2)
+1988,Medway,checked,4683,2080,implausible_jump,4683 in 1988 against 22529 in 1972 (x0.2)
+1988,Tisbury,single,1852,836,implausible_jump,1852 in 1988 against 945 in 1986 (x2.0)
+1988,Washington,single,323,79,implausible_jump,323 in 1988 against 70 in 1986 (x4.6)
+1988,Webster,derived,4076,1269,implausible_jump,4076 in 1988 against 7399 in 1986 (x0.6)
+1990,Agawam,single,1151,571,implausible_jump,1151 in 1990 against 13114 in 1988 (x0.1)
+1990,Ashby,single,469,251,implausible_jump,469 in 1990 against 1379 in 1988 (x0.3)
+1990,Concord,checked,10097,904,implausible_jump,10097 in 1990 against 19292 in 1988 (x0.5)
+1990,Great Barrington,checked,3851,2208,implausible_jump,3851 in 1990 against 972 in 1986 (x4.0)
+1990,Hingham,checked,12727,8119,implausible_jump,12727 in 1990 against 228 in 1986 (x55.8)
+1990,Lexington,checked,19131,3611,implausible_jump,19131 in 1990 against 44868 in 1972 (x0.4)
+1990,Webster,checked,7567,3099,implausible_jump,7567 in 1990 against 4076 in 1988 (x1.9)
+1992,Ashby,single,1744,540,implausible_jump,1744 in 1992 against 469 in 1990 (x3.7)
+1992,Plymouth,checked,31836,7025,implausible_jump,31836 in 1992 against 14997 in 1982 (x2.1)
+1994,Acushnet,single,293,45,implausible_jump,293 in 1994 against 5011 in 1986 (x0.1)
+1994,Adams,checked,5370,1057,implausible_jump,5370 in 1994 against 9913 in 1990 (x0.5)
+1994,Ashburnham,single,283,3,implausible_jump,283 in 1994 against 2771 in 1992 (x0.1)
+1994,Ashby,single,183,154,implausible_jump,183 in 1994 against 1744 in 1992 (x0.1)
+1994,Ashland,derived,694,285,implausible_jump,694 in 1994 against 6763 in 1992 (x0.1)
+1994,Chatham,single,723,107,implausible_jump,723 in 1994 against 4952 in 1992 (x0.1)
+1994,Chilmark,single,1979,541,implausible_jump,1979 in 1994 against 475 in 1992 (x4.2)
+1994,Clinton,checked,1047,35,implausible_jump,1047 in 1994 against 6679 in 1990 (x0.2)
+1994,East Bridgewater,derived,401,11,implausible_jump,401 in 1994 against 5939 in 1992 (x0.1)
+1994,East Longmeadow,derived,802,523,implausible_jump,802 in 1994 against 7785 in 1992 (x0.1)
+1994,Edgartown,single,214,8,implausible_jump,214 in 1994 against 2113 in 1992 (x0.1)
+1994,Harvard,single,31,0,implausible_jump,31 in 1994 against 3338 in 1992 (x0.0)
+1994,Harwich,derived,248,56,implausible_jump,248 in 1994 against 7038 in 1992 (x0.0)
+1994,Hatfield,single,205,10,implausible_jump,205 in 1994 against 2077 in 1992 (x0.1)
+1994,Hopkinton,derived,60,45,implausible_jump,60 in 1994 against 5509 in 1992 (x0.0)
+1994,Hudson,derived,2456,844,implausible_jump,2456 in 1994 against 9834 in 1992 (x0.2)
+1994,Salisbury,single,1969,581,implausible_jump,1969 in 1994 against 4223 in 1992 (x0.5)
+1994,Sandwich,derived,3547,3081,implausible_jump,3547 in 1994 against 9176 in 1992 (x0.4)
+1996,Acushnet,derived,5525,2225,implausible_jump,5525 in 1996 against 293 in 1994 (x18.9)
+1996,Ashburnham,single,3026,661,implausible_jump,3026 in 1996 against 283 in 1994 (x10.7)
+1996,Ashby,single,1493,466,implausible_jump,1493 in 1996 against 183 in 1994 (x8.2)
+1996,Ashland,checked,7688,1276,implausible_jump,7688 in 1996 against 694 in 1994 (x11.1)
+1996,Canton,checked,13322,1736,implausible_jump,13322 in 1996 against 6728 in 1994 (x2.0)
+1996,Chatham,checked,5503,348,implausible_jump,5503 in 1996 against 723 in 1994 (x7.6)
+1996,Chilmark,single,545,159,implausible_jump,545 in 1996 against 1979 in 1994 (x0.3)
+1996,Clinton,checked,7686,2705,implausible_jump,7686 in 1996 against 1047 in 1994 (x7.3)
+1996,East Bridgewater,checked,6581,2450,implausible_jump,6581 in 1996 against 401 in 1994 (x16.4)
+1996,East Longmeadow,checked,8370,379,implausible_jump,8370 in 1996 against 802 in 1994 (x10.4)
+1996,Edgartown,single,2295,967,implausible_jump,2295 in 1996 against 214 in 1994 (x10.7)
+1996,Harvard,single,3396,846,implausible_jump,3396 in 1996 against 31 in 1994 (x109.5)
+1996,Harwich,checked,7859,2672,implausible_jump,7859 in 1996 against 248 in 1994 (x31.7)
+1996,Hatfield,single,2187,649,implausible_jump,2187 in 1996 against 205 in 1994 (x10.7)
+1996,Hopkinton,checked,6290,1854,implausible_jump,6290 in 1996 against 60 in 1994 (x104.8)
+1996,Mashpee,checked,5727,2102,implausible_jump,5727 in 1996 against 2861 in 1986 (x2.0)
+1996,Richmond,single,1051,229,implausible_jump,1051 in 1996 against 1994 in 1994 (x0.5)
+1996,Salisbury,checked,3996,1393,implausible_jump,3996 in 1996 against 1969 in 1994 (x2.0)
+1996,Sandwich,derived,10335,5060,implausible_jump,10335 in 1996 against 3547 in 1994 (x2.9)
+1996,Weston,derived,3343,1117,implausible_jump,3343 in 1996 against 7106 in 1992 (x0.5)
+1998,Hudson,checked,9565,1970,implausible_jump,9565 in 1998 against 2456 in 1994 (x3.9)
+1998,Marion,single,8226,919,implausible_jump,8226 in 1998 against 2919 in 1996 (x2.8)
+1998,Milford,derived,31724,8652,implausible_jump,31724 in 1998 against 12334 in 1996 (x2.6)
+1998,Millbury,derived,14086,5836,implausible_jump,14086 in 1998 against 6632 in 1992 (x2.1)
+1998,Weston,checked,7435,1980,implausible_jump,7435 in 1998 against 3343 in 1996 (x2.2)
+2000,Belmont,derived,48894,6118,implausible_jump,48894 in 2000 against 16707 in 1998 (x2.9)
+2000,Boston,derived,2240,662,implausible_jump,2240 in 2000 against 309018 in 1972 (x0.0)
+2000,Foxborough,derived,20122,3636,implausible_jump,20122 in 2000 against 9700 in 1998 (x2.1)
+2000,Hudson,derived,39464,6144,implausible_jump,39464 in 2000 against 9565 in 1998 (x4.1)
+2000,Milford,checked,14421,3661,implausible_jump,14421 in 2000 against 31724 in 1998 (x0.5)
+2000,Sandwich,checked,22724,2305,implausible_jump,22724 in 2000 against 11533 in 1998 (x2.0)
+2002,Belmont,checked,16633,8419,implausible_jump,16633 in 2002 against 48894 in 2000 (x0.3)
+2002,Clarksburg,single,2002,371,implausible_jump,2002 in 2002 against 1072 in 2000 (x1.9)
+2002,Foxborough,checked,9991,2468,implausible_jump,9991 in 2002 against 20122 in 2000 (x0.5)
+2002,Hudson,checked,10337,746,implausible_jump,10337 in 2002 against 39464 in 2000 (x0.3)
+2002,Marion,single,3570,1429,implausible_jump,3570 in 2002 against 8226 in 1998 (x0.4)
+2002,Stoneham,derived,44149,4274,implausible_jump,44149 in 2002 against 12702 in 1992 (x3.5)
+2002,Wilmington,checked,4258,1711,implausible_jump,4258 in 2002 against 13496 in 1998 (x0.3)
+2002,Winchendon,checked,13769,3576,implausible_jump,13769 in 2002 against 5344 in 2000 (x2.6)
+2002,Winchester,checked,5640,812,implausible_jump,5640 in 2002 against 13324 in 2000 (x0.4)
+2004,Clarksburg,single,1102,71,implausible_jump,1102 in 2004 against 2002 in 2002 (x0.6)
+2004,Stoneham,checked,13631,2808,implausible_jump,13631 in 2004 against 44149 in 2002 (x0.3)
+2004,Wilmington,checked,14478,3279,implausible_jump,14478 in 2004 against 4258 in 2002 (x3.4)
+2004,Winchendon,checked,5787,568,implausible_jump,5787 in 2004 against 13769 in 2002 (x0.4)
+2004,Winchester,checked,13246,6613,implausible_jump,13246 in 2004 against 5640 in 2002 (x2.3)
+2006,Athol,derived,13239,2598,implausible_jump,13239 in 2006 against 6494 in 2004 (x2.0)
+2008,Athol,checked,6655,1280,implausible_jump,6655 in 2008 against 13239 in 2006 (x0.5)
+2008,Winchendon,derived,10888,448,implausible_jump,10888 in 2008 against 5787 in 2004 (x1.9)
+2012,Acton,derived,26989,765,implausible_jump,26989 in 2012 against 13530 in 2010 (x2.0)
+2014,Acton,checked,13798,457,implausible_jump,13798 in 2014 against 26989 in 2012 (x0.5)
+2014,Hatfield,single,651,,implausible_jump,651 in 2014 against 2457 in 2012 (x0.3)
+2014,Watertown,checked,15057,166,implausible_jump,15057 in 2014 against 67481 in 1982 (x0.2)
+2016,Kingston,single,720,142,implausible_jump,720 in 2016 against 8593 in 2012 (x0.1)
+2018,Hatfield,single,2557,658,implausible_jump,2557 in 2018 against 651 in 2014 (x3.9)
+2018,Kingston,checked,9436,1595,implausible_jump,9436 in 2018 against 720 in 2016 (x13.1)
+1972,Lexington,derived,44868,22223,over_population,44868 registered against a population of 34454
+1972,Medway,derived,22529,12813,over_population,22529 registered against a population of 13115
+1972,Middleborough,derived,43291,29444,over_population,43291 registered against a population of 24245
+1972,Natick,derived,45923,10710,over_population,45923 registered against a population of 37006
+1972,Needham,derived,51720,30339,over_population,51720 registered against a population of 32091
+1977,Hanover,derived,17740,11168,over_population,17740 registered against a population of 14833
+1977,Maynard,derived,13846,1984,over_population,13846 registered against a population of 10746
+1982,Harvard,derived,12565,647,over_population,12565 registered against a population of 6851
+1982,Watertown,derived,67481,3614,over_population,67481 registered against a population of 35329
+1986,Gosnold,single,132,61,over_population,132 registered against a population of 70
+1986,Stockbridge,single,2037,672,over_population,2037 registered against a population of 2018
+1988,Concord,derived,19292,4999,over_population,19292 registered against a population of 18491
+1990,Adams,derived,9913,4483,over_population,9913 registered against a population of 8166
+1990,Gosnold,single,110,86,over_population,110 registered against a population of 70
+1992,Gosnold,single,108,76,over_population,108 registered against a population of 70
+1994,Chilmark,single,1979,541,over_population,1979 registered against a population of 1212
+1994,Gosnold,single,124,68,over_population,124 registered against a population of 70
+1994,Richmond,single,1994,1487,over_population,1994 registered against a population of 1407
+1996,Gosnold,single,124,59,over_population,124 registered against a population of 70
+1998,Gosnold,single,114,49,over_population,114 registered against a population of 70
+1998,Marion,single,8226,919,over_population,8226 registered against a population of 5347
+1998,Milford,derived,31724,8652,over_population,31724 registered against a population of 30379
+1998,Millbury,derived,14086,5836,over_population,14086 registered against a population of 13831
+2000,Belmont,derived,48894,6118,over_population,48894 registered against a population of 27295
+2000,Brewster,derived,11711,858,over_population,11711 registered against a population of 10318
+2000,Foxborough,derived,20122,3636,over_population,20122 registered against a population of 18618
+2000,Gosnold,derived,114,46,over_population,114 registered against a population of 70
+2000,Hudson,derived,39464,6144,over_population,39464 registered against a population of 20092
+2000,Sandwich,checked,22724,2305,over_population,22724 registered against a population of 20259
+2002,Clarksburg,single,2002,371,over_population,2002 registered against a population of 1657
+2002,Gosnold,single,115,53,over_population,115 registered against a population of 70
+2002,Stoneham,derived,44149,4274,over_population,44149 registered against a population of 23244
+2002,Winchendon,checked,13769,3576,over_population,13769 registered against a population of 10364
+2004,Deerfield,single,5355,517,over_population,5355 registered against a population of 5090
+2004,Gosnold,single,100,55,over_population,100 registered against a population of 70
+2004,Medway,checked,13363,4786,over_population,13363 registered against a population of 13115
+2006,Athol,derived,13239,2598,over_population,13239 registered against a population of 11945
+2006,Charlton,checked,13901,1117,over_population,13901 registered against a population of 13315
+2006,Gosnold,single,119,50,over_population,119 registered against a population of 70
+2008,Gosnold,single,128,59,over_population,128 registered against a population of 70
+2008,Leverett,single,1868,175,over_population,1868 registered against a population of 1865
+2008,Townsend,checked,9360,1292,over_population,9360 registered against a population of 9127
+2008,Winchendon,derived,10888,448,over_population,10888 registered against a population of 10364
+2012,Acton,derived,26989,765,over_population,26989 registered against a population of 24021
+2016,Gosnold,single,139,43,over_population,139 registered against a population of 70
+2016,Sutton,checked,9468,989,over_population,9468 registered against a population of 9357
+2018,Gosnold,single,137,52,over_population,137 registered against a population of 70
+2018,Hamilton,checked,8430,1058,over_population,8430 registered against a population of 7561
