@@ -1,0 +1,35 @@
+volume,kind,first_page,last_page,election_year,verified,note
+1970,town,34,47,1970,yes,"p33 is the last city page (Cities Wards and Voting Precincts); p34 opens Towns and Voting Precincts; p48 blank, p49 candidate votes"
+1971,town,,,1971,no,"62-page booklet with no text layer on any page. Section cannot be located without OCR."
+1972,town,32,45,1972,yes,"p31 ends the city table; p32 opens Towns and; p46 blank"
+1973,town,36,59,1973,yes,"p60 is the Recapitulation"
+1974,town,29,44,1974,part,"p31 opens mid-alphabet at Clarksburg so the table starts earlier; p27-p30 have no usable text layer. Start is a lower bound -- city pages swept in yield ward rows that fail to snap and are discarded. p45 is the Recapitulation."
+1975,town,36,60,1975,yes,"p36 opens at Abington/Acton; p61 is the Recapitulation"
+1976,town,31,47,1976,yes,"p31 opens at Abington; p48 is the Recapitulation"
+1977,town,38,63,1977,yes,"p37 ends the Worcester city table; p38 opens at Abington; p64 is the Recapitulation"
+1978,town,,,1978,no,"The volume prints one combined STATE, CITY AND TOWN table across p16-p43, set landscape, and its text layer is noise (5)Z ^n-I inncvjo). Party enrollment follows at p44. Needs OCR with rotation before the town portion can be scoped."
+1979,town,,,1979,no,"Landscape tables at p12 onward whose text layer is noise (00 r- ON c _o o 1) UJ). Same problem as 1978."
+1980,town,,,1980,yes,"THE 1980 VOLUME HAS NO TOWN TABLE. It runs Summary of Election Statistics (p20) straight into Registered Voters and Party Enrollment (p24). The 1980 town elections are tabulated in the 1982 volume instead."
+1981,town,11,24,1981,yes,"p11 heads NUMBER OF REGISTERED VOTERS AND PERSONS WHO VOTED AT TOWN ELECTIONS IN 1981; p25 heads the same for CITY ELECTIONS"
+1981,city,25,37,1981,yes,"p38 begins the special primaries"
+1982,town,23,32,1980,yes,"THE 1982 VOLUME TABULATES THE 1980 TOWN ELECTIONS. Its running head reads REGISTERED VOTERS AND PEOPLE WHO VOTED AT 1980 TOWN ELECTIONS on every page of the section, and no other volume in the series reports a year other than its own. Rows from here belong to 1980."
+1983,town,12,32,1983,yes,"p12 heads NUMBER OF REGISTERED VOTERS AND PERSONS WHO VOTED AT TOWN ELECTIONS IN 1983; p33 switches to City, Wards"
+1983,city,33,55,1983,yes,"p56 begins the special primaries"
+1984,town,,,1984,yes,"THE 1984 VOLUME HAS NO TOWN TABLE, same as 1980: Summary of Election Statistics at p20, Party Enrollment from p24. The 1982 town elections appear nowhere in the volumes held."
+1986,town,16,27,1986,yes,
+1988,town,14,26,1988,yes,
+1990,town,15,26,1990,yes,
+1992,town,14,26,1992,yes,
+1994,town,19,32,1994,yes,
+1996,town,18,30,1996,yes,
+1998,town,15,30,1998,yes,
+2000,town,14,28,2000,yes,
+2002,town,15,30,2002,yes,
+2004,town,15,30,2004,yes,
+2006,town,19,35,2006,yes,
+2008,town,19,34,2008,yes,
+2010,town,19,34,2010,yes,
+2012,town,15,30,2012,yes,
+2014,town,15,30,2014,yes,"the heading survives on p15, p16, p22 and p28 only"
+2016,town,15,30,2016,yes,
+2018,town,15,30,2018,yes,"the heading survives on p15 alone; a longest-run-of-headings scan picked the contents page instead"
