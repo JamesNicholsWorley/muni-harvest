@@ -218,7 +218,13 @@ def no_election(text):
     return NO_ELECTION.search(re.sub(r'[\s.]+', '', text or ''))
 MONTHS = ('January February March April May June July August September '
           'October November December').split()
-DATE = re.compile(r'\b(%s)\w*\.?\s*(\d{1,2})\s*,?\s*(\d{2,4})?' % '|'.join(
+# THE YEAR MUST BE PRECEDED BY A COMMA, or it is not a year. The date column in
+# these volumes prints `May 6` and nothing more -- the year lives in the page
+# heading -- so an optional trailing `(\d{2,4})?` does not find a year, it finds
+# the registered-voter count sitting in the next column. `Millis May 6 4212`
+# parsed as "May 6, 4212" and swallowed the town's own figure, which is why
+# Millis and Monroe were read perfectly and then emitted with nothing in them.
+DATE = re.compile(r'\b(%s)\w*\.?\s*(\d{1,2})(?:\s*,\s*(\d{2,4}))?' % '|'.join(
     m[:3] for m in MONTHS), re.I)
 NUM = re.compile(r'^\d[\d,]{0,8}$')
 TOWN = re.compile(r"^[A-Z][A-Za-z.'-]{2,}(?:[ -][A-Za-z.'-]+){0,4}$")
