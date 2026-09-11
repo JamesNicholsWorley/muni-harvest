@@ -48,3 +48,5 @@ cdx-shard-*/
 pd43/*.pdf
 pd43/*.png
 pd43/out-*.csv
+pd43/.run_modern.lock/
+pd43/stamp-*.txt
