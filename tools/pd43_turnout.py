@@ -372,10 +372,28 @@ def load_municipalities(root):
 
 
 # The date follows the town on the same printed line, and OCR keeps some of it.
+# A MONTH INSIDE A TOWN'S NAME IS NOT A DATE. This pattern strips the election
+# date off the end of a label -- `Abington ..... May 24` -> `Abington` -- and it
+# used to do so by matching three letters of a month followed by `\w*`. Nine
+# Massachusetts municipalities contain those three letters:
+#
+#     Marblehead  Marion  Marlborough  Marshfield  Maynard   -> ''
+#     Hanover -> 'Ha'    Saugus -> 'S'    New Marlborough -> 'New'
+#
+# Every one of them was unreadable in every volume, by both readers, for as long
+# as this pattern has existed -- silently, because a name that snaps to nothing
+# is indistinguishable from a name the scan lost. That is up to nine town-years
+# per volume and close to three hundred across the series.
+#
+# So the month has to be a whole word: full spelling or the usual abbreviation,
+# and not followed by another letter. `Mar` in `Marlborough` is followed by `l`;
+# `May` in `Maynard` by `n`; `Nov` in `Hanover` by `e`; `Aug` in `Saugus` by `u`.
+_MONTH = (r'Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun[e]?'
+          r'|Jul[y]?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?'
+          r'|Nov(?:ember)?|Dec(?:ember)?')
 TRAIL = re.compile(
-    r'\s*[-\s.]*(%s|ODD|EVEN)\w*\.?\s*$' % '|'.join(
-        m[:3] for m in ('January February March April May June July August '
-                        'September October November December').split()), re.I)
+    r'[\s.,-]*(?:(?:%s)(?![A-Za-z])[\s.,\d]*|(?:ODD|EVEN)\b.*)$' % _MONTH,
+    re.I)
 # Dot leaders read as a run of letters when the scan is soft: `csceeeeeeeee`.
 NOISE = re.compile(r'\b[a-z]*(?:eee|sss|ccc|ooo)[a-z]*\b|\s[-.,]+\s*$', re.I)
 
@@ -755,6 +773,10 @@ def rows_from_cells(page, lo, hi):
 # towns are simply absent. That has to end the run loudly rather than appear as
 # a slightly lower percentage.
 OCR_FAILURES = []
+# A column block of this table prints several hundred words. Below this the
+# text layer is fragments, whatever the table detector manages to build from
+# them, and the page has to be read as an image.
+MIN_BLOCK_WORDS = 120
 
 
 def _find_tesseract():
@@ -1140,6 +1162,19 @@ def parse_block_with(page, lo, hi, year, force_ocr=False, names=None,
     # does not.
     starved = (not force_ocr and labels and len(labels) >= 12
                and len(rows) < 0.45 * len(labels))
+    # A BLOCK WITH ALMOST NO WORDS CANNOT HONESTLY YIELD MANY ROWS, and the row
+    # count is not evidence that it did. The table detector builds a grid out of
+    # whatever fragments it finds, so 476 characters became 43 rows on a 1977
+    # page and 43 phantom precincts under Boston. Because that cleared every
+    # row-count test, the page never fell back to OCR.
+    #
+    # This is where the OCR went. Nine volumes -- 1996 and everything from 2004
+    # on -- produced NOT ONE OCR row between them while holding 20 pages with
+    # next to no text. They were not judged readable; they were never asked.
+    # A full block of this table prints several hundred words.
+    # Deciding this here, by rule, made 2014 and 2016 worse: it threw away a
+    # text reading that was closing its arithmetic in favour of an OCR reading
+    # that was not. The choice belongs to parse_block, which scores both.
     if force_ocr or len(rows) < 6 or starved:
         try:
             rows, labels, off = rows_from_ocr(page, lo, hi)
@@ -1322,6 +1357,17 @@ def block_score(towns):
     return n
 
 
+def towns_thin(score, got):
+    """Is this reading weak enough that OCR is worth the time to try?
+
+    A block of this table carries fifteen to twenty-five municipalities. A
+    reading that produced a handful, or produced rows that mostly do not close,
+    has not read the page -- whatever the text layer appeared to offer.
+    """
+    towns = got[0] if got else []
+    return len(towns) < 12 or score < 0.55 * max(1, len(towns))
+
+
 def parse_block(page, lo, hi, year, force_ocr=False, names=None):
     """One column block -> a list of municipalities.
 
@@ -1345,6 +1391,17 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
             best, best_score = got, s
         if force_ocr:
             break          # OCR ignores the source; running it twice is waste.
+        # OCR IS A THIRD CANDIDATE, NOT A FALLBACK, and it has to win on the
+        # same terms. Firing it by rule where the text looked sparse made
+        # 2014 and 2016 WORSE: it replaced a text reading that was closing its
+        # arithmetic with an OCR reading that was not. Scored instead of
+        # assumed, it can only add.
+        if src == 'cells' and best_score is not None and towns_thin(best_score,
+                                                                   best):
+            alt = parse_block_with(page, lo, hi, year, force_ocr=True,
+                                   names=names, source=src)
+            if block_score(alt[0]) > best_score:
+                best, best_score = alt, block_score(alt[0])
         # A READING THAT ALREADY CLOSES DOES NOT NEED A RIVAL. Where nearly
         # every municipality on the block sums to its own total there is nothing
         # for the second reader to win, and running it anyway doubles the cost
