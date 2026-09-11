@@ -76,12 +76,14 @@ def tokens_from_text(page, clip):
 
 
 def tokens_from_ocr(page, clip, zoom=T.OCR_ZOOM):
-    """-> [(x, y, text)] from Tesseract, in image pixels.
+    """-> [(x, y, text)] from Tesseract, in PAGE POINTS.
 
-    The two token sources are deliberately the same shape and everything below
-    works in whatever space it is handed. Nothing downstream uses an absolute
-    distance -- row spacing is measured from the page itself -- so a reader that
-    works on points works unchanged on pixels.
+    THE SAME COORDINATES AS THE TEXT LAYER, deliberately. Tesseract reports
+    pixels of whatever pixmap it was handed, so a reading at zoom 2 and a
+    reading at zoom 4.5 of the same page disagree about where everything is,
+    and neither agrees with the text layer. Converting here means the gutter can
+    be found from a cheap low-zoom pass and then used to clip a high-zoom one --
+    which is the whole reason for reading the page twice.
     """
     import io as _io
     from PIL import Image
@@ -98,7 +100,9 @@ def tokens_from_ocr(page, clip, zoom=T.OCR_ZOOM):
         except (ValueError, TypeError):
             conf = -1
         if t and conf >= 25:
-            out.append((d['left'][i], d['top'][i] + d['height'][i] / 2.0, t))
+            out.append((clip.x0 + d['left'][i] / zoom,
+                        clip.y0 + (d['top'][i] + d['height'][i] / 2.0) / zoom,
+                        t))
     return out
 
 
@@ -216,11 +220,44 @@ def clean_name(raw):
     return s
 
 
-def read_block(page, clip, names, use_ocr, year=None, figcols=2,
-               pitch_hint=None):
-    """One column block -> [town dicts]. The whole method, in order."""
-    toks = tokens_from_ocr(page, clip) if use_ocr \
-        else tokens_from_text(page, clip)
+def gutter(toks, anchor, width):
+    """The empty strip the page divides at. -> (left edge, right edge) or None
+
+    A BOUNDARY GUESSED BEFORE ANYTHING IS READ CUTS SOMETHING. `block_split`
+    returns a single x, and it was wrong in both directions with no margin that
+    fixes both: on 1986 page 20 it fell to the RIGHT of where the second block's
+    names begin, so `Huntington` came out `ngton` and `Longmeadow` as `neadow`;
+    on 1994 page 23 it fell to the LEFT of the first block's last digit, so
+    4,508 came out `4,50` and 572 as `57`.
+
+    But it is a good ANCHOR. What is wanted is the strip of white space around
+    it, so that each block can be clipped to the far side of that strip and
+    neither boundary passes through any print. Searching for the widest gap on
+    the page instead of around the anchor found the gap between a block's names
+    and its own figures -- genuinely empty, genuinely wide, and a third of the
+    way across the page.
+    """
+    xs = sorted(x for x, _y, _t in toks)
+    if len(xs) < 20 or anchor is None:
+        return None
+    best = None
+    for a, b in zip(xs, xs[1:]):
+        if b - a < width * 0.012:
+            continue
+        d = 0.0 if a <= anchor <= b else min(abs(anchor - a), abs(anchor - b))
+        if d <= width * 0.08 and (best is None or d < best[0]):
+            best = (d, a, b)
+    return (best[1], best[2]) if best else None
+
+
+def read_block(toks, names, use_ocr, year=None, figcols=2,
+               anchor=None, side=None, pitch_hint=None):
+    """One column block of tokens -> [town dicts]. The whole method, in order.
+
+    Tokens rather than a rectangle, because the page is read ONCE and then
+    divided. Clipping first meant OCR'ing every page twice and cutting the
+    figures at a boundary guessed before anything had been read.
+    """
     if not toks:
         return [], {}
     nums, labels = [], []
@@ -266,6 +303,30 @@ def read_block(page, clip, names, use_ocr, year=None, figcols=2,
                        if c[0] - 1 <= x <= c[1] + 1 and v == year)
                 <= 0.5 * max(1, sum(1 for x, _y, _v in nums
                                     if c[0] - 1 <= x <= c[1] + 1))]
+    # A FIGURE COLUMN HAS A VALUE ON EVERY ROW. The date column does not: it
+    # prints only on a town's own row, so `May 02, 1994` puts a `02` and a
+    # `1994` into two thin columns that sit exactly where a figure column would,
+    # between the name and the registration. On 1994 page 23 the two rightmost
+    # clusters were the date's day and the registered voters, so Dracut came out
+    # with 2 registered and 14,371 voted, and every town on the page with it.
+    #
+    # Coverage separates them without having to recognise a date at all. Keep
+    # the columns that are printed on most rows and choose among those; a column
+    # filled on a third of the rows is the date, or the precinct numbers.
+    if cols:
+        fill = [sum(1 for x, _y, _v in nums if c[0] - 1 <= x <= c[1] + 1)
+                for c in cols]
+        keep = max(fill) * 0.6
+        cols = [c for c, f in zip(cols, fill) if f >= keep]
+    # A BLOCK MAY ONLY CLAIM COLUMNS ON ITS OWN SIDE OF THE BOUNDARY. The clips
+    # overlap so that nothing is cut at the edge, which means the first block
+    # can see the second block's first figure column. Taking it would report the
+    # wrong town's figures and close its arithmetic perfectly while doing so.
+    if anchor is not None:
+        own = [c for c in cols
+               if (c[1] <= anchor if side == 'left' else c[0] >= anchor)]
+        if len(own) >= 2:
+            cols = own
     if len(cols) < 2:
         return [], {'reason': 'fewer than two figure columns'}
     # WHICH PAIR OF COLUMNS IS THE TOWN ELECTION. Usually the two rightmost --
@@ -280,6 +341,10 @@ def read_block(page, clip, names, use_ocr, year=None, figcols=2,
         (r0, r1), (v0, v1) = cols[-2], cols[-1]
     pitch = pitch_hint or row_pitch([y for _x, y, _t in nums])
 
+    # A LABEL IS ALWAYS LEFT OF THE FIGURES. Once the figure columns are known,
+    # anything to their right belongs to the next block, not to this row -- and
+    # joined onto this row's name it snaps to nothing. `Hanson Hull`.
+    labels = [l for l in labels if l[0] < r0]
     regs = sorted((y, v) for x, y, v in nums if r0 - 1 <= x <= r1 + 1)
     vots = sorted((y, v) for x, y, v in nums if v0 - 1 <= x <= v1 + 1)
     rows = []
@@ -384,32 +449,9 @@ def read_page(doc, i, names, year=None, figcols=2, nblocks=2, force=None,
     Run both where it is worth it and let the page's own arithmetic choose.
     """
     page = doc[i]
-    sp = T.block_split(page) or page.rect.width
     top, bot = page.rect.height * T.TOP_FRAC, page.rect.height * T.BOT_FRAC
-    # THE COLUMN SPLIT LANDS INSIDE THE RIGHT BLOCK'S NAMES. It is found from
-    # the widest vertical gap in the page's own text, and that gap sits between
-    # the left block's last figure column and the right block's dot leaders --
-    # a little to the RIGHT of where the right block's names begin. Cutting
-    # there beheads every one of them: `Huntington` came out `ngton`, `Ipswich`
-    # as `+h`, `Longmeadow` as `neadow`. Sixteen towns on one block of 1986
-    # page 20, read perfectly and emitted nameless.
-    #
-    # The margin is only safe in this direction. Widening the LEFT block the
-    # same way would pull the right block's names onto its rows and join the
-    # two -- `Hanson Hull` snaps to nothing. Figures that stray in are harmless
-    # either way: the figure columns are taken as the two RIGHTMOST clusters, so
-    # an intruding column from the block next door sorts to the left and is
-    # discarded.
-    gutter = page.rect.width * 0.06
-    if nblocks < 2:
-        blocks = [pymupdf.Rect(0, top, page.rect.width, bot)]
-    else:
-        blocks = [pymupdf.Rect(0, top, sp + page.rect.width * 0.01, bot)]
-        if sp < page.rect.width - 2:
-            blocks.append(pymupdf.Rect(max(0, sp - gutter), top,
-                                       page.rect.width, bot))
+    whole = pymupdf.Rect(0, top, page.rect.width, bot)
 
-    figs, marks = len(T.NUM.findall(page.get_text())), 0
     words = len(page.get_text('words'))
     sources = [False, True]
     if force is True:
@@ -419,13 +461,46 @@ def read_page(doc, i, names, year=None, figcols=2, nblocks=2, force=None,
     elif words < 40:
         sources = [True]          # nothing in the text layer to score
 
+    # WHERE THE PAGE DIVIDES IS FOUND ONCE, BEFORE EITHER READING. It has to be
+    # found from tokens somewhere on the page, and on an image-only page that
+    # means a cheap low-zoom OCR pass whose only job is to say where the print
+    # is -- not to read it.
+    blocks = [whole]
+    if nblocks >= 2:
+        probe = tokens_from_text(page, whole)
+        if len(probe) < 40:
+            probe = tokens_from_ocr(page, whole, zoom=2.0)
+        sp = T.block_split(page)
+        if sp and sp < page.rect.width - 2:
+            # BOTH CLIPS OVERLAP THE BOUNDARY, because `block_split` is wrong in
+            # both directions and no single line is safe: on 1986 page 20 it
+            # fell to the RIGHT of the second block's names (`Huntington` came
+            # out `ngton`), on 1994 page 23 to the LEFT of the first block's
+            # last digit (4,508 came out `4,50`). Overlapping both ways means
+            # neither block can lose anything at the edge.
+            #
+            # What stops each block reading the other's contents is not the
+            # clip. It is that a block may only take figure columns on its own
+            # side of the boundary, and that a label must lie left of the
+            # figures -- so an intruding name is dropped and an intruding
+            # figure column is never chosen.
+            m = page.rect.width * 0.06
+            blocks = [(pymupdf.Rect(0, top, min(page.rect.width, sp + m), bot),
+                       sp, 'left'),
+                      (pymupdf.Rect(max(0, sp - m), top, page.rect.width, bot),
+                       sp, 'right')]
+    if blocks and not isinstance(blocks[0], tuple):
+        blocks = [(blocks[0], None, None)]
+
     best, best_s, best_src = [], -1.0, None
     for use_ocr in sources:
         got = []
-        for clip in blocks:
+        for clip, anchor, side in blocks:
             try:
-                towns, _info = read_block(page, clip, names, use_ocr, year,
-                                          figcols)
+                toks = (tokens_from_ocr(page, clip) if use_ocr
+                        else tokens_from_text(page, clip))
+                towns, _info = read_block(toks, names, use_ocr, year, figcols,
+                                          anchor=anchor, side=side)
             except Exception as e:                        # noqa: BLE001
                 if debug:
                     print('   block failed (%s): %s'

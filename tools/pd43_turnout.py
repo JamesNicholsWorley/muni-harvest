@@ -234,7 +234,9 @@ TOWN = re.compile(r"^[A-Z][A-Za-z.'-]{2,}(?:[ -][A-Za-z.'-]+){0,4}$")
 # scales. Every offset here is therefore a FRACTION of the page, not a number of
 # points: with the 2008 figures hardcoded, the 2000 clip fell outside the table
 # entirely and the volume yielded no tables at all.
-OCR_ZOOM = 3.0             # render scale for pages with no text
+OCR_ZOOM = 4.5             # render scale for pages with no text; 3.0 merged
+                           # adjacent figures on the 1994 scans -- 2,175 and
+                           # 775 came back as one token `27877`.
 LABEL_FRAC = 0.18          # label column width, as a share of page width
 TOP_FRAC = 0.11            # first row, as a share of page height
 BOT_FRAC = 0.97            # last row
