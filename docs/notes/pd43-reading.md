@@ -142,3 +142,108 @@ is dated `November 02, 1993` -- and they name the towns that never appear:
 1980 and 1984 have no municipal turnout table in readable form. Their only
 legible heading belongs to a **party enrollment** table whose OCR is unusable
 (`Hst^NCOOHH`). 1971 and 1979 are image-only throughout.
+
+## Find the towns in the arithmetic, then attach the names
+
+Every reader written for this table keyed its structure on the labels, and the
+labels are the part that fails. Walking the registered column instead -- where a
+value equals the sum of the next k values, that value is a town total and those
+k are its precincts -- establishes the structure without anything having to be
+spelled correctly. A name that then fails to snap costs that one town, instead
+of turning it into a precinct of the town above and costing two.
+
+**Both layouts occur and the series never says which it is using.** 1986 and
+1992 head the precincts with the total; 2000 and 2012 close them with a TOTALS
+line. Scanning forward only, not one sum closed on a perfectly legible page of
+2000. Try both directions at every row, and prefer a run that closes in BOTH
+columns: a coincidence in one column is common on a page of four hundred
+numbers, in two at once it is not.
+
+**In the totals-last layout the label on the total row is the word `TOTALS`.**
+The town's name heads its precincts. Reading the name off the row that carries
+the figures -- correct for 1986 -- returned `TOTALS` for every town in 2000,
+2012 and 2016, so those volumes produced no municipalities at all while their
+arithmetic was closing perfectly.
+
+**Where the arithmetic cannot close, the labels finish the job.** A row printed
+TOTALS is a town total by the table's own say-so, and its figure is printed
+whether or not its precincts add up to it. Framingham's neighbour on 2012 page
+20 lost the leading 1 of `1,877` in the text layer; the total 5,671 was read
+perfectly and was being discarded because the check it failed was being used as
+the reading rather than as a check.
+
+## The column split lands inside the right block's names
+
+It is found from the widest vertical gap in the page's text, and that gap sits
+between the left block's last figure column and the right block's dot leaders --
+a little to the RIGHT of where the right block's names begin. `Huntington` came
+out `ngton`, `Ipswich` as `+h`, `Longmeadow` as `neadow`. Sixteen towns on one
+block of 1986 page 20, read perfectly and emitted nameless.
+
+The margin is only safe in that direction. Widening the LEFT block the same way
+joins the two blocks' names on every row -- `Hanson Hull` snaps to nothing.
+
+## Nine towns contain a month
+
+`snap` strips the election date off a label -- `Abington ..... May 24` --  and
+did it by matching three letters of a month followed by `\w*`. Nine
+Massachusetts municipalities contain those three letters:
+
+    Marblehead  Marion  Marlborough  Marshfield  Maynard   ->  ''
+    Hanover -> 'Ha'     Saugus -> 'S'     New Marlborough -> 'New'
+
+Unreadable in every volume, by both readers, for as long as the pattern existed
+-- and silent, because a name that snaps to nothing looks exactly like a name
+the scan lost. The month has to be a whole word, not followed by a letter.
+
+## A bare four-digit year is a date -- in the text layer only
+
+From 1994 the date column prints the year, in the x band a figure would occupy.
+Twenty-one towns in 2008 and Marblehead in 2012 came out registering 2008 and
+2012 voters. The table separates its thousands, so two thousand prints `2,012`
+and the year prints `2012`: that is the discriminator, and it is the volume's
+own typography.
+
+**It does not survive OCR.** Tesseract drops the comma constantly, so a town
+that registered 1,986 voters in 1986 comes back as `1986` and the same rule
+deletes a real figure -- which does not cost one row, it breaks the arithmetic
+for the whole town. Applied to OCR as well, this took 1986 from 92.8% back to
+90.2% and 1992 from 92.2% to 87.6%. On the OCR side the date is caught as a
+COLUMN instead: a figure column does not print the same value on every row.
+
+## Section boundaries: thirty-two volumes is a bounded job, so read them
+
+Detection was wrong three different ways and each fix broke a volume the
+previous one had got right. The longest run of consecutive headings picked the
+CONTENTS page in 2014 and 2018, because the table prints its heading once and
+the contents lists it twice. Extending on content swept 1983's city table into
+its town table. Stopping at the first unreadable page cut five pages off 1988
+and 2000 -- and those are the pages that most needed reading.
+
+`config/pd43_sections.csv` now carries ranges someone has looked at, with what
+is on the pages either side. Three things fell out of reading them:
+
+- **The 1982 volume tabulates the 1980 town elections.** Its running head says
+  so on every page of the section, and no other volume reports a year other
+  than its own. Those rows had been coming out labelled 1982.
+- **The 1980 and 1984 volumes have no town table at all.** Both run Summary of
+  Election Statistics straight into Party Enrollment. So the 1982 town
+  elections are absent from the volumes held -- a fact about the series, not a
+  parser failure.
+- **1978 and 1979 are printed landscape and stored rotated 90 degrees**, which
+  is the whole reason their text layers read as noise (`5)Z ^n-I inncvjo`,
+  `00 r- ON c _o o 1) UJ`). Rendered upright they OCR cleanly: 1979's town
+  table is p31-p47, 1978's p28-p43. 1978 prints FOUR figure columns -- town
+  registered and voted first, state registered and voted second -- so the
+  two-rightmost-columns rule would read the state election there.
+
+## Select pages for OCR on whether the text carries the FIGURES
+
+Not on characters, words or ink. 1973 page 38 extracts 129 words: every town
+name, every precinct number, every dash, and exactly one number. By every count
+of quantity it is a readable page.
+
+Ink cannot do this job across volumes at all. It was calibrated on the
+1986-2018 scans, where a table inks 2-9% of the sheet; the 1970s booklets are
+lighter and smaller, and a full table page there measures 0.3% -- less than a
+blank sheet in 2008. An absolute ink threshold is a threshold on scan quality.
