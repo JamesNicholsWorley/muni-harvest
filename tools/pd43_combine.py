@@ -1,6 +1,26 @@
-"""Combine the per-volume PD43 readings into one series, and report coverage.
+"""Combine the two readings of PD43 into one corpus, and say which one spoke.
 
-    python tools/pd43_combine.py pd43/out-*.csv --out config/pd43_turnout.csv
+NEITHER READER WINS EVERYWHERE and the difference is not small. The
+arithmetic-first reader takes 1986 from 51.5% to 92.8% and 1990 from 67.2% to
+93.1%; the label-first reader still beats it on 2008 and 2012. They share no
+code path -- one keys the table on its labels, the other on its arithmetic -- so
+a town only one of them found is a town genuinely recovered, and a town both
+found with the same two figures is a figure confirmed twice over.
+
+The order of preference is evidential, not a ranking of the readers:
+
+1. A reading whose precincts sum to its own printed total. That is the only
+   statement here that is self-checking, and it comes from the arithmetic
+   reader by construction.
+2. The arithmetic reader's unclosed reading, which is still keyed on structure.
+3. The label-first reader, where it passed its own checks.
+
+Where both readers produce a town and disagree about its figures, NEITHER is
+written as fact. The row is kept, flagged, and listed for someone to open the
+page -- a check has never yet been a good enough reason to change a figure in
+this corpus, and it is not one here either.
+
+    python tools/pd43_combine.py --out pd43/pd43-turnout.csv
 """
 import argparse
 import collections
@@ -8,92 +28,176 @@ import csv
 import glob
 import io
 import os
+import re
+import sys
 
-# Only these two verdicts are trustworthy enough to become a denominator.
-# `checked` closed its own arithmetic; `single` is an undivided town with one
-# printed figure and nothing to cross-foot. Everything else is kept in the file
-# and marked, so a gap is documented rather than silently filled.
-# `derived` BELONGS HERE. A derived total is one rebuilt from the town's own
-# precincts -- the sum the TOTALS row would have printed had the scan kept it --
-# and it passes the same arithmetic as a `checked` row. Leaving it out described
-# 2008 as 269 usable when it is 288, and understated the series by 520 rows.
-USABLE = ('checked', 'single', 'derived')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from tools.pd43_scope import SECTIONS                             # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OLD_OK = ('checked', 'single', 'derived')
+
+
+def num(x):
+    try:
+        return int(str(x).replace(',', '').strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def read_arith(path):
+    for r in csv.DictReader(io.open(path, encoding='utf-8')):
+        if not r.get('municipality'):
+            continue
+        yield {'year': int(r['year']), 'volume': r['volume'],
+               'municipality': r['municipality'],
+               'registered': num(r['registered']), 'voted': num(r['voted']),
+               'precincts': num(r['precincts']) or 0,
+               'closed': r['arithmetic_closes'] == '1',
+               'reader': 'arithmetic', 'page': r['page'],
+               'evidence': ('precincts sum to the printed total'
+                            if r['arithmetic_closes'] == '1'
+                            else 'structure from the figure columns')}
+
+
+def read_old(path, year, volume):
+    for r in csv.DictReader(io.open(path, encoding='utf-8')):
+        if r.get('level') != 'total' or not r.get('municipality'):
+            continue
+        if r.get('status') not in OLD_OK:
+            continue
+        yield {'year': year, 'volume': volume,
+               'municipality': r['municipality'],
+               'registered': num(r['registered']), 'voted': num(r['voted']),
+               'precincts': num(r.get('precincts')) or 0,
+               'closed': r.get('status') == 'checked',
+               'reader': 'labels', 'page': r.get('page', ''),
+               'evidence': 'label-first reader, status %s' % r.get('status')}
+
+
+_DEN = {}
+
+
+def denominator(year):
+    """How many towns held an election that year, per the volume that says so.
+
+    Read from the volume's own front matter rather than assumed. `142 towns, one
+    precinct each` plus `165 towns divided into 783 precincts` is 307 for 1986;
+    the figure this project had been dividing by was 300, and it was never the
+    same number two years running.
+    """
+    if not _DEN:
+        import pymupdf
+        from tools.pd43_scope import stated_counts
+        pymupdf.TOOLS.mupdf_display_errors(False)
+        for (vol, kind), s in SECTIONS.items():
+            if kind != 'town':
+                continue
+            p = os.path.join(ROOT, 'pd43', 'pd43-%s.pdf' % vol)
+            if not os.path.exists(p):
+                continue
+            doc = pymupdf.open(p)
+            n = stated_counts(doc).get('towns')
+            doc.close()
+            if n:
+                _DEN[int(s['year'])] = n
+    return _DEN.get(int(year))
+
+
+def rank(row):
+    """Lower is better. See the module docstring for why this order."""
+    if row['closed'] and row['reader'] == 'arithmetic':
+        return 0
+    if row['reader'] == 'arithmetic':
+        return 1
+    return 2
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('csvs', nargs='+')
-    ap.add_argument('--out', required=True)
+    ap.add_argument('--out', default=os.path.join(ROOT, 'pd43',
+                                                  'pd43-turnout.csv'))
+    ap.add_argument('--conflicts', default=os.path.join(ROOT, 'pd43',
+                                                        'pd43-conflicts.csv'))
     a = ap.parse_args()
 
-    paths = []
-    for pat in a.csvs:
-        paths += sorted(glob.glob(pat))
     rows = []
-    for p in paths:
-        with io.open(p, encoding='utf-8', newline='') as fh:
-            rows += list(csv.DictReader(fh))
-    if not rows:
-        print('nothing to combine')
-        return 1
+    for p in sorted(glob.glob(os.path.join(ROOT, 'pd43', 'arith',
+                                           'arith-*.csv'))):
+        rows += list(read_arith(p))
+    for p in sorted(glob.glob(os.path.join(ROOT, 'pd43', 'out-*.csv'))):
+        vol = re.search(r'out-(\d{4})', os.path.basename(p)).group(1)
+        # THE VOLUME IS NOT ALWAYS THE ELECTION YEAR. The 1982 volume tabulates
+        # the 1980 town elections and says so on every page of the section.
+        known = SECTIONS.get((vol, 'town'))
+        year = int((known or {}).get('year') or vol)
+        rows += list(read_old(p, year, vol))
+
+    by = collections.defaultdict(list)
+    for r in rows:
+        by[(r['year'], r['municipality'])].append(r)
+
+    out, conflicts = [], []
+    for key in sorted(by):
+        cands = sorted(by[key], key=rank)
+        best = cands[0]
+        others = [c for c in cands[1:]
+                  if (c['registered'], c['voted'])
+                  != (best['registered'], best['voted'])]
+        agreed = [c for c in cands[1:]
+                  if (c['registered'], c['voted'])
+                  == (best['registered'], best['voted'])]
+        best = dict(best)
+        best['confirmed_by'] = 'both readers' if agreed else best['reader']
+        best['disputed'] = int(bool(others))
+        out.append(best)
+        for c in others:
+            conflicts.append({'year': key[0], 'municipality': key[1],
+                              'kept_reader': best['reader'],
+                              'kept_registered': best['registered'],
+                              'kept_voted': best['voted'],
+                              'other_reader': c['reader'],
+                              'other_registered': c['registered'],
+                              'other_voted': c['voted'],
+                              'kept_because': best['evidence']})
 
     with io.open(a.out, 'w', encoding='utf-8', newline='') as fh:
-        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+        w = csv.DictWriter(fh, fieldnames=[
+            'year', 'volume', 'municipality', 'registered', 'voted',
+            'precincts', 'closed', 'reader', 'confirmed_by', 'disputed',
+            'page', 'evidence'])
         w.writeheader()
-        for r in sorted(rows, key=lambda x: (x['year'], x['municipality'],
-                                             x['level'] != 'total',
-                                             str(x['precinct']).zfill(3))):
+        for r in out:
+            w.writerow(r)
+    with io.open(a.conflicts, 'w', encoding='utf-8', newline='') as fh:
+        w = csv.DictWriter(fh, fieldnames=[
+            'year', 'municipality', 'kept_reader', 'kept_registered',
+            'kept_voted', 'other_reader', 'other_registered', 'other_voted',
+            'kept_because'])
+        w.writeheader()
+        for r in conflicts:
             w.writerow(r)
 
-    totals = [r for r in rows if r['level'] == 'total']
-    pcts = [r for r in rows if r['level'] == 'precinct']
-    usable = [r for r in totals if r['status'] in USABLE and r['registered']]
-    dated = [r for r in totals if r['date']]
-    noelect = [r for r in totals if r['status'] == 'no_election']
-    by_ocr = [r for r in totals if r.get('read_by') == 'ocr']
-
-    print('%d volumes -> %s' % (len(paths), a.out))
-    print('  %6d town-year rows' % len(totals))
-    print('  %6d precinct rows' % len(pcts))
-    print('  %6d with a usable registered-voter figure (%.0f%%)'
-          % (len(usable), 100.0 * len(usable) / max(1, len(totals))))
-    print('  %6d with an election date' % len(dated))
-    print('  %6d stated as holding no election that year' % len(noelect))
-    print('  %6d read by OCR rather than a text layer' % len(by_ocr))
-
-    st = collections.Counter(r['status'] for r in totals)
-    print('\n  status:')
-    for k, n in st.most_common():
-        print('    %-12s %5d' % (k, n))
-
-    print('\n  by year:')
-    per = collections.defaultdict(lambda: [0, 0, 0])
-    for r in totals:
-        per[r['year']][0] += 1
-        if r['status'] in USABLE and r['registered']:
-            per[r['year']][1] += 1
-        if r['date']:
-            per[r['year']][2] += 1
-    print('    %-6s %6s %8s %7s' % ('year', 'towns', 'usable', 'dated'))
+    print('%d town-years, %d disputed between the readers\n' % (len(out),
+                                                                len(conflicts)))
+    print('%-6s %-7s %-7s %-8s %-9s %s'
+          % ('year', 'towns', 'stated', 'of them', 'confirmed', 'closes'))
+    per = collections.Counter(r['year'] for r in out)
+    short = []
     for y in sorted(per):
-        n, u, d = per[y]
-        print('    %-6s %6d %8d %7d' % (y, n, u, d))
-    # A PER-YEAR COVERAGE FILE, because the gate on the site has to be per-year.
-    # This series is permanently partial by year -- even years only from 1986,
-    # cities and odd-year towns only before 1984 -- so a single "pre-2021 turnout
-    # is available" flag would switch on years with nothing behind them.
-    cov = os.path.join(os.path.dirname(a.out) or '.', 'pd43_coverage_by_year.csv')
-    with io.open(cov, 'w', encoding='utf-8', newline='') as fh:
-        w = csv.writer(fh)
-        w.writerow(['year', 'municipalities', 'usable_denominators',
-                    'with_date', 'no_election', 'kinds'])
-        for y in sorted(per):
-            rows_y = [r for r in totals if r['year'] == y]
-            kinds = sorted({r.get('kind', 'town') for r in rows_y})
-            w.writerow([y, per[y][0], per[y][1], per[y][2],
-                        sum(1 for r in rows_y if r['status'] == 'no_election'),
-                        '+'.join(kinds)])
-    print('wrote %s' % cov)
+        stated = denominator(y)
+        both = sum(1 for r in out
+                   if r['year'] == y and r['confirmed_by'] == 'both readers')
+        closed = sum(1 for r in out if r['year'] == y and r['closed'])
+        pct = 100.0 * per[y] / stated if stated else 0.0
+        if stated and pct < 90:
+            short.append((y, pct))
+        print('%-6s %-7d %-7s %7.1f%% %-9d %d'
+              % (y, per[y], stated or '?', pct, both, closed))
+    if short:
+        print('\nstill under 90%%: %s'
+              % ', '.join('%s (%.1f%%)' % s for s in short))
+    print('\nwrote %s and %s' % (a.out, a.conflicts))
     return 0
 
 
