@@ -440,8 +440,25 @@ def snap(name, names):
 
 
 def num(s):
+    """A printed count -> an int, or None.
+
+    A PERIOD IS A THOUSANDS SEPARATOR HERE, NOT A DECIMAL POINT. These tables
+    count people, so nothing in them is fractional, and the scans render the
+    comma as a full stop constantly: `1.639`, `10.385`, `6.946`. Rejecting those
+    dropped the figure silently, which is the worst way to lose one -- the row
+    survives with a hole in it, the town's precincts no longer sum, and the town
+    is discarded for failing a check it should have passed. 1986 Acton lost two
+    of its six precincts exactly this way.
+
+    Only a period followed by exactly three digits is treated as a separator, so
+    a genuine decimal cannot be silently multiplied by a thousand.
+    """
     s = (s or '').replace(',', '').replace(' ', '').strip()
-    return int(s) if s.isdigit() else None
+    if s.isdigit():
+        return int(s)
+    if re.match(r'^\d{1,3}(?:\.\d{3})+$', s):
+        return int(s.replace('.', ''))
+    return None
 
 
 def block_split(page, words=None):
@@ -733,9 +750,43 @@ def rows_from_cells(page, lo, hi):
     return out, labels, off
 
 
+# Every OCR failure in this run. A page that needed OCR and did not get it is
+# not a page that parsed badly -- it is a page that was never read, and its
+# towns are simply absent. That has to end the run loudly rather than appear as
+# a slightly lower percentage.
+OCR_FAILURES = []
+
+
+def _find_tesseract():
+    """Point pytesseract at the binary, wherever Windows put it.
+
+    THE INSTALLER DOES NOT PUT IT ON PATH. pytesseract then raises on every
+    call, and because the OCR failure was caught and logged per block, the run
+    finished and reported a completion figure: 1986 came out at "73.3%" while
+    five of its eleven table pages -- every page that exists only as an image --
+    had produced nothing at all. Whole alphabetical runs of towns were missing,
+    Chelsea through Florida among them, and nothing in the summary said so.
+    """
+    import pytesseract
+    import shutil
+    if shutil.which('tesseract'):
+        return True
+    for p in (r'C:\Program Files\Tesseract-OCR\tesseract.exe',
+              r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe',
+              os.path.join(os.environ.get('LOCALAPPDATA', ''),
+                           'Programs', 'Tesseract-OCR', 'tesseract.exe'),
+              os.path.join(os.environ.get('LOCALAPPDATA', ''),
+                           'Tesseract-OCR', 'tesseract.exe')):
+        if p and os.path.exists(p):
+            pytesseract.pytesseract.tesseract_cmd = p
+            return True
+    return False
+
+
 def _ocr_tokens(img, digits=False, psm=6, minconf=0):
     """(x, y-centre, text) for what Tesseract reads in this image."""
     import pytesseract
+    _find_tesseract()
     cfg = '--psm %d' % psm
     if digits:
         # Everything in a figure column is a digit or a comma. Saying so is the
@@ -873,6 +924,61 @@ def rows_from_words(page, lo, hi):
     return rows, label_lines(page, lo, lo + label_w(page)), 0.0
 
 
+def _bands_plausible(bands, width):
+    """Do these look like two columns of figures, or like a heading?
+
+    A figure column is narrow and sits in the right-hand half; the names need
+    most of the left. A band a third of the page wide starting at x=80 is the
+    heading being mistaken for a column, and accepting it leaves no label
+    column at all.
+    """
+    try:
+        (r0, r1), (v0, v1) = bands
+    except (TypeError, ValueError):
+        return False
+    if min(r0, v0) < width * 0.30:
+        return False                      # nothing left for the names
+    for a, b in ((r0, r1), (v0, v1)):
+        if not (0 < b - a < width * 0.35):
+            return False
+    return True
+
+
+def ocr_bands_from_numbers(img, minconf=25):
+    """Locate the two figure columns from the figures, not from the heading.
+
+    The heading is one line and may be illegible; the figures are a hundred
+    lines and are the thing being looked for anyway. Their x positions fall into
+    tight clusters, one per column, so the columns can be read off the page
+    without anything having to be spelled correctly.
+    """
+    toks = [t for t in _ocr_tokens(img, digits=True, minconf=minconf)
+            if num(t[2]) is not None]
+    xs = sorted(t[0] for t in toks)
+    if len(xs) < 8:
+        return None
+
+    # CLUSTER, AND TAKE THE TWO RIGHTMOST. Splitting at the widest gap is wrong,
+    # because the widest gap on these pages is between the PRECINCT NUMBERS in
+    # the label column and the figures -- `Pct. 1, 2, 3` are numbers too. That
+    # split called the precinct labels the registered column. The figure columns
+    # are always the last two clusters on the line, whatever else is numeric.
+    sep = max(25, img.width * 0.05)
+    groups = [[xs[0]]]
+    for x in xs[1:]:
+        if x - groups[-1][-1] > sep:
+            groups.append([x])
+        else:
+            groups[-1].append(x)
+    groups = [g for g in groups if len(g) >= 4]
+    if len(groups) < 2:
+        return None
+    left, right = groups[-2], groups[-1]
+    pad = max(6, img.width * 0.02)
+    return ((max(0, min(left) - pad), max(left) + pad),
+            (max(0, min(right) - pad), max(right) + pad))
+
+
 def rows_from_ocr(page, lo, hi):
     """Rows from Tesseract, for a page with no usable text layer.
 
@@ -901,6 +1007,19 @@ def rows_from_ocr(page, lo, hi):
     img = Image.open(io.BytesIO(pix.tobytes('png')))
 
     bands = ocr_column_bands(img)
+    # THE HEADING IS NOT ALWAYS READABLE, AND A BAD BAND IS WORSE THAN NONE.
+    # On the image-only pages of 1986 the heading OCRs into nothing usable and
+    # the registered column comes back as x 80-402 of a 668-wide block -- the
+    # width of the heading text, not of a column of numbers. The label column is
+    # then 70px of margin, so not one town name is read, and a page whose 84
+    # rows of figures OCR perfectly yields no towns at all: figures with no
+    # names to hang them on. That is most of what was missing from the older
+    # volumes.
+    #
+    # So a band is checked for plausibility and, failing that, the columns are
+    # taken from where the numbers actually are, which needs no heading.
+    if not bands or not _bands_plausible(bands, img.width):
+        bands = ocr_bands_from_numbers(img)
     if not bands:
         return [], [], 0.0
     (reg0, reg1), (vot0, vot1) = bands
@@ -984,6 +1103,7 @@ def parse_block_with(page, lo, hi, year, force_ocr=False, names=None,
             used_ocr = True
         except Exception as exc:
             print('   [ocr failed] %s' % exc)
+            OCR_FAILURES.append(str(exc))
             if not rows:
                 return [], False
 
@@ -1182,6 +1302,13 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
             best, best_score = got, s
         if force_ocr:
             break          # OCR ignores the source; running it twice is waste.
+        # A READING THAT ALREADY CLOSES DOES NOT NEED A RIVAL. Where nearly
+        # every municipality on the block sums to its own total there is nothing
+        # for the second reader to win, and running it anyway doubles the cost
+        # of the volumes that were never the problem.
+        towns = got[0]
+        if towns and s >= 0.9 * len(towns):
+            break
     return best
 
 
@@ -1808,6 +1935,21 @@ def main():
     print('   %d precinct rows, %d town-years with an election date'
           % (n_pct, dated))
     print('wrote %s' % a.out)
+    # A PAGE THAT NEEDED OCR AND DID NOT GET IT IS NOT A GAP, IT IS A LIE.
+    # These volumes are half image: five of the eleven pages of the 1986 town
+    # table carry nothing but a running head. When Tesseract could not be
+    # started -- the Windows installer leaves it off PATH -- every one of those
+    # pages produced nothing, and the run still printed a completion figure of
+    # 73.3%. The towns were not hard to read; they were never looked at.
+    if OCR_FAILURES:
+        print('\n!! %d PAGES NEEDED OCR AND FAILED: %s'
+              % (len(OCR_FAILURES), OCR_FAILURES[0]))
+        print('!! Those pages contributed NOTHING. Coverage above is overstated')
+        print('!! and whole runs of municipalities are missing from the output.')
+        if not _find_tesseract():
+            print('!! Tesseract was not found. Install it, or put it on PATH:')
+            print('!!   C:\\Program Files\\Tesseract-OCR\\tesseract.exe')
+        return 2
     return 0
 
 
