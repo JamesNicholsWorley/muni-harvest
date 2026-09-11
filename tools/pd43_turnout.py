@@ -179,7 +179,7 @@ def page_kind(text):
 # `Pct.` is printed `Pet.` about as often as not: the scan reads c as e. And a
 # precinct is not always a number -- Belchertown runs Pct. A, B, C -- so a bare
 # letter counts too, which is why the town test has to run first.
-PCT = re.compile(r'^P[ce]t\.?\s*([0-9]+|[A-Z])|^([0-9]{1,2})$|^([A-Z])$'
+PCT = re.compile(r'^P[ce]t\.?\s*([0-9]+|[A-Z])\b|^([0-9]{1,2})$|^([A-Z])$'
                  r'|^Ward\s*([0-9]+)', re.I)
 # DOT LEADERS BELONG TO THE TYPESETTING, NOT THE NAME. The older volumes rule
 # every label to its column -- `Bedford ..............`, `Pct. 1.............`,
@@ -766,6 +766,105 @@ def ocr_column_bands(img):
     if not (reg and vot) or reg[0] >= vot[0]:
         return None
     return reg, vot
+
+
+def rows_from_words(page, lo, hi):
+    """Rows from the words layer, each figure in the column it is printed in.
+
+    Returns the same (rows, labels, skew) shape as rows_from_cells.
+
+    Bands are grown around the rows that CARRY FIGURES. A printed row's label
+    does not always share a baseline with its numbers -- the `1` of `Pct. 1`
+    rides a point high and lands in a band of its own -- so a band holding no
+    figures is not a row, it is a piece of the nearest row's label. Attaching it
+    rather than emitting it is what keeps `Pct. 1` from arriving as two rows,
+    one of which has no numbers at all.
+    """
+    anchors = column_anchors(page, lo, hi)
+    if not anchors:
+        return [], [], 0.0
+    (reg0, reg1), (vot0, vot1) = anchors
+    lab_end = min(reg0, vot0) - 4
+
+    words = [w for w in page.get_text('words')
+             if lo <= w[0] < hi
+             and page.rect.height * TOP_FRAC <= w[1] <= page.rect.height * BOT_FRAC]
+    if len(words) < 12:
+        return [], [], 0.0
+
+    ys = sorted({round(w[1], 1) for w in words})
+    gaps = sorted(b - a for a, b in zip(ys, ys[1:]) if 1.5 < b - a < 40)
+    rh = gaps[len(gaps) // 2] if gaps else 9.0
+    tol = max(2.0, rh * 0.4)
+
+    bands = []
+    for w in sorted(words, key=lambda w: w[1]):
+        if bands and w[1] - bands[-1][0] <= tol:
+            bands[-1][1].append(w)
+        else:
+            bands.append((w[1], [w]))
+
+    def figures(ws, x0, x1):
+        got = [num(w[4]) for w in ws
+               if x0 - 8 <= (w[0] + w[2]) / 2.0 <= x1 + 10
+               and num(w[4]) is not None]
+        return got[-1] if got else None
+
+    # Which bands are real rows: the ones carrying a figure, plus any band that
+    # states the town held no election (those legitimately have no numbers).
+    keep = []
+    for y, ws in bands:
+        txt = ' '.join(w[4] for w in sorted(ws, key=lambda w: w[0]))
+        has = (figures(ws, reg0, reg1) is not None
+               or figures(ws, vot0, vot1) is not None)
+        keep.append(has or bool(no_election(txt)))
+
+    for i, (y, ws) in enumerate(bands):
+        if keep[i]:
+            continue
+        # Give this fragment to the nearest real row, preferring the one below:
+        # a label sits at the top of its entry more often than the bottom.
+        best, bd = None, 1e9
+        for j, k in enumerate(keep):
+            if not k:
+                continue
+            d = abs(bands[j][0] - y) - (0.6 if bands[j][0] > y else 0.0)
+            if d < bd:
+                best, bd = j, d
+        if best is not None and bd <= rh * 1.6:
+            bands[best][1].extend(ws)
+
+    rows = []
+    for i, (y, ws) in enumerate(bands):
+        if not keep[i]:
+            continue
+        ws = sorted(ws, key=lambda w: w[0])
+        label = ' '.join(w[4] for w in ws if w[0] < lab_end)
+        # THE DATE IS ITS OWN PRINTED COLUMN and it sits between the name and
+        # the figures, so it lands inside the label span. Left there it makes
+        # `Abington May`, which is not a Massachusetts town and snaps to
+        # nothing: the town is read perfectly and then thrown away unnamed. Cut
+        # it out of the name and keep it in the row text, where DATE still
+        # finds it.
+        held = ''
+        md = DATE.search(label) or re.search(
+            r'\b(%s)' % '|'.join(m[:3] for m in MONTHS), label, re.I)
+        if md and md.start() > 0:
+            held, label = label[md.start():], label[:md.start()]
+        reg = figures(ws, reg0, reg1)
+        vot = figures(ws, vot0, vot1)
+        mid = ' '.join(w[4] for w in ws if lab_end <= w[0] < reg0 - 8)
+        mid = (held + ' ' + mid).strip()
+        joined = ' '.join(p for p in (label, mid,
+                                      '' if reg is None else str(reg),
+                                      '' if vot is None else str(vot)) if p)
+        figs = [x for x in (reg, vot) if x is not None]
+        rows.append({'label': delead(label), 'figs': figs, 'joined': joined,
+                     'band': (lo, y, hi, y + rh),
+                     'cols': {'reg': reg, 'voted': vot}})
+    # The label column still supplies a name where the row's own label is short.
+    # No skew correction: these are the page's true coordinates, not a grid's.
+    return rows, label_lines(page, lo, lo + label_w(page)), 0.0
 
 
 def rows_from_ocr(page, lo, hi):
