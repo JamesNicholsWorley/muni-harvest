@@ -224,7 +224,22 @@ def load_sections():
         out[(r['volume'], r['kind'])] = {
             'pages': list(range(lo - 1, hi)) if lo else [],
             'year': r['election_year'] or r['volume'],
-            'verified': r['verified'], 'note': r['note']}
+            'verified': r['verified'], 'note': r['note'],
+            # HOW MANY FIGURE COLUMNS THE PAGE PRINTS. 1970 to 1978 set the
+            # town election and the state election side by side, four columns
+            # in all, so the two RIGHTMOST are the state election and the town
+            # figures are the first pair. Written down per volume because it is
+            # a fact about the page that can be looked at, not inferred.
+            'figure_columns': int(r.get('figure_columns') or 2),
+            # HOW MANY COLUMN BLOCKS THE PAGE CARRIES. The modern volumes set
+            # two side by side; 1970-1978 and 1983 run one table the full width
+            # of the sheet. block_split finds a gap on those pages anyway --
+            # between the date and the figures -- and splitting there left four
+            # readable rows on a page of forty.
+            'blocks': int(r.get('blocks') or 2),
+            # 1978 AND 1979 ARE STORED ROTATED, which is the whole reason their
+            # text layers read as noise. Rendered upright they OCR cleanly.
+            'rotate': int(r.get('rotate') or 0)}
     return out
 
 

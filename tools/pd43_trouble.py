@@ -29,7 +29,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEXT_FLOOR = 800
 # Below this the sheet carries a running head and nothing else -- it is blank,
 # not unread. Measured: blank pages run about 0.005, full tables above 0.04.
-INK_FLOOR = 0.02
+INK_FLOOR = 0.015
+# A table is a stack of rows. A title page in large type can ink as much of the
+# sheet as a table does, so the row count is what separates them: a full table
+# runs to fifty or more printed bands, a title page to a handful.
+ROW_FLOOR = 25
 
 
 def towns_on_page(doc, i, names):
@@ -58,8 +62,36 @@ def ink(doc, i):
     data = pix.samples
     if not data:
         return 0.0
-    dark = sum(1 for b in data if b < 170)
+    # DARK, NOT MERELY GREY. Bleed-through from a dense table on the reverse of
+    # the sheet is grey, and at a lenient threshold it reads as content: the
+    # 2010 section title page came out at 2.5% "ink" and was offered up as a
+    # table to go and read. Printed type is much darker than ghosting.
+    dark = sum(1 for b in data if b < 110)
     return float(dark) / len(data)
+
+
+def row_structure(doc, i):
+    """How many distinct printed rows the page has, from its dark scanlines.
+
+    A TABLE IS A STACK OF ROWS AND A TITLE PAGE IS NOT, whatever either one
+    inks. Ink alone could not tell them apart -- a title page in large type and
+    a table both cover a few per cent of the sheet -- and the difference that
+    matters is structure: sixty-odd narrow bands of type against a handful.
+    """
+    pix = doc[i].get_pixmap(matrix=pymupdf.Matrix(0.35, 0.35),
+                            colorspace=pymupdf.csGRAY)
+    w, h, data = pix.width, pix.height, pix.samples
+    if not data or not w:
+        return 0
+    rows, run = 0, False
+    for y in range(h):
+        base = y * pix.stride
+        dark = sum(1 for x in range(0, w, 2) if data[base + x] < 110)
+        on = dark > w * 0.02
+        if on and not run:
+            rows += 1
+        run = on
+    return rows
 
 
 def survey(years, names):
@@ -76,7 +108,7 @@ def survey(years, names):
         for kind, i in pages:
             chars = len(doc[i].get_text().strip())
             out.append({'year': y, 'page': i, 'kind': kind, 'chars': chars,
-                        'ink': ink(doc, i),
+                        'ink': ink(doc, i), 'rows': row_structure(doc, i),
                         'named': towns_on_page(doc, i, names)})
         doc.close()
     return out
@@ -86,8 +118,9 @@ def pick(rows, limit):
     """The worst pages, spread across volumes so one bad year cannot fill it."""
     # A TABLE PRINTED AS AN IMAGE, not a blank sheet. Ink is what tells them
     # apart; the text count cannot.
-    blanks = [r for r in rows if r['chars'] < TEXT_FLOOR and r['ink'] > INK_FLOOR]
-    blanks.sort(key=lambda r: (-r['ink'], r['year']))
+    blanks = [r for r in rows if r['chars'] < TEXT_FLOOR
+              and r['ink'] > INK_FLOOR and r['rows'] >= ROW_FLOOR]
+    blanks.sort(key=lambda r: (-r['rows'], r['year']))
     chosen, per_year = [], {}
     for r in blanks:
         if per_year.get(r['year'], 0) >= 2:
@@ -100,9 +133,10 @@ def pick(rows, limit):
 
 
 def note_for(r):
-    why = ('A FULL TABLE PRINTED AS AN IMAGE: %.1f%% of the sheet is inked but '
-           'the text layer holds only %d characters. Every figure here has to '
-           'come from OCR.' % (100.0 * r['ink'], r['chars']))
+    why = ('A FULL TABLE PRINTED AS AN IMAGE: %d printed rows, %.1f%% of the '
+           'sheet inked, but the text layer holds only %d characters. Every '
+           'figure here has to come from OCR.'
+           % (r['rows'], 100.0 * r['ink'], r['chars']))
     return '%s  page %d  [%s table]  -  %s' % (r['year'], r['page'] + 1,
                                                r['kind'], why)
 
@@ -148,10 +182,11 @@ def main():
     with io.open(idx, 'w', encoding='utf-8', newline='') as fh:
         w = csv.writer(fh)
         w.writerow(['year', 'printed_page', 'kind', 'chars_of_text',
-                    'ink_fraction', 'municipalities_named_in_text'])
+                    'ink_fraction', 'printed_rows',
+                    'municipalities_named_in_text'])
         for r in chosen:
             w.writerow([r['year'], r['page'] + 1, r['kind'], r['chars'],
-                        '%.4f' % r['ink'], r['named']])
+                        '%.4f' % r['ink'], r['rows'], r['named']])
     print('index -> %s' % idx)
     return 0
 

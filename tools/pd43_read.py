@@ -216,7 +216,8 @@ def clean_name(raw):
     return s
 
 
-def read_block(page, clip, names, use_ocr, year=None, pitch_hint=None):
+def read_block(page, clip, names, use_ocr, year=None, figcols=2,
+               pitch_hint=None):
     """One column block -> [town dicts]. The whole method, in order."""
     toks = tokens_from_ocr(page, clip) if use_ocr \
         else tokens_from_text(page, clip)
@@ -233,7 +234,16 @@ def read_block(page, clip, names, use_ocr, year=None, pitch_hint=None):
         # The table separates its thousands, so a figure of two thousand prints
         # as `2,012` and the year prints as `2012`. That is the difference, and
         # it is the volume's own typography rather than a threshold.
-        if v is not None and v == year and re.fullmatch(r'\d{4}', t):
+        #
+        # ONLY IN THE TEXT LAYER. OCR drops the comma constantly, so a town that
+        # registered 1,986 voters in 1986 comes back as `1986` and this rule
+        # would delete a real figure -- and deleting one figure does not cost
+        # one row, it breaks the arithmetic for the whole town. Applied to OCR
+        # as well, this took 1986 from 92.8% back down to 90.2% and 1992 from
+        # 92.2% to 87.6%. On the OCR side the date column is caught below
+        # instead, as a column rather than as a token.
+        if v is not None and v == year and not use_ocr \
+                and re.fullmatch(r'\d{4}', t):
             continue
         if v is not None and not T.PCT.match(t):
             nums.append((x, y, v))
@@ -258,9 +268,16 @@ def read_block(page, clip, names, use_ocr, year=None, pitch_hint=None):
                                     if c[0] - 1 <= x <= c[1] + 1))]
     if len(cols) < 2:
         return [], {'reason': 'fewer than two figure columns'}
-    # THE FIGURE COLUMNS ARE THE TWO RIGHTMOST. Everything to their left is
-    # precinct numbers and page furniture.
-    (r0, r1), (v0, v1) = cols[-2], cols[-1]
+    # WHICH PAIR OF COLUMNS IS THE TOWN ELECTION. Usually the two rightmost --
+    # everything left of them is precinct numbers and page furniture. But 1970
+    # through 1978 print the town election and the state election side by side,
+    # and there the two rightmost are the STATE election held in November. A
+    # reader that took them would report state turnout as municipal turnout,
+    # and it would close its arithmetic perfectly while doing it.
+    if figcols >= 4 and len(cols) >= 4:
+        (r0, r1), (v0, v1) = cols[-4], cols[-3]
+    else:
+        (r0, r1), (v0, v1) = cols[-2], cols[-1]
     pitch = pitch_hint or row_pitch([y for _x, y, _t in nums])
 
     regs = sorted((y, v) for x, y, v in nums if r0 - 1 <= x <= r1 + 1)
@@ -357,7 +374,8 @@ def score(towns):
     return s
 
 
-def read_page(doc, i, names, year=None, force=None, debug=False):
+def read_page(doc, i, names, year=None, figcols=2, nblocks=2, force=None,
+              debug=False):
     """Best reading of one page, text layer against OCR, scored.
 
     NEITHER SOURCE WINS EVERYWHERE and no rule decided it correctly. Forcing OCR
@@ -383,10 +401,13 @@ def read_page(doc, i, names, year=None, force=None, debug=False):
     # an intruding column from the block next door sorts to the left and is
     # discarded.
     gutter = page.rect.width * 0.06
-    blocks = [pymupdf.Rect(0, top, sp + page.rect.width * 0.01, bot)]
-    if sp < page.rect.width - 2:
-        blocks.append(pymupdf.Rect(max(0, sp - gutter), top,
-                                   page.rect.width, bot))
+    if nblocks < 2:
+        blocks = [pymupdf.Rect(0, top, page.rect.width, bot)]
+    else:
+        blocks = [pymupdf.Rect(0, top, sp + page.rect.width * 0.01, bot)]
+        if sp < page.rect.width - 2:
+            blocks.append(pymupdf.Rect(max(0, sp - gutter), top,
+                                       page.rect.width, bot))
 
     figs, marks = len(T.NUM.findall(page.get_text())), 0
     words = len(page.get_text('words'))
@@ -403,7 +424,8 @@ def read_page(doc, i, names, year=None, force=None, debug=False):
         got = []
         for clip in blocks:
             try:
-                towns, _info = read_block(page, clip, names, use_ocr, year)
+                towns, _info = read_block(page, clip, names, use_ocr, year,
+                                          figcols)
             except Exception as e:                        # noqa: BLE001
                 if debug:
                     print('   block failed (%s): %s'
@@ -448,11 +470,20 @@ def read_volume(year, pages=None, debug=False, force=None):
               % (year, (known or {}).get('note', 'not scoped')))
         return [], eyear, 0
     names = T.load_municipalities(ROOT)
+    figcols = (known or {}).get('figure_columns', 2)
+    nblocks = (known or {}).get('blocks', 2)
+    rot = (known or {}).get('rotate', 0)
     stated = stated_counts(doc).get('towns', 0)
 
     out, by_src = [], collections.Counter()
     for i in scope:
+        if rot:
+            # THE PAGE IS STORED SIDEWAYS. Turning it here rather than at the
+            # pixmap means get_text, block_split and every clip below agree
+            # about which way is up.
+            doc[i].set_rotation((doc[i].rotation + rot) % 360)
         towns, src = read_page(doc, i, names, year=int(eyear),
+                               figcols=figcols, nblocks=nblocks,
                                force=force, debug=debug)
         by_src[src] += 1
         for t in towns:
