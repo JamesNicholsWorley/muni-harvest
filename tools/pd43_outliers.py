@@ -37,15 +37,32 @@ JUMP = 1.8
 
 
 def load_population():
+    """municipality -> population, from a file that has no year column.
+
+    THIS CHECK WAS DEAD AND LOOKED ALIVE. It was written to key on
+    (municipality, year); the file is `community,population` and carries no
+    year, so every lookup missed, the KeyError was swallowed, and the check
+    never fired once. It reported nothing and nothing is what a clean corpus
+    reports. Andover 1988 sailed through at 43,351 registered voters.
+
+    The figure is a modern snapshot, which makes it a CONSERVATIVE ceiling for
+    these years: Massachusetts towns are larger now than in the eighties, so a
+    reading that exceeds today's population certainly exceeded the population
+    of the year it claims to describe.
+    """
     p = os.path.join(ROOT, 'config', 'population.csv')
     if not os.path.exists(p):
         return {}
     out = {}
     for r in csv.DictReader(io.open(p, encoding='utf-8')):
+        name = (r.get('community') or r.get('municipality') or '').strip()
         try:
-            out[(r['municipality'], r['year'])] = int(float(r['population']))
+            out[name] = int(float(r['population']))
         except (KeyError, ValueError, TypeError):
-            pass
+            continue
+    if not out:
+        raise SystemExit('population.csv parsed to nothing -- refusing to run a '
+                         'check that cannot fire')
     return out
 
 
@@ -103,7 +120,7 @@ def main():
 
         # MORE VOTERS THAN RESIDENTS. Registration cannot exceed population,
         # and in practice runs well under it.
-        p = pop.get((muni, r['year']))
+        p = pop.get(muni)
         if p and reg and reg > p:
             flag(r, 'over_population',
                  '%d registered against a population of %d' % (reg, p))

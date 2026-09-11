@@ -1047,29 +1047,72 @@ def rows_from_ocr(page, lo, hi):
         return best[1] if best else None
 
     tol = 9 * OCR_ZOOM
-    out, used = [], set()
+
+    # A LABEL IS A LINE, NOT A WORD. Taking the single nearest token made the
+    # row's name whichever of `Abington`, `May` and `24` happened to sit closest
+    # in y -- and when it took the month, TOWN.match accepted it and a heading
+    # called `May` opened, with every town printed below becoming one of its
+    # precincts. In 1986 four such phantoms -- March, April, May and UNKNOWN --
+    # had swallowed 213 rows between them, which is most of the 98 undivided
+    # towns the volume says are there and we could not find.
+    lines = []
+    for lx, ly, lt in sorted(labels, key=lambda l: l[1]):
+        if lines and ly - lines[-1][0] <= tol * 0.6:
+            lines[-1][1].append((lx, lt))
+        else:
+            lines.append([ly, [(lx, lt)]])
+    joined_lines = []
+    for ly, toks in lines:
+        text = ' '.join(t for _x, t in sorted(toks))
+        joined_lines.append([ly, text])
+
+    def nearest_line(y):
+        best = None
+        for ln in joined_lines:
+            if ln[1] is None:
+                continue
+            d = abs(ln[0] - y)
+            if d <= tol and (best is None or d < best[0]):
+                best = (d, ln)
+        return best[1] if best else None
+
+    def split_name(text):
+        """`Abington May 24` -> ('Abington', 'May 24')."""
+        md = DATE.search(text) or re.search(
+            r'\b(%s)' % '|'.join(m[:3] for m in MONTHS), text, re.I)
+        if md and md.start() > 0:
+            return delead(text[:md.start()]), text[md.start():]
+        if md:
+            return '', text
+        return delead(text), ''
+
+    out = []
     for x, y, t in sorted(regs, key=lambda r: r[1]):
         v = nearest(vots, y, tol)
-        lab = nearest([l for l in labels if id(l) not in used], y, tol)
-        if lab:
-            used.add(id(lab))
-        joined = ' '.join(p for p in (lab[2] if lab else '', t,
-                                      v[2] if v else '') if p)
-        out.append({'label': delead(lab[2]) if lab else '',
+        ln = nearest_line(y)
+        text = ln[1] if ln else ''
+        if ln:
+            ln[1] = None                      # one row may claim one line
+        name, when = split_name(text)
+        joined = ' '.join(p for p in (name, when, t, v[2] if v else '') if p)
+        out.append({'label': name,
                     'figs': [x for x in (num(t), num(v[2]) if v else None)
                              if x is not None],
                     'joined': joined,
                     'band': (0, y, 0, y),
                     'cols': {'reg': num(t), 'voted': num(v[2]) if v else None}})
 
-    # The label column also carries the town names and dates, which have no
-    # figure beside them and would otherwise never be seen.
-    for lx, ly, lt in labels:
-        if id((lx, ly, lt)) in used:
+    # Lines with no figure beside them: a town heading whose figures are on the
+    # rows below, or a town that held no election.
+    for ln in joined_lines:
+        if ln[1] is None:
             continue
-        if DATE.search(lt) or TOWN.match(delead(lt) or ''):
-            out.append({'label': delead(lt), 'figs': [], 'joined': lt,
-                        'band': (0, ly, 0, ly), 'cols': None})
+        name, when = split_name(ln[1])
+        if not (when or TOWN.match(name or '')):
+            continue
+        out.append({'label': name, 'figs': [],
+                    'joined': ' '.join(p for p in (name, when) if p),
+                    'band': (0, ln[0], 0, ln[0]), 'cols': None})
     out.sort(key=lambda r: r['band'][1])
     return out, [], 0.0
 
