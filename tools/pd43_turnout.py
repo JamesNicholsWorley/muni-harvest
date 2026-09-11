@@ -955,15 +955,30 @@ def rows_from_ocr(page, lo, hi):
     return out, [], 0.0
 
 
-def parse_block(page, lo, hi, year, force_ocr=False, names=None):
-    """One column block -> a list of municipalities."""
-    rows, labels, off = ([], [], 0.0) if force_ocr else \
-        rows_from_cells(page, lo, hi)
+def parse_block_with(page, lo, hi, year, force_ocr=False, names=None,
+                     source='words'):
+    """One column block -> a list of municipalities, using one row reader."""
+    rows, labels, off = [], [], 0.0
+    if not force_ocr:
+        if source == 'words':
+            rows, labels, off = rows_from_words(page, lo, hi)
+        if len(rows) < 6:
+            rows, labels, off = rows_from_cells(page, lo, hi)
     used_ocr = False
     # A page with almost no text is a scan nobody ran OCR over. It is not a hard
     # page to parse; there is simply nothing on it to parse, and half the 2000
     # volume is like that.
-    if force_ocr or len(rows) < 6:
+    #
+    # A FIGURE-STARVED PAGE IS THE SAME CASE WEARING A DISGUISE. Several volumes
+    # carry a text layer that holds every label and almost none of the numbers:
+    # 1994 page 20 names nine towns and their fifty-three precincts, then stops
+    # dead after nine figures. There is plenty of text, so no row-count test
+    # fires, and the page is parsed confidently into towns with nothing in them.
+    # Measuring the figures against the labels catches it; measuring the text
+    # does not.
+    starved = (not force_ocr and labels and len(labels) >= 12
+               and len(rows) < 0.45 * len(labels))
+    if force_ocr or len(rows) < 6 or starved:
         try:
             rows, labels, off = rows_from_ocr(page, lo, hi)
             used_ocr = True
@@ -1118,6 +1133,56 @@ def parse_block(page, lo, hi, year, force_ocr=False, names=None):
                      'voted': body[1] if len(body) > 1 else None})
     close()
     return towns, used_ocr
+
+
+def block_score(towns):
+    """How much of this reading actually closes its own arithmetic.
+
+    The count of towns whose precincts sum to both printed totals, with
+    undivided towns -- which have nothing to cross-foot -- counted as half, so a
+    reader is not rewarded for reducing a page to a list of single figures.
+    """
+    n = 0.0
+    for t in towns:
+        pcs = t.get('precincts') or []
+        reg, vot = t.get('reg'), t.get('voted')
+        if not pcs:
+            if reg is not None:
+                n += 0.5
+            continue
+        sr = sum(p['reg'] for p in pcs if p.get('reg') is not None)
+        sv = sum(p['voted'] for p in pcs if p.get('voted') is not None)
+        if reg is not None and sr == reg and (vot is None or sv == vot):
+            n += 1.0
+        elif reg is not None and sr == reg:
+            n += 0.75
+    return n
+
+
+def parse_block(page, lo, hi, year, force_ocr=False, names=None):
+    """One column block -> a list of municipalities.
+
+    NEITHER ROW READER WINS EVERYWHERE, so the block picks between them on the
+    evidence instead of on a preference. The words layer rescues the volumes
+    whose table detection collapses -- 1996 goes 51.6 to 77.2% on it -- and
+    wrecks the volumes where detection was working: preferring it outright took
+    2012 from 99.3 to 77.7% and 2006 from 91.9 to 61.4%.
+
+    What separates them is the arithmetic, which is the one judge that needs no
+    outside knowledge: precincts sum to the total or they do not. So both are
+    run and the better-closing reading is kept. That is the same test used to
+    choose a column split, applied a level up.
+    """
+    best, best_score = None, None
+    for src in ('words', 'cells'):
+        got = parse_block_with(page, lo, hi, year, force_ocr=force_ocr,
+                               names=names, source=src)
+        s = block_score(got[0])
+        if best_score is None or s > best_score:
+            best, best_score = got, s
+        if force_ocr:
+            break          # OCR ignores the source; running it twice is waste.
+    return best
 
 
 def new_town(name):
